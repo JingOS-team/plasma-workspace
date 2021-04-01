@@ -1,5 +1,6 @@
 /*
  * Copyright 2018-2019 Kai Uwe Broulik <kde@privat.broulik.de>
+ * Copyright 2021 Rui Wang <wangrui@jingos.com>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -127,7 +128,8 @@ ColumnLayout {
                 leftMargin: -margins.left
                 rightMargin: -margins.right
             }
-            visible: !notificationItem.inHistory && fromCurrentTheme
+            // visible: !notificationItem.inHistory && fromCurrentTheme
+            visible: false
         }
 
         NotificationHeader {
@@ -209,6 +211,9 @@ ColumnLayout {
                         return "";
                     }
                     visible: text !== ""
+                    font.pointSize: 22
+                    color: "#000000"            
+                    font.bold: true
                 }
 
                 // inGroup headerItem is reparented here
@@ -233,6 +238,7 @@ ColumnLayout {
                     visible: notificationItem.body !== ""
                     onClicked: notificationItem.bodyClicked(mouse)
                     onLinkActivated: Qt.openUrlExternally(link)
+                    font.pointSize: 21
                 }
 
                 // inGroup iconContainer is reparented here
@@ -247,7 +253,8 @@ ColumnLayout {
             Layout.topMargin: units.smallSpacing
             Layout.bottomMargin: units.smallSpacing
 
-            visible: iconItem.active || imageItem.active
+            // visible: iconItem.active || imageItem.active
+            visible: false
 
             PlasmaCore.IconItem {
                 id: iconItem

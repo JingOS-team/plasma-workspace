@@ -1,5 +1,6 @@
 /*
  * Copyright 2018-2019 Kai Uwe Broulik <kde@privat.broulik.de>
+ * Copyright 2021 Rui Wang <wangrui@jingos.com>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -96,6 +97,9 @@ RowLayout {
         textFormat: Text.PlainText
         elide: Text.ElideLeft
         text: notificationHeading.applicationName + (notificationHeading.originName ? " · " + notificationHeading.originName : "")
+        font.pointSize: 20
+        opacity: 0.6
+        color: "#000000"
     }
 
     Item {
@@ -109,9 +113,9 @@ RowLayout {
         // the "n minutes ago" text, for jobs we show remaining time instead
         // updated periodically by a Timer hence this property with generate() function
         property string agoText: ""
-        visible: text !== ""
+        visible: text !== "" && !notificationHeading.closable
         text: generateRemainingText() || agoText
-        Layout.rightMargin: -notificationHeading.spacing // the ToolButton's margins are enough
+        // Layout.rightMargin: -notificationHeading.spacing // the ToolButton's margins are enough
 
         function generateAgoText() {
             if (!time || isNaN(time.getTime()) || notificationHeading.jobState === NotificationManager.Notifications.JobStateRunning) {
@@ -186,6 +190,7 @@ RowLayout {
     RowLayout {
         id: headerButtonsRow
         spacing: 0
+        visible: false
 
         PlasmaComponents3.ToolButton {
             id: configureButton

@@ -24,7 +24,6 @@
 #include <QUrl>
 #include <QDebug>
 #include <QQuickWindow>
-#include <QSessionManager>
 #include <QDBusMessage>
 #include <QDBusConnection>
 
@@ -42,6 +41,7 @@
 int main(int argc, char **argv)
 {
     QCommandLineParser parser;
+    QCoreApplication::setAttribute(Qt::AA_DisableSessionManager);
     if (!qEnvironmentVariableIsSet("PLASMA_USE_QT_SCALING")) {
         qunsetenv("QT_DEVICE_PIXEL_RATIO");
         QCoreApplication::setAttribute(Qt::AA_DisableHighDpiScaling);
@@ -92,14 +92,6 @@ int main(int argc, char **argv)
     }
 
     KDBusService service(KDBusService::Unique | KDBusService::StartupOption(parser.isSet(replaceOption) ? KDBusService::Replace : 0));
-
-    QGuiApplication::setFallbackSessionManagementEnabled(false);
-
-    auto disableSessionManagement = [](QSessionManager &sm) {
-        sm.setRestartHint(QSessionManager::RestartNever);
-    };
-    QObject::connect(&app, &QGuiApplication::commitDataRequest, disableSessionManagement);
-    QObject::connect(&app, &QGuiApplication::saveStateRequest, disableSessionManagement);
 
     View view;
 

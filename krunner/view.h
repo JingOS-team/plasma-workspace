@@ -45,7 +45,7 @@ class ViewPrivate;
 class View : public PlasmaQuick::Dialog
 {
     Q_OBJECT
-    Q_CLASSINFO("D-Bus Interface", "org.kde.krunner.App")
+    // Q_CLASSINFO("D-Bus Interface", "org.kde.krunner.App") //tmp remove the dbus avoid to affect input
 
     Q_PROPERTY(bool canConfigure READ canConfigure CONSTANT)
     Q_PROPERTY(QStringList history READ history NOTIFY historyChanged)

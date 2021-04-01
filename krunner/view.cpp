@@ -74,8 +74,8 @@ View::View(QWindow *)
 
     loadConfig();
 
-    new AppAdaptor(this);
-    QDBusConnection::sessionBus().registerObject(QStringLiteral("/App"), this);
+    // new AppAdaptor(this);    //tmp remove the dbus avoid to affect input
+    // QDBusConnection::sessionBus().registerObject(QStringLiteral("/App"), this);
 
     m_qmlObj = new KDeclarative::QmlObject(this);
     m_qmlObj->setInitializationDelayed(true);

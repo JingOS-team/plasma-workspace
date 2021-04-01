@@ -1,5 +1,6 @@
 /*
  * Copyright 2020 Shah Bhushan <bshah@kde.org>
+ * Copyright 2021 Rui Wang <wangrui@jingos.com>
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -107,7 +108,7 @@ void WatchedNotificationsModel::Private::Notify(uint id, const QString &app_name
     if(wasReplaced) {
         q->onNotificationReplaced(replaces_id, notification);
     } else {
-        q->onNotificationAdded(notification);
+        q->onNotificationInsert(notification);
     }
 }
 

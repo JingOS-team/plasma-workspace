@@ -1,4 +1,4 @@
-/********************************************************************
+﻿/********************************************************************
 Copyright 2016  Eike Hein <hein.org>
 
 This library is free software; you can redistribute it and/or
@@ -22,7 +22,6 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 #define ACTIVITYINFO_H
 
 #include <QObject>
-
 #include "taskmanager_export.h"
 
 namespace TaskManager

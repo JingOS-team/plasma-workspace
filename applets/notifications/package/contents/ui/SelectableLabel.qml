@@ -63,7 +63,8 @@ Item {
             //width: bodyTextScrollArea.viewport.width
             enabled: !Kirigami.Settings.isMobile
 
-            color: PlasmaCore.ColorScope.textColor
+            // color: PlasmaCore.ColorScope.textColor
+            color: "#000000"
             selectedTextColor: theme.viewBackgroundColor
             selectionColor: theme.viewFocusColor
             font.capitalization: theme.defaultFont.capitalization

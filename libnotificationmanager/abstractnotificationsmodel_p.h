@@ -1,5 +1,6 @@
 /*
  * Copyright 2018-2019 Kai Uwe Broulik <kde@privat.broulik.de>
+ * Copyright 2021 Rui Wang <wangrui@jingos.com>
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -38,7 +39,7 @@ public:
     void onNotificationAdded(const Notification &notification);
     void onNotificationReplaced(uint replacedId, const Notification &notification);
     void onNotificationRemoved(uint notificationId, Server::CloseReason reason);
-
+    void onNotificationInsert(const Notification &notification);
     void setupNotificationTimeout(const Notification &notification);
 
     AbstractNotificationsModel *q;

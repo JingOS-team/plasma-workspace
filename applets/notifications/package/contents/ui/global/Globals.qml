@@ -1,5 +1,6 @@
 /*
  * Copyright 2019 Kai Uwe Broulik <kde@privat.broulik.de>
+ * Copyright 2021 Rui Wang <wangrui@jingos.com>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -93,6 +94,7 @@ QtObject {
     property int popupLocation: {
         // if we are on mobile, we can ignore the settings totally and just
         // align it to top center
+        return Qt.AlignTop | Qt.AlignLeft;
         if (Kirigami.Settings.isMobile) {
             return Qt.AlignTop | Qt.AlignHCenter;
         }
@@ -179,8 +181,8 @@ QtObject {
     // Make it wider when on the top or the bottom center, since there's more horizontal
     // space available without looking weird
     // On mobile however we don't really want to have larger notifications
-    property int popupWidth: (popupLocation & Qt.AlignHCenter) && !Kirigami.Settings.isMobile ? units.gridUnit * 22 : units.gridUnit * 18
-    property int popupEdgeDistance: units.largeSpacing * 2
+    property int popupWidth: (popupLocation & Qt.AlignHCenter) && !Kirigami.Settings.isMobile ? 520: 520//units.gridUnit * 22 : units.gridUnit * 18
+    property int popupEdgeDistance: 0//units.largeSpacing * 2
     // Reduce spacing between popups when centered so the stack doesn't intrude into the
     // view as much
     property int popupSpacing: (popupLocation & Qt.AlignHCenter) && !Kirigami.Settings.isMobile ? units.smallSpacing : units.largeSpacing
@@ -337,10 +339,6 @@ QtObject {
 
         for (var i = 0; i < popupInstantiator.count; ++i) {
             let popup = popupInstantiator.objectAt(i);
-            if (!popup) {
-                continue;
-            }
-
             // Popup width is fixed, so don't rely on the actual window size
             var popupEffectiveWidth = popupWidth + popup.margins.left + popup.margins.right;
 
@@ -366,16 +364,17 @@ QtObject {
                 popup.y = y;
                 // If the popup isn't ready yet, ignore its occupied space for now.
                 // We'll reposition everything in onHeightChanged eventually.
-                y += popup.height + (popup.height > 0 ? popupSpacing : 0);
+                // y += popup.height + (popup.height > 0 ? popupSpacing : 0);
+                if(i > 0) popup.y -= 10
             } else {
-                y -= popup.height;
+                // y -= popup.height;
                 if (focusDialog && focusDialog.visible && !(focusDialog instanceof NotificationPopup)
                         && rectIntersect(focusDialog, Qt.rect(popup.x, y, popup.width, popup.height))) {
                     y = focusDialog.y - popup.height - popupEdgeDistance;
                 }
                 popup.y = y;
                 if (popup.height > 0) {
-                    y -= popupSpacing;
+                    // y -= popupSpacing;
                 }
             }
 

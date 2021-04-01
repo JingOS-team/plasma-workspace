@@ -1,5 +1,6 @@
 /*
  * Copyright 2018-2019 Kai Uwe Broulik <kde@privat.broulik.de>
+ * Copyright 2021 Rui Wang <wangrui@jingos.com>
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -54,6 +55,15 @@ AbstractNotificationsModel::Private::~Private()
 {
     qDeleteAll(notificationTimeouts);
     notificationTimeouts.clear();
+}
+
+void AbstractNotificationsModel::Private::onNotificationInsert(const Notification &notification)
+{
+    setupNotificationTimeout(notification);
+
+    q->beginInsertRows(QModelIndex(), 0, 0);
+    notifications.prepend(std::move(notification));
+    q->endInsertRows();
 }
 
 void AbstractNotificationsModel::Private::onNotificationAdded(const Notification &notification)
@@ -385,6 +395,11 @@ void AbstractNotificationsModel::onNotificationRemoved(uint notificationId, Serv
 void AbstractNotificationsModel::setupNotificationTimeout(const Notification &notification)
 {
     d->setupNotificationTimeout(notification);
+}
+
+void AbstractNotificationsModel::onNotificationInsert(const Notification &notification)
+{
+    d->onNotificationInsert(notification);
 }
 
 const QVector<Notification>& AbstractNotificationsModel::notifications()

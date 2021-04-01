@@ -63,7 +63,7 @@ public:
 
     int launcherCount = 0;
 
-    SortMode sortMode = SortAlpha;
+    SortMode sortMode = SortDisabled;
     bool separateLaunchers = true;
     bool launchInPlace = false;
     bool launchersEverSet = false;
@@ -1244,7 +1244,7 @@ void TasksModel::setSortMode(SortMode mode)
             setSortRole(Qt::DisplayRole);
         }
 
-        d->sortMode = mode;
+//        d->sortMode = mode;
 
         d->forceResort();
 

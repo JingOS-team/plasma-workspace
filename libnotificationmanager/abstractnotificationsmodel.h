@@ -1,5 +1,6 @@
 /*
  * Copyright 2018-2019 Kai Uwe Broulik <kde@privat.broulik.de>
+ * Copyright 2021 Rui Wang <wangrui@jingos.com>
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -76,6 +77,7 @@ protected:
     const QVector<Notification>& notifications();
     int rowOfNotification(uint id) const;
 
+    void onNotificationInsert(const Notification &notification);
 
 private:
     class Private;

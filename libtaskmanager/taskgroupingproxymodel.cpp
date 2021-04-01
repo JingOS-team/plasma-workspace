@@ -54,6 +54,8 @@ public:
     void sourceRowsRemoved(const QModelIndex &parent, int start, int end);
     void sourceModelAboutToBeReset();
     void sourceModelReset();
+    void sourceModelAboutToRowsMove(const QModelIndex &sourceParent, int sourceStart, int sourceEnd, const QModelIndex &destinationParent, int destinationRow);
+    void sourceRowsMoved( const QModelIndex &parent, int start, int end, const QModelIndex &destination, int row);
     void sourceDataChanged(QModelIndex topLeft, QModelIndex bottomRight,
         const QVector<int> &roles = QVector<int>());
     void adjustMap(int anchor, int delta);
@@ -211,6 +213,17 @@ void TaskGroupingProxyModel::Private::sourceModelReset()
     rebuildMap();
 
     q->endResetModel();
+}
+
+void TaskGroupingProxyModel::Private::sourceModelAboutToRowsMove(const QModelIndex &sourceParent, int sourceStart, int sourceEnd, const QModelIndex &destinationParent, int destinationRow)
+{
+    q->beginMoveRows(sourceParent, sourceStart, sourceEnd, destinationParent, destinationRow);
+}
+
+void TaskGroupingProxyModel::Private::sourceRowsMoved( const QModelIndex &parent, int start, int end, const QModelIndex &destination, int row)
+{
+    rebuildMap();
+    q->endMoveRows();
 }
 
 void TaskGroupingProxyModel::Private::sourceDataChanged(QModelIndex topLeft, QModelIndex bottomRight, const QVector<int> &roles)
@@ -787,6 +800,11 @@ void TaskGroupingProxyModel::setSourceModel(QAbstractItemModel *sourceModel)
             this, std::bind(&TaskGroupingProxyModel::Private::sourceModelReset, dd));
         connect(sourceModel, &QSortFilterProxyModel::dataChanged,
             this, std::bind(&TaskGroupingProxyModel::Private::sourceDataChanged, dd, _1, _2, _3));
+
+        connect(sourceModel, &QSortFilterProxyModel::rowsAboutToBeMoved,
+            this, std::bind(&TaskGroupingProxyModel::Private::sourceModelAboutToRowsMove, dd, _1, _2, _3, _4, _5));
+        connect(sourceModel, &QSortFilterProxyModel::rowsMoved,
+            this, std::bind(&TaskGroupingProxyModel::Private::sourceRowsMoved, dd, _1, _2, _3, _4, _5));
     } else {
         d->rowMap.clear();
     }

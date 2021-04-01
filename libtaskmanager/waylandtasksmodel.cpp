@@ -1,5 +1,6 @@
 /********************************************************************
 Copyright 2016  Eike Hein <hein@kde.org>
+Copyright 2021 Rui Wang <wangrui@jingos.com>
 
 This library is free software; you can redistribute it and/or
 modify it under the terms of the GNU Lesser General Public
@@ -167,13 +168,16 @@ void WaylandTasksModel::Private::addWindow(KWayland::Client::PlasmaWindow *windo
         return;
     }
 
-    const int count = windows.count();
+    if (window->skipTaskbar() || window->skipSwitcher()) {
+        return;
+    }
 
-    q->beginInsertRows(QModelIndex(), count, count);
+    //q->beginInsertRows(QModelIndex(), 0, 0);
 
-    windows.append(window);
-
-    q->endInsertRows();
+    q->beginResetModel();
+    windows.prepend(window);
+    q->endResetModel();
+    //q->endInsertRows();
 
     auto removeWindow = [window, this] {
         const int row = windows.indexOf(window);
@@ -495,6 +499,16 @@ void WaylandTasksModel::requestActivate(const QModelIndex &index)
     }
 
     d->windows.at(index.row())->requestActivate();
+
+    if (index.row() != 0) {
+            //beginMoveRows(QModelIndex(), index.row(), index.row(), QModelIndex(), 0);
+            // TODO yanggx 修正move乱序问题后使用move
+             beginResetModel();
+             d->windows.move(index.row(), 0);
+             endResetModel();
+            //endMoveRows();
+    }
+
 }
 
 void WaylandTasksModel::requestNewInstance(const QModelIndex &index)
