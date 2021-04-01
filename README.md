@@ -1,4 +1,4 @@
-# plasma-wrokspace
+# plasma-workspace
 
 =======================
 
@@ -9,12 +9,12 @@ KDE plasma-workspace
 =======================
 
 
-# Jing-plasma-wrokspace
+# Jing-plasma-workspace
 
 Jing-plasma-workspace is base on KDE plasma-workspace.
 
 ## Links
 * Home: www.jingos.com
-* Project page: https://github.com/JingOS-team/jing-plasma-wrokspace
-* File issues: https://github.com/JingOS-team/jing-plasma-wrokspace/issues
+* Project page: https://github.com/JingOS-team/jing-plasma-workspace
+* File issues: https://github.com/JingOS-team/jing-plasma-workspace/issues
 * Development channel:  www.jingos.com
