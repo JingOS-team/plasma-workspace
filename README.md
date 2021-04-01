@@ -11,6 +11,7 @@ KDE plasma-workspace
 
 # Jing-plasma-wrokspace
 
+Jing-plasma-workspace is base on KDE plasma-workspace.
 
 ## Links
 * Home: www.jingos.com
