@@ -18,86 +18,97 @@
 
 import QtQuick 2.14
 import QtQuick.Layouts 1.1
+import QtQuick.Controls 2.5
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 3.0 as PlasmaComponents3
+//import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtra
 import QtQuick.Window 2.2
 
-RowLayout {
+Rectangle{
+    id:name
+
     property QtObject rootItem
 
-    spacing: units.smallSpacing
+    implicitWidth: name.width
+    implicitHeight: name.height
+    color: "#80000000"
+    radius: name.height*0.3125
+    anchors.top: parent.top
+    anchors.horizontalCenter: parent.horizontalCenter
+    RowLayout{
+        spacing: 8
+        anchors.centerIn: parent
+        implicitWidth: iconArea.implicitWidth+progressBar.implicitWidth+name.width*0.0078
+        Item {
+            id:iconArea
+            implicitWidth: 22
+            implicitHeight: 22
+            Image {
+                id: barIcon
+                anchors.fill:iconArea
+                source: icon? "file:///usr/share/icons/jing/SwiMachine/"+icon+".svg":icon
+            }
+            ShaderEffect {
+                anchors.fill: barIcon
+                property variant src: barIcon
+                property color color: "white"
+                fragmentShader: "
+                                varying highp vec2 qt_TexCoord0;
+                                uniform sampler2D src;
+                                uniform highp vec4 color;
+                                uniform lowp float qt_Opacity;
+                                void main() {
+                                    lowp vec4 tex = texture2D(src, qt_TexCoord0);
+                                    gl_FragColor = vec4(color.r * tex.a, color.g * tex.a, color.b * tex.a, tex.a) * qt_Opacity;
+                                }"
+            }
+        }
+        ProgressBar {
+            id: progressBar
 
-    width: Math.max(Math.min(Screen.desktopAvailableWidth / 2, implicitWidth), units.gridUnit * 15)
-    height: units.iconSizes.medium
+            implicitWidth:name.width*0.664
+            implicitHeight: name.height*0.094
 
-    PlasmaCore.IconItem {
-        Layout.leftMargin: units.smallSpacing
-        Layout.preferredWidth: units.iconSizes.medium
-        Layout.preferredHeight: units.iconSizes.medium
-        source: rootItem.icon
-        visible: valid
-    }
+            hoverEnabled: true
+            Layout.fillWidth: true
 
-    PlasmaComponents3.ProgressBar {
-        id: progressBar
-        Layout.fillWidth: true
-        // So it never exceeds the minimum popup size
-        Layout.preferredWidth: 1
-        Layout.rightMargin: units.smallSpacing
-        visible: rootItem.showingProgress
-        from: 0
-        to: rootItem.osdMaxValue
-        value: Number(rootItem.osdValue)
-    }
+            from: 0
+            to: rootItem.osdMaxValue
+            value: Number(rootItem.osdValue)
 
-    // Get the width of a three-digit number so we can size the label
-    // to the maximum width to avoid the progress bad resizing itself
-    TextMetrics {
-        id: widestLabelSize
-        text: i18n("100%")
-        font: percentageLabel.font
-    }
+            contentItem: Item {
+                id:conten
+                implicitWidth:name.width*0.664
+                implicitHeight: name.height*0.094
+                Rectangle{
+                    id: indicator
+                    height: parent.height
+                    width: progressBar.visualPosition * parent.width
+                    radius: conten.height/3
+                    color: "#FFFFFFFF"
+                }
+            }
 
-    // Numerical display of progress bar value
-    PlasmaExtra.Heading {
-        id: percentageLabel
-        Layout.fillHeight: true
-        Layout.preferredWidth: widestLabelSize.width
-        Layout.rightMargin: units.smallSpacing
-        level: 3
-        horizontalAlignment: Text.AlignHCenter
-        verticalAlignment: Text.AlignVCenter
-        text: i18nc("Percentage value", "%1%", progressBar.value)
-        visible: rootItem.showingProgress
-        // Display a subtle visual indication that the volume might be
-        // dangerously high
-        // ------------------------------------------------
-        // Keep this in sync with the copies in plasma-pa:ListItemBase.qml
-        // and plasma-pa:VolumeSlider.qml
-        color: {
-            if (progressBar.value <= 100) {
-                return theme.textColor
-            } else if (progressBar.value > 100 && progressBar.value <= 125) {
-                return theme.neutralTextColor
-            } else {
-                return theme.negativeTextColor
+            background:Rectangle {
+                implicitWidth: name.width*0.664
+                implicitHeight: name.height*0.094
+                color: "#4DEBEBF5"
+                radius: conten.height/3
             }
         }
     }
+    MouseArea{
+        anchors.fill: parent
+        onPressed: {
 
-    PlasmaExtra.Heading {
-        id: label
-        Layout.fillWidth: true
-        Layout.fillHeight: true
-        Layout.rightMargin: units.smallSpacing
-        level: 3
-        horizontalAlignment: Text.AlignHCenter
-        verticalAlignment: Text.AlignVCenter
-        textFormat: Text.PlainText
-        wrapMode: Text.NoWrap
-        elide: Text.ElideRight
-        text: !rootItem.showingProgress && rootItem.osdValue ? rootItem.osdValue : ""
-        visible: !rootItem.showingProgress
+        }
+        onMouseXChanged: {
+
+        }
+        onReleased: {
+
+
+        }
     }
 }
+

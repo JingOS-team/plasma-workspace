@@ -63,19 +63,15 @@ Item {
 
     function dateTimeChanged()
     {
-        //console.log("Date/time changed!");
-
         var currentTZOffset = dataSource.data["Local"]["Offset"] / 60;
         if (currentTZOffset !== tzOffset) {
             tzOffset = currentTZOffset;
-            //console.log("TZ offset changed: " + tzOffset);
             Date.timeZoneUpdated(); // inform the QML JS engine about TZ change
         }
     }
 
     Component.onCompleted: {
         tzOffset = new Date().getTimezoneOffset();
-        //console.log("Initial TZ offset: " + tzOffset);
         dataSource.onDataChanged.connect(dateTimeChanged);
     }
 

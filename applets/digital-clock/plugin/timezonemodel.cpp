@@ -22,13 +22,51 @@
 #include "timezonesi18n.h"
 
 #include <QTimeZone>
+#include <QDateTime>
+#include <QLocale>
 #include <QStringMatcher>
 #include <KLocalizedString>
+
+#include <QString>
+#include <QDBusPendingReply>
+#include <QDBusConnection>
+
+#define FORMAT24H "HH:mm:ss"
 
 TimeZoneFilterProxy::TimeZoneFilterProxy(QObject *parent)
     : QSortFilterProxyModel(parent)
 {
     m_stringMatcher.setCaseSensitivity(Qt::CaseInsensitive);
+
+//liubangguo for clock update
+    m_localeConfig = KSharedConfig::openConfig(QStringLiteral("kdeglobals"), KConfig::SimpleConfig);
+    m_localeConfigWatcher = KConfigWatcher::create(m_localeConfig);
+    QDBusConnection::sessionBus().connect(QString(), QString("/org/kde/kcmshell_clock"),
+                                          QString("org.kde.kcmshell_clock"), QString("clockUpdated"), this,
+                                          SLOT(kcmClockUpdated()));
+    // watch for changes to locale config, to update 12/24 hour time
+    connect(m_localeConfigWatcher.data(), &KConfigWatcher::configChanged,
+            this, [this](const KConfigGroup &group, const QByteArrayList &names) -> void {
+                if (group.name() == "Locale") {
+                    // we have to reparse for new changes (from system settings)
+                    m_localeConfig->reparseConfiguration();
+                    Q_EMIT isSystem24HourFormatChanged();
+                }
+            });
+
+    //liubangguo for timezone api
+    m_timezoneConfig = KSharedConfig::openConfig(QStringLiteral("ktimezonedrc"), KConfig::SimpleConfig);
+    m_timezoneConfigWatcher = KConfigWatcher::create(m_timezoneConfig);
+
+    // watch for changes to locale config, to update 12/24 hour time
+    connect(m_timezoneConfigWatcher.data(), &KConfigWatcher::configChanged,
+            this, [this](const KConfigGroup &group, const QByteArrayList &names) -> void {
+                if (group.name() == "TimeZones") {
+                    // we have to reparse for new changes (from system settings)
+                    m_timezoneConfig->reparseConfiguration();
+                    Q_EMIT timezoneChanged();
+                }
+            });
 }
 
 bool TimeZoneFilterProxy::filterAcceptsRow(int source_row, const QModelIndex &source_parent) const
@@ -55,6 +93,36 @@ void TimeZoneFilterProxy::setFilterString(const QString &filterString)
     m_stringMatcher.setPattern(filterString);
     emit filterStringChanged();
     invalidateFilter();
+}
+
+void TimeZoneFilterProxy::kcmClockUpdated()
+{
+    m_localeConfig->reparseConfiguration();
+    Q_EMIT isSystem24HourFormatChanged();
+}
+
+bool TimeZoneFilterProxy::isSystem24HourFormat()
+{
+    KConfigGroup localeSettings = KConfigGroup(m_localeConfig, "Locale");
+
+    QString timeFormat = localeSettings.readEntry("TimeFormat", QStringLiteral(FORMAT24H));
+    return timeFormat == QStringLiteral(FORMAT24H);
+}
+
+
+QString TimeZoneFilterProxy::getDateByTimezone()
+{
+    KConfigGroup timezoneSettings = KConfigGroup(m_timezoneConfig, "TimeZones");
+    QString timezone = timezoneSettings.readEntry("LocalZone", QStringLiteral("Local"));
+
+    QDateTime dateTime = QDateTime::currentDateTime();
+    QLocale locale = QLocale::English;
+
+    if(timezone.contains("Shanghai",Qt::CaseSensitive))
+        locale = QLocale::Chinese;
+    QString strFormat = "ddd, MMM d ";
+    QString strDateTime = locale.toString(dateTime, strFormat);
+    return strDateTime;
 }
 
 //=============================================================================

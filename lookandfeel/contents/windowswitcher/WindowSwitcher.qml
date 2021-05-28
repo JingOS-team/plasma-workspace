@@ -69,7 +69,7 @@ KWin.Switcher {
 
                 delegate: MouseArea {
                     width: thumbnailListView.width
-                    height: delegateColumn.height + 2 * delegateColumn.y
+                    height: delegateColumn.implicitHeight + 2 * delegateColumn.y
 
                     onClicked: {
                         if (tabBox.noModifierGrab) {
@@ -93,7 +93,7 @@ KWin.Switcher {
 
                         Item {
                             Layout.fillWidth: true
-                            implicitHeight: Math.round(delegateColumn.width / tabBox.screenFactor)
+                            Layout.preferredHeight: Math.round(width / tabBox.screenFactor)
 
                             KWin.ThumbnailItem {
                                 anchors.fill: parent

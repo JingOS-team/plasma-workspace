@@ -19,188 +19,87 @@
 */
 
 import QtQuick 2.1
+import QtQuick.Window 2.2
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.3 as QtControls
-import org.kde.kirigami 2.5 as Kirigami
+import org.kde.kirigami 2.15 as Kirigami
 import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.kcm 1.2
+import org.jingos.settings.language 1.0
 
-ScrollViewKCM {
+Rectangle {
     id: root
 
-    ConfigModule.quickHelp: i18n("Language")
 
-    Component {
-        id: addLanguageItemComponent
+    property int screenWidth: 888
+    property int screenHeight: 648
 
-        Kirigami.BasicListItem {
-            id: languageItem
+    property int statusbar_height : 22
+    property int statusbar_icon_size: 22
+    property int default_setting_item_height: 45
+    property int default_setting_title_height: 30
 
-            property string languageCode: model.LanguageCode
+    property int marginTitle2Top : 44 
+    property int marginItem2Title : 36
+    property int marginLeftAndRight : 20 
+    property int marginItem2Top : 24
+    property int radiusCommon: 10 
+    property int fontNormal: 14 
 
-            reserveSpaceForIcon: false
+    width: screenWidth * 0.7
+    height: screenHeight
 
-            label: model.display
-
-            checkable: true
-            onCheckedChanged: {
-                if (checked) {
-                    addLanguagesSheet.selectedLanguages.push(index);
-
-                    // There's no property change notification for pushing to an array
-                    // in a var prop, so we can't bind selectedLanguages.length to
-                    // addLanguagesButton.enabled.
-                    addLanguagesButton.enabled = true;
-                } else {
-                    addLanguagesSheet.selectedLanguages = addLanguagesSheet.selectedLanguages.filter(function(item) { return item !== index });
-
-                    // There's no property change notification for pushing to an array
-                    // in a var prop, so we can't bind selectedLanguages.length to
-                    // addLanguagesButton.enabled.
-                    if (!addLanguagesSheet.selectedLanguages.length) {
-                        addLanguagesButton.enabled = false;
-                    }
-                }
-            }
-
-            data: [Connections {
-                target: addLanguagesSheet
-
-                onSheetOpenChanged: languageItem.checked = false
-            }]
-        }
-    }
-
-    Kirigami.OverlaySheet {
-        id: addLanguagesSheet
-
-        parent: root.parent
-
-        topPadding: 0
-        leftPadding: 0
-        rightPadding: 0
-        bottomPadding: 0
-
-        header: Kirigami.Heading { text: i18nc("@title:window", "Add Languages") }
-
-        property var selectedLanguages: []
-
-        onSheetOpenChanged: selectedLanguages = []
-
-        ListView {
-            id: availableLanguagesList
-
-            implicitWidth: 18 * Kirigami.Units.gridUnit
-
-            model: kcm.availableTranslationsModel
-
-            delegate: Kirigami.DelegateRecycler {
-                width: parent.width
-
-                sourceComponent: addLanguageItemComponent
-            }
-        }
-
-        footer: RowLayout {
-            QtControls.Button {
-                id: addLanguagesButton
-
-                Layout.alignment: Qt.AlignHCenter
-
-                text: i18nc("@action:button", "Add")
-
-                enabled: false
-
-                onClicked: {
-                    var langs = kcm.selectedTranslationsModel.selectedLanguages.slice();
-                    addLanguagesSheet.selectedLanguages.sort().forEach(function(index) {
-                        langs.push(kcm.availableTranslationsModel.langCodeAt(index));
-                    });
-
-                    kcm.selectedTranslationsModel.selectedLanguages = langs;
-
-                    addLanguagesSheet.sheetOpen = false;
-                }
-            }
-        }
-    }
-
-    header: ColumnLayout {
-        id: messagesLayout
-
-        spacing: Kirigami.Units.largeSpacing
-
-        Kirigami.InlineMessage {
-            Layout.fillWidth: true
-
-            type: Kirigami.MessageType.Error
-
-            text: i18nc("@info", "There are no additional languages available on this system.")
-
-            visible: !availableLanguagesList.count
-        }
-
-        Kirigami.InlineMessage {
-            Layout.fillWidth: true
-
-            type: kcm.everSaved ? Kirigami.MessageType.Positive : Kirigami.MessageType.Information
-
-            text: (kcm.everSaved ? i18nc("@info", "Your changes will take effect the next time you log in.")
-                : i18nc("@info", "There are currently no preferred languages configured."))
-
-            visible: !languagesList.count || kcm.everSaved
-        }
-
-        Kirigami.InlineMessage {
-            Layout.fillWidth: true
-
-            type: Kirigami.MessageType.Error
-
-            text: i18ncp("@info %2 is the language code",
-                "The translation files for the language with the code '%2' could not be found. The language will be removed from your configuration. If you want to add it back, please install the localization files for it and add the language again.",
-                "The translation files for the languages with the codes '%2' could not be found. These languages will be removed from your configuration. If you want to add them back, please install the localization files for it and the languages again.",
-                kcm.selectedTranslationsModel.missingLanguages.length,
-                kcm.selectedTranslationsModel.missingLanguages.join(i18nc("@info separator in list of language codes", "', '")))
-
-            visible: kcm.selectedTranslationsModel.missingLanguages.length
-        }
-
-        QtControls.Label {
-            Layout.fillWidth: true
-
-            visible: languagesList.count
-
-            text: i18n("The language at the top of this list is the one you want to see and use most often.")
-            wrapMode: Text.WordWrap
-        }
+    TranslateTool {
+        id: translateTool
     }
 
     Component {
         id: languagesListItemComponent
 
         Item {
-            width: ListView.view.width
+            width: languagesList.width - 5
             height: listItem.implicitHeight
 
             Kirigami.SwipeListItem {
                 id: listItem
+                height: 45
+                spacing: 0
+
+                background:Rectangle{
+                    color:"transparent"
+
+                    Kirigami.Separator {
+                        anchors.bottom: parent.bottom
+                        anchors.left: parent.left
+                        anchors.right: parent.right
+                        anchors.leftMargin: marginLeftAndRight
+                        anchors.rightMargin: marginLeftAndRight
+                        anchors.bottomMargin: -9
+                        color: "#f0f0f0"
+                        visible: index != languagesList.count -1 
+                    }
+                }
 
                 contentItem: RowLayout {
                     Kirigami.ListItemDragHandle {
                         listItem: listItem
                         listView: languagesList
-                        onMoveRequested: kcm.selectedTranslationsModel.move(oldIndex, newIndex)
+                        onMoveRequested: {
+                            kcm.selectedTranslationsModel.move(oldIndex, newIndex)
+                            confirmDlg.open()
+                        }
                     }
 
                     Kirigami.Icon {
-                        visible: model.IsMissing
+                        // visible: model.IsMissing
+                        visible: false 
 
                         Layout.alignment: Qt.AlignVCenter
 
-                        width: Kirigami.Units.iconSizes.smallMedium
+                        width: 17
                         height: width
 
-                        source: "error"
+                        source: "../image/icon_move.png"
                         color: Kirigami.Theme.negativeTextColor
                     }
 
@@ -209,57 +108,155 @@ ScrollViewKCM {
 
                         Layout.alignment: Qt.AlignVCenter
 
-                        text: (index == 0) ? i18nc("@item:inlistbox 1 = Language name", "%1 (Default)", model.display) : model.display
+                        text:  model.display
+                        color: (index == 0) ? "#FF3C4BE8" :"#000"
 
-                        color: (model.IsMissing ? Kirigami.Theme.negativeTextColor
-                            : (listItem.checked || (listItem.pressed && !listItem.checked && !listItem.sectionDelegate)
-                            ? listItem.activeTextColor : listItem.textColor))
+                        font.pixelSize: 16
+                    }
+
+                    Image {
+                        source:"../image/menu_select.png"
+                        width: 22
+                        height: 22
+                        sourceSize.width: 22
+                        sourceSize.height: 22
+                        anchors {
+                            right:parent.right
+                            rightMargin: marginLeftAndRight
+                            verticalCenter:parent.verticalCenter
+                        }
+                        visible: index == 0
                     }
                 }
-
-            actions: [
-                Kirigami.Action {
-                    enabled: !model.IsMissing && index > 0
-                    iconName: "go-top"
-                    tooltip: i18nc("@info:tooltip", "Promote to default")
-                    onTriggered: kcm.selectedTranslationsModel.move(index, 0)
-                },
-                Kirigami.Action {
-                    property bool removing: false
-                    enabled: removing || !model.IsMissing && languagesList.count > 1
-                    iconName: "list-remove"
-                    tooltip: i18nc("@info:tooltip", "Remove")
-                    onTriggered: {
-                        removing = true; // Don't crash by re-evaluating `enabled` during destruction.
-                        kcm.selectedTranslationsModel.remove(model.LanguageCode);
-                    }
-                }]
             }
         }
     }
 
-    view: ListView {
-        id: languagesList
+    Rectangle{
+        width: parent.width
+        height: parent.height 
+        color: "#FFF6F9FF"
 
-        model: kcm.selectedTranslationsModel
-        delegate: languagesListItemComponent
-    }
+        Text {
+            id: title
 
-    footer: RowLayout {
-        id: footerLayout
+            anchors {
+                left: parent.left
+                top: parent.top
+                leftMargin: marginLeftAndRight  
+                topMargin: marginTitle2Top  
+            }
 
-        QtControls.Button {
-            Layout.alignment: Qt.AlignRight
+            width: 329
+            height: 14
+            text: i18n("Language")
+            font.pixelSize: 20 
+            font.weight: Font.Bold
+        }
 
-            enabled: availableLanguagesList.count
+        Rectangle {
+            id:list_area
 
-            text: i18nc("@action:button", "Add languages...")
+            anchors {
+                top : title.bottom
+                topMargin: marginItem2Title
+                left: parent.left
+                leftMargin: marginLeftAndRight
+                right:parent.right
+                rightMargin: marginLeftAndRight
+            }
 
-            onClicked: addLanguagesSheet.sheetOpen = !addLanguagesSheet.sheetOpen
+            width:parent.width- marginLeftAndRight * 2
+            height:languagesList.height + 10 + language_title.height 
+            color:"white"
+            radius: radiusCommon
 
-            checkable: true
-            checked: addLanguagesSheet.sheetOpen
+            Rectangle {
+                id: language_title
+                anchors {
+                    top : parent.top
+                    left: parent.left
+                    right: parent.right 
+                }
+                width: parent.width
+                height: default_setting_title_height
+                radius: radiusCommon
+
+                 Text {
+                    anchors {   
+                        left: language_title.left
+                        leftMargin: marginLeftAndRight 
+                        verticalCenter:parent.verticalCenter
+                    }
+                    height: 12
+                    text: i18n("Preferred language order")
+                    verticalAlignment:Text.AlignVCenter
+                    font.pixelSize: 12
+                    color: "#4D000000"
+                }
+            }
+
+
+            ListView {
+                id: languagesList
+
+                anchors {
+                    top : language_title.bottom
+                    left: parent.left
+                    leftMargin: 7 
+                    right : parent.right
+                    rightMargin: 7 
+                }
+
+                width: root.width - marginLeftAndRight * 2
+                height: languagesList.count * default_setting_item_height + 15 
+
+                model: kcm.selectedTranslationsModel
+                delegate: languagesListItemComponent
+            }
+        }
+
+        Text {
+            id: language_info
+
+            anchors {
+                left: parent.left
+                right:parent.right
+                top: list_area.bottom
+                leftMargin:  marginLeftAndRight * 2
+                rightMargin:  marginLeftAndRight * 2
+                topMargin: 9
+            }
+            
+            text: i18n("The language at the top of the list will be used by default. If an app doesn't support your default language, the next language in the list will be used instead.")
+            // font.pointSize: appFontSize - 2
+            font.pixelSize:12
+            color: "#4D000000"
+            wrapMode : Text.WordWrap
         }
     }
-}
 
+    Kirigami.JDialog {
+        id: confirmDlg
+
+        title: i18n("Restart")
+        text: i18n("Applying this setting will restart your PAD")
+        leftButtonText: i18n("Cancel")
+        rightButtonText: i18n("Restart")
+        // rightButtonTextColor: "red"
+        dim: true
+        focus: true
+ 
+        onRightButtonClicked: {
+            kcm.save()
+            translateTool.restartDevice()
+            confirmDlg.close()
+        }
+
+        onLeftButtonClicked: {
+            kcm.load() 
+            confirmDlg.close()
+        }
+    }
+    
+}

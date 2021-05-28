@@ -28,6 +28,7 @@ class AvailableTranslationsModel;
 class SelectedTranslationsModel;
 class TranslationsModel;
 class TranslationsSettings;
+class TranslateTool; 
 
 class Translations : public KQuickAddons::ManagedConfigModule
 {
@@ -37,6 +38,7 @@ class Translations : public KQuickAddons::ManagedConfigModule
     Q_PROPERTY(QAbstractItemModel* selectedTranslationsModel READ selectedTranslationsModel CONSTANT)
     Q_PROPERTY(QAbstractItemModel* availableTranslationsModel READ availableTranslationsModel CONSTANT)
     Q_PROPERTY(bool everSaved READ everSaved NOTIFY everSavedChanged)
+    // Q_PROPERTY(TranslateTool* translateTool, READ translateTool, WRITE setTranslateTool)
 
     public:
         explicit Translations(QObject* parent = nullptr, const QVariantList &list = QVariantList());
@@ -47,17 +49,27 @@ class Translations : public KQuickAddons::ManagedConfigModule
         QAbstractItemModel* availableTranslationsModel() const;
 
         bool everSaved() const;
+        // TranslateTool *translateTool() {
+        //     return m_translateTool;
+        // }
+        // void setTranslateTool(TranslateTool *translateTool) {
+        //     m_translateTool = translateTool;
+        //     connect(m_translateTool, &TranslateTool::dlgLanguageChanged,
+        //     this, &Translations::onLanguageChanged);
+        // }
 
     public Q_SLOTS:
-        void load() override;
-        void save() override;
+        Q_INVOKABLE void load() override;
+        Q_INVOKABLE void  save() override;
         void defaults() override;
+        void onLanguageChanged(bool result);
 
     Q_SIGNALS:
         void everSavedChanged() const;
 
     private Q_SLOTS:
         void selectedLanguagesChanged();
+       
 
     private:
         bool isSaveNeeded() const override;
@@ -66,6 +78,7 @@ class Translations : public KQuickAddons::ManagedConfigModule
         TranslationsModel *m_translationsModel;
         SelectedTranslationsModel *m_selectedTranslationsModel;
         AvailableTranslationsModel *m_availableTranslationsModel;
+        TranslateTool *m_translateTool;
 
         bool m_everSaved;
 };

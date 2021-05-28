@@ -35,6 +35,7 @@ set (plasma_shell_SRCS
     shellcorona.cpp
     standaloneappcorona
     osd.cpp
+    toast.cpp
     coronatesthelper.cpp
     strutmanager.cpp
     debug.cpp

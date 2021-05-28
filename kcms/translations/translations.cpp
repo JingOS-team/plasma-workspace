@@ -22,6 +22,7 @@
 #include "translations.h"
 #include "translationsmodel.h"
 #include "translationssettings.h"
+#include "translatetool.h"
 
 #include <KAboutData>
 #include <KLocalizedString>
@@ -38,6 +39,13 @@ Translations::Translations(QObject *parent, const QVariantList &args)
     , m_availableTranslationsModel(new AvailableTranslationsModel(this))
     , m_everSaved(false)
 {
+
+    qmlRegisterType<TranslateTool>("org.jingos.settings.language", 1, 0,  "TranslateTool");
+                    //    qmlRegisterSingletonType<SingletonTypeExample>("Qt.example.qobjectSingleton", 1, 0, "MyApi", example_qobject_singletontype_provider);
+
+    // int registResult = qmlRegisterSingletonType<TranslateTool>("org.jingos.settings.language", 1, 0, "TranslateTool", m_translateTool);
+    // qDebug() << "注册结果111" << registResult;
+
     KAboutData *about = new KAboutData(QStringLiteral("kcm_translations"),
         i18n("Configure Plasma translations"),
         QStringLiteral("2.0"), QString(), KAboutLicense::LGPL);
@@ -49,10 +57,16 @@ Translations::Translations(QObject *parent, const QVariantList &args)
             this, &Translations::selectedLanguagesChanged);
     connect(m_selectedTranslationsModel, &SelectedTranslationsModel::selectedLanguagesChanged,
             m_availableTranslationsModel, &AvailableTranslationsModel::setSelectedLanguages);
+
+    // auto res = connect(m_translateTool, &TranslateTool::dlgLanguageChanged,
+    //         this, &Translations::onLanguageChanged);
+    // qDebug() << "Translations " << "connect res" << res;
 }
+
 
 Translations::~Translations()
 {
+    qDebug() << "Translations::~Translations()";
 }
 
 QAbstractItemModel* Translations::translationsModel() const
@@ -75,8 +89,18 @@ bool Translations::everSaved() const
     return m_everSaved;
 }
 
+void Translations::onLanguageChanged(bool result){
+    qDebug() << "Translations::onLanguageChanged ::::::::::::" << result ; 
+    if(result){
+        save();
+    }else {
+        load();
+    }
+}
+
 void Translations::load()
 {
+    qDebug() << "Translations::load :::::::::::: start"  ; 
     KQuickAddons::ManagedConfigModule::load();
     m_availableTranslationsModel->setSelectedLanguages(m_settings->configuredLanguages());
     m_selectedTranslationsModel->setSelectedLanguages(m_settings->configuredLanguages());
@@ -84,6 +108,7 @@ void Translations::load()
 
 void Translations::save()
 {
+    qDebug() << "Translations::save :::::::::::: start"  ; 
     m_everSaved = true;
     emit everSavedChanged();
     KQuickAddons::ManagedConfigModule::save();

@@ -1,0 +1,6 @@
+/home/wupengbo/work/plasma-workspace/CMakeFiles/install/strip.dir
+/home/wupengbo/work/plasma-workspace/CMakeFiles/install/local.dir
+/home/wupengbo/work/plasma-workspace/CMakeFiles/install.dir
+/home/wupengbo/work/plasma-workspace/CMakeFiles/list_install_components.dir
+/home/wupengbo/work/plasma-workspace/CMakeFiles/rebuild_cache.dir
+/home/wupengbo/work/plasma-workspace/CMakeFiles/edit_cache.dir

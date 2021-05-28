@@ -21,6 +21,8 @@
 #ifndef TIMEZONEMODEL_H
 #define TIMEZONEMODEL_H
 
+#include <KSharedConfig>
+#include <KConfigWatcher>
 #include <QAbstractListModel>
 #include <QSortFilterProxyModel>
 
@@ -31,7 +33,9 @@ class TimezonesI18n;
 class TimeZoneFilterProxy : public QSortFilterProxyModel
 {
     Q_OBJECT
-    Q_PROPERTY(QString filterString WRITE setFilterString MEMBER m_filterString NOTIFY filterStringChanged)
+    Q_PROPERTY(QString filterString WRITE setFilterString MEMBER m_filterString NOTIFY filterStringChanged);
+    Q_PROPERTY(bool isSystem24HourFormat READ isSystem24HourFormat NOTIFY isSystem24HourFormatChanged);
+    Q_PROPERTY(QString getDateByTimezone READ getDateByTimezone NOTIFY timezoneChanged);
 
 public:
     explicit TimeZoneFilterProxy(QObject *parent = nullptr);
@@ -39,12 +43,24 @@ public:
 
     void setFilterString(const QString &filterString);
 
+public Q_SLOTS:
+    bool isSystem24HourFormat();
+    void kcmClockUpdated();
+    QString getDateByTimezone();
+
 Q_SIGNALS:
     void filterStringChanged();
+    void isSystem24HourFormatChanged();
+    void timezoneChanged();
 
 private:
     QString m_filterString;
     QStringMatcher m_stringMatcher;
+
+    KConfigWatcher::Ptr m_localeConfigWatcher;
+    KSharedConfig::Ptr m_localeConfig;
+    KConfigWatcher::Ptr m_timezoneConfigWatcher;
+    KSharedConfig::Ptr m_timezoneConfig;
 };
 
 //=============================================================================

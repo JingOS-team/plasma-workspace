@@ -5,7 +5,7 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcm_translations\")
 
 ########### next target ###############
 
-set(kcm_translations_PART_SRCS translations.cpp translationsmodel.cpp translationssettings.cpp)
+set(kcm_translations_PART_SRCS translations.cpp translationsmodel.cpp translationssettings.cpp translatetool.cpp)
 kconfig_add_kcfg_files(kcm_translations_PART_SRCS translationssettingsbase.kcfgc GENERATE_MOC)
 
 add_library(kcm_translations MODULE ${kcm_translations_PART_SRCS})
@@ -20,7 +20,11 @@ kcoreaddons_desktop_to_json(kcm_translations "kcm_translations.desktop")
 
 ########### install files ###############
 
+set(DATA_INSTALL_DIR share CACHE PATH "Data file installation directory")
+
 install(TARGETS kcm_translations DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
 install(FILES kcm_translations.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR})
+install(FILES plasmashell.mo DESTINATION ${DATA_INSTALL_DIR}/locale/zh_CN/LC_MESSAGES/)
+
 kpackage_install_package(package kcm_translations kcms)
 

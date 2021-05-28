@@ -22,6 +22,10 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <KActivities/ActivitiesModel>
 #include <KActivities/Consumer>
+#include <QDebug>
+#include <QDBusConnection>
+#include <QDBusError>
+#include <QDBusServer>
 
 namespace TaskManager
 {
@@ -91,6 +95,21 @@ ActivityInfo::ActivityInfo(QObject *parent) : QObject(parent)
             }
         }
     );
+
+    if(!QDBusConnection::sessionBus().registerService("org.kde.plasma.taskmanager"))
+    {
+        qDebug() << "error:" << QDBusConnection::sessionBus().lastError().message();
+    } else {
+        qDebug() << "========================= org.kde.plasma.taskmanager service ok =======================";
+
+    }
+    if (!QDBusConnection::sessionBus().registerObject("/taskmanager", this, QDBusConnection::ExportAllSlots|QDBusConnection::ExportAllSignals))
+    {
+        qDebug() << "error:" << QDBusConnection::sessionBus().lastError().message();
+    } else {
+        qDebug() << "========================= org.kde.plasma.taskmanager object path ok =======================";
+
+    }
 }
 
 ActivityInfo::~ActivityInfo()
@@ -121,6 +140,19 @@ QString ActivityInfo::activityName(const QString &id)
     }
 
     return QString();
+}
+
+bool ActivityInfo::activity()
+{
+    return m_activity;
+}
+
+void ActivityInfo::setActivity(bool activity)
+{
+    qDebug() << "========================= setActivity =======================  activity : " << activity;
+
+    m_activity = activity;
+    emit activityChanged();
 }
 
 }

@@ -66,6 +66,7 @@
 #include "panelview.h"
 #include "scripting/scriptengine.h"
 #include "osd.h"
+#include "toast.h"
 #include "screenpool.h"
 
 #include "plasmashelladaptor.h"
@@ -228,6 +229,7 @@ ShellCorona::ShellCorona(QObject *parent)
     }
 
     new Osd(m_config, this);
+    new Toast(this);
 
     // catch when plasmarc changes, so we e.g. enable/disable the OSd
     m_configPath = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QLatin1Char('/') + m_config->name();

@@ -1,6 +1,5 @@
 /*
  *  Copyright 2014 (c) Martin Klapetek <mklapetek@kde.org>
- *  Copyright 2021 Rui Wang <wangrui@jingos.com>
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -240,10 +239,13 @@ void Osd::showOsd()
         rootObject->setProperty("animateOpacity", false);
         rootObject->setProperty("opacity", 1);
         rootObject->setProperty("visible", true);
+        rootObject->setProperty("display", true);
         rootObject->setProperty("animateOpacity", true);
         rootObject->setProperty("opacity", 0);
     } else {
+        rootObject->setProperty("flags", Qt::Dialog);
         rootObject->setProperty("visible", true);
+        rootObject->setProperty("display", true);
     }
 
     m_osdTimer->start(m_timeout);
@@ -256,8 +258,8 @@ void Osd::hideOsd()
         return;
     }
 
-    rootObject->setProperty("visible", false);
-
+    //rootObject->setProperty("visible", false);
+    rootObject->setProperty("display", false);
     // this is needed to prevent fading from "old" values when the OSD shows up
     rootObject->setProperty("osdValue", 0);
 }

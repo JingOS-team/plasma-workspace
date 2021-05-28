@@ -1,6 +1,7 @@
 /*
  *   Copyright 2013 by Marco Martin <mart@kde.org>
-
+ *             2021 by Rui Wang <wangrui@jingos.com>
+ * 
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
  *   published by the Free Software Foundation; either version 2, or
@@ -19,9 +20,20 @@
 
 #include "imageplugin.h"
 #include "image.h"
+#include "wallpaper.h"
+
 #include <QQmlContext>
 #include <QQmlEngine>
 
+
+static Wallpaper *wallpaper_singletontype_provider(QQmlEngine *engine, QJSEngine *scriptEngine)
+{
+    Q_UNUSED(engine);
+    Q_UNUSED(scriptEngine);
+
+    qDebug() << " Wallpaper  Wallpaper_singletontype_provider ";
+    return Wallpaper::instance();
+}
 
 void ImagePlugin::registerTypes(const char *uri)
 {
@@ -29,6 +41,7 @@ void ImagePlugin::registerTypes(const char *uri)
 
     qmlRegisterType<Image>(uri, 2, 0, "Image");
     qmlRegisterType<QAbstractItemModel>();
+    qmlRegisterSingletonType<Wallpaper>(uri, 2, 0, "Wallpaper", wallpaper_singletontype_provider);
 }
 
 

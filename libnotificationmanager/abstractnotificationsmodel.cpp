@@ -1,6 +1,5 @@
 /*
  * Copyright 2018-2019 Kai Uwe Broulik <kde@privat.broulik.de>
- * Copyright 2021 Rui Wang <wangrui@jingos.com>
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -335,7 +334,6 @@ void AbstractNotificationsModel::clear(Notifications::ClearFlags flags)
     if (d->notifications.isEmpty()) {
         return;
     }
-
     // Tries to remove a contiguous group if possible as the likely case is
     // you have n unread notifications at the end of the list, we don't want to
     // remove and signal each item individually

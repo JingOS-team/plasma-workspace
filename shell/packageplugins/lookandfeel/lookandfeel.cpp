@@ -67,6 +67,9 @@ void LookAndFeelPackage::initPackage(KPackage::Package *package)
     package->addDirectoryDefinition("osd", QStringLiteral("osd"), i18n("On-Screen Display Notifications"));
     package->addFileDefinition("osdmainscript", QStringLiteral("osd/Osd.qml"), i18n("Main Script for On-Screen Display Notifications"));
 
+    package->addDirectoryDefinition("toast", QStringLiteral("toast"), i18n("On-Screen Display toast"));
+    package->addFileDefinition("toastmainscript", QStringLiteral("toast/Toast.qml"), i18n("Main Script for On-Screen Display toast"));
+
     package->addDirectoryDefinition("splash", QStringLiteral("splash"), i18n("Splash Screen"));
     package->addFileDefinition("splashmainscript", QStringLiteral("splash/Splash.qml"), i18n("Main Script for Splash Screen"));
 

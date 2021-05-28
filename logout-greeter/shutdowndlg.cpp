@@ -266,7 +266,7 @@ void KSMShutdownDlg::setupWaylandIntegration()
     // Use Role::Panel to make it go above all other windows
     // see allso KSplash splashwindow.cpp
     m_shellSurface->setPosition(geometry().topLeft());
-    m_shellSurface->setRole(PlasmaShellSurface::Role::Panel);
+    m_shellSurface->setRole(PlasmaShellSurface::Role::OnScreenDisplay);
     m_shellSurface->setPanelTakesFocus(true);
     m_shellSurface->setPanelBehavior(PlasmaShellSurface::PanelBehavior::WindowsGoBelow);
 }

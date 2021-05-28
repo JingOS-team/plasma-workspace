@@ -262,10 +262,13 @@ int Panel::height() const
 
 void Panel::setHeight(int height)
 {
+
+
     if (panel()) {
         panel()->setThickness(height);
     } else {
-        panelConfigDefaults().writeEntry("thickness", height);
+        //cancel write config file [liubangguo]
+        //panelConfigDefaults().writeEntry("thickness", height);
     }
 }
 

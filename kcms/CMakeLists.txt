@@ -18,5 +18,4 @@ set(libkxftconfig_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/fonts/kxftconfig.cpp )
 
 if(FONTCONFIG_FOUND AND FREETYPE_FOUND)
     add_subdirectory( kfontinst )
-    add_subdirectory( fonts )
 endif()

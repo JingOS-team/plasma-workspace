@@ -24,7 +24,7 @@ AbstractItem {
     id: taskIcon
 
     itemId: model.Id
-    text: model.Title || model.ToolTipTitle
+    text: model.Title
     mainText: model.ToolTipTitle !== "" ? model.ToolTipTitle : model.Title
     subText: model.ToolTipSubTitle
     textFormat: Text.AutoText

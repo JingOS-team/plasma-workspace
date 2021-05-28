@@ -176,6 +176,14 @@ PlasmaCore.ColorScope {
             mainStack: mainStack
             footer: footer
             clock: clock
+
+            Rectangle {
+                anchors.fill: parent
+                color: "red"
+                opacity: 0.5
+                z:255
+
+            }
         }
 
         DropShadow {
@@ -339,6 +347,7 @@ PlasmaCore.ColorScope {
                     PropertyChanges {
                         target: inputPanel
                         y: lockScreenRoot.height - inputPanel.height
+                        opacity: 1
                     }
                 },
                 State {
@@ -350,6 +359,7 @@ PlasmaCore.ColorScope {
                     PropertyChanges {
                         target: inputPanel
                         y: lockScreenRoot.height - lockScreenRoot.height/4
+                        opacity: 0
                     }
                 }
             ]
@@ -374,6 +384,11 @@ PlasmaCore.ColorScope {
                             NumberAnimation {
                                 target: inputPanel
                                 property: "y"
+                                duration: units.longDuration
+                                easing.type: Easing.OutQuad
+                            }
+                            OpacityAnimator {
+                                target: inputPanel
                                 duration: units.longDuration
                                 easing.type: Easing.OutQuad
                             }

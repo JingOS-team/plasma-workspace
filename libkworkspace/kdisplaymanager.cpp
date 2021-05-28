@@ -432,7 +432,7 @@ static bool getCurrentSeat(QDBusObjectPath *currentSession, QDBusObjectPath *cur
     if (man.isValid()) {
         *currentSeat = QDBusObjectPath(_SYSTEMD_SEAT_BASE_PATH "/auto");
         SystemdSeat seat(*currentSeat);
-        if (seat.property("Id").isValid()) { //query an arbitrary property to confirm the path is valid
+        if (seat.isValid()) {
             return true;
         }
 
@@ -622,14 +622,6 @@ KDisplayManager::isSwitchable()
                 QVariant prop = SDseat.property("CanMultiSession");
                 if (prop.isValid())
                     return prop.toBool();
-                else {
-                    // Newer systemd versions (since 246) don't expose "CanMultiSession" anymore.
-                    // It's hidden and always true.
-                    // See https://github.com/systemd/systemd/commit/8f8cc84ba4612e74cd1e26898c6816e6e60fc4e9
-                    // and https://github.com/systemd/systemd/commit/c2b178d3cacad52eadc30ecc349160bc02d32a9c
-                    // So assume that it's supported if the property is invalid.
-                    return true;
-                }
             }
             CKSeat CKseat(currentSeat);
             if (CKseat.isValid()) {

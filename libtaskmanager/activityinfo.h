@@ -44,9 +44,12 @@ namespace TaskManager
 class TASKMANAGER_EXPORT ActivityInfo : public QObject
 {
     Q_OBJECT
+    Q_CLASSINFO("D-Bus Interface", "org.kde.plasma.taskmanager")
 
     Q_PROPERTY(QString currentActivity READ currentActivity NOTIFY currentActivityChanged)
     Q_PROPERTY(int numberOfRunningActivities READ numberOfRunningActivities NOTIFY numberOfRunningActivitiesChanged)
+    Q_PROPERTY(bool activity READ activity WRITE setActivity NOTIFY activityChanged)
+
 
 public:
     explicit ActivityInfo(QObject *parent = nullptr);
@@ -81,6 +84,8 @@ public:
      **/
     Q_INVOKABLE QString activityName(const QString &id);
 
+    Q_INVOKABLE bool activity();
+
 Q_SIGNALS:
     void currentActivityChanged() const;
     void numberOfRunningActivitiesChanged() const;
@@ -91,9 +96,16 @@ Q_SIGNALS:
      **/
     void namesOfRunningActivitiesChanged() const;
 
+    void activityChanged();
+
+public Q_SLOTS:
+    void setActivity(bool activity);
+
+
 private:
     class Private;
     QScopedPointer<Private> d;
+    bool m_activity;
 };
 
 }

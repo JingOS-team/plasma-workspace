@@ -17,6 +17,7 @@
 
 import QtQuick 2.0
 import QtQuick.Window 2.2
+import QtQml 2.12
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtra
 
@@ -24,8 +25,9 @@ PlasmaCore.Dialog {
     id: root
     location: PlasmaCore.Types.Floating
     type: PlasmaCore.Dialog.OnScreenDisplay
-    outputOnly: true
+    backgroundHints: PlasmaCore.Dialog.NoBackground
 
+    outputOnly: true
     // OSD Timeout in msecs - how long it will stay on the screen
     property int timeout: 1800
     // This is either a text or a number, if showingProgress is set to true,
@@ -41,5 +43,9 @@ PlasmaCore.Dialog {
 
     mainItem: OsdItem {
         rootItem: root
+        implicitWidth:169
+        implicitHeight: 48
     }
+
 }
+

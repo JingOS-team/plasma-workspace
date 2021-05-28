@@ -316,6 +316,7 @@ public:
         // TODO more
     };
     Q_ENUM(ClearFlag)
+
     Q_DECLARE_FLAGS(ClearFlags, ClearFlag)
     Q_FLAG(ClearFlags)
 

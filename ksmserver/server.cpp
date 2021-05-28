@@ -645,9 +645,9 @@ KSMServer::KSMServer(InitFlags flags)
         display.remove(QRegularExpression(QStringLiteral("\\.[0-9]+$")));
         int i;
         while( (i = display.indexOf(QLatin1Char(':'))) >= 0)
-           display[i] = QLatin1Char('_');
+           display[i] = '_';
         while( (i = display.indexOf(QLatin1Char('/'))) >= 0)
-           display[i] = QLatin1Char('_');
+           display[i] = '_';
 
         fName += '_'+display.toLocal8Bit();
         FILE *f;
@@ -729,9 +729,9 @@ void KSMServer::cleanUp()
     display.remove(QRegularExpression(QStringLiteral("\\.[0-9]+$")));
     int i;
     while( (i = display.indexOf(QLatin1Char(':'))) >= 0)
-         display[i] = QLatin1Char('_');
+         display[i] = '_';
     while( (i = display.indexOf(QLatin1Char('/'))) >= 0)
-         display[i] = QLatin1Char('_');
+         display[i] = '_';
 
     fName += '_'+display.toLocal8Bit();
     ::unlink(fName.data());

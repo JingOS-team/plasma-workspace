@@ -1,6 +1,7 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"plasma_wallpaper_org.kde.image\")
 
 set(image_SRCS
+    wallpaper.cpp
     image.cpp
     imageplugin.cpp
     backgroundlistmodel.cpp

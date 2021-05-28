@@ -1,6 +1,5 @@
 /*
  * Copyright 2020 Shah Bhushan <bshah@kde.org>
- * Copyright 2021 Rui Wang <wangrui@jingos.com>
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -20,7 +19,8 @@
  */
 
 #include "watchednotificationsmodel.h"
-
+#include "notifications.h"
+#include "notification.h"
 #include <QDBusMetaType>
 #include <QDBusConnection>
 #include <QDBusServiceWatcher>
@@ -34,22 +34,22 @@ using namespace NotificationManager;
 
 class WatchedNotificationsModel::Private : public QObject
 {
-    Q_OBJECT
-public:
-    explicit Private(WatchedNotificationsModel* q, QObject* parent = nullptr);
-    ~Private();
-    bool valid = false;
+        Q_OBJECT
+    public:
+        explicit Private(WatchedNotificationsModel* q, QObject* parent = nullptr);
+        ~Private();
+        bool valid = false;
 
-public Q_SLOTS:
-    Q_SCRIPTABLE void Notify(uint id, const QString &app_name, uint replaces_id, const QString &app_icon,
-                        const QString &summary, const QString &body, const QStringList &actions,
-                        const QVariantMap &hints, int timeout);
-    Q_SCRIPTABLE void CloseNotification(uint id);
-    void NotificationClosed(uint id, uint reason);
+    public Q_SLOTS:
+        Q_SCRIPTABLE void Notify(uint id, const QString &app_name, uint replaces_id, const QString &app_icon,
+                            const QString &summary, const QString &body, const QStringList &actions,
+                            const QVariantMap &hints, int timeout);
+        Q_SCRIPTABLE void CloseNotification(uint id);
+        void NotificationClosed(uint id, uint reason);
 
-private:
-    WatchedNotificationsModel* q;
-    OrgFreedesktopNotificationsInterface *fdoNotificationsInterface;
+    private:
+        WatchedNotificationsModel* q;
+        OrgFreedesktopNotificationsInterface *fdoNotificationsInterface;
 };
 
 WatchedNotificationsModel::Private::Private(WatchedNotificationsModel* q, QObject *parent)
@@ -135,6 +135,11 @@ WatchedNotificationsModel::~WatchedNotificationsModel()
 void WatchedNotificationsModel::close(uint notificationId)
 {
     onNotificationRemoved(notificationId, Server::CloseReason::DismissedByUser);
+}
+
+void WatchedNotificationsModel::clearExpired(Notifications::ClearFlags flags)
+{
+    this->clear(flags);
 }
 
 void WatchedNotificationsModel::expire(uint notificationId)

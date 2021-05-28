@@ -239,6 +239,8 @@ int PanelView::thickness() const
 
 void PanelView::setThickness(int value)
 {
+
+
     if (value == thickness()) {
         return;
     }
@@ -246,8 +248,10 @@ void PanelView::setThickness(int value)
     m_thickness = value;
     emit thicknessChanged();
 
-    config().writeEntry("thickness", value);
-    configDefaults().writeEntry("thickness", value);
+    //cancel write thickness [liubangguo]
+    //config().writeEntry("thickness", value);
+    //configDefaults().writeEntry("thickness", value);
+
     m_corona->requestApplicationConfigSync();
     resizePanel();
 }

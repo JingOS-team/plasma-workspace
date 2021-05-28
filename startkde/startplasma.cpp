@@ -24,6 +24,7 @@
 #include <QStandardPaths>
 #include <QTextStream>
 #include <QEventLoop>
+#include <QByteArray>
 
 #include <QDBusConnectionInterface>
 #include <QDBusServiceWatcher>
@@ -140,15 +141,27 @@ void runStartupConfig()
         }
     }
 
-    KConfigGroup languageConfig = KConfigGroup(&config, "Translations");
-    const QString value = languageConfig.readEntry("LANGUAGE", QString());
-    if (!value.isEmpty()) {
-        qputenv("LANGUAGE", value.toUtf8());
-    }
-
     if (!formatsConfig.hasKey("LANG") && !qEnvironmentVariableIsEmpty("LANG")) {
         formatsConfig.writeEntry("LANG", qgetenv("LANG"));
         formatsConfig.sync();
+    }
+
+    KConfigGroup languageConfig = KConfigGroup(&config, "Translations");
+    const QString value = languageConfig.readEntry("LANGUAGE", QString());
+
+    const auto envStr = qgetenv("LANG");
+
+    if(value.isEmpty() || value.isNull()) {
+        if(envStr.startsWith("zh_CN")) {
+            languageConfig.writeEntry("LANGUAGE", "zh_CN:en_US");
+            qputenv("LANGUAGE", "zh_CN:en_US");
+        } else {
+            languageConfig.writeEntry("LANGUAGE", "en_US:zh_CN");
+            qputenv("LANGUAGE", "en_US:zh_CN");
+        }
+        languageConfig.sync();
+    } else {
+        qputenv("LANGUAGE", value.toUtf8());
     }
 }
 

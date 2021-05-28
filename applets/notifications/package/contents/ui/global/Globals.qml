@@ -1,6 +1,5 @@
 /*
  * Copyright 2019 Kai Uwe Broulik <kde@privat.broulik.de>
- * Copyright 2021 Rui Wang <wangrui@jingos.com>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -28,10 +27,8 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.kirigami 2.11 as Kirigami
-
 import org.kde.notificationmanager 1.0 as NotificationManager
 import org.kde.taskmanager 0.1 as TaskManager
-
 import org.kde.plasma.private.notifications 2.0 as Notifications
 
 import ".."
@@ -125,14 +122,19 @@ QtObject {
 
         case NotificationManager.Settings.TopLeft:
             return Qt.AlignTop | Qt.AlignLeft;
+
         case NotificationManager.Settings.TopCenter:
             return Qt.AlignTop | Qt.AlignHCenter;
+
         case NotificationManager.Settings.TopRight:
             return Qt.AlignTop | Qt.AlignRight;
+
         case NotificationManager.Settings.BottomLeft:
             return Qt.AlignBottom | Qt.AlignLeft;
+
         case NotificationManager.Settings.BottomCenter:
             return Qt.AlignBottom | Qt.AlignHCenter;
+
         case NotificationManager.Settings.BottomRight:
             return Qt.AlignBottom | Qt.AlignRight;
         }
@@ -144,10 +146,9 @@ QtObject {
         }
 
         let rect = Qt.rect(plasmoid.screenGeometry.x + plasmoid.availableScreenRect.x,
-                           plasmoid.screenGeometry.y + plasmoid.availableScreenRect.y,
-                           plasmoid.availableScreenRect.width,
-                           plasmoid.availableScreenRect.height);
-
+            plasmoid.screenGeometry.y + plasmoid.availableScreenRect.y,
+            plasmoid.availableScreenRect.width,
+            plasmoid.availableScreenRect.height);
         // When no explicit screen corner is configured,
         // restrict notification popup position by horizontal panel width
         if (notificationSettings.popupPosition === NotificationManager.Settings.CloseToWidget
@@ -159,9 +160,9 @@ QtObject {
                 rect = Qt.rect(left, rect.y, right - left, rect.height);
             }
         }
-
         return rect;
     }
+
     onScreenRectChanged: repositionTimer.start()
 
     readonly property Item visualParent: {
@@ -172,10 +173,11 @@ QtObject {
             || plasmoid.compactRepresentationItem
             || plasmoid.fullRepresentationItem;
     }
+
     onVisualParentChanged: positionPopups()
+    onFocusDialogChanged: positionPopups()
 
     readonly property QtObject focusDialog: plasmoid.nativeInterface.focussedPlasmaDialog
-    onFocusDialogChanged: positionPopups()
 
     // The raw width of the popup's content item, the Dialog itself adds some margins
     // Make it wider when on the top or the bottom center, since there's more horizontal
@@ -308,7 +310,6 @@ QtObject {
         if (visualParentWindow) {
             if (!(effectivePopupLocation & (Qt.AlignLeft | Qt.AlignHCenter | Qt.AlignRight))) {
                 const iconHCenter = visualParent.mapToItem(null /*mapToScene*/, 0, 0).x + visualParent.width / 2;
-
                 if (iconHCenter < visualParentWindow.width / 2) {
                     effectivePopupLocation |= Qt.AlignLeft;
                 } else {
@@ -329,8 +330,8 @@ QtObject {
                 effectivePopupLocation |= Qt.AlignBottom;
             }
         }
-
         let y = screenRect.y;
+
         if (effectivePopupLocation & Qt.AlignBottom) {
             y += screenRect.height - popupEdgeDistance;
         } else {
@@ -339,6 +340,7 @@ QtObject {
 
         for (var i = 0; i < popupInstantiator.count; ++i) {
             let popup = popupInstantiator.objectAt(i);
+
             // Popup width is fixed, so don't rely on the actual window size
             var popupEffectiveWidth = popupWidth + popup.margins.left + popup.margins.right;
 
@@ -357,8 +359,7 @@ QtObject {
             if (effectivePopupLocation & Qt.AlignTop) {
                 // We want to calculate the new position based on its original target position to avoid positioning it and then
                 // positioning it again, hence the temporary Qt.rect with explicit "y" and not just the popup as a whole
-                if (focusDialog && focusDialog.visible && !(focusDialog instanceof NotificationPopup)
-                        && rectIntersect(focusDialog, Qt.rect(popup.x, y, popup.width, popup.height))) {
+                if (focusDialog && focusDialog.visible && !(focusDialog instanceof NotificationPopup) && rectIntersect(focusDialog, Qt.rect(popup.x, y, popup.width, popup.height))) {
                     y = focusDialog.y + focusDialog.height + popupEdgeDistance;
                 }
                 popup.y = y;
@@ -377,7 +378,6 @@ QtObject {
                     // y -= popupSpacing;
                 }
             }
-
             // don't let notifications take more than popupMaximumScreenFill of the screen
             var visible = true;
             if (i > 0) { // however always show at least one popup
@@ -389,6 +389,10 @@ QtObject {
             }
 
             popup.visible = visible;
+
+            if (popup.actionNames.length !== 0) {
+                popup.x = (Screen.width - Screen.width / 888 * 364  - 32 * 2) / 2
+            }
         }
     }
 
@@ -449,31 +453,25 @@ QtObject {
 
     property Instantiator popupInstantiator: Instantiator {
         model: popupNotificationsModel
-        delegate: NotificationPopup {
-            // so Instantiator can access that after the model row is gone
-            readonly property var notificationId: model.notificationId
 
+        delegate: NotificationPopup {
+            readonly property var notificationId: model.notificationId
             popupWidth: globals.popupWidth
             type: model.urgency === NotificationManager.Notifications.CriticalUrgency && notificationSettings.keepCriticalAlwaysOnTop
-                  ? PlasmaCore.Dialog.CriticalNotification : PlasmaCore.Dialog.Notification
-
+                ? PlasmaCore.Dialog.CriticalNotification : PlasmaCore.Dialog.Notification
             notificationType: model.type
-
             applicationName: model.applicationName
             applicationIconSource: model.applicationIconName
             originName: model.originName || ""
 
             time: model.updated || model.created
-
             configurable: model.configurable
             // For running jobs instead of offering a "close" button that might lead the user to
             // think that will cancel the job, we offer a "dismiss" button that hides it in the history
-            dismissable: model.type === NotificationManager.Notifications.JobType
-                && model.jobState !== NotificationManager.Notifications.JobStateStopped
+            dismissable: model.type === NotificationManager.Notifications.JobType && model.jobState !== NotificationManager.Notifications.JobStateStopped
             // TODO would be nice to be able to "pin" jobs when they autohide
-                && notificationSettings.permanentJobPopups
+            && notificationSettings.permanentJobPopups
             closable: model.closable
-
             summary: model.summary
             body: model.body || ""
             icon: model.image || model.iconName
@@ -484,24 +482,20 @@ QtObject {
             defaultTimeout: notificationSettings.popupTimeout + (model.urls && model.urls.length > 0 ? 5000 : 0)
             // When configured to not keep jobs open permanently, we autodismiss them after the standard timeout
             dismissTimeout: !notificationSettings.permanentJobPopups
-                            && model.type === NotificationManager.Notifications.JobType
-                            && model.jobState !== NotificationManager.Notifications.JobStateStopped
-                            ? defaultTimeout : 0
-
+                && model.type === NotificationManager.Notifications.JobType
+                && model.jobState !== NotificationManager.Notifications.JobStateStopped
+                ? defaultTimeout : 0
             urls: model.urls || []
             urgency: model.urgency || NotificationManager.Notifications.NormalUrgency
-
             jobState: model.jobState || 0
             percentage: model.percentage || 0
             jobError: model.jobError || 0
             suspendable: !!model.suspendable
             killable: !!model.killable
             jobDetails: model.jobDetails || null
-
             configureActionLabel: model.configureActionLabel || ""
             actionNames: model.actionNames
             actionLabels: model.actionLabels
-
             hasReplyAction: model.hasReplyAction || false
             replyActionLabel: model.replyActionLabel || ""
             replyPlaceholderText: model.replyPlaceholderText || ""
@@ -519,60 +513,53 @@ QtObject {
                         console.warn("Failed fallback notification activation as window no longer exists");
                         return;
                     }
-
-                    // When it's a group, activate the window highest in stacking order (presumably last used)
+                 // When it's a group, activate the window highest in stacking order (presumably last used)
                     if (tasksModel.data(defaultActionFallbackWindowIdx, TaskManager.AbstractTasksModel.IsGroupParent)) {
                         let highestStacking = -1;
                         let highestIdx = undefined;
-
                         for (let i = 0; i < tasksModel.rowCount(defaultActionFallbackWindowIdx); ++i) {
                             const idx = tasksModel.index(i, 0, defaultActionFallbackWindowIdx);
-
                             const stacking = tasksModel.data(idx, TaskManager.AbstractTasksModel.StackingOrder);
-
                             if (stacking > highestStacking) {
-                                highestStacking = stacking;
-                                highestIdx = tasksModel.makePersistentModelIndex(defaultActionFallbackWindowIdx.row, i);
-                            }
+                                    highestStacking = stacking;
+                                    highestIdx = tasksModel.makePersistentModelIndex(defaultActionFallbackWindowIdx.row, i);
+                                }
                         }
-
                         if (highestIdx && highestIdx.valid) {
-                            tasksModel.requestActivate(highestIdx);
-                            popupNotificationsModel.close(popupNotificationsModel.index(index, 0));
-
+                                tasksModel.requestActivate(highestIdx);
+                                popupNotificationsModel.close(popupNotificationsModel.index(index, 0));
                         }
                         return;
                     }
-
                     tasksModel.requestActivate(defaultActionFallbackWindowIdx);
                     popupNotificationsModel.close(popupNotificationsModel.index(index, 0));
                     return;
                 }
-
                 popupNotificationsModel.invokeDefaultAction(popupNotificationsModel.index(index, 0))
                 popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
             }
+
             onActionInvoked: {
                 popupNotificationsModel.invokeAction(popupNotificationsModel.index(index, 0), actionName)
                 popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
             }
+
             onReplied: {
                 popupNotificationsModel.reply(popupNotificationsModel.index(index, 0), text);
                 popupNotificationsModel.close(popupNotificationsModel.index(index, 0));
             }
+
             onOpenUrl: {
                 Qt.openUrlExternally(url);
                 popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
             }
-            onFileActionInvoked: popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
 
+            onFileActionInvoked: popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
             onSuspendJobClicked: popupNotificationsModel.suspendJob(popupNotificationsModel.index(index, 0))
             onResumeJobClicked: popupNotificationsModel.resumeJob(popupNotificationsModel.index(index, 0))
             onKillJobClicked: popupNotificationsModel.killJob(popupNotificationsModel.index(index, 0))
-
             // popup width is fixed
             onHeightChanged: positionPopups()
-
             Component.onCompleted: {
                 if (model.type === NotificationManager.Notifications.NotificationType && model.desktopEntry) {
                     // Register apps that were seen spawning a popup so they can be configured later
@@ -581,13 +568,11 @@ QtObject {
                         notificationSettings.registerKnownApplication(model.desktopEntry);
                         notificationSettings.save();
                     }
-
-                    // If there is no default action, check if there is a window we could activate instead
+                 // If there is no default action, check if there is a window we could activate instead
                     if (!model.hasDefaultAction) {
                         for (let i = 0; i < tasksModel.rowCount(); ++i) {
                             const idx = tasksModel.index(i, 0);
-
-                            const appId = tasksModel.data(idx, TaskManager.AbstractTasksModel.AppId);
+                         const appId = tasksModel.data(idx, TaskManager.AbstractTasksModel.AppId);
                             if (appId === model.desktopEntry + ".desktop") {
                                 // Takes a row number, not a QModelIndex
                                 defaultActionFallbackWindowIdx = tasksModel.makePersistentModelIndex(i);
@@ -597,21 +582,21 @@ QtObject {
                         }
                     }
                 }
-
                 // Tell the model that we're handling the timeout now
                 popupNotificationsModel.stopTimeout(popupNotificationsModel.index(index, 0));
             }
         }
+
         onObjectAdded: {
             positionPopups();
             object.visible = true;
         }
+
         onObjectRemoved: {
             var notificationId = object.notificationId
             // Popup might have been destroyed because of a filter change, tell the model to do the timeout work for us again
             // cannot use QModelIndex here as the model row is already gone
             popupNotificationsModel.startTimeout(notificationId);
-
             positionPopups();
         }
     }

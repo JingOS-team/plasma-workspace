@@ -14,12 +14,29 @@ set(digitalclockplugin_SRCS
     clipboardmenu.cpp
     )
 
+
+include(KDEInstallDirs)
+include(KDECMakeSettings)
+include(KDECompilerSettings NO_POLICY_SCOPE)
+include(ECMPoQmTools)
+
+#target_include_directories(digitalclockplugin PRIVATE "${GSTREAMER_INCLUDE_DIR}")
+
+find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
+        Config
+        I18n
+        CoreAddons
+        )
+
+
 add_library(digitalclockplugin SHARED ${digitalclockplugin_SRCS})
 target_link_libraries(digitalclockplugin Qt5::Core
                                           Qt5::Qml
+                                            Qt5::DBus
                                           Qt5::Widgets # for QAction...
                                           KF5::CoreAddons
-                                          KF5::I18n)
+                                          KF5::I18n
+                                            KF5::ConfigCore)
 
 install(TARGETS digitalclockplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/digitalclock)
 

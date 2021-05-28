@@ -1,6 +1,5 @@
 /********************************************************************
 Copyright 2016  Eike Hein <hein@kde.org>
-Copyright 2021 Rui Wang <wangrui@jingos.com>
 
 This library is free software; you can redistribute it and/or
 modify it under the terms of the GNU Lesser General Public
@@ -174,6 +173,7 @@ void WaylandTasksModel::Private::addWindow(KWayland::Client::PlasmaWindow *windo
 
     //q->beginInsertRows(QModelIndex(), 0, 0);
 
+    // todo yanggx 修正insert乱序问题后，使用insert
     q->beginResetModel();
     windows.prepend(window);
     q->endResetModel();

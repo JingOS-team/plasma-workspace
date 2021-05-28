@@ -113,7 +113,6 @@ ColumnLayout {
                 let prisonTest = Qt.createQmlObject("import QtQml 2.0; import org.kde.prison 1.0; QtObject {}", this);
                 prisonTest.destroy();
             } catch (e) {
-                console.log("Barcodes not supported:", e);
                 return false;
             }
             return true;
