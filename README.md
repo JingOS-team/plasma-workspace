@@ -2,8 +2,6 @@ plasma-workspace is based on plasma-workspace [gitlab](https://invent.kde.org/pl
 
 ## Features
 
-* plasma-work is a touch friendly and beautiful application. It offers:
-
 * Run on JingOS platform
 
 * Brand new UI & UE with JingOS-style , based on JingUI Framework
