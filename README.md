@@ -1,17 +1,6 @@
-<!--
-    SPDX-FileCopyrightText: 2021 Bob Wu <pengbo.wu@jingos.com>
-    SPDX-License-Identifier: CC-BY-SA-4.0
--->
-
-
-
-plasma-work application for JingOS.
-
-
+plasma-workspace is based on plasma-workspace [gitlab](https://invent.kde.org/plasma/plasma-workspace) 
 
 ## Features
-
-* plasma-workspace is base on KDE plasma-workspace
 
 * plasma-work is a touch friendly and beautiful application. It offers:
 
@@ -29,8 +18,6 @@ plasma-work application for JingOS.
   * Icon
   * Picture
 
-
-
 ## Links
 
 * Home page: https://www.jingos.com/
@@ -40,7 +27,6 @@ plasma-work application for JingOS.
 * Issues: https://invent.kde.org/jingosdev/plasma-workspace/issues
 
 * Development channel: https://forum.jingos.com/
-
 
 
 ## Dependencies
