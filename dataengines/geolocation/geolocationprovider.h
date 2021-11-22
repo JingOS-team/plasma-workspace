@@ -33,7 +33,11 @@ class GEOLOCATION_EXPORT GeolocationProvider : public QObject
     Q_OBJECT
 
 public:
-    enum UpdateTrigger { ForcedUpdate = 0, SourceEvent = 1, NetworkConnected = 2 };
+    enum UpdateTrigger {
+        ForcedUpdate = 0,
+        SourceEvent = 1,
+        NetworkConnected = 2,
+    };
     Q_DECLARE_FLAGS(UpdateTriggers, UpdateTrigger)
 
     explicit GeolocationProvider(QObject *parent = nullptr, const QVariantList &args = QVariantList());
@@ -73,9 +77,8 @@ private:
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(GeolocationProvider::UpdateTriggers)
 
-#define K_EXPORT_PLASMA_GEOLOCATIONPROVIDER(libname, classname) \
-K_PLUGIN_FACTORY(factory, registerPlugin<classname>();) \
-K_EXPORT_PLUGIN_VERSION(1.0)
+#define K_EXPORT_PLASMA_GEOLOCATIONPROVIDER(libname, classname)                                                                                                \
+    K_PLUGIN_FACTORY(factory, registerPlugin<classname>();)                                                                                                    \
+    K_EXPORT_PLUGIN_VERSION(1.0)
 
 #endif
-

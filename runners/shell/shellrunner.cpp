@@ -22,8 +22,8 @@
 #include <KAuthorized>
 #include <KLocalizedString>
 #include <KNotificationJobUiDelegate>
-#include <KToolInvocation>
 #include <KShell>
+#include <KToolInvocation>
 #include <QRegularExpression>
 #include <QStandardPaths>
 
@@ -31,8 +31,8 @@
 
 K_EXPORT_PLASMA_RUNNER_WITH_JSON(ShellRunner, "plasma-runner-shell.json")
 
-ShellRunner::ShellRunner(QObject *parent, const QVariantList &args)
-    : Plasma::AbstractRunner(parent, args)
+ShellRunner::ShellRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
+    : Plasma::AbstractRunner(parent, metaData, args)
 {
     setObjectName(QStringLiteral("Command"));
     setPriority(AbstractRunner::HighestPriority);
@@ -41,9 +41,7 @@ ShellRunner::ShellRunner(QObject *parent, const QVariantList &args)
     suspendMatching(!enabled);
 
     addSyntax(Plasma::RunnerSyntax(QStringLiteral(":q:"), i18n("Finds commands that match :q:, using common shell syntax")));
-    m_actionList = {addAction(QStringLiteral("runInTerminal"),
-                            QIcon::fromTheme(QStringLiteral("utilities-terminal")),
-                            i18n("Run in Terminal Window"))};
+    m_actionList = {addAction(QStringLiteral("runInTerminal"), QIcon::fromTheme(QStringLiteral("utilities-terminal")), i18n("Run in Terminal Window"))};
     m_matchIcon = QIcon::fromTheme(QStringLiteral("system-run"));
 }
 
@@ -53,16 +51,9 @@ ShellRunner::~ShellRunner()
 
 void ShellRunner::match(Plasma::RunnerContext &context)
 {
-    bool isShellCommand = context.type() == Plasma::RunnerContext::ShellCommand || context.type() == Plasma::RunnerContext::Executable;
     QStringList envs;
-    QString command;
-    // If it is not a shell command we check if we use ENV variables, FEATURE: 409107
-    // This is not recognized when setting the context type and we can't change it, because
-    // other runners depend on the current pattern
-    if (!isShellCommand) {
-        isShellCommand = parseENVVariables(context.query(), envs, command);
-    }
-    if (isShellCommand) {
+    QString command = context.query();
+    if (parseShellCommand(context.query(), envs, command)) {
         const QString term = context.query();
         Plasma::QueryMatch match(this);
         match.setId(term);
@@ -71,6 +62,7 @@ void ShellRunner::match(Plasma::RunnerContext &context)
         match.setText(i18n("Run %1", term));
         match.setData(QVariantList({command, envs}));
         match.setRelevance(0.7);
+        match.setActions(m_actionList);
         context.addMatch(match);
     }
 }
@@ -83,24 +75,17 @@ void ShellRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryM
         return;
     }
 
-    auto *job = new KIO::CommandLauncherJob(context.query());
+    auto *job = new KIO::CommandLauncherJob(context.query()); // The job can handle the env parameters
     job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled));
     job->start();
 }
 
-QList<QAction *> ShellRunner::actionsForMatch(const Plasma::QueryMatch &match)
-{
-    Q_UNUSED(match)
-
-    return m_actionList;
-}
-
-bool ShellRunner::parseENVVariables(const QString &query, QStringList &envs, QString &command)
+bool ShellRunner::parseShellCommand(const QString &query, QStringList &envs, QString &command)
 {
     const static QRegularExpression envRegex = QRegularExpression(QStringLiteral("^.+=.+$"));
     const QStringList split = KShell::splitArgs(query);
     for (const auto &entry : split) {
-        if (!QStandardPaths::findExecutable(entry).isEmpty()) {
+        if (!QStandardPaths::findExecutable(KShell::tildeExpand(entry)).isEmpty()) {
             command = KShell::joinArgs(split.mid(split.indexOf(entry)));
             return true;
         } else if (envRegex.match(entry).hasMatch()) {

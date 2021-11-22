@@ -50,6 +50,7 @@
 #include <KIO/DropJob>
 #include <KIO/FavIconRequestJob>
 #include <KIO/OpenFileManagerWindowJob>
+#include <KIO/OpenUrlJob>
 #include <KIO/StatJob>
 
 #include <startuptasksmodel.h>
@@ -57,7 +58,6 @@
 IconApplet::IconApplet(QObject *parent, const QVariantList &data)
     : Plasma::Applet(parent, data)
 {
-
 }
 
 IconApplet::~IconApplet()
@@ -239,7 +239,7 @@ void IconApplet::populate()
 
         if (downloadFavIcon) {
             KIO::FavIconRequestJob *job = new KIO::FavIconRequestJob(m_url);
-            connect(job, &KIO::FavIconRequestJob::result, this, [job, backingDesktopFile, this](KJob *){
+            connect(job, &KIO::FavIconRequestJob::result, this, [job, backingDesktopFile, this](KJob *) {
                 if (!job->error()) {
                     KDesktopFile(backingDesktopFile).desktopGroup().writeEntry(QStringLiteral("Icon"), job->iconFile());
 
@@ -294,7 +294,7 @@ void IconApplet::setUrl(const QUrl &url)
 {
     if (m_url != url) {
         m_url = url;
-        urlChanged(url);
+        Q_EMIT urlChanged(url);
 
         config().writeEntry(QStringLiteral("url"), url);
 
@@ -349,7 +349,7 @@ QList<QAction *> IconApplet::contextualActions()
                 action->setSeparator(true);
             }
 
-            connect(action, &QAction::triggered, this, [this, serviceAction]() {
+            connect(action, &QAction::triggered, this, [serviceAction]() {
                 auto *job = new KIO::ApplicationLauncherJob(serviceAction);
                 auto *delegate = new KNotificationJobUiDelegate(KJobUiDelegate::AutoErrorHandlingEnabled);
                 job->setUiDelegate(delegate);
@@ -393,7 +393,7 @@ QList<QAction *> IconApplet::contextualActions()
             if (!m_openContainingFolderAction) {
                 if (KProtocolManager::supportsListing(linkUrl)) {
                     m_openContainingFolderAction = new QAction(QIcon::fromTheme(QStringLiteral("document-open-folder")), i18n("Open Containing Folder"), this);
-                    connect(m_openContainingFolderAction, &QAction::triggered, this, [ linkUrl] {
+                    connect(m_openContainingFolderAction, &QAction::triggered, this, [linkUrl] {
                         KIO::highlightInFileManager({linkUrl});
                     });
                 }
@@ -431,7 +431,8 @@ void IconApplet::run()
         connect(m_startupTasksModel, &QAbstractItemModel::rowsAboutToBeRemoved, this, std::bind(handleRow, false /*busy*/, _1, _2, _3));
     }
 
-    KIO::ApplicationLauncherJob *job = new KIO::ApplicationLauncherJob(KService::Ptr(new KService(m_localPath)));
+    KIO::OpenUrlJob *job = new KIO::OpenUrlJob(QUrl::fromLocalFile(m_localPath));
+    job->setRunExecutables(true); // so it can launch apps
     job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled));
     job->start();
 }
@@ -450,12 +451,15 @@ void IconApplet::processDrop(QObject *dropEvent)
     const QString &localPath = m_url.toLocalFile();
 
     if (KDesktopFile::isDesktopFile(localPath)) {
-        KService::Ptr service(new KService(localPath));
-        auto *job = new KIO::ApplicationLauncherJob(service);
-        job->setUrls(urls);
-        job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled));
-        job->start();
-        return;
+        auto service = new KService(localPath);
+
+        if (service->isApplication()) {
+            KIO::ApplicationLauncherJob *job = new KIO::ApplicationLauncherJob(KService::Ptr(service));
+            job->setUrls(urls);
+            job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled));
+            job->start();
+            return;
+        }
     }
 
     QMimeDatabase db;
@@ -534,8 +538,7 @@ QList<QUrl> IconApplet::urlsFromDrop(QObject *dropEvent)
 
 bool IconApplet::isExecutable(const QMimeType &mimeType)
 {
-    return (mimeType.inherits(QStringLiteral("application/x-executable"))
-            || mimeType.inherits(QStringLiteral("application/x-shellscript")));
+    return (mimeType.inherits(QStringLiteral("application/x-executable")) || mimeType.inherits(QStringLiteral("application/x-shellscript")));
 }
 
 void IconApplet::configure()

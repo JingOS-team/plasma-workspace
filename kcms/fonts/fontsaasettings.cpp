@@ -18,43 +18,41 @@
 
 #include "fontsaasettings.h"
 
-#include <QDebug>
 #include <KWindowSystem>
+#include <QDebug>
 
-#include "kxftconfig.h"
-
-namespace {
-    bool defaultExclude()
-    {
-        return false;
-    }
-
-    int defaultExcludeFrom()
-    {
-        return 8;
-    }
-
-    int defaultExcludeTo()
-    {
-        return 15;
-    }
-
-    bool defaultAntiAliasing()
-    {
-        return true;
-    }
-
-    int defaultSubPixel()
-    {
-        return KXftConfig::SubPixel::Rgb;
-    }
-
-    int defaultHinting()
-    {
-        return KXftConfig::Hint::Slight;
-    }
+namespace
+{
+bool defaultExclude()
+{
+    return false;
 }
 
+int defaultExcludeFrom()
+{
+    return 8;
+}
+
+int defaultExcludeTo()
+{
+    return 15;
+}
+
+bool defaultAntiAliasing()
+{
+    return true;
+}
+
+int defaultSubPixel()
+{
+    return KXftConfig::SubPixel::Rgb;
+}
+
+int defaultHinting()
+{
+    return KXftConfig::Hint::Slight;
+}
+}
 
 class FontAASettingsStore : public QObject
 {
@@ -68,7 +66,6 @@ class FontAASettingsStore : public QObject
 public:
     FontAASettingsStore(FontsAASettings *parent = nullptr)
         : QObject(parent)
-        , m_settings(parent)
     {
         load();
     }
@@ -177,7 +174,7 @@ public:
         grp.writeEntry("XftSubPixel", KXftConfig::toStr(spType));
 
         if (aaState == KXftConfig::AntiAliasing::NotSet) {
-           grp.revertToDefault("XftAntialias");
+            grp.revertToDefault("XftAntialias");
         } else {
             grp.writeEntry("XftAntialias", aaState == KXftConfig::AntiAliasing::Enabled);
         }
@@ -244,7 +241,6 @@ public:
     }
 
 private:
-    FontsAASettings *m_settings;
     bool m_isImmutable;
     bool m_antiAliasing;
     bool m_antiAliasingChanged;
@@ -268,7 +264,6 @@ FontsAASettings::FontsAASettings(QObject *parent)
     addItemInternal("subPixel", defaultSubPixel(), &FontsAASettings::subPixelChanged);
     addItemInternal("hinting", defaultHinting(), &FontsAASettings::hintingChanged);
 
-    connect(this, &FontsAASettings::forceFontDPIWaylandChanged, this, &FontsAASettings::dpiChanged);
     connect(this, &FontsAASettings::forceFontDPIChanged, this, &FontsAASettings::dpiChanged);
 }
 
@@ -276,7 +271,9 @@ void FontsAASettings::addItemInternal(const QByteArray &propertyName, const QVar
 {
     auto item = new KPropertySkeletonItem(m_fontAASettingsStore, propertyName, defaultValue);
     addItem(item, propertyName);
-    item->setNotifyFunction([this, notifySignal] { emit (this->*notifySignal)(); });
+    item->setNotifyFunction([this, notifySignal] {
+        emit(this->*notifySignal)();
+    });
 }
 
 bool FontsAASettings::exclude() const
@@ -321,11 +318,7 @@ void FontsAASettings::setAntiAliasing(bool antiAliasing)
 
 int FontsAASettings::dpi() const
 {
-    if (KWindowSystem::isPlatformWayland()) {
-        return forceFontDPIWayland();
-    } else {
-        return forceFontDPI();
-    }
+    return forceFontDPI();
 }
 
 void FontsAASettings::setDpi(int newDPI)
@@ -333,11 +326,9 @@ void FontsAASettings::setDpi(int newDPI)
     if (dpi() == newDPI) {
         return;
     }
-    if (KWindowSystem::isPlatformWayland()) {
-        setForceFontDPIWayland(newDPI);
-    } else {
-        setForceFontDPI(newDPI);
-    }
+
+    setForceFontDPI(newDPI);
+
     emit dpiChanged();
 }
 

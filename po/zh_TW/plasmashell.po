@@ -1,0 +1,268 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Franklin, 2014, 2015.
+# Jeff Huang <s8321414@gmail.com>, 2016, 2017.
+# pan93412 <pan93412@gmail.com>, 2018, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-02-02 02:56+0100\n"
+"PO-Revision-Date: 2020-02-20 19:09+0800\n"
+"Last-Translator: Yi-Jyun Pan <pan93412@gmail.com>\n"
+"Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 19.12.2\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Franklin Weng, Jeff Huang"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "franklin@goodhorse.idv.tw, s8321414@gmail.com"
+
+#: currentcontainmentactionsmodel.cpp:225
+#, kde-format
+msgid "Configure Mouse Actions Plugin"
+msgstr "設定滑鼠動作外掛程式"
+
+#: main.cpp:107
+#, kde-format
+msgid "Plasma"
+msgstr "Plasma"
+
+#: main.cpp:107
+#, kde-format
+msgid "Plasma Shell"
+msgstr "Plasma Shell"
+
+#: main.cpp:121
+#, kde-format
+msgid "Enable QML Javascript debugger"
+msgstr "開啟 QML Javascript 除錯器"
+
+#: main.cpp:124
+#, kde-format
+msgid "Do not restart plasma-shell automatically after a crash"
+msgstr "崩潰後不要自動啟動 plasma-shell"
+
+#: main.cpp:127
+#, kde-format
+msgid "Force loading the given shell plugin"
+msgstr "強制載入指定的 shell 外掛程式"
+
+#: main.cpp:132
+#, kde-format
+msgid ""
+"Load plasmashell as a standalone application, needs the shell-plugin option "
+"to be specified"
+msgstr "以獨立的應用程式來載入 plasmashell，需要指定 shell 外掛程式的選項"
+
+#: main.cpp:134
+#, kde-format
+msgid "Replace an existing instance"
+msgstr "取代一個存在的事例"
+
+#: main.cpp:137
+#, kde-format
+msgid ""
+"Enables test mode and specifies the layout javascript file to set up the "
+"testing environment"
+msgstr "啟用測試模式並指定 Javascript 檔案的佈局以設定測試環境"
+
+#: main.cpp:138
+#, kde-format
+msgid "file"
+msgstr "檔案"
+
+#: main.cpp:142
+#, kde-format
+msgid "Lists the available options for user feedback"
+msgstr "列出能用於使用者意見回應的選項"
+
+#: main.cpp:234
+#, kde-format
+msgid "Plasma Failed To Start"
+msgstr "Plasma 無法啟動"
+
+#: main.cpp:235
+#, kde-format
+msgid ""
+"Plasma is unable to start as it could not correctly use OpenGL 2 or software "
+"fallback\n"
+"Please check that your graphic drivers are set up correctly."
+msgstr ""
+"Plasma 無法開啟，因為它無法正確地使用 OpenGL 2 或備用軟體渲染。\n"
+"請檢查您的顯卡驅動程式，並做好設定。"
+
+#: osd.cpp:65
+#, kde-format
+msgctxt "OSD informing that the system is muted, keep short"
+msgid "Audio Muted"
+msgstr "音效靜音"
+
+#: osd.cpp:83
+#, kde-format
+msgctxt "OSD informing that the microphone is muted, keep short"
+msgid "Microphone Muted"
+msgstr "麥克風靜音"
+
+#: osd.cpp:99
+#, kde-format
+msgctxt "OSD informing that some media app is muted, eg. Amarok Muted"
+msgid "%1 Muted"
+msgstr "%1 已靜音"
+
+#: osd.cpp:121
+#, kde-format
+msgctxt "touchpad was enabled, keep short"
+msgid "Touchpad On"
+msgstr "觸控板開啟"
+
+#: osd.cpp:123
+#, kde-format
+msgctxt "touchpad was disabled, keep short"
+msgid "Touchpad Off"
+msgstr "觸控板關閉"
+
+#: osd.cpp:130
+#, kde-format
+msgctxt "wireless lan was enabled, keep short"
+msgid "Wifi On"
+msgstr "Wifi 開啟"
+
+#: osd.cpp:132
+#, kde-format
+msgctxt "wireless lan was disabled, keep short"
+msgid "Wifi Off"
+msgstr "Wifi 關閉"
+
+#: osd.cpp:139
+#, kde-format
+msgctxt "Bluetooth was enabled, keep short"
+msgid "Bluetooth On"
+msgstr "藍牙開啟"
+
+#: osd.cpp:141
+#, kde-format
+msgctxt "Bluetooth was disabled, keep short"
+msgid "Bluetooth Off"
+msgstr "藍牙關閉"
+
+#: osd.cpp:148
+#, kde-format
+msgctxt "mobile internet was enabled, keep short"
+msgid "Mobile Internet On"
+msgstr "行動網路開啟"
+
+#: osd.cpp:150
+#, kde-format
+msgctxt "mobile internet was disabled, keep short"
+msgid "Mobile Internet Off"
+msgstr "行動網路關閉"
+
+#: osd.cpp:158
+#, kde-format
+msgctxt ""
+"on screen keyboard was enabled because physical keyboard got unplugged, keep "
+"short"
+msgid "On-Screen Keyboard Activated"
+msgstr "螢幕上的虛擬鍵盤開啟"
+
+#: osd.cpp:161
+#, kde-format
+msgctxt ""
+"on screen keyboard was disabled because physical keyboard was plugged in, "
+"keep short"
+msgid "On-Screen Keyboard Deactivated"
+msgstr "螢幕上的虛擬鍵盤關閉"
+
+#: shellcorona.cpp:155 shellcorona.cpp:157
+#, kde-format
+msgid "Show Desktop"
+msgstr "顯示桌面"
+
+#: shellcorona.cpp:157
+#, kde-format
+msgid "Hide Desktop"
+msgstr "隱藏桌面"
+
+#: shellcorona.cpp:173
+#, kde-format
+msgid "Show Activity Switcher"
+msgstr ""
+
+#: shellcorona.cpp:184
+#, kde-format
+msgid "Stop Current Activity"
+msgstr "停止目前的活動"
+
+#: shellcorona.cpp:192
+#, kde-format
+msgid "Switch to Previous Activity"
+msgstr "切至上個活動"
+
+#: shellcorona.cpp:200
+#, kde-format
+msgid "Switch to Next Activity"
+msgstr "切至下個活動"
+
+#: shellcorona.cpp:216
+#, kde-format
+msgid "Activate Task Manager Entry %1"
+msgstr "啟用工作管理員項目 %1"
+
+#: shellcorona.cpp:1384
+#, kde-format
+msgid "Unable to load script file: %1"
+msgstr "無法載入文稿檔：%1"
+
+#: shellcorona.cpp:1760
+#, kde-format
+msgid "Add Panel"
+msgstr "新增面板"
+
+#: shellcorona.cpp:1797
+#, kde-format
+msgid "Empty %1"
+msgstr "空的 %1"
+
+#: softwarerendernotifier.cpp:27
+#, kde-format
+msgid "Software Renderer In Use"
+msgstr "使用中的軟體渲染"
+
+#: softwarerendernotifier.cpp:28
+#, kde-format
+msgctxt "Tooltip telling user their GL drivers are broken"
+msgid "Software Renderer In Use"
+msgstr "使用中的軟體渲染"
+
+#: softwarerendernotifier.cpp:29
+#, kde-format
+msgctxt "Tooltip telling user their GL drivers are broken"
+msgid "Rendering may be degraded"
+msgstr "渲染或許被降級了"
+
+#: softwarerendernotifier.cpp:39
+#, kde-format
+msgid "Never show again"
+msgstr "永不顯示"
+
+#: userfeedback.cpp:49
+#, kde-format
+msgid "Panel Count"
+msgstr "面板數"
+
+#: userfeedback.cpp:53
+#, kde-format
+msgid "Counts the panels"
+msgstr "計算面板數"

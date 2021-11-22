@@ -3,6 +3,7 @@ ksmserver - the KDE session management server
 
 Copyright 2016 Martin Graesslin <mgraesslin@kde.org>
 Copyright 2018 David Edmundson <davidedmundson@kde.org>
+Copyright 2021 Liu Bangguo <liubangguo@jingos.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -31,9 +32,11 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <kworkspace.h>
 
 class KSMShutdownDlg;
-namespace KWayland {
-namespace Client {
-    class PlasmaShell;
+namespace KWayland
+{
+namespace Client
+{
+class PlasmaShell;
 }
 }
 
@@ -43,7 +46,7 @@ class Greeter : public QObject
 {
     Q_OBJECT
 public:
-    Greeter(bool shutdownAllowed);
+    Greeter();
     ~Greeter() override;
 
     void init();
@@ -60,7 +63,9 @@ private:
     void rejected();
     void setupWaylandIntegration();
 
-    bool m_shutdownAllowed;
+Q_SIGNALS:
+    void toBeShow();
+private:
     bool m_running = false;
 
     KWorkSpace::ShutdownType m_shutdownType = KWorkSpace::ShutdownTypeHalt;

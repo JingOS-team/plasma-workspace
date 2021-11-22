@@ -1,5 +1,6 @@
 /*
  *   Copyright (C) 2009 Petri Damstén <damu@iki.fi>
+ *   Copyright (C) 2021 Liu Bangguo <liubangguo@jingos.com>
  *
  *   This program is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU General Public License as
@@ -46,6 +47,7 @@ class Geolocation : public Plasma::DataEngine
         void pluginAvailabilityChanged(GeolocationProvider *provider);
         void pluginUpdated();
         void actuallySetData();
+        void updateLocation();
 
     private:
         Data m_data;
@@ -53,7 +55,9 @@ class Geolocation : public Plasma::DataEngine
         QList<GeolocationProvider *> m_plugins;
         QTimer m_updateTimer;
         QTimer m_networkChangedTimer;
+
+        //[liubangguo]for location update
+        QTimer m_locationUPdateTimer;
 };
 
 #endif
-

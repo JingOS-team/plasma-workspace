@@ -19,6 +19,7 @@
  */
 
 import QtQuick 2.10
+import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kirigami 2.11 as Kirigami
 
 MouseArea {
@@ -50,6 +51,6 @@ MouseArea {
         target: delegate
         property:"x"
         to: 0
-        duration: units.longDuration
+        duration: PlasmaCore.Units.longDuration
     }
 }

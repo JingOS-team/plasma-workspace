@@ -20,21 +20,23 @@
 #include "shellcorona.h"
 
 #include <QDBusConnection>
+#include <QDebug>
 #include <QTimer>
 #include <QWindow>
-#include <QDebug>
 #include <QUrl>
 
-#include <Plasma/Package>
 #include <KDeclarative/QmlObjectSharedEngine>
+#include <Plasma/Package>
 #include <klocalizedstring.h>
 
 Osd::Osd(const KSharedConfig::Ptr &config, ShellCorona *corona)
     : QObject(corona)
     , m_osdUrl(corona->lookAndFeelPackage().fileUrl("osdmainscript"))
-    , m_config(config)
+    , m_osdConfigGroup(config, "OSD")
 {
-    QDBusConnection::sessionBus().registerObject(QStringLiteral("/org/kde/osdService"), this, QDBusConnection::ExportAllSlots | QDBusConnection::ExportAllSignals);
+    QDBusConnection::sessionBus().registerObject(QStringLiteral("/org/kde/osdService"),
+                                                 this,
+                                                 QDBusConnection::ExportAllSlots | QDBusConnection::ExportAllSignals);
 }
 
 Osd::~Osd()
@@ -103,12 +105,14 @@ void Osd::mediaPlayerVolumeChanged(int percent, const QString &playerName, const
 
 void Osd::kbdLayoutChanged(const QString &layoutName)
 {
-    showText(QStringLiteral("keyboard-layout"), layoutName);
+    if (m_osdConfigGroup.readEntry("kbdLayoutChangedEnabled", true)) {
+        showText(QStringLiteral("keyboard-layout"), layoutName);
+    }
 }
 
 void Osd::virtualDesktopChanged(const QString &currentVirtualDesktopName)
 {
-    //FIXME: need a VD icon
+    // FIXME: need a VD icon
     showText(QString(), currentVirtualDesktopName);
 }
 
@@ -159,7 +163,7 @@ void Osd::virtualKeyboardEnabledChanged(bool virtualKeyboardEnabled)
 
 bool Osd::init()
 {
-    if (m_config && !KConfigGroup(m_config, QStringLiteral("OSD")).readEntry(QStringLiteral("Enabled"), true)) {
+    if (!m_osdConfigGroup.readEntry("Enabled", true)) {
         return false;
     }
 

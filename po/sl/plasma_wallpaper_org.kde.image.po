@@ -1,0 +1,219 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Andrej Mernik <andrejm@ubuntu.si>, 2014, 2015, 2018.
+# Matjaž Jeran <matjaz.jeran@amis.net>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-02-02 02:56+0100\n"
+"PO-Revision-Date: 2021-01-29 15:08+0100\n"
+"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
+"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
+"X-Generator: Poedit 2.4.2\n"
+
+#: image.cpp:245
+#, kde-format
+msgid "Recommended wallpaper file"
+msgstr "Priporočena datoteka za ozadje"
+
+#: image.cpp:406
+#, kde-format
+msgid "Directory with the wallpaper to show slides from"
+msgstr "Mapa s slikami ozadij, iz katerih bo ustvarjena predstavitev"
+
+#: image.cpp:708
+#, kde-format
+msgid "Open Image"
+msgstr "Odpri sliko"
+
+#: image.cpp:708
+#, kde-format
+msgid "Image Files"
+msgstr "Datoteke s sliko"
+
+#: imagepackage/contents/ui/config.qml:103
+#, kde-format
+msgid "Positioning:"
+msgstr "Položaj:"
+
+#: imagepackage/contents/ui/config.qml:106
+#, kde-format
+msgid "Scaled and Cropped"
+msgstr "Umerjeno in obrezano"
+
+#: imagepackage/contents/ui/config.qml:110
+#, kde-format
+msgid "Scaled"
+msgstr "Umerjeno"
+
+#: imagepackage/contents/ui/config.qml:114
+#, kde-format
+msgid "Scaled, Keep Proportions"
+msgstr "Umerjeno, ohrani razmerja"
+
+#: imagepackage/contents/ui/config.qml:118
+#, kde-format
+msgid "Centered"
+msgstr "Usredinjeno"
+
+#: imagepackage/contents/ui/config.qml:122
+#, kde-format
+msgid "Tiled"
+msgstr "Razpostavljeno"
+
+#: imagepackage/contents/ui/config.qml:149
+#, kde-format
+msgid "Order:"
+msgstr "Vrstni red:"
+
+#: imagepackage/contents/ui/config.qml:152
+#, kde-format
+msgid "Random"
+msgstr "Slučajno"
+
+#: imagepackage/contents/ui/config.qml:156
+#, kde-format
+msgid "A to Z"
+msgstr "od A do Ž"
+
+#: imagepackage/contents/ui/config.qml:160
+#, kde-format
+msgid "Z to A"
+msgstr "Od Ž do A"
+
+#: imagepackage/contents/ui/config.qml:164
+#, kde-format
+msgid "Date modified (newest first)"
+msgstr "Datum spremembe (najnovejše so prve)"
+
+#: imagepackage/contents/ui/config.qml:168
+#, kde-format
+msgid "Date modified (oldest first)"
+msgstr "Datum spremembe (najstarejše so prve)"
+
+#: imagepackage/contents/ui/config.qml:195
+#, kde-format
+msgid "Background:"
+msgstr "Ozadje:"
+
+#: imagepackage/contents/ui/config.qml:196
+#, kde-format
+msgid "Blur"
+msgstr "Zabrisanost"
+
+#: imagepackage/contents/ui/config.qml:205
+#, kde-format
+msgid "Solid color"
+msgstr "Polna barva"
+
+#: imagepackage/contents/ui/config.qml:215
+#, kde-format
+msgid "Select Background Color"
+msgstr "Izberite barvo ozadja"
+
+#: imagepackage/contents/ui/config.qml:237
+#, kde-format
+msgid "Change every:"
+msgstr "Spremeni vsakih:"
+
+#: imagepackage/contents/ui/config.qml:247
+#, kde-format
+msgid "%1 hour"
+msgid_plural "%1 hours"
+msgstr[0] "%1 ura"
+msgstr[1] "%1 uri"
+msgstr[2] "%1 ure"
+msgstr[3] "%1 ur"
+
+#: imagepackage/contents/ui/config.qml:266
+#, kde-format
+msgid "%1 minute"
+msgid_plural "%1 minutes"
+msgstr[0] "%1 minuta"
+msgstr[1] "%1 minuti"
+msgstr[2] "%1 minute"
+msgstr[3] "%1 minut"
+
+#: imagepackage/contents/ui/config.qml:285
+#, kde-format
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] "%1 sekunda"
+msgstr[1] "%1 sekundi"
+msgstr[2] "%1 sekunde"
+msgstr[3] "%1 sekund"
+
+#: imagepackage/contents/ui/config.qml:298
+#, kde-format
+msgid "Folders"
+msgstr "Mape"
+
+#: imagepackage/contents/ui/config.qml:346
+#, kde-format
+msgid "Remove Folder"
+msgstr "Odstrani mapo"
+
+#: imagepackage/contents/ui/config.qml:351
+#, kde-format
+msgid "Open Folder"
+msgstr "Odpri mapo"
+
+#: imagepackage/contents/ui/config.qml:361
+#, kde-format
+msgid "There are no wallpaper locations configured"
+msgstr "Ni nastavljenega mesta za slike ozadja"
+
+#: imagepackage/contents/ui/config.qml:374
+#, kde-format
+msgid "Add Folder..."
+msgstr "Dodaj mapo..."
+
+#: imagepackage/contents/ui/config.qml:380
+#: imagepackage/contents/ui/config.qml:472
+#, kde-format
+msgid "Get New Wallpapers..."
+msgstr "Dobi nova ozadja..."
+
+#: imagepackage/contents/ui/config.qml:420
+#, kde-format
+msgid "There are no wallpapers in this slideshow"
+msgstr "Ni slik ozadja v tej predstavi"
+
+#: imagepackage/contents/ui/config.qml:466
+#, kde-format
+msgid "Add Image..."
+msgstr "Dodaj sliko..."
+
+#: imagepackage/contents/ui/main.qml:67
+#, kde-format
+msgid "Open Wallpaper Image"
+msgstr "Odpri sliko ozadja"
+
+#: imagepackage/contents/ui/main.qml:68
+#, kde-format
+msgid "Next Wallpaper Image"
+msgstr "Naslednja slika ozadja"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:46
+#, kde-format
+msgid "Open Containing Folder"
+msgstr "Odpri vsebovano mapo"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:52
+#, kde-format
+msgid "Restore wallpaper"
+msgstr "Obnovi sliko ozadja"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:57
+#, kde-format
+msgid "Remove Wallpaper"
+msgstr "Odstrani sliko ozadja"

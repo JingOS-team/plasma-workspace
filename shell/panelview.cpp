@@ -1,5 +1,6 @@
 /*
  *  Copyright 2013 Marco Martin <mart@kde.org>
+ *  Copyright 2021 Liu Bangguo <liubangguo@jingos.com>
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -18,26 +19,24 @@
 
 #include <config-plasma.h>
 
-#include "panelview.h"
-#include "shellcorona.h"
-#include "panelshadows_p.h"
 #include "panelconfigview.h"
+#include "panelshadows_p.h"
+#include "panelview.h"
 #include "screenpool.h"
+#include "shellcorona.h"
 
 #include <QAction>
 #include <QApplication>
 #include <QDebug>
-#include <QScreen>
-#include <QQmlEngine>
-#include <QQmlContext>
 #include <QGuiApplication>
+#include <QQmlContext>
+#include <QQmlEngine>
 #include <QRegularExpression>
+#include <QScreen>
 #include <QTimer>
-
 #include <kactioncollection.h>
-#include <kwindowsystem.h>
 #include <kwindoweffects.h>
-
+#include <kwindowsystem.h>
 #include <plasma_version.h>
 #include <Plasma/Containment>
 #include <Plasma/Package>
@@ -46,28 +45,28 @@
 #include <KWayland/Client/surface.h>
 
 #if HAVE_X11
-#include <xcb/xcb.h>
 #include <NETWM>
 #include <QX11Info>
 #include <QtPlatformHeaders/QXcbWindowFunctions>
+#include <xcb/xcb.h>
 #endif
 
 static const int MINSIZE = 10;
 
 PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent)
-    : PlasmaQuick::ContainmentView(corona, parent),
-       m_offset(0),
-       m_maxLength(0),
-       m_minLength(0),
-       m_contentLength(0),
-       m_distance(0),
-       m_thickness(30),
-       m_initCompleted(false),
-       m_alignment(Qt::AlignLeft),
-       m_corona(corona),
-       m_visibilityMode(NormalPanel),
-       m_backgroundHints(Plasma::Types::StandardBackground),
-       m_shellSurface(nullptr)
+    : PlasmaQuick::ContainmentView(corona, parent)
+    , m_offset(0)
+    , m_maxLength(0)
+    , m_minLength(0)
+    , m_contentLength(0)
+    , m_distance(0)
+    , m_thickness(36)
+    , m_initCompleted(false)
+    , m_alignment(Qt::AlignLeft)
+    , m_corona(corona)
+    , m_visibilityMode(NormalPanel)
+    , m_backgroundHints(Plasma::Types::StandardBackground)
+    , m_shellSurface(nullptr)
 {
     if (targetScreen) {
         setPosition(targetScreen->geometry().center());
@@ -77,15 +76,14 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
     setResizeMode(QuickViewSharedEngine::SizeRootObjectToView);
     setClearBeforeRendering(true);
     setColor(QColor(Qt::transparent));
-    setFlags(Qt::FramelessWindowHint|Qt::WindowDoesNotAcceptFocus);
+    setFlags(Qt::FramelessWindowHint | Qt::WindowDoesNotAcceptFocus);
 
     connect(&m_theme, &Plasma::Theme::themeChanged, this, &PanelView::updateMask);
     connect(this, &PanelView::backgroundHintsChanged, this, &PanelView::updateMask);
     connect(this, &PanelView::backgroundHintsChanged, this, &PanelView::updateEnabledBorders);
     // TODO: add finished/componentComplete signal to QuickViewSharedEngine,
     // so we exactly know when rootobject is available
-    connect(this, &QuickViewSharedEngine::statusChanged,
-            this, &PanelView::handleQmlStatusChange);
+    connect(this, &QuickViewSharedEngine::statusChanged, this, &PanelView::handleQmlStatusChange);
 
     m_positionPaneltimer.setSingleShot(true);
     m_positionPaneltimer.setInterval(150);
@@ -93,26 +91,23 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
 
     m_unhideTimer.setSingleShot(true);
     m_unhideTimer.setInterval(500);
-    connect(&m_unhideTimer, &QTimer::timeout,
-            this, &PanelView::restoreAutoHide);
+    connect(&m_unhideTimer, &QTimer::timeout, this, &PanelView::restoreAutoHide);
 
     m_lastScreen = targetScreen;
-    connect(this, SIGNAL(locationChanged(Plasma::Types::Location)),
-            &m_positionPaneltimer, SLOT(start()));
-    connect(this, SIGNAL(containmentChanged()),
-            this, SLOT(containmentChanged()));
+    connect(this, SIGNAL(locationChanged(Plasma::Types::Location)), &m_positionPaneltimer, SLOT(start()));
+    connect(this, SIGNAL(containmentChanged()), this, SLOT(containmentChanged()));
 
     if (!m_corona->kPackage().isValid()) {
         qWarning() << "Invalid home screen package";
     }
 
     m_strutsTimer.setSingleShot(true);
-    connect(&m_strutsTimer, &QTimer::timeout,
-            this, &PanelView::updateStruts);
+    connect(&m_strutsTimer, &QTimer::timeout, this, &PanelView::updateStruts);
 
     qmlRegisterType<QScreen>();
     rootContext()->setContextProperty(QStringLiteral("panel"), this);
     setSource(m_corona->kPackage().fileUrl("views", QStringLiteral("Panel.qml")));
+    updatePadding();
 }
 
 PanelView::~PanelView()
@@ -132,7 +127,7 @@ KConfigGroup PanelView::panelConfig(ShellCorona *corona, Plasma::Containment *co
 
     if (containment->formFactor() == Plasma::Types::Vertical) {
         return KConfigGroup(&views, QStringLiteral("Vertical") + QString::number(screen->size().height()));
-    //treat everything else as horizontal
+        // treat everything else as horizontal
     } else {
         return KConfigGroup(&views, QStringLiteral("Horizontal") + QString::number(screen->size().width()));
     }
@@ -196,7 +191,7 @@ void PanelView::setAlignment(Qt::Alignment alignment)
     }
 
     m_alignment = alignment;
-    //alignment is not resolution dependent, doesn't save to Defaults
+    // alignment is not resolution dependent, doesn't save to Defaults
     config().parent().writeEntry("alignment", (int)m_alignment);
     emit alignmentChanged();
     positionPanel();
@@ -215,11 +210,11 @@ void PanelView::setOffset(int offset)
 
     if (formFactor() == Plasma::Types::Vertical) {
         if (offset + m_maxLength > m_screenToFollow->size().height()) {
-            setMaximumLength( -m_offset + m_screenToFollow->size().height() );
+            setMaximumLength(-m_offset + m_screenToFollow->size().height());
         }
     } else {
         if (offset + m_maxLength > m_screenToFollow->size().width()) {
-            setMaximumLength( -m_offset + m_screenToFollow->size().width() );
+            setMaximumLength(-m_offset + m_screenToFollow->size().width());
         }
     }
 
@@ -239,8 +234,6 @@ int PanelView::thickness() const
 
 void PanelView::setThickness(int value)
 {
-
-
     if (value == thickness()) {
         return;
     }
@@ -344,11 +337,11 @@ Plasma::Types::BackgroundHints PanelView::backgroundHints() const
 void PanelView::setBackgroundHints(Plasma::Types::BackgroundHints hint)
 {
     if (m_backgroundHints == hint) {
-       return;
+        return;
     }
- 
+
     m_backgroundHints = hint;
-     
+
     emit backgroundHintsChanged();
 }
 
@@ -371,7 +364,7 @@ void PanelView::setVisibilityMode(PanelView::VisibilityMode mode)
     }
 
     if (config().isValid() && config().parent().isValid()) {
-        //panelVisibility is not resolution dependent, don't write to Defaults
+        // panelVisibility is not resolution dependent, don't write to Defaults
         config().parent().writeEntry("panelVisibility", (int)mode);
         m_corona->requestApplicationConfigSync();
     }
@@ -469,7 +462,7 @@ QRect PanelView::geometryByDistance(int distance) const
     case Plasma::Types::TopEdge:
         switch (m_alignment) {
         case Qt::AlignCenter:
-            position = QPoint(QPoint(screenGeometry.center().x(), screenGeometry.top()) + QPoint(m_offset - width()/2, distance));
+            position = QPoint(QPoint(screenGeometry.center().x(), screenGeometry.top()) + QPoint(m_offset - width() / 2, distance));
             break;
         case Qt::AlignRight:
             position = QPoint(QPoint(screenGeometry.x() + screenGeometry.width(), screenGeometry.y()) - QPoint(m_offset + width(), distance));
@@ -483,7 +476,7 @@ QRect PanelView::geometryByDistance(int distance) const
     case Plasma::Types::LeftEdge:
         switch (m_alignment) {
         case Qt::AlignCenter:
-            position = QPoint(QPoint(screenGeometry.left(), screenGeometry.center().y()) + QPoint(distance, m_offset - height()/2));
+            position = QPoint(QPoint(screenGeometry.left(), screenGeometry.center().y()) + QPoint(distance, m_offset - height() / 2));
             break;
         case Qt::AlignRight:
             position = QPoint(QPoint(screenGeometry.left(), screenGeometry.y() + screenGeometry.height()) - QPoint(distance, m_offset + height()));
@@ -498,14 +491,17 @@ QRect PanelView::geometryByDistance(int distance) const
         switch (m_alignment) {
         case Qt::AlignCenter:
             // Never use rect.right(); for historical reasons it returns left() + width() - 1; see https://doc.qt.io/qt-5/qrect.html#right
-            position = QPoint(QPoint(screenGeometry.x() + screenGeometry.width(), screenGeometry.center().y()) - QPoint(thickness() + distance, 0) + QPoint(0, m_offset - height()/2));
+            position = QPoint(QPoint(screenGeometry.x() + screenGeometry.width(), screenGeometry.center().y()) - QPoint(thickness() + distance, 0)
+                              + QPoint(0, m_offset - height() / 2));
             break;
         case Qt::AlignRight:
-            position = QPoint(QPoint(screenGeometry.x() + screenGeometry.width(), screenGeometry.y() + screenGeometry.height()) - QPoint(thickness() + distance, 0) - QPoint(0, m_offset + height()));
+            position = QPoint(QPoint(screenGeometry.x() + screenGeometry.width(), screenGeometry.y() + screenGeometry.height())
+                              - QPoint(thickness() + distance, 0) - QPoint(0, m_offset + height()));
             break;
         case Qt::AlignLeft:
         default:
-            position = QPoint(QPoint(screenGeometry.x() + screenGeometry.width(), screenGeometry.y()) - QPoint(thickness() + distance, 0) + QPoint(0, m_offset));
+            position =
+                QPoint(QPoint(screenGeometry.x() + screenGeometry.width(), screenGeometry.y()) - QPoint(thickness() + distance, 0) + QPoint(0, m_offset));
         }
         break;
 
@@ -513,7 +509,7 @@ QRect PanelView::geometryByDistance(int distance) const
     default:
         switch (m_alignment) {
         case Qt::AlignCenter:
-            position = QPoint(QPoint(screenGeometry.center().x(), screenGeometry.bottom() - thickness() - distance) + QPoint(m_offset - width()/2, 1));
+            position = QPoint(QPoint(screenGeometry.center().x(), screenGeometry.bottom() - thickness() - distance) + QPoint(m_offset - width() / 2, 1));
             break;
         case Qt::AlignRight:
             position = QPoint(screenGeometry.bottomRight() - QPoint(0, thickness() + distance) - QPoint(m_offset + width(), -1));
@@ -561,27 +557,28 @@ void PanelView::resizePanel()
         resize(targetSize);
     }
 
-    //position will be updated implicitly from resizeEvent
+    // position will be updated implicitly from resizeEvent
 }
 
 void PanelView::restore()
 {
-    if (!containment()) {
+    KConfigGroup panelConfig = config();
+    if (!panelConfig.isValid()) {
         return;
     }
 
     // All the defaults are based on whatever are the current values
     // so won't be weirdly reset after screen resolution change
 
-    //alignment is not resolution dependent
-    //but if fails read it from the resolution dependent one as
-    //the place for this config key is changed in Plasma 5.9
-    //Do NOT use readConfigValueWithFallBack
-    setAlignment((Qt::Alignment)config().parent().readEntry<int>("alignment", config().readEntry<int>("alignment", m_alignment)));
+    // alignment is not resolution dependent
+    // but if fails read it from the resolution dependent one as
+    // the place for this config key is changed in Plasma 5.9
+    // Do NOT use readConfigValueWithFallBack
+    setAlignment((Qt::Alignment)panelConfig.parent().readEntry<int>("alignment", panelConfig.readEntry<int>("alignment", m_alignment)));
 
     // All the other values are read from screen independent values,
     // but fallback on the screen independent section, as is the only place
-    // is safe to directly write during plasma startup, as there can be 
+    // is safe to directly write during plasma startup, as there can be
     // resolution changes
     m_offset = readConfigValueWithFallBack("offset", m_offset);
     if (m_alignment != Qt::AlignCenter) {
@@ -592,7 +589,7 @@ void PanelView::restore()
 
     const QSize screenSize = m_screenToFollow->size();
     setMinimumSize(QSize(-1, -1));
-    //FIXME: an invalid size doesn't work with QWindows
+    // FIXME: an invalid size doesn't work with QWindows
     setMaximumSize(screenSize);
 
     const int side = containment()->formFactor() == Plasma::Types::Vertical ? screenSize.height() : screenSize.width();
@@ -600,11 +597,11 @@ void PanelView::restore()
     m_maxLength = qBound<int>(MINSIZE, readConfigValueWithFallBack("maxLength", side), maxSize);
     m_minLength = qBound<int>(MINSIZE, readConfigValueWithFallBack("minLength", side), maxSize);
 
-    //panelVisibility is not resolution dependent
-    //but if fails read it from the resolution dependent one as
-    //the place for this config key is changed in Plasma 5.9
-    //Do NOT use readConfigValueWithFallBack
-    setVisibilityMode((VisibilityMode)config().parent().readEntry<int>("panelVisibility", config().readEntry<int>("panelVisibility", (int)NormalPanel)));
+    // panelVisibility is not resolution dependent
+    // but if fails read it from the resolution dependent one as
+    // the place for this config key is changed in Plasma 5.9
+    // Do NOT use readConfigValueWithFallBack
+    setVisibilityMode((VisibilityMode)panelConfig.parent().readEntry<int>("panelVisibility", panelConfig.readEntry<int>("panelVisibility", (int)NormalPanel)));
     m_initCompleted = true;
     resizePanel();
     positionPanel();
@@ -671,22 +668,18 @@ void PanelView::restoreAutoHide()
 
     if (!edgeActivated()) {
         autoHide = false;
-    }
-    else if (m_containsMouse) {
+    } else if (m_containsMouse) {
         autoHide = false;
-    }
-    else if (containment() && containment()->isUserConfiguring()) {
+    } else if (containment() && containment()->isUserConfiguring()) {
         autoHide = false;
-    }
-    else if (containment() && containment()->status() >= Plasma::Types::NeedsAttentionStatus &&
-             containment()->status() != Plasma::Types::HiddenStatus) {
+    } else if (containment() && containment()->status() >= Plasma::Types::NeedsAttentionStatus && containment()->status() != Plasma::Types::HiddenStatus) {
         autoHide = false;
     } else {
-        for(QWindow *window: qApp->topLevelWindows()) {
+        for (QWindow *window : qApp->topLevelWindows()) {
             if (window->transientParent() == this && window->isVisible()) {
                 m_transientWindowVisibleWatcher = connect(window, &QWindow::visibleChanged, this, &PanelView::restoreAutoHide);
                 autoHide = false;
-                break; //if multiple are open, we will re-evaluate this expression after the first closes
+                break; // if multiple are open, we will re-evaluate this expression after the first closes
             }
         }
     }
@@ -763,7 +756,7 @@ void PanelView::setAutoHideEnabled(bool enabled)
 void PanelView::resizeEvent(QResizeEvent *ev)
 {
     updateEnabledBorders();
-    //don't setGeometry() to make really sure we aren't doing a resize loop
+    // don't setGeometry() to make really sure we aren't doing a resize loop
     const QPoint pos = geometryByDistance(m_distance).topLeft();
     setPosition(pos);
     if (m_shellSurface) {
@@ -826,6 +819,15 @@ void PanelView::setScreenToFollow(QScreen *screen)
         return;
     }
 
+    if (!m_screenToFollow.isNull()) {
+        // disconnect from old screen
+        disconnect(m_screenToFollow, &QScreen::virtualGeometryChanged, this, &PanelView::updateStruts);
+        disconnect(m_screenToFollow, &QScreen::geometryChanged, this, &PanelView::restore);
+    }
+
+    connect(screen, &QScreen::virtualGeometryChanged, this, &PanelView::updateStruts, Qt::UniqueConnection);
+    connect(screen, &QScreen::geometryChanged, this, &PanelView::restore, Qt::UniqueConnection);
+
     /*connect(screen, &QObject::destroyed, this, [this]() {
         if (PanelView::screen()) {
             m_screenToFollow = PanelView::screen();
@@ -860,123 +862,139 @@ void PanelView::adaptToScreen()
 bool PanelView::event(QEvent *e)
 {
     switch (e->type()) {
-        case QEvent::Enter:
-            m_containsMouse = true;
-            if (edgeActivated()) {
-                m_unhideTimer.stop();
-            }
-            break;
+    case QEvent::Enter:
+        m_containsMouse = true;
+        if (edgeActivated()) {
+            m_unhideTimer.stop();
+        }
+        break;
 
-        case QEvent::Leave:
-            m_containsMouse = false;
-            if (edgeActivated()) {
-                m_unhideTimer.start();
-            }
-            break;
+    case QEvent::Leave:
+        m_containsMouse = false;
+        if (edgeActivated()) {
+            m_unhideTimer.start();
+        }
+        break;
 
         /*Fitt's law: if the containment has margins, and the mouse cursor clicked
-        * on the mouse edge, forward the click in the containment boundaries
-        */
+         * on the mouse edge, forward the click in the containment boundaries
+         */
 
-        case QEvent::MouseMove:
-        case QEvent::MouseButtonPress:
-        case QEvent::MouseButtonRelease: {
-            QMouseEvent *me = static_cast<QMouseEvent *>(e);
+    case QEvent::MouseMove:
+    case QEvent::MouseButtonPress:
+    case QEvent::MouseButtonRelease: {
+        QMouseEvent *me = static_cast<QMouseEvent *>(e);
 
-            //first, don't mess with position if the cursor is actually outside the view:
-            //somebody is doing a click and drag that must not break when the cursor i outside
-            if (geometry().contains(QCursor::pos(screenToFollow()))) {
-                if (!containmentContainsPosition(me->windowPos())) {
-                    auto me2 = new QMouseEvent(me->type(),
-                                    positionAdjustedForContainment(me->windowPos()),
-                                    positionAdjustedForContainment(me->windowPos()),
-                                    positionAdjustedForContainment(me->windowPos()) + position(),
-                                    me->button(), me->buttons(), me->modifiers());
+        // first, don't mess with position if the cursor is actually outside the view:
+        // somebody is doing a click and drag that must not break when the cursor i outside
+        if (geometry().contains(QCursor::pos(screenToFollow()))) {
+            if (!containmentContainsPosition(me->windowPos())) {
+                auto me2 = new QMouseEvent(me->type(),
+                                           positionAdjustedForContainment(me->windowPos()),
+                                           positionAdjustedForContainment(me->windowPos()),
+                                           positionAdjustedForContainment(me->windowPos()) + position(),
+                                           me->button(),
+                                           me->buttons(),
+                                           me->modifiers());
 
-                    QCoreApplication::postEvent(this, me2);
-                    return true;
-                }
-            } else {
-                // default handling if current mouse position is outside the panel
-                return ContainmentView::event(e);
-            }
-            break;
-        }
-
-        case QEvent::Wheel: {
-            QWheelEvent *we = static_cast<QWheelEvent *>(e);
-
-            if (!containmentContainsPosition(we->pos())) {
-                auto we2 = new QWheelEvent(positionAdjustedForContainment(we->pos()),
-                                positionAdjustedForContainment(we->pos()) + position(),
-                                we->pixelDelta(), we->angleDelta(), we->angleDelta().y(),
-                                we->orientation(), we->buttons(), we->modifiers(), we->phase());
-
-                QCoreApplication::postEvent(this, we2);
+                QCoreApplication::postEvent(this, me2);
                 return true;
             }
+        } else {
+            // default handling if current mouse position is outside the panel
+            return ContainmentView::event(e);
+        }
+        break;
+    }
+
+    case QEvent::Wheel: {
+        QWheelEvent *we = static_cast<QWheelEvent *>(e);
+
+        if (!containmentContainsPosition(we->pos())) {
+            auto we2 = new QWheelEvent(positionAdjustedForContainment(we->pos()),
+                                       positionAdjustedForContainment(we->pos()) + position(),
+                                       we->pixelDelta(),
+                                       we->angleDelta(),
+                                       we->angleDelta().y(),
+                                       we->orientation(),
+                                       we->buttons(),
+                                       we->modifiers(),
+                                       we->phase());
+
+            QCoreApplication::postEvent(this, we2);
+            return true;
+        }
+        break;
+    }
+
+    case QEvent::DragEnter: {
+        QDragEnterEvent *de = static_cast<QDragEnterEvent *>(e);
+        if (!containmentContainsPosition(de->pos())) {
+            auto de2 = new QDragEnterEvent(positionAdjustedForContainment(de->pos()).toPoint(),
+                                           de->possibleActions(),
+                                           de->mimeData(),
+                                           de->mouseButtons(),
+                                           de->keyboardModifiers());
+
+            QCoreApplication::postEvent(this, de2);
+            return true;
+        }
+        break;
+    }
+    // DragLeave just works
+    case QEvent::DragLeave:
+        break;
+    case QEvent::DragMove: {
+        QDragMoveEvent *de = static_cast<QDragMoveEvent *>(e);
+        if (!containmentContainsPosition(de->pos())) {
+            auto de2 = new QDragMoveEvent(positionAdjustedForContainment(de->pos()).toPoint(),
+                                          de->possibleActions(),
+                                          de->mimeData(),
+                                          de->mouseButtons(),
+                                          de->keyboardModifiers());
+
+            QCoreApplication::postEvent(this, de2);
+            return true;
+        }
+        break;
+    }
+    case QEvent::Drop: {
+        QDropEvent *de = static_cast<QDropEvent *>(e);
+        if (!containmentContainsPosition(de->pos())) {
+            auto de2 = new QDropEvent(positionAdjustedForContainment(de->pos()).toPoint(),
+                                      de->possibleActions(),
+                                      de->mimeData(),
+                                      de->mouseButtons(),
+                                      de->keyboardModifiers());
+
+            QCoreApplication::postEvent(this, de2);
+            return true;
+        }
+        break;
+    }
+
+    case QEvent::Hide: {
+        if (m_panelConfigView && m_panelConfigView.data()->isVisible()) {
+            m_panelConfigView.data()->hide();
+        }
+        m_containsMouse = false;
+        break;
+    }
+    case QEvent::PlatformSurface:
+        switch (static_cast<QPlatformSurfaceEvent *>(e)->surfaceEventType()) {
+        case QPlatformSurfaceEvent::SurfaceCreated:
+            setupWaylandIntegration();
+            PanelShadows::self()->addWindow(this, enabledBorders());
+            break;
+        case QPlatformSurfaceEvent::SurfaceAboutToBeDestroyed:
+            delete m_shellSurface;
+            m_shellSurface = nullptr;
+            PanelShadows::self()->removeWindow(this);
             break;
         }
-
-        case QEvent::DragEnter: {
-            QDragEnterEvent *de = static_cast<QDragEnterEvent *>(e);
-            if (!containmentContainsPosition(de->pos())) {
-                auto de2 = new QDragEnterEvent(positionAdjustedForContainment(de->pos()).toPoint(),
-                                    de->possibleActions(), de->mimeData(), de->mouseButtons(), de->keyboardModifiers());
-
-                QCoreApplication::postEvent(this, de2);
-                return true;
-            }
-            break;
-        }
-        //DragLeave just works
-        case QEvent::DragLeave:
-            break;
-        case QEvent::DragMove: {
-            QDragMoveEvent *de = static_cast<QDragMoveEvent *>(e);
-            if (!containmentContainsPosition(de->pos())) {
-                auto de2 = new QDragMoveEvent(positionAdjustedForContainment(de->pos()).toPoint(),
-                                   de->possibleActions(), de->mimeData(), de->mouseButtons(), de->keyboardModifiers());
-
-                QCoreApplication::postEvent(this, de2);
-                return true;
-            }
-            break;
-        }
-        case QEvent::Drop: {
-            QDropEvent *de = static_cast<QDropEvent *>(e);
-            if (!containmentContainsPosition(de->pos())) {
-                auto de2 = new QDropEvent(positionAdjustedForContainment(de->pos()).toPoint(),
-                               de->possibleActions(), de->mimeData(), de->mouseButtons(), de->keyboardModifiers());
-
-                QCoreApplication::postEvent(this, de2);
-                return true;
-            }
-            break;
-        }
-
-        case QEvent::Hide: {
-            if (m_panelConfigView && m_panelConfigView.data()->isVisible()) {
-                m_panelConfigView.data()->hide();
-            }
-            m_containsMouse = false;
-            break;
-        }
-        case QEvent::PlatformSurface:
-            switch (static_cast<QPlatformSurfaceEvent*>(e)->surfaceEventType()) {
-            case QPlatformSurfaceEvent::SurfaceCreated:
-                setupWaylandIntegration();
-                PanelShadows::self()->addWindow(this, enabledBorders());
-                break;
-            case QPlatformSurfaceEvent::SurfaceAboutToBeDestroyed:
-                delete m_shellSurface;
-                m_shellSurface = nullptr;
-                PanelShadows::self()->removeWindow(this);
-                break;
-            }
-            break;
-        default:
-            break;
+        break;
+    default:
+        break;
     }
 
     return ContainmentView::event(e);
@@ -990,7 +1008,9 @@ bool PanelView::containmentContainsPosition(const QPointF &point) const
         return false;
     }
 
-    return QRectF(containmentItem->mapToScene(QPoint(0,0)), QSizeF(containmentItem->width(), containmentItem->height())).contains(point);
+    return QRectF(containmentItem->mapToScene(QPoint(m_leftPadding, m_topPadding)),
+                  QSizeF(containmentItem->width() - m_leftPadding - m_rightPadding, containmentItem->height() - m_topPadding - m_bottomPadding))
+        .contains(point);
 }
 
 QPointF PanelView::positionAdjustedForContainment(const QPointF &point) const
@@ -1001,10 +1021,10 @@ QPointF PanelView::positionAdjustedForContainment(const QPointF &point) const
         return point;
     }
 
-    QRectF containmentRect(containmentItem->mapToScene(QPoint(0,0)), QSizeF(containmentItem->width(), containmentItem->height()));
+    QRectF containmentRect(containmentItem->mapToScene(QPoint(0, 0)), QSizeF(containmentItem->width(), containmentItem->height()));
 
-    return QPointF(qBound(containmentRect.left() + 2, point.x(), containmentRect.right() - 2),
-                   qBound(containmentRect.top() + 2, point.y(), containmentRect.bottom() - 2));
+    return QPointF(qBound(containmentRect.left() + m_leftPadding, point.x(), containmentRect.right() - m_rightPadding),
+                   qBound(containmentRect.top() + m_topPadding, point.y(), containmentRect.bottom() - m_bottomPadding));
 }
 
 void PanelView::updateMask()
@@ -1025,11 +1045,12 @@ void PanelView::updateMask()
         }
 
         KWindowEffects::enableBlurBehind(winId(), m_theme.blurBehindEnabled(), mask);
-        KWindowEffects::enableBackgroundContrast(winId(), m_theme.backgroundContrastEnabled(),
-                                                          m_theme.backgroundContrast(),
-                                                          m_theme.backgroundIntensity(),
-                                                          m_theme.backgroundSaturation(),
-                                                          mask);
+        KWindowEffects::enableBackgroundContrast(winId(),
+                                                 m_theme.backgroundContrastEnabled(),
+                                                 m_theme.backgroundContrast(),
+                                                 m_theme.backgroundIntensity(),
+                                                 m_theme.backgroundSaturation(),
+                                                 mask);
 
         if (KWindowSystem::compositingActive()) {
             setMask(QRegion());
@@ -1059,8 +1080,8 @@ bool PanelView::canSetStrut() const
         return true;
     }
 
-    //Extended struts against a screen edge near to another screen are really harmful, so windows maximized under the panel is a lesser pain
-    //TODO: force "windows can cover" in those cases?
+    // Extended struts against a screen edge near to another screen are really harmful, so windows maximized under the panel is a lesser pain
+    // TODO: force "windows can cover" in those cases?
     const auto screenIds = m_corona->screenIds();
     for (int id : screenIds) {
         if (id == containment()->screen()) {
@@ -1072,9 +1093,8 @@ bool PanelView::canSetStrut() const
             continue;
         }
 
-        switch (location())
-        {
-            case Plasma::Types::TopEdge:
+        switch (location()) {
+        case Plasma::Types::TopEdge:
             if (otherScreen.bottom() <= thisScreen.top()) {
                 return false;
             }
@@ -1125,64 +1145,63 @@ void PanelView::updateStruts()
         int leftOffset = thisScreen.x();
         int rightOffset = wholeScreen.right() - thisScreen.right();
         int bottomOffset = wholeScreen.bottom() - thisScreen.bottom();
-//         qDebug() << "screen l/r/b/t offsets are:" << leftOffset << rightOffset << bottomOffset << topOffset << location();
+        //         qDebug() << "screen l/r/b/t offsets are:" << leftOffset << rightOffset << bottomOffset << topOffset << location();
         int topOffset = thisScreen.top();
 
-        switch (location())
-        {
-            case Plasma::Types::TopEdge:
-                strut.top_width = thickness() + topOffset;
-                strut.top_start = x();
-                strut.top_end = x() + width() - 1;
-//                 qDebug() << "setting top edge to" << strut.top_width << strut.top_start << strut.top_end;
-                break;
+        switch (location()) {
+        case Plasma::Types::TopEdge:
+            strut.top_width = thickness() + topOffset;
+            strut.top_start = x();
+            strut.top_end = x() + width() - 1;
+            //                 qDebug() << "setting top edge to" << strut.top_width << strut.top_start << strut.top_end;
+            break;
 
-            case Plasma::Types::BottomEdge:
-                strut.bottom_width = thickness() + bottomOffset;
-                strut.bottom_start = x();
-                strut.bottom_end = x() + width() - 1;
-//                 qDebug() << "setting bottom edge to" << strut.bottom_width << strut.bottom_start << strut.bottom_end;
-                break;
+        case Plasma::Types::BottomEdge:
+            strut.bottom_width = thickness() + bottomOffset;
+            strut.bottom_start = x();
+            strut.bottom_end = x() + width() - 1;
+            //                 qDebug() << "setting bottom edge to" << strut.bottom_width << strut.bottom_start << strut.bottom_end;
+            break;
 
-            case Plasma::Types::RightEdge:
-                strut.right_width = thickness() + rightOffset;
-                strut.right_start = y();
-                strut.right_end = y() + height() - 1;
-//                 qDebug() << "setting right edge to" << strut.right_width << strut.right_start << strut.right_end;
-                break;
+        case Plasma::Types::RightEdge:
+            strut.right_width = thickness() + rightOffset;
+            strut.right_start = y();
+            strut.right_end = y() + height() - 1;
+            //                 qDebug() << "setting right edge to" << strut.right_width << strut.right_start << strut.right_end;
+            break;
 
-            case Plasma::Types::LeftEdge:
-                strut.left_width = thickness() + leftOffset;
-                strut.left_start = y();
-                strut.left_end = y() + height() - 1;
-//                 qDebug() << "setting left edge to" << strut.left_width << strut.left_start << strut.left_end;
-                break;
+        case Plasma::Types::LeftEdge:
+            strut.left_width = thickness() + leftOffset;
+            strut.left_start = y();
+            strut.left_end = y() + height() - 1;
+            //                 qDebug() << "setting left edge to" << strut.left_width << strut.left_start << strut.left_end;
+            break;
 
-            default:
-                //qDebug() << "where are we?";
-                break;
+        default:
+            // qDebug() << "where are we?";
+            break;
         }
     }
 
-    KWindowSystem::setExtendedStrut(winId(), strut.left_width,
-                                             strut.left_start,
-                                             strut.left_end,
-                                             strut.right_width,
-                                             strut.right_start,
-                                             strut.right_end,
-                                             strut.top_width,
-                                             strut.top_start,
-                                             strut.top_end,
-                                             strut.bottom_width,
-                                             strut.bottom_start,
-                                             strut.bottom_end);
-
+    KWindowSystem::setExtendedStrut(winId(),
+                                    strut.left_width,
+                                    strut.left_start,
+                                    strut.left_end,
+                                    strut.right_width,
+                                    strut.right_start,
+                                    strut.right_end,
+                                    strut.top_width,
+                                    strut.top_start,
+                                    strut.top_end,
+                                    strut.bottom_width,
+                                    strut.bottom_start,
+                                    strut.bottom_end);
 }
 
 void PanelView::containmentChanged()
 {
     restore();
-    connect(containment(), &Plasma::Containment::userConfiguringChanged, this, [this](bool configuring){
+    connect(containment(), &Plasma::Containment::userConfiguringChanged, this, [this](bool configuring) {
         if (configuring) {
             showTemporarily();
         } else {
@@ -1193,13 +1212,12 @@ void PanelView::containmentChanged()
 
     connect(containment(), SIGNAL(statusChanged(Plasma::Types::ItemStatus)), SLOT(statusChanged(Plasma::Types::ItemStatus)));
     connect(containment(), &Plasma::Applet::appletDeleted, this, [this] {
-        //containment()->destroyed() is true only when the user deleted it
-        //so the config is to be thrown away, not during shutdown
+        // containment()->destroyed() is true only when the user deleted it
+        // so the config is to be thrown away, not during shutdown
         if (containment()->destroyed()) {
             KConfigGroup views(m_corona->applicationConfig(), "PlasmaViews");
             for (auto grp : views.groupList()) {
-                if (grp.contains(QRegularExpression(QStringLiteral("Panel %1$").arg(
-                                                        QString::number(containment()->id()))))) {
+                if (grp.contains(QRegularExpression(QStringLiteral("Panel %1$").arg(QString::number(containment()->id()))))) {
                     qDebug() << "Panel" << containment()->id() << "removed by user";
                     views.deleteGroup(grp);
                 }
@@ -1217,13 +1235,17 @@ void PanelView::handleQmlStatusChange(QQmlComponent::Status status)
 
     QQuickItem *rootObject = this->rootObject();
     if (rootObject) {
-        disconnect(this, &QuickViewSharedEngine::statusChanged,
-                   this, &PanelView::handleQmlStatusChange);
+        disconnect(this, &QuickViewSharedEngine::statusChanged, this, &PanelView::handleQmlStatusChange);
+
+        updatePadding();
+        connect(rootObject, SIGNAL(bottomPaddingChanged()), this, SLOT(updatePadding()));
+        connect(rootObject, SIGNAL(topPaddingChanged()), this, SLOT(updatePadding()));
+        connect(rootObject, SIGNAL(rightPaddingChanged()), this, SLOT(updatePadding()));
+        connect(rootObject, SIGNAL(leftPaddingChanged()), this, SLOT(updatePadding()));
 
         const QVariant maskProperty = rootObject->property("panelMask");
         if (static_cast<QMetaType::Type>(maskProperty.type()) == QMetaType::QRegion) {
-            connect(rootObject, SIGNAL(panelMaskChanged()),
-                    this, SLOT(updateMask()));
+            connect(rootObject, SIGNAL(panelMaskChanged()), this, SLOT(updateMask()));
             updateMask();
         }
     }
@@ -1247,7 +1269,7 @@ void PanelView::showTemporarily()
 {
     setAutoHideEnabled(false);
 
-    QTimer * t = new QTimer(this);
+    QTimer *t = new QTimer(this);
     t->setSingleShot(true);
     t->setInterval(3000);
     connect(t, &QTimer::timeout, this, &PanelView::restoreAutoHide);
@@ -1255,14 +1277,14 @@ void PanelView::showTemporarily()
     t->start();
 }
 
-void PanelView::screenDestroyed(QObject* )
+void PanelView::screenDestroyed(QObject *)
 {
-//     NOTE: this is overriding the screen destroyed slot, we need to do this because
-//     otherwise Qt goes mental and starts moving our panels. See:
-//     https://codereview.qt-project.org/#/c/88351/
-//     if(screen == this->m_screenToFollow) {
-//         DO NOTHING, panels are moved by ::readaptToScreen
-//     }
+    //     NOTE: this is overriding the screen destroyed slot, we need to do this because
+    //     otherwise Qt goes mental and starts moving our panels. See:
+    //     https://codereview.qt-project.org/#/c/88351/
+    //     if(screen == this->m_screenToFollow) {
+    //         DO NOTHING, panels are moved by ::readaptToScreen
+    //     }
 }
 
 void PanelView::setupWaylandIntegration()
@@ -1271,7 +1293,7 @@ void PanelView::setupWaylandIntegration()
         // already setup
         return;
     }
-    if (ShellCorona *c = qobject_cast<ShellCorona*>(corona())) {
+    if (ShellCorona *c = qobject_cast<ShellCorona *>(corona())) {
         using namespace KWayland::Client;
         PlasmaShell *interface = c->waylandPlasmaShellInterface();
         if (!interface) {
@@ -1335,5 +1357,14 @@ void PanelView::updateEnabledBorders()
     }
 }
 
+void PanelView::updatePadding()
+{
+    if (!rootObject())
+        return;
+    m_leftPadding = rootObject()->property("leftPadding").toInt();
+    m_rightPadding = rootObject()->property("rightPadding").toInt();
+    m_topPadding = rootObject()->property("topPadding").toInt();
+    m_bottomPadding = rootObject()->property("bottomPadding").toInt();
+}
 
 #include "moc_panelview.cpp"

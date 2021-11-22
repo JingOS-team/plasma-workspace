@@ -1,0 +1,170 @@
+# translation of ksmserver.po to Dutch
+# translation of ksmserver.po to
+# translation of ksmserver.po to
+# KTranslator Generated File
+# Nederlandse vertaling van ksmserver.po
+# Copyright (C) 2000-2002 KDE e.v..
+# Copyright (C) 2000-2002 KDE-Nederlands team<i18n@kde.nl>, 2000.
+# Proefgelezen door Onno Zweers, 21-5-2002.
+# Rinse de Vries <Rinse@kde.nl>, 2000-2002.
+# Wilbert Berendsen <wbsoft@xs4all.nl>, 2003.
+# Rinse de Vries <rinse@kde.nl>, 2004.
+# Tom Albers <tomalbers@kde.nl>, 2004.
+# Rinse de Vries <rinsedevries@kde.nl>, 2004, 2005, 2007, 2008.
+# Freek de Kruijf <freekdekruijf@kde.nl>, 2009, 2010, 2012, 2013, 2014, 2015, 2018, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: ksmserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2020-04-25 12:45+0200\n"
+"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
+"Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 19.12.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: logout.cpp:354
+#, kde-format
+msgid "Logout canceled by '%1'"
+msgstr "Afmelden geannuleerd door '%1'"
+
+#: main.cpp:52
+#, kde-format
+msgid ""
+"The reliable Plasma session manager that talks the standard X11R6 \n"
+"session management protocol (XSMP)."
+msgstr ""
+"De betrouwbare Plasma-sessiebeheerder die het standaard X11R6-\n"
+"sessiebeheerprotocol (XSMP) gebruikt."
+
+#: main.cpp:128
+#, kde-format
+msgid "$HOME not set!"
+msgstr "$HOME niet ingesteld!"
+
+#: main.cpp:132 main.cpp:138
+#, kde-format
+msgid "$HOME directory (%1) does not exist."
+msgstr "Map $HOME (%1) bestaat niet."
+
+#: main.cpp:134
+#, kde-format
+msgid "No write access to $HOME directory (%1)."
+msgstr "Geen schrijftoegang tot map $HOME (%1)."
+
+#: main.cpp:140
+#, kde-format
+msgid "No read access to $HOME directory (%1)."
+msgstr "Geen leestoegang tot map $HOME (%1)."
+
+#: main.cpp:144
+#, kde-format
+msgid "$HOME directory (%1) is out of disk space."
+msgstr "Map $HOME (%1) heeft geen ruimte op schijf meer."
+
+#: main.cpp:147
+#, kde-format
+msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
+msgstr "Schrijven naar de map $HOME (%2) is mislukt met de fout '%1'"
+
+#: main.cpp:160 main.cpp:195
+#, kde-format
+msgid "No write access to '%1'."
+msgstr "Geen schrijftoegang tot '%1'."
+
+#: main.cpp:162 main.cpp:197
+#, kde-format
+msgid "No read access to '%1'."
+msgstr "Geen leestoegang tot '%1'."
+
+#: main.cpp:170 main.cpp:183
+#, kde-format
+msgid "Temp directory (%1) is out of disk space."
+msgstr "Tijdelijke map (%1) heeft geen ruimte op schijf meer."
+
+#: main.cpp:173 main.cpp:186
+#, kde-format
+msgid ""
+"Writing to the temp directory (%2) failed with\n"
+"    the error '%1'"
+msgstr ""
+"Schrijven naar de tijdelijke map (%2) is mislukt\n"
+"    met de fout '%1'"
+
+#: main.cpp:201
+#, kde-format
+msgid ""
+"The following installation problem was detected\n"
+"while trying to start Plasma:"
+msgstr ""
+"Het volgende installatieprobleem is gedetecteerd\n"
+"bij een poging om Plasma te starten:"
+
+#: main.cpp:204
+#, kde-format
+msgid ""
+"\n"
+"\n"
+"Plasma is unable to start.\n"
+msgstr ""
+"\n"
+"\n"
+"Plasma kan niet starten.\n"
+
+#: main.cpp:211
+#, kde-format
+msgid "Plasma Workspace installation problem!"
+msgstr "Installatieprobleem van Plasma Workspace!"
+
+#: main.cpp:251
+#, kde-format
+msgid "Restores the saved user session if available"
+msgstr "Herstelt, indien beschikbaar, de vorige sessie"
+
+#: main.cpp:254
+#, kde-format
+msgid "Also allow remote connections"
+msgstr "Ook externe verbindingen toestaan"
+
+#: main.cpp:257
+#, kde-format
+msgid "Starts the session in locked mode"
+msgstr "Start de sessie in de modus vergrendeld"
+
+#: main.cpp:261
+#, kde-format
+msgid ""
+"Starts without lock screen support. Only needed if other component provides "
+"the lock screen."
+msgstr ""
+"Start zonder ondersteuning van schermvergrendeling. Is alleen nodig als een "
+"andere component de schermvergrendeling levert."
+
+#: server.cpp:867
+#, kde-format
+msgid "Session Management"
+msgstr "Sessiebeheer"
+
+#: server.cpp:870
+#, kde-format
+msgid "Log Out"
+msgstr "Afmelden"
+
+#: server.cpp:875
+#, kde-format
+msgid "Log Out Without Confirmation"
+msgstr "Afmelden zonder bevestiging"
+
+#: server.cpp:880
+#, kde-format
+msgid "Halt Without Confirmation"
+msgstr "Computer afsluiten zonder bevestiging"
+
+#: server.cpp:885
+#, kde-format
+msgid "Reboot Without Confirmation"
+msgstr "Computer herstarten zonder bevestiging"

@@ -1,0 +1,264 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# Victor Ibragimov <victor.ibragimov@gmail.com>, 2019, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-02-02 02:56+0100\n"
+"PO-Revision-Date: 2020-09-19 11:40+0500\n"
+"Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
+"Language-Team: English <kde-i18n-doc@kde.org>\n"
+"Language: tg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.04.2\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Victor Ibragimov"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "victor.ibragimov@gmail.com"
+
+#: currentcontainmentactionsmodel.cpp:225
+#, kde-format
+msgid "Configure Mouse Actions Plugin"
+msgstr "Танзимоти васлкунаки амалҳои муш"
+
+#: main.cpp:107
+#, kde-format
+msgid "Plasma"
+msgstr ""
+
+#: main.cpp:107
+#, kde-format
+msgid "Plasma Shell"
+msgstr ""
+
+#: main.cpp:121
+#, kde-format
+msgid "Enable QML Javascript debugger"
+msgstr ""
+
+#: main.cpp:124
+#, kde-format
+msgid "Do not restart plasma-shell automatically after a crash"
+msgstr ""
+
+#: main.cpp:127
+#, kde-format
+msgid "Force loading the given shell plugin"
+msgstr ""
+
+#: main.cpp:132
+#, kde-format
+msgid ""
+"Load plasmashell as a standalone application, needs the shell-plugin option "
+"to be specified"
+msgstr ""
+
+#: main.cpp:134
+#, kde-format
+msgid "Replace an existing instance"
+msgstr ""
+
+#: main.cpp:137
+#, kde-format
+msgid ""
+"Enables test mode and specifies the layout javascript file to set up the "
+"testing environment"
+msgstr ""
+
+#: main.cpp:138
+#, kde-format
+msgid "file"
+msgstr "файл"
+
+#: main.cpp:142
+#, kde-format
+msgid "Lists the available options for user feedback"
+msgstr ""
+
+#: main.cpp:234
+#, kde-format
+msgid "Plasma Failed To Start"
+msgstr ""
+
+#: main.cpp:235
+#, kde-format
+msgid ""
+"Plasma is unable to start as it could not correctly use OpenGL 2 or software "
+"fallback\n"
+"Please check that your graphic drivers are set up correctly."
+msgstr ""
+
+#: osd.cpp:65
+#, kde-format
+msgctxt "OSD informing that the system is muted, keep short"
+msgid "Audio Muted"
+msgstr ""
+
+#: osd.cpp:83
+#, kde-format
+msgctxt "OSD informing that the microphone is muted, keep short"
+msgid "Microphone Muted"
+msgstr ""
+
+#: osd.cpp:99
+#, kde-format
+msgctxt "OSD informing that some media app is muted, eg. Amarok Muted"
+msgid "%1 Muted"
+msgstr ""
+
+#: osd.cpp:121
+#, kde-format
+msgctxt "touchpad was enabled, keep short"
+msgid "Touchpad On"
+msgstr ""
+
+#: osd.cpp:123
+#, kde-format
+msgctxt "touchpad was disabled, keep short"
+msgid "Touchpad Off"
+msgstr ""
+
+#: osd.cpp:130
+#, kde-format
+msgctxt "wireless lan was enabled, keep short"
+msgid "Wifi On"
+msgstr "Wifi фаъол аст"
+
+#: osd.cpp:132
+#, kde-format
+msgctxt "wireless lan was disabled, keep short"
+msgid "Wifi Off"
+msgstr "Wifi хомӯш аст"
+
+#: osd.cpp:139
+#, kde-format
+msgctxt "Bluetooth was enabled, keep short"
+msgid "Bluetooth On"
+msgstr "Bluetooth фаъол аст"
+
+#: osd.cpp:141
+#, kde-format
+msgctxt "Bluetooth was disabled, keep short"
+msgid "Bluetooth Off"
+msgstr "Bluetooth хомӯш аст"
+
+#: osd.cpp:148
+#, kde-format
+msgctxt "mobile internet was enabled, keep short"
+msgid "Mobile Internet On"
+msgstr "Интернети мобилӣ фаъол аст"
+
+#: osd.cpp:150
+#, kde-format
+msgctxt "mobile internet was disabled, keep short"
+msgid "Mobile Internet Off"
+msgstr "Интернети мобилӣ хомӯш аст"
+
+#: osd.cpp:158
+#, kde-format
+msgctxt ""
+"on screen keyboard was enabled because physical keyboard got unplugged, keep "
+"short"
+msgid "On-Screen Keyboard Activated"
+msgstr ""
+
+#: osd.cpp:161
+#, kde-format
+msgctxt ""
+"on screen keyboard was disabled because physical keyboard was plugged in, "
+"keep short"
+msgid "On-Screen Keyboard Deactivated"
+msgstr ""
+
+#: shellcorona.cpp:155 shellcorona.cpp:157
+#, kde-format
+msgid "Show Desktop"
+msgstr "Намоиш додани мизи корӣ"
+
+#: shellcorona.cpp:157
+#, kde-format
+msgid "Hide Desktop"
+msgstr "Пинҳон кардани мизи корӣ"
+
+#: shellcorona.cpp:173
+#, kde-format
+msgid "Show Activity Switcher"
+msgstr "Намоиши ивазкунандаи фаъолият"
+
+#: shellcorona.cpp:184
+#, kde-format
+msgid "Stop Current Activity"
+msgstr ""
+
+#: shellcorona.cpp:192
+#, kde-format
+msgid "Switch to Previous Activity"
+msgstr ""
+
+#: shellcorona.cpp:200
+#, kde-format
+msgid "Switch to Next Activity"
+msgstr ""
+
+#: shellcorona.cpp:216
+#, kde-format
+msgid "Activate Task Manager Entry %1"
+msgstr ""
+
+#: shellcorona.cpp:1384
+#, kde-format
+msgid "Unable to load script file: %1"
+msgstr ""
+
+#: shellcorona.cpp:1760
+#, kde-format
+msgid "Add Panel"
+msgstr "Илова кардани лавҳа"
+
+#: shellcorona.cpp:1797
+#, kde-format
+msgid "Empty %1"
+msgstr "Холӣ кардани %1"
+
+#: softwarerendernotifier.cpp:27
+#, kde-format
+msgid "Software Renderer In Use"
+msgstr ""
+
+#: softwarerendernotifier.cpp:28
+#, kde-format
+msgctxt "Tooltip telling user their GL drivers are broken"
+msgid "Software Renderer In Use"
+msgstr ""
+
+#: softwarerendernotifier.cpp:29
+#, kde-format
+msgctxt "Tooltip telling user their GL drivers are broken"
+msgid "Rendering may be degraded"
+msgstr ""
+
+#: softwarerendernotifier.cpp:39
+#, kde-format
+msgid "Never show again"
+msgstr "Дигар нишон дода нашавад"
+
+#: userfeedback.cpp:49
+#, kde-format
+msgid "Panel Count"
+msgstr ""
+
+#: userfeedback.cpp:53
+#, kde-format
+msgid "Counts the panels"
+msgstr ""

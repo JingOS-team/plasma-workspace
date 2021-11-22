@@ -187,12 +187,12 @@ KCM.GridViewKCM {
 
             Connections {
                 target: kcm
-                onShowSuccessMessage: {
+                function onShowSuccessMessage(message) {
                     infoLabel.type = Kirigami.MessageType.Positive;
                     infoLabel.text = message;
                     infoLabel.visible = true;
                 }
-                onShowErrorMessage: {
+                function onShowErrorMessage(message) {
                     infoLabel.type = Kirigami.MessageType.Error;
                     infoLabel.text = message;
                     infoLabel.visible = true;
@@ -262,7 +262,12 @@ KCM.GridViewKCM {
                 text: i18n("Get New Icons...")
                 configFile: "icons.knsrc"
                 viewMode: NewStuff.Page.ViewMode.Preview
-                onChangedEntriesChanged: kcm.ghnsEntriesChanged(newStuffButton.changedEntries);
+                Connections {
+                    target: newStuffButton.engine.engine
+                    function onSignalEntryEvent(entry, event) {
+                        kcm.ghnsEntriesChanged();
+                    }
+                }
             }
         }
     }

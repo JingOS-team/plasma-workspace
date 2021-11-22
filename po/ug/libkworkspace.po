@@ -1,0 +1,53 @@
+# Uyghur translation for libkworkspace.
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Sahran <sahran.ug@gmail.com>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: libkworkspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2013-09-08 07:05+0900\n"
+"Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
+"Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
+"Language: ug\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: kdisplaymanager.cpp:782
+#, kde-format
+msgctxt "user: ..."
+msgid "%1: TTY login"
+msgstr "%1: TTY دا كىرىش"
+
+#: kdisplaymanager.cpp:786
+#, kde-format
+msgctxt "... location (TTY or X display)"
+msgid "Unused"
+msgstr "ئىشلىتىلمىگىنى"
+
+#: kdisplaymanager.cpp:787
+#, kde-format
+msgid "X login on remote host"
+msgstr "يىراقتىكى ماشىنىدىكى X تىزىمغا كىرىش"
+
+#: kdisplaymanager.cpp:787
+#, kde-format
+msgctxt "... host"
+msgid "X login on %1"
+msgstr "%1 دىكى X تىزىمغا كىرىش"
+
+#: kdisplaymanager.cpp:788
+#, kde-format
+msgctxt "user: session type"
+msgid "%1: %2"
+msgstr "%1: %2"
+
+#: kdisplaymanager.cpp:798
+#, kde-format
+msgctxt "session (location)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"

@@ -1,0 +1,42 @@
+# Frederik Schwarzer <schwarzer@kde.org>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_activities\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-10-21 02:33+0200\n"
+"PO-Revision-Date: 2011-02-17 19:58+0100\n"
+"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
+"Language-Team: German <kde-i18n-de@kde.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: activityrunner.cpp:31
+#, kde-format
+msgctxt "KRunner keyword"
+msgid "activity"
+msgstr "Aktivität"
+
+#: activityrunner.cpp:35
+#, kde-format
+msgid "Lists all activities currently available to be run."
+msgstr "Zeigt eine Liste aller verfügbaren Aktivitäten an."
+
+#: activityrunner.cpp:36
+#, kde-format
+msgctxt "KRunner keyword"
+msgid "activity :q:"
+msgstr "aktivität :q:"
+
+#: activityrunner.cpp:36
+#, kde-format
+msgid "Switches to activity :q:."
+msgstr "Wechselt zur Aktivität :q:."
+
+#: activityrunner.cpp:128
+#, kde-format
+msgid "Switch to \"%1\""
+msgstr "Zu „%1“ wechseln"

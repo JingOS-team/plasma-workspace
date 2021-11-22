@@ -1,0 +1,38 @@
+# translation of krunner_webshortcutsrunner.po to Gujarati
+# Copyright (C) 2008 This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Kartik Mistry <kartik.mistry@gmail.com>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: krunner_webshortcutsrunner\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-10-21 02:34+0200\n"
+"PO-Revision-Date: 2009-05-11 11:48+0530\n"
+"Last-Translator: Kartik Mistry <kartik.mistry@gmail.com>\n"
+"Language-Team: Gujarati <kde-i18n-doc@kde.org>\n"
+"Language: gu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: webshortcutrunner.cpp:65
+#, kde-format
+msgid "Opens \"%1\" in a web browser with the query :q:."
+msgstr "આ શોધ સાથે \"%1\" ને વેબ બ્રાઉઝરમાં ખોલે છે :q:."
+
+#: webshortcutrunner.cpp:95
+#, kde-format
+msgid "Search in private window"
+msgstr ""
+
+#: webshortcutrunner.cpp:95
+#, kde-format
+msgid "Search in incognito window"
+msgstr ""
+
+#: webshortcutrunner.cpp:131 webshortcutrunner.cpp:148
+#, kde-format
+msgid "Search %1 for %2"
+msgstr "%2 માટે %1 શોધો"

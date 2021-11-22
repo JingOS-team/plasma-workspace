@@ -1,0 +1,124 @@
+# Indonesian translations for plasma_applet_devicenotifier package.
+# Copyright (C) 2010 This_file_is_part_of_KDE
+# This file is distributed under the same license as the plasma_applet_devicenotifier package.
+# Andhika Padmawan <andhika.padmawan@gmail.com>, 2010-2014.
+# Wantoyo <wantoyek@gmail.com>, 2017, 2018, 2019, 2020, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_devicenotifier\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-12-21 02:42+0100\n"
+"PO-Revision-Date: 2021-01-24 23:05+0700\n"
+"Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
+"Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 20.12.1\n"
+
+#: package/contents/ui/DeviceItem.qml:171
+#, kde-format
+msgctxt "@info:status Free disk space"
+msgid "%1 free of %2"
+msgstr "%1 bebas dari %2"
+
+#: package/contents/ui/DeviceItem.qml:175
+#, kde-format
+msgctxt ""
+"Accessing is a less technical word for Mounting; translation should be short "
+"and mean 'Currently mounting this device'"
+msgid "Accessing..."
+msgstr "Mengakses..."
+
+#: package/contents/ui/DeviceItem.qml:177
+#, kde-format
+msgctxt ""
+"Removing is a less technical word for Unmounting; translation should be "
+"short and mean 'Currently unmounting this device'"
+msgid "Removing..."
+msgstr "Melepas..."
+
+#: package/contents/ui/DeviceItem.qml:203
+#, kde-format
+msgid "Open in File Manager"
+msgstr "Buka di File Manager"
+
+#: package/contents/ui/DeviceItem.qml:207
+#, kde-format
+msgid "Mount and Open"
+msgstr "Kaitkan dan Buka"
+
+#: package/contents/ui/DeviceItem.qml:209
+#, kde-format
+msgid "Eject"
+msgstr "Keluarkan"
+
+#: package/contents/ui/DeviceItem.qml:211
+#, kde-format
+msgid "Safely remove"
+msgstr "Lepas dengan aman"
+
+#: package/contents/ui/DeviceItem.qml:251
+#, kde-format
+msgid "Mount"
+msgstr "Kaitkan"
+
+#: package/contents/ui/devicenotifier.qml:60
+#, kde-format
+msgid "Most Recent Device"
+msgstr "Sebagian Besar Perangkat Belakangan Ini"
+
+#: package/contents/ui/devicenotifier.qml:60
+#, kde-format
+msgid "No Devices Available"
+msgstr "Tidak ada Perangkat Tersedia"
+
+#: package/contents/ui/devicenotifier.qml:238
+#, kde-format
+msgid "Removable Devices"
+msgstr "Perangkat Bisa Dilepas"
+
+#: package/contents/ui/devicenotifier.qml:244
+#, kde-format
+msgid "Non Removable Devices"
+msgstr "Perangkat Yang Bukan Bisa Dilepas"
+
+#: package/contents/ui/devicenotifier.qml:250
+#, kde-format
+msgid "All Devices"
+msgstr "Semua Perangkat"
+
+#: package/contents/ui/devicenotifier.qml:258
+#, kde-format
+msgid "Show popup when new device is plugged in"
+msgstr "Tampilkan sembulan ketika perangkat baru sudah tercolok"
+
+#: package/contents/ui/devicenotifier.qml:266
+#, kde-format
+msgctxt "Open auto mounter kcm"
+msgid "Configure Removable Devices..."
+msgstr "Konfigurasi Perangkat Yang Bisa Dilepas..."
+
+# Melepas Perangkat
+#: package/contents/ui/FullRepresentation.qml:48
+#, kde-format
+msgid "Remove All"
+msgstr "Lepas Semua"
+
+#: package/contents/ui/FullRepresentation.qml:51
+#, kde-format
+msgid "Click to safely remove all devices"
+msgstr "Klik untuk secara aman melepas semua perangkat"
+
+#: package/contents/ui/FullRepresentation.qml:163
+#, kde-format
+msgid "No removable devices attached"
+msgstr "Tidak ada perangkat yang bisa dilepas yang tercantol"
+
+#: package/contents/ui/FullRepresentation.qml:163
+#, kde-format
+msgid "No disks available"
+msgstr "Tidak ada disk yang tersedia"

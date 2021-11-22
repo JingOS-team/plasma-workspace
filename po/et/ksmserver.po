@@ -1,0 +1,164 @@
+# translation of ksmserver.po to Estonian
+# Copyright (C) 2000,2002, 2003, 2004, 2005 Free Software Foundation, Inc.
+#
+# Hasso Tepper <hasso@linux.ee>, 2000.
+# Hasso Tepper <hasso@estpak.ee>, 2002.
+# Marek Laane <bald@smail.ee>, 2003-2005,2007-2009.
+# Hasso Tepper <hasso@kde.org>, 2004, 2005.
+# Marek Laane <bald@smail.ee>, 2010, 2012, 2016, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: ksmserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2020-04-25 13:41+0300\n"
+"Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
+"Language-Team: Estonian <kde-et@lists.linux.ee>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 19.12.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: logout.cpp:354
+#, kde-format
+msgid "Logout canceled by '%1'"
+msgstr "'%1' katkestas väljalogimise"
+
+#: main.cpp:52
+#, kde-format
+msgid ""
+"The reliable Plasma session manager that talks the standard X11R6 \n"
+"session management protocol (XSMP)."
+msgstr ""
+"Töökindel Plasma seansihaldur, mis suhtleb standardse X11R6 \n"
+"seansihalduse protokolli (XSMP) abil."
+
+#: main.cpp:128
+#, kde-format
+msgid "$HOME not set!"
+msgstr "$HOME pole määratud!"
+
+#: main.cpp:132 main.cpp:138
+#, kde-format
+msgid "$HOME directory (%1) does not exist."
+msgstr "$HOME kataloogi (%1) ei ole olemas."
+
+#: main.cpp:134
+#, kde-format
+msgid "No write access to $HOME directory (%1)."
+msgstr "$HOME kataloogis (%1) puudub kirjutamisõigus."
+
+#: main.cpp:140
+#, kde-format
+msgid "No read access to $HOME directory (%1)."
+msgstr "$HOME kataloogis (%1) puudub lugemisõigus."
+
+#: main.cpp:144
+#, kde-format
+msgid "$HOME directory (%1) is out of disk space."
+msgstr "$HOME kataloogis (%1) on ruum otsa lõppenud."
+
+#: main.cpp:147
+#, kde-format
+msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
+msgstr "Kirjutamine $HOME kataloogi (%2) lõppes veaga '%1'"
+
+#: main.cpp:160 main.cpp:195
+#, kde-format
+msgid "No write access to '%1'."
+msgstr "Kataloogis \"%1\" puudub kirjutamisõigus."
+
+#: main.cpp:162 main.cpp:197
+#, kde-format
+msgid "No read access to '%1'."
+msgstr "Kataloogis \"%1\" puudub lugemisõigus."
+
+#: main.cpp:170 main.cpp:183
+#, kde-format
+msgid "Temp directory (%1) is out of disk space."
+msgstr "Ajutises kataloogis (%1) on ruum otsa lõppenud."
+
+#: main.cpp:173 main.cpp:186
+#, kde-format
+msgid ""
+"Writing to the temp directory (%2) failed with\n"
+"    the error '%1'"
+msgstr ""
+"Kirjutamine ajutisse kataloogi (%2)\n"
+"    lõppes veaga '%1'"
+
+#: main.cpp:201
+#, kde-format
+msgid ""
+"The following installation problem was detected\n"
+"while trying to start Plasma:"
+msgstr ""
+"Plasma käivitamise ajal tuvastati\n"
+"järgmine paigaldusprobleem:"
+
+#: main.cpp:204
+#, kde-format
+msgid ""
+"\n"
+"\n"
+"Plasma is unable to start.\n"
+msgstr ""
+"\n"
+"\n"
+"Plasma käivitamine ei õnnestunud.\n"
+
+#: main.cpp:211
+#, kde-format
+msgid "Plasma Workspace installation problem!"
+msgstr "Plasma töötsooni paigalduse probleem!"
+
+#: main.cpp:251
+#, kde-format
+msgid "Restores the saved user session if available"
+msgstr "Võimaluse korral taastab eelmise seansi"
+
+#: main.cpp:254
+#, kde-format
+msgid "Also allow remote connections"
+msgstr "Lubatud on ka kaugühendused"
+
+#: main.cpp:257
+#, kde-format
+msgid "Starts the session in locked mode"
+msgstr "Seansi käivitamine lukustatud režiimis"
+
+#: main.cpp:261
+#, kde-format
+msgid ""
+"Starts without lock screen support. Only needed if other component provides "
+"the lock screen."
+msgstr ""
+"Käivitamine lukustusekraani toetuseta. Vajalik ainult siis, kui mõni muu "
+"komponent pakub lukustusekraani."
+
+#: server.cpp:867
+#, kde-format
+msgid "Session Management"
+msgstr "Seansihaldur"
+
+#: server.cpp:870
+#, kde-format
+msgid "Log Out"
+msgstr "Väljalogimine"
+
+#: server.cpp:875
+#, kde-format
+msgid "Log Out Without Confirmation"
+msgstr "Väljalogimine kinnitust küsimata"
+
+#: server.cpp:880
+#, kde-format
+msgid "Halt Without Confirmation"
+msgstr "Arvuti seiskamine kinnitust küsimata"
+
+#: server.cpp:885
+#, kde-format
+msgid "Reboot Without Confirmation"
+msgstr "Taaskäivitamine kinnitust küsimata"

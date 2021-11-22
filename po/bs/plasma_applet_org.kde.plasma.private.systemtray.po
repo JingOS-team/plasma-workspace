@@ -1,0 +1,155 @@
+# Bosnian translations for PACKAGE package
+# engleski prevodi za paket PACKAGE.
+# Copyright (C) 2014 This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Automatically generated, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: $2\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-02-03 03:31+0100\n"
+"PO-Revision-Date: 2014-12-25 07:47+0000\n"
+"Last-Translator: Dino Babahmetovic <dbabahmeto1@etf.unsa.ba>\n"
+"Language-Team: none\n"
+"Language: bs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2014-12-26 06:18+0000\n"
+"X-Generator: Launchpad (build 17286)\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#: package/contents/config/config.qml:26
+#, kde-format
+msgid "General"
+msgstr "Generalno"
+
+#: package/contents/config/config.qml:31
+#, kde-format
+msgid "Entries"
+msgstr "Unosi"
+
+#: package/contents/ui/ConfigEntries.qml:40
+#, kde-format
+msgid "Always show all entries"
+msgstr ""
+
+#: package/contents/ui/ConfigEntries.qml:46
+#, kde-format
+msgid "Application Status"
+msgstr "Stanje programa"
+
+#: package/contents/ui/ConfigEntries.qml:48
+#, kde-format
+msgid "Communications"
+msgstr "Komunikacije"
+
+#: package/contents/ui/ConfigEntries.qml:50
+#, kde-format
+msgid "System Services"
+msgstr "Sistemski servisi"
+
+#: package/contents/ui/ConfigEntries.qml:52
+#, kde-format
+msgid "Hardware Control"
+msgstr "Hardverska kontrola"
+
+#: package/contents/ui/ConfigEntries.qml:55
+#, kde-format
+msgid "Miscellaneous"
+msgstr "Ostalo"
+
+#: package/contents/ui/ConfigEntries.qml:87
+#, fuzzy, kde-format
+#| msgid "Entries"
+msgctxt "Name of the system tray entry"
+msgid "Entry"
+msgstr "Unosi"
+
+#: package/contents/ui/ConfigEntries.qml:92
+#, kde-format
+msgid "Visibility"
+msgstr ""
+
+#: package/contents/ui/ConfigEntries.qml:98
+#, kde-format
+msgid "Keyboard Shortcut"
+msgstr ""
+
+#: package/contents/ui/ConfigEntries.qml:232
+#, kde-format
+msgid "Shown when relevant"
+msgstr ""
+
+#: package/contents/ui/ConfigEntries.qml:233
+#, kde-format
+msgid "Always shown"
+msgstr ""
+
+#: package/contents/ui/ConfigEntries.qml:234
+#, kde-format
+msgid "Always hidden"
+msgstr ""
+
+#: package/contents/ui/ConfigEntries.qml:235
+#, kde-format
+msgid "Disabled"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:36
+#, kde-format
+msgctxt "The arrangement of system tray icons in the Panel"
+msgid "Panel icon size:"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:37
+#, kde-format
+msgid "Small"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:43
+#, kde-format
+msgid "Scale with Panel height"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:44
+#, kde-format
+msgid "Scale with Panel width"
+msgstr ""
+
+#: package/contents/ui/ExpandedRepresentation.qml:87
+#, fuzzy, kde-format
+#| msgid "Status & Notifications"
+msgid "Status and Notifications"
+msgstr "Status & Notifikacije"
+
+#: package/contents/ui/ExpandedRepresentation.qml:153
+#, kde-format
+msgid "More actions"
+msgstr ""
+
+#: package/contents/ui/ExpandedRepresentation.qml:190
+#, kde-format
+msgid "Keep Open"
+msgstr ""
+
+#: package/contents/ui/ExpanderArrow.qml:32
+#, kde-format
+msgid "Close popup"
+msgstr ""
+
+#: package/contents/ui/ExpanderArrow.qml:32
+#, kde-format
+msgid "Show hidden icons"
+msgstr "Prikaži skrivene ikone"
+
+#: systemtraymodel.cpp:137
+#, fuzzy, kde-format
+#| msgid " (Automatic load)"
+msgctxt ""
+"Suffix added to the applet name if the applet is autoloaded via DBus "
+"activation"
+msgid "%1 (Automatic load)"
+msgstr " (Automatsko punjenje)"

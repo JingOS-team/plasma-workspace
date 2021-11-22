@@ -1,0 +1,36 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Jure Repinc <jlp@holodeck1.com>, 2008, 2009, 2012.
+# Andrej Mernik <andrejm@ubuntu.si>, 2013, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: krunner_shellrunner\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2016-05-15 10:31+0200\n"
+"Last-Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
+"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
+
+#: shellrunner.cpp:43
+#, kde-format
+msgid "Finds commands that match :q:, using common shell syntax"
+msgstr ""
+"Najde ukaze, ki se ujemajo s :q:, pri čemer uporabi običajno skladnjo lupine"
+
+#: shellrunner.cpp:44
+#, kde-format
+msgid "Run in Terminal Window"
+msgstr "Zaženi v oknu terminala"
+
+#: shellrunner.cpp:62
+#, kde-format
+msgid "Run %1"
+msgstr "Zaženi %1"

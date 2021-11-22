@@ -1,0 +1,162 @@
+# translation of ksmserver.po to
+# Danish translation of ksmserver
+# Copyright (C).
+#
+# Erik Kjær Pedersen <erik@binghamton.edu>, 1999, 2002, 2004, 2005.
+# Martin Schlander <mschlander@opensuse.org>, 2008, 2010, 2012, 2014, 2015, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: ksmserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2020-07-21 18:30+0200\n"
+"Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
+"Language-Team: Danish <kde-i18n-doc@kde.org>\n"
+"Language: da\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.04.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: logout.cpp:354
+#, kde-format
+msgid "Logout canceled by '%1'"
+msgstr "Log ud annulleret af \"%1\""
+
+#: main.cpp:52
+#, kde-format
+msgid ""
+"The reliable Plasma session manager that talks the standard X11R6 \n"
+"session management protocol (XSMP)."
+msgstr ""
+"Den driftssikre Plasma-sessionshåndtering der taler standard-X11R6-\n"
+"sessionshåndteringsprotokollen (XSMP)."
+
+#: main.cpp:128
+#, kde-format
+msgid "$HOME not set!"
+msgstr "$HOME er ikke angivet!"
+
+#: main.cpp:132 main.cpp:138
+#, kde-format
+msgid "$HOME directory (%1) does not exist."
+msgstr "$HOME-mappen (%1) findes ikke."
+
+#: main.cpp:134
+#, kde-format
+msgid "No write access to $HOME directory (%1)."
+msgstr "Ingen skriveadgang til $HOME-hjemme (%1)."
+
+#: main.cpp:140
+#, kde-format
+msgid "No read access to $HOME directory (%1)."
+msgstr "Ingen læseadgang til $HOME-mappen (%1)."
+
+#: main.cpp:144
+#, kde-format
+msgid "$HOME directory (%1) is out of disk space."
+msgstr "$HOME-mappen (%1) er løbet tør for diskplads."
+
+#: main.cpp:147
+#, kde-format
+msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
+msgstr "Skrivning til $HOME-mappen (%2) mislykkedes med fejlen \"%1\""
+
+#: main.cpp:160 main.cpp:195
+#, kde-format
+msgid "No write access to '%1'."
+msgstr "Ingen skriveadgang til \"%1\"."
+
+#: main.cpp:162 main.cpp:197
+#, kde-format
+msgid "No read access to '%1'."
+msgstr "Ingen læseadgang til \"%1\"."
+
+#: main.cpp:170 main.cpp:183
+#, kde-format
+msgid "Temp directory (%1) is out of disk space."
+msgstr "Temp-mappen (%1) er løbet tør for diskplads."
+
+#: main.cpp:173 main.cpp:186
+#, kde-format
+msgid ""
+"Writing to the temp directory (%2) failed with\n"
+"    the error '%1'"
+msgstr ""
+"Skrivning til temp-mappen (%2) mislykkedes med\n"
+"    fejlen \"%1\""
+
+#: main.cpp:201
+#, kde-format
+msgid ""
+"The following installation problem was detected\n"
+"while trying to start Plasma:"
+msgstr ""
+"Det følgende installationsproblem blev detekteret\n"
+"under forsøg på opstart af Plasma:"
+
+#: main.cpp:204
+#, kde-format
+msgid ""
+"\n"
+"\n"
+"Plasma is unable to start.\n"
+msgstr ""
+"\n"
+"\n"
+"Plasma kan ikke starte.\n"
+
+#: main.cpp:211
+#, kde-format
+msgid "Plasma Workspace installation problem!"
+msgstr "Installationsproblem med Plasma Workspace!"
+
+#: main.cpp:251
+#, kde-format
+msgid "Restores the saved user session if available"
+msgstr "Genopretter den gemte brugersession hvis den er tilgængelig."
+
+#: main.cpp:254
+#, kde-format
+msgid "Also allow remote connections"
+msgstr "Tillad også fjernforbindelser"
+
+#: main.cpp:257
+#, kde-format
+msgid "Starts the session in locked mode"
+msgstr "Starter sessionen i låst tilstand"
+
+#: main.cpp:261
+#, kde-format
+msgid ""
+"Starts without lock screen support. Only needed if other component provides "
+"the lock screen."
+msgstr ""
+"Starter uden understøttelse af låseskærm. Kun nødvendigt hvis en anden "
+"komponent giver en låseskærm."
+
+#: server.cpp:867
+#, kde-format
+msgid "Session Management"
+msgstr "Sessionshåndtering"
+
+#: server.cpp:870
+#, kde-format
+msgid "Log Out"
+msgstr "Log ud"
+
+#: server.cpp:875
+#, kde-format
+msgid "Log Out Without Confirmation"
+msgstr "Log ud uden bekræftelse"
+
+#: server.cpp:880
+#, kde-format
+msgid "Halt Without Confirmation"
+msgstr "Sluk uden bekræftelse"
+
+#: server.cpp:885
+#, kde-format
+msgid "Reboot Without Confirmation"
+msgstr "Genstart uden bekræftelse"

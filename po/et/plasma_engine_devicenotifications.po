@@ -1,0 +1,79 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Marek Laane <qiilaq69@gmail.com>, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:48+0100\n"
+"PO-Revision-Date: 2016-07-27 17:38+0300\n"
+"Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
+"Language-Team: Estonian <kde-i18n-doc@kde.org>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 1.5\n"
+
+#: ksolidnotify.cpp:161
+#, kde-format
+msgid "This device can now be safely removed."
+msgstr "Selle seadme võib nüüd turvaliselt eemaldada."
+
+#: ksolidnotify.cpp:168
+#, kde-format
+msgid "You are not authorized to mount this device."
+msgstr "Sul puuduvad õigused selle seadme ühendamiseks."
+
+#: ksolidnotify.cpp:171
+#, kde-format
+msgctxt "Remove is less technical for unmount"
+msgid "You are not authorized to remove this device."
+msgstr "Sul puuduvad õigused selle seadme eemaldamiseks."
+
+#: ksolidnotify.cpp:174
+#, kde-format
+msgid "You are not authorized to eject this disc."
+msgstr "Sul puuduvad õigused selle seadme väljastamiseks."
+
+#: ksolidnotify.cpp:181
+#, kde-format
+msgid "Could not mount this device as it is busy."
+msgstr "Seda seadet ei saa ühendada, sest see on hõivatud."
+
+#: ksolidnotify.cpp:211
+#, kde-format
+msgid "One or more files on this device are open within an application."
+msgstr "Vähemalt üks selle seadme fail on avatud rakenduses."
+
+#: ksolidnotify.cpp:213
+#, kde-format
+msgid "One or more files on this device are opened in application \"%2\"."
+msgid_plural ""
+"One or more files on this device are opened in following applications: %2."
+msgstr[0] "Vähemalt üks selle seadme fail on avatud rakenduses \"%2\""
+msgstr[1] "Vähemalt üks selle seadme fail on avatud järgmistes rakendustes: %2"
+
+#: ksolidnotify.cpp:216
+#, kde-format
+msgctxt "separator in list of apps blocking device unmount"
+msgid ", "
+msgstr ", "
+
+#: ksolidnotify.cpp:233
+#, kde-format
+msgid "Could not mount this device."
+msgstr "Seda seadet ei saa ühendada."
+
+#: ksolidnotify.cpp:236
+#, kde-format
+msgctxt "Remove is less technical for unmount"
+msgid "Could not remove this device."
+msgstr "Seda seadet ei saa eemaldada."
+
+#: ksolidnotify.cpp:239
+#, kde-format
+msgid "Could not eject this disc."
+msgstr "Seda plaati ei saa väljastada."

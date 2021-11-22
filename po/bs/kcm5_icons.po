@@ -1,0 +1,387 @@
+# Translation of kcmicons.po into Bosnian.
+# Milos Puzovic <m.puzovic@etoncollege.org.uk>, 2001.
+# Toplica Tanaskovic <toptan@kde.org.yu>, 2003, 2004.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2005, 2007, 2008, 2009, 2010.
+# Dalibor Djuric <dalibor.djuric@mozilla-srbija.org>, 2009, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmicons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2014-10-20 19:32+0000\n"
+"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"Language-Team: Bosnian <bs@li.org>\n"
+"Language: bs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Launchpad (build 17341)\n"
+"X-Launchpad-Export-Date: 2015-02-16 06:42+0000\n"
+"X-Associated-UI-Catalogs: kdelibs4\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Chusslove Illich"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "Caslav.ilic@gmx.net"
+
+#: changeicons.cpp:43
+#, kde-format
+msgid "Icon theme is already used"
+msgstr ""
+
+# >> @item:inlistbox
+#: iconsizecategorymodel.cpp:26
+#, kde-format
+msgid "Toolbar"
+msgstr "Traka alatki"
+
+# >> @item:inlistbox
+#: iconsizecategorymodel.cpp:27
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Glavna traka"
+
+# >> @item:inlistbox
+#: iconsizecategorymodel.cpp:28
+#, kde-format
+msgid "Small Icons"
+msgstr "Male ikone"
+
+# >> @item:inlistbox
+#: iconsizecategorymodel.cpp:29
+#, kde-format
+msgid "Panel"
+msgstr "Panel"
+
+# >> @item:inlistbox
+#: iconsizecategorymodel.cpp:30
+#, kde-format
+msgid "Dialogs"
+msgstr "Dijalozi"
+
+#. i18n: ectx: label, entry (Theme), group (Icons)
+#: iconssettingsbase.kcfg:9
+#, kde-format
+msgid "Name of the current icon theme"
+msgstr ""
+
+#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
+#: iconssettingsbase.kcfg:15
+#, kde-format
+msgid "Desktop icons size"
+msgstr ""
+
+#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
+#: iconssettingsbase.kcfg:21
+#, kde-format
+msgid "Toolbar icons size"
+msgstr ""
+
+# >> @item:inlistbox
+#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
+#: iconssettingsbase.kcfg:27
+#, fuzzy, kde-format
+#| msgid "Main Toolbar"
+msgid "Main toolbar icons size"
+msgstr "Glavna traka"
+
+# >> @item:inlistbox
+#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
+#: iconssettingsbase.kcfg:33
+#, fuzzy, kde-format
+#| msgid "Small Icons"
+msgid "Small icons size"
+msgstr "Male ikone"
+
+#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
+#: iconssettingsbase.kcfg:39
+#, kde-format
+msgid "Panel icons size"
+msgstr ""
+
+#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
+#: iconssettingsbase.kcfg:45
+#, kde-format
+msgid "Dialog icons size"
+msgstr ""
+
+#: main.cpp:82
+#, kde-format
+msgid "Icons"
+msgstr "Ikone"
+
+#: main.cpp:84
+#, kde-format
+msgid "Icons Control Panel Module"
+msgstr "Modul kontrolnog panela za ikone"
+
+#: main.cpp:86
+#, kde-format
+msgid "(c) 2000-2003 Geert Jansen"
+msgstr "© 2000-2003, Gert Jansen"
+
+#: main.cpp:87
+#, kde-format
+msgid "Geert Jansen"
+msgstr "Gert Jansen"
+
+#: main.cpp:88
+#, kde-format
+msgid "Antonio Larrosa Jimenez"
+msgstr "Antonio Larosa Himenez"
+
+#: main.cpp:89
+#, kde-format
+msgid "Torsten Rahn"
+msgstr "Torsten Ran"
+
+#: main.cpp:90
+#, kde-format
+msgid "Jonathan Riddell"
+msgstr "Jonathan Riddell"
+
+#: main.cpp:91
+#, kde-format
+msgid "Kai Uwe Broulik"
+msgstr ""
+
+#: main.cpp:214
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "Ne mogu kreirati privremenu datoteku."
+
+#: main.cpp:225
+#, fuzzy, kde-format
+#| msgid "Unable to find the icon theme archive %1."
+msgid "Unable to download the icon theme archive: %1"
+msgstr "Ne mogu da pronađem arhivu teme ikona %1."
+
+#: main.cpp:239
+#, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr "Ovaa datoteka nije ispravna arhiva teme ikona."
+
+#: main.cpp:244
+#, kde-format
+msgid ""
+"A problem occurred during the installation process; however, most of the "
+"themes in the archive have been installed"
+msgstr ""
+"Došlo je do problema u toku instalacije. Ipak, veći dio tema iz arhive je "
+"instaliran."
+
+#: main.cpp:248
+#, kde-format
+msgid "Theme installed successfully."
+msgstr ""
+
+#: main.cpp:356
+#, kde-format
+msgid "Installing icon themes..."
+msgstr "Instaliram temu ikona..."
+
+#: main.cpp:366
+#, fuzzy, kde-format
+#| msgid "Installing icon themes..."
+msgid "Installing %1 theme..."
+msgstr "Instaliram temu ikona..."
+
+#: package/contents/ui/main.qml:35
+#, kde-format
+msgid "This module allows you to choose the icons for your desktop."
+msgstr ""
+
+#: package/contents/ui/main.qml:161
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Remove Icon Theme"
+msgstr "Ukloni temu"
+
+#: package/contents/ui/main.qml:168
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Restore Icon Theme"
+msgstr "Ukloni temu"
+
+#: package/contents/ui/main.qml:237
+#, kde-format
+msgid "Configure Icon Sizes"
+msgstr ""
+
+#: package/contents/ui/main.qml:254
+#, fuzzy, kde-format
+#| msgid "Install Theme File..."
+msgid "Install from File..."
+msgstr "Instaliraj datoteku teme..."
+
+#: package/contents/ui/main.qml:262
+#, fuzzy, kde-format
+#| msgid "Get New Themes..."
+msgid "Get New Icons..."
+msgstr "Dobavi nove teme..."
+
+#: package/contents/ui/main.qml:288
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Open Theme"
+msgstr "Ukloni temu"
+
+#: package/contents/ui/main.qml:290
+#, kde-format
+msgid "Theme Files (*.tar.gz *.tar.bz2)"
+msgstr ""
+
+# >> @item:inlistbox
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# >> @item:inlistbox
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# >> @info:progress
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# >! "Install New Theme" no longer, perhaps "Install Theme File..."?

@@ -1,0 +1,240 @@
+# translation of kcmicons.po into Russian
+# translation of kcmicons.po to
+# translation of kcmicons.po to Russian
+# KDE3 - kcmicons.pot Russian translation
+# Copyright (C) 2000 KDE Team
+#
+# Konstantin Volckov <goldhead@linux.ru.net>, 2001.
+# Zhitomirsky Sergey <szh@chat.ru>, 2000.
+# Leonid Kanter <leon@asplinux.ru>, 2004, 2005.
+# Andrey Cherepanov <sibskull@mail.ru>, 2005.
+# Gregory Mokhin <mok@kde.ru>, 2005.
+# Andrey Cherepanov <skull@kde.ru>, 2009.
+# Alexander Potashev <aspotashev@gmail.com>, 2010, 2014, 2016, 2017, 2018.
+# Yuri Efremov <yur.arh@gmail.com>, 2013.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmicons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2021-01-16 15:51+0300\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.12.1\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+"Константин Волков,Сергей Житомирский,Леонид Кантер, Николай Шафоростов,Ольга "
+"Миронова"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+"goldhead@linux.ru.net,szh@chat.ru,leon@asplinux.ru, shaforostoff@kde.ru, "
+"omiro@basealt.ru"
+
+#: changeicons.cpp:43
+#, kde-format
+msgid "Icon theme is already used"
+msgstr "Набор значков уже используется"
+
+#: iconsizecategorymodel.cpp:26
+#, kde-format
+msgid "Toolbar"
+msgstr "Панель инструментов"
+
+#: iconsizecategorymodel.cpp:27
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Основная панель инструментов"
+
+#: iconsizecategorymodel.cpp:28
+#, kde-format
+msgid "Small Icons"
+msgstr "Маленькие значки"
+
+#: iconsizecategorymodel.cpp:29
+#, kde-format
+msgid "Panel"
+msgstr "Панель"
+
+#: iconsizecategorymodel.cpp:30
+#, kde-format
+msgid "Dialogs"
+msgstr "Диалоговые окна"
+
+#. i18n: ectx: label, entry (Theme), group (Icons)
+#: iconssettingsbase.kcfg:9
+#, kde-format
+msgid "Name of the current icon theme"
+msgstr "Название текущего набора значков"
+
+#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
+#: iconssettingsbase.kcfg:15
+#, kde-format
+msgid "Desktop icons size"
+msgstr "Размер значков рабочего стола"
+
+#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
+#: iconssettingsbase.kcfg:21
+#, kde-format
+msgid "Toolbar icons size"
+msgstr "Размер значков панели инструментов"
+
+#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
+#: iconssettingsbase.kcfg:27
+#, kde-format
+msgid "Main toolbar icons size"
+msgstr "Размер значков основной панели инструментов"
+
+#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
+#: iconssettingsbase.kcfg:33
+#, kde-format
+msgid "Small icons size"
+msgstr "Размер маленьких значков"
+
+#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
+#: iconssettingsbase.kcfg:39
+#, kde-format
+msgid "Panel icons size"
+msgstr "Размер значков панели"
+
+#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
+#: iconssettingsbase.kcfg:45
+#, kde-format
+msgid "Dialog icons size"
+msgstr "Размер значков диалога"
+
+# BUGME: please split window title and download new button's caption ---ayavorsky 20190120
+#: main.cpp:82
+#, kde-format
+msgid "Icons"
+msgstr "Значки"
+
+#: main.cpp:84
+#, kde-format
+msgid "Icons Control Panel Module"
+msgstr "Модуль управления значками"
+
+#: main.cpp:86
+#, kde-format
+msgid "(c) 2000-2003 Geert Jansen"
+msgstr "© Geert Jansen, 2000-2003"
+
+#: main.cpp:87
+#, kde-format
+msgid "Geert Jansen"
+msgstr "Geert Jansen"
+
+#: main.cpp:88
+#, kde-format
+msgid "Antonio Larrosa Jimenez"
+msgstr "Antonio Larrosa Jimenez"
+
+#: main.cpp:89
+#, kde-format
+msgid "Torsten Rahn"
+msgstr "Torsten Rahn"
+
+#: main.cpp:90
+#, kde-format
+msgid "Jonathan Riddell"
+msgstr "Jonathan Riddell"
+
+#: main.cpp:91
+#, kde-format
+msgid "Kai Uwe Broulik"
+msgstr "Kai Uwe Broulik"
+
+#: main.cpp:214
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "Не удалось создать временный файл."
+
+#: main.cpp:225
+#, kde-format
+msgid "Unable to download the icon theme archive: %1"
+msgstr "Не удалось загрузить с сервера архив с набором значков: %1"
+
+#: main.cpp:239
+#, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr "Выбранный файл не является архивом с набором значков."
+
+#: main.cpp:244
+#, kde-format
+msgid ""
+"A problem occurred during the installation process; however, most of the "
+"themes in the archive have been installed"
+msgstr ""
+"Во время установки произошла ошибка; однако, некоторые файлы из архива были "
+"установлены."
+
+#: main.cpp:248
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "Набор значков успешно установлен."
+
+#: main.cpp:356
+#, kde-format
+msgid "Installing icon themes..."
+msgstr "Установка наборов значков..."
+
+#: main.cpp:366
+#, kde-format
+msgid "Installing %1 theme..."
+msgstr "Установка набора значков %1..."
+
+#: package/contents/ui/main.qml:35
+#, kde-format
+msgid "This module allows you to choose the icons for your desktop."
+msgstr "Этот модуль настройки позволяет выбрать набор значков."
+
+#: package/contents/ui/main.qml:161
+#, kde-format
+msgid "Remove Icon Theme"
+msgstr "Удалить набор значков"
+
+#: package/contents/ui/main.qml:168
+#, kde-format
+msgid "Restore Icon Theme"
+msgstr "Восстановить набор значков"
+
+#: package/contents/ui/main.qml:237
+#, kde-format
+msgid "Configure Icon Sizes"
+msgstr "Выбрать размеры значков"
+
+#: package/contents/ui/main.qml:254
+#, kde-format
+msgid "Install from File..."
+msgstr "Установить из файла..."
+
+#: package/contents/ui/main.qml:262
+#, kde-format
+msgid "Get New Icons..."
+msgstr "Загрузить наборы значков..."
+
+#: package/contents/ui/main.qml:288
+#, kde-format
+msgid "Open Theme"
+msgstr "Открытие темы"
+
+#: package/contents/ui/main.qml:290
+#, kde-format
+msgid "Theme Files (*.tar.gz *.tar.bz2)"
+msgstr "Наборы значков (*.tar.gz *.tar.bz2)"

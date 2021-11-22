@@ -1,0 +1,42 @@
+# translation of plasma_applet_clock.po to Walon
+# Ratournaedje e walon des messaedjes di KDE.
+#
+# Pablo Saratxaga <pablo@walon.org>, 2007.
+# Jean Cayron, 2008.
+# Jean Cayron <jean.cayron@tele2allin.be>, 2008.
+# Jean Cayron <jean.cayron@gmail.com>, 2011, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_clock\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2019-05-20 03:26+0200\n"
+"PO-Revision-Date: 2014-03-28 22:50+0100\n"
+"Last-Translator: Jean Cayron <jean.cayron@gmail.com>\n"
+"Language-Team: Walloon <linux-wa@walon.org>\n"
+"Language: wa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: contents/config/config.qml:25
+#, kde-format
+msgid "Appearance"
+msgstr "Rivnance"
+
+#: contents/ui/configGeneral.qml:35
+#, kde-format
+msgid "Show seconds hand"
+msgstr "Håyner l' aweye des &segondes"
+
+#: contents/ui/configGeneral.qml:36
+#, fuzzy, kde-format
+#| msgid "General"
+msgid "General:"
+msgstr "Djenerå"
+
+#: contents/ui/configGeneral.qml:40
+#, kde-format
+msgid "Show time zone"
+msgstr "Håyner l' &coisse ås eures"

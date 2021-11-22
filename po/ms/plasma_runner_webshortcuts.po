@@ -1,0 +1,39 @@
+# plasma_runner_webshortcuts Bahasa Melayu (Malay) (ms)
+# Copyright (C) 2008, 2009 K Desktop Environment
+# This file is distributed under the same license as the krunner_webshortcutsrunner package.
+#
+# Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>, 2008, 2009, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_webshortcuts\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-10-21 02:34+0200\n"
+"PO-Revision-Date: 2010-05-07 23:21+0800\n"
+"Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>\n"
+"Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
+"Language: ms\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=1;\n"
+
+#: webshortcutrunner.cpp:65
+#, kde-format
+msgid "Opens \"%1\" in a web browser with the query :q:."
+msgstr "Buka \"%1\" dalam pelayar web dengan carian :q:."
+
+#: webshortcutrunner.cpp:95
+#, kde-format
+msgid "Search in private window"
+msgstr ""
+
+#: webshortcutrunner.cpp:95
+#, kde-format
+msgid "Search in incognito window"
+msgstr ""
+
+#: webshortcutrunner.cpp:131 webshortcutrunner.cpp:148
+#, kde-format
+msgid "Search %1 for %2"
+msgstr "Carian %1 untuk %2"

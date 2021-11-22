@@ -1,0 +1,134 @@
+# Thomas Reitelbach <tr@erdfunkstelle.de>, 2008, 2009.
+# Burkhard Lück <lueck@hube-lueck.de>, 2009, 2013, 2014, 2017, 2018, 2019, 2020.
+# Frederik Schwarzer <schwarzer@kde.org>, 2009, 2010, 2011, 2016, 2018.
+# Johannes Obermayr <johannesobermayr@gmx.de>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_desktopthemedetails\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2020-11-26 07:00+0100\n"
+"Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
+"Language-Team: German <kde-i18n-de@kde.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 19.04.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Thomas Reitelbach"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "tr@erdfunkstelle.de"
+
+#. i18n: ectx: label, entry (name), group (Theme)
+#: desktopthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current Plasma Style"
+msgstr "Neue aktuellen Plasma-Stils"
+
+#: kcm.cpp:63
+#, kde-format
+msgid "Plasma Style"
+msgstr "Plasma-Stil"
+
+#: kcm.cpp:64
+#, kde-format
+msgid "David Rosca"
+msgstr "David Rosca"
+
+#: kcm.cpp:122
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "Es kann keine temporäre Datei erstellt werden."
+
+#: kcm.cpp:133
+#, kde-format
+msgid "Unable to download the theme: %1"
+msgstr "Das Design %1 lässt sich nicht herunterladen."
+
+#: kcm.cpp:158
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "Das Design wurde erfolgreich installiert."
+
+#: kcm.cpp:161 kcm.cpp:167
+#, kde-format
+msgid "Theme installation failed."
+msgstr "Die Installation des Designs ist fehlgeschlagen."
+
+#: kcm.cpp:259
+#, kde-format
+msgid "Removing theme failed: %1"
+msgstr "Das Design kann nicht entfernt werden: %1"
+
+#: package/contents/ui/main.qml:36
+#, kde-format
+msgid "This module lets you choose the Plasma style."
+msgstr "Mit diesem Modul können Sie den Plasma-Stil auswählen."
+
+#: package/contents/ui/main.qml:81
+#, kde-format
+msgid "All Themes"
+msgstr "Alle Designs"
+
+#: package/contents/ui/main.qml:82
+#, kde-format
+msgid "Light Themes"
+msgstr "Helle Designs"
+
+#: package/contents/ui/main.qml:83
+#, kde-format
+msgid "Dark Themes"
+msgstr "Dunkle Designs"
+
+#: package/contents/ui/main.qml:84
+#, kde-format
+msgid "Color scheme compatible"
+msgstr "Kompatibel zum Farbschema"
+
+#: package/contents/ui/main.qml:112
+#, kde-format
+msgid "Follows color scheme"
+msgstr "Folgt dem Farbschema"
+
+#: package/contents/ui/main.qml:130
+#, kde-format
+msgid "Edit Theme..."
+msgstr "Design bearbeiten ..."
+
+#: package/contents/ui/main.qml:137
+#, kde-format
+msgid "Remove Theme"
+msgstr "Design entfernen"
+
+#: package/contents/ui/main.qml:144
+#, kde-format
+msgid "Restore Theme"
+msgstr "Design wiederherstellen"
+
+#: package/contents/ui/main.qml:182
+#, kde-format
+msgid "Install from File..."
+msgstr "Aus Datei installieren ..."
+
+#: package/contents/ui/main.qml:189
+#, kde-format
+msgid "Get New Plasma Styles..."
+msgstr "Neue Plasma-Stile holen ..."
+
+#: package/contents/ui/main.qml:201
+#, kde-format
+msgid "Open Theme"
+msgstr "Design öffnen"
+
+#: package/contents/ui/main.qml:203
+#, kde-format
+msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
+msgstr "Designdateien (*.zip *.tar.gz *.tar.bz2)"

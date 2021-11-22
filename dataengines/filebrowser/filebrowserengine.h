@@ -32,7 +32,7 @@ class FileBrowserEngine : public Plasma::DataEngine
     Q_OBJECT
 
 public:
-    FileBrowserEngine( QObject* parent, const QVariantList& args );
+    FileBrowserEngine(QObject *parent, const QVariantList &args);
     ~FileBrowserEngine() override;
 
 protected:
@@ -40,19 +40,28 @@ protected:
     void init();
 
 protected Q_SLOTS:
-    void dirDirty (const QString &path);
+    void dirDirty(const QString &path);
     void dirCreated(const QString &path);
     void dirDeleted(const QString &path);
 
 private:
-    enum EventType {INIT, DIRTY, CREATED, DELETED};
-    enum ObjectType {NOTHING, FILE, DIRECTORY};
+    enum EventType {
+        INIT,
+        DIRTY,
+        CREATED,
+        DELETED,
+    };
+    enum ObjectType {
+        NOTHING,
+        FILE,
+        DIRECTORY,
+    };
 
-    KDirWatch * m_dirWatch;
+    KDirWatch *m_dirWatch;
     void updateData(const QString &path, EventType event);
     void clearData(const QString &path);
 
-    //QMap < QString, QStringList > m_regiteredListeners;
+    // QMap < QString, QStringList > m_regiteredListeners;
 };
 
 #endif

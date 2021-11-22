@@ -1,0 +1,149 @@
+# Tomohiro Hyakutake <tomhioo@outlook.jp>, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_org.kde.plasma.systemtray\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-02-03 03:31+0100\n"
+"PO-Revision-Date: 2019-05-21 17:37+0900\n"
+"Last-Translator: Tomohiro Hyakutake <tomhioo@outlook.jp>\n"
+"Language-Team: Japanese <kde-jp@kde.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Generator: Lokalize 19.04.1\n"
+
+#: package/contents/config/config.qml:26
+#, kde-format
+msgid "General"
+msgstr ""
+
+#: package/contents/config/config.qml:31
+#, kde-format
+msgid "Entries"
+msgstr "エントリ"
+
+#: package/contents/ui/ConfigEntries.qml:40
+#, kde-format
+msgid "Always show all entries"
+msgstr "常にすべてのエントリを表示"
+
+#: package/contents/ui/ConfigEntries.qml:46
+#, kde-format
+msgid "Application Status"
+msgstr "アプリケーションの状態"
+
+#: package/contents/ui/ConfigEntries.qml:48
+#, kde-format
+msgid "Communications"
+msgstr "コミュニケーション"
+
+#: package/contents/ui/ConfigEntries.qml:50
+#, kde-format
+msgid "System Services"
+msgstr "システムサービス"
+
+#: package/contents/ui/ConfigEntries.qml:52
+#, kde-format
+msgid "Hardware Control"
+msgstr "ハードウェアコントロール"
+
+#: package/contents/ui/ConfigEntries.qml:55
+#, kde-format
+msgid "Miscellaneous"
+msgstr "その他"
+
+#: package/contents/ui/ConfigEntries.qml:87
+#, kde-format
+msgctxt "Name of the system tray entry"
+msgid "Entry"
+msgstr "エントリ"
+
+#: package/contents/ui/ConfigEntries.qml:92
+#, kde-format
+msgid "Visibility"
+msgstr "表示"
+
+#: package/contents/ui/ConfigEntries.qml:98
+#, kde-format
+msgid "Keyboard Shortcut"
+msgstr "キーボードショートカット"
+
+#: package/contents/ui/ConfigEntries.qml:232
+#, kde-format
+msgid "Shown when relevant"
+msgstr ""
+
+#: package/contents/ui/ConfigEntries.qml:233
+#, fuzzy, kde-format
+#| msgid "Always show all entries"
+msgid "Always shown"
+msgstr "常にすべてのエントリを表示"
+
+#: package/contents/ui/ConfigEntries.qml:234
+#, kde-format
+msgid "Always hidden"
+msgstr ""
+
+#: package/contents/ui/ConfigEntries.qml:235
+#, kde-format
+msgid "Disabled"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:36
+#, kde-format
+msgctxt "The arrangement of system tray icons in the Panel"
+msgid "Panel icon size:"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:37
+#, kde-format
+msgid "Small"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:43
+#, kde-format
+msgid "Scale with Panel height"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:44
+#, kde-format
+msgid "Scale with Panel width"
+msgstr ""
+
+#: package/contents/ui/ExpandedRepresentation.qml:87
+#, kde-format
+msgid "Status and Notifications"
+msgstr "状態と通知"
+
+#: package/contents/ui/ExpandedRepresentation.qml:153
+#, kde-format
+msgid "More actions"
+msgstr ""
+
+#: package/contents/ui/ExpandedRepresentation.qml:190
+#, kde-format
+msgid "Keep Open"
+msgstr "開けたままにする"
+
+#: package/contents/ui/ExpanderArrow.qml:32
+#, kde-format
+msgid "Close popup"
+msgstr "ポップアップを閉じる"
+
+#: package/contents/ui/ExpanderArrow.qml:32
+#, kde-format
+msgid "Show hidden icons"
+msgstr "非表示のアイコンを表示"
+
+#: systemtraymodel.cpp:137
+#, fuzzy, kde-format
+#| msgid " (Automatic load)"
+msgctxt ""
+"Suffix added to the applet name if the applet is autoloaded via DBus "
+"activation"
+msgid "%1 (Automatic load)"
+msgstr "(自動的に読み込み)"

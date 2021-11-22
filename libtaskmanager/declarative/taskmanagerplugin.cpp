@@ -21,21 +21,18 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 #include "taskmanagerplugin.h"
 
 #include "abstracttasksmodel.h"
-#include "tasksmodel.h"
 #include "activityinfo.h"
+#include "tasksmodel.h"
 #include "virtualdesktopinfo.h"
 
 #ifdef WITH_PIPEWIRE
 #include "pipewiresourceitem.h"
-#include "screencastingrequest.h"
 #include "screencasting.h"
+#include "screencastingrequest.h"
 #endif
-
-#include <QQmlEngine>
 
 namespace TaskManager
 {
-
 void TaskManagerPlugin::registerTypes(const char *uri)
 {
     Q_ASSERT(uri == QLatin1String("org.kde.taskmanager"));

@@ -40,6 +40,14 @@
           <label>Whether the OSD should be suppressed</label>
         </entry>
     </group>
+    <group name="setAutoBrightness">
+        <entry name="autoBrightness" type="Bool">
+          <label>The value of the screen auto brightness</label>
+        </entry>
+        <entry name="silent" type="Bool">
+          <label>Whether the OSD should be suppressed</label>
+        </entry>
+    </group>
     <group name="setKeyboardBrightness">
         <entry name="brightness" type="Int">
             <label>The value of the keyboard brightness</label>

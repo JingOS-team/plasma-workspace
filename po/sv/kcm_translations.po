@@ -1,0 +1,133 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2014, 2015, 2018, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-06 03:03+0100\n"
+"PO-Revision-Date: 2019-12-07 07:27+0100\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
+"Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 2.0\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Stefan Asserhäll"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "stefan.asserhall@bredband.net"
+
+#: package/contents/ui/main.qml:31
+#, kde-format
+msgid "Language"
+msgstr "Språk"
+
+#: package/contents/ui/main.qml:89
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Languages"
+msgstr "Lägg till språk"
+
+#: package/contents/ui/main.qml:115
+#, kde-format
+msgctxt "@action:button"
+msgid "Add"
+msgstr "Lägg till"
+
+#: package/contents/ui/main.qml:143
+#, kde-format
+msgctxt "@info"
+msgid "There are no additional languages available on this system."
+msgstr "Det finns inga ytterligare språk tillgängliga på systemet."
+
+#: package/contents/ui/main.qml:153
+#, kde-format
+msgctxt "@info"
+msgid "Your changes will take effect the next time you log in."
+msgstr "Ändringarna får effekt nästa gång du loggar in."
+
+#: package/contents/ui/main.qml:154
+#, kde-format
+msgctxt "@info"
+msgid "There are currently no preferred languages configured."
+msgstr "För närvarande finns inga föredragna språk inställda."
+
+#: package/contents/ui/main.qml:165
+#, kde-format
+msgctxt "@info %2 is the language code"
+msgid ""
+"The translation files for the language with the code '%2' could not be "
+"found. The language will be removed from your configuration. If you want to "
+"add it back, please install the localization files for it and add the "
+"language again."
+msgid_plural ""
+"The translation files for the languages with the codes '%2' could not be "
+"found. These languages will be removed from your configuration. If you want "
+"to add them back, please install the localization files for it and the "
+"languages again."
+msgstr[0] ""
+"Översättningsfilerna för språket med kod '%2' kunde inte hittas. Språket "
+"kommer att tas bort från inställningarna. Om du vill lägga till det igen, "
+"installera översättningsfilerna för det och lägg till språket igen."
+msgstr[1] ""
+"Översättningsfilerna för språken med koderna '%2' kunde inte hittas. Dessa "
+"språk kommer att tas bort från inställningarna. Om du vill lägga till dem "
+"igen, installera översättningsfilerna för dem och lägg till språken igen."
+
+#: package/contents/ui/main.qml:168
+#, kde-format
+msgctxt "@info separator in list of language codes"
+msgid "', '"
+msgstr "', '"
+
+#: package/contents/ui/main.qml:178
+#, kde-format
+msgid ""
+"The language at the top of this list is the one you want to see and use most "
+"often."
+msgstr "Språket överst i listan är det som du oftast vill se och använda."
+
+#: package/contents/ui/main.qml:217
+#, kde-format
+msgctxt "@item:inlistbox 1 = Language name"
+msgid "%1 (Default)"
+msgstr "%1 (förval)"
+
+#: package/contents/ui/main.qml:230
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Promote to default"
+msgstr "Befordra till förval"
+
+#: package/contents/ui/main.qml:237
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Remove"
+msgstr "Ta bort"
+
+#: package/contents/ui/main.qml:262
+#, kde-format
+msgctxt "@action:button"
+msgid "Add languages..."
+msgstr "Lägg till språk..."
+
+#: translations.cpp:43
+#, kde-format
+msgid "Configure Plasma translations"
+msgstr "Anpassa översättningar av Plasma"
+
+#: translationsmodel.cpp:95 translationsmodel.cpp:106
+#, kde-format
+msgctxt "%1 is language name, %2 is language code name"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"

@@ -24,27 +24,25 @@
  * Boston, MA 02110-1301, USA.
  */
 
+#include "kfontinst_export.h"
 #include <QMap>
 #include <QStringList>
-#include "kfontinst_export.h"
+#include <fontconfig/fontconfig.h>
 
 namespace KFI
 {
-
 class KFONTINST_EXPORT WritingSystems
 {
-    public:
-
-    static WritingSystems * instance();
+public:
+    static WritingSystems *instance();
 
     WritingSystems();
 
-    qulonglong  get(FcPattern *pat) const;
-    qulonglong  get(const QStringList &langs) const;
+    qulonglong get(FcPattern *pat) const;
+    qulonglong get(const QStringList &langs) const;
     QStringList getLangs(qulonglong ws) const;
 
-    private:
-
+private:
     QMap<QString, qulonglong> itsMap;
 };
 

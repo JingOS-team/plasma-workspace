@@ -1,0 +1,137 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Steve Allewell <steve.allewell@gmail.com>, 2014, 2015, 2018, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-06 03:03+0100\n"
+"PO-Revision-Date: 2019-12-29 15:01+0000\n"
+"Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
+"Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 19.07.70\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Steve Allewell"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "steve.allewell@gmail.com"
+
+#: package/contents/ui/main.qml:31
+#, kde-format
+msgid "Language"
+msgstr "Language"
+
+#: package/contents/ui/main.qml:89
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Languages"
+msgstr "Add Languages"
+
+#: package/contents/ui/main.qml:115
+#, kde-format
+msgctxt "@action:button"
+msgid "Add"
+msgstr "Add"
+
+#: package/contents/ui/main.qml:143
+#, kde-format
+msgctxt "@info"
+msgid "There are no additional languages available on this system."
+msgstr "There are no additional languages available on this system."
+
+#: package/contents/ui/main.qml:153
+#, kde-format
+msgctxt "@info"
+msgid "Your changes will take effect the next time you log in."
+msgstr "Your changes will take effect the next time you log in."
+
+#: package/contents/ui/main.qml:154
+#, kde-format
+msgctxt "@info"
+msgid "There are currently no preferred languages configured."
+msgstr "There are currently no preferred languages configured."
+
+#: package/contents/ui/main.qml:165
+#, kde-format
+msgctxt "@info %2 is the language code"
+msgid ""
+"The translation files for the language with the code '%2' could not be "
+"found. The language will be removed from your configuration. If you want to "
+"add it back, please install the localization files for it and add the "
+"language again."
+msgid_plural ""
+"The translation files for the languages with the codes '%2' could not be "
+"found. These languages will be removed from your configuration. If you want "
+"to add them back, please install the localization files for it and the "
+"languages again."
+msgstr[0] ""
+"The translation files for the language with the code '%2' could not be "
+"found. The language will be removed from your configuration. If you want to "
+"add it back, please install the localisation files for it and add the "
+"language again."
+msgstr[1] ""
+"The translation files for the languages with the codes '%2' could not be "
+"found. These languages will be removed from your configuration. If you want "
+"to add them back, please install the localisation files for it and the "
+"languages again."
+
+#: package/contents/ui/main.qml:168
+#, kde-format
+msgctxt "@info separator in list of language codes"
+msgid "', '"
+msgstr "', '"
+
+#: package/contents/ui/main.qml:178
+#, kde-format
+msgid ""
+"The language at the top of this list is the one you want to see and use most "
+"often."
+msgstr ""
+"The language at the top of this list is the one you want to see and use most "
+"often."
+
+#: package/contents/ui/main.qml:217
+#, kde-format
+msgctxt "@item:inlistbox 1 = Language name"
+msgid "%1 (Default)"
+msgstr "%1 (Default)"
+
+#: package/contents/ui/main.qml:230
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Promote to default"
+msgstr "Promote to default"
+
+#: package/contents/ui/main.qml:237
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Remove"
+msgstr "Remove"
+
+#: package/contents/ui/main.qml:262
+#, kde-format
+msgctxt "@action:button"
+msgid "Add languages..."
+msgstr "Add languages..."
+
+#: translations.cpp:43
+#, kde-format
+msgid "Configure Plasma translations"
+msgstr "Configure Plasma translations"
+
+#: translationsmodel.cpp:95 translationsmodel.cpp:106
+#, kde-format
+msgctxt "%1 is language name, %2 is language code name"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"

@@ -23,29 +23,31 @@
 #include <QDir>
 #include <QMimeData>
 
-#include <KRun>
-#include <KLocalizedString>
-#include <KIO/OpenFileManagerWindowJob>
 #include <KIO/Job>
+#include <KIO/OpenFileManagerWindowJob>
+#include <KIO/OpenUrlJob>
+#include <KLocalizedString>
+#include <KNotificationJobUiDelegate>
 #include <KShell>
 
+#include <KActivities/Stats/Query>
 #include <KActivities/Stats/ResultModel>
 #include <KActivities/Stats/Terms>
-#include <KActivities/Stats/Query>
 
 using namespace KActivities::Stats;
 using namespace KActivities::Stats::Terms;
 
 K_EXPORT_PLASMA_RUNNER_WITH_JSON(RecentDocuments, "plasma-runner-recentdocuments.json")
 
-RecentDocuments::RecentDocuments(QObject *parent, const QVariantList &args)
-    : Plasma::AbstractRunner(parent, args)
+RecentDocuments::RecentDocuments(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
+    : Plasma::AbstractRunner(parent, metaData, args)
 {
     setObjectName(QStringLiteral("Recent Documents"));
 
     addSyntax(Plasma::RunnerSyntax(QStringLiteral(":q:"), i18n("Looks for documents recently used with names matching :q:.")));
 
     addAction(QStringLiteral("openParentDir"), QIcon::fromTheme(QStringLiteral("document-open-folder")), i18n("Open Containing Folder"));
+    setMinLetterCount(3);
 }
 
 RecentDocuments::~RecentDocuments()
@@ -58,11 +60,8 @@ void RecentDocuments::match(Plasma::RunnerContext &context)
         return;
     }
 
+    // clang-format off
     const QString term = context.query();
-    if (term.length() < 3) {
-        return;
-    }
-
     auto query = UsedResources
             | Activity::current()
             | Order::RecentlyUsedFirst
@@ -70,6 +69,7 @@ void RecentDocuments::match(Plasma::RunnerContext &context)
             // we search only on file name, as KActivity does not support better options
             | Url("/*/" + term + "*")
             | Limit(20);
+    // clang-format on
 
     const auto result = new ResultModel(query);
 
@@ -96,9 +96,12 @@ void RecentDocuments::match(Plasma::RunnerContext &context)
         match.setIconName(KIO::iconNameForUrl(url));
         match.setRelevance(relevance);
         match.setData(QVariant(url));
+        if (url.isLocalFile()) {
+            match.setActions(actions().values());
+        }
         match.setText(name);
 
-        QString destUrlString = KShell::tildeCollapse(url.adjusted(QUrl::RemoveFilename).path());
+        QString destUrlString = KShell::tildeCollapse(url.adjusted(QUrl::RemoveFilename | QUrl::StripTrailingSlash).path());
         match.setSubtext(destUrlString);
 
         context.addMatch(match);
@@ -116,21 +119,13 @@ void RecentDocuments::run(const Plasma::RunnerContext &context, const Plasma::Qu
         return;
     }
 
-    auto run = new KRun(url, nullptr);
-    run->setRunExecutables(false);
+    auto *job = new KIO::OpenUrlJob(url);
+    job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoErrorHandlingEnabled));
+    job->setRunExecutables(false);
+    job->start();
 }
 
-QList<QAction *> RecentDocuments::actionsForMatch(const Plasma::QueryMatch &match)
-{
-    const QUrl url = match.data().toUrl();
-    if (url.isLocalFile()) {
-        return actions().values();
-    }
-
-    return {};
-}
-
-QMimeData * RecentDocuments::mimeDataForMatch(const Plasma::QueryMatch& match)
+QMimeData *RecentDocuments::mimeDataForMatch(const Plasma::QueryMatch &match)
 {
     QMimeData *result = new QMimeData();
     result->setUrls({match.data().toUrl()});

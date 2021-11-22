@@ -1,0 +1,63 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Freek de Kruijf <freekdekruijf@kde.nl>, 2014, 2015, 2016, 2017, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2019-06-07 12:32+0200\n"
+"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
+"Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 19.04.1\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Freek de Kruijf - t/m 2019"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "freekdekruijf@kde.nl"
+
+#: main.cpp:65
+#, kde-format
+msgid "krunner"
+msgstr "krunner"
+
+#: main.cpp:65
+#, kde-format
+msgid "Run Command interface"
+msgstr "Commando-interface uitvoeren"
+
+#: main.cpp:70
+#, kde-format
+msgid "Use the clipboard contents as query for KRunner"
+msgstr "De inhoud van het klembord gebruiken als zoektekst voor KRunner"
+
+#: main.cpp:71
+#, kde-format
+msgid "Start KRunner in the background, don't show it."
+msgstr "KRunner in de achtergrond starten, het niet tonen."
+
+#: main.cpp:72
+#, kde-format
+msgid "Replace an existing instance"
+msgstr "Een bestaand exemplaar vervangen"
+
+#: main.cpp:77
+#, kde-format
+msgid "The query to run, only used if -c is not provided"
+msgstr "De uit te voeren zoektekst, alleen gebruikt als -c niet is geleverd"
+
+#: view.cpp:62
+#, kde-format
+msgid "KRunner"
+msgstr "KRunner"

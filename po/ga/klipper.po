@@ -1,0 +1,770 @@
+# translation of klipper.po to Irish
+# Copyright (C) 2002 Free Software Foundation, Inc.
+# Séamus Ó Ciardhuáin <seoc@cnds.ucd.ie>, 2002
+# Kevin Scannell <kscanne@gmail.com>, 2009
+msgid ""
+msgstr ""
+"Project-Id-Version: klipper\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2004-12-03 14:52-0500\n"
+"Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
+"Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
+"Language: ga\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.0beta1\n"
+"Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
+"3 : 4\n"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ReplayActionInHistory)
+#: actionsconfig.ui:17
+#, kde-format
+msgid "Replay actions on an item selected from history"
+msgstr "Athdhéan gníomhartha ar mhír a roghnaíonn tú as an stair"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_StripWhiteSpace)
+#: actionsconfig.ui:24
+#, kde-format
+msgid "Remove whitespace when executing actions"
+msgstr "Bain spás bán agus gníomhartha á rith"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnableMagicMimeActions)
+#. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
+#: actionsconfig.ui:31 klipper.kcfg:84
+#, kde-format
+msgid "Enable MIME-based actions"
+msgstr "Cumasaigh gníomhartha bunaithe ar chineál MIME"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: actionsconfig.ui:38
+#, kde-format
+msgid "Action list:"
+msgstr "Liosta gníomhartha:"
+
+#. i18n: ectx: property (text), widget (ActionsTreeWidget, kcfg_ActionList)
+#: actionsconfig.ui:49
+#, kde-format
+msgid "Regular Expression"
+msgstr "Slonn Ionadaíochta"
+
+#. i18n: ectx: property (text), widget (ActionsTreeWidget, kcfg_ActionList)
+#: actionsconfig.ui:54 editactiondialog.cpp:225
+#, kde-format
+msgid "Description"
+msgstr "Cur Síos"
+
+#. i18n: ectx: property (text), widget (QPushButton, pbAddAction)
+#: actionsconfig.ui:64
+#, kde-format
+msgid "Add Action..."
+msgstr "Cuir Gníomh Leis..."
+
+#. i18n: ectx: property (text), widget (QPushButton, pbEditAction)
+#: actionsconfig.ui:71
+#, kde-format
+msgid "Edit Action..."
+msgstr "Cuir Gníomh in Eagar..."
+
+#. i18n: ectx: property (text), widget (QPushButton, pbDelAction)
+#: actionsconfig.ui:78
+#, kde-format
+msgid "Delete Action"
+msgstr "Scrios Gníomh"
+
+#. i18n: ectx: property (text), widget (QPushButton, pbAdvanced)
+#: actionsconfig.ui:85
+#, kde-format
+msgid "Advanced..."
+msgstr "Casta..."
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: actionsconfig.ui:94
+#, fuzzy, no-c-format, kde-format
+#| msgid ""
+#| "Click on a highlighted item's column to change it. \"%s\" in a command "
+#| "will be replaced with the clipboard contents.<br>For more information "
+#| "about regular expressions, you could have a look at the <a href=\"http://"
+#| "en.wikipedia.org/wiki/Regular_expression\">Wikipedia entry about this "
+#| "topic</a>."
+msgid ""
+"Click on a highlighted item's column to change it. \"%s\" in a command will "
+"be replaced with the clipboard contents.<br>For more information about "
+"regular expressions, you could have a look at the <a href=\"https://en."
+"wikipedia.org/wiki/Regular_expression\">Wikipedia entry about this topic</a>."
+msgstr ""
+"Cliceáil ar cholún de mhír aibhsithe chun é a athrú. Cuirfear inneachar na "
+"gearrthaisce in ionad \"%s\" in ordú.<br>Is féidir tuilleadh eolais faoi "
+"shloinn ionadaíochta a fháil ón <a href=\"http://en.wikipedia.org/wiki/"
+"Regular_expression\">Vicipéid (Bhéarla)</a>."
+
+#: configdialog.cpp:37
+#, kde-format
+msgid " second"
+msgid_plural " seconds"
+msgstr[0] " soicind"
+msgstr[1] " shoicind"
+msgstr[2] " shoicind"
+msgstr[3] " soicind"
+msgstr[4] " soicind"
+
+#: configdialog.cpp:38
+#, kde-format
+msgid " entry"
+msgid_plural " entries"
+msgstr[0] " iontráil"
+msgstr[1] " iontráil"
+msgstr[2] " iontráil"
+msgstr[3] " n-iontráil"
+msgstr[4] " iontráil"
+
+#: configdialog.cpp:248
+#, kde-format
+msgid "Advanced Settings"
+msgstr "Ardsocruithe"
+
+#: configdialog.cpp:272
+#, kde-format
+msgctxt "General Config"
+msgid "General"
+msgstr "Ginearálta"
+
+#: configdialog.cpp:272
+#, kde-format
+msgid "General Configuration"
+msgstr "Cumraíocht Ghinearálta"
+
+#: configdialog.cpp:273
+#, kde-format
+msgctxt "Actions Config"
+msgid "Actions"
+msgstr "Gníomhartha"
+
+#: configdialog.cpp:273
+#, kde-format
+msgid "Actions Configuration"
+msgstr "Cumraíocht Gníomhartha"
+
+#: configdialog.cpp:277
+#, kde-format
+msgctxt "Shortcuts Config"
+msgid "Shortcuts"
+msgstr "Aicearraí"
+
+#: configdialog.cpp:277
+#, kde-format
+msgid "Shortcuts Configuration"
+msgstr "Cumraíocht Aicearraí"
+
+#: configdialog.cpp:335
+#, kde-format
+msgid "D&isable Actions for Windows of Type WM_CLASS"
+msgstr "Díchumasa&igh Gníomhartha le haghaidh Fuinneoga de chineál WM_CLASS"
+
+#: configdialog.cpp:344
+#, kde-format
+msgid ""
+"<qt>This lets you specify windows in which Klipper should not invoke "
+"\"actions\". Use<br /><br /><center><b>xprop | grep WM_CLASS</b></"
+"center><br />in a terminal to find out the WM_CLASS of a window. Next, click "
+"on the window you want to examine. The first string it outputs after the "
+"equal sign is the one you need to enter here.</qt>"
+msgstr ""
+"<qt>Leis seo is féidir leat fuinneoga a shonrú i Klipper nach cóir dóibh "
+"\"gníomhartha\" a chur ar siúl. Úsáid<br /><br /><center><b>xprop | grep "
+"WM_CLASS</b></center><br />i dteirminéal chun WM_CLASS d'fhuinneog a fháil. "
+"Ansin, cliceáil an fhuinneog is mian leat a scrúdú. Is é an chéad teaghrán "
+"aschurtha tar éis an chomhartha cothromais an ceann le cur isteach anseo.</"
+"qt>"
+
+#: editactiondialog.cpp:41
+#, kde-format
+msgid "Ignore"
+msgstr "Déan neamhaird de"
+
+#: editactiondialog.cpp:43
+#, kde-format
+msgid "Replace Clipboard"
+msgstr "Ionadaigh an Ghearrthaisce"
+
+#: editactiondialog.cpp:45
+#, kde-format
+msgid "Add to Clipboard"
+msgstr "Cuir leis an nGearrthaisce"
+
+#: editactiondialog.cpp:221
+#, kde-format
+msgid "Command"
+msgstr "Ordú"
+
+#: editactiondialog.cpp:223
+#, kde-format
+msgid "Output Handling"
+msgstr "Láimhseáil Aschuir"
+
+#: editactiondialog.cpp:265
+#, kde-format
+msgid "Action Properties"
+msgstr "Airíonna an Ghnímh"
+
+#: editactiondialog.cpp:370
+#, kde-format
+msgid "new command"
+msgstr "ordú nua"
+
+#: editactiondialog.cpp:370
+#, kde-format
+msgid "Command Description"
+msgstr "Cur Síos ar an Ordú"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: editactiondialog.ui:20
+#, kde-format
+msgid "Action properties:"
+msgstr "Airíonna an ghnímh:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: editactiondialog.ui:42
+#, kde-format
+msgid "Regular expression:"
+msgstr "Slonn ionadaíochta:"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: editactiondialog.ui:52
+#, kde-format
+msgid "Description:"
+msgstr "Cur Síos:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: editactiondialog.ui:62
+#, kde-format
+msgid "Automatic:"
+msgstr "Uathoibríoch:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: editactiondialog.ui:87
+#, kde-format
+msgid "List of commands for this action:"
+msgstr "Liosta orduithe le haghaidh an ghnímh seo:"
+
+#. i18n: ectx: property (text), widget (QPushButton, pbAddCommand)
+#: editactiondialog.ui:144
+#, kde-format
+msgid "Add Command"
+msgstr "Ordú Nua"
+
+#. i18n: ectx: property (text), widget (QPushButton, pbRemoveCommand)
+#: editactiondialog.ui:151
+#, kde-format
+msgid "Remove Command"
+msgstr "Bain Ordú"
+
+#. i18n: ectx: property (toolTip), widget (QTableView, twCommandList)
+#: editactiondialog.ui:176
+#, kde-format
+msgid "Double-click an item to edit"
+msgstr "Déchliceáil ar mhír chun í a chur in eagar"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_KeepClipboardContents)
+#: generalconfig.ui:17
+#, kde-format
+msgid "Save clipboard contents on exit"
+msgstr "Sábháil inneachar na gearrthaisce ag am scortha"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_PreventEmptyClipboard)
+#. i18n: ectx: label, entry (PreventEmptyClipboard), group (General)
+#: generalconfig.ui:24 klipper.kcfg:16
+#, kde-format
+msgid "Prevent empty clipboard"
+msgstr "Coisc gearrthaisce fholamh"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_IgnoreImages)
+#. i18n: ectx: label, entry (IgnoreImages), group (General)
+#: generalconfig.ui:31 klipper.kcfg:21
+#, kde-format
+msgid "Ignore images"
+msgstr "Déan neamhaird d'íomhánna"
+
+#. i18n: ectx: property (title), widget (QGroupBox, selection_group)
+#: generalconfig.ui:38
+#, kde-format
+msgid "Selection and Clipboard"
+msgstr "Roghnú agus Gearrthaisce"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_IgnoreSelection)
+#: generalconfig.ui:44
+#, kde-format
+msgid "Ignore selection"
+msgstr "Déan neamhaird den roghnúchán"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_SelectionTextOnly)
+#: generalconfig.ui:51
+#, kde-format
+msgid "Text selection only"
+msgstr "Téacs roghnaithe amháin"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_SyncClipboards)
+#: generalconfig.ui:58
+#, kde-format
+msgid "Synchronize contents of the clipboard and the selection"
+msgstr "Sioncrónaigh inneachar na gearrthaisce leis an roghnúchán"
+
+#. i18n: ectx: property (text), widget (QLabel, timeout_label)
+#: generalconfig.ui:68
+#, kde-format
+msgid "Timeout for action popups:"
+msgstr "Teorainn ama do phreabfhuinneoga gnímh:"
+
+#. i18n: ectx: property (text), widget (QLabel, history_size_label)
+#: generalconfig.ui:82
+#, kde-format
+msgid "Clipboard history size:"
+msgstr "Méid stair na gearrthaisce:"
+
+#: historyimageitem.cpp:51
+#, kde-format
+msgid "%1x%2 %3bpp"
+msgstr ""
+
+#: klipper.cpp:129
+#, kde-format
+msgid "Enable Clipboard Actions"
+msgstr "Cumasaigh Gníomhartha Gearrthaisce"
+
+#: klipper.cpp:152
+#, kde-format
+msgid "C&lear Clipboard History"
+msgstr "G&lan Stair na Gearrthaisce"
+
+#: klipper.cpp:159
+#, kde-format
+msgid "&Configure Klipper..."
+msgstr "&Cumraigh Klipper..."
+
+#: klipper.cpp:164
+#, kde-format
+msgctxt "@item:inmenu Quit Klipper"
+msgid "&Quit"
+msgstr "&Scoir"
+
+#: klipper.cpp:168
+#, kde-format
+msgid "Manually Invoke Action on Current Clipboard"
+msgstr "Cuir an gníomh i bhfeidhm ar an ngearrthaisce reatha de láimh"
+
+#: klipper.cpp:175
+#, kde-format
+msgid "&Edit Contents..."
+msgstr "Cuir an tÁbhar in &Eagar..."
+
+#: klipper.cpp:183
+#, kde-format
+msgid "&Show Barcode..."
+msgstr "Tai&speáin Barrachód..."
+
+#: klipper.cpp:191
+#, kde-format
+msgid "Next History Item"
+msgstr "An chéad mhír eile sa stair"
+
+#: klipper.cpp:195
+#, kde-format
+msgid "Previous History Item"
+msgstr "An mhír roimhe seo sa stair"
+
+#: klipper.cpp:201
+#, kde-format
+msgid "Open Klipper at Mouse Position"
+msgstr "Oscail Klipper ag ionad an chúrsóra luiche"
+
+#: klipper.cpp:483
+#, kde-format
+msgid ""
+"You can enable URL actions later by left-clicking on the Klipper icon and "
+"selecting 'Enable Clipboard Actions'"
+msgstr ""
+"Is féidir leat gníomhartha URL a chumasú níos déanaí trí chliceáil ar chlé "
+"ar an deilbhín Klipper agus 'Cumasaigh Gníomhartha Gearrthaisce' a roghnú"
+
+#: klipper.cpp:517
+#, kde-format
+msgid "Should Klipper start automatically when you login?"
+msgstr ""
+"An bhfuil fonn ort Klipper a thosú go huathoibríoch ag am logála isteach?"
+
+#: klipper.cpp:518
+#, kde-format
+msgid "Automatically Start Klipper?"
+msgstr "Tosaigh Klipper go hUathoibríoch?"
+
+#: klipper.cpp:519
+#, kde-format
+msgid "Start"
+msgstr "Tosaigh"
+
+#: klipper.cpp:520
+#, kde-format
+msgid "Do Not Start"
+msgstr "Ná Tosaigh"
+
+#: klipper.cpp:867
+#, kde-format
+msgid "Edit Contents"
+msgstr "Cuir an tÁbhar in Eagar"
+
+#: klipper.cpp:934
+#, kde-format
+msgid "Mobile Barcode"
+msgstr "Barrachód Soghluaiste"
+
+#: klipper.cpp:981
+#, kde-format
+msgid "Really delete entire clipboard history?"
+msgstr ""
+"An bhfuil tú cinnte gur mhaith leat stair iomlán na gearrthaisce a scriosadh?"
+
+#: klipper.cpp:982
+#, kde-format
+msgid "Delete clipboard history?"
+msgstr "Scrios stair na gearrthaisce?"
+
+#: klipper.cpp:998 klipper.cpp:1007
+#, kde-format
+msgid "Clipboard history"
+msgstr "Stair na gearrthaisce"
+
+#: klipper.cpp:1024
+#, kde-format
+msgid "up"
+msgstr "suas"
+
+#: klipper.cpp:1031
+#, kde-format
+msgid "current"
+msgstr "reatha"
+
+#: klipper.cpp:1038
+#, kde-format
+msgid "down"
+msgstr "síos"
+
+#. i18n: ectx: label, entry (Version), group (General)
+#: klipper.kcfg:9
+#, kde-format
+msgid "Klipper version"
+msgstr "Leagan Klipper"
+
+#. i18n: ectx: label, entry (KeepClipboardContents), group (General)
+#: klipper.kcfg:12
+#, kde-format
+msgid "Keep clipboard contents"
+msgstr "Coinnigh inneachar na gearrthaisce"
+
+#. i18n: ectx: whatsthis, entry (PreventEmptyClipboard), group (General)
+#: klipper.kcfg:18
+#, kde-format
+msgid ""
+"Selecting this option has the effect, that the clipboard can never be "
+"emptied. E.g. when an application exits, the clipboard would usually be "
+"emptied."
+msgstr ""
+"Leis an rogha seo, ní fholmhófar an ghearrthaisce riamh.  Mar shampla, nuair "
+"a scoireann feidhmchlár, folmhaítear an ghearrthaisce."
+
+#. i18n: ectx: label, entry (IgnoreSelection), group (General)
+#: klipper.kcfg:25
+#, kde-format
+msgid "Ignore Selection"
+msgstr "Déan neamhaird den roghnúchán"
+
+#. i18n: ectx: whatsthis, entry (IgnoreSelection), group (General)
+#: klipper.kcfg:27
+#, fuzzy, kde-format
+#| msgid ""
+#| "<qt>When an area of the screen is selected with mouse or keyboard, this "
+#| "is called \"the selection\".<br/>If this option is set, the selection is "
+#| "not entered into the clipboard history, though it is still available for "
+#| "pasting using the middle mouse button.</qt>"
+msgid ""
+"When an area of the screen is selected with mouse or keyboard, this is "
+"called \"the selection\".<br/>If this option is set, the selection is not "
+"entered into the clipboard history, though it is still available for pasting "
+"using the middle mouse button."
+msgstr ""
+"<qt>Nuair a roghnaítear cuid den scáileán leis an luch nó leis an méarchlár, "
+"tugtar \"an roghnúchán\" air seo.<br/>Leis an rogha seo, ní chuirfear an "
+"roghnúchán i stair na gearrthaisce, cé go mbeidh tú in ann é a ghreamú fós "
+"le lárchnaipe na luiche.</qt>"
+
+#. i18n: ectx: label, entry (SyncClipboards), group (General)
+#: klipper.kcfg:34
+#, kde-format
+msgid "Synchronize clipboard and selection"
+msgstr "Sioncrónaigh an ghearrthaisce leis an roghnúchán"
+
+#. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
+#: klipper.kcfg:36
+#, fuzzy, kde-format
+#| msgid ""
+#| "<qt>When an area of the screen is selected with mouse or keyboard, this "
+#| "is called \"the selection\".<br/>If this option is selected, the "
+#| "selection and the clipboard is kept the same, so that anything in the "
+#| "selection is immediately available for pasting elsewhere using any "
+#| "method, including the traditional middle mouse button. Otherwise, the "
+#| "selection is recorded in the clipboard history, but the selection can "
+#| "only be pasted using the middle mouse button. Also see the 'Ignore "
+#| "Selection' option.</qt>"
+msgid ""
+"When an area of the screen is selected with mouse or keyboard, this is "
+"called \"the selection\".<br/>If this option is selected, the selection and "
+"the clipboard is kept the same, so that anything in the selection is "
+"immediately available for pasting elsewhere using any method, including the "
+"traditional middle mouse button. Otherwise, the selection is recorded in the "
+"clipboard history, but the selection can only be pasted using the middle "
+"mouse button. Also see the 'Ignore Selection' option."
+msgstr ""
+"<qt>Nuair a roghnaítear cuid den scáileán leis an luch nó leis an méarchlár, "
+"tugtar \"an roghnúchán\" air seo.<br/>Leis an rogha seo, stórálfar an "
+"roghnúchán sa ghearrthaisce i gcónaí, sa chaoi go mbeidh tú in ann an "
+"roghnúchán a ghreamú trí mhodh ar bith, lárchnaipe na luiche san áireamh. "
+"Gan an rogha seo, taifeadtar an roghnúchán i stair na gearrthaisce, ach is "
+"féidir an roghnúchána ghreamú le lárchnaipe na luiche amháin. Féach ar an "
+"rogha 'Déan neamhaird den roghnúchán' freisin.</qt>"
+
+#. i18n: ectx: label, entry (SelectionTextOnly), group (General)
+#: klipper.kcfg:39
+#, kde-format
+msgid "Selection text only"
+msgstr "Téacs roghnaithe amháin"
+
+#. i18n: ectx: whatsthis, entry (SelectionTextOnly), group (General)
+#: klipper.kcfg:41
+#, fuzzy, kde-format
+#| msgid ""
+#| "<qt>When an area of the screen is selected with mouse or keyboard, this "
+#| "is called \"the selection\".<br/>If this option is selected, only text "
+#| "selections are stored in the history, while images and other selections "
+#| "are not.</qt>"
+msgid ""
+"When an area of the screen is selected with mouse or keyboard, this is "
+"called \"the selection\".<br/>If this option is selected, only text "
+"selections are stored in the history, while images and other selections are "
+"not."
+msgstr ""
+"<qt>Nuair a roghnaítear cuid den scáileán leis an luch nó leis an méarchlár, "
+"tugtar \"an roghnúchán\" air seo.<br/>Leis an rogha seo, stóráiltear "
+"roghnúcháin téacs amháin sa stair, agus ní stóráiltear íomhánna ná "
+"roghnúcháin eile.</qt>"
+
+#. i18n: ectx: label, entry (UseGUIRegExpEditor), group (General)
+#: klipper.kcfg:44
+#, kde-format
+msgid "Use graphical regexp editor"
+msgstr "Úsáid eagarthóir grafach chun sloinn ionadaíochta a chur in eagar"
+
+#. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
+#: klipper.kcfg:48
+#, kde-format
+msgid "URL grabber enabled"
+msgstr "Gabhálaí URL cumasaithe"
+
+#. i18n: ectx: label, entry (NoActionsForWM_CLASS), group (General)
+#: klipper.kcfg:53
+#, kde-format
+msgid "No actions for WM_CLASS"
+msgstr "Níl aon ghníomhartha ann le haghaidh WM_CLASS"
+
+#. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
+#: klipper.kcfg:56
+#, kde-format
+msgid "Timeout for action popups (seconds)"
+msgstr "Teorainn ama do phreabfhuinneoga gnímh (soicindí)"
+
+#. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
+#: klipper.kcfg:60
+#, kde-format
+msgid "A value of 0 disables the timeout"
+msgstr "Díchumasaigh an teorainn ama le luach 0"
+
+#. i18n: ectx: label, entry (MaxClipItems), group (General)
+#: klipper.kcfg:63
+#, kde-format
+msgid "Clipboard history size"
+msgstr "Méid stair na gearrthaisce"
+
+#. i18n: ectx: label, entry (ActionList), group (General)
+#: klipper.kcfg:69
+#, kde-format
+msgid "Dummy entry for indicating changes in an action's tree widget"
+msgstr "Iontráil dhumaí a léiríonn athruithe i gcrannghiuirléid gníomhartha"
+
+#. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
+#: klipper.kcfg:75
+#, kde-format
+msgid "Strip whitespace when executing an action"
+msgstr "Bain spás bán agus gníomhartha á rith"
+
+#. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
+#: klipper.kcfg:77
+#, kde-format
+msgid ""
+"Sometimes, the selected text has some whitespace at the end, which, if "
+"loaded as URL in a browser would cause an error. Enabling this option "
+"removes any whitespace at the beginning or end of the selected string (the "
+"original clipboard contents will not be modified)."
+msgstr ""
+"Uaireanta tá beagán spás bán ag deireadh an téacs roghnaithe, agus dá "
+"luchtófaí é mar URL i mbrabhsálaí, ba chúis le hearráid é.  Leis an rogha "
+"seo, bainfear aon spás bán ag tús nó deireadh an teaghráin roghnaithe (ach "
+"ní athrófar inneachar na gearrthaisce féin)."
+
+#. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
+#: klipper.kcfg:80
+#, kde-format
+msgid "Replay action in history"
+msgstr "Athdhéan gníomh as an stair"
+
+#: klipperpopup.cpp:72
+#, kde-format
+msgid "<empty clipboard>"
+msgstr "<gearrthaisce folamh>"
+
+#: klipperpopup.cpp:73
+#, kde-format
+msgid "<no matches>"
+msgstr "<níl aon rud comhoiriúnach>"
+
+#: klipperpopup.cpp:121
+#, kde-format
+msgid "Klipper - Clipboard Tool"
+msgstr "Klipper - Uirlis Ghearrthaisce"
+
+#: klipperpopup.cpp:125
+#, kde-format
+msgid "Search..."
+msgstr ""
+
+#: klipperpopup.cpp:134 main.cpp:43
+#, kde-format
+msgid "KDE cut & paste history utility"
+msgstr "Uirlis staire gearrtha agus greamaithe KDE"
+
+#: main.cpp:41 tray.cpp:35
+#, kde-format
+msgid "Klipper"
+msgstr "Klipper"
+
+#: main.cpp:45
+#, kde-format
+msgid ""
+"(c) 1998, Andrew Stanley-Jones\n"
+"1998-2002, Carsten Pfeiffer\n"
+"2001, Patrick Dubroy"
+msgstr ""
+"© 1998, Andrew Stanley-Jones\n"
+"© 1998-2002, Carsten Pfeiffer\n"
+"© 2001, Patrick Dubroy"
+
+#: main.cpp:48
+#, kde-format
+msgid "Carsten Pfeiffer"
+msgstr "Carsten Pfeiffer"
+
+#: main.cpp:48
+#, kde-format
+msgid "Author"
+msgstr "Údar"
+
+#: main.cpp:50
+#, kde-format
+msgid "Andrew Stanley-Jones"
+msgstr "Andrew Stanley-Jones"
+
+#: main.cpp:50
+#, kde-format
+msgid "Original Author"
+msgstr "An Chéad Údar"
+
+#: main.cpp:52
+#, kde-format
+msgid "Patrick Dubroy"
+msgstr "Patrick Dubroy"
+
+#: main.cpp:52
+#, kde-format
+msgid "Contributor"
+msgstr "Cuiditheoir"
+
+#: main.cpp:54
+#, kde-format
+msgid "Luboš Luňák"
+msgstr "Luboš Luňák"
+
+#: main.cpp:54
+#, kde-format
+msgid "Bugfixes and optimizations"
+msgstr "Ceartúcháin agus Optamúcháin"
+
+#: main.cpp:56
+#, kde-format
+msgid "Esben Mose Hansen"
+msgstr "Esben Mose Hansen"
+
+#: main.cpp:56
+#, fuzzy, kde-format
+#| msgid "Maintainer"
+msgid "Previous Maintainer"
+msgstr "Cothaitheoir"
+
+#: main.cpp:58
+#, kde-format
+msgid "Martin Gräßlin"
+msgstr ""
+
+#: main.cpp:58
+#, kde-format
+msgid "Maintainer"
+msgstr "Cothaitheoir"
+
+#: main.cpp:60
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Séamus Ó Ciardhuáin,Kevin Scannell"
+
+#: main.cpp:60
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "seoc@iolfree.ie,kscanne@gmail.com"
+
+#: popupproxy.cpp:157
+#, kde-format
+msgid "&More"
+msgstr "&Tuilleadh"
+
+#: tray.cpp:38
+#, kde-format
+msgid "Clipboard Contents"
+msgstr "Inneachar na Gearrthaisce"
+
+#: tray.cpp:38 tray.cpp:54
+#, kde-format
+msgid "Clipboard is empty"
+msgstr "Tá an ghearrthaisce folamh"
+
+#: urlgrabber.cpp:185
+#, kde-format
+msgid "%1 - Actions For: %2"
+msgstr "%1 - Gníomhartha le haghaidh: %2"
+
+#: urlgrabber.cpp:212
+#, kde-format
+msgid "Disable This Popup"
+msgstr "Díchumasaigh an phreabfhuinneog seo"
+
+#: urlgrabber.cpp:218
+#, kde-format
+msgid "&Cancel"
+msgstr "&Cealaigh"

@@ -13,20 +13,18 @@ set_target_properties(kfontprint_bin PROPERTIES OUTPUT_NAME kfontprint)
 set_target_properties(kfontview_bin PROPERTIES OUTPUT_NAME kfontview)
 
 target_link_libraries(kfontinst_bin
-    Qt5::X11Extras
+    Qt::X11Extras
     KF5::Archive
     KF5::IconThemes
     KF5::KIOCore
     KF5::KIOWidgets
     KF5::XmlGui
-    ${X11_X11_LIB}
+    X11::X11
     kfontinst
 )
 target_link_libraries(kfontprint_bin
-    Qt5::PrintSupport
+    Qt::PrintSupport
     KF5::IconThemes
-    ${X11_X11_LIB}
-    ${FREETYPE_LIBRARIES}
     kfontinstui
     kfontinst
 )

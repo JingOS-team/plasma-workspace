@@ -1,0 +1,371 @@
+# translation of kcmfonts.po to Kannada
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Manu B <iammanu@gmail.com>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmfonts\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2007-09-14 12:03+0530\n"
+"Last-Translator: Manu B <iammanu@gmail.com>\n"
+"Language-Team: Kannada\n"
+"Language: kn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+
+#: fonts.cpp:66
+#, kde-format
+msgid "Fonts"
+msgstr ""
+
+#: fonts.cpp:67
+#, kde-format
+msgid "Antonis Tsiapaliokas"
+msgstr ""
+
+#. i18n: ectx: label, entry (forceFontDPI), group (General)
+#: fontsaasettingsbase.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Force fonts DPI:"
+msgid "Force font DPI on X11"
+msgstr "ಪ್ರಬಲ ಅಕ್ಷರಶೈಲಿಗಳಲ್ಲಿ ಚುಕ್ಕಿಗಳು ಪ್ರತಿ ಅಂಗುಲಕ್ಕೆ:"
+
+#. i18n: ectx: label, entry (font), group (General)
+#: fontssettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "General"
+msgid "General font"
+msgstr "ಸಾಮಾನ್ಯ"
+
+#. i18n: ectx: label, entry (fixed), group (General)
+#: fontssettings.kcfg:21
+#, fuzzy, kde-format
+#| msgid "Fixed width"
+msgid "Fixed width font"
+msgstr "ನಿಗದಿತ ಅಗಲ"
+
+#. i18n: ectx: label, entry (smallestReadableFont), group (General)
+#: fontssettings.kcfg:33
+#, kde-format
+msgid "Small font"
+msgstr ""
+
+#. i18n: ectx: label, entry (toolBarFont), group (General)
+#: fontssettings.kcfg:45
+#, fuzzy, kde-format
+#| msgid "Toolbar"
+msgid "Tool bar font"
+msgstr "ಸಲಕರಣೆಪಟ್ಟಿ"
+
+#. i18n: ectx: label, entry (menuFont), group (General)
+#: fontssettings.kcfg:57
+#, kde-format
+msgid "Menu font"
+msgstr ""
+
+#. i18n: ectx: label, entry (activeFont), group (WM)
+#: fontssettings.kcfg:71
+#, fuzzy, kde-format
+#| msgid "Window title"
+msgid "Window title font"
+msgstr "ಕಿಟಕಿಯ ಶೀರ್ಷಿಕೆ"
+
+#: kxftconfig.cpp:467
+#, fuzzy, kde-format
+msgctxt "use system subpixel setting"
+msgid "Vendor default"
+msgstr "ವ್ಯವಸ್ಥೆಯ ಸಂಯೋಜನೆಗಳು"
+
+#: kxftconfig.cpp:469
+#, fuzzy, kde-format
+#| msgid "None"
+msgctxt "no subpixel rendering"
+msgid "None"
+msgstr "ಯಾವುದೂ ಇಲ್ಲ"
+
+#: kxftconfig.cpp:471
+#, kde-format
+msgid "RGB"
+msgstr "ಕೆ.ಹ.ನೀ(RGB)"
+
+#: kxftconfig.cpp:473
+#, kde-format
+msgid "BGR"
+msgstr "ನೀ.ಹ.ಕೆ(BGR)"
+
+#: kxftconfig.cpp:475
+#, kde-format
+msgid "Vertical RGB"
+msgstr "ಲಂಬ ಕೆ.ಹ.ನೀ(RGB)"
+
+#: kxftconfig.cpp:477
+#, kde-format
+msgid "Vertical BGR"
+msgstr "ಲಂಬ ನೀ.ಹ.ಕೆ(BGR)"
+
+#: kxftconfig.cpp:505
+#, fuzzy, kde-format
+msgctxt "use system hinting settings"
+msgid "Vendor default"
+msgstr "ವ್ಯವಸ್ಥೆಯ ಸಂಯೋಜನೆಗಳು"
+
+#: kxftconfig.cpp:507
+#, fuzzy, kde-format
+#| msgid "Medium"
+msgctxt "medium hinting"
+msgid "Medium"
+msgstr "ಮಧ್ಯಮ"
+
+#: kxftconfig.cpp:509
+#, fuzzy, kde-format
+#| msgid "None"
+msgctxt "no hinting"
+msgid "None"
+msgstr "ಯಾವುದೂ ಇಲ್ಲ"
+
+#: kxftconfig.cpp:511
+#, fuzzy, kde-format
+#| msgid "Slight"
+msgctxt "slight hinting"
+msgid "Slight"
+msgstr "ಕೊಂಚ"
+
+#: kxftconfig.cpp:513
+#, fuzzy, kde-format
+#| msgid "Full"
+msgctxt "full hinting"
+msgid "Full"
+msgstr "ಪೂರ್ಣ"
+
+#: package/contents/ui/ContextualHelpButton.qml:58
+#, kde-format
+msgctxt "@action:button"
+msgid "Show Contextual Help"
+msgstr ""
+
+#: package/contents/ui/main.qml:33
+#, kde-format
+msgid "This module lets you configure the system fonts."
+msgstr ""
+
+#: package/contents/ui/main.qml:38
+#, kde-format
+msgid "Change Display Scaling..."
+msgstr ""
+
+#: package/contents/ui/main.qml:49
+#, fuzzy, kde-format
+#| msgid ""
+#| "<p>Some changes such as DPI will only affect newly started applications.</"
+#| "p>"
+msgid ""
+"Some changes such as anti-aliasing or DPI will only affect newly started "
+"applications."
+msgstr ""
+"<p>ಚುಕ್ಕಿಗಳು ಪ್ರತಿ ಅಂಗುಲಕ್ಕೆ ರೀತಿಯ ಬದಲಾವಣೆಗಳು ಕೇವಲ ಹೊಸದಾಗಿ ಪ್ರಾರಂಭವಾದ ಅನ್ವಯಗಳಲ್ಲಿ "
+"ಪರಿಣಾಮ ಬೀರುತ್ತವೆ.</p>"
+
+#: package/contents/ui/main.qml:63
+#, kde-format
+msgid ""
+"Very large fonts may produce odd-looking results. Consider adjusting the "
+"global screen scale instead of using a very large font size."
+msgstr ""
+
+#: package/contents/ui/main.qml:83
+#, kde-format
+msgid ""
+"The recommended way to scale the user interface is using the global screen "
+"scaling feature."
+msgstr ""
+
+#: package/contents/ui/main.qml:95
+#, fuzzy, kde-format
+#| msgid "Ad&just All Fonts..."
+msgid "&Adjust All Fonts..."
+msgstr "ಎಲ್ಲಾ ಅಕ್ಷರಶೈಲಿಗಳನ್ನು &ಸರಿಹೊಂದಿಸು"
+
+#: package/contents/ui/main.qml:108
+#, fuzzy, kde-format
+#| msgid "General"
+msgid "General:"
+msgstr "ಸಾಮಾನ್ಯ"
+
+#: package/contents/ui/main.qml:109
+#, fuzzy, kde-format
+#| msgid "General"
+msgid "Select general font"
+msgstr "ಸಾಮಾನ್ಯ"
+
+#: package/contents/ui/main.qml:120
+#, fuzzy, kde-format
+#| msgid "Fixed width"
+msgid "Fixed width:"
+msgstr "ನಿಗದಿತ ಅಗಲ"
+
+#: package/contents/ui/main.qml:121
+#, fuzzy, kde-format
+#| msgid "Fixed width"
+msgid "Select fixed width font"
+msgstr "ನಿಗದಿತ ಅಗಲ"
+
+#: package/contents/ui/main.qml:132
+#, kde-format
+msgid "Small:"
+msgstr ""
+
+#: package/contents/ui/main.qml:133
+#, fuzzy, kde-format
+#| msgid "General"
+msgid "Select small font"
+msgstr "ಸಾಮಾನ್ಯ"
+
+#: package/contents/ui/main.qml:144
+#, fuzzy, kde-format
+#| msgid "Toolbar"
+msgid "Toolbar:"
+msgstr "ಸಲಕರಣೆಪಟ್ಟಿ"
+
+#: package/contents/ui/main.qml:145
+#, fuzzy, kde-format
+#| msgid "Toolbar"
+msgid "Select toolbar font"
+msgstr "ಸಲಕರಣೆಪಟ್ಟಿ"
+
+#: package/contents/ui/main.qml:156
+#, fuzzy, kde-format
+#| msgid "Menu"
+msgid "Menu:"
+msgstr "ಪರಿವಿಡಿ"
+
+#: package/contents/ui/main.qml:157
+#, kde-format
+msgid "Select menu font"
+msgstr ""
+
+#: package/contents/ui/main.qml:167
+#, fuzzy, kde-format
+#| msgid "Window title"
+msgid "Window title:"
+msgstr "ಕಿಟಕಿಯ ಶೀರ್ಷಿಕೆ"
+
+#: package/contents/ui/main.qml:168
+#, fuzzy, kde-format
+#| msgid "Window title"
+msgid "Select window title font"
+msgstr "ಕಿಟಕಿಯ ಶೀರ್ಷಿಕೆ"
+
+#: package/contents/ui/main.qml:183
+#, kde-format
+msgid "Anti-Aliasing:"
+msgstr ""
+
+#: package/contents/ui/main.qml:188
+#, fuzzy, kde-format
+msgid "Enable"
+msgstr "ಶಕ್ತಗೊಳಿಸಲಾಗಿದೆ"
+
+#: package/contents/ui/main.qml:192
+#, kde-kuit-format
+msgctxt "@info:tooltip Anti-Aliasing"
+msgid ""
+"Pixels on displays are generally aligned in a grid. Therefore shapes of "
+"fonts that do not align with this grid will look blocky and wrong unless "
+"<emphasis>anti-aliasing</emphasis> techniques are used to reduce this "
+"effect. You generally want to keep this option enabled unless it causes "
+"problems."
+msgstr ""
+
+#: package/contents/ui/main.qml:206
+#, kde-format
+msgid "Exclude range from anti-aliasing"
+msgstr ""
+
+#: package/contents/ui/main.qml:225 package/contents/ui/main.qml:248
+#, kde-format
+msgid "%1 pt"
+msgstr ""
+
+#: package/contents/ui/main.qml:240
+#, fuzzy, kde-format
+#| msgid " to "
+msgid "to"
+msgstr "ಗೆ"
+
+#: package/contents/ui/main.qml:271
+#, kde-format
+msgctxt "Used as a noun, and precedes a combobox full of options"
+msgid "Sub-pixel rendering:"
+msgstr ""
+
+#: package/contents/ui/main.qml:313
+#, kde-kuit-format
+msgctxt "@info:tooltip Sub-pixel rendering"
+msgid ""
+"<para>On TFT or LCD screens every single pixel is actually composed of three "
+"or four smaller monochrome lights. These <emphasis>sub-pixels</emphasis> can "
+"be changed independently to further improve the quality of displayed fonts.</"
+"para> <para>The rendering quality is only improved if the selection matches "
+"the manner in which the sub-pixels of your display are aligned. Most "
+"displays have a linear ordering of <emphasis>RGB</emphasis> sub-pixels, some "
+"have <emphasis>BGR</emphasis> and some exotic orderings are not supported by "
+"this feature.</para>This does not work with CRT monitors."
+msgstr ""
+
+#: package/contents/ui/main.qml:318
+#, kde-format
+msgctxt "Used as a noun, and precedes a combobox full of options"
+msgid "Hinting:"
+msgstr ""
+
+#: package/contents/ui/main.qml:359
+#, kde-kuit-format
+msgctxt "@info:tooltip Hinting"
+msgid ""
+"Hinting is a technique in which hints embedded in a font are used to enhance "
+"the rendering quality especially at small sizes. Stronger hinting generally "
+"leads to sharper edges but the small letters will less closely resemble "
+"their shape at big sizes."
+msgstr ""
+
+#: package/contents/ui/main.qml:372
+#, fuzzy, kde-format
+#| msgid "Force fonts DPI:"
+msgid "Force font DPI:"
+msgstr "ಪ್ರಬಲ ಅಕ್ಷರಶೈಲಿಗಳಲ್ಲಿ ಚುಕ್ಕಿಗಳು ಪ್ರತಿ ಅಂಗುಲಕ್ಕೆ:"
+
+#: package/contents/ui/main.qml:400
+#, kde-kuit-format
+msgctxt "@info:tooltip Force fonts DPI"
+msgid ""
+"<para>This option forces a specific DPI value for fonts. It may be useful "
+"when the real DPI of the hardware is not detected properly and it is also "
+"often misused when poor quality fonts are used that do not look well with "
+"DPI values other than 96 or 120 DPI.</para><para>The use of this option is "
+"generally discouraged.</para><para>If you are using the <emphasis>X Window "
+"System</emphasis>, for selecting the proper DPI value a better option is "
+"explicitly configuring it for the whole X server if possible (e.g. "
+"DisplaySize in xorg.conf). When fonts do not render properly with the real "
+"DPI value better fonts should be used or configuration of font hinting "
+"should be checked.</para>"
+msgstr ""
+
+#: package/contents/ui/main.qml:406
+#, kde-format
+msgid "Select Font"
+msgstr ""

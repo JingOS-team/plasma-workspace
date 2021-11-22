@@ -32,7 +32,6 @@
 
 namespace NotificationManager
 {
-
 /**
  * @short Represents a single notification
  *
@@ -123,6 +122,8 @@ public:
     QString replySubmitButtonText() const;
     QString replySubmitButtonIconName() const;
 
+    QString category() const;
+
     bool expired() const;
     void setExpired(bool expired);
 
@@ -142,7 +143,6 @@ private:
 
     class Private;
     Private *d;
-
 };
 
 } // namespace NotificationManager

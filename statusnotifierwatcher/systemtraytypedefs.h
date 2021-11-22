@@ -22,6 +22,7 @@
 #define SYSTEMTRAYTYPEDEFS_H
 
 #include <QByteArray>
+#include <QMetaType>
 #include <QString>
 #include <QVector>
 
@@ -45,4 +46,3 @@ Q_DECLARE_METATYPE(KDbusImageVector)
 Q_DECLARE_METATYPE(KDbusToolTipStruct)
 
 #endif
-

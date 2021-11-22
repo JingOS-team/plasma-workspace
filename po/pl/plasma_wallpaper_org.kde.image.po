@@ -1,0 +1,214 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2014, 2015, 2017, 2018, 2019, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-02-02 02:56+0100\n"
+"PO-Revision-Date: 2020-10-04 07:43+0200\n"
+"Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
+"Language-Team: Polish <kde-i18n-doc@kde.org>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 20.08.1\n"
+
+#: image.cpp:245
+#, kde-format
+msgid "Recommended wallpaper file"
+msgstr "Polecany plik tapety"
+
+#: image.cpp:406
+#, kde-format
+msgid "Directory with the wallpaper to show slides from"
+msgstr "Katalog z tapetami, z którego wyświetlać obrazy"
+
+#: image.cpp:708
+#, kde-format
+msgid "Open Image"
+msgstr "Otwórz obraz"
+
+#: image.cpp:708
+#, kde-format
+msgid "Image Files"
+msgstr "Pliki obrazów"
+
+#: imagepackage/contents/ui/config.qml:103
+#, kde-format
+msgid "Positioning:"
+msgstr "Umieszczenie:"
+
+#: imagepackage/contents/ui/config.qml:106
+#, kde-format
+msgid "Scaled and Cropped"
+msgstr "Przeskalowana i przycięta"
+
+#: imagepackage/contents/ui/config.qml:110
+#, kde-format
+msgid "Scaled"
+msgstr "Przeskalowana"
+
+#: imagepackage/contents/ui/config.qml:114
+#, kde-format
+msgid "Scaled, Keep Proportions"
+msgstr "Przeskalowana z zachowaniem kształtu"
+
+#: imagepackage/contents/ui/config.qml:118
+#, kde-format
+msgid "Centered"
+msgstr "Wyśrodkowana"
+
+#: imagepackage/contents/ui/config.qml:122
+#, kde-format
+msgid "Tiled"
+msgstr "Kafelki"
+
+#: imagepackage/contents/ui/config.qml:149
+#, kde-format
+msgid "Order:"
+msgstr "Kolejność:"
+
+#: imagepackage/contents/ui/config.qml:152
+#, kde-format
+msgid "Random"
+msgstr "Losowo"
+
+#: imagepackage/contents/ui/config.qml:156
+#, kde-format
+msgid "A to Z"
+msgstr "od A do Z"
+
+#: imagepackage/contents/ui/config.qml:160
+#, kde-format
+msgid "Z to A"
+msgstr "od Z do A"
+
+#: imagepackage/contents/ui/config.qml:164
+#, kde-format
+msgid "Date modified (newest first)"
+msgstr "Data zmiany (najnowsze pierwsze)"
+
+#: imagepackage/contents/ui/config.qml:168
+#, kde-format
+msgid "Date modified (oldest first)"
+msgstr "Data zmiany (najstarsze pierwsze)"
+
+#: imagepackage/contents/ui/config.qml:195
+#, kde-format
+msgid "Background:"
+msgstr "Tło:"
+
+#: imagepackage/contents/ui/config.qml:196
+#, kde-format
+msgid "Blur"
+msgstr "Rozmycie"
+
+#: imagepackage/contents/ui/config.qml:205
+#, kde-format
+msgid "Solid color"
+msgstr "Jednolita barwa"
+
+#: imagepackage/contents/ui/config.qml:215
+#, kde-format
+msgid "Select Background Color"
+msgstr "Wybierz kolor tła"
+
+#: imagepackage/contents/ui/config.qml:237
+#, kde-format
+msgid "Change every:"
+msgstr "Zmień co:"
+
+#: imagepackage/contents/ui/config.qml:247
+#, kde-format
+msgid "%1 hour"
+msgid_plural "%1 hours"
+msgstr[0] "%1 godzina"
+msgstr[1] "%1 godziny"
+msgstr[2] "%1 godzin"
+
+#: imagepackage/contents/ui/config.qml:266
+#, kde-format
+msgid "%1 minute"
+msgid_plural "%1 minutes"
+msgstr[0] "%1 minuta"
+msgstr[1] "%1 minuty"
+msgstr[2] "%1 minut"
+
+#: imagepackage/contents/ui/config.qml:285
+#, kde-format
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] "%1 sekunda"
+msgstr[1] "%1 sekundy"
+msgstr[2] "%1 sekund"
+
+#: imagepackage/contents/ui/config.qml:298
+#, kde-format
+msgid "Folders"
+msgstr "Katalogi"
+
+#: imagepackage/contents/ui/config.qml:346
+#, kde-format
+msgid "Remove Folder"
+msgstr "Usuń katalog"
+
+#: imagepackage/contents/ui/config.qml:351
+#, kde-format
+msgid "Open Folder"
+msgstr "Otwórz katalog"
+
+#: imagepackage/contents/ui/config.qml:361
+#, kde-format
+msgid "There are no wallpaper locations configured"
+msgstr "Nie ustawiono położenia tapet"
+
+#: imagepackage/contents/ui/config.qml:374
+#, kde-format
+msgid "Add Folder..."
+msgstr "Dodaj katalog..."
+
+#: imagepackage/contents/ui/config.qml:380
+#: imagepackage/contents/ui/config.qml:472
+#, kde-format
+msgid "Get New Wallpapers..."
+msgstr "Pobierz tapetę..."
+
+#: imagepackage/contents/ui/config.qml:420
+#, kde-format
+msgid "There are no wallpapers in this slideshow"
+msgstr "Nie ma tapet w tym pokazie tapet"
+
+#: imagepackage/contents/ui/config.qml:466
+#, kde-format
+msgid "Add Image..."
+msgstr "Dodaj obraz..."
+
+#: imagepackage/contents/ui/main.qml:67
+#, kde-format
+msgid "Open Wallpaper Image"
+msgstr "Otwórz obraz tapety"
+
+#: imagepackage/contents/ui/main.qml:68
+#, kde-format
+msgid "Next Wallpaper Image"
+msgstr "Następny obraz tapety"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:46
+#, kde-format
+msgid "Open Containing Folder"
+msgstr "Otwórz katalog zawierający"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:52
+#, kde-format
+msgid "Restore wallpaper"
+msgstr "Przywróć tapetę"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:57
+#, kde-format
+msgid "Remove Wallpaper"
+msgstr "Usuń tapetę"

@@ -1,0 +1,40 @@
+# Translation of plasma_applet_org.kde.plasma.systemmonitor to Norwegian Nynorsk
+#
+# Karl Ove Hufthammer <karl@huftis.org>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-06-26 02:17+0200\n"
+"PO-Revision-Date: 2020-05-12 19:52+0200\n"
+"Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
+"Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
+"Language: nn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.04.0\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: package/contents/config/config.qml:9
+#, kde-format
+msgid "Appearance"
+msgstr "Utsjånad"
+
+#: package/contents/config/config.qml:14
+#, kde-format
+msgid "%1 Details"
+msgstr "%1-detaljar"
+
+#: package/contents/config/config.qml:20
+#, kde-format
+msgid "Sensors Details"
+msgstr "Sensordetaljar"
+
+#: package/contents/ui/main.qml:46
+#, kde-format
+msgid "System Monitor"
+msgstr "Systemovervaking"

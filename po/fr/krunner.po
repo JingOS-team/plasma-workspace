@@ -1,0 +1,76 @@
+# translation of krunner.po to Français
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# aminesay <aminesay@yahoo.fr>, 2007.
+# Guillaume Pujol <guill.p@gmail.com>, 2008.
+# Amine Say <aminesay@yahoo.fr>, 2008, 2009.
+# Sébastien Renard <Sebastien.Renard@digitalfox.org>, 2008, 2009.
+# Nicolas Ternisien <nicolas.ternisien@gmail.com>, 2008.
+# Sebastien Renard <Sebastien.Renard@digitalfox.org>, 2010.
+# xavier <ktranslator31@yahoo.fr>, 2013.
+# Vincent Pinon <vpinon@kde.org>, 2016.
+# Simon Depiets <sdepiets@gmail.com>, 2019.
+#
+# amine say, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: krunner\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2019-08-10 14:55+0800\n"
+"Last-Translator: Simon Depiets <sdepiets@gmail.com>\n"
+"Language-Team: French <kde-francophone@kde.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 19.07.70\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Amine Say, Vincent Pinon"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "aminesay@yahoo.fr, vpinon@kde.org"
+
+#: main.cpp:65
+#, kde-format
+msgid "krunner"
+msgstr "krunner"
+
+#: main.cpp:65
+#, kde-format
+msgid "Run Command interface"
+msgstr "Interface d'exécution de commandes"
+
+#: main.cpp:70
+#, kde-format
+msgid "Use the clipboard contents as query for KRunner"
+msgstr "Utiliser le contenu du presse-papier comme requête pour KRunner"
+
+#: main.cpp:71
+#, kde-format
+msgid "Start KRunner in the background, don't show it."
+msgstr "Lancer KRunner en arrière-plan, ne pas l'afficher."
+
+#: main.cpp:72
+#, kde-format
+msgid "Replace an existing instance"
+msgstr "Remplacer une instance existante"
+
+#: main.cpp:77
+#, kde-format
+msgid "The query to run, only used if -c is not provided"
+msgstr "La requête à exécuter, utilisé uniquement si -c n'est pas fourni"
+
+#: view.cpp:62
+#, kde-format
+msgid "KRunner"
+msgstr "KRunner"

@@ -1,0 +1,82 @@
+# Burkhard Lück <lueck@hube-lueck.de>, 2015, 2017.
+# Frederik Schwarzer <schwarzer@kde.org>, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:48+0100\n"
+"PO-Revision-Date: 2017-02-27 20:18+0100\n"
+"Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
+"Language-Team: German <kde-i18n-de@kde.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 2.0\n"
+
+#: ksolidnotify.cpp:161
+#, kde-format
+msgid "This device can now be safely removed."
+msgstr "Dieses Gerät kann nun sicher entfernt werden."
+
+#: ksolidnotify.cpp:168
+#, kde-format
+msgid "You are not authorized to mount this device."
+msgstr "Sie haben keine Berechtigung zum Einhängen dieses Geräts."
+
+#: ksolidnotify.cpp:171
+#, kde-format
+msgctxt "Remove is less technical for unmount"
+msgid "You are not authorized to remove this device."
+msgstr "Sie haben keine Berechtigung zum Entfernen dieses Geräts."
+
+#: ksolidnotify.cpp:174
+#, kde-format
+msgid "You are not authorized to eject this disc."
+msgstr "Sie haben keine Berechtigung zum Auswerfen dieses Datenträgers."
+
+#: ksolidnotify.cpp:181
+#, kde-format
+msgid "Could not mount this device as it is busy."
+msgstr "Dieses Gerät kann nicht eingebunden werden, da es beschäftigt ist."
+
+#: ksolidnotify.cpp:211
+#, kde-format
+msgid "One or more files on this device are open within an application."
+msgstr ""
+"Mindestens eine Datei auf dem Gerät ist noch in einer Anwendung geöffnet."
+
+#: ksolidnotify.cpp:213
+#, kde-format
+msgid "One or more files on this device are opened in application \"%2\"."
+msgid_plural ""
+"One or more files on this device are opened in following applications: %2."
+msgstr[0] ""
+"Mindestens eine Datei auf dem Gerät ist noch in der folgenden Anwendung "
+"geöffnet „%2“."
+msgstr[1] ""
+"Mindestens eine Datei auf dem Gerät ist noch in den folgenden Anwendungen "
+"geöffnet: „%2“."
+
+#: ksolidnotify.cpp:216
+#, kde-format
+msgctxt "separator in list of apps blocking device unmount"
+msgid ", "
+msgstr ", "
+
+#: ksolidnotify.cpp:233
+#, kde-format
+msgid "Could not mount this device."
+msgstr "Dieses Gerät kann nicht eingebunden werden."
+
+#: ksolidnotify.cpp:236
+#, kde-format
+msgctxt "Remove is less technical for unmount"
+msgid "Could not remove this device."
+msgstr "Dieses Gerät kann nicht entfernt werden."
+
+#: ksolidnotify.cpp:239
+#, kde-format
+msgid "Could not eject this disc."
+msgstr "Dieser Datenträger kann nicht entfernt werden."

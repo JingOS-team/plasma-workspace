@@ -1,23 +1,12 @@
 /*
- * Copyright 2021 Bob Wu <pengbo.wu@jingos.com>
+ * Copyright (C) 2021 Beijing Jingling Information System Technology Co., Ltd. All rights reserved.
  *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License as
- * published by the Free Software Foundation; either version 2 of
- * the License or (at your option) version 3 or any later version
- * accepted by the membership of KDE e.V. (or its successor approved
- * by the membership of KDE e.V.), which shall act as a proxy
- * defined in Section 14 of version 3 of the license.
+ * Authors:
+ * Liu Bangguo <liubangguo@jingos.com>
  *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
- 
+
+
 import QtQuick 2.12
 import QtQuick.Window 2.12
 import QtQml 2.12
@@ -26,6 +15,7 @@ import QtQuick.Layouts 1.12
 import QtQuick.Controls 2.5
 
 import org.kde.plasma.core 2.0 as PlasmaCore
+import jingos.display 1.0
 
 Item {
     id: rootActionItem
@@ -45,11 +35,11 @@ Item {
 
     implicitWidth: control.width
     implicitHeight: control.height
-    width: Screen.width / 888 * 364
+    width: JDisplay.dp(364)
     height: control.implicitHeight
 
     signal closeClicked
-    signal exitFinished(string type )
+    signal exitFinished(string type)
 
     function startExit() {
         exitAnim.start()
@@ -60,12 +50,26 @@ Item {
     Control {
         id: control
 
-        width: Screen.width / 888 * 364
+        width: JDisplay.dp(364)
         height: implicitHeight
         hoverEnabled: true
 
         x: 0
         y: 0
+
+        padding: JDisplay.dp(16)
+        PlasmaCore.DataSource {
+            id: schemeSource
+
+            engine: "weather"
+            connectedSources: ["weather"]
+            onSourceAdded: {
+                if (source === "weather") {
+                    disconnectSource(source);
+                    connectSource(source);
+                }
+            }
+        }
 
         NumberAnimation {
             id: enterAnim
@@ -73,10 +77,14 @@ Item {
             target: control
             running: true
             property: "y"
-            from: -control.height - 16
+            from: -control.height - JDisplay.dp(16)
             to: 0
             duration: qStyle.animationTime
-            easing.type: Easing.InQuad
+            easing.type: Easing.OutSine
+
+            onFinished: {
+                background.layer.enabled = true
+            }
         }
 
         NumberAnimation {
@@ -86,19 +94,22 @@ Item {
             running: false
             property: "y"
             from: 0
-            to: -control.height - 16
+            to: -control.height - JDisplay.dp(16)
             duration: qStyle.animationTime
-            easing.type: Easing.InQuad
+            easing.type: Easing.OutSine
             onFinished: rootActionItem.exitFinished(exitActionType)
         }
 
         background: Rectangle {
-            radius: 15
-            color: Qt.rgba(0, 0, 0, 0.40)
+            id: background
+
+            radius: JDisplay.dp(14)
+            color: schemeSource.data["weather"]["isDarkScheme"] ? Qt.rgba(0x26 / 0xFF, 0x26 / 0xFF, 0x2A / 0xFF, 0.90) : Qt.rgba(1, 1, 1, 0.95)
             layer.enabled: qStyle.backgroundShadowEnabled
 
             layer.effect: DropShadow {
-                radius: qStyle.backgroundShadowRadius
+                color: schemeSource.data["weather"]["isDarkScheme"] ? Qt.rgba(1, 1, 242 / 255, 0.3) : Qt.rgba(0, 0, 0, 0.3)
+                radius: JDisplay.dp(5)
                 samples: qStyle.backgroundShadowSamples
                 transparentBorder: qStyle.backgroundShadowBorder
                 horizontalOffset: qStyle.backgroundShadowHOffset
@@ -106,46 +117,46 @@ Item {
             }
         }
 
-        topPadding: 15
-        bottomPadding: 15
-        leftPadding: 20
-        rightPadding: 20     
-        
         contentItem: ColumnLayout {
 
+            spacing: JDisplay.dp(10)
+
             RowLayout {
-                spacing: 10
+                spacing: JDisplay.dp(7)
                 Layout.fillWidth: true
 
                 Item {
                     id: appImgIcon
-                    Layout.preferredWidth: 32
-                    Layout.preferredHeight:32
+
+                    Layout.preferredWidth: JDisplay.dp(18)
+                    Layout.preferredHeight: JDisplay.dp(18)
                     PlasmaCore.IconItem {
                         id: notifyHeadIcon
-                        width: 32
-                        height: 32
+
+                        width: JDisplay.dp(18)
+                        height: JDisplay.dp(18)
                         source: applicationIconSource
                         usesPlasmaTheme: false
                     }
                 }
-                
+
                 Label {
                     id: notifyHead
+
                     text: ""
                     Layout.fillWidth: true
-                    font.pixelSize: 14
-                    font.weight: Font.Thin
-                    color: Qt.rgba(1, 1, 1, 0.90)
+                    font.pixelSize: JDisplay.sp(13)
+                    color: schemeSource.data["weather"]["isDarkScheme"] ? Qt.rgba(1, 1, 1, 0.90) : Qt.rgba(0, 0, 0, 0.90)
                     elide: Text.ElideRight
                 }
 
                 Image {
                     id: closeAction
+
                     Layout.alignment: Qt.AlignLeft
-                    Layout.preferredWidth: 20
-                    Layout.preferredHeight: 20
-                    visible: control.hovered
+                    Layout.preferredWidth: JDisplay.dp(18)
+                    Layout.preferredHeight: JDisplay.dp(18)
+                    visible: false
                     source: "./ic_close.svg"
                     MouseArea {
                         anchors.fill: parent
@@ -161,8 +172,8 @@ Item {
 
                     Layout.fillWidth: true
                     text: ""
-                    font.pixelSize: 14
-                    color: Qt.rgba(1, 1, 1, 1)
+                    font.pixelSize: JDisplay.sp(13)
+                    color: schemeSource.data["weather"]["isDarkScheme"] ? Qt.rgba(1, 1, 1, 1) : Qt.rgba(0, 0, 0, 1)
                     verticalAlignment: Text.AlignVCenter
                     elide: Text.ElideRight
                     font.bold: true
@@ -176,11 +187,11 @@ Item {
 
                     Layout.fillWidth: true
                     text: ""
-                    font.pixelSize: 14
-                    color: Qt.rgba(1, 1, 1, 1)
+                    font.pixelSize: JDisplay.sp(11)
+                    color: schemeSource.data["weather"]["isDarkScheme"] ? Qt.rgba(1, 1, 1, 1) : Qt.rgba(0, 0, 0, 1)
                     verticalAlignment: Text.AlignVCenter
                     wrapMode: Text.WordWrap
-                    font.bold: true
+                    maximumLineCount: 4
                 }
             }
 
@@ -194,9 +205,9 @@ Item {
                     property int hereIndex : index
 
                     Layout.fillWidth: true
+                    spacing: JDisplay.dp(14)
 
                     Repeater {
-
                         model: {
                             var buttons = [];
                             var actionNames = (rootActionItem.actionNames || []);
@@ -213,10 +224,10 @@ Item {
 
                         JingButton {
                             Layout.fillWidth: true
-                            height: 29
-                            bgcolor: index === 0 && hereIndex === 0 ? "#39C17B" : "#3C4BE8"  
+                            height: JDisplay.dp(29)
+                            bgcolor: index === 0 && hereIndex === 0 ? "#39C17B" : "#3C4BE8"
                             text: modelData.label || ""
-                            fontSize: 10
+                            fontSize: JDisplay.sp(10)
                             onClicked: {
                                 startExit();
                                 exitActionType = modelData.actionName
@@ -225,6 +236,31 @@ Item {
                     }
                 }
             }
+        }
+    }
+
+    MouseArea {
+        anchors.fill: parent
+        hoverEnabled: true
+
+        propagateComposedEvents: true
+
+        onEntered: {
+            closeAction.visible = true
+        }
+
+        onPressed: {
+            if (mouse.source !== Qt.MouseEventNotSynthesized) {
+                closeAction.visible = false
+            }
+        }
+
+        onExited: {
+            closeAction.visible = false
+        }
+
+        onCanceled: {
+            closeAction.visible = false
         }
     }
 }

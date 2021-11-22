@@ -10,6 +10,7 @@ relatively small extensions by Oswald Buddenhagen <ob6@inf.tu-dresden.de>
 some code taken from the dcopserver (part of the KDE libraries), which is
 Copyright 1999 Matthias Ettrich <ettrich@kde.org>
 Copyright 1999 Preston Brown <pbrown@kde.org>
+Copyright 2021 Liu Bangguo <liubangguo@jingos.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -36,17 +37,16 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include "kcminit_interface.h"
 #include "kded_interface.h"
-#include <klauncher_interface.h>
 #include "ksmserver_interface.h"
+#include <klauncher_interface.h>
 
 #include <KCompositeJob>
-#include <Kdelibs4Migration>
+#include <KConfigGroup>
 #include <KIO/DesktopExecParser>
-#include <KJob>
 #include <KNotifyConfig>
 #include <KProcess>
 #include <KService>
-#include <KConfigGroup>
+#include <Kdelibs4Migration>
 
 #include <phonon/audiooutput.h>
 #include <phonon/mediaobject.h>
@@ -56,30 +56,33 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <QDBusMessage>
 #include <QDBusPendingCall>
 #include <QDir>
+#include <QProcess>
 #include <QStandardPaths>
 #include <QTimer>
-#include <QProcess>
 
 #include "startupadaptor.h"
 
 #include "../config-startplasma.h"
 
-class Phase: public KCompositeJob
+class Phase : public KCompositeJob
 {
-Q_OBJECT
+    Q_OBJECT
 public:
     Phase(const AutoStart &autostart, QObject *parent)
         : KCompositeJob(parent)
         , m_autostart(autostart)
-    {}
+    {
+    }
 
-    bool addSubjob(KJob *job) override {
+    bool addSubjob(KJob *job) override
+    {
         bool rc = KCompositeJob::addSubjob(job);
         job->start();
         return rc;
     }
 
-    void slotResult(KJob *job) override {
+    void slotResult(KJob *job) override
+    {
         KCompositeJob::slotResult(job);
         if (!hasSubjobs()) {
             emitResult();
@@ -90,13 +93,16 @@ protected:
     const AutoStart m_autostart;
 };
 
-class StartupPhase0: public Phase
+class StartupPhase0 : public Phase
 {
-Q_OBJECT
+    Q_OBJECT
 public:
-    StartupPhase0(const AutoStart& autostart, QObject *parent) : Phase(autostart, parent)
-    {}
-    void start() override {
+    StartupPhase0(const AutoStart &autostart, QObject *parent)
+        : Phase(autostart, parent)
+    {
+    }
+    void start() override
+    {
         qCDebug(PLASMA_SESSION) << "Phase 0";
         addSubjob(new AutoStartAppsJob(m_autostart, 0));
         addSubjob(new KCMInitJob());
@@ -104,28 +110,34 @@ public:
     }
 };
 
-class StartupPhase1: public Phase
+class StartupPhase1 : public Phase
 {
-Q_OBJECT
+    Q_OBJECT
 public:
-    StartupPhase1(const AutoStart& autostart, QObject *parent) : Phase(autostart, parent)
-    {}
-    void start() override {
+    StartupPhase1(const AutoStart &autostart, QObject *parent)
+        : Phase(autostart, parent)
+    {
+    }
+    void start() override
+    {
         qCDebug(PLASMA_SESSION) << "Phase 1";
         addSubjob(new AutoStartAppsJob(m_autostart, 1));
     }
 };
 
-class StartupPhase2: public Phase
+class StartupPhase2 : public Phase
 {
-Q_OBJECT
+    Q_OBJECT
 public:
-    StartupPhase2(const AutoStart& autostart, QObject *parent) : Phase(autostart, parent)
-    {}
+    StartupPhase2(const AutoStart &autostart, QObject *parent)
+        : Phase(autostart, parent)
+    {
+    }
     void runUserAutostart();
     bool migrateKDE4Autostart(const QString &folder);
 
-    void start() override {
+    void start() override
+    {
         qCDebug(PLASMA_SESSION) << "Phase 2";
         addSubjob(new AutoStartAppsJob(m_autostart, 2));
         addSubjob(new KDEDInitJob());
@@ -140,7 +152,9 @@ SleepJob::SleepJob()
 void SleepJob::start()
 {
     auto t = new QTimer(this);
-    connect(t, &QTimer::timeout, this, [this]() {emitResult();});
+    connect(t, &QTimer::timeout, this, [this]() {
+        emitResult();
+    });
     t->start(100);
 }
 
@@ -150,11 +164,12 @@ void SleepJob::start()
 class NotificationThread : public QThread
 {
     Q_OBJECT
-    void run() override {
+    void run() override
+    {
         // We cannot parent to the thread itself so let's create
         // a QObject on the stack and parent everythign to it
         QObject parent;
-        KNotifyConfig notifyConfig(QStringLiteral("plasma_workspace"), QList< QPair<QString,QString> >(), QStringLiteral("startkde"));
+        KNotifyConfig notifyConfig(QStringLiteral("plasma_workspace"), QList<QPair<QString, QString>>(), QStringLiteral("startkde"));
         const QString action = notifyConfig.readEntry(QStringLiteral("Action"));
         if (action.isEmpty() || !action.split(QLatin1Char('|')).contains(QLatin1String("Sound"))) {
             // no startup sound configured
@@ -170,10 +185,8 @@ class NotificationThread : public QThread
 
         QUrl soundURL;
         const auto dataLocations = QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation);
-        for (const QString &dataLocation: dataLocations) {
-            soundURL = QUrl::fromUserInput(soundFilename,
-                                           dataLocation + QStringLiteral("/sounds"),
-                                           QUrl::AssumeLocalFile);
+        for (const QString &dataLocation : dataLocations) {
+            soundURL = QUrl::fromUserInput(soundFilename, dataLocation + QStringLiteral("/sounds"), QUrl::AssumeLocalFile);
             if (soundURL.isLocalFile() && QFile::exists(soundURL.toLocalFile())) {
                 break;
             } else if (!soundURL.isLocalFile() && soundURL.isValid()) {
@@ -195,14 +208,14 @@ class NotificationThread : public QThread
         m->play();
         exec();
     }
+
 private:
     // Prevent application exit until the thread (and hence the sound) completes
     QEventLoopLocker m_locker;
-
 };
 
-Startup::Startup(QObject *parent):
-    QObject(parent)
+Startup::Startup(QObject *parent)
+    : QObject(parent)
 {
     new StartupAdaptor(this);
     QDBusConnection::sessionBus().registerObject(QStringLiteral("/Startup"), QStringLiteral("org.kde.Startup"), this);
@@ -213,7 +226,7 @@ Startup::Startup(QObject *parent):
 
     QProcess::execute(QStringLiteral(CMAKE_INSTALL_FULL_LIBEXECDIR_KF5 "/start_kdeinit_wrapper"), QStringList());
 
-    KJob* phase1;
+    KJob *phase1;
     QProcessEnvironment kdedProcessEnv;
     kdedProcessEnv.insert(QStringLiteral("KDED_STARTED_BY_KDEINIT"), QStringLiteral("1"));
 
@@ -235,18 +248,18 @@ Startup::Startup(QObject *parent):
         }
     }
 
-    const QVector<KJob*> sequence = {
+    const QVector<KJob *> sequence = {
         new StartProcessJob(QStringLiteral("kcminit_startup"), {}),
         new StartServiceJob(QStringLiteral("kded5"), {}, QStringLiteral("org.kde.kded5"), kdedProcessEnv),
         windowManagerJob,
         new StartServiceJob(QStringLiteral("ksmserver"), QCoreApplication::instance()->arguments().mid(1), QStringLiteral("org.kde.ksmserver")),
         new StartupPhase0(autostart, this),
         phase1 = new StartupPhase1(autostart, this),
-        new RestoreSessionJob(),
+        // new RestoreSessionJob(),
         new StartupPhase2(autostart, this),
     };
-    KJob* last = nullptr;
-    for(KJob* job : sequence) {
+    KJob *last = nullptr;
+    for (KJob *job : sequence) {
         if (!job) {
             continue;
         }
@@ -259,7 +272,8 @@ Startup::Startup(QObject *parent):
     connect(phase1, &KJob::finished, this, []() {
         NotificationThread *loginSound = new NotificationThread();
         connect(loginSound, &NotificationThread::finished, loginSound, &NotificationThread::deleteLater);
-        loginSound->start();});
+        loginSound->start();
+    });
 
     connect(sequence.last(), &KJob::finished, this, &Startup::finishStartup);
     sequence.first()->start();
@@ -267,7 +281,7 @@ Startup::Startup(QObject *parent):
     // app will be closed when all KJobs finish thanks to the QEventLoopLocker in each KJob
 }
 
-void Startup::upAndRunning( const QString& msg )
+void Startup::upAndRunning(const QString &msg)
 {
     QDBusMessage ksplashProgressMessage = QDBusMessage::createMethodCall(QStringLiteral("org.kde.KSplash"),
                                                                          QStringLiteral("/KSplash"),
@@ -293,15 +307,16 @@ KCMInitJob::KCMInitJob()
 {
 }
 
-void KCMInitJob::start() {
-    org::kde::KCMInit kcminit(QStringLiteral("org.kde.kcminit"),
-                              QStringLiteral("/kcminit"),
-                              QDBusConnection::sessionBus());
+void KCMInitJob::start()
+{
+    org::kde::KCMInit kcminit(QStringLiteral("org.kde.kcminit"), QStringLiteral("/kcminit"), QDBusConnection::sessionBus());
     kcminit.setTimeout(10 * 1000);
 
     QDBusPendingReply<void> pending = kcminit.runPhase1();
     QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(pending, this);
-    connect(watcher, &QDBusPendingCallWatcher::finished, this, [this]() {emitResult();});
+    connect(watcher, &QDBusPendingCallWatcher::finished, this, [this]() {
+        emitResult();
+    });
     connect(watcher, &QDBusPendingCallWatcher::finished, watcher, &QObject::deleteLater);
 }
 
@@ -309,21 +324,23 @@ KDEDInitJob::KDEDInitJob()
 {
 }
 
-void KDEDInitJob::start() {
+void KDEDInitJob::start()
+{
     qCDebug(PLASMA_SESSION());
-    org::kde::kded5 kded( QStringLiteral("org.kde.kded5"),
-                         QStringLiteral("/kded"),
-                         QDBusConnection::sessionBus());
+    org::kde::kded5 kded(QStringLiteral("org.kde.kded5"), QStringLiteral("/kded"), QDBusConnection::sessionBus());
     auto pending = kded.loadSecondPhase();
 
     QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(pending, this);
-    connect(watcher, &QDBusPendingCallWatcher::finished, this, [this]() {emitResult();});
+    connect(watcher, &QDBusPendingCallWatcher::finished, this, [this]() {
+        emitResult();
+    });
     connect(watcher, &QDBusPendingCallWatcher::finished, watcher, &QObject::deleteLater);
 }
 
-RestoreSessionJob::RestoreSessionJob():
-    KJob()
-{}
+RestoreSessionJob::RestoreSessionJob()
+    : KJob()
+{
+}
 
 void RestoreSessionJob::start()
 {
@@ -331,14 +348,17 @@ void RestoreSessionJob::start()
     auto pending = ksmserverIface.restoreSession();
 
     QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(pending, this);
-    connect(watcher, &QDBusPendingCallWatcher::finished, this, [this]() {emitResult();});
+    connect(watcher, &QDBusPendingCallWatcher::finished, this, [this]() {
+        emitResult();
+    });
     connect(watcher, &QDBusPendingCallWatcher::finished, watcher, &QObject::deleteLater);
 }
 
 void StartupPhase2::runUserAutostart()
 {
     // Now let's execute the scripts in the KDE-specific autostart-scripts folder.
-    const QString autostartFolder = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QDir::separator() + QStringLiteral("autostart-scripts");
+    const QString autostartFolder =
+        QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QDir::separator() + QStringLiteral("autostart-scripts");
 
     QDir dir(autostartFolder);
     if (!dir.exists()) {
@@ -353,14 +373,12 @@ void StartupPhase2::runUserAutostart()
     const QStringList entries = dir.entryList(QDir::Files);
     for (const QString &file : entries) {
         // Don't execute backup files
-        if (!file.endsWith(QLatin1Char('~')) && !file.endsWith(QLatin1String(".bak")) &&
-                (file[0] != QLatin1Char('%') || !file.endsWith(QLatin1Char('%'))) &&
-                (file[0] != QLatin1Char('#') || !file.endsWith(QLatin1Char('#'))))
-        {
+        if (!file.endsWith(QLatin1Char('~')) && !file.endsWith(QLatin1String(".bak")) && (file[0] != QLatin1Char('%') || !file.endsWith(QLatin1Char('%')))
+            && (file[0] != QLatin1Char('#') || !file.endsWith(QLatin1Char('#')))) {
             const QString fullPath = dir.absolutePath() + QLatin1Char('/') + file;
 
             qCInfo(PLASMA_SESSION) << "Starting autostart script " << fullPath;
-            auto p = new KProcess; //deleted in onFinished lambda
+            auto p = new KProcess; // deleted in onFinished lambda
             p->setProgram(fullPath);
             p->start();
             connect(p, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), [p](int exitCode) {
@@ -407,13 +425,14 @@ bool StartupPhase2::migrateKDE4Autostart(const QString &autostartFolder)
     return true;
 }
 
-AutoStartAppsJob::AutoStartAppsJob(const AutoStart & autostart, int phase)
+AutoStartAppsJob::AutoStartAppsJob(const AutoStart &autostart, int phase)
     : m_autoStart(autostart)
 {
     m_autoStart.setPhase(phase);
 }
 
-void AutoStartAppsJob::start() {
+void AutoStartAppsJob::start()
+{
     qCDebug(PLASMA_SESSION);
 
     QTimer::singleShot(0, this, [=]() {
@@ -440,8 +459,6 @@ void AutoStartAppsJob::start() {
         } while (true);
     });
 }
-
-
 
 StartServiceJob::StartServiceJob(const QString &process, const QStringList &args, const QString &serviceId, const QProcessEnvironment &additionalEnv)
     : KJob()

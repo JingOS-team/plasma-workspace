@@ -28,9 +28,9 @@
 #include <QDir>
 #include <QStandardPaths>
 
+#include <KApplicationTrader>
 #include <KIO/ApplicationLauncherJob>
 #include <KLocalizedString>
-#include <KApplicationTrader>
 #include <KNotificationJobUiDelegate>
 #include <KPropertiesDialog>
 #include <KProtocolInfo>
@@ -52,7 +52,6 @@ using namespace KAStats::Terms;
 
 namespace Kicker
 {
-
 QVariantMap createActionItem(const QString &label, const QString &icon, const QString &actionId, const QVariant &argument)
 {
     QVariantMap map;
@@ -91,12 +90,12 @@ QVariantList createActionListForFileItem(const KFileItem &fileItem)
 {
     QVariantList list;
 
-    KService::List services = KApplicationTrader::queryByMimeType(fileItem.mimetype());
+    const KService::List services = KApplicationTrader::queryByMimeType(fileItem.mimetype());
 
     if (!services.isEmpty()) {
         list << createTitleActionItem(i18n("Open with:"));
 
-        foreach (const KService::Ptr service, services) {
+        for (const KService::Ptr service : services) {
             const QString text = service->name().replace(QLatin1Char('&'), QStringLiteral("&&"));
             QVariantMap item = createActionItem(text, service->icon(), QStringLiteral("_kicker_fileItem_openWith"), service->entryPath());
 
@@ -106,7 +105,8 @@ QVariantList createActionListForFileItem(const KFileItem &fileItem)
         list << createSeparatorActionItem();
     }
 
-    const QVariantMap &propertiesItem = createActionItem(i18n("Properties"), QStringLiteral("document-properties"), QStringLiteral("_kicker_fileItem_properties"));
+    const QVariantMap &propertiesItem =
+        createActionItem(i18n("Properties"), QStringLiteral("document-properties"), QStringLiteral("_kicker_fileItem_properties"));
     list << propertiesItem;
 
     return list;
@@ -215,8 +215,17 @@ QVariantList jumpListActions(KService::Ptr service)
         return list;
     }
 
+    // Add frequently used settings modules similar to SystemSetting's overview page.
+    if (service->storageId() == QLatin1String("systemsettings.desktop")) {
+        list = systemSettingsActions();
+
+        if (!list.isEmpty()) {
+            return list;
+        }
+    }
+
     const auto &actions = service->actions();
-    foreach (const KServiceAction &action, actions) {
+    for (const KServiceAction &action : actions) {
         if (action.text().isEmpty() || action.exec().isEmpty()) {
             continue;
         }
@@ -224,6 +233,36 @@ QVariantList jumpListActions(KService::Ptr service)
         QVariantMap item = createActionItem(action.text(), action.icon(), QStringLiteral("_kicker_jumpListAction"), action.exec());
 
         list << item;
+    }
+
+    return list;
+}
+
+QVariantList systemSettingsActions()
+{
+    QVariantList list;
+
+    auto query = AllResources | Agent(QStringLiteral("org.kde.systemsettings")) | HighScoredFirst | Limit(5);
+
+    ResultSet results(query);
+
+    QStringList ids;
+    for (const ResultSet::Result &result : results) {
+        ids << QUrl(result.resource()).path();
+    }
+
+    if (ids.count() < 5) {
+        // We'll load the default set of settings from its jump list actions.
+        return list;
+    }
+
+    for (const QString &id : qAsConst(ids)) {
+        KService::Ptr service = KService::serviceByStorageId(id);
+        if (!service || !service->isValid()) {
+            continue;
+        }
+
+        list << createActionItem(service->name(), service->icon(), QStringLiteral("_kicker_jumpListAction"), service->exec());
     }
 
     return list;
@@ -243,12 +282,14 @@ QVariantList recentDocumentActions(KService::Ptr service)
         return list;
     }
 
+    // clang-format off
     auto query = UsedResources
         | RecentlyUsedFirst
         | Agent(storageId)
         | Type::any()
         | Activity::current()
         | Url::file();
+    // clang-format on
 
     ResultSet results(query);
 
@@ -281,7 +322,8 @@ QVariantList recentDocumentActions(KService::Ptr service)
     }
 
     if (!list.isEmpty()) {
-        QVariantMap forgetAction = createActionItem(i18n("Forget Recent Files"), QStringLiteral("edit-clear-history"), QStringLiteral("_kicker_forgetRecentDocuments"));
+        QVariantMap forgetAction =
+            createActionItem(i18n("Forget Recent Files"), QStringLiteral("edit-clear-history"), QStringLiteral("_kicker_forgetRecentDocuments"));
         list << forgetAction;
     }
 
@@ -301,11 +343,13 @@ bool handleRecentDocumentAction(KService::Ptr service, const QString &actionId, 
             return false;
         }
 
+        // clang-format off
         auto query = UsedResources
             | Agent(storageId)
             | Type::any()
             | Activity::current()
             | Url::file();
+        // clang-format on
 
         KAStats::forgetResources(query);
 
@@ -351,8 +395,7 @@ QVariantList editApplicationAction(const KService::Ptr &service)
 
 bool handleEditApplicationAction(const QString &actionId, const KService::Ptr &service)
 {
-
-    if (service && actionId ==QLatin1String("editApplication") && canEditApplication(service)) {
+    if (service && actionId == QLatin1String("editApplication") && canEditApplication(service)) {
         Kicker::editApplication(service->entryPath(), service->menuId());
 
         return true;
@@ -374,8 +417,7 @@ QVariantList appstreamActions(const KService::Ptr &service)
 
     // Don't show action if we can't find any app to handle appstream:// URLs.
     if (!appStreamHandler) {
-        if (!KProtocolInfo::isHelperProtocol(QStringLiteral("appstream"))
-            || KProtocolInfo::exec(QStringLiteral("appstream")).isEmpty()) {
+        if (!KProtocolInfo::isHelperProtocol(QStringLiteral("appstream")) || KProtocolInfo::exec(QStringLiteral("appstream")).isEmpty()) {
             return ret;
         }
     }
@@ -384,14 +426,14 @@ QVariantList appstreamActions(const KService::Ptr &service)
         appstreamPool->load();
     }
 
-    const auto components = appstreamPool->componentsById(service->desktopEntryName()+QLatin1String(".desktop"));
-    for(const auto &component: components) {
+    const auto components = appstreamPool->componentsById(service->desktopEntryName() + QLatin1String(".desktop"));
+    for (const auto &component : components) {
         const QString componentId = component.id();
 
-        QVariantMap appstreamAction = Kicker::createActionItem(
-                    i18nc("@action opens a software center with the application", "Uninstall or Manage Add-Ons..."),
-                    appStreamHandler->icon(),
-                    "manageApplication", QVariant(QLatin1String("appstream://") + componentId));
+        QVariantMap appstreamAction = Kicker::createActionItem(i18nc("@action opens a software center with the application", "Uninstall or Manage Add-Ons..."),
+                                                               appStreamHandler->icon(),
+                                                               "manageApplication",
+                                                               QVariant(QLatin1String("appstream://") + componentId));
         ret << appstreamAction;
     }
 #else

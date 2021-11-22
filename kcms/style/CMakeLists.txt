@@ -14,6 +14,14 @@ set(kcm_style_PART_SRCS
     styledata.cpp
 )
 
+kcmutils_generate_module_data(
+    kcm_style_PART_SRCS
+    MODULE_DATA_HEADER styledata.h
+    MODULE_DATA_CLASS_NAME StyleData
+    SETTINGS_HEADERS stylesettings.h
+    SETTINGS_CLASSES StyleSettings
+)
+
 ki18n_wrap_ui(kcm_style_PART_SRCS stylepreview.ui)
 
 kconfig_add_kcfg_files(kcm_style_PART_SRCS stylesettings.kcfgc GENERATE_MOC)
@@ -23,14 +31,14 @@ add_library(kcm_style MODULE ${kcm_style_PART_SRCS})
 target_compile_definitions(kcm_style PUBLIC CMAKE_INSTALL_FULL_LIBEXECDIR="${CMAKE_INSTALL_FULL_LIBEXECDIR}")
 
 target_link_libraries(kcm_style
-    Qt5::X11Extras
-    Qt5::DBus
+    Qt::X11Extras
+    Qt::DBus
     KF5::KCMUtils
     KF5::Completion
     KF5::I18n
     KF5::Notifications
     KF5::Plasma
-    ${X11_LIBRARIES}
+    X11::X11
     KF5::KDELibs4Support
     KF5::GuiAddons
     KF5::QuickAddons

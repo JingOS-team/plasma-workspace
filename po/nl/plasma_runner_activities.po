@@ -1,0 +1,45 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Freek de Kruijf <freekdekruijf@kde.nl>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-10-21 02:33+0200\n"
+"PO-Revision-Date: 2011-02-16 11:18+0100\n"
+"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
+"Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: activityrunner.cpp:31
+#, kde-format
+msgctxt "KRunner keyword"
+msgid "activity"
+msgstr "activiteit"
+
+#: activityrunner.cpp:35
+#, kde-format
+msgid "Lists all activities currently available to be run."
+msgstr "Laat alle activiteiten zien die nu beschikbaar zijn om te draaien."
+
+#: activityrunner.cpp:36
+#, kde-format
+msgctxt "KRunner keyword"
+msgid "activity :q:"
+msgstr "activiteit :q:"
+
+#: activityrunner.cpp:36
+#, kde-format
+msgid "Switches to activity :q:."
+msgstr "Schakelt over naar activiteit :q:."
+
+#: activityrunner.cpp:128
+#, kde-format
+msgid "Switch to \"%1\""
+msgstr "Omschakelen naar \"%1\""

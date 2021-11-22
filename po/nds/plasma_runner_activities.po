@@ -1,0 +1,46 @@
+# translation of plasma_runner_activities.po to Low Saxon
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Manfred Wiese <m.j.wiese@web.de>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_activities\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-10-21 02:33+0200\n"
+"PO-Revision-Date: 2011-06-13 07:17+0200\n"
+"Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
+"Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
+"Language: nds\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: activityrunner.cpp:31
+#, kde-format
+msgctxt "KRunner keyword"
+msgid "activity"
+msgstr "Aktiviteet"
+
+#: activityrunner.cpp:35
+#, kde-format
+msgid "Lists all activities currently available to be run."
+msgstr "List all Aktiviteten op, de sik nu utföhren laat."
+
+#: activityrunner.cpp:36
+#, kde-format
+msgctxt "KRunner keyword"
+msgid "activity :q:"
+msgstr "Aktiviteet :q:"
+
+#: activityrunner.cpp:36
+#, kde-format
+msgid "Switches to activity :q:."
+msgstr "Wesselt na Aktiviteet :q:."
+
+#: activityrunner.cpp:128
+#, kde-format
+msgid "Switch to \"%1\""
+msgstr "Na \"%1\" wesseln"

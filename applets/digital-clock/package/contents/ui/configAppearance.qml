@@ -24,7 +24,7 @@ import QtQuick 2.0
 import QtQuick.Controls 2.3 as QtControls
 import QtQuick.Layouts 1.0 as QtLayouts
 import org.kde.plasma.calendar 2.0 as PlasmaCalendar
-import org.kde.kquickcontrolsaddons 2.0
+import org.kde.kquickcontrolsaddons 2.0 // For KCMShell
 import org.kde.kirigami 2.5 as Kirigami
 
 QtLayouts.ColumnLayout {
@@ -201,7 +201,7 @@ QtLayouts.ColumnLayout {
             visible: cfg_dateFormat == "custom"
             wrapMode: Text.Wrap
             QtLayouts.Layout.preferredWidth: QtLayouts.Layout.maximumWidth
-            QtLayouts.Layout.maximumWidth: units.gridUnit * 16
+            QtLayouts.Layout.maximumWidth: Kirigami.Units.gridUnit * 16
 
             onLinkActivated: Qt.openUrlExternally(link)
             MouseArea {
@@ -225,7 +225,7 @@ QtLayouts.ColumnLayout {
                 QtLayouts.Layout.fillWidth: true
                 currentIndex: 0
                 // ComboBox's sizing is just utterly broken
-                QtLayouts.Layout.minimumWidth: units.gridUnit * 10
+                QtLayouts.Layout.minimumWidth: Kirigami.Units.gridUnit * 10
                 model: fontsModel
                 // doesn't autodeduce from model because we manually populate it
                 textRole: "text"

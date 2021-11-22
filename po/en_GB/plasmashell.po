@@ -1,0 +1,271 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Steve Allewell <steve.allewell@gmail.com>, 2014, 2015, 2016, 2018, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-02-02 02:56+0100\n"
+"PO-Revision-Date: 2020-09-26 15:54+0100\n"
+"Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
+"Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.08.1\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Steve Allewell"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "steve.allewell@gmail.com"
+
+#: currentcontainmentactionsmodel.cpp:225
+#, kde-format
+msgid "Configure Mouse Actions Plugin"
+msgstr "Configure Mouse Actions Plugin"
+
+#: main.cpp:107
+#, kde-format
+msgid "Plasma"
+msgstr "Plasma"
+
+#: main.cpp:107
+#, kde-format
+msgid "Plasma Shell"
+msgstr "Plasma Shell"
+
+#: main.cpp:121
+#, kde-format
+msgid "Enable QML Javascript debugger"
+msgstr "Enable QML Javascript debugger"
+
+#: main.cpp:124
+#, kde-format
+msgid "Do not restart plasma-shell automatically after a crash"
+msgstr "Do not restart plasma-shell automatically after a crash"
+
+#: main.cpp:127
+#, kde-format
+msgid "Force loading the given shell plugin"
+msgstr "Force loading the given shell plugin"
+
+#: main.cpp:132
+#, kde-format
+msgid ""
+"Load plasmashell as a standalone application, needs the shell-plugin option "
+"to be specified"
+msgstr ""
+"Load plasmashell as a standalone application, needs the shell-plugin option "
+"to be specified"
+
+#: main.cpp:134
+#, kde-format
+msgid "Replace an existing instance"
+msgstr "Replace an existing instance"
+
+#: main.cpp:137
+#, kde-format
+msgid ""
+"Enables test mode and specifies the layout javascript file to set up the "
+"testing environment"
+msgstr ""
+"Enables test mode and specifies the layout javascript file to set up the "
+"testing environment"
+
+#: main.cpp:138
+#, kde-format
+msgid "file"
+msgstr "file"
+
+#: main.cpp:142
+#, kde-format
+msgid "Lists the available options for user feedback"
+msgstr "Lists the available options for user feedback"
+
+#: main.cpp:234
+#, kde-format
+msgid "Plasma Failed To Start"
+msgstr "Plasma Failed To Start"
+
+#: main.cpp:235
+#, kde-format
+msgid ""
+"Plasma is unable to start as it could not correctly use OpenGL 2 or software "
+"fallback\n"
+"Please check that your graphic drivers are set up correctly."
+msgstr ""
+"Plasma is unable to start as it could not correctly use OpenGL 2 or software "
+"fallback\n"
+"Please check that your graphic drivers are set up correctly."
+
+#: osd.cpp:65
+#, kde-format
+msgctxt "OSD informing that the system is muted, keep short"
+msgid "Audio Muted"
+msgstr "Audio Muted"
+
+#: osd.cpp:83
+#, kde-format
+msgctxt "OSD informing that the microphone is muted, keep short"
+msgid "Microphone Muted"
+msgstr "Microphone Muted"
+
+#: osd.cpp:99
+#, kde-format
+msgctxt "OSD informing that some media app is muted, eg. Amarok Muted"
+msgid "%1 Muted"
+msgstr "%1 Muted"
+
+#: osd.cpp:121
+#, kde-format
+msgctxt "touchpad was enabled, keep short"
+msgid "Touchpad On"
+msgstr "Touchpad On"
+
+#: osd.cpp:123
+#, kde-format
+msgctxt "touchpad was disabled, keep short"
+msgid "Touchpad Off"
+msgstr "Touchpad Off"
+
+#: osd.cpp:130
+#, kde-format
+msgctxt "wireless lan was enabled, keep short"
+msgid "Wifi On"
+msgstr "Wifi On"
+
+#: osd.cpp:132
+#, kde-format
+msgctxt "wireless lan was disabled, keep short"
+msgid "Wifi Off"
+msgstr "Wifi Off"
+
+#: osd.cpp:139
+#, kde-format
+msgctxt "Bluetooth was enabled, keep short"
+msgid "Bluetooth On"
+msgstr "Bluetooth On"
+
+#: osd.cpp:141
+#, kde-format
+msgctxt "Bluetooth was disabled, keep short"
+msgid "Bluetooth Off"
+msgstr "Bluetooth Off"
+
+#: osd.cpp:148
+#, kde-format
+msgctxt "mobile internet was enabled, keep short"
+msgid "Mobile Internet On"
+msgstr "Mobile Internet On"
+
+#: osd.cpp:150
+#, kde-format
+msgctxt "mobile internet was disabled, keep short"
+msgid "Mobile Internet Off"
+msgstr "Mobile Internet Off"
+
+#: osd.cpp:158
+#, kde-format
+msgctxt ""
+"on screen keyboard was enabled because physical keyboard got unplugged, keep "
+"short"
+msgid "On-Screen Keyboard Activated"
+msgstr "On-Screen Keyboard Activated"
+
+#: osd.cpp:161
+#, kde-format
+msgctxt ""
+"on screen keyboard was disabled because physical keyboard was plugged in, "
+"keep short"
+msgid "On-Screen Keyboard Deactivated"
+msgstr "On-Screen Keyboard Deactivated"
+
+#: shellcorona.cpp:155 shellcorona.cpp:157
+#, kde-format
+msgid "Show Desktop"
+msgstr "Show Desktop"
+
+#: shellcorona.cpp:157
+#, kde-format
+msgid "Hide Desktop"
+msgstr "Hide Desktop"
+
+#: shellcorona.cpp:173
+#, kde-format
+msgid "Show Activity Switcher"
+msgstr "Show Activity Switcher"
+
+#: shellcorona.cpp:184
+#, kde-format
+msgid "Stop Current Activity"
+msgstr "Stop Current Activity"
+
+#: shellcorona.cpp:192
+#, kde-format
+msgid "Switch to Previous Activity"
+msgstr "Switch to Previous Activity"
+
+#: shellcorona.cpp:200
+#, kde-format
+msgid "Switch to Next Activity"
+msgstr "Switch to Next Activity"
+
+#: shellcorona.cpp:216
+#, kde-format
+msgid "Activate Task Manager Entry %1"
+msgstr "Activate Task Manager Entry %1"
+
+#: shellcorona.cpp:1384
+#, kde-format
+msgid "Unable to load script file: %1"
+msgstr "Unable to load script file: %1"
+
+#: shellcorona.cpp:1760
+#, kde-format
+msgid "Add Panel"
+msgstr "Add Panel"
+
+#: shellcorona.cpp:1797
+#, kde-format
+msgid "Empty %1"
+msgstr "Empty %1"
+
+#: softwarerendernotifier.cpp:27
+#, kde-format
+msgid "Software Renderer In Use"
+msgstr "Software Renderer In Use"
+
+#: softwarerendernotifier.cpp:28
+#, kde-format
+msgctxt "Tooltip telling user their GL drivers are broken"
+msgid "Software Renderer In Use"
+msgstr "Software Renderer In Use"
+
+#: softwarerendernotifier.cpp:29
+#, kde-format
+msgctxt "Tooltip telling user their GL drivers are broken"
+msgid "Rendering may be degraded"
+msgstr "Rendering may be degraded"
+
+#: softwarerendernotifier.cpp:39
+#, kde-format
+msgid "Never show again"
+msgstr "Never show again"
+
+#: userfeedback.cpp:49
+#, kde-format
+msgid "Panel Count"
+msgstr "Panel Count"
+
+#: userfeedback.cpp:53
+#, kde-format
+msgid "Counts the panels"
+msgstr "Counts the panels"

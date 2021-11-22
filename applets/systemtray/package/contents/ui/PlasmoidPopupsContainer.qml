@@ -27,13 +27,13 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 StackView {
     id: mainStack
-    clip: true
     focus: true
+    clip: true
 
     Layout.minimumWidth: units.gridUnit * 12
     Layout.minimumHeight: units.gridUnit * 12
 
-    property Item activeApplet
+    readonly property Item activeApplet: systemTrayState.activeApplet
 
     /* Heading */
     property bool appletHasHeading: false
@@ -67,15 +67,15 @@ StackView {
                 }
             }
 
-            mainStack.replace({item: activeApplet.fullRepresentationItem, immediate: !dialog.visible, properties: {focus: true}});
+            mainStack.replace({item: activeApplet.fullRepresentationItem, immediate: !systemTrayState.expanded, properties: {focus: true}});
         } else {
             mainStack.replace(emptyPage);
         }
     }
     Connections {
         target: plasmoid
-        onAppletRemoved: {
-            if (applet == root.activeApplet) {
+        function onAppletRemoved(applet) {
+            if (applet === systemTrayState.activeApplet) {
                 mainStack.clear()
             }
         }
@@ -86,24 +86,46 @@ StackView {
     }
 
     delegate: StackViewDelegate {
+        id: transitioner
         function transitionFinished(properties) {
             properties.exitItem.opacity = 1
+        }
+        property bool goingLeft: {
+            const unFlipped = systemTrayState.oldVisualIndex < systemTrayState.newVisualIndex
+
+            if (Qt.application.layoutDirection == Qt.LeftToRight) {
+                return unFlipped
+            } else {
+                return !unFlipped
+            }
         }
         replaceTransition: StackViewTransition {
             ParallelAnimation {
                 PropertyAnimation {
                     target: enterItem
                     property: "x"
-                    from: enterItem.width
+                    from: root.vertical ? 0 : (transitioner.goingLeft ? enterItem.width : -enterItem.width)
                     to: 0
-                    duration: units.longDuration
+                    easing.type: Easing.InOutQuad
+                    duration: PlasmaCore.Units.shortDuration
                 }
-                PropertyAnimation {
-                    target: enterItem
-                    property: "opacity"
-                    from: 0
-                    to: 1
-                    duration: units.longDuration
+                SequentialAnimation {
+                    PropertyAction {
+                        target: enterItem
+                        property: "opacity"
+                        value: 0
+                    }
+                    PauseAnimation {
+                        duration: root.vertical ? (PlasmaCore.Units.shortDuration/2) : 0
+                    }
+                    PropertyAnimation {
+                        target: enterItem
+                        property: "opacity"
+                        from: 0
+                        to: 1
+                        easing.type: Easing.InOutQuad
+                        duration: (PlasmaCore.Units.shortDuration/2)
+                    }
                 }
             }
             ParallelAnimation {
@@ -111,15 +133,17 @@ StackView {
                     target: exitItem
                     property: "x"
                     from: 0
-                    to: -exitItem.width
-                    duration: units.longDuration
+                    to: root.vertical ? 0 : (transitioner.goingLeft ? -exitItem.width : exitItem.width)
+                    easing.type: Easing.InOutQuad
+                    duration: PlasmaCore.Units.shortDuration
                 }
                 PropertyAnimation {
                     target: exitItem
                     property: "opacity"
                     from: 1
                     to: 0
-                    duration: units.longDuration
+                    easing.type: Easing.InOutQuad
+                    duration: PlasmaCore.Units.shortDuration/2
                 }
             }
         }

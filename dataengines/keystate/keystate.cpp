@@ -19,9 +19,8 @@
 
 #include "keystate.h"
 
-#include <klocalizedstring.h>
-#include <kmodifierkeyinfo.h>
 #include "keyservice.h"
+#include <klocalizedstring.h>
 
 KeyStatesEngine::KeyStatesEngine(QObject *parent, const QVariantList &args)
     : Plasma::DataEngine(parent, args)

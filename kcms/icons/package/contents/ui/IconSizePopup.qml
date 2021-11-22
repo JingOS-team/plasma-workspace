@@ -1,5 +1,6 @@
 /*
  * Copyright 2018 Kai Uwe Broulik <kde@privat.broulik.de>
+ * Copyright 2021 Liu Bangguo <liubangguo@jingos.com>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -23,11 +24,12 @@ import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.3 as QtControls
 import org.kde.kirigami 2.4 as Kirigami
 import org.kde.kcm 1.3 as KCM
+import jingos.display 1.0
 
 QtControls.Popup {
     id: iconSizePopup
 
-    width: 400
+    width: JDisplay.dp(400)
     modal: true
 
     onOpened: {
@@ -44,7 +46,7 @@ QtControls.Popup {
 
     Connections {
         target: iconTypeList
-        onCurrentIndexChanged: {
+        function onCurrentIndexChanged() {
             iconSizeSlider.sizes = kcm.availableIconSizes(iconTypeList.currentIndex);
         }
     }

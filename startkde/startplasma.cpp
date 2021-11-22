@@ -1,5 +1,6 @@
 /* This file is part of the KDE project
    Copyright (C) 2019 Aleix Pol Gonzalez <aleixpol@kde.org>
+   Copyright (C) 2021 Liu Bangguo <liubangguo@jingos.com>
 
    This library is free software; you can redistribute it and/or
    modify it under the terms of the GNU Library General Public
@@ -20,10 +21,10 @@
 #include <config-startplasma.h>
 
 #include <QDir>
+#include <QEventLoop>
 #include <QProcess>
 #include <QStandardPaths>
 #include <QTextStream>
-#include <QEventLoop>
 #include <QByteArray>
 
 #include <QDBusConnectionInterface>
@@ -31,12 +32,16 @@
 
 #include <KConfig>
 #include <KConfigGroup>
+#include <KSharedConfig>
 
 #include <unistd.h>
 
 #include <updatelaunchenvjob.h>
 
 #include "startplasma.h"
+
+#include "../config-workspace.h"
+#include "debug.h"
 
 QTextStream out(stderr);
 
@@ -46,7 +51,7 @@ void messageBox(const QString &text)
     runSync(QStringLiteral("xmessage"), {QStringLiteral("-geometry"), QStringLiteral("500x100"), text});
 }
 
-QStringList allServices(const QLatin1String& prefix)
+QStringList allServices(const QLatin1String &prefix)
 {
     QDBusConnectionInterface *bus = QDBusConnection::sessionBus().interface();
     const QStringList services = bus->registeredServiceNames();
@@ -70,14 +75,14 @@ QStringList allServices(const QLatin1String& prefix)
     return names;
 }
 
-int runSync(const QString& program, const QStringList &args, const QStringList &env)
+int runSync(const QString &program, const QStringList &args, const QStringList &env)
 {
     QProcess p;
     if (!env.isEmpty())
         p.setEnvironment(QProcess::systemEnvironment() << env);
     p.setProcessChannelMode(QProcess::ForwardedChannels);
     p.start(program, args);
-//     qDebug() << "started..." << program << args;
+    //     qCDebug(PLASMA_STARTUP) << "started..." << program << args;
     p.waitForFinished(-1);
     if (p.exitCode()) {
         qWarning() << program << args << "exited with code" << p.exitCode();
@@ -88,7 +93,9 @@ int runSync(const QString& program, const QStringList &args, const QStringList &
 void sourceFiles(const QStringList &files)
 {
     QStringList filteredFiles;
-    std::copy_if(files.begin(), files.end(), std::back_inserter(filteredFiles), [](const QString& i){ return QFileInfo(i).isReadable(); } );
+    std::copy_if(files.begin(), files.end(), std::back_inserter(filteredFiles), [](const QString &i) {
+        return QFileInfo(i).isReadable();
+    });
 
     if (filteredFiles.isEmpty())
         return;
@@ -102,7 +109,7 @@ void sourceFiles(const QStringList &files)
     const auto fullEnv = p.readAllStandardOutput();
     auto envs = fullEnv.split('\0');
 
-    for (auto &env: envs) {
+    for (auto &env : envs) {
         if (env.startsWith("_=") || env.startsWith("SHLVL"))
             continue;
 
@@ -110,9 +117,9 @@ void sourceFiles(const QStringList &files)
         if (Q_UNLIKELY(idx <= 0))
             continue;
 
-        if (qgetenv(env.left(idx)) != env.mid(idx+1)) {
-//             qDebug() << "setting..." << env.left(idx) << env.mid(idx+1) << "was" << qgetenv(env.left(idx));
-            qputenv(env.left(idx), env.mid(idx+1));
+        if (qgetenv(env.left(idx)) != env.mid(idx + 1)) {
+            //             qCDebug(PLASMA_STARTUP) << "setting..." << env.left(idx) << env.mid(idx+1) << "was" << qgetenv(env.left(idx));
+            qputenv(env.left(idx), env.mid(idx + 1));
         }
     }
 }
@@ -126,14 +133,12 @@ void createConfigDirectory()
 
 void runStartupConfig()
 {
-    //export LC_* variables set by kcmshell5 formats into environment
-    //so it can be picked up by QLocale and friends.
+    // export LC_* variables set by kcmshell5 formats into environment
+    // so it can be picked up by QLocale and friends.
     KConfig config(QStringLiteral("plasma-localerc"));
     KConfigGroup formatsConfig = KConfigGroup(&config, "Formats");
 
-    const auto lcValues = {
-        "LANG", "LC_NUMERIC", "LC_TIME", "LC_MONETARY", "LC_MEASUREMENT", "LC_COLLATE", "LC_CTYPE"
-    };
+    const auto lcValues = {"LANG", "LC_NUMERIC", "LC_TIME", "LC_MONETARY", "LC_MEASUREMENT", "LC_COLLATE", "LC_CTYPE"};
     for (auto lc : lcValues) {
         const QString value = formatsConfig.readEntry(lc, QString());
         if (!value.isEmpty()) {
@@ -150,18 +155,43 @@ void runStartupConfig()
     const QString value = languageConfig.readEntry("LANGUAGE", QString());
 
     const auto envStr = qgetenv("LANG");
+    QString userStr = QString::fromStdString(qgetenv("USER").toStdString());
 
     if(value.isEmpty() || value.isNull()) {
         if(envStr.startsWith("zh_CN")) {
             languageConfig.writeEntry("LANGUAGE", "zh_CN:en_US");
             qputenv("LANGUAGE", "zh_CN:en_US");
+
+            QFile::rename(QStringLiteral("/home/") + userStr + QStringLiteral("/.config/autostart/fcitx-autostart.desktop_bak"),
+                          QStringLiteral("/home/") + userStr + QStringLiteral("/.config/autostart/fcitx-autostart.desktop"));
         } else {
             languageConfig.writeEntry("LANGUAGE", "en_US:zh_CN");
-            qputenv("LANGUAGE", "en_US:zh_CN");
+
+            QFile::rename(QStringLiteral("/home/") + userStr + QStringLiteral("/.config/autostart/fcitx-autostart.desktop"),
+                          QStringLiteral("/home/") + userStr + QStringLiteral("/.config/autostart/fcitx-autostart.desktop_bak"));
+
+            qputenv("MALIIT_FORCE_DBUS_CONNECTION", "1");
+            qputenv("GTK_IM_MODULE", "Maliit");
+            qputenv("QT_IM_MODULE", "Maliit");
+            qputenv("XMODIFIERS", "");
         }
         languageConfig.sync();
     } else {
-        qputenv("LANGUAGE", value.toUtf8());
+        if(envStr.startsWith("en_US")) {
+            qputenv("LANGUAGE", "en_US");
+
+            QFile::rename(QStringLiteral("/home/") + userStr + QStringLiteral("/.config/autostart/fcitx-autostart.desktop"),
+                          QStringLiteral("/home/") + userStr + QStringLiteral("/.config/autostart/fcitx-autostart.desktop_bak"));
+
+            qputenv("MALIIT_FORCE_DBUS_CONNECTION", "1");
+            qputenv("GTK_IM_MODULE", "Maliit");
+            qputenv("QT_IM_MODULE", "Maliit");
+            qputenv("XMODIFIERS", "");
+        } else {
+            qputenv("LANGUAGE", value.toUtf8());
+            QFile::rename(QStringLiteral("/home/") + userStr + QStringLiteral("/.config/autostart/fcitx-autostart.desktop_bak"),
+                          QStringLiteral("/home/") + userStr + QStringLiteral("/.config/autostart/fcitx-autostart.desktop"));
+        }
     }
 }
 
@@ -180,8 +210,9 @@ void setupCursor(bool wayland)
 #endif
     }
 
-    //TODO: consider linking directly
-    const int applyMouseStatus = wayland ? 0 : runSync(QStringLiteral("kapplymousetheme"), { kcminputrc_mouse_cursortheme, QString::number(kcminputrc_mouse_cursorsize) });
+    // TODO: consider linking directly
+    const int applyMouseStatus =
+        wayland ? 0 : runSync(QStringLiteral("kapplymousetheme"), {kcminputrc_mouse_cursortheme, QString::number(kcminputrc_mouse_cursorsize)});
     if (applyMouseStatus == 10) {
         qputenv("XCURSOR_THEME", "breeze_cursors");
     } else if (!kcminputrc_mouse_cursortheme.isEmpty()) {
@@ -197,7 +228,7 @@ void setupCursor(bool wayland)
 // Scripts are sourced in reverse order of priority of their directory, as defined
 // by `QStandardPaths::standardLocations`. This ensures that high-priority scripts
 // (such as those in the user's home directory) are sourced last and take precedence
-// over lower-priority scripts (such as system defaults). Scripts in the same 
+// over lower-priority scripts (such as system defaults). Scripts in the same
 // directory are sourced in lexical order of their filename.
 //
 // This is where you can define environment variables that will be available to
@@ -218,7 +249,7 @@ void runEnvironmentScripts()
     // order so that high-priority scripts are sourced last and their modifications take precedence.
     for (auto loc = locations.crbegin(); loc != locations.crend(); loc++) {
         QDir dir(*loc);
-        if (! dir.cd(QStringLiteral("./plasma-workspace/env"))) {
+        if (!dir.cd(QStringLiteral("./plasma-workspace/env"))) {
             // Skip location if plasma-workspace/env subdirectory does not exist
             continue;
         }
@@ -229,7 +260,6 @@ void runEnvironmentScripts()
     }
     sourceFiles(scripts);
 }
-
 
 // Mark that full KDE session is running (e.g. Konqueror preloading works only
 // with full KDE running). The KDE_FULL_SESSION property can be detected by
@@ -254,8 +284,8 @@ void runEnvironmentScripts()
 
 void setupPlasmaEnvironment()
 {
-    //Manually disable auto scaling because we are scaling above
-    //otherwise apps that manually opt in for high DPI get auto scaled by the developer AND manually scaled by us
+    // Manually disable auto scaling because we are scaling above
+    // otherwise apps that manually opt in for high DPI get auto scaled by the developer AND manually scaled by us
     qputenv("QT_AUTO_SCREEN_SCALE_FACTOR", "0");
 
     qputenv("KDE_FULL_SESSION", "true");
@@ -268,23 +298,37 @@ void setupPlasmaEnvironment()
 
 void setupX11()
 {
-//     Set a left cursor instead of the standard X11 "X" cursor, since I've heard
-//     from some users that they're confused and don't know what to do. This is
-//     especially necessary on slow machines, where starting KDE takes one or two
-//     minutes until anything appears on the screen.
-//
-//     If the user has overwritten fonts, the cursor font may be different now
-//     so don't move this up.
+    //     Set a left cursor instead of the standard X11 "X" cursor, since I've heard
+    //     from some users that they're confused and don't know what to do. This is
+    //     especially necessary on slow machines, where starting KDE takes one or two
+    //     minutes until anything appears on the screen.
+    //
+    //     If the user has overwritten fonts, the cursor font may be different now
+    //     so don't move this up.
 
     runSync(QStringLiteral("xsetroot"), {QStringLiteral("-cursor_name"), QStringLiteral("left_ptr")});
-    runSync(QStringLiteral("xprop"), {QStringLiteral("-root"), QStringLiteral("-f"), QStringLiteral("KDE_FULL_SESSION"), QStringLiteral("8t"), QStringLiteral("-set"), QStringLiteral("KDE_FULL_SESSION"), QStringLiteral("true")});
-    runSync(QStringLiteral("xprop"), {QStringLiteral("-root"), QStringLiteral("-f"), QStringLiteral("KDE_SESSION_VERSION"), QStringLiteral("32c"), QStringLiteral("-set"), QStringLiteral("KDE_SESSION_VERSION"), QStringLiteral("5")});
+    runSync(QStringLiteral("xprop"),
+            {QStringLiteral("-root"),
+             QStringLiteral("-f"),
+             QStringLiteral("KDE_FULL_SESSION"),
+             QStringLiteral("8t"),
+             QStringLiteral("-set"),
+             QStringLiteral("KDE_FULL_SESSION"),
+             QStringLiteral("true")});
+    runSync(QStringLiteral("xprop"),
+            {QStringLiteral("-root"),
+             QStringLiteral("-f"),
+             QStringLiteral("KDE_SESSION_VERSION"),
+             QStringLiteral("32c"),
+             QStringLiteral("-set"),
+             QStringLiteral("KDE_SESSION_VERSION"),
+             QStringLiteral("5")});
 }
 
 void cleanupX11()
 {
-    runSync(QStringLiteral("xprop"), { QStringLiteral("-root"), QStringLiteral("-remove"), QStringLiteral("KDE_FULL_SESSION") });
-    runSync(QStringLiteral("xprop"), { QStringLiteral("-root"), QStringLiteral("-remove"), QStringLiteral("KDE_SESSION_VERSION") });
+    runSync(QStringLiteral("xprop"), {QStringLiteral("-root"), QStringLiteral("-remove"), QStringLiteral("KDE_FULL_SESSION")});
+    runSync(QStringLiteral("xprop"), {QStringLiteral("-root"), QStringLiteral("-remove"), QStringLiteral("KDE_SESSION_VERSION")});
 }
 
 // TODO: Check if Necessary
@@ -300,7 +344,7 @@ void cleanupPlasmaEnvironment()
 bool syncDBusEnvironment()
 {
     // At this point all environment variables are set, let's send it to the DBus session server to update the activation environment
-    auto job =  new UpdateLaunchEnvJob(QProcessEnvironment::systemEnvironment());
+    auto job = new UpdateLaunchEnvJob(QProcessEnvironment::systemEnvironment());
     return job->exec();
 }
 
@@ -313,10 +357,10 @@ void setupFontDpi()
         return;
     }
 
-    //TODO port to c++?
+    // TODO port to c++?
     const QByteArray input = "Xft.dpi: " + QByteArray::number(fontsCfg.readEntry("forceFontDPI", 0));
     QProcess p;
-    p.start(QStringLiteral("xrdb"), { QStringLiteral("-quiet"), QStringLiteral("-merge"), QStringLiteral("-nocpp") });
+    p.start(QStringLiteral("xrdb"), {QStringLiteral("-quiet"), QStringLiteral("-merge"), QStringLiteral("-nocpp")});
     p.setProcessChannelMode(QProcess::ForwardedChannels);
     p.write(input);
     p.closeWriteChannel();
@@ -325,23 +369,62 @@ void setupFontDpi()
 
 static bool desktopLockedAtStart = false;
 
-QProcess* setupKSplash()
+QProcess *setupKSplash()
 {
     const auto dlstr = qgetenv("DESKTOP_LOCKED");
     desktopLockedAtStart = dlstr == "true" || dlstr == "1";
     qunsetenv("DESKTOP_LOCKED"); // Don't want it in the environment
 
-    QProcess* p = nullptr;
+    QProcess *p = nullptr;
     if (!desktopLockedAtStart) {
         const KConfig cfg(QStringLiteral("ksplashrc"));
         // the splashscreen and progress indicator
         KConfigGroup ksplashCfg = cfg.group("KSplash");
         if (ksplashCfg.readEntry("Engine", QStringLiteral("KSplashQML")) == QLatin1String("KSplashQML")) {
             p = new QProcess;
-            p->start(QStringLiteral("ksplashqml"), { ksplashCfg.readEntry("Theme", QStringLiteral("Breeze")) });
+            p->start(QStringLiteral("ksplashqml"), {ksplashCfg.readEntry("Theme", QStringLiteral("Breeze"))});
         }
     }
     return p;
+}
+
+bool hasSystemdService(const QString &serviceName)
+{
+    auto msg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.systemd1"),
+                                              QStringLiteral("/org/freedesktop/systemd1"),
+                                              QStringLiteral("org.freedesktop.systemd1.Manager"),
+                                              QStringLiteral("ListUnitsByNames"));
+    msg << QStringList({serviceName});
+    auto reply = QDBusConnection::sessionBus().call(msg);
+    if (reply.type() == QDBusMessage::ErrorMessage) {
+        return false;
+    }
+    // if we have a service returned then it must have found it
+    return !reply.arguments().isEmpty();
+}
+
+bool useSystemdBoot()
+{
+    auto config = KSharedConfig::openConfig(QStringLiteral("startkderc"), KConfig::NoGlobals);
+    const QString configValue = config->group(QStringLiteral("General")).readEntry("systemdBoot", QStringLiteral("false")).toLower();
+
+    if (configValue == QLatin1String("false")) {
+        return false;
+    }
+
+    if (!hasSystemdService(QStringLiteral("plasma-workspace@ANY.target"))) {
+        qWarning() << "Systemd boot requested, but plasma services were not found";
+        return false;
+    }
+
+    if (configValue == QLatin1String("force")) {
+        return true;
+    }
+
+    // xdg-desktop-autostart.target is shipped with an systemd 246 and provides a generator
+    // for creating units out of existing autostart files
+    // only enable our systemd boot if that exists, unless the user has forced the systemd boot above
+    return hasSystemdService(QStringLiteral("xdg-desktop-autostart.target"));
 }
 
 bool startPlasmaSession(bool wayland)
@@ -374,9 +457,6 @@ bool startPlasmaSession(bool wayland)
     bool rc = true;
     QEventLoop e;
 
-    QProcess startPlasmaSession;
-    startPlasmaSession.setProcessChannelMode(QProcess::ForwardedChannels);
-
     QDBusServiceWatcher serviceWatcher;
     serviceWatcher.setConnection(QDBusConnection::sessionBus());
 
@@ -385,15 +465,6 @@ bool startPlasmaSession(bool wayland)
     serviceWatcher.addWatchedService(QStringLiteral("org.kde.ksmserver"));
     serviceWatcher.addWatchedService(QStringLiteral("org.kde.Shutdown"));
     serviceWatcher.setWatchMode(QDBusServiceWatcher::WatchForUnregistration);
-
-    QObject::connect(&startPlasmaSession, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), [&rc, &e](int exitCode, QProcess::ExitStatus) {
-        if (exitCode == 255) {
-            // Startup error
-            messageBox(QStringLiteral("startkde: Could not start ksmserver. Check your installation.\n"));
-            rc = false;
-            e.quit();
-        }
-    });
 
     QObject::connect(&serviceWatcher, &QDBusServiceWatcher::serviceUnregistered, [&]() {
         const QStringList watchedServices = serviceWatcher.watchedServices();
@@ -405,8 +476,50 @@ bool startPlasmaSession(bool wayland)
         }
     });
 
-    startPlasmaSession.start(QStringLiteral(CMAKE_INSTALL_FULL_BINDIR "/plasma_session"), plasmaSessionOptions);
-    e.exec();
+    if (!useSystemdBoot()) {
+        qCDebug(PLASMA_STARTUP) << "Using classic boot";
+        QProcess startPlasmaSession;
+
+        QStringList plasmaSessionOptions;
+        if (wayland) {
+            plasmaSessionOptions << QStringLiteral("--no-lockscreen");
+        } else {
+            if (desktopLockedAtStart) {
+                plasmaSessionOptions << QStringLiteral("--lockscreen");
+            }
+        }
+
+        startPlasmaSession.setProcessChannelMode(QProcess::ForwardedChannels);
+        QObject::connect(&startPlasmaSession, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), [&rc, &e](int exitCode, QProcess::ExitStatus) {
+            if (exitCode == 255) {
+                // Startup error
+                messageBox(QStringLiteral("startkde: Could not start ksmserver. Check your installation.\n"));
+                rc = false;
+                e.quit();
+            }
+        });
+
+        startPlasmaSession.start(QStringLiteral(CMAKE_INSTALL_FULL_BINDIR "/plasma_session"), plasmaSessionOptions);
+        // plasma-session starts everything else up then quits
+        rc = startPlasmaSession.waitForFinished(120 * 1000);
+    } else {
+        qCDebug(PLASMA_STARTUP) << "Using systemd boot";
+        const QString platform = wayland ? QStringLiteral("wayland") : QStringLiteral("x11");
+
+        auto msg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.systemd1"),
+                                                  QStringLiteral("/org/freedesktop/systemd1"),
+                                                  QStringLiteral("org.freedesktop.systemd1.Manager"),
+                                                  QStringLiteral("StartUnit"));
+        msg << QStringLiteral("plasma-workspace@%1.target").arg(platform) << QStringLiteral("fail");
+        auto reply = QDBusConnection::sessionBus().call(msg);
+        if (reply.type() == QDBusMessage::ErrorMessage) {
+            messageBox(QStringLiteral("startkde: Could not start Plasma session.\n"));
+            rc = false;
+        }
+    }
+    if (rc) {
+        e.exec();
+    }
     return rc;
 }
 
@@ -414,7 +527,7 @@ void waitForKonqi()
 {
     const KConfig cfg(QStringLiteral("startkderc"));
     const KConfigGroup grp = cfg.group("WaitForDrKonqi");
-    bool wait_drkonqi =  grp.readEntry("Enabled", true);
+    bool wait_drkonqi = grp.readEntry("Enabled", true);
     if (wait_drkonqi) {
         // wait for remaining drkonqi instances with timeout (in seconds)
         const int wait_drkonqi_timeout = grp.readEntry("Timeout", 900) * 1000;
@@ -426,7 +539,7 @@ void waitForKonqi()
             services = allServices(QLatin1String("org.kde.drkonqi-"));
             if (wait_drkonqi_counter.elapsed() >= wait_drkonqi_timeout) {
                 // ask remaining drkonqis to die in a graceful way
-                for (const auto &service: services) {
+                for (const auto &service : qAsConst(services)) {
                     QDBusInterface iface(service, QStringLiteral("/MainApplication"));
                     iface.call(QStringLiteral("quit"));
                 }

@@ -1,0 +1,162 @@
+# Traducerea ksmserver.po în Română
+# translation of ksmserver.po to Romanian
+# Copyright (C) 2003, 2004, 2005, 2008 Free Software Foundation, Inc.
+# Claudiu Costin <claudiuc@kde.org>, 2003, 2004, 2005.
+# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2010, 2012, 2013, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: ksmserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2020-09-06 16:42+0100\n"
+"Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Lokalize 19.12.3\n"
+
+#: logout.cpp:354
+#, kde-format
+msgid "Logout canceled by '%1'"
+msgstr "Ieșire anulată de „%1”"
+
+#: main.cpp:52
+#, kde-format
+msgid ""
+"The reliable Plasma session manager that talks the standard X11R6 \n"
+"session management protocol (XSMP)."
+msgstr ""
+"Un gestionar de sesiune Plasma care comunică prin\n"
+"protocolul standard de gestiune a sesiunii X11R6 (XSMP)."
+
+#: main.cpp:128
+#, kde-format
+msgid "$HOME not set!"
+msgstr "$HOME nu e definit!"
+
+#: main.cpp:132 main.cpp:138
+#, kde-format
+msgid "$HOME directory (%1) does not exist."
+msgstr "Dosarul $HOME (%1) nu există."
+
+#: main.cpp:134
+#, kde-format
+msgid "No write access to $HOME directory (%1)."
+msgstr "Lipsește accesul de scriere în dosarul $HOME (%1)."
+
+#: main.cpp:140
+#, kde-format
+msgid "No read access to $HOME directory (%1)."
+msgstr "Lipsește accesul de citire în dosarul $HOME (%1)."
+
+#: main.cpp:144
+#, kde-format
+msgid "$HOME directory (%1) is out of disk space."
+msgstr "Dosarul $HOME (%1) a rămas fără spațiu pe disc."
+
+#: main.cpp:147
+#, kde-format
+msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
+msgstr "Scrierea în dosarul $HOME (%2) a eșuat cu eroarea „%1”"
+
+#: main.cpp:160 main.cpp:195
+#, kde-format
+msgid "No write access to '%1'."
+msgstr "Lipsește accesul de scriere în „%1”."
+
+#: main.cpp:162 main.cpp:197
+#, kde-format
+msgid "No read access to '%1'."
+msgstr "Lipsește accesul de citire în „%1”."
+
+#: main.cpp:170 main.cpp:183
+#, kde-format
+msgid "Temp directory (%1) is out of disk space."
+msgstr "Dosarul temporar (%1) a rămas fără spațiu pe disc."
+
+#: main.cpp:173 main.cpp:186
+#, kde-format
+msgid ""
+"Writing to the temp directory (%2) failed with\n"
+"    the error '%1'"
+msgstr ""
+"Scrierea în dosarul temporar (%2) a eșuat cu\n"
+"    eroarea „%1”"
+
+#: main.cpp:201
+#, kde-format
+msgid ""
+"The following installation problem was detected\n"
+"while trying to start Plasma:"
+msgstr ""
+"La pornirea Plasma a fost depistată următoarea\n"
+"problemă cu instalarea:"
+
+#: main.cpp:204
+#, kde-format
+msgid ""
+"\n"
+"\n"
+"Plasma is unable to start.\n"
+msgstr ""
+"\n"
+"\n"
+"Plasma nu poate porni.\n"
+
+#: main.cpp:211
+#, kde-format
+msgid "Plasma Workspace installation problem!"
+msgstr "Problemă cu instalarea spațiului de lucru Plasma!"
+
+#: main.cpp:251
+#, kde-format
+msgid "Restores the saved user session if available"
+msgstr "reface sesiunea precedentă dacă este disponibilă"
+
+#: main.cpp:254
+#, kde-format
+msgid "Also allow remote connections"
+msgstr "Permite și conexiuni distante"
+
+#: main.cpp:257
+#, kde-format
+msgid "Starts the session in locked mode"
+msgstr "Pornește sesiunea în regim blocat"
+
+#: main.cpp:261
+#, kde-format
+msgid ""
+"Starts without lock screen support. Only needed if other component provides "
+"the lock screen."
+msgstr ""
+"Pornește cu suport pentru ecranul de blocare. Necesar doar dacă altă "
+"componentă furnizează ecranul de blocare."
+
+#: server.cpp:867
+#, kde-format
+msgid "Session Management"
+msgstr "Gestiune sesiuni"
+
+#: server.cpp:870
+#, kde-format
+msgid "Log Out"
+msgstr "Ieșire din sistem"
+
+#: server.cpp:875
+#, kde-format
+msgid "Log Out Without Confirmation"
+msgstr "Ieșire fără confirmare"
+
+#: server.cpp:880
+#, kde-format
+msgid "Halt Without Confirmation"
+msgstr "Deconectare fără confirmare"
+
+#: server.cpp:885
+#, kde-format
+msgid "Reboot Without Confirmation"
+msgstr "Repornire fără confirmare"

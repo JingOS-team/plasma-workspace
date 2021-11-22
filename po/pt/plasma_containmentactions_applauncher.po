@@ -1,0 +1,19 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_containmentactions_applauncher\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-12-30 02:56+0100\n"
+"PO-Revision-Date: 2017-07-01 09:30+0100\n"
+"Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
+"Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: launch.cpp:99
+#, kde-format
+msgctxt "plasma_containmentactions_applauncher"
+msgid "Configure Application Launcher Plugin"
+msgstr "Configurar o 'Plugin' do Lançador de Aplicações"

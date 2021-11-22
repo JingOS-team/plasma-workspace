@@ -1,0 +1,44 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Vít Pelčák <vit@pelcak.org>, 2010, 2013, 2017.
+# Lukáš Tinkl <ltinkl@redhat.com>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_calculatorrunner\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2017-03-28 11:29+0100\n"
+"Last-Translator: Vít Pelčák <vit@pelcak.org>\n"
+"Language-Team: Czech <kde-i18n-doc@kde.org>\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Lokalize 2.0\n"
+
+#: calculatorrunner.cpp:52
+#, kde-format
+msgid ""
+"Calculates the value of :q: when :q: is made up of numbers and mathematical "
+"symbols such as +, -, /, *, ! and ^."
+msgstr ""
+
+#: calculatorrunner.cpp:58
+#, kde-format
+msgid "Copy to Clipboard"
+msgstr "Zkopírovat do schránky"
+
+#: calculatorrunner.cpp:283
+#, kde-format
+msgctxt "The result of the calculation is only an approximation"
+msgid "Approximation"
+msgstr "Aproximace"
+
+#: qalculate_engine.cpp:74
+#, kde-format
+msgid ""
+"The exchange rates could not be updated. The following error has been "
+"reported: %1"
+msgstr "Směnný kurz nelze obnovit. Byla ohlášena následující chyba: %1"

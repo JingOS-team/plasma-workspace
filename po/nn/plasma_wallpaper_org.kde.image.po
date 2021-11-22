@@ -1,0 +1,229 @@
+# Translation of plasma_wallpaper_org.kde.image to Norwegian Nynorsk
+#
+# Eirik U. Birkeland <eirbir@gmail.com>, 2008, 2010, 2011.
+# Karl Ove Hufthammer <karl@huftis.org>, 2009, 2015, 2016, 2018, 2019, 2020.
+# Øystein Steffensen-Alværvik <ystein@posteo.net>, 2018.
+msgid ""
+msgstr ""
+"Project-Id-Version: KDE 4\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-29 03:28+0100\n"
+"PO-Revision-Date: 2020-02-16 14:06+0100\n"
+"Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
+"Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
+"Language: nn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 19.12.2\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: image.cpp:245
+#, kde-format
+msgid "Recommended wallpaper file"
+msgstr "Anbefalt bakgrunnsbilete"
+
+#: image.cpp:406
+#, kde-format
+msgid "Directory with the wallpaper to show slides from"
+msgstr "Mappe med bakgrunnsbilete å visa lysbilete frå"
+
+#: image.cpp:708
+#, kde-format
+msgid "Open Image"
+msgstr "Opna bilete"
+
+#: image.cpp:708
+#, kde-format
+msgid "Image Files"
+msgstr "Biletfiler"
+
+#: imagepackage/contents/ui/config.qml:103
+#, kde-format
+msgid "Positioning:"
+msgstr "Plassering:"
+
+#: imagepackage/contents/ui/config.qml:106
+#, kde-format
+msgid "Scaled and Cropped"
+msgstr "Skalert og avskore"
+
+#: imagepackage/contents/ui/config.qml:110
+#, kde-format
+msgid "Scaled"
+msgstr "Skalert"
+
+#: imagepackage/contents/ui/config.qml:114
+#, kde-format
+msgid "Scaled, Keep Proportions"
+msgstr "Skalert, behald storleiksforhold"
+
+#: imagepackage/contents/ui/config.qml:118
+#, kde-format
+msgid "Centered"
+msgstr "Midtstilt"
+
+#: imagepackage/contents/ui/config.qml:122
+#, kde-format
+msgid "Tiled"
+msgstr "Jamsides"
+
+#: imagepackage/contents/ui/config.qml:149
+#, kde-format
+msgid "Order:"
+msgstr "Rekkjefølgje:"
+
+#: imagepackage/contents/ui/config.qml:152
+#, kde-format
+msgid "Random"
+msgstr "Tilfeldig"
+
+#: imagepackage/contents/ui/config.qml:156
+#, kde-format
+msgid "A to Z"
+msgstr "A til Å"
+
+#: imagepackage/contents/ui/config.qml:160
+#, kde-format
+msgid "Z to A"
+msgstr "Å til A"
+
+#: imagepackage/contents/ui/config.qml:164
+#, kde-format
+msgid "Date modified (newest first)"
+msgstr "Dato endra (nyaste først)"
+
+#: imagepackage/contents/ui/config.qml:168
+#, kde-format
+msgid "Date modified (oldest first)"
+msgstr "Dato endra (eldste første)"
+
+#: imagepackage/contents/ui/config.qml:195
+#, kde-format
+msgid "Background:"
+msgstr "Bakgrunn:"
+
+#: imagepackage/contents/ui/config.qml:196
+#, kde-format
+msgid "Blur"
+msgstr "Uklar"
+
+#: imagepackage/contents/ui/config.qml:205
+#, kde-format
+msgid "Solid color"
+msgstr "Einsfarga"
+
+#: imagepackage/contents/ui/config.qml:215
+#, kde-format
+msgid "Select Background Color"
+msgstr "Vel bakgrunnsfarge"
+
+#: imagepackage/contents/ui/config.qml:237
+#, kde-format
+msgid "Change every:"
+msgstr "Byt bilete kvar:"
+
+#: imagepackage/contents/ui/config.qml:247
+#, kde-format
+msgid "%1 hour"
+msgid_plural "%1 hours"
+msgstr[0] "%1 time"
+msgstr[1] "%1 timar"
+
+#: imagepackage/contents/ui/config.qml:266
+#, kde-format
+msgid "%1 minute"
+msgid_plural "%1 minutes"
+msgstr[0] "%1 minutt"
+msgstr[1] "%1 minutt"
+
+#: imagepackage/contents/ui/config.qml:285
+#, kde-format
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] "%1 sekund"
+msgstr[1] "%1 sekund"
+
+#: imagepackage/contents/ui/config.qml:298
+#, kde-format
+msgid "Folders"
+msgstr "Mapper"
+
+#: imagepackage/contents/ui/config.qml:346
+#, kde-format
+msgid "Remove Folder"
+msgstr "Fjern mappe"
+
+#: imagepackage/contents/ui/config.qml:351
+#, kde-format
+msgid "Open Folder"
+msgstr "Opna mappe"
+
+#: imagepackage/contents/ui/config.qml:361
+#, kde-format
+msgid "There are no wallpaper locations configured"
+msgstr "Ingen mapper for bakgrunnsbiletmapper er definerte"
+
+#: imagepackage/contents/ui/config.qml:374
+#, kde-format
+msgid "Add Folder..."
+msgstr "&Legg til mappe …"
+
+#: imagepackage/contents/ui/config.qml:380
+#: imagepackage/contents/ui/config.qml:472
+#, kde-format
+msgid "Get New Wallpapers..."
+msgstr "Hent nye bakgrunnsbilete …"
+
+#: imagepackage/contents/ui/config.qml:420
+#, kde-format
+msgid "There are no wallpapers in this slideshow"
+msgstr "Det er ikkje nokon bakgrunnsbilete i den lysbiletvisinga"
+
+#: imagepackage/contents/ui/config.qml:466
+#, kde-format
+msgid "Add Image..."
+msgstr "Legg til bilete …"
+
+#: imagepackage/contents/ui/main.qml:67
+#, kde-format
+msgid "Open Wallpaper Image"
+msgstr "Opna bakgrunnsbilete"
+
+#: imagepackage/contents/ui/main.qml:68
+#, kde-format
+msgid "Next Wallpaper Image"
+msgstr "Neste bakgrunnsbilete"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:46
+#, kde-format
+msgid "Open Containing Folder"
+msgstr "Opna foreldermappa"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:52
+#, kde-format
+msgid "Restore wallpaper"
+msgstr "Gjenopprett bakgrunnsbilete"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:57
+#, kde-format
+msgid "Remove Wallpaper"
+msgstr "Fjern bakgrunnsbilete"
+
+#: imagepackage/platformcontents/phone/ui/config.qml:82
+#, kde-format
+msgid "Add Custom Wallpaper"
+msgstr "Legg til sjølvvalt bakgrunnsbilete"
+
+#: imagepackage/platformcontents/phone/ui/WallpaperDelegate.qml:95
+#, kde-format
+msgid "Remove wallpaper"
+msgstr "Fjern bakgrunnsbilete"
+
+#: imagepackage/platformcontents/phone/ui/WallpaperDelegate.qml:123
+#, kde-format
+msgid "%1 by %2"
+msgstr "«%1» av %2"

@@ -22,22 +22,20 @@
 #include "appsmodel.h"
 #include "computermodel.h"
 #include "containmentinterface.h"
-#include "draghelper.h"
-#include "simplefavoritesmodel.h"
-#include "kastatsfavoritesmodel.h"
 #include "dashboardwindow.h"
+#include "draghelper.h"
 #include "funnelmodel.h"
+#include "kastatsfavoritesmodel.h"
 #include "processrunner.h"
 #include "recentusagemodel.h"
 #include "rootmodel.h"
 #include "runnermodel.h"
+#include "simplefavoritesmodel.h"
 #include "submenu.h"
 #include "systemmodel.h"
 #include "systemsettings.h"
 #include "wheelinterceptor.h"
 #include "windowsystem.h"
-
-#include <QQmlEngine>
 
 void KickerPlugin::registerTypes(const char *uri)
 {

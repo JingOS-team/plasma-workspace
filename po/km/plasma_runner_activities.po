@@ -1,0 +1,46 @@
+# translation of plasma_runner_activities.po to Khmer
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Khoem Sokhem <khoemsokhem@khmeros.info>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_activities\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-10-21 02:33+0200\n"
+"PO-Revision-Date: 2011-05-06 11:43+0700\n"
+"Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
+"Language-Team: Khmer <support@khmeros.info>\n"
+"Language: km\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: activityrunner.cpp:31
+#, kde-format
+msgctxt "KRunner keyword"
+msgid "activity"
+msgstr "សកម្មភាព"
+
+#: activityrunner.cpp:35
+#, kde-format
+msgid "Lists all activities currently available to be run."
+msgstr "រាយ​សកម្ម​ភាព​ទាំងអស់ ដែល​បច្ចុប្បន្ន​កំពុង​ដំណើរការ ។"
+
+#: activityrunner.cpp:36
+#, kde-format
+msgctxt "KRunner keyword"
+msgid "activity :q:"
+msgstr "សកម្មភាព :q:"
+
+#: activityrunner.cpp:36
+#, kde-format
+msgid "Switches to activity :q:."
+msgstr "ប្ដូរ​ទៅ​សកម្មភាព :q:."
+
+#: activityrunner.cpp:128
+#, kde-format
+msgid "Switch to \"%1\""
+msgstr "ប្ដូរ​ទៅ \"%1\""

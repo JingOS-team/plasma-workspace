@@ -1,0 +1,3 @@
+usr/lib/*/libnotificationmanager.so.1
+usr/lib/*/libnotificationmanager.so.5*
+usr/share/qlogging-categories5/libnotificationmanager.categories

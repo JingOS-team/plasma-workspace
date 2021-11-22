@@ -18,9 +18,9 @@
 
 #include "executable.h"
 #include <QDebug>
-#include <KProcess>
-ExecutableContainer::ExecutableContainer(const QString& command, QObject* parent)
-    : Plasma::DataContainer(parent), m_process(nullptr)
+ExecutableContainer::ExecutableContainer(const QString &command, QObject *parent)
+    : Plasma::DataContainer(parent)
+    , m_process(nullptr)
 {
     setObjectName(command);
     connect(this, &Plasma::DataContainer::updateRequested, this, &ExecutableContainer::exec);
@@ -37,7 +37,6 @@ ExecutableContainer::~ExecutableContainer()
 
 void ExecutableContainer::finished(int exitCode, QProcess::ExitStatus exitStatus)
 {
-    //qDebug() << objectName();
     setData(QStringLiteral("exit code"), exitCode);
     setData(QStringLiteral("exit status"), exitStatus);
     setData(QStringLiteral("stdout"), QString::fromLocal8Bit(m_process->readAllStandardOutput()));
@@ -47,11 +46,9 @@ void ExecutableContainer::finished(int exitCode, QProcess::ExitStatus exitStatus
 
 void ExecutableContainer::exec()
 {
-    //qDebug() << objectName();
     if (!m_process) {
         m_process = new KProcess();
-        connect(m_process, SIGNAL(finished(int,QProcess::ExitStatus)),
-                this, SLOT(finished(int,QProcess::ExitStatus)));
+        connect(m_process, SIGNAL(finished(int, QProcess::ExitStatus)), this, SLOT(finished(int, QProcess::ExitStatus)));
         m_process->setOutputChannelMode(KProcess::SeparateChannels);
         m_process->setShellCommand(objectName());
     }
@@ -63,20 +60,18 @@ void ExecutableContainer::exec()
     }
 }
 
-
-ExecutableEngine::ExecutableEngine(QObject* parent, const QVariantList& args)
+ExecutableEngine::ExecutableEngine(QObject *parent, const QVariantList &args)
     : Plasma::DataEngine(parent, args)
 {
     setMinimumPollingInterval(1000);
 }
 
-bool ExecutableEngine::sourceRequestEvent(const QString& source)
+bool ExecutableEngine::sourceRequestEvent(const QString &source)
 {
-    //qDebug() << source;
     addSource(new ExecutableContainer(source, this));
     return true;
 }
 
-K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(executable, ExecutableEngine , "plasma-dataengine-executable.json")
+K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(executable, ExecutableEngine, "plasma-dataengine-executable.json")
 
 #include "executable.moc"

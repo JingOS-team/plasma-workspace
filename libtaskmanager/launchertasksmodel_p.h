@@ -22,11 +22,11 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 #define LAUNCHERTASKSMODEL_P_H
 
 #include <QDebug>
-#include <QUrl>
 #include <QStringList>
+#include <QUrl>
 
-namespace TaskManager {
-
+namespace TaskManager
+{
 #define NULL_UUID "00000000-0000-0000-0000-000000000000"
 
 inline static bool isValidLauncherUrl(const QUrl &url)
@@ -35,9 +35,7 @@ inline static bool isValidLauncherUrl(const QUrl &url)
         return false;
     }
 
-    if (!url.isLocalFile()
-            && url.scheme() != QLatin1String("applications")
-            && url.scheme() != QLatin1String("preferred")) {
+    if (!url.isLocalFile() && url.scheme() != QLatin1String("applications") && url.scheme() != QLatin1String("preferred")) {
         return false;
     }
 
@@ -59,7 +57,7 @@ inline static std::pair<QUrl, QStringList> deserializeLauncher(const QString &se
         const auto activitiesBlockEnd = serializedLauncher.indexOf("]\n");
 
         if (activitiesBlockEnd != -1) {
-            activities = serializedLauncher.mid(1, activitiesBlockEnd - 1).split(",", QString::SkipEmptyParts);
+            activities = serializedLauncher.mid(1, activitiesBlockEnd - 1).split(",", Qt::SkipEmptyParts);
 
             if (!activities.isEmpty()) {
                 url = QUrl(serializedLauncher.mid(activitiesBlockEnd + 2));
@@ -70,7 +68,7 @@ inline static std::pair<QUrl, QStringList> deserializeLauncher(const QString &se
     // If the activities array is empty, this means that this launcher
     // needs to be on all activities
     if (activities.isEmpty()) {
-        activities = QStringList({ NULL_UUID });
+        activities = QStringList({NULL_UUID});
     }
 
     return std::make_pair(url, activities);

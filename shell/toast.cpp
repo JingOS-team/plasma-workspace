@@ -1,5 +1,6 @@
 /*
  *  Copyright 2014 (c) Martin Klapetek <mklapetek@kde.org>
+ *  Copyright 2021 (c) Liu Bangguo <liubangguo@jingos.com>
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -24,6 +25,8 @@
 #include <QWindow>
 #include <QDebug>
 #include <QUrl>
+
+#include <QQuickWindow>
 
 #include <Plasma/Package>
 #include <KDeclarative/QmlObjectSharedEngine>
@@ -128,5 +131,9 @@ void Toast::hideToast()
         return;
     }
 
-    rootObject->setProperty("display", false);
+
+
+    ((QQuickWindow*)rootObject)->close();
+    delete m_toastObject;
+    m_toastObject = nullptr;
 }

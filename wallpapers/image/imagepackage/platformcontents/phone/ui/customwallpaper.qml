@@ -23,6 +23,7 @@ import org.kde.plasma.core 2.0 as Plasmacore
 import org.kde.plasma.wallpapers.image 2.0 as Wallpaper
 import org.kde.kquickcontrolsaddons 2.0
 import QtQuick.Controls 2.8 as QQC2
+import jingos.display 1.0
 
 Rectangle {
     id: root
@@ -48,7 +49,7 @@ Rectangle {
             cellWidth: Math.floor(customGrid.width / Math.max(Math.floor(customGrid.width / (units.gridUnit*12)), 3))
             cellHeight: cellWidth / (imageWallpaper.width / imageWallpaper.height)
 
-            anchors.margins: 4
+            anchors.margins: JDisplay.dp(4)
             boundsBehavior: Flickable.DragAndOvershootBounds
 
             delegate: MouseArea {

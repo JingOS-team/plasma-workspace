@@ -1,5 +1,6 @@
 /*
  * Copyright 2019 Kai Uwe Broulik <kde@privat.broulik.de>
+ * Copyright 2021 Liu Bangguo <liubangguo@jingos.com>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -21,6 +22,7 @@
 import QtQuick 2.8
 import QtQuick.Window 2.2
 import QtQuick.Layouts 1.1
+import QtQml 2.15
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
@@ -28,6 +30,8 @@ import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.notificationmanager 1.0 as NotificationManager
 
 import org.kde.plasma.private.notifications 2.0 as Notifications
+import jingos.display 1.0
+
 
 ColumnLayout {
     id: jobItem
@@ -41,8 +45,6 @@ ColumnLayout {
 
     property bool hovered
     property QtObject jobDetails
-    // TOOD make an alias on visible if we're not doing an animation
-    property bool showDetails
 
     readonly property int totalFiles: jobItem.jobDetails && jobItem.jobDetails.totalFiles || 0
     readonly property var url: {
@@ -53,12 +55,16 @@ ColumnLayout {
        }
 
        // For a single file show actions for it
-       if (totalFiles === 1) {
-           return jobItem.jobDetails.descriptionUrl;
        // Otherwise the destination folder all of them were copied into
-       } else {
-           return jobItem.jobDetails.destUrl;
+       const url = totalFiles === 1 ? jobItem.jobDetails.descriptionUrl
+                                    : jobItem.jobDetails.destUrl;
+
+       // Don't offer opening files in Trash
+       if (url && url.toString().startsWith("trash:")) {
+           return null;
        }
+
+       return url;
    }
 
     property alias iconContainerItem: jobDragIcon.parent
@@ -90,6 +96,7 @@ ColumnLayout {
             property: "visible"
             value: true
             when: jobDragIcon.valid
+            restoreMode: Binding.RestoreBinding
         }
 
         DraggableFileArea {
@@ -121,7 +128,7 @@ ColumnLayout {
             id: progressBar
             Layout.fillWidth: true
             from: 0
-            to: 100
+            to: JDisplay.dp(100)
             // TODO do we actually need the window visible check? perhaps I do because it can be in popup or expanded plasmoid
             indeterminate: visible && Window.window && Window.window.visible && percentage < 1
                            && jobItem.jobState === NotificationManager.Notifications.JobStateRunning
@@ -185,7 +192,7 @@ ColumnLayout {
         // We want the actions to be right-aligned but Flow also reverses
         // the order of items, so we put them in reverse order
         layoutDirection: Qt.RightToLeft
-        visible: url && url.toString() !== ""
+        visible: jobItem.url && jobItem.url.toString() !== ""
 
         PlasmaComponents3.Button {
             id: otherFileActionsButton
@@ -231,7 +238,7 @@ ColumnLayout {
             PropertyChanges {
                 target: suspendButton
                 tooltip: i18ndc("plasma_applet_org.kde.plasma.notifications", "Resume paused job", "Resume")
-                iconSource: "media-playback-start"
+                checked: true
             }
             PropertyChanges {
                 target: progressBar

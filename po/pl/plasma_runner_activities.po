@@ -1,0 +1,46 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2011, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-10-21 02:33+0200\n"
+"PO-Revision-Date: 2016-05-07 08:00+0100\n"
+"Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
+"Language-Team: Polish <kde-i18n-doc@kde.org>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 2.0\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+
+#: activityrunner.cpp:31
+#, kde-format
+msgctxt "KRunner keyword"
+msgid "activity"
+msgstr "działanie"
+
+#: activityrunner.cpp:35
+#, kde-format
+msgid "Lists all activities currently available to be run."
+msgstr "Wypunktuj wszystkie aktywności dostępne obecnie do uruchomienia."
+
+#: activityrunner.cpp:36
+#, kde-format
+msgctxt "KRunner keyword"
+msgid "activity :q:"
+msgstr "działanie :q:"
+
+#: activityrunner.cpp:36
+#, kde-format
+msgid "Switches to activity :q:."
+msgstr "Przełączniki na aktywność :q:."
+
+#: activityrunner.cpp:128
+#, kde-format
+msgid "Switch to \"%1\""
+msgstr "Przełącz na \"%1\""

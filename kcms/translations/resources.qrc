@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/image">
+        <file alias="icon_move.svg">package/contents/image/icon_move.svg</file>
+        <file alias="arrow_left.png">package/contents/image/arrow_left.png</file>
+    </qresource>
+</RCC>

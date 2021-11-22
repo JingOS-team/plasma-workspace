@@ -1,0 +1,137 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Tamas Szanto <tszanto@interware.hu>, 2009.
+# Kristóf Kiszel <ulysses@kubuntu.org>, 2010, 2011, 2014, 2019, 2020.
+# Balázs Úr <urbalazs@gmail.com>, 2013.
+# Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: KDE 4.2\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2020-11-03 12:17+0100\n"
+"Last-Translator: Kristóf Kiszel <kiszel.kristof@gmail.com>\n"
+"Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 20.11.70\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Kiszel Kristóf"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "ulysses@kubuntu.org"
+
+#. i18n: ectx: label, entry (name), group (Theme)
+#: desktopthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current Plasma Style"
+msgstr "A jelenlegi Plasma stílus neve"
+
+#: kcm.cpp:63
+#, kde-format
+msgid "Plasma Style"
+msgstr "Plasma stílus"
+
+#: kcm.cpp:64
+#, kde-format
+msgid "David Rosca"
+msgstr "David Rosca"
+
+#: kcm.cpp:122
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "Nem lehet létrehozni egy ideiglenes fájlt."
+
+#: kcm.cpp:133
+#, kde-format
+msgid "Unable to download the theme: %1"
+msgstr "Nem lehet letölteni a témát: %1"
+
+#: kcm.cpp:158
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "A téma sikeresen települt."
+
+#: kcm.cpp:161 kcm.cpp:167
+#, kde-format
+msgid "Theme installation failed."
+msgstr "Nem sikerült telepíteni a témát."
+
+#: kcm.cpp:259
+#, kde-format
+msgid "Removing theme failed: %1"
+msgstr "Nem sikerült eltávolítani a témát: %1"
+
+#: package/contents/ui/main.qml:36
+#, kde-format
+msgid "This module lets you choose the Plasma style."
+msgstr "Ebben a modulban kiválaszthatja a Plasma stílusát."
+
+#: package/contents/ui/main.qml:81
+#, kde-format
+msgid "All Themes"
+msgstr "Minden téma"
+
+#: package/contents/ui/main.qml:82
+#, kde-format
+msgid "Light Themes"
+msgstr "Világos témák"
+
+#: package/contents/ui/main.qml:83
+#, kde-format
+msgid "Dark Themes"
+msgstr "Sötét témák"
+
+#: package/contents/ui/main.qml:84
+#, kde-format
+msgid "Color scheme compatible"
+msgstr "Színséma-kompatibilis"
+
+#: package/contents/ui/main.qml:112
+#, kde-format
+msgid "Follows color scheme"
+msgstr "Követi a színsémát"
+
+#: package/contents/ui/main.qml:130
+#, kde-format
+msgid "Edit Theme..."
+msgstr "Szerkesztése…"
+
+#: package/contents/ui/main.qml:137
+#, kde-format
+msgid "Remove Theme"
+msgstr "Eltávolítás"
+
+#: package/contents/ui/main.qml:144
+#, kde-format
+msgid "Restore Theme"
+msgstr "Visszaállítás"
+
+#: package/contents/ui/main.qml:182
+#, kde-format
+msgid "Install from File..."
+msgstr "Telepítés fájlból…"
+
+#: package/contents/ui/main.qml:189
+#, kde-format
+msgid "Get New Plasma Styles..."
+msgstr "Új Plasma stílusok letöltése…"
+
+#: package/contents/ui/main.qml:201
+#, kde-format
+msgid "Open Theme"
+msgstr "Téma megnyitása"
+
+#: package/contents/ui/main.qml:203
+#, kde-format
+msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
+msgstr "Témafájlok (*.zip, *.tar.gz, *.tar.bz2)"

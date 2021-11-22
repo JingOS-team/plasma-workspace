@@ -20,8 +20,8 @@
 #ifndef PLACESPROXYMODEL_H
 #define PLACESPROXYMODEL_H
 
-#include <QIdentityProxyModel>
 #include <KFilePlacesModel>
+#include <QIdentityProxyModel>
 
 class PlacesProxyModel : public QIdentityProxyModel
 {
@@ -34,16 +34,16 @@ public:
         PathRole,
         SizeRole,
         UsedRole,
-        AvailableRole
+        AvailableRole,
     };
 
-    PlacesProxyModel(QObject* parent, KFilePlacesModel* model);
+    PlacesProxyModel(QObject *parent, KFilePlacesModel *model);
 
-    QHash<int, QByteArray>  roleNames() const override;
+    QHash<int, QByteArray> roleNames() const override;
     QVariant data(const QModelIndex &index, int role) const override;
 
 private:
-    KFilePlacesModel* m_placesModel;
+    KFilePlacesModel *m_placesModel;
 };
 
 #endif // PLACESPROXYMODEL_H

@@ -21,6 +21,9 @@ import QtQuick 2.0
 import QtQuick.Controls.Private 1.0
 import QtQuick.Controls 2.3 as QtControls2
 import QtGraphicalEffects 1.0
+
+import org.kde.plasma.core 2.0 as PlasmaCore
+
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.kirigami 2.4 as Kirigami
 import org.kde.kcm 1.1 as KCM
@@ -29,7 +32,7 @@ KCM.GridDelegate {
     id: wallpaperDelegate
 
     property alias color: backgroundRect.color
-    readonly property bool selected: (view.currentIndex === index)
+    readonly property bool selected: (GridView.currentIndex === index)
     opacity: model.pendingDeletion ? 0.5 : 1
 
     text: model.display
@@ -69,7 +72,7 @@ KCM.GridDelegate {
 
         QIconItem {
             anchors.centerIn: parent
-            width: units.iconSizes.large
+            width: PlasmaCore.Units.iconSizes.large
             height: width
             icon: "view-preview"
             visible: !walliePreview.visible
@@ -127,6 +130,6 @@ KCM.GridDelegate {
         if (configDialog.currentWallpaper == "org.kde.image") {
             cfg_Image = model.packageName || model.path;
         }
-        view.currentIndex = index;
+        GridView.currentIndex = index;
     }
 }

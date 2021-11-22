@@ -1,0 +1,75 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: kdeorg\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-23 02:49+0100\n"
+"PO-Revision-Date: 2021-01-28 05:06\n"
+"Last-Translator: \n"
+"Language-Team: Chinese Simplified\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: kdeorg\n"
+"X-Crowdin-Project-ID: 269464\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /kf5-trunk/messages/plasma-workspace/kcm_feedback.pot\n"
+"X-Crowdin-File-ID: 11026\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "KDE China,Guo Yunhe"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "kde-china@kde.org,i@guoyunhe.me"
+
+#: feedback.cpp:57
+#, kde-format
+msgid "User Feedback"
+msgstr "用户反馈"
+
+#: feedback.cpp:59
+#, kde-format
+msgid "Configure user feedback settings"
+msgstr "配置用户反馈设置"
+
+#: package/contents/ui/main.qml:46
+#, kde-format
+msgid ""
+"User Feedback has been disabled centrally. Please contact your distributor."
+msgstr "用户反馈已被集中禁用。请联系您的发行版。"
+
+#: package/contents/ui/main.qml:50 package/contents/ui/main.qml:73
+#, kde-format
+msgid "Plasma:"
+msgstr "Plasma："
+
+#: package/contents/ui/main.qml:54
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"You can help KDE improve Plasma by contributing information on how you use "
+"it, so we can focus on things that matter to you.<nl/><nl/>Contributing this "
+"information is optional and entirely anonymous. We never collect your "
+"personal data, files you use, websites you visit, or information that could "
+"identify you.<nl/><nl/>You can read about our privacy policy in the "
+"following link:"
+msgstr ""
+"您可以分享使用统计信息来帮助我们改进 KDE Plasma，这样我们能专注于改进那些您最"
+"常用的最关注的部分。<nl/><nl/>分享信息是可选的且完全匿名的。我们永远不会收集"
+"您的个人信息，您使用的文件，您访问的网页或任何可以识别您身份的信息。<nl/><nl/"
+">您可以点击下面的链接阅读我们的隐私政策："
+
+#: package/contents/ui/main.qml:109
+#, kde-format
+msgid "Plasma"
+msgstr "Plasma"
+
+#: package/contents/ui/main.qml:127
+#, kde-format
+msgid "The following information will be sent:"
+msgstr "将发送以下信息："

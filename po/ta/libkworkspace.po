@@ -1,0 +1,59 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: கேபசூ 4.1 தமிழாக்கம்\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2008-03-25 09:20+0530\n"
+"Last-Translator: ஆமாச்சு <amachu@ubuntu.com>\n"
+"Language-Team: தமிழ் <https://lists.ubuntu.com/mailman/listinfo/ubuntu-l10n-"
+"tam>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: kdisplaymanager.cpp:782
+#, fuzzy, kde-format
+#| msgid "%1: TTY login"
+msgctxt "user: ..."
+msgid "%1: TTY login"
+msgstr "%1: TTY நுழைகை"
+
+#: kdisplaymanager.cpp:786
+#, fuzzy, kde-format
+#| msgid "Unused"
+msgctxt "... location (TTY or X display)"
+msgid "Unused"
+msgstr "பயன்படுத்தப்படாத"
+
+#: kdisplaymanager.cpp:787
+#, kde-format
+msgid "X login on remote host"
+msgstr "புற தருநரில் X நுழைகை"
+
+#: kdisplaymanager.cpp:787
+#, fuzzy, kde-format
+#| msgid "X login on %1"
+msgctxt "... host"
+msgid "X login on %1"
+msgstr "%1 தனில X நுழைகை"
+
+#: kdisplaymanager.cpp:788
+#, fuzzy, kde-format
+#| msgid "%1: %2"
+msgctxt "user: session type"
+msgid "%1: %2"
+msgstr "%1: %2"
+
+#: kdisplaymanager.cpp:798
+#, fuzzy, kde-format
+#| msgid "%1 (%2)"
+msgctxt "session (location)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"

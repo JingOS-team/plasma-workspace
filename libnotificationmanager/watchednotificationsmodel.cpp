@@ -1,5 +1,6 @@
 /*
  * Copyright 2020 Shah Bhushan <bshah@kde.org>
+ * Copyright 2021 Liu Bangguo <liubangguo@jingos.com>
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -21,10 +22,10 @@
 #include "watchednotificationsmodel.h"
 #include "notifications.h"
 #include "notification.h"
-#include <QDBusMetaType>
 #include <QDBusConnection>
-#include <QDBusServiceWatcher>
 #include <QDBusConnectionInterface>
+#include <QDBusMetaType>
+#include <QDBusServiceWatcher>
 
 #include <QDebug>
 
@@ -34,44 +35,48 @@ using namespace NotificationManager;
 
 class WatchedNotificationsModel::Private : public QObject
 {
-        Q_OBJECT
-    public:
-        explicit Private(WatchedNotificationsModel* q, QObject* parent = nullptr);
-        ~Private();
-        bool valid = false;
+    Q_OBJECT
+public:
+    explicit Private(WatchedNotificationsModel *q, QObject *parent = nullptr);
+    ~Private();
+    bool valid = false;
 
-    public Q_SLOTS:
-        Q_SCRIPTABLE void Notify(uint id, const QString &app_name, uint replaces_id, const QString &app_icon,
-                            const QString &summary, const QString &body, const QStringList &actions,
-                            const QVariantMap &hints, int timeout);
-        Q_SCRIPTABLE void CloseNotification(uint id);
-        void NotificationClosed(uint id, uint reason);
+public Q_SLOTS:
+    Q_SCRIPTABLE void Notify(uint id,
+                             const QString &app_name,
+                             uint replaces_id,
+                             const QString &app_icon,
+                             const QString &summary,
+                             const QString &body,
+                             const QStringList &actions,
+                             const QVariantMap &hints,
+                             int timeout);
+    Q_SCRIPTABLE void CloseNotification(uint id);
+    void NotificationClosed(uint id, uint reason);
 
-    private:
-        WatchedNotificationsModel* q;
-        OrgFreedesktopNotificationsInterface *fdoNotificationsInterface;
+private:
+    WatchedNotificationsModel *q;
+    OrgFreedesktopNotificationsInterface *fdoNotificationsInterface;
 };
 
-WatchedNotificationsModel::Private::Private(WatchedNotificationsModel* q, QObject *parent)
-    : q(q)
-    , QObject(parent)
+WatchedNotificationsModel::Private::Private(WatchedNotificationsModel *q, QObject *parent)
+    : QObject(parent)
+    , q(q)
 {
     QDBusConnection dbus = QDBusConnection::sessionBus();
-    fdoNotificationsInterface = new OrgFreedesktopNotificationsInterface(QStringLiteral("org.freedesktop.Notifications"),
-                                                                         QStringLiteral("/org/freedesktop/Notifications"),
-                                                                         dbus,
-                                                                         this);
-    connect(fdoNotificationsInterface, &OrgFreedesktopNotificationsInterface::NotificationClosed,
-            this, &WatchedNotificationsModel::Private::NotificationClosed);
+    fdoNotificationsInterface =
+        new OrgFreedesktopNotificationsInterface(QStringLiteral("org.freedesktop.Notifications"), QStringLiteral("/org/freedesktop/Notifications"), dbus, this);
+    connect(fdoNotificationsInterface,
+            &OrgFreedesktopNotificationsInterface::NotificationClosed,
+            this,
+            &WatchedNotificationsModel::Private::NotificationClosed);
     dbus.registerObject("/NotificationWatcher", QStringLiteral("org.kde.NotificationWatcher"), this, QDBusConnection::ExportScriptableSlots);
-    QDBusMessage msg = QDBusMessage::createMethodCall(
-        QStringLiteral("org.freedesktop.Notifications"),
-        QStringLiteral("/org/freedesktop/Notifications"),
-        QStringLiteral("org.kde.NotificationManager"),
-        QStringLiteral("RegisterWatcher")
-    );
+    QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.Notifications"),
+                                                      QStringLiteral("/org/freedesktop/Notifications"),
+                                                      QStringLiteral("org.kde.NotificationManager"),
+                                                      QStringLiteral("RegisterWatcher"));
     QDBusMessage reply = QDBusConnection::sessionBus().call(msg, QDBus::NoBlock);
-    if(reply.type() != QDBusMessage::ErrorMessage) {
+    if (reply.type() != QDBusMessage::ErrorMessage) {
         valid = true;
         Q_EMIT q->validChanged(valid);
     }
@@ -79,23 +84,25 @@ WatchedNotificationsModel::Private::Private(WatchedNotificationsModel* q, QObjec
 
 WatchedNotificationsModel::Private::~Private()
 {
-    QDBusMessage msg = QDBusMessage::createMethodCall(
-        QStringLiteral("org.freedesktop.Notifications"),
-        QStringLiteral("/org/freedesktop/Notifications"),
-        QStringLiteral("org.kde.NotificationManager"),
-        QStringLiteral("UnRegisterWatcher")
-    );
+    QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.Notifications"),
+                                                      QStringLiteral("/org/freedesktop/Notifications"),
+                                                      QStringLiteral("org.kde.NotificationManager"),
+                                                      QStringLiteral("UnRegisterWatcher"));
     QDBusConnection::sessionBus().call(msg, QDBus::NoBlock);
 }
 
-void WatchedNotificationsModel::Private::Notify(uint id, const QString &app_name, uint replaces_id, const QString &app_icon,
-                                                const QString &summary, const QString &body, const QStringList &actions,
-                                                const QVariantMap &hints, int timeout)
+void WatchedNotificationsModel::Private::Notify(uint id,
+                                                const QString &app_name,
+                                                uint replaces_id,
+                                                const QString &app_icon,
+                                                const QString &summary,
+                                                const QString &body,
+                                                const QStringList &actions,
+                                                const QVariantMap &hints,
+                                                int timeout)
 {
     const bool wasReplaced = replaces_id > 0;
 
-    qDebug() << summary;
-    qDebug() << body;
     Notification notification(id);
     notification.setSummary(summary);
     notification.setBody(body);
@@ -105,9 +112,12 @@ void WatchedNotificationsModel::Private::Notify(uint id, const QString &app_name
     notification.setTimeout(timeout);
     notification.setHints(hints);
     notification.setIcon(app_icon);
-    if(wasReplaced) {
+    notification.processHints(hints);
+
+    if (wasReplaced) {
         q->onNotificationReplaced(replaces_id, notification);
     } else {
+        // q->onNotificationAdded(notification);
         q->onNotificationInsert(notification);
     }
 }
@@ -123,8 +133,8 @@ void WatchedNotificationsModel::Private::NotificationClosed(uint id, uint reason
 }
 
 WatchedNotificationsModel::WatchedNotificationsModel()
-    : AbstractNotificationsModel(),
-    d(new Private(this, nullptr))
+    : AbstractNotificationsModel()
+    , d(new Private(this, nullptr))
 {
 }
 
@@ -156,17 +166,12 @@ void WatchedNotificationsModel::invokeAction(uint notificationId, const QString 
 {
     QDBusConnection dbus = QDBusConnection::sessionBus();
     dbus.registerObject("/NotificationWatcher", this, QDBusConnection::ExportScriptableSlots);
-    QDBusMessage msg = QDBusMessage::createMethodCall(
-        QStringLiteral("org.freedesktop.Notifications"),
-        QStringLiteral("/org/freedesktop/Notifications"),
-        QStringLiteral("org.kde.NotificationManager"),
-        QStringLiteral("InvokeAction")
-    );
-    msg.setArguments({
-        notificationId,
-        actionName
-    });
-    QDBusConnection::sessionBus().call(msg, QDBus::NoBlock);  
+    QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.Notifications"),
+                                                      QStringLiteral("/org/freedesktop/Notifications"),
+                                                      QStringLiteral("org.kde.NotificationManager"),
+                                                      QStringLiteral("InvokeAction"));
+    msg.setArguments({notificationId, actionName});
+    QDBusConnection::sessionBus().call(msg, QDBus::NoBlock);
 }
 
 void WatchedNotificationsModel::reply(uint notificationId, const QString &text)

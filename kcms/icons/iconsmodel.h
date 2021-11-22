@@ -29,8 +29,7 @@
 
 class IconsSettings;
 
-struct IconsModelData
-{
+struct IconsModelData {
     QString display;
     QString themeName;
     QString description;
@@ -51,7 +50,7 @@ public:
         ThemeNameRole = Qt::UserRole + 1,
         DescriptionRole,
         RemovableRole,
-        PendingDeletionRole
+        PendingDeletionRole,
     };
 
     int rowCount(const QModelIndex &parent) const override;
@@ -70,5 +69,4 @@ signals:
 private:
     QVector<IconsModelData> m_data;
     IconsSettings *m_settings;
-
 };

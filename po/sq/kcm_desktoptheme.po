@@ -1,0 +1,144 @@
+# Albanian translation for kdebase-workspace
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the kdebase-workspace package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kdebase-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2010-02-12 02:43+0000\n"
+"Last-Translator: Vilson Gjeci <vilsongjeci@gmail.com>\n"
+"Language-Team: Albanian <sq@li.org>\n"
+"Language: sq\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2011-05-06 00:17+0000\n"
+"X-Generator: Launchpad (build 12959)\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "KDE Shqip, Launchpad Contributions: Vilson Gjeci"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "kde-shqip@yahoogroups.com,vilsongjeci@gmail.com"
+
+#. i18n: ectx: label, entry (name), group (Theme)
+#: desktopthemesettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Theme Name"
+msgid "Name of the current Plasma Style"
+msgstr "Emri i Temës"
+
+#: kcm.cpp:63
+#, fuzzy, kde-format
+#| msgid "Theme Name"
+msgid "Plasma Style"
+msgstr "Emri i Temës"
+
+#: kcm.cpp:64
+#, kde-format
+msgid "David Rosca"
+msgstr ""
+
+#: kcm.cpp:122
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr ""
+
+#: kcm.cpp:133
+#, kde-format
+msgid "Unable to download the theme: %1"
+msgstr ""
+
+#: kcm.cpp:158
+#, kde-format
+msgid "Theme installed successfully."
+msgstr ""
+
+#: kcm.cpp:161 kcm.cpp:167
+#, kde-format
+msgid "Theme installation failed."
+msgstr ""
+
+#: kcm.cpp:259
+#, kde-format
+msgid "Removing theme failed: %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:36
+#, kde-format
+msgid "This module lets you choose the Plasma style."
+msgstr ""
+
+#: package/contents/ui/main.qml:81
+#, fuzzy, kde-format
+#| msgid "Theme Name"
+msgid "All Themes"
+msgstr "Emri i Temës"
+
+#: package/contents/ui/main.qml:82
+#, fuzzy, kde-format
+#| msgid "Theme Name"
+msgid "Light Themes"
+msgstr "Emri i Temës"
+
+#: package/contents/ui/main.qml:83
+#, kde-format
+msgid "Dark Themes"
+msgstr ""
+
+#: package/contents/ui/main.qml:84
+#, kde-format
+msgid "Color scheme compatible"
+msgstr ""
+
+#: package/contents/ui/main.qml:112
+#, kde-format
+msgid "Follows color scheme"
+msgstr ""
+
+#: package/contents/ui/main.qml:130
+#, fuzzy, kde-format
+#| msgid "Theme Name"
+msgid "Edit Theme..."
+msgstr "Emri i Temës"
+
+#: package/contents/ui/main.qml:137
+#, kde-format
+msgid "Remove Theme"
+msgstr "Hiqe Temën"
+
+#: package/contents/ui/main.qml:144
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Restore Theme"
+msgstr "Hiqe Temën"
+
+#: package/contents/ui/main.qml:182
+#, kde-format
+msgid "Install from File..."
+msgstr ""
+
+#: package/contents/ui/main.qml:189
+#, fuzzy, kde-format
+#| msgid "Theme Name"
+msgid "Get New Plasma Styles..."
+msgstr "Emri i Temës"
+
+#: package/contents/ui/main.qml:201
+#, fuzzy, kde-format
+#| msgid "Theme Name"
+msgid "Open Theme"
+msgstr "Emri i Temës"
+
+#: package/contents/ui/main.qml:203
+#, kde-format
+msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
+msgstr ""

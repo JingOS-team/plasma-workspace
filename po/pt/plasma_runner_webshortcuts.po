@@ -1,0 +1,33 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: krunner_webshortcutsrunner\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-10-21 02:34+0200\n"
+"PO-Revision-Date: 2020-06-17 13:01+0100\n"
+"Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
+"Language-Team: pt <kde-i18n-pt@kde.org>\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: webshortcutrunner.cpp:65
+#, kde-format
+msgid "Opens \"%1\" in a web browser with the query :q:."
+msgstr "Abre o \"%1\" num navegador Web com a pesquisa :q:."
+
+#: webshortcutrunner.cpp:95
+#, kde-format
+msgid "Search in private window"
+msgstr "Procurar numa janela privada"
+
+#: webshortcutrunner.cpp:95
+#, kde-format
+msgid "Search in incognito window"
+msgstr "Procurar numa janela incógnita"
+
+#: webshortcutrunner.cpp:131 webshortcutrunner.cpp:148
+#, kde-format
+msgid "Search %1 for %2"
+msgstr "Procurar em %1 por %2"

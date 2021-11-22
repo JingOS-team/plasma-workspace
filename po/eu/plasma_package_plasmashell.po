@@ -1,0 +1,104 @@
+# Translation of plasma_package_plasmashell.po to Euskara/Basque (eu).
+# Copyright (C) 2018, Free Software Foundation.
+# This file is distributed under the same license as the kde-workspace package.
+# KDE euskaratzeko proiektuaren arduraduna <xalba@euskalnet.net>.
+#
+# Translators:
+# Iñigo Salvador Azurmendi <xalba@euskalnet.net>, 2018.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_package_plasmashell\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2018-07-31 08:45+0100\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@euskalnet.net>\n"
+"Language-Team: Basque <kde-i18n-doc@kde.org>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 2.0\n"
+
+#: shellpackage.cpp:39 shellpackage.cpp:40
+#, kde-format
+msgid "Applets furniture"
+msgstr "Aplikaziotxoen osagarriak"
+
+#: shellpackage.cpp:41
+#, kde-format
+msgid "Explorer UI for adding widgets"
+msgstr "Trepetak gehitzeko exploratzailearen EI (erabiltzailen interfazea)"
+
+#: shellpackage.cpp:42
+#, kde-format
+msgid "User interface for the views that will show containments"
+msgstr ""
+"Konfinamenduak erakutsiko dituzten ikuspegietarako EI (erabiltzailearen "
+"interfazea)"
+
+#: shellpackage.cpp:50
+#, kde-format
+msgid "Default layout file"
+msgstr "Antolamendu-fitxategi lehenetsia"
+
+#: shellpackage.cpp:51
+#, kde-format
+msgid "Default plugins for containments, containmentActions, etc."
+msgstr ""
+"Konfinamendu, konfinamendu-ekintza, etb.-etarako, lehenetsitako pluginak"
+
+#: shellpackage.cpp:56
+#, kde-format
+msgid "Error message shown when an applet fails to load"
+msgstr ""
+"Erakutsitako errore-mezua, aplikaziotxo bat zamatzea huts egiten duenean"
+
+#: shellpackage.cpp:57
+#, kde-format
+msgid "QML component that shows an applet in a popup"
+msgstr "QML osagaia, aplikaziotxo bat leiho-gainerakor batean erakusten duena"
+
+#: shellpackage.cpp:61
+#, kde-format
+msgid ""
+"Compact representation of an applet when collapsed in a popup, for instance "
+"as an icon. Applets can override this component."
+msgstr ""
+"Aplikaziotxo bat leiho-gainerakor batean beheratzearen irudikapen trinko "
+"bat, esaterako ikono bat bezala. Aplikaziotxoek osagai hau indargetu "
+"dezakete."
+
+#: shellpackage.cpp:66
+#, kde-format
+msgid "QML component for the configuration dialog for applets"
+msgstr "QML osagaia, aplikaziotxoak konfiguratzeko-elkarrizketarako"
+
+#: shellpackage.cpp:69
+#, kde-format
+msgid "QML component for the configuration dialog for containments"
+msgstr "QML osagaia, konfinamenduak konfiguratzeko-elkarrizketarako"
+
+#: shellpackage.cpp:70
+#, kde-format
+msgid "Panel configuration UI"
+msgstr "Panelak konfiguratzeko EI (erabiltzaile interfazea)"
+
+#: shellpackage.cpp:73
+#, kde-format
+msgid "QML component for choosing an alternate applet"
+msgstr "QML osagaia, ordezko aplikaziotxo bat hautatzeko"
+
+#: shellpackage.cpp:76
+#, kde-format
+msgid "Widgets explorer UI"
+msgstr "Trepeten exploratzailearen EI (erabiltzailearen interfazea)"
+
+#: shellpackage.cpp:80
+#, kde-format
+msgid ""
+"A UI for writing, loading and running desktop scripts in the current live "
+"session"
+msgstr ""
+"Uneko saioan mahaigaineko scriptak idatzi, zamatu eta ibiltzeko EI "
+"(erabiltzailearen interfazea) bat"

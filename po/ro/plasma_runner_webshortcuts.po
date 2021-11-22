@@ -1,0 +1,43 @@
+# Traducerea krunner_webshortcutsrunner.po în Română
+# translation of krunner_webshortcutsrunner to Romanian
+# Copyright (C) 2008 This_file_is_part_of_KDE
+# This file is distributed under the same license as the krunner_webshortcutsrunner package.
+# Laurenţiu Buzdugan <lbuz@rolix.org>, 2008".
+# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2020.
+# Cristian Oneț <onet.cristian@gmail.com>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: krunner_webshortcutsrunner\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-10-21 02:34+0200\n"
+"PO-Revision-Date: 2020-08-31 23:43+0100\n"
+"Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
+"Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Lokalize 19.12.3\n"
+
+#: webshortcutrunner.cpp:65
+#, kde-format
+msgid "Opens \"%1\" in a web browser with the query :q:."
+msgstr "Deschide „%1” într-o fereastră de navigator cu interogarea :q:."
+
+#: webshortcutrunner.cpp:95
+#, kde-format
+msgid "Search in private window"
+msgstr "Caută în fereastră privată"
+
+#: webshortcutrunner.cpp:95
+#, kde-format
+msgid "Search in incognito window"
+msgstr "Caută în fereastră incognito"
+
+#: webshortcutrunner.cpp:131 webshortcutrunner.cpp:148
+#, kde-format
+msgid "Search %1 for %2"
+msgstr "Caută %1 pentru %2"

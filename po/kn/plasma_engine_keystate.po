@@ -1,0 +1,110 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Ashok Kumar <ashok567@gmail.com>, 2009.
+# Shankar Prasad <svenkate@redhat.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-10-24 02:31+0200\n"
+"PO-Revision-Date: 2010-01-13 13:04+0530\n"
+"Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
+"Language-Team: Kannada <kde-l10n-kn@kde.org>\n"
+"Language: kn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: keystate.cpp:28
+#, kde-format
+msgid "Shift"
+msgstr "ಶಿಫ್ಟ್ ಕೀಲಿಕೈ"
+
+#: keystate.cpp:29
+#, kde-format
+msgid "Ctrl"
+msgstr "Ctrl"
+
+#: keystate.cpp:30
+#, kde-format
+msgid "Alt"
+msgstr "ಆಲ್ಟ್"
+
+#: keystate.cpp:31
+#, kde-format
+msgid "Meta"
+msgstr "ಮೆಟಾ"
+
+#: keystate.cpp:32
+#, kde-format
+msgid "Super"
+msgstr "ಸೂಪರ್"
+
+#: keystate.cpp:33
+#, kde-format
+msgid "Hyper"
+msgstr "ಹೈಪರ್"
+
+#: keystate.cpp:34
+#, kde-format
+msgid "AltGr"
+msgstr "AltGr"
+
+#: keystate.cpp:35
+#, kde-format
+msgid "Num Lock"
+msgstr "ನಮ್‌ ಲಾಕ್"
+
+#: keystate.cpp:36
+#, kde-format
+msgid "Caps Lock"
+msgstr "ಕ್ಯಾಪ್ಸ್ ಲಾಕ್"
+
+#: keystate.cpp:37
+#, kde-format
+msgid "Scroll Lock"
+msgstr "ಸ್ಕ್ರಾಲ್ ಲಾಕ್"
+
+#: keystate.cpp:39
+#, kde-format
+msgid "Left Button"
+msgstr "ಎಡ ಬದಿಯ ಗುಂಡಿ"
+
+#: keystate.cpp:40
+#, kde-format
+msgid "Right Button"
+msgstr "ಬಲ ಬದಿಯ ಗುಂಡಿ"
+
+#: keystate.cpp:41
+#, kde-format
+msgid "Middle Button"
+msgstr "ಮಧ್ಯದ ಗುಂಡಿ"
+
+#: keystate.cpp:42
+#, kde-format
+msgid "First X Button"
+msgstr "ಮೊದಲನೆಯ X ಗುಂಡಿ"
+
+#: keystate.cpp:43
+#, kde-format
+msgid "Second X Button"
+msgstr "ಎರಡನೆಯ X ಗುಂಡಿ"
+
+#: keystate.cpp:58 keystate.cpp:69 keystate.cpp:97 keystate.cpp:118
+#: keystate.cpp:126
+#, kde-format
+msgid "Pressed"
+msgstr "ಒತ್ತಲ್ಪಟ್ಟಿದೆ"
+
+#: keystate.cpp:59 keystate.cpp:104 keystate.cpp:127
+#, kde-format
+msgid "Latched"
+msgstr "ಚಿಲಕಹಾಕಿದೆ"
+
+#: keystate.cpp:60 keystate.cpp:111 keystate.cpp:128
+#, kde-format
+msgid "Locked"
+msgstr "ಲಾಕ್‌ ಮಾಡಲಾಗಿದೆ"

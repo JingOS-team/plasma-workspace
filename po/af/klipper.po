@@ -1,0 +1,777 @@
+# UTF-8 test:äëïöü
+# Copyright (C) 2001, 2005 Free Software Foundation, Inc.
+# Frikkie Thirion <frix@expertron.co.za>, 2001,2002.
+# Juanita Franz <juanita.franz@vr-web.de>, 2005.
+# Kobus <kabousv@therugby.co.za>, 2005.
+msgid ""
+msgstr ""
+"Project-Id-Version: klipper stable\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2005-11-23 23:00+0200\n"
+"Last-Translator: Kobus <kabousv@therugby.co.za>\n"
+"Language-Team: AFRIKAANS <translate-discuss-af@lists.sourceforge.net>\n"
+"Language: af\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.10.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ReplayActionInHistory)
+#: actionsconfig.ui:17
+#, fuzzy, kde-format
+#| msgid "&Replay actions on an item selected from history"
+msgid "Replay actions on an item selected from history"
+msgstr "Weerspeel aksies op 'n item gekose van geskiedenis"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_StripWhiteSpace)
+#: actionsconfig.ui:24
+#, kde-format
+msgid "Remove whitespace when executing actions"
+msgstr "Verwyder witspasie by uitvoering van aksies"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnableMagicMimeActions)
+#. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
+#: actionsconfig.ui:31 klipper.kcfg:84
+#, fuzzy, kde-format
+#| msgid "Enable/Disable Clipboard Actions"
+msgid "Enable MIME-based actions"
+msgstr "Aktiveer/Deaktiveer Klipbord Aksies"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: actionsconfig.ui:38
+#, fuzzy, kde-format
+#| msgid "Ac&tions"
+msgid "Action list:"
+msgstr "Aksies"
+
+#. i18n: ectx: property (text), widget (ActionsTreeWidget, kcfg_ActionList)
+#: actionsconfig.ui:49
+#, kde-format
+msgid "Regular Expression"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (ActionsTreeWidget, kcfg_ActionList)
+#: actionsconfig.ui:54 editactiondialog.cpp:225
+#, kde-format
+msgid "Description"
+msgstr "Beskrywing"
+
+#. i18n: ectx: property (text), widget (QPushButton, pbAddAction)
+#: actionsconfig.ui:64
+#, fuzzy, kde-format
+#| msgid "&Add Action"
+msgid "Add Action..."
+msgstr "Voeg by Aksie"
+
+#. i18n: ectx: property (text), widget (QPushButton, pbEditAction)
+#: actionsconfig.ui:71
+#, fuzzy, kde-format
+#| msgid "&Add Action"
+msgid "Edit Action..."
+msgstr "Voeg by Aksie"
+
+#. i18n: ectx: property (text), widget (QPushButton, pbDelAction)
+#: actionsconfig.ui:78
+#, fuzzy, kde-format
+#| msgid "&Delete Action"
+msgid "Delete Action"
+msgstr "Uitvee Aksie"
+
+#. i18n: ectx: property (text), widget (QPushButton, pbAdvanced)
+#: actionsconfig.ui:85
+#, fuzzy, kde-format
+#| msgid "Advanced..."
+msgid "Advanced..."
+msgstr "Gevorderde..."
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: actionsconfig.ui:94
+#, no-c-format, kde-format
+msgid ""
+"Click on a highlighted item's column to change it. \"%s\" in a command will "
+"be replaced with the clipboard contents.<br>For more information about "
+"regular expressions, you could have a look at the <a href=\"https://en."
+"wikipedia.org/wiki/Regular_expression\">Wikipedia entry about this topic</a>."
+msgstr ""
+
+#: configdialog.cpp:37
+#, fuzzy, kde-format
+#| msgid " sec"
+msgid " second"
+msgid_plural " seconds"
+msgstr[0] " sek"
+msgstr[1] " sek"
+
+#: configdialog.cpp:38
+#, fuzzy, kde-format
+#| msgid " entry"
+#| msgid_plural " entries"
+msgid " entry"
+msgid_plural " entries"
+msgstr[0] "inskrywing"
+msgstr[1] "inskrywing"
+
+#: configdialog.cpp:248
+#, kde-format
+msgid "Advanced Settings"
+msgstr "Gevorderde Instellings"
+
+#: configdialog.cpp:272
+#, fuzzy, kde-format
+#| msgid "&General"
+msgctxt "General Config"
+msgid "General"
+msgstr "Algemeen"
+
+#: configdialog.cpp:272
+#, fuzzy, kde-format
+#| msgid "&General"
+msgid "General Configuration"
+msgstr "Algemeen"
+
+#: configdialog.cpp:273
+#, fuzzy, kde-format
+#| msgid "Ac&tions"
+msgctxt "Actions Config"
+msgid "Actions"
+msgstr "Aksies"
+
+#: configdialog.cpp:273
+#, fuzzy, kde-format
+#| msgid "Ac&tions"
+msgid "Actions Configuration"
+msgstr "Aksies"
+
+#: configdialog.cpp:277
+#, fuzzy, kde-format
+msgctxt "Shortcuts Config"
+msgid "Shortcuts"
+msgstr "Kortpaaie"
+
+#: configdialog.cpp:277
+#, fuzzy, kde-format
+msgid "Shortcuts Configuration"
+msgstr "Kortpaaie"
+
+#: configdialog.cpp:335
+#, kde-format
+msgid "D&isable Actions for Windows of Type WM_CLASS"
+msgstr "Deaktiveer Aksies vir Vensters van Tipe WM_CLASS"
+
+#: configdialog.cpp:344
+#, fuzzy, kde-format
+#| msgid ""
+#| "<qt>This lets you specify windows in which Klipper should not invoke "
+#| "\"actions\". Use<br><br><center><b>xprop | grep WM_CLASS</b></"
+#| "center><br>in a terminal to find out the WM_CLASS of a window. Next, "
+#| "click on the window you want to examine. The first string it outputs "
+#| "after the equal sign is the one you need to enter here.</qt>"
+msgid ""
+"<qt>This lets you specify windows in which Klipper should not invoke "
+"\"actions\". Use<br /><br /><center><b>xprop | grep WM_CLASS</b></"
+"center><br />in a terminal to find out the WM_CLASS of a window. Next, click "
+"on the window you want to examine. The first string it outputs after the "
+"equal sign is the one you need to enter here.</qt>"
+msgstr ""
+"<qt>Hierdie laat u vensters spesifiseer in wat klipper nie moet aktiveer "
+"\"aksies\". Gebruik<br><br><center><b>xprop | grep WM_CLASS</b></"
+"center><br>in 'n terminaal om die WM_CLASS van 'n venster uit te vind. "
+"Volgende, kliek op die venster wat u wil ondersoek. Die eerste string wat "
+"dit uitset na die gelyk teken is die een wat u hier moet invoer.</qt>"
+
+#: editactiondialog.cpp:41
+#, kde-format
+msgid "Ignore"
+msgstr ""
+
+#: editactiondialog.cpp:43
+#, fuzzy, kde-format
+#| msgid "Clipboard"
+msgid "Replace Clipboard"
+msgstr "Klipbord"
+
+#: editactiondialog.cpp:45
+#, fuzzy, kde-format
+#| msgid "Clipboard"
+msgid "Add to Clipboard"
+msgstr "Klipbord"
+
+#: editactiondialog.cpp:221
+#, fuzzy, kde-format
+#| msgid "Add Command"
+msgid "Command"
+msgstr "Voeg by Opdrag"
+
+#: editactiondialog.cpp:223
+#, kde-format
+msgid "Output Handling"
+msgstr ""
+
+#: editactiondialog.cpp:265
+#, kde-format
+msgid "Action Properties"
+msgstr ""
+
+#: editactiondialog.cpp:370
+#, fuzzy, kde-format
+#| msgid "<new command>"
+msgid "new command"
+msgstr "<nuwe opdrag>"
+
+#: editactiondialog.cpp:370
+#, fuzzy, kde-format
+#| msgid "Description"
+msgid "Command Description"
+msgstr "Beskrywing"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: editactiondialog.ui:20
+#, fuzzy, kde-format
+#| msgid "Ac&tions"
+msgid "Action properties:"
+msgstr "Aksies"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: editactiondialog.ui:42
+#, kde-format
+msgid "Regular expression:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: editactiondialog.ui:52
+#, fuzzy, kde-format
+#| msgid "Description"
+msgid "Description:"
+msgstr "Beskrywing"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: editactiondialog.ui:62
+#, kde-format
+msgid "Automatic:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: editactiondialog.ui:87
+#, kde-format
+msgid "List of commands for this action:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, pbAddCommand)
+#: editactiondialog.ui:144
+#, kde-format
+msgid "Add Command"
+msgstr "Voeg by Opdrag"
+
+#. i18n: ectx: property (text), widget (QPushButton, pbRemoveCommand)
+#: editactiondialog.ui:151
+#, kde-format
+msgid "Remove Command"
+msgstr "Verwyder Opdrag"
+
+#. i18n: ectx: property (toolTip), widget (QTableView, twCommandList)
+#: editactiondialog.ui:176
+#, kde-format
+msgid "Double-click an item to edit"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_KeepClipboardContents)
+#: generalconfig.ui:17
+#, fuzzy, kde-format
+#| msgid "Save clipboard contents on e&xit"
+msgid "Save clipboard contents on exit"
+msgstr "Stoor klipbord inhoud op beïendig"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_PreventEmptyClipboard)
+#. i18n: ectx: label, entry (PreventEmptyClipboard), group (General)
+#: generalconfig.ui:24 klipper.kcfg:16
+#, fuzzy, kde-format
+#| msgid "Pre&vent empty clipboard"
+msgid "Prevent empty clipboard"
+msgstr "Verhoed leegmaak van klipbord"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_IgnoreImages)
+#. i18n: ectx: label, entry (IgnoreImages), group (General)
+#: generalconfig.ui:31 klipper.kcfg:21
+#, kde-format
+msgid "Ignore images"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, selection_group)
+#: generalconfig.ui:38
+#, fuzzy, kde-format
+#| msgid "Pre&vent empty clipboard"
+msgid "Selection and Clipboard"
+msgstr "Verhoed leegmaak van klipbord"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_IgnoreSelection)
+#: generalconfig.ui:44
+#, fuzzy, kde-format
+#| msgid "&Ignore selection"
+msgid "Ignore selection"
+msgstr "Ignoreer keuse"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_SelectionTextOnly)
+#: generalconfig.ui:51
+#, fuzzy, kde-format
+#| msgid "&Ignore selection"
+msgid "Text selection only"
+msgstr "Ignoreer keuse"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_SyncClipboards)
+#: generalconfig.ui:58
+#, fuzzy, kde-format
+#| msgid "Sy&nchronize contents of the clipboard and the selection"
+msgid "Synchronize contents of the clipboard and the selection"
+msgstr "Sinkroniseer inhoud van die klipbord en die keuse"
+
+#. i18n: ectx: property (text), widget (QLabel, timeout_label)
+#: generalconfig.ui:68
+#, fuzzy, kde-format
+#| msgid "Tim&eout for action popups:"
+msgid "Timeout for action popups:"
+msgstr "Tydverstreke vir aksie opspring:"
+
+#. i18n: ectx: property (text), widget (QLabel, history_size_label)
+#: generalconfig.ui:82
+#, fuzzy, kde-format
+#| msgid "C&lipboard history size:"
+msgid "Clipboard history size:"
+msgstr "Klipbord geskiedenis grootte:"
+
+#: historyimageitem.cpp:51
+#, kde-format
+msgid "%1x%2 %3bpp"
+msgstr ""
+
+#: klipper.cpp:129
+#, fuzzy, kde-format
+#| msgid "Enable/Disable Clipboard Actions"
+msgid "Enable Clipboard Actions"
+msgstr "Aktiveer/Deaktiveer Klipbord Aksies"
+
+#: klipper.cpp:152
+#, kde-format
+msgid "C&lear Clipboard History"
+msgstr "Maak skoon Klipbord Geskiedenis"
+
+#: klipper.cpp:159
+#, kde-format
+msgid "&Configure Klipper..."
+msgstr "Konfigureer Klipper..."
+
+#: klipper.cpp:164
+#, kde-format
+msgctxt "@item:inmenu Quit Klipper"
+msgid "&Quit"
+msgstr ""
+
+#: klipper.cpp:168
+#, kde-format
+msgid "Manually Invoke Action on Current Clipboard"
+msgstr "Eiehandig Aktiveer Aksie op Huidige Klipbord"
+
+#: klipper.cpp:175
+#, kde-format
+msgid "&Edit Contents..."
+msgstr "Redigeer Inhoud..."
+
+#: klipper.cpp:183
+#, kde-format
+msgid "&Show Barcode..."
+msgstr ""
+
+#: klipper.cpp:191
+#, fuzzy, kde-format
+#| msgid "C&lipboard history size:"
+msgid "Next History Item"
+msgstr "Klipbord geskiedenis grootte:"
+
+#: klipper.cpp:195
+#, fuzzy, kde-format
+#| msgid "C&lipboard history size:"
+msgid "Previous History Item"
+msgstr "Klipbord geskiedenis grootte:"
+
+#: klipper.cpp:201
+#, fuzzy, kde-format
+#| msgid "&Popup menu at mouse-cursor position"
+msgid "Open Klipper at Mouse Position"
+msgstr "Opspring kieslys na muis-wyser posisie"
+
+#: klipper.cpp:483
+#, fuzzy, kde-format
+#| msgid ""
+#| "You can enable URL actions later by right-clicking on the Klipper icon "
+#| "and selecting 'Enable Actions'"
+msgid ""
+"You can enable URL actions later by left-clicking on the Klipper icon and "
+"selecting 'Enable Clipboard Actions'"
+msgstr ""
+"U kan Url aksies later aktiveer deur regter-drukking op die Klipper ikoon en "
+"deur te kies 'aktiveer aksies'"
+
+#: klipper.cpp:517
+#, fuzzy, kde-format
+#| msgid ""
+#| "Should Klipper start automatically\n"
+#| "when you login?"
+msgid "Should Klipper start automatically when you login?"
+msgstr ""
+"Moet Klipper outomaties\n"
+"begin wanneer u aanteken?"
+
+#: klipper.cpp:518
+#, kde-format
+msgid "Automatically Start Klipper?"
+msgstr "Outomaties Begin Klipper?"
+
+#: klipper.cpp:519
+#, kde-format
+msgid "Start"
+msgstr "Begin"
+
+#: klipper.cpp:520
+#, kde-format
+msgid "Do Not Start"
+msgstr "Moet Nie Begin"
+
+#: klipper.cpp:867
+#, kde-format
+msgid "Edit Contents"
+msgstr "Redigeer Inhoud"
+
+#: klipper.cpp:934
+#, kde-format
+msgid "Mobile Barcode"
+msgstr ""
+
+#: klipper.cpp:981
+#, fuzzy, kde-format
+#| msgid "C&lear Clipboard History"
+msgid "Really delete entire clipboard history?"
+msgstr "Maak skoon Klipbord Geskiedenis"
+
+#: klipper.cpp:982
+#, fuzzy, kde-format
+#| msgid "C&lear Clipboard History"
+msgid "Delete clipboard history?"
+msgstr "Maak skoon Klipbord Geskiedenis"
+
+#: klipper.cpp:998 klipper.cpp:1007
+#, fuzzy, kde-format
+#| msgid "C&lipboard history size:"
+msgid "Clipboard history"
+msgstr "Klipbord geskiedenis grootte:"
+
+#: klipper.cpp:1024
+#, kde-format
+msgid "up"
+msgstr ""
+
+#: klipper.cpp:1031
+#, kde-format
+msgid "current"
+msgstr ""
+
+#: klipper.cpp:1038
+#, kde-format
+msgid "down"
+msgstr ""
+
+#. i18n: ectx: label, entry (Version), group (General)
+#: klipper.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Klipper"
+msgid "Klipper version"
+msgstr "Klipper"
+
+#. i18n: ectx: label, entry (KeepClipboardContents), group (General)
+#: klipper.kcfg:12
+#, fuzzy, kde-format
+#| msgid "Save clipboard contents on e&xit"
+msgid "Keep clipboard contents"
+msgstr "Stoor klipbord inhoud op beïendig"
+
+#. i18n: ectx: whatsthis, entry (PreventEmptyClipboard), group (General)
+#: klipper.kcfg:18
+#, kde-format
+msgid ""
+"Selecting this option has the effect, that the clipboard can never be "
+"emptied. E.g. when an application exits, the clipboard would usually be "
+"emptied."
+msgstr ""
+"Die kies van hierdie opsie het die effek, dat die klipbord nooit leeg gemaak "
+"kan word nie. Byvoorbeeld wanneer 'n aansoek uitgaan, sal die klipbord "
+"gewoonlik leeggemaak word."
+
+#. i18n: ectx: label, entry (IgnoreSelection), group (General)
+#: klipper.kcfg:25
+#, fuzzy, kde-format
+#| msgid "&Ignore selection"
+msgid "Ignore Selection"
+msgstr "Ignoreer keuse"
+
+#. i18n: ectx: whatsthis, entry (IgnoreSelection), group (General)
+#: klipper.kcfg:27
+#, kde-format
+msgid ""
+"When an area of the screen is selected with mouse or keyboard, this is "
+"called \"the selection\".<br/>If this option is set, the selection is not "
+"entered into the clipboard history, though it is still available for pasting "
+"using the middle mouse button."
+msgstr ""
+
+#. i18n: ectx: label, entry (SyncClipboards), group (General)
+#: klipper.kcfg:34
+#, fuzzy, kde-format
+#| msgid "Separate clipboard and selection"
+msgid "Synchronize clipboard and selection"
+msgstr "Aparte klipbord en keuse"
+
+#. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
+#: klipper.kcfg:36
+#, kde-format
+msgid ""
+"When an area of the screen is selected with mouse or keyboard, this is "
+"called \"the selection\".<br/>If this option is selected, the selection and "
+"the clipboard is kept the same, so that anything in the selection is "
+"immediately available for pasting elsewhere using any method, including the "
+"traditional middle mouse button. Otherwise, the selection is recorded in the "
+"clipboard history, but the selection can only be pasted using the middle "
+"mouse button. Also see the 'Ignore Selection' option."
+msgstr ""
+
+#. i18n: ectx: label, entry (SelectionTextOnly), group (General)
+#: klipper.kcfg:39
+#, fuzzy, kde-format
+#| msgid "&Ignore selection"
+msgid "Selection text only"
+msgstr "Ignoreer keuse"
+
+#. i18n: ectx: whatsthis, entry (SelectionTextOnly), group (General)
+#: klipper.kcfg:41
+#, kde-format
+msgid ""
+"When an area of the screen is selected with mouse or keyboard, this is "
+"called \"the selection\".<br/>If this option is selected, only text "
+"selections are stored in the history, while images and other selections are "
+"not."
+msgstr ""
+
+#. i18n: ectx: label, entry (UseGUIRegExpEditor), group (General)
+#: klipper.kcfg:44
+#, kde-format
+msgid "Use graphical regexp editor"
+msgstr ""
+
+#. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
+#: klipper.kcfg:48
+#, kde-format
+msgid "URL grabber enabled"
+msgstr ""
+
+#. i18n: ectx: label, entry (NoActionsForWM_CLASS), group (General)
+#: klipper.kcfg:53
+#, kde-format
+msgid "No actions for WM_CLASS"
+msgstr ""
+
+#. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
+#: klipper.kcfg:56
+#, fuzzy, kde-format
+#| msgid "Tim&eout for action popups:"
+msgid "Timeout for action popups (seconds)"
+msgstr "Tydverstreke vir aksie opspring:"
+
+#. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
+#: klipper.kcfg:60
+#, kde-format
+msgid "A value of 0 disables the timeout"
+msgstr "'n waarde van 0 deaktiveer die tydverstreke"
+
+#. i18n: ectx: label, entry (MaxClipItems), group (General)
+#: klipper.kcfg:63
+#, fuzzy, kde-format
+#| msgid "C&lipboard history size:"
+msgid "Clipboard history size"
+msgstr "Klipbord geskiedenis grootte:"
+
+#. i18n: ectx: label, entry (ActionList), group (General)
+#: klipper.kcfg:69
+#, kde-format
+msgid "Dummy entry for indicating changes in an action's tree widget"
+msgstr ""
+
+#. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
+#: klipper.kcfg:75
+#, fuzzy, kde-format
+#| msgid "Remove whitespace when executing actions"
+msgid "Strip whitespace when executing an action"
+msgstr "Verwyder witspasie by uitvoering van aksies"
+
+#. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
+#: klipper.kcfg:77
+#, kde-format
+msgid ""
+"Sometimes, the selected text has some whitespace at the end, which, if "
+"loaded as URL in a browser would cause an error. Enabling this option "
+"removes any whitespace at the beginning or end of the selected string (the "
+"original clipboard contents will not be modified)."
+msgstr ""
+"Soms, het die verkose teks somige witspasie aan die einde, wat as gelaai "
+"word as URL in 'n blaaier foute kan veroorsaak. Ontspering van hierdie opsie "
+"verwyder enige witspasies aan die begin of einde van die verkose string (die "
+"oorspronklike klipbord inhoud sal nie modifiseer word nie)."
+
+#. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
+#: klipper.kcfg:80
+#, fuzzy, kde-format
+#| msgid "&Replay actions on an item selected from history"
+msgid "Replay action in history"
+msgstr "Weerspeel aksies op 'n item gekose van geskiedenis"
+
+#: klipperpopup.cpp:72
+#, kde-format
+msgid "<empty clipboard>"
+msgstr "<klipbord leegmaak>"
+
+#: klipperpopup.cpp:73
+#, kde-format
+msgid "<no matches>"
+msgstr "<geen saampassings>"
+
+#: klipperpopup.cpp:121
+#, kde-format
+msgid "Klipper - Clipboard Tool"
+msgstr "Klipper - Klipbord Program"
+
+#: klipperpopup.cpp:125
+#, kde-format
+msgid "Search..."
+msgstr ""
+
+#: klipperpopup.cpp:134 main.cpp:43
+#, kde-format
+msgid "KDE cut & paste history utility"
+msgstr "Kde knip & plak geskiedenis program"
+
+#: main.cpp:41 tray.cpp:35
+#, kde-format
+msgid "Klipper"
+msgstr "Klipper"
+
+#: main.cpp:45
+#, kde-format
+msgid ""
+"(c) 1998, Andrew Stanley-Jones\n"
+"1998-2002, Carsten Pfeiffer\n"
+"2001, Patrick Dubroy"
+msgstr ""
+
+#: main.cpp:48
+#, kde-format
+msgid "Carsten Pfeiffer"
+msgstr ""
+
+#: main.cpp:48
+#, kde-format
+msgid "Author"
+msgstr "Outeur"
+
+#: main.cpp:50
+#, kde-format
+msgid "Andrew Stanley-Jones"
+msgstr ""
+
+#: main.cpp:50
+#, kde-format
+msgid "Original Author"
+msgstr "Oorspronklike Outeur"
+
+#: main.cpp:52
+#, kde-format
+msgid "Patrick Dubroy"
+msgstr ""
+
+#: main.cpp:52
+#, kde-format
+msgid "Contributor"
+msgstr "Bydraer"
+
+#: main.cpp:54
+#, kde-format
+msgid "Luboš Luňák"
+msgstr ""
+
+#: main.cpp:54
+#, kde-format
+msgid "Bugfixes and optimizations"
+msgstr "Fout herstellers en optimerings"
+
+#: main.cpp:56
+#, kde-format
+msgid "Esben Mose Hansen"
+msgstr ""
+
+#: main.cpp:56
+#, fuzzy, kde-format
+#| msgid "Maintainer"
+msgid "Previous Maintainer"
+msgstr "Onderhouer"
+
+#: main.cpp:58
+#, kde-format
+msgid "Martin Gräßlin"
+msgstr ""
+
+#: main.cpp:58
+#, kde-format
+msgid "Maintainer"
+msgstr "Onderhouer"
+
+#: main.cpp:60
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Frikkie Thirion, Juanita Franz, Kobus Venter"
+
+#: main.cpp:60
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "frix@expertron.co.za, juanita.franz@vr-web.de, kabousv@therugby.co.za"
+
+#: popupproxy.cpp:157
+#, kde-format
+msgid "&More"
+msgstr "Meer"
+
+#: tray.cpp:38
+#, fuzzy, kde-format
+#| msgid "Save clipboard contents on e&xit"
+msgid "Clipboard Contents"
+msgstr "Stoor klipbord inhoud op beïendig"
+
+#: tray.cpp:38 tray.cpp:54
+#, fuzzy, kde-format
+#| msgid "C&lipboard history size:"
+msgid "Clipboard is empty"
+msgstr "Klipbord geskiedenis grootte:"
+
+#: urlgrabber.cpp:185
+#, fuzzy, kde-format
+#| msgid " - Actions For: "
+msgid "%1 - Actions For: %2"
+msgstr " -  Aksies vir: "
+
+#: urlgrabber.cpp:212
+#, kde-format
+msgid "Disable This Popup"
+msgstr "Versper hierdie opspring"
+
+#: urlgrabber.cpp:218
+#, kde-format
+msgid "&Cancel"
+msgstr ""

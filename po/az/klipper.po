@@ -1,0 +1,733 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# Xəyyam Qocayev <xxmn77@gmail.com>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2020-09-01 17:43+0400\n"
+"Last-Translator: Kheyyam Gojayev <xxmn77@gmail.com>\n"
+"Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
+"Language: az\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 20.08.0\n"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ReplayActionInHistory)
+#: actionsconfig.ui:17
+#, kde-format
+msgid "Replay actions on an item selected from history"
+msgstr "Tarixçədən seçilmiş element üzərində hərəkətləri təkararlamaq"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_StripWhiteSpace)
+#: actionsconfig.ui:24
+#, kde-format
+msgid "Remove whitespace when executing actions"
+msgstr "Fəaliyyəti yerinə yetirərkən boşluqları silmək"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnableMagicMimeActions)
+#. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
+#: actionsconfig.ui:31 klipper.kcfg:84
+#, kde-format
+msgid "Enable MIME-based actions"
+msgstr "MİME əsaslı fəaliyyətləri aktivləşdirmək"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: actionsconfig.ui:38
+#, kde-format
+msgid "Action list:"
+msgstr "Fəaliyyətlər siyahısı:"
+
+#. i18n: ectx: property (text), widget (ActionsTreeWidget, kcfg_ActionList)
+#: actionsconfig.ui:49
+#, kde-format
+msgid "Regular Expression"
+msgstr "Müntəzəm ifadə"
+
+#. i18n: ectx: property (text), widget (ActionsTreeWidget, kcfg_ActionList)
+#: actionsconfig.ui:54 editactiondialog.cpp:225
+#, kde-format
+msgid "Description"
+msgstr "Təsviri"
+
+#. i18n: ectx: property (text), widget (QPushButton, pbAddAction)
+#: actionsconfig.ui:64
+#, kde-format
+msgid "Add Action..."
+msgstr "Fəaliyyət əlavə etmək..."
+
+#. i18n: ectx: property (text), widget (QPushButton, pbEditAction)
+#: actionsconfig.ui:71
+#, kde-format
+msgid "Edit Action..."
+msgstr "Fəaliyyətə düzəliş etmək..."
+
+#. i18n: ectx: property (text), widget (QPushButton, pbDelAction)
+#: actionsconfig.ui:78
+#, kde-format
+msgid "Delete Action"
+msgstr "Fəaliyyəti silmək"
+
+#. i18n: ectx: property (text), widget (QPushButton, pbAdvanced)
+#: actionsconfig.ui:85
+#, kde-format
+msgid "Advanced..."
+msgstr "Əlavələr..."
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: actionsconfig.ui:94
+#, no-c-format, kde-format
+msgid ""
+"Click on a highlighted item's column to change it. \"%s\" in a command will "
+"be replaced with the clipboard contents.<br>For more information about "
+"regular expressions, you could have a look at the <a href=\"https://en."
+"wikipedia.org/wiki/Regular_expression\">Wikipedia entry about this topic</a>."
+msgstr ""
+"Vurğulanan element sütununu dəyişmək üçün ona klikləyin. Bu əmrdəki \"%s\", "
+"yaddaş buferində olanlarla əvəz olunacaq.<br>Müntəzəm ifadələr haqqında daha "
+"çox məlumat üçün bax <a href=\"https://en.wikipedia.org/wiki/"
+"Regular_expression\">Vikipediyada buna uyğun movzu</a>"
+
+#: configdialog.cpp:37
+#, kde-format
+msgid " second"
+msgid_plural " seconds"
+msgstr[0] " saniyə"
+msgstr[1] " saniyələr"
+
+#: configdialog.cpp:38
+#, kde-format
+msgid " entry"
+msgid_plural " entries"
+msgstr[0] " giriş"
+msgstr[1] " girişlər"
+
+#: configdialog.cpp:248
+#, kde-format
+msgid "Advanced Settings"
+msgstr "Əlavə Ayarlar"
+
+#: configdialog.cpp:272
+#, kde-format
+msgctxt "General Config"
+msgid "General"
+msgstr "Əsas"
+
+#: configdialog.cpp:272
+#, kde-format
+msgid "General Configuration"
+msgstr "Əsas Tənzimləmələr"
+
+#: configdialog.cpp:273
+#, kde-format
+msgctxt "Actions Config"
+msgid "Actions"
+msgstr "Fəaliyyətlər"
+
+#: configdialog.cpp:273
+#, kde-format
+msgid "Actions Configuration"
+msgstr "Fəaliyyətləri Tənzimləmək"
+
+#: configdialog.cpp:277
+#, kde-format
+msgctxt "Shortcuts Config"
+msgid "Shortcuts"
+msgstr "Qısayollar"
+
+#: configdialog.cpp:277
+#, kde-format
+msgid "Shortcuts Configuration"
+msgstr "Qısayollar Tənzimləməsi"
+
+#: configdialog.cpp:335
+#, kde-format
+msgid "D&isable Actions for Windows of Type WM_CLASS"
+msgstr "WM_CLASS növü pəncərələri üçün fəaliyyətləri s&öndürmək"
+
+#: configdialog.cpp:344
+#, kde-format
+msgid ""
+"<qt>This lets you specify windows in which Klipper should not invoke "
+"\"actions\". Use<br /><br /><center><b>xprop | grep WM_CLASS</b></"
+"center><br />in a terminal to find out the WM_CLASS of a window. Next, click "
+"on the window you want to examine. The first string it outputs after the "
+"equal sign is the one you need to enter here.</qt>"
+msgstr ""
+"<qt>Bu, Klipper-in \"fəaliyətlər\"i çağırmaması lazım olan pəncərələri təyin "
+"etməyə imkan verir. Pəncərənin WM_CLASS növünü tapmaq üçün terminalda <br /"
+"><br /><center><b>xprop | grep WM_CLASS</b></center><br />əmrini başladın və "
+"sonra ayırd etmək istədiyiniz pəncərəyə klikləyin.Bərabər işarəsindən "
+"sonrakı ilk sətri bura daxil etməniz lazımdır.</qt>"
+
+#: editactiondialog.cpp:41
+#, kde-format
+msgid "Ignore"
+msgstr "İmtina"
+
+#: editactiondialog.cpp:43
+#, kde-format
+msgid "Replace Clipboard"
+msgstr "Mübadilə beferini dəyişmək"
+
+#: editactiondialog.cpp:45
+#, kde-format
+msgid "Add to Clipboard"
+msgstr "Mübadilə buferinə əlavə etmək"
+
+#: editactiondialog.cpp:221
+#, kde-format
+msgid "Command"
+msgstr "Əmr"
+
+#: editactiondialog.cpp:223
+#, kde-format
+msgid "Output Handling"
+msgstr "Çıxarışın idarə edilməsi"
+
+#: editactiondialog.cpp:265
+#, kde-format
+msgid "Action Properties"
+msgstr "Fəaliyyətin xüsusiyyətləri"
+
+#: editactiondialog.cpp:370
+#, kde-format
+msgid "new command"
+msgstr "yeni əmr"
+
+#: editactiondialog.cpp:370
+#, kde-format
+msgid "Command Description"
+msgstr "Əmrin təsviri"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: editactiondialog.ui:20
+#, kde-format
+msgid "Action properties:"
+msgstr "Fəaliyyətin xüsusiyyətləri:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: editactiondialog.ui:42
+#, kde-format
+msgid "Regular expression:"
+msgstr "Müntəzəm ifadə:"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: editactiondialog.ui:52
+#, kde-format
+msgid "Description:"
+msgstr "İzahatı:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: editactiondialog.ui:62
+#, kde-format
+msgid "Automatic:"
+msgstr "Avtomatik:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: editactiondialog.ui:87
+#, kde-format
+msgid "List of commands for this action:"
+msgstr "Bu fəaliyət üçün əmrlər siyahısı:"
+
+#. i18n: ectx: property (text), widget (QPushButton, pbAddCommand)
+#: editactiondialog.ui:144
+#, kde-format
+msgid "Add Command"
+msgstr "Əmr əlavə etmək"
+
+#. i18n: ectx: property (text), widget (QPushButton, pbRemoveCommand)
+#: editactiondialog.ui:151
+#, kde-format
+msgid "Remove Command"
+msgstr "Əmri silmək"
+
+#. i18n: ectx: property (toolTip), widget (QTableView, twCommandList)
+#: editactiondialog.ui:176
+#, kde-format
+msgid "Double-click an item to edit"
+msgstr "İkili kliklə elementə düzəliş etmək"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_KeepClipboardContents)
+#: generalconfig.ui:17
+#, kde-format
+msgid "Save clipboard contents on exit"
+msgstr "Çıxışda mübadilə buferindəkiləri saxlamaq"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_PreventEmptyClipboard)
+#. i18n: ectx: label, entry (PreventEmptyClipboard), group (General)
+#: generalconfig.ui:24 klipper.kcfg:16
+#, kde-format
+msgid "Prevent empty clipboard"
+msgstr "Boş panelin qarşısını almaq"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_IgnoreImages)
+#. i18n: ectx: label, entry (IgnoreImages), group (General)
+#: generalconfig.ui:31 klipper.kcfg:21
+#, kde-format
+msgid "Ignore images"
+msgstr "Şəkilləri gözardı etmək"
+
+#. i18n: ectx: property (title), widget (QGroupBox, selection_group)
+#: generalconfig.ui:38
+#, kde-format
+msgid "Selection and Clipboard"
+msgstr "Seçim və Mübadilə buferi"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_IgnoreSelection)
+#: generalconfig.ui:44
+#, kde-format
+msgid "Ignore selection"
+msgstr "Seçimdən imtina etmək"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_SelectionTextOnly)
+#: generalconfig.ui:51
+#, kde-format
+msgid "Text selection only"
+msgstr "Yalnız mətn seçimi"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_SyncClipboards)
+#: generalconfig.ui:58
+#, kde-format
+msgid "Synchronize contents of the clipboard and the selection"
+msgstr "Mübadilə yaddaşı və seçim tərkiblərini sinxronlaşdırmaq"
+
+#. i18n: ectx: property (text), widget (QLabel, timeout_label)
+#: generalconfig.ui:68
+#, kde-format
+msgid "Timeout for action popups:"
+msgstr "Fəaliyyət popup açılmasında gecikmə:"
+
+#. i18n: ectx: property (text), widget (QLabel, history_size_label)
+#: generalconfig.ui:82
+#, kde-format
+msgid "Clipboard history size:"
+msgstr "Mübadilə buferi tarixçəsinin ölçüsü:"
+
+#: historyimageitem.cpp:51
+#, kde-format
+msgid "%1x%2 %3bpp"
+msgstr "%1x%2 %3bpp"
+
+#: klipper.cpp:129
+#, kde-format
+msgid "Enable Clipboard Actions"
+msgstr "Mübadilə buferi fəaliyyətlərini aktiv etmək"
+
+#: klipper.cpp:152
+#, kde-format
+msgid "C&lear Clipboard History"
+msgstr "Mübadilə tarixşəsini si&lmək"
+
+#: klipper.cpp:159
+#, kde-format
+msgid "&Configure Klipper..."
+msgstr "Klipperi &Tənzimləmək..."
+
+#: klipper.cpp:164
+#, kde-format
+msgctxt "@item:inmenu Quit Klipper"
+msgid "&Quit"
+msgstr "&Çıxış"
+
+#: klipper.cpp:168
+#, kde-format
+msgid "Manually Invoke Action on Current Clipboard"
+msgstr "Fəaliyyəti cari mübadilə buferinə özünüz çağırın"
+
+#: klipper.cpp:175
+#, kde-format
+msgid "&Edit Contents..."
+msgstr "Tərkiblərə D&üzəliş..."
+
+#: klipper.cpp:183
+#, kde-format
+msgid "&Show Barcode..."
+msgstr "Barkodu Gö&stərmək..."
+
+#: klipper.cpp:191
+#, kde-format
+msgid "Next History Item"
+msgstr "Tarixçənin növbəti elementi"
+
+#: klipper.cpp:195
+#, kde-format
+msgid "Previous History Item"
+msgstr "Tarixçənin əvvəlki elementi"
+
+#: klipper.cpp:201
+#, kde-format
+msgid "Open Klipper at Mouse Position"
+msgstr "Klipperi kursorun altında açmaq"
+
+#: klipper.cpp:483
+#, kde-format
+msgid ""
+"You can enable URL actions later by left-clicking on the Klipper icon and "
+"selecting 'Enable Clipboard Actions'"
+msgstr ""
+"URL-la görüləcək işləri daha sonra Klipper ikonuna klikləyərək və \"Mübadilə "
+"Buferi Fəaliyyətlərini Aktiv etmək\" seçərək aktiv edə bilərsiniz"
+
+#: klipper.cpp:517
+#, kde-format
+msgid "Should Klipper start automatically when you login?"
+msgstr "Girişdə Klipper avtomatik başladılsın?"
+
+#: klipper.cpp:518
+#, kde-format
+msgid "Automatically Start Klipper?"
+msgstr "Kipper avtomatik başladılsın?"
+
+#: klipper.cpp:519
+#, kde-format
+msgid "Start"
+msgstr "Başlatmaq"
+
+#: klipper.cpp:520
+#, kde-format
+msgid "Do Not Start"
+msgstr "Başlatmamaq"
+
+#: klipper.cpp:867
+#, kde-format
+msgid "Edit Contents"
+msgstr "Tərkiblərinə düzəliş etmək"
+
+#: klipper.cpp:934
+#, kde-format
+msgid "Mobile Barcode"
+msgstr "Mobil Barkod"
+
+#: klipper.cpp:981
+#, kde-format
+msgid "Really delete entire clipboard history?"
+msgstr "Mübadilə tarixçəsini silmək istədiyinizə əminsiniz?"
+
+#: klipper.cpp:982
+#, kde-format
+msgid "Delete clipboard history?"
+msgstr "Mübadilə tarixçəsi silinsin?"
+
+#: klipper.cpp:998 klipper.cpp:1007
+#, kde-format
+msgid "Clipboard history"
+msgstr "Mübadilə tarixçəsi"
+
+#: klipper.cpp:1024
+#, kde-format
+msgid "up"
+msgstr "yuxarı"
+
+#: klipper.cpp:1031
+#, kde-format
+msgid "current"
+msgstr "cari"
+
+#: klipper.cpp:1038
+#, kde-format
+msgid "down"
+msgstr "aşağı"
+
+#. i18n: ectx: label, entry (Version), group (General)
+#: klipper.kcfg:9
+#, kde-format
+msgid "Klipper version"
+msgstr "Klipper versiyası"
+
+#. i18n: ectx: label, entry (KeepClipboardContents), group (General)
+#: klipper.kcfg:12
+#, kde-format
+msgid "Keep clipboard contents"
+msgstr "Mübadilə buferi tərkiblərini saxlamaq"
+
+#. i18n: ectx: whatsthis, entry (PreventEmptyClipboard), group (General)
+#: klipper.kcfg:18
+#, kde-format
+msgid ""
+"Selecting this option has the effect, that the clipboard can never be "
+"emptied. E.g. when an application exits, the clipboard would usually be "
+"emptied."
+msgstr ""
+"Bu seçim ona gətirib çıxarır ki, mübadilə buferi heç vaxt təmizlənməyəcək. "
+"Məsələn, tətbiqdən çıxdıqda adətən mübadilə tarixşəsi təmizlənir."
+
+#. i18n: ectx: label, entry (IgnoreSelection), group (General)
+#: klipper.kcfg:25
+#, kde-format
+msgid "Ignore Selection"
+msgstr "Seçilmişlərdən imtina etmək"
+
+#. i18n: ectx: whatsthis, entry (IgnoreSelection), group (General)
+#: klipper.kcfg:27
+#, kde-format
+msgid ""
+"When an area of the screen is selected with mouse or keyboard, this is "
+"called \"the selection\".<br/>If this option is set, the selection is not "
+"entered into the clipboard history, though it is still available for pasting "
+"using the middle mouse button."
+msgstr ""
+"Ekranın hansısa sahəsi siçan və ya klaviatura ilə seçildiyində bu \"seçim\" "
+"adlanır.<br/>Əgər bu parametr seçilərsə seçim mübadilə tarixçəsinə əlavə "
+"edilmir, lakin siçanın orta düyməsi ilə yerləşdirmək mümkün olaraq qalır."
+
+#. i18n: ectx: label, entry (SyncClipboards), group (General)
+#: klipper.kcfg:34
+#, kde-format
+msgid "Synchronize clipboard and selection"
+msgstr "Mübadilə buferi və seçilmişi sinxronizasiya ütmək"
+
+#. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
+#: klipper.kcfg:36
+#, kde-format
+msgid ""
+"When an area of the screen is selected with mouse or keyboard, this is "
+"called \"the selection\".<br/>If this option is selected, the selection and "
+"the clipboard is kept the same, so that anything in the selection is "
+"immediately available for pasting elsewhere using any method, including the "
+"traditional middle mouse button. Otherwise, the selection is recorded in the "
+"clipboard history, but the selection can only be pasted using the middle "
+"mouse button. Also see the 'Ignore Selection' option."
+msgstr ""
+"Ekranın bir hissəsi siçan və ya klaviatura ilə seçildiyində, buna \"seçim\" "
+"adı verilir.<br/>Bu patametr seçildiyində seçim ilə mübadilə buferi eyni "
+"tutularaq, seçimdəki hər hansı bir şeyin -siçanın orta düyməsi də daxil "
+"olmaqla - hansısa bir üsuldan istifadə edərək əlavə edilməsi təmin edilir. "
+"Əks halda seçin mübadilə tarixçəsinə əlavə edilir və ancaq siçanın orta "
+"düyməsi ilə əlavə yerləşdirilmək mümkündür. Həmçinin \"Seçimdən imtina etmək"
+"\" parametrinə də nəzər salın."
+
+#. i18n: ectx: label, entry (SelectionTextOnly), group (General)
+#: klipper.kcfg:39
+#, kde-format
+msgid "Selection text only"
+msgstr "Yalnız seçilən mətn"
+
+#. i18n: ectx: whatsthis, entry (SelectionTextOnly), group (General)
+#: klipper.kcfg:41
+#, kde-format
+msgid ""
+"When an area of the screen is selected with mouse or keyboard, this is "
+"called \"the selection\".<br/>If this option is selected, only text "
+"selections are stored in the history, while images and other selections are "
+"not."
+msgstr ""
+"Ekranın bir hissəsi siçan və ya klaviatura ilə seçildiyində buna \"seçim\" "
+"deyilir.<br/>Bu Paramtr seçilibsə tarixşədə yalnız mətn seçimləri "
+"saxlanılır, şəkil və ya digər seçimlər gözardı edilir."
+
+#. i18n: ectx: label, entry (UseGUIRegExpEditor), group (General)
+#: klipper.kcfg:44
+#, kde-format
+msgid "Use graphical regexp editor"
+msgstr "Müntəzəm ifadənin qrafik redaktorunu istifadə etmək"
+
+#. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
+#: klipper.kcfg:48
+#, kde-format
+msgid "URL grabber enabled"
+msgstr "URL yaxalayıcı aktivdir"
+
+#. i18n: ectx: label, entry (NoActionsForWM_CLASS), group (General)
+#: klipper.kcfg:53
+#, kde-format
+msgid "No actions for WM_CLASS"
+msgstr "WM_CLASS üçün fəaliyyət yoxdur"
+
+#. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
+#: klipper.kcfg:56
+#, kde-format
+msgid "Timeout for action popups (seconds)"
+msgstr "Fəaliyyətlərin görünməsi pəncərəsinin açlmasında gecikmə (saniyələrlə)"
+
+#. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
+#: klipper.kcfg:60
+#, kde-format
+msgid "A value of 0 disables the timeout"
+msgstr "0 dəyəri gecikmə vaxtını söndürür"
+
+#. i18n: ectx: label, entry (MaxClipItems), group (General)
+#: klipper.kcfg:63
+#, kde-format
+msgid "Clipboard history size"
+msgstr "Mübadilə buferi tarixşəsinin ölçüsü"
+
+#. i18n: ectx: label, entry (ActionList), group (General)
+#: klipper.kcfg:69
+#, kde-format
+msgid "Dummy entry for indicating changes in an action's tree widget"
+msgstr ""
+"Budaqlanan vidjetlər fəaliyyətlərində dəyişiklikləri göstərmək üçün boş "
+"element"
+
+#. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
+#: klipper.kcfg:75
+#, kde-format
+msgid "Strip whitespace when executing an action"
+msgstr "Fəaliyyət icra olunarkən boşluqları silmək"
+
+#. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
+#: klipper.kcfg:77
+#, kde-format
+msgid ""
+"Sometimes, the selected text has some whitespace at the end, which, if "
+"loaded as URL in a browser would cause an error. Enabling this option "
+"removes any whitespace at the beginning or end of the selected string (the "
+"original clipboard contents will not be modified)."
+msgstr ""
+"Bəzən seçilmiş mətn boşluqlardan ibarət ola bilər, bu da veb bələdçisində "
+"açıldıqda səhv ünvan kimi qeyd oluna bilər. Bu seçim edildikdə mətnin "
+"əvvəlində və sonundakı böçluqlar silinir. Mətnin tərkibləri dəyişməz qalır."
+
+#. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
+#: klipper.kcfg:80
+#, kde-format
+msgid "Replay action in history"
+msgstr "Tarixçədəki fəaliyyətləri təkrarlamaq"
+
+#: klipperpopup.cpp:72
+#, kde-format
+msgid "<empty clipboard>"
+msgstr "<boş mübadilə yaddaşı>"
+
+#: klipperpopup.cpp:73
+#, kde-format
+msgid "<no matches>"
+msgstr "<oxşarı yoxdur>"
+
+#: klipperpopup.cpp:121
+#, kde-format
+msgid "Klipper - Clipboard Tool"
+msgstr "Klipper - Mübadilə buferi Aləti"
+
+#: klipperpopup.cpp:125
+#, kde-format
+msgid "Search..."
+msgstr "Axtarış..."
+
+#: klipperpopup.cpp:134 main.cpp:43
+#, kde-format
+msgid "KDE cut & paste history utility"
+msgstr "KDE mübadilə buferi tarixçəsi vasitəsi"
+
+#: main.cpp:41 tray.cpp:35
+#, kde-format
+msgid "Klipper"
+msgstr "Klipper"
+
+#: main.cpp:45
+#, kde-format
+msgid ""
+"(c) 1998, Andrew Stanley-Jones\n"
+"1998-2002, Carsten Pfeiffer\n"
+"2001, Patrick Dubroy"
+msgstr ""
+"(c) 1998, Andrew Stanley-Jones\n"
+"1998-2002, Carsten Pfeiffer\n"
+"2001, Patrick Dubroy"
+
+#: main.cpp:48
+#, kde-format
+msgid "Carsten Pfeiffer"
+msgstr "Carsten Pfeiffer"
+
+#: main.cpp:48
+#, kde-format
+msgid "Author"
+msgstr "Müəllif"
+
+#: main.cpp:50
+#, kde-format
+msgid "Andrew Stanley-Jones"
+msgstr "Andrew Stanley-Jones"
+
+#: main.cpp:50
+#, kde-format
+msgid "Original Author"
+msgstr "Əsas müəllifi"
+
+#: main.cpp:52
+#, kde-format
+msgid "Patrick Dubroy"
+msgstr "Patrick Dubroy"
+
+#: main.cpp:52
+#, kde-format
+msgid "Contributor"
+msgstr "Bu işə töhvə verənlər"
+
+#: main.cpp:54
+#, kde-format
+msgid "Luboš Luňák"
+msgstr "Lubos Lunak"
+
+#: main.cpp:54
+#, kde-format
+msgid "Bugfixes and optimizations"
+msgstr "Xəta düzəltmələri və optimallaşdırma"
+
+#: main.cpp:56
+#, kde-format
+msgid "Esben Mose Hansen"
+msgstr "Esben Mose Hansen"
+
+#: main.cpp:56
+#, kde-format
+msgid "Previous Maintainer"
+msgstr "Əvvəlki müşayətçi"
+
+#: main.cpp:58
+#, kde-format
+msgid "Martin Gräßlin"
+msgstr "Martin Gräßlin"
+
+#: main.cpp:58
+#, kde-format
+msgid "Maintainer"
+msgstr "Müşayətçi"
+
+#: main.cpp:60
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Xəyyam Qocayev"
+
+#: main.cpp:60
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "xxmn77@gmail.com"
+
+#: popupproxy.cpp:157
+#, kde-format
+msgid "&More"
+msgstr "&Daha çox"
+
+#: tray.cpp:38
+#, kde-format
+msgid "Clipboard Contents"
+msgstr "Mübadilə buferi tərkibləri"
+
+#: tray.cpp:38 tray.cpp:54
+#, kde-format
+msgid "Clipboard is empty"
+msgstr "Mübadilə buferi boşdur"
+
+#: urlgrabber.cpp:185
+#, kde-format
+msgid "%1 - Actions For: %2"
+msgstr "%1 - Bunun üçün fəaliyyətlər: %2"
+
+#: urlgrabber.cpp:212
+#, kde-format
+msgid "Disable This Popup"
+msgstr "Bu menyu pəncərəsini bağlamaq"
+
+#: urlgrabber.cpp:218
+#, kde-format
+msgid "&Cancel"
+msgstr "&İmtina etmək"

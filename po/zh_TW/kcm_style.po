@@ -1,0 +1,255 @@
+# translation of kcmstyle.po to Chinese Traditional
+# Copyright (C) 2001, 2002, 2007, 2008 Free Software Foundation, Inc.
+# Paladin Liu <paladin@ms1.hinet.net>, 2002.
+# Kenduest Lee <kenduest@i18n.linux.org.tw>, 2002.
+# Frank Weng (a.k.a. Franklin) <franklin at goodhorse dot idv dot tw>, 2007, 2008, 2009.
+# Franklin Weng <franklin at goodhorse dot idv dot tw>, 2007.
+# Franklin Weng <franklin@mail.everfocus.com.tw>, 2010, 2012.
+# Jeff Huang <s8321414@gmail.com>, 2017.
+# pan93412 <pan93412@gmail.com>, 2018, 2019, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmstyle\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2020-01-26 19:02+0800\n"
+"Last-Translator: Yi-Jyun Pan <pan93412@gmail.com>\n"
+"Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 19.12.1\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Paladin Liu,Kenduest Lee, Jeff Huang,pan93412"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+"paladin@ms1.hinet.net,kenduest@i18n.linux.org.tw, s8321414@gmail.com,"
+"pan93412@gmail.com"
+
+#: gtkpage.cpp:89
+#, kde-format
+msgid "%1 is not a valid GTK Theme archive."
+msgstr "%1 不是有效的 GTK 主題封存檔。"
+
+#: kcmstyle.cpp:91
+#, kde-format
+msgid "Application Style"
+msgstr "應用程式樣式"
+
+#: kcmstyle.cpp:95
+#, kde-format
+msgid "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik"
+msgstr "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik"
+
+#: kcmstyle.cpp:97
+#, kde-format
+msgid "Karol Szwed"
+msgstr "Karol Szwed"
+
+#: kcmstyle.cpp:98
+#, kde-format
+msgid "Daniel Molkentin"
+msgstr "Daniel Molkentin"
+
+#: kcmstyle.cpp:99
+#, kde-format
+msgid "Kai Uwe Broulik"
+msgstr "Kai Uwe Broulik"
+
+#: kcmstyle.cpp:182 kcmstyle.cpp:189
+#, kde-format
+msgid "There was an error loading the configuration dialog for this style."
+msgstr "載入此風格的組態對話盒時發生錯誤。"
+
+#: kcmstyle.cpp:280
+#, kde-format
+msgid "Failed to apply selected style '%1'."
+msgstr "無法套用選取的「%1」樣式。"
+
+#: package/contents/ui/EffectSettingsPopup.qml:46
+#, kde-format
+msgid "Show icons:"
+msgstr "顯示圖示："
+
+#: package/contents/ui/EffectSettingsPopup.qml:47
+#, kde-format
+msgid "On buttons"
+msgstr "在按鈕上顯示"
+
+#: package/contents/ui/EffectSettingsPopup.qml:58
+#, kde-format
+msgid "In menus"
+msgstr "在選單中顯示"
+
+#: package/contents/ui/EffectSettingsPopup.qml:70
+#, kde-format
+msgid "Main toolbar label:"
+msgstr "主工具列標籤："
+
+#: package/contents/ui/EffectSettingsPopup.qml:72
+#, kde-format
+msgid "None"
+msgstr "不顯示"
+
+#: package/contents/ui/EffectSettingsPopup.qml:73
+#, kde-format
+msgid "Text only"
+msgstr "只顯示文字"
+
+#: package/contents/ui/EffectSettingsPopup.qml:74
+#, kde-format
+msgid "Beside icons"
+msgstr "文字在圖示旁顯示"
+
+#: package/contents/ui/EffectSettingsPopup.qml:75
+#, kde-format
+msgid "Below icon"
+msgstr "在圖示下顯示"
+
+#: package/contents/ui/EffectSettingsPopup.qml:90
+#, kde-format
+msgid "Secondary toolbar label:"
+msgstr "第二工具列標籤："
+
+#: package/contents/ui/GtkStylePage.qml:32
+#, kde-format
+msgid "GNOME/GTK Application Style"
+msgstr "GNOME/GTK 應用程式樣式"
+
+#: package/contents/ui/GtkStylePage.qml:58
+#, fuzzy, kde-format
+#| msgid "GTK2 theme:"
+msgid "GTK theme:"
+msgstr "GTK2 主題："
+
+#: package/contents/ui/GtkStylePage.qml:90
+#, kde-format
+msgid "Preview..."
+msgstr "預覽…"
+
+#: package/contents/ui/GtkStylePage.qml:111
+#, kde-format
+msgid "Install from File..."
+msgstr "從檔案安裝…"
+
+#: package/contents/ui/GtkStylePage.qml:117
+#, kde-format
+msgid "Get New GNOME/GTK Application Styles..."
+msgstr "取得新 GNOME/GTK 應用程式樣式…"
+
+#: package/contents/ui/GtkStylePage.qml:129
+#, kde-format
+msgid "Select GTK Theme Archive"
+msgstr "選擇 GTK 主題封存檔"
+
+#: package/contents/ui/GtkStylePage.qml:131
+#, kde-format
+msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
+msgstr "GTK 主題封存檔 (*.tar.xz *.tar.gz *.tar.bz2)"
+
+#: package/contents/ui/main.qml:31
+#, kde-format
+msgid ""
+"This module allows you to modify the visual appearance of applications' user "
+"interface elements."
+msgstr "此模組讓您能修改應用程式中使用者介面元件的視覺外觀。"
+
+#: package/contents/ui/main.qml:110
+#, kde-format
+msgid "Configure Style..."
+msgstr "設定樣式…"
+
+#: package/contents/ui/main.qml:127
+#, kde-format
+msgid "Configure Icons and Toolbars"
+msgstr "設定圖示及工具列"
+
+#: package/contents/ui/main.qml:140
+#, kde-format
+msgid "Configure GNOME/GTK Application Style..."
+msgstr "設定 GNOME/GTK 應用程式樣式…"
+
+#: styleconfdialog.cpp:33
+#, kde-format
+msgid "Configure %1"
+msgstr "設定 %1"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
+#: stylepreview.ui:33
+#, kde-format
+msgid "Tab 1"
+msgstr "分頁 1"
+
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: stylepreview.ui:65
+#, kde-format
+msgid "Push Button"
+msgstr "按鈕"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
+#: stylepreview.ui:86
+#, kde-format
+msgid "Combo box"
+msgstr "下拉式方塊"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox)
+#: stylepreview.ui:96
+#, kde-format
+msgid "Checkbox"
+msgstr "核取方塊"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
+#: stylepreview.ui:106 stylepreview.ui:116
+#, kde-format
+msgid "Radio button"
+msgstr "選項按鈕"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: stylepreview.ui:133
+#, kde-format
+msgid "Tab 2"
+msgstr "分頁 2"
+
+#. i18n: ectx: label, entry (widgetStyle), group (KDE)
+#: stylesettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Application style:"
+msgid "Application style"
+msgstr "應用程式樣式："
+
+#. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
+#: stylesettings.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Show icons:"
+msgid "Show icons on buttons"
+msgstr "顯示圖示："
+
+#. i18n: ectx: label, entry (iconsInMenus), group (KDE)
+#: stylesettings.kcfg:17
+#, fuzzy, kde-format
+#| msgid "Show icons:"
+msgid "Show icons in menus"
+msgstr "顯示圖示："
+
+#. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
+#: stylesettings.kcfg:23
+#, fuzzy, kde-format
+#| msgid "Main toolbar label:"
+msgid "Main toolbar label"
+msgstr "主工具列標籤："
+
+#. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
+#: stylesettings.kcfg:27
+#, fuzzy, kde-format
+#| msgid "Secondary toolbar label:"
+msgid "Secondary toolbar label"
+msgstr "第二工具列標籤："

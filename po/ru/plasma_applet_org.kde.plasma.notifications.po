@@ -1,0 +1,423 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Alexander Potashev <aspotashev@gmail.com>, 2010, 2011, 2014, 2015, 2016, 2017, 2018, 2019.
+# Yuri Efremov <yur.arh@gmail.com>, 2010, 2011, 2012, 2013.
+# Alexander Lakhin <exclusion@gmail.com>, 2013.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2019, 2020, 2021.
+# Sidlovsky Yaroslav <zawertun@gmail.com>, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-28 02:51+0100\n"
+"PO-Revision-Date: 2021-01-12 14:22+0300\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Lokalize 20.12.1\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: filemenu.cpp:127 package/contents/ui/JobItem.qml:226
+#, kde-format
+msgid "Open Containing Folder"
+msgstr "Открыть содержащую объект папку"
+
+#: filemenu.cpp:140
+#, kde-format
+msgid "&Copy"
+msgstr "&Копировать"
+
+#: filemenu.cpp:192
+#, kde-format
+msgid "Properties"
+msgstr "Свойства"
+
+#: globalshortcuts.cpp:37
+#, kde-format
+msgid "Toggle do not disturb"
+msgstr "Включение и отключение режима «Не беспокоить»"
+
+#: globalshortcuts.cpp:56
+#, kde-format
+msgctxt "OSD popup, keep short"
+msgid "Notifications Off"
+msgstr "Уведомления отключены"
+
+#: globalshortcuts.cpp:57
+#, kde-format
+msgctxt "OSD popup, keep short"
+msgid "Notifications On"
+msgstr "Уведомления включены"
+
+#: package/contents/ui/EditContextMenu.qml:47
+#, kde-format
+msgid "Copy Link Address"
+msgstr "Скопировать адрес ссылки"
+
+#: package/contents/ui/EditContextMenu.qml:58
+#, kde-format
+msgid "Copy"
+msgstr "Копировать"
+
+#: package/contents/ui/EditContextMenu.qml:75
+#, kde-format
+msgid "Select All"
+msgstr "Выделить всё"
+
+#: package/contents/ui/FullRepresentation.qml:82
+#: package/contents/ui/main.qml:86
+#, kde-format
+msgid "Do not disturb"
+msgstr "Не беспокоить"
+
+#: package/contents/ui/FullRepresentation.qml:121
+#, kde-format
+msgid "For 1 hour"
+msgstr "на 1 час"
+
+#: package/contents/ui/FullRepresentation.qml:126
+#, kde-format
+msgid "For 4 hours"
+msgstr "на 4 часа"
+
+#: package/contents/ui/FullRepresentation.qml:135
+#, kde-format
+msgid "Until this evening"
+msgstr "до вечера"
+
+#: package/contents/ui/FullRepresentation.qml:145
+#, kde-format
+msgid "Until tomorrow morning"
+msgstr "до завтрашнего утра"
+
+#: package/contents/ui/FullRepresentation.qml:157
+#, kde-format
+msgid "Until Monday"
+msgstr "до понедельника"
+
+#: package/contents/ui/FullRepresentation.qml:164
+#, kde-format
+msgid "Until manually disabled"
+msgstr "до отключения"
+
+#: package/contents/ui/FullRepresentation.qml:209
+#, kde-format
+msgctxt "Do not disturb until date"
+msgid "Until %1"
+msgstr "до %1"
+
+#: package/contents/ui/FullRepresentation.qml:222
+#, kde-format
+msgctxt "Do not disturb until app has finished (reason)"
+msgid "While %1 is active (%2)"
+msgstr "При активном %1 (%2)"
+
+#: package/contents/ui/FullRepresentation.qml:224
+#, kde-format
+msgctxt "Do not disturb until app has finished"
+msgid "While %1 is active"
+msgstr "При активном %1"
+
+#: package/contents/ui/FullRepresentation.qml:230
+#, kde-format
+msgctxt "Do not disturb because external mirrored screens connected"
+msgid "Screens are mirrored"
+msgstr "При дублировании изображения на внешний экран"
+
+#: package/contents/ui/FullRepresentation.qml:409
+#, kde-format
+msgid "Close Group"
+msgstr "Закрыть группу"
+
+#: package/contents/ui/FullRepresentation.qml:540
+#, kde-format
+msgid "Show Fewer"
+msgstr "Показывать меньше"
+
+#: package/contents/ui/FullRepresentation.qml:542
+#, kde-format
+msgctxt "Expand to show n more notifications"
+msgid "Show %1 More"
+msgstr "Показать ещё %1"
+
+#: package/contents/ui/FullRepresentation.qml:567
+#: package/contents/ui/main.qml:89
+#, kde-format
+msgid "No unread notifications"
+msgstr "Нет непрочитанных уведомлений"
+
+#: package/contents/ui/FullRepresentation.qml:581
+#: package/contents/ui/main.qml:66
+#, kde-format
+msgid "Notification service not available"
+msgstr "Служба уведомлений недоступна"
+
+#: package/contents/ui/FullRepresentation.qml:593
+#, kde-format
+msgctxt "Vendor and product name"
+msgid "Notifications are currently provided by '%1 %2'"
+msgstr "Уведомления выводятся приложением «%1 %2»"
+
+#: package/contents/ui/JobDetails.qml:49
+#, kde-format
+msgctxt "Row description, e.g. Source"
+msgid "%1:"
+msgstr "%1:"
+
+#: package/contents/ui/JobDetails.qml:120
+#, kde-format
+msgctxt "How many bytes have been copied"
+msgid "%2 of %1"
+msgstr "%2 из %1"
+
+#: package/contents/ui/JobDetails.qml:124
+#, kde-format
+msgctxt "How many files have been copied"
+msgid "%2 of %1 file"
+msgid_plural "%2 of %1 files"
+msgstr[0] "%2 из %1 файла"
+msgstr[1] "%2 из %1 файлов"
+msgstr[2] "%2 из %1 файлов"
+msgstr[3] "%2 из %1 файла"
+
+#: package/contents/ui/JobDetails.qml:127
+#, kde-format
+msgctxt "How many dirs have been copied"
+msgid "%2 of %1 folder"
+msgid_plural "%2 of %1 folders"
+msgstr[0] "%2 из %1 папки"
+msgstr[1] "%2 из %1 папок"
+msgstr[2] "%2 из %1 папок"
+msgstr[3] "%2 из %1 папки"
+
+#: package/contents/ui/JobDetails.qml:130
+#, kde-format
+msgctxt "How many items (that includes files and dirs) have been copied"
+msgid "%2 of %1 item"
+msgid_plural "%2 of %1 items"
+msgstr[0] "%2 из %1 объектов"
+msgstr[1] "%2 из %1 объектов"
+msgstr[2] "%2 из %1 объектов"
+msgstr[3] "%2 из %1 объекта"
+
+#: package/contents/ui/JobDetails.qml:138
+#, kde-format
+msgid "%1 file"
+msgid_plural "%1 files"
+msgstr[0] "%1 файл"
+msgstr[1] "%1 файла"
+msgstr[2] "%1 файлов"
+msgstr[3] "один файл"
+
+#: package/contents/ui/JobDetails.qml:140
+#, kde-format
+msgid "%1 folder"
+msgid_plural "%1 folders"
+msgstr[0] "%1 папка"
+msgstr[1] "%1 папки"
+msgstr[2] "%1 папок"
+msgstr[3] "одна папка"
+
+#: package/contents/ui/JobDetails.qml:142
+#, kde-format
+msgid "%1 item"
+msgid_plural "%1 items"
+msgstr[0] "%1 объект"
+msgstr[1] "%1 объекта"
+msgstr[2] "%1 объектов"
+msgstr[3] "один объект"
+
+#: package/contents/ui/JobDetails.qml:159
+#, kde-format
+msgctxt "Bytes per second"
+msgid "%1/s"
+msgstr "%1/с"
+
+#: package/contents/ui/JobItem.qml:148
+#, kde-format
+msgctxt "Pause running job"
+msgid "Pause"
+msgstr "Приостановить"
+
+#: package/contents/ui/JobItem.qml:158
+#, kde-format
+msgctxt "Cancel running job"
+msgid "Cancel"
+msgstr "Отменить"
+
+#: package/contents/ui/JobItem.qml:169
+#, kde-format
+msgctxt "A button tooltip; hides item details"
+msgid "Hide Details"
+msgstr "Скрыть подробности"
+
+#: package/contents/ui/JobItem.qml:170
+#, kde-format
+msgctxt "A button tooltip; expands the item to show details"
+msgid "Show Details"
+msgstr "Показать подробности"
+
+#: package/contents/ui/JobItem.qml:211
+#: package/contents/ui/ThumbnailStrip.qml:159
+#, kde-format
+msgid "More Options..."
+msgstr "Дополнительные параметры..."
+
+#: package/contents/ui/JobItem.qml:227
+#, kde-format
+msgid "Open"
+msgstr "Открыть"
+
+#: package/contents/ui/JobItem.qml:237
+#, kde-format
+msgctxt "Resume paused job"
+msgid "Resume"
+msgstr "Продолжить"
+
+#: package/contents/ui/main.qml:62
+#, kde-format
+msgid "%1 running job"
+msgid_plural "%1 running jobs"
+msgstr[0] "%1 выполняющееся задание"
+msgstr[1] "%1 выполняющихся задания"
+msgstr[2] "%1 выполняющихся заданий"
+msgstr[3] "%1 выполняющееся задание"
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgid "%1 unread notification"
+msgid_plural "%1 unread notifications"
+msgstr[0] "%1 непрочитанное уведомление"
+msgstr[1] "%1 непрочитанных уведомления"
+msgstr[2] "%1 непрочитанных уведомлений"
+msgstr[3] "одно непрочитанное уведомление"
+
+#: package/contents/ui/main.qml:83
+#, kde-format
+msgid "Do not disturb until %1"
+msgstr "Не беспокоить до %1"
+
+#: package/contents/ui/main.qml:175
+#, kde-format
+msgid "Clear History"
+msgstr "Очистить журнал"
+
+#: package/contents/ui/main.qml:182
+#, kde-format
+msgid "&Configure Event Notifications and Actions..."
+msgstr "Настроить &уведомления..."
+
+#: package/contents/ui/NotificationHeader.qml:131
+#, kde-format
+msgctxt "Notification was added minutes ago, keep short"
+msgid "%1 min ago"
+msgid_plural "%1 min ago"
+msgstr[0] "%1 минуту назад"
+msgstr[1] "%1 минуты назад"
+msgstr[2] "%1 минут назад"
+msgstr[3] "минуту назад"
+
+#: package/contents/ui/NotificationHeader.qml:165
+#, kde-format
+msgctxt "seconds remaining, keep short"
+msgid "%1 s remaining"
+msgid_plural "%1 s remaining"
+msgstr[0] "осталась %1 секунда"
+msgstr[1] "осталось %1 секунды"
+msgstr[2] "осталось %1 секунд"
+msgstr[3] "осталась секунда"
+
+#: package/contents/ui/NotificationHeader.qml:169
+#, kde-format
+msgctxt "minutes remaining, keep short"
+msgid "%1 min remaining"
+msgid_plural "%1 min remaining"
+msgstr[0] "осталась %1 минута"
+msgstr[1] "осталось %1 минуты"
+msgstr[2] "осталось %1 минут"
+msgstr[3] "осталась минута"
+
+#: package/contents/ui/NotificationHeader.qml:174
+#, kde-format
+msgctxt "hours remaining, keep short"
+msgid "%1 h remaining"
+msgid_plural "%1 h remaining"
+msgstr[0] "остался %1 час"
+msgstr[1] "осталось %1 часа"
+msgstr[2] "осталось %1 часов"
+msgstr[3] "остался час"
+
+#: package/contents/ui/NotificationHeader.qml:199
+#, kde-format
+msgid "Configure"
+msgstr "Настроить"
+
+#: package/contents/ui/NotificationHeader.qml:211
+#, kde-format
+msgctxt "Opposite of minimize"
+msgid "Restore"
+msgstr "Восстановить"
+
+#: package/contents/ui/NotificationHeader.qml:212
+#, kde-format
+msgid "Minimize"
+msgstr "Свернуть"
+
+#: package/contents/ui/NotificationHeader.qml:224
+#, kde-format
+msgid "Close"
+msgstr "Закрыть"
+
+#: package/contents/ui/NotificationItem.qml:193
+#, kde-format
+msgctxt "Job name, e.g. Copying is paused"
+msgid "%1 (Paused)"
+msgstr "%1 (приостановлено)"
+
+#: package/contents/ui/NotificationItem.qml:198
+#, kde-format
+msgctxt "Job name, e.g. Copying has failed"
+msgid "%1 (Failed)"
+msgstr "%1 (произошла ошибка)"
+
+#: package/contents/ui/NotificationItem.qml:200
+#, kde-format
+msgid "Job Failed"
+msgstr "Не удалось выполнить задание"
+
+#: package/contents/ui/NotificationItem.qml:204
+#, kde-format
+msgctxt "Job name, e.g. Copying has finished"
+msgid "%1 (Finished)"
+msgstr "%1 (завершено)"
+
+#: package/contents/ui/NotificationItem.qml:206
+#, kde-format
+msgid "Job Finished"
+msgstr "Задание завершено"
+
+#: package/contents/ui/NotificationItem.qml:364
+#, kde-format
+msgctxt "Reply to message"
+msgid "Reply"
+msgstr "Ответить"
+
+#: package/contents/ui/NotificationReplyField.qml:50
+#, kde-format
+msgctxt "Text field placeholder"
+msgid "Type a reply..."
+msgstr "Напишите ответ..."
+
+#: package/contents/ui/NotificationReplyField.qml:70
+#, kde-format
+msgctxt "@action:button"
+msgid "Send"
+msgstr "Отправить"

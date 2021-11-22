@@ -1,5 +1,4 @@
 add_definitions("-DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_TO_ASCII")
-add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
 
 set(kded_statusnotifierwatcher_SRCS statusnotifierwatcher.cpp )
 
@@ -19,6 +18,6 @@ add_library(statusnotifierwatcher MODULE ${kded_statusnotifierwatcher_SRCS})
 kcoreaddons_desktop_to_json(statusnotifierwatcher statusnotifierwatcher.desktop)
 
 
-target_link_libraries(statusnotifierwatcher Qt5::DBus KF5::DBusAddons KF5::CoreAddons)
+target_link_libraries(statusnotifierwatcher Qt::DBus KF5::DBusAddons KF5::CoreAddons)
 
 install(TARGETS statusnotifierwatcher  DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf5/kded)

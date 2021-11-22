@@ -1,0 +1,136 @@
+# Translation of kcm_translations to Norwegian Nynorsk
+#
+# Karl Ove Hufthammer <karl@huftis.org>, 2015, 2018, 2019, 2020.
+# Øystein Steffensen-Alværvik <ystein@posteo.net>, 2018.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-06 03:03+0100\n"
+"PO-Revision-Date: 2020-02-16 14:24+0100\n"
+"Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
+"Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
+"Language: nn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 19.12.2\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Karl Ove Hufthammer"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "karl@huftis.org"
+
+#: package/contents/ui/main.qml:31
+#, kde-format
+msgid "Language"
+msgstr "Språk"
+
+#: package/contents/ui/main.qml:89
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Languages"
+msgstr "Legg til språk"
+
+#: package/contents/ui/main.qml:115
+#, kde-format
+msgctxt "@action:button"
+msgid "Add"
+msgstr "Legg til"
+
+#: package/contents/ui/main.qml:143
+#, kde-format
+msgctxt "@info"
+msgid "There are no additional languages available on this system."
+msgstr "Det finst ingen fleire språk tilgjengelege på systemet."
+
+#: package/contents/ui/main.qml:153
+#, kde-format
+msgctxt "@info"
+msgid "Your changes will take effect the next time you log in."
+msgstr "Endringane vert tekne i bruk neste gong du loggar inn."
+
+#: package/contents/ui/main.qml:154
+#, kde-format
+msgctxt "@info"
+msgid "There are currently no preferred languages configured."
+msgstr "Du har ikkje valt noko føretrekt språk."
+
+#: package/contents/ui/main.qml:165
+#, kde-format
+msgctxt "@info %2 is the language code"
+msgid ""
+"The translation files for the language with the code '%2' could not be "
+"found. The language will be removed from your configuration. If you want to "
+"add it back, please install the localization files for it and add the "
+"language again."
+msgid_plural ""
+"The translation files for the languages with the codes '%2' could not be "
+"found. These languages will be removed from your configuration. If you want "
+"to add them back, please install the localization files for it and the "
+"languages again."
+msgstr[0] ""
+"Fann ikkje omsetjingsfiler for språket med språkkode «%2». Språket vert "
+"derfor fjerna frå oppsettet. Viss du vil ha det tilbake, installer "
+"omsetjingsfilene for språket, og legg det så til på nytt."
+msgstr[1] ""
+"Fann ikkje omsetjingsfiler for språka med språkkodar «%2». Språka er derfor "
+"fjerna frå oppsettet. Viss du vil ha dei tilbake, installer omsetjingsfilene "
+"for språka, og legg dei så til på nytt."
+
+#: package/contents/ui/main.qml:168
+#, kde-format
+msgctxt "@info separator in list of language codes"
+msgid "', '"
+msgstr "', '"
+
+#: package/contents/ui/main.qml:178
+#, kde-format
+msgid ""
+"The language at the top of this list is the one you want to see and use most "
+"often."
+msgstr "Språket øvst i lista er det du oftast ønskjer å sjå og bruka."
+
+#: package/contents/ui/main.qml:217
+#, kde-format
+msgctxt "@item:inlistbox 1 = Language name"
+msgid "%1 (Default)"
+msgstr "%1 (standard)"
+
+#: package/contents/ui/main.qml:230
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Promote to default"
+msgstr "Gjer til standard"
+
+#: package/contents/ui/main.qml:237
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Remove"
+msgstr "Fjern"
+
+#: package/contents/ui/main.qml:262
+#, kde-format
+msgctxt "@action:button"
+msgid "Add languages..."
+msgstr "Legg til språk …"
+
+#: translations.cpp:43
+#, kde-format
+msgid "Configure Plasma translations"
+msgstr "Set opp Plasma-omsetjingar"
+
+#: translationsmodel.cpp:95 translationsmodel.cpp:106
+#, kde-format
+msgctxt "%1 is language name, %2 is language code name"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"

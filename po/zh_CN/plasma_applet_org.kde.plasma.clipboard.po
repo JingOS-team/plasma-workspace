@@ -1,0 +1,132 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Xuetian Weng <xweng@cs.stonybrook.edu>, 2014.
+# Weng Xuetian <wengxt@gmail.com>, 2015.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdeorg\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-05 02:38+0100\n"
+"PO-Revision-Date: 2021-01-28 05:06\n"
+"Last-Translator: \n"
+"Language-Team: Chinese Simplified\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: kdeorg\n"
+"X-Crowdin-Project-ID: 269464\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /kf5-trunk/messages/plasma-workspace/plasma_applet_org.kde."
+"plasma.clipboard.pot\n"
+"X-Crowdin-File-ID: 4526\n"
+
+#: contents/ui/BarcodePage.qml:40
+#, kde-format
+msgid "Return to Clipboard"
+msgstr "返回剪贴板"
+
+#: contents/ui/BarcodePage.qml:61
+#, kde-format
+msgid "QR Code"
+msgstr "QR 码"
+
+#: contents/ui/BarcodePage.qml:62
+#, kde-format
+msgid "Data Matrix"
+msgstr "Data Matrix"
+
+#: contents/ui/BarcodePage.qml:63
+#, kde-format
+msgctxt "Aztec barcode"
+msgid "Aztec"
+msgstr "Aztec"
+
+#: contents/ui/BarcodePage.qml:64
+#, kde-format
+msgid "Code 39"
+msgstr "Code 39"
+
+#: contents/ui/BarcodePage.qml:65
+#, kde-format
+msgid "Code 93"
+msgstr "Code 93"
+
+#: contents/ui/BarcodePage.qml:66
+#, kde-format
+msgid "Code 128"
+msgstr "Code 128"
+
+#: contents/ui/BarcodePage.qml:89
+#, kde-format
+msgid "Change the barcode type"
+msgstr "修改条码类型"
+
+#: contents/ui/BarcodePage.qml:113
+#, kde-format
+msgid "Creating barcode failed"
+msgstr "创建条码失败"
+
+#: contents/ui/BarcodePage.qml:122
+#, kde-format
+msgid "The barcode is too large to be displayed"
+msgstr "条形码过大，无法显示"
+
+#: contents/ui/clipboard.qml:38
+#, kde-format
+msgid "Clipboard Contents"
+msgstr "剪贴板内容"
+
+#: contents/ui/clipboard.qml:39 contents/ui/Menu.qml:66
+#, kde-format
+msgid "Clipboard is empty"
+msgstr "剪贴板为空"
+
+#: contents/ui/clipboard.qml:67
+#, kde-format
+msgid "Configure Clipboard..."
+msgstr "配置剪贴板..."
+
+#: contents/ui/clipboard.qml:69
+#, kde-format
+msgid "Clear History"
+msgstr "清除历史"
+
+#: contents/ui/ClipboardPage.qml:89
+#, kde-format
+msgid "Search..."
+msgstr "搜索..."
+
+#: contents/ui/ClipboardPage.qml:110
+#, kde-format
+msgid "Clear history"
+msgstr "清除历史"
+
+#: contents/ui/DelegateToolButtons.qml:35
+#, kde-format
+msgid "Invoke action"
+msgstr "调用动作"
+
+#: contents/ui/DelegateToolButtons.qml:45
+#, kde-format
+msgid "Show barcode"
+msgstr "显示条形码"
+
+#: contents/ui/DelegateToolButtons.qml:55
+#, kde-format
+msgid "Edit contents"
+msgstr "编辑内容"
+
+#: contents/ui/DelegateToolButtons.qml:63
+#, kde-format
+msgid "Remove from history"
+msgstr "删除历史项"
+
+#: contents/ui/UrlItemDelegate.qml:112
+#, kde-format
+msgctxt ""
+"Indicator that there are more urls in the clipboard than previews shown"
+msgid "+%1"
+msgstr "+%1"

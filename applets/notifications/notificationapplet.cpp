@@ -41,6 +41,7 @@
 
 #include "filemenu.h"
 #include "globalshortcuts.h"
+#include "texteditclickhandler.h"
 #include "thumbnailer.h"
 
 NotificationApplet::NotificationApplet(QObject *parent, const QVariantList &data)
@@ -51,6 +52,7 @@ NotificationApplet::NotificationApplet(QObject *parent, const QVariantList &data
         const char uri[] = "org.kde.plasma.private.notifications";
         qmlRegisterType<FileMenu>(uri, 2, 0, "FileMenu");
         qmlRegisterType<GlobalShortcuts>(uri, 2, 0, "GlobalShortcuts");
+        qmlRegisterType<TextEditClickHandler>(uri, 2, 0, "TextEditClickHandler");
         qmlRegisterType<Thumbnailer>(uri, 2, 0, "Thumbnailer");
         qmlProtectModule(uri, 2);
         s_typesRegistered = true;
@@ -63,12 +65,10 @@ NotificationApplet::~NotificationApplet() = default;
 
 void NotificationApplet::init()
 {
-
 }
 
 void NotificationApplet::configChanged()
 {
-
 }
 
 bool NotificationApplet::dragActive() const
@@ -104,8 +104,7 @@ void NotificationApplet::startDrag(QQuickItem *item, const QUrl &url, const QPix
     // This allows the caller to return, making sure we don't crash if
     // the caller is destroyed mid-drag
 
-    QMetaObject::invokeMethod(this, "doDrag", Qt::QueuedConnection,
-        Q_ARG(QQuickItem*, item), Q_ARG(QUrl, url), Q_ARG(QPixmap, pixmap));
+    QMetaObject::invokeMethod(this, "doDrag", Qt::QueuedConnection, Q_ARG(QQuickItem *, item), Q_ARG(QUrl, url), Q_ARG(QPixmap, pixmap));
 }
 
 void NotificationApplet::doDrag(QQuickItem *item, const QUrl &url, const QPixmap &pixmap)

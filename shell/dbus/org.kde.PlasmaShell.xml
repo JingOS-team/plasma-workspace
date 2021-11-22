@@ -32,5 +32,25 @@
     </method>
     <method name="activateLauncherMenu">
     </method>
+    <signal name="flightModeChanged">
+      <arg name="flightmode" type="b">
+      </arg>
+    </signal>
+    <signal name="wifiNameChanged">
+      <arg name="connectedName" type="s">
+      </arg>
+    </signal>
+    <signal name="wifiEnableChanged">
+      <arg name="wifiEnable" type="b">
+      </arg>
+    </signal>
+    <signal name="connectionIconChanged">
+      <arg name="connectionIcon" type="s">
+      </arg>
+    </signal>
+    <signal name="networkStatusChanged">
+      <arg name="networkStatus" type="s">
+      </arg>
+    </signal>
   </interface>
 </node>

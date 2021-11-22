@@ -1,0 +1,134 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# Phu Hung Nguyen <phuhnguyen@disroot.org>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2020-09-30 18:10+0200\n"
+"Last-Translator: Phu Hung Nguyen <phuhnguyen@disroot.org>\n"
+"Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 19.12.2\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Nguyễn Hùng Phú"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "phuhnguyen@disroot.org"
+
+#. i18n: ectx: label, entry (name), group (Theme)
+#: desktopthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current Plasma Style"
+msgstr "Tên kiểu cách Plasma hiện tại"
+
+#: kcm.cpp:63
+#, kde-format
+msgid "Plasma Style"
+msgstr "Kiểu cách Plasma"
+
+#: kcm.cpp:64
+#, kde-format
+msgid "David Rosca"
+msgstr "David Rosca"
+
+#: kcm.cpp:122
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "Không thể tạo một tệp tạm."
+
+#: kcm.cpp:133
+#, kde-format
+msgid "Unable to download the theme: %1"
+msgstr "Không thể tải về chủ đề: %1"
+
+#: kcm.cpp:158
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "Cài đặt chủ đề thành công."
+
+#: kcm.cpp:161 kcm.cpp:167
+#, kde-format
+msgid "Theme installation failed."
+msgstr "Cài đặt chủ đề thất bại."
+
+#: kcm.cpp:259
+#, kde-format
+msgid "Removing theme failed: %1"
+msgstr "Xoá chủ đề thất bại: %1"
+
+#: package/contents/ui/main.qml:36
+#, kde-format
+msgid "This module lets you choose the Plasma style."
+msgstr "Khối này cho phép bạn chọn kiểu cách Plasma."
+
+#: package/contents/ui/main.qml:81
+#, kde-format
+msgid "All Themes"
+msgstr "Tất cả chủ đề"
+
+#: package/contents/ui/main.qml:82
+#, kde-format
+msgid "Light Themes"
+msgstr "Chủ đề sáng"
+
+#: package/contents/ui/main.qml:83
+#, kde-format
+msgid "Dark Themes"
+msgstr "Chủ đề tối"
+
+#: package/contents/ui/main.qml:84
+#, kde-format
+msgid "Color scheme compatible"
+msgstr "Tương thích với quy hoạch màu"
+
+#: package/contents/ui/main.qml:112
+#, kde-format
+msgid "Follows color scheme"
+msgstr "Tuân theo quy hoạch màu"
+
+#: package/contents/ui/main.qml:130
+#, kde-format
+msgid "Edit Theme..."
+msgstr "Sửa chủ đề..."
+
+#: package/contents/ui/main.qml:137
+#, kde-format
+msgid "Remove Theme"
+msgstr "Xoá chủ đề"
+
+#: package/contents/ui/main.qml:144
+#, kde-format
+msgid "Restore Theme"
+msgstr "Khôi phục chủ đề"
+
+#: package/contents/ui/main.qml:182
+#, kde-format
+msgid "Install from File..."
+msgstr "Cài từ tệp..."
+
+#: package/contents/ui/main.qml:189
+#, kde-format
+msgid "Get New Plasma Styles..."
+msgstr "Lấy kiểu cách Plasma mới..."
+
+#: package/contents/ui/main.qml:201
+#, kde-format
+msgid "Open Theme"
+msgstr "Mở chủ đề"
+
+#: package/contents/ui/main.qml:203
+#, kde-format
+msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
+msgstr "Tệp chủ đề (*.zip *.tar.gz *.tar.bz2)"

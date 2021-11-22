@@ -1,0 +1,40 @@
+# translation of krunner_webshortcutsrunner.po to Estonian
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Marek Laane <bald@smail.ee>, 2008, 2009, 2010.
+# Mihkel Tõnnov <mihhkel@gmail.com>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: krunner_webshortcutsrunner\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-10-21 02:34+0200\n"
+"PO-Revision-Date: 2020-10-08 10:39+0200\n"
+"Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
+"Language-Team: Estonian <>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.08.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: webshortcutrunner.cpp:65
+#, kde-format
+msgid "Opens \"%1\" in a web browser with the query :q:."
+msgstr "\"%1\" avamine veebibrauseris päringuga :q:."
+
+#: webshortcutrunner.cpp:95
+#, kde-format
+msgid "Search in private window"
+msgstr "Otsi privaatses aknas"
+
+#: webshortcutrunner.cpp:95
+#, kde-format
+msgid "Search in incognito window"
+msgstr "Otsi inkognito aknas"
+
+#: webshortcutrunner.cpp:131 webshortcutrunner.cpp:148
+#, kde-format
+msgid "Search %1 for %2"
+msgstr "Otsi %1 mootoriga %2"

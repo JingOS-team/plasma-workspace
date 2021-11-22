@@ -28,18 +28,19 @@
 
 #include <QCollator>
 
-GroupEntry::GroupEntry(AppsModel *parentModel, const QString &name,
-    const QString &iconName, AbstractModel *childModel)
-: AbstractGroupEntry(parentModel)
-, m_name(name)
-, m_iconName(iconName)
-, m_childModel(childModel)
+GroupEntry::GroupEntry(AppsModel *parentModel, const QString &name, const QString &iconName, AbstractModel *childModel)
+    : AbstractGroupEntry(parentModel)
+    , m_name(name)
+    , m_iconName(iconName)
+    , m_childModel(childModel)
 {
     QObject::connect(parentModel, &RootModel::cleared, childModel, &AbstractModel::deleteLater);
 
-    QObject::connect(childModel, &AbstractModel::countChanged,
-        [parentModel, this] { if (parentModel) { parentModel->entryChanged(this); } }
-    );
+    QObject::connect(childModel, &AbstractModel::countChanged, [parentModel, this] {
+        if (parentModel) {
+            parentModel->entryChanged(this);
+        }
+    });
 }
 
 QString GroupEntry::name() const
@@ -62,19 +63,21 @@ AbstractModel *GroupEntry::childModel() const
     return m_childModel;
 }
 
-RootModel::RootModel(QObject *parent) : AppsModel(QString(), parent)
-, m_favorites(new KAStatsFavoritesModel(this))
-, m_systemModel(nullptr)
-, m_showAllApps(false)
-, m_showAllAppsCategorized(false)
-, m_showRecentApps(true)
-, m_showRecentDocs(true)
-, m_showRecentContacts(false)
-, m_recentOrdering(RecentUsageModel::Recent)
-, m_showPowerSession(true)
-, m_recentAppsModel(nullptr)
-, m_recentDocsModel(nullptr)
-, m_recentContactsModel(nullptr)
+RootModel::RootModel(QObject *parent)
+    : AppsModel(QString(), parent)
+    , m_favorites(new KAStatsFavoritesModel(this))
+    , m_systemModel(nullptr)
+    , m_showAllApps(false)
+    , m_showAllAppsCategorized(false)
+    , m_showRecentApps(true)
+    , m_showRecentDocs(true)
+    , m_showRecentContacts(false)
+    , m_recentOrdering(RecentUsageModel::Recent)
+    , m_showPowerSession(true)
+    , m_showFavoritesPlaceholder(false)
+    , m_recentAppsModel(nullptr)
+    , m_recentDocsModel(nullptr)
+    , m_recentContactsModel(nullptr)
 {
 }
 
@@ -82,7 +85,7 @@ RootModel::~RootModel()
 {
 }
 
-QVariant RootModel::data(const QModelIndex& index, int role) const
+QVariant RootModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid() || index.row() >= m_entryList.count()) {
         return QVariant();
@@ -95,17 +98,14 @@ QVariant RootModel::data(const QModelIndex& index, int role) const
             const GroupEntry *group = static_cast<const GroupEntry *>(entry);
             AbstractModel *model = group->childModel();
 
-            if (model == m_recentAppsModel
-                || model == m_recentDocsModel
-                || model == m_recentContactsModel) {
-                if (role ==  Kicker::HasActionListRole) {
+            if (model == m_recentAppsModel || model == m_recentDocsModel || model == m_recentContactsModel) {
+                if (role == Kicker::HasActionListRole) {
                     return true;
                 } else if (role == Kicker::ActionListRole) {
                     QVariantList actionList;
                     actionList << model->actions();
                     actionList << Kicker::createSeparatorActionItem();
-                    actionList << Kicker::createActionItem(i18n("Hide %1",
-                        group->name()), QStringLiteral("view-hidden"), QStringLiteral("hideCategory"));
+                    actionList << Kicker::createActionItem(i18n("Hide %1", group->name()), QStringLiteral("view-hidden"), QStringLiteral("hideCategory"));
                     return actionList;
                 }
             }
@@ -115,7 +115,7 @@ QVariant RootModel::data(const QModelIndex& index, int role) const
     return AppsModel::data(index, role);
 }
 
-bool RootModel::trigger(int row, const QString& actionId, const QVariant& argument)
+bool RootModel::trigger(int row, const QString &actionId, const QVariant &argument)
 {
     const AbstractEntry *entry = m_entryList.at(row);
 
@@ -256,12 +256,28 @@ void RootModel::setShowPowerSession(bool show)
     }
 }
 
-AbstractModel* RootModel::favoritesModel()
+bool RootModel::showFavoritesPlaceholder() const
+{
+    return m_showFavoritesPlaceholder;
+}
+
+void RootModel::setShowFavoritesPlaceholder(bool show)
+{
+    if (show != m_showFavoritesPlaceholder) {
+        m_showFavoritesPlaceholder = show;
+
+        refresh();
+
+        emit showFavoritesPlaceholderChanged();
+    }
+}
+
+AbstractModel *RootModel::favoritesModel()
 {
     return m_favorites;
 }
 
-AbstractModel* RootModel::systemFavoritesModel()
+AbstractModel *RootModel::systemFavoritesModel()
 {
     if (m_systemModel) {
         return m_systemModel->favoritesModel();
@@ -290,10 +306,10 @@ void RootModel::refresh()
 
         std::function<void(AbstractEntry *)> processEntry = [&](AbstractEntry *entry) {
             if (entry->type() == AbstractEntry::RunnableType) {
-                AppEntry *appEntry = static_cast<AppEntry*>(entry);
+                AppEntry *appEntry = static_cast<AppEntry *>(entry);
                 appsHash.insert(appEntry->service()->menuId(), appEntry);
             } else if (entry->type() == AbstractEntry::GroupType) {
-                GroupEntry *groupEntry = static_cast<GroupEntry*>(entry);
+                GroupEntry *groupEntry = static_cast<GroupEntry *>(entry);
                 AbstractModel *model = groupEntry->childModel();
 
                 if (!model) {
@@ -301,26 +317,25 @@ void RootModel::refresh()
                 }
 
                 for (int i = 0; i < model->count(); ++i) {
-                    processEntry(static_cast<AbstractEntry*>(model->index(i, 0).internalPointer()));
+                    processEntry(static_cast<AbstractEntry *>(model->index(i, 0).internalPointer()));
                 }
             }
         };
 
-        for (AbstractEntry *entry : m_entryList) {
+        for (AbstractEntry *entry : qAsConst(m_entryList)) {
             processEntry(entry);
         }
 
         QList<AbstractEntry *> apps(appsHash.values());
         QCollator c;
 
-        std::sort(apps.begin(), apps.end(),
-            [&c](AbstractEntry* a, AbstractEntry* b) {
-                if (a->type() != b->type()) {
-                    return a->type() > b->type();
-                } else {
-                    return c.compare(a->name(), b->name()) < 0;
-                }
-            });
+        std::sort(apps.begin(), apps.end(), [&c](AbstractEntry *a, AbstractEntry *b) {
+            if (a->type() != b->type()) {
+                return a->type() > b->type();
+            } else {
+                return c.compare(a->name(), b->name()) < 0;
+            }
+        });
 
         if (!m_showAllAppsCategorized && !m_paginate) { // The app list built above goes into a model.
             allModel = new AppsModel(apps, false, this);
@@ -334,7 +349,7 @@ void RootModel::refresh()
             QList<AbstractEntry *> page;
             page.reserve(m_pageSize);
 
-            foreach(AbstractEntry *app, apps) {
+            foreach (AbstractEntry *app, apps) {
                 page.append(app);
 
                 if (at == (m_pageSize - 1)) {
@@ -362,7 +377,8 @@ void RootModel::refresh()
             foreach (const AbstractEntry *groupEntry, m_entryList) {
                 AbstractModel *model = groupEntry->childModel();
 
-                if (!model) continue;
+                if (!model)
+                    continue;
 
                 for (int i = 0; i < model->count(); ++i) {
                     AbstractEntry *appEntry = static_cast<AbstractEntry *>(model->index(i, 0).internalPointer());
@@ -394,39 +410,49 @@ void RootModel::refresh()
     int separatorPosition = 0;
 
     if (allModel) {
-        m_entryList.prepend(new GroupEntry(this, i18n("All Applications"), QString("applications-all"), allModel));
+        m_entryList.prepend(new GroupEntry(this, i18n("All Applications"), QStringLiteral("applications-all"), allModel));
+        ++separatorPosition;
+    }
+
+    if (m_showFavoritesPlaceholder) {
+        // This entry is a placeholder and shouldn't ever be visible
+        QList<AbstractEntry *> placeholderList;
+        AppsModel *placeholderModel = new AppsModel(placeholderList, false, this);
+
+        // Favorites group containing a placeholder entry, so it would be considered as a group, not an entry
+        QList<AbstractEntry *> placeholderEntry;
+        placeholderEntry.append(new GroupEntry(this, //
+                                               i18n("This shouldn't be visible! Use KICKER_FAVORITES_MODEL"),
+                                               QStringLiteral("dialog-warning"),
+                                               placeholderModel));
+        AppsModel *favoritesPlaceholderModel = new AppsModel(placeholderEntry, false, this);
+
+        favoritesPlaceholderModel->setDescription(QStringLiteral("KICKER_FAVORITES_MODEL")); // Intentionally no i18n.
+        m_entryList.prepend(new GroupEntry(this, i18n("Favorites"), QStringLiteral("bookmarks"), favoritesPlaceholderModel));
         ++separatorPosition;
     }
 
     if (m_showRecentContacts) {
         m_recentContactsModel = new RecentContactsModel(this);
-        m_entryList.prepend(new GroupEntry(this, i18n("Recent Contacts"), QString("view-history"), m_recentContactsModel));
+        m_entryList.prepend(new GroupEntry(this, i18n("Recent Contacts"), QStringLiteral("view-history"), m_recentContactsModel));
         ++separatorPosition;
     }
 
     if (m_showRecentDocs) {
         m_recentDocsModel = new RecentUsageModel(this, RecentUsageModel::OnlyDocs, m_recentOrdering);
         m_entryList.prepend(new GroupEntry(this,
-                    m_recentOrdering == RecentUsageModel::Recent
-                        ? i18n("Recent Files")
-                        : i18n("Often Used Files"),
-                    m_recentOrdering == RecentUsageModel::Recent
-                        ? QString("view-history")
-                        : QString("office-chart-pie"),
-                    m_recentDocsModel));
+                                           m_recentOrdering == RecentUsageModel::Recent ? i18n("Recent Files") : i18n("Often Used Files"),
+                                           m_recentOrdering == RecentUsageModel::Recent ? QStringLiteral("view-history") : QStringLiteral("office-chart-pie"),
+                                           m_recentDocsModel));
         ++separatorPosition;
     }
 
     if (m_showRecentApps) {
         m_recentAppsModel = new RecentUsageModel(this, RecentUsageModel::OnlyApps, m_recentOrdering);
         m_entryList.prepend(new GroupEntry(this,
-                    m_recentOrdering == RecentUsageModel::Recent
-                        ? i18n("Recent Applications")
-                        : i18n("Often Used Applications"),
-                    m_recentOrdering == RecentUsageModel::Recent
-                        ? QString("view-history")
-                        : QString("office-chart-pie"),
-                    m_recentAppsModel));
+                                           m_recentOrdering == RecentUsageModel::Recent ? i18n("Recent Applications") : i18n("Often Used Applications"),
+                                           m_recentOrdering == RecentUsageModel::Recent ? QStringLiteral("view-history") : QStringLiteral("office-chart-pie"),
+                                           m_recentAppsModel));
         ++separatorPosition;
     }
 
@@ -438,7 +464,7 @@ void RootModel::refresh()
     m_systemModel = new SystemModel(this);
 
     if (m_showPowerSession) {
-        m_entryList << new GroupEntry(this, i18n("Power / Session"), QString("system-log-out"), m_systemModel);
+        m_entryList << new GroupEntry(this, i18n("Power / Session"), QStringLiteral("system-log-out"), m_systemModel);
     }
 
     endResetModel();

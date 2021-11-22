@@ -1,0 +1,150 @@
+# plasma_runner_powerdevil Bahasa Melayu (Malay) (ms)
+# Copyright (C) 2008, 2009 K Desktop Environment
+# This file is distributed under the same license as the krunner_powerdevil package.
+#
+# Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>, 2008, 2009, 2010.
+# Sharuzzaman Ahmat Raslan <sharuzzaman@gmail.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_powerdevil\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2010-10-31 20:18+0800\n"
+"Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@gmail.com>\n"
+"Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
+"Language: ms\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=1;\n"
+
+#: PowerDevilRunner.cpp:45
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "suspend"
+msgstr "gantung"
+
+#: PowerDevilRunner.cpp:47
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "to ram"
+msgstr "ke ram"
+
+#: PowerDevilRunner.cpp:49
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "sleep"
+msgstr "tidur"
+
+#: PowerDevilRunner.cpp:51
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "hibernate"
+msgstr "hibernasi"
+
+#: PowerDevilRunner.cpp:53
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "to disk"
+msgstr "ke cakera"
+
+#: PowerDevilRunner.cpp:55 PowerDevilRunner.cpp:57 PowerDevilRunner.cpp:80
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "dim screen"
+msgstr "kelam skrin"
+
+#: PowerDevilRunner.cpp:65
+#, kde-format
+msgid ""
+"Lists system suspend (e.g. sleep, hibernate) options and allows them to be "
+"activated"
+msgstr ""
+"Senaraikan pilihan gantungan sistem (cth. sleep, hibernate) dan benarkan "
+"mereka untuk diaktifkan"
+
+#: PowerDevilRunner.cpp:69
+#, kde-format
+msgid "Suspends the system to RAM"
+msgstr "Gantung sistem ke RAM"
+
+#: PowerDevilRunner.cpp:73
+#, kde-format
+msgid "Suspends the system to disk"
+msgstr "Gantung sistem ke cakera"
+
+#: PowerDevilRunner.cpp:76
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "screen brightness"
+msgstr "kecerahan skrin"
+
+#: PowerDevilRunner.cpp:78
+#, no-c-format, kde-format
+msgid ""
+"Lists screen brightness options or sets it to the brightness defined by :q:; "
+"e.g. screen brightness 50 would dim the screen to 50% maximum brightness"
+msgstr ""
+"Senaraikan pilihan kecerahan paparan atau tetapkan ke kecerahan yang "
+"ditakrifkan oleh :q:; contoh. kecerahan skrin 50 akan meredupkan skrin untuk "
+"kecerahan maksimum 50%"
+
+#: PowerDevilRunner.cpp:123
+#, fuzzy, kde-format
+#| msgid "Set Brightness to %1"
+msgid "Set Brightness to %1%"
+msgstr "Tetap Kecerahan ke %1"
+
+#: PowerDevilRunner.cpp:132
+#, kde-format
+msgid "Dim screen totally"
+msgstr "Kelam skrin keseluruhan"
+
+#: PowerDevilRunner.cpp:140
+#, kde-format
+msgid "Dim screen by half"
+msgstr "Kelam skrin separuh"
+
+#: PowerDevilRunner.cpp:170
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "sleep"
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "tidur"
+
+#: PowerDevilRunner.cpp:171
+#, kde-format
+msgid "Suspend to RAM"
+msgstr "Gantung ke RAM"
+
+#: PowerDevilRunner.cpp:176
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "hibernate"
+msgctxt "Suspend to disk"
+msgid "Hibernate"
+msgstr "hibernasi"
+
+#: PowerDevilRunner.cpp:177
+#, fuzzy, kde-format
+#| msgid "Suspend to Disk"
+msgid "Suspend to disk"
+msgstr "Gantung ke Cakera"
+
+#: PowerDevilRunner.cpp:244
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "screen brightness"
+msgctxt "Note this is a KRunner keyword, it should end with a space"
+msgid "screen brightness "
+msgstr "kecerahan skrin"
+
+#: PowerDevilRunner.cpp:246
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "dim screen"
+msgctxt "Note this is a KRunner keyword, it should end with a space"
+msgid "dim screen "
+msgstr "kelam skrin"

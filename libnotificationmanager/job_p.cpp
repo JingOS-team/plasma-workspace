@@ -19,21 +19,19 @@
  */
 
 #include "job_p.h"
-#include "job.h"
 
 #include "debug.h"
 
-#include <QDebug>
 #include <QDBusConnection>
+#include <QDebug>
 #include <QTimer>
 
 #include <KFilePlacesModel>
-#include <KService>
 #include <KLocalizedString>
+#include <KService>
+#include <KShell>
 
 #include <kio/global.h>
-
-#include "notifications.h"
 
 #include "jobviewv2adaptor.h"
 #include "jobviewv3adaptor.h"
@@ -80,47 +78,55 @@ QUrl JobPrivate::localFileOrUrl(const QString &urlString)
     return url;
 }
 
-// Tries to return a more user-friendly displayed destination
-// - if it is a place, show the name, e.g. "Downloads"
-// - if it is inside home, abbreviate that to tilde ~/foo
-// - otherwise print URL (without password)
-QString JobPrivate::prettyDestUrl() const
+QUrl JobPrivate::destUrl() const
 {
     QUrl url = m_destUrl;
     // In case of a single file and no destUrl, try using the second label (most likely "Destination")...
     if (!url.isValid() && m_totalFiles == 1) {
         url = localFileOrUrl(m_descriptionValue2).adjusted(QUrl::RemoveFilename);
     }
+    return url;
+}
+
+QString JobPrivate::prettyUrl(const QUrl &_url) const
+{
+    QUrl url(_url);
 
     if (!url.isValid()) {
         return QString();
+    }
+
+    if (url.path().endsWith(QLatin1String("/."))) {
+        url.setPath(url.path().chopped(2));
     }
 
     if (!m_placesModel) {
         m_placesModel = createPlacesModel();
     }
 
-    // If we copy into a "place", show its pretty name instead of a URL/path
-    for (int row = 0; row < m_placesModel->rowCount(); ++row) {
-        const QModelIndex idx = m_placesModel->index(row, 0);
-        if (m_placesModel->isHidden(idx)) {
-            continue;
+    // Mimic KUrlNavigator and show a pretty place name,
+    // for example Documents/foo/bar rather than /home/user/Documents/foo/bar
+    const QModelIndex closestIdx = m_placesModel->closestItem(url);
+    if (closestIdx.isValid()) {
+        const QUrl placeUrl = m_placesModel->url(closestIdx);
+
+        QString text = m_placesModel->text(closestIdx);
+
+        QString pathInsidePlace = url.path().mid(placeUrl.path().length());
+
+        if (!pathInsidePlace.isEmpty() && !pathInsidePlace.startsWith(QLatin1Char('/'))) {
+            pathInsidePlace.prepend(QLatin1Char('/'));
         }
 
-        if (m_placesModel->url(idx).matches(url, QUrl::StripTrailingSlash)) {
-            return m_placesModel->text(idx);
+        if (pathInsidePlace != QLatin1Char('/')) {
+            text.append(pathInsidePlace);
         }
+
+        return text;
     }
 
     if (url.isLocalFile()) {
-        QString destUrlString = url.toLocalFile();
-
-        const QString homePath = QDir::homePath();
-        if (destUrlString.startsWith(homePath)) {
-            destUrlString = QLatin1String("~") + destUrlString.mid(homePath.length());
-        }
-
-        return destUrlString;
+        return KShell::tildeCollapse(url.toLocalFile());
     }
 
     return url.toDisplayString(QUrl::RemoveUserInfo);
@@ -128,6 +134,7 @@ QString JobPrivate::prettyDestUrl() const
 
 void JobPrivate::updateHasDetails()
 {
+    // clang-format off
     const bool hasDetails = m_totalBytes > 0
         || m_totalFiles > 0
         || m_totalDirectories > 0
@@ -139,6 +146,7 @@ void JobPrivate::updateHasDetails()
         || !m_descriptionValue1.isEmpty()
         || !m_descriptionValue2.isEmpty()
         || m_speed > 0;
+    // clang-format on
 
     if (m_hasDetails != hasDetails) {
         m_hasDetails = hasDetails;
@@ -156,48 +164,61 @@ QString JobPrivate::text() const
         return m_infoMessage;
     }
 
-    const QString currentFileName = descriptionUrl().fileName();
-    const QString destUrlString = prettyDestUrl();
+    const QUrl destUrl = this->destUrl();
+    const QString prettyDestUrl = prettyUrl(destUrl);
+
+    QString destUrlString;
+    if (!prettyDestUrl.isEmpty()) {
+        // Turn destination into a clickable hyperlink
+        destUrlString = QStringLiteral("<a href=\"%1\">%2</a>").arg(destUrl.toString(QUrl::PrettyDecoded), prettyDestUrl);
+    }
 
     if (m_totalFiles == 0) {
         if (!destUrlString.isEmpty()) {
             if (m_processedFiles > 0) {
-                return i18ncp("Copying n files to location", "%1 file to %2", "%1 files to %2",
-                              m_processedFiles, destUrlString);
+                return i18ncp("Copying n files to location", "%1 file to %2", "%1 files to %2", m_processedFiles, destUrlString);
             }
             return i18nc("Copying unknown amount of files to location", "to %1", destUrlString);
         } else if (m_processedFiles > 0) {
             return i18ncp("Copying n files", "%1 file", "%1 files", m_processedFiles);
         }
-    } else if (m_totalFiles == 1 && !currentFileName.isEmpty()) {
+    } else if (m_totalFiles == 1) {
+        const QString currentFileName = descriptionUrl().fileName();
         if (!destUrlString.isEmpty()) {
-            return i18nc("Copying file to location", "%1 to %2", currentFileName, destUrlString);
+            if (!currentFileName.isEmpty()) {
+                return i18nc("Copying file to location", "%1 to %2", currentFileName, destUrlString);
+            } else {
+                return i18ncp("Copying n files to location", "%1 file to %2", "%1 files to %2", m_totalFiles, destUrlString);
+            }
+        } else if (!currentFileName.isEmpty()) {
+            return currentFileName;
+        } else {
+            return i18ncp("Copying n files", "%1 file", "%1 files", m_totalFiles);
         }
-
-        return currentFileName;
     } else if (m_totalFiles > 1) {
         if (!destUrlString.isEmpty()) {
             if (m_processedFiles > 0 && m_processedFiles <= m_totalFiles) {
-                return i18ncp("Copying n of m files to locaton", "%2 of %1 file to %3", "%2 of %1 files to %3",
-                              m_totalFiles, m_processedFiles, destUrlString);
+                return i18ncp("Copying n of m files to locaton", "%2 of %1 file to %3", "%2 of %1 files to %3", m_totalFiles, m_processedFiles, destUrlString);
             }
-            return i18ncp("Copying n files to location", "%1 file to %2", "%1 files to %2",
-                          m_processedFiles > 0 ? m_processedFiles : m_totalFiles, destUrlString);
+            return i18ncp("Copying n files to location",
+                          "%1 file to %2",
+                          "%1 files to %2",
+                          m_processedFiles > 0 ? m_processedFiles : m_totalFiles,
+                          destUrlString);
         }
 
         if (m_processedFiles > 0 && m_processedFiles <= m_totalFiles) {
-            return i18ncp("Copying n of m files", "%2 of %1 file", "%2 of %1 files",
-                          m_totalFiles, m_processedFiles);
+            return i18ncp("Copying n of m files", "%2 of %1 file", "%2 of %1 files", m_totalFiles, m_processedFiles);
         }
 
         return i18ncp("Copying n files", "%1 file", "%1 files", m_processedFiles > 0 ? m_processedFiles : m_totalFiles);
     }
 
     qCInfo(NOTIFICATIONMANAGER) << "Failed to generate job text for job with following properties:";
-    qCInfo(NOTIFICATIONMANAGER) << "  processedFiles =" << m_processedFiles << ", totalFiles =" << m_totalFiles
-                                << ", current file name =" << currentFileName << ", destination url string =" << destUrlString;
-    qCInfo(NOTIFICATIONMANAGER) << "label1 =" << m_descriptionLabel1 << ", value1 =" << m_descriptionValue1
-                                << ", label2 =" << m_descriptionLabel2 << ", value2 =" << m_descriptionValue2;
+    qCInfo(NOTIFICATIONMANAGER) << "  processedFiles =" << m_processedFiles << ", totalFiles =" << m_totalFiles << ", current file name =" << descriptionUrl().fileName()
+                                << ", destination url string =" << this->destUrl();
+    qCInfo(NOTIFICATIONMANAGER) << "label1 =" << m_descriptionLabel1 << ", value1 =" << m_descriptionValue1 << ", label2 =" << m_descriptionLabel2
+                                << ", value2 =" << m_descriptionValue2;
 
     return QString();
 }
@@ -331,7 +352,7 @@ bool JobPrivate::setDescriptionField(uint number, const QString &name, const QSt
         dirty |= updateField(value, m_descriptionValue2, &Job::descriptionValue2Changed);
     }
     if (dirty) {
-        emit static_cast<Job*>(parent())->descriptionUrlChanged();
+        emit static_cast<Job *>(parent())->descriptionUrlChanged();
         updateHasDetails();
     }
 
@@ -404,7 +425,7 @@ void JobPrivate::update(const QVariantMap &properties)
     updateFieldFromProperties(properties, QStringLiteral("processedFiles"), m_processedFiles, &Job::processedFilesChanged);
     updateFieldFromProperties(properties, QStringLiteral("processedBytes"), m_processedBytes, &Job::processedBytesChanged);
     updateFieldFromProperties(properties, QStringLiteral("processedDirectories"), m_processedDirectories, &Job::processedDirectoriesChanged);
-    updateFieldFromProperties(properties, QStringLiteral("Items"), m_processedItems, &Job::processedItemsChanged);
+    updateFieldFromProperties(properties, QStringLiteral("processedItems"), m_processedItems, &Job::processedItemsChanged);
 
     updateFieldFromProperties(properties, QStringLiteral("totalFiles"), m_totalFiles, &Job::totalFilesChanged);
     updateFieldFromProperties(properties, QStringLiteral("totalBytes"), m_totalBytes, &Job::totalBytesChanged);

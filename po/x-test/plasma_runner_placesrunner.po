@@ -1,0 +1,33 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_placesrunner\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2020-06-27 03:50+0000\n"
+"Last-Translator: transxx.py program <null@kde.org>\n"
+"Language-Team: KDE Test Language <kde-i18n-doc@kde.org>\n"
+"Language: x-test\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: placesrunner.cpp:42 placesrunner.cpp:96
+#, kde-format
+msgid "places"
+msgstr "xxplacesxx"
+
+#: placesrunner.cpp:42
+#, kde-format
+msgid "Lists all file manager locations"
+msgstr "xxLists all file manager locationsxx"
+
+#: placesrunner.cpp:44
+#, kde-format
+msgid "Finds file manager locations that match :q:"
+msgstr "xxFinds file manager locations that match :q:xx"

@@ -1,0 +1,89 @@
+# Translation of plasma_engine_devicenotifications.po to Ukrainian
+# Copyright (C) 2015-2016 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Yuri Chornoivan <yurchor@ukr.net>, 2015, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_engine_devicenotifications\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:48+0100\n"
+"PO-Revision-Date: 2016-01-25 17:17+0200\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Lokalize 1.5\n"
+
+#: ksolidnotify.cpp:161
+#, kde-format
+msgid "This device can now be safely removed."
+msgstr "Цей пристрій тепер можна безпечно від’єднувати."
+
+#: ksolidnotify.cpp:168
+#, kde-format
+msgid "You are not authorized to mount this device."
+msgstr "Ви не маєте прав доступу для монтування цього пристрою."
+
+#: ksolidnotify.cpp:171
+#, kde-format
+msgctxt "Remove is less technical for unmount"
+msgid "You are not authorized to remove this device."
+msgstr "Ви не маєте прав доступу для вилучення цього пристрою."
+
+#: ksolidnotify.cpp:174
+#, kde-format
+msgid "You are not authorized to eject this disc."
+msgstr "Ви не маєте прав доступу до виштовхування цього диску."
+
+#: ksolidnotify.cpp:181
+#, kde-format
+msgid "Could not mount this device as it is busy."
+msgstr ""
+"Не вдалося змонтувати цей пристрій, оскільки його зайнято роботою з іншою "
+"програмою."
+
+#: ksolidnotify.cpp:211
+#, kde-format
+msgid "One or more files on this device are open within an application."
+msgstr "Один або декілька файлів з цього пристрою відкрито у програмі."
+
+#: ksolidnotify.cpp:213
+#, kde-format
+msgid "One or more files on this device are opened in application \"%2\"."
+msgid_plural ""
+"One or more files on this device are opened in following applications: %2."
+msgstr[0] ""
+"Один або декілька файлів з цього пристрою відкрито у таких програмах: %2."
+msgstr[1] ""
+"Один або декілька файлів з цього пристрою відкрито у таких програмах: %2."
+msgstr[2] ""
+"Один або декілька файлів з цього пристрою відкрито у таких програмах: %2."
+msgstr[3] "Один або декілька файлів з цього пристрою відкрито у програмі «%2»."
+
+#: ksolidnotify.cpp:216
+#, kde-format
+msgctxt "separator in list of apps blocking device unmount"
+msgid ", "
+msgstr ", "
+
+#: ksolidnotify.cpp:233
+#, kde-format
+msgid "Could not mount this device."
+msgstr "Не вдалося змонтувати цей пристрій."
+
+#: ksolidnotify.cpp:236
+#, kde-format
+msgctxt "Remove is less technical for unmount"
+msgid "Could not remove this device."
+msgstr "Не вдалося вилучити цей пристрій."
+
+#: ksolidnotify.cpp:239
+#, kde-format
+msgid "Could not eject this disc."
+msgstr "Не вдалося виштовхнути цей диск."

@@ -38,86 +38,21 @@ PlasmaComponents3.Page {
     Layout.minimumWidth: units.gridUnit * 12
     Layout.minimumHeight: units.gridUnit * 12
 
-    header: PlasmaExtras.PlasmoidHeading {
-        id: headerToolbarContainer
+    header: PlasmaExtras.BasicPlasmoidHeading {
+        visible: !(plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentDrawsPlasmoidHeading) || devicenotifier.mountedRemovables > 1
+        PlasmaComponents3.ToolButton {
+            id: unmountAll
+            visible: devicenotifier.mountedRemovables > 1;
 
-        RowLayout {
-            width: parent.width
+            icon.name: "media-eject"
+            text: i18n("Remove All")
 
-            PlasmaComponents3.Label {
-                text: i18n("Show:")
-            }
-
-            PlasmaComponents3.ComboBox {
-                id: displayModeCombobox
-
-                Layout.preferredWidth: units.gridUnit * 11
-                model: [i18n("Removable devices"),
-                        i18n("Non-removable devices"),
-                        i18n("All devices")
-                       ]
-                currentIndex: {
-                    if (plasmoid.configuration.removableDevices) {
-                        return 0
-                    } else if (plasmoid.configuration.nonRemovableDevices) {
-                        return 1
-                    } else {
-                        return 2
-                    }
-                }
-                onActivated: {
-                    switch (currentIndex) {
-                        case 0:
-                            plasmoid.configuration.removableDevices = true;
-                            plasmoid.configuration.nonRemovableDevices = false;
-                            plasmoid.configuration.allDevices = false;
-                            break;
-                        case 1:
-                            plasmoid.configuration.removableDevices = false;
-                            plasmoid.configuration.nonRemovableDevices = true;
-                            plasmoid.configuration.allDevices = false;
-                            break;
-                        case 2:
-                            plasmoid.configuration.removableDevices = false;
-                            plasmoid.configuration.nonRemovableDevices = false;
-                            plasmoid.configuration.allDevices = true;
-                            break
-                    }
-                }
-            }
-
-            Item {
-                Layout.fillWidth: true
-            }
-
-            PlasmaComponents3.ToolButton {
-                id: unmountAll
-                visible: devicenotifier.mountedRemovables > 1
-                && displayModeCombobox.currentIndex === 0 /* removables only */
-
-                icon.name: "media-eject"
-                text: i18n("Remove All")
-
-                PlasmaComponents3.ToolTip {
-                    text: i18n("Click to safely remove all devices")
-                }
-            }
-
-            // TODO: Once the automounter KCM is ported to QML, embed it in the
-            // config window and change the action to open the config window
-            PlasmaComponents3.ToolButton {
-                icon.name: "configure"
-                onClicked: plasmoid.action("openAutomounterKcm").trigger()
-                visible: devicenotifier.openAutomounterKcmAuthorized
-
-                Accessible.name: plasmoid.action("openAutomounterKcm").text
-
-                PlasmaComponents3.ToolTip {
-                    text: plasmoid.action("openAutomounterKcm").text
-                }
+            PlasmaComponents3.ToolTip {
+                text: i18n("Click to safely remove all devices")
             }
         }
     }
+    
     MouseArea {
         id: fullRepMouseArea
         hoverEnabled: true
@@ -161,7 +96,7 @@ PlasmaComponents3.Page {
 
         Connections {
             target: statusSource
-            onLastChanged: {
+            function onLastChanged() {
                 if (!statusSource.last) {
                     messageHighlightAnimator.stop()
                     messageHighlight.visible = false
@@ -181,9 +116,9 @@ PlasmaComponents3.Page {
 
     Connections {
         target: plasmoid
-        onExpandedChanged: {
+        function onExpandedChanged() {
             if (!plasmoid.expanded) {
-                statusSource.clearMessage()
+                statusSource.clearMessage();
             }
         }
     }
@@ -225,7 +160,7 @@ PlasmaComponents3.Page {
             PlasmaExtras.PlaceholderMessage {
                 anchors.centerIn: parent
                 width: parent.width - (units.largeSpacing * 4)
-                text: i18n("No devices available")
+                text: plasmoid.configuration.removableDevices ? i18n("No removable devices attached") : i18n("No disks available")
                 visible: notifierDialog.count === 0 && !devicenotifier.pendingDelegateRemoval
             }
         }

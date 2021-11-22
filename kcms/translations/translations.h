@@ -28,35 +28,28 @@ class AvailableTranslationsModel;
 class SelectedTranslationsModel;
 class TranslationsModel;
 class TranslationsSettings;
+class TranslationsData;
 class TranslateTool; 
 
 class Translations : public KQuickAddons::ManagedConfigModule
 {
     Q_OBJECT
 
-    Q_PROPERTY(QAbstractItemModel* translationsModel READ translationsModel CONSTANT)
-    Q_PROPERTY(QAbstractItemModel* selectedTranslationsModel READ selectedTranslationsModel CONSTANT)
-    Q_PROPERTY(QAbstractItemModel* availableTranslationsModel READ availableTranslationsModel CONSTANT)
+    Q_PROPERTY(QAbstractItemModel *translationsModel READ translationsModel CONSTANT)
+    Q_PROPERTY(QAbstractItemModel *selectedTranslationsModel READ selectedTranslationsModel CONSTANT)
+    Q_PROPERTY(QAbstractItemModel *availableTranslationsModel READ availableTranslationsModel CONSTANT)
     Q_PROPERTY(bool everSaved READ everSaved NOTIFY everSavedChanged)
-    // Q_PROPERTY(TranslateTool* translateTool, READ translateTool, WRITE setTranslateTool)
 
-    public:
-        explicit Translations(QObject* parent = nullptr, const QVariantList &list = QVariantList());
-        ~Translations() override;
+public:
+    explicit Translations(QObject *parent = nullptr, const QVariantList &list = QVariantList());
+    ~Translations() override;
 
-        QAbstractItemModel* translationsModel() const;
-        QAbstractItemModel* selectedTranslationsModel() const;
-        QAbstractItemModel* availableTranslationsModel() const;
+    QAbstractItemModel *translationsModel() const;
+    QAbstractItemModel *selectedTranslationsModel() const;
+    QAbstractItemModel *availableTranslationsModel() const;
 
-        bool everSaved() const;
-        // TranslateTool *translateTool() {
-        //     return m_translateTool;
-        // }
-        // void setTranslateTool(TranslateTool *translateTool) {
-        //     m_translateTool = translateTool;
-        //     connect(m_translateTool, &TranslateTool::dlgLanguageChanged,
-        //     this, &Translations::onLanguageChanged);
-        // }
+    bool everSaved() const;
+    TranslationsSettings *settings() const;
 
     public Q_SLOTS:
         Q_INVOKABLE void load() override;
@@ -64,23 +57,22 @@ class Translations : public KQuickAddons::ManagedConfigModule
         void defaults() override;
         void onLanguageChanged(bool result);
 
-    Q_SIGNALS:
-        void everSavedChanged() const;
+Q_SIGNALS:
+    void everSavedChanged() const;
 
-    private Q_SLOTS:
-        void selectedLanguagesChanged();
-       
+private Q_SLOTS:
+    void selectedLanguagesChanged();
 
-    private:
-        bool isSaveNeeded() const override;
+private:
+    bool isSaveNeeded() const override;
 
-        TranslationsSettings *m_settings;
-        TranslationsModel *m_translationsModel;
-        SelectedTranslationsModel *m_selectedTranslationsModel;
-        AvailableTranslationsModel *m_availableTranslationsModel;
-        TranslateTool *m_translateTool;
+    TranslationsData *m_data;
+    TranslationsModel *m_translationsModel;
+    SelectedTranslationsModel *m_selectedTranslationsModel;
+    AvailableTranslationsModel *m_availableTranslationsModel;
+	TranslateTool *m_translateTool;
 
-        bool m_everSaved;
+    bool m_everSaved;
 };
 
 #endif

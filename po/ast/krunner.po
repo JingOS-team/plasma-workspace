@@ -1,0 +1,63 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# enolp <enolp@softastur.org>, 2019, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2020-02-25 16:26+0100\n"
+"Last-Translator: enolp <enolp@softastur.org>\n"
+"Language-Team: Asturian <alministradores@softastur.org>\n"
+"Language: ast\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 19.12.2\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Softastur"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "alministradores@softastur.org"
+
+#: main.cpp:65
+#, kde-format
+msgid "krunner"
+msgstr "krunner"
+
+#: main.cpp:65
+#, kde-format
+msgid "Run Command interface"
+msgstr "Executa la interfaz de comandos"
+
+#: main.cpp:70
+#, kde-format
+msgid "Use the clipboard contents as query for KRunner"
+msgstr "Usa'l conteníu del cartafueyu como una consulta pa KRunner"
+
+#: main.cpp:71
+#, kde-format
+msgid "Start KRunner in the background, don't show it."
+msgstr "Anicia KRunner en segundu planu, nun s'amuesa."
+
+#: main.cpp:72
+#, kde-format
+msgid "Replace an existing instance"
+msgstr "Troca una instancia esistente"
+
+#: main.cpp:77
+#, kde-format
+msgid "The query to run, only used if -c is not provided"
+msgstr "La consulta a executar, namás s'usa si nun s'apurre -c"
+
+#: view.cpp:62
+#, kde-format
+msgid "KRunner"
+msgstr "KRunner"

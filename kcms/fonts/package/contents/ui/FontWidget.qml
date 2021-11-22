@@ -28,15 +28,12 @@ import org.kde.kcm 1.0
 FocusScope {
     id: root
     property string label
+    property alias tooltipText: tooltip.text
     property string category
     property font font
     Kirigami.FormData.label: root.label
     activeFocusOnTab: true
 
-    Layout.minimumWidth: layout.Layout.minimumWidth
-    Layout.preferredWidth: layout.Layout.preferredWidth
-    Layout.minimumHeight: layout.Layout.minimumHeight
-    Layout.preferredHeight: layout.Layout.preferredHeight
     implicitWidth: layout.implicitWidth
     implicitHeight: layout.implicitHeight
 
@@ -48,7 +45,6 @@ FocusScope {
             Kirigami.Theme.inherit: true
             text: root.font.family + " " + root.font.pointSize + "pt"
             font: root.font
-            Layout.fillHeight: true
         }
 
         QtControls.Button {
@@ -61,9 +57,7 @@ FocusScope {
                 kcm.adjustFont(root.font, root.category)
             }
             QtControls.ToolTip {
-                visible: parent.hovered
-                text: i18n("Select %1 Font...", label.replace(':', ''))
-                font.capitalization: Font.Capitalize
+                id: tooltip
             }
         }
     }

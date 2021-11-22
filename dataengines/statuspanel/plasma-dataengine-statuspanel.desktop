@@ -1,0 +1,17 @@
+[Desktop Entry]
+Name=Status Bar data engine
+Name[zh_CN]=状态栏数据引擎
+Comment=Status Bar Data Engine
+Comment[zh_CN]=状态栏数据引擎
+Icon=application-x-executable-script
+
+Type=Service
+X-KDE-ServiceTypes=Plasma/DataEngine
+X-KDE-Library=plasma_engine_statuspanel
+
+X-KDE-PluginInfo-Author=
+X-KDE-PluginInfo-Email=
+X-KDE-PluginInfo-Name=statuspanel
+X-KDE-PluginInfo-Version=
+X-KDE-PluginInfo-Website=https://kde.org/plasma-desktop
+X-KDE-PluginInfo-Category=

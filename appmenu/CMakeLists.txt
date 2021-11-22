@@ -17,16 +17,15 @@ add_library(appmenu MODULE ${kded_appmenu_SRCS})
 kcoreaddons_desktop_to_json(appmenu appmenu.desktop)
 
 target_link_libraries(appmenu
-    Qt5::DBus
+    Qt::DBus
     KF5::DBusAddons
     KF5::KIOCore
     KF5::WindowSystem
-    ${X11_LIBRARIES}
     dbusmenuqt
 )
 
 if (HAVE_X11)
-    target_link_libraries(appmenu Qt5::X11Extras XCB::XCB)
+    target_link_libraries(appmenu Qt::X11Extras XCB::XCB)
 endif()
 
 install(TARGETS appmenu DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf5/kded )

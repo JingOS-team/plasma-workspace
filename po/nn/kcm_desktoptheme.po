@@ -1,0 +1,140 @@
+# Translation of kcm_desktoptheme to Norwegian Nynorsk
+#
+# Karl Ove Hufthammer <karl@huftis.org>, 2008, 2010, 2012, 2015, 2016, 2018, 2019, 2020.
+# Håvard Korsvoll <korsvoll@skulelinux.no>, 2009.
+# Eirik U. Birkeland <eirbir@gmail.com>, 2009.
+# Øystein Steffensen-Alværvik <ystein@posteo.net>, 2018, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_desktopthemedetails\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2020-08-28 18:39+0200\n"
+"Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
+"Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
+"Language: nn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.08.0\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Karl Ove Hufthammer,Håvard Korsvoll"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "karl@huftis.org,korsvoll@skulelinux.no"
+
+#. i18n: ectx: label, entry (name), group (Theme)
+#: desktopthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current Plasma Style"
+msgstr "Namn på gjeldande Plasma-stil"
+
+#: kcm.cpp:63
+#, kde-format
+msgid "Plasma Style"
+msgstr "Plasma-stil"
+
+#: kcm.cpp:64
+#, kde-format
+msgid "David Rosca"
+msgstr "David Rosca"
+
+#: kcm.cpp:122
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "Klarte ikkje laga mellombels fil."
+
+#: kcm.cpp:133
+#, kde-format
+msgid "Unable to download the theme: %1"
+msgstr "Klarte ikkje lasta ned tema: %1"
+
+#: kcm.cpp:158
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "Temaet er no installert."
+
+#: kcm.cpp:161 kcm.cpp:167
+#, kde-format
+msgid "Theme installation failed."
+msgstr "Klarte ikkje installera temaet."
+
+# Er «%1» ein feilkode eller eit temanamn?
+#: kcm.cpp:259
+#, kde-format
+msgid "Removing theme failed: %1"
+msgstr "Feil ved fjerning av tema: %1"
+
+#: package/contents/ui/main.qml:36
+#, kde-format
+msgid "This module lets you choose the Plasma style."
+msgstr "Med denne modulen kan du velja Plasma-stil."
+
+#: package/contents/ui/main.qml:81
+#, kde-format
+msgid "All Themes"
+msgstr "Alle tema"
+
+#: package/contents/ui/main.qml:82
+#, kde-format
+msgid "Light Themes"
+msgstr "Lyse tema"
+
+#: package/contents/ui/main.qml:83
+#, kde-format
+msgid "Dark Themes"
+msgstr "Mørke tema"
+
+#: package/contents/ui/main.qml:84
+#, kde-format
+msgid "Color scheme compatible"
+msgstr "Kompatibel med fargeoppsett"
+
+#: package/contents/ui/main.qml:112
+#, kde-format
+msgid "Follows color scheme"
+msgstr "Følgjer fargeoppsettet"
+
+#: package/contents/ui/main.qml:130
+#, kde-format
+msgid "Edit Theme..."
+msgstr "Rediger tema …"
+
+#: package/contents/ui/main.qml:137
+#, kde-format
+msgid "Remove Theme"
+msgstr "Fjern tema"
+
+#: package/contents/ui/main.qml:144
+#, kde-format
+msgid "Restore Theme"
+msgstr "Gjenopprett tema"
+
+#: package/contents/ui/main.qml:182
+#, kde-format
+msgid "Install from File..."
+msgstr "Installer frå fil …"
+
+#: package/contents/ui/main.qml:189
+#, kde-format
+msgid "Get New Plasma Styles..."
+msgstr "Hent nye Plasma-stilar …"
+
+#: package/contents/ui/main.qml:201
+#, kde-format
+msgid "Open Theme"
+msgstr "Opna tema"
+
+#: package/contents/ui/main.qml:203
+#, kde-format
+msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
+msgstr "Temafiler (*.zip *.tar.gz *.tar.bz2)"

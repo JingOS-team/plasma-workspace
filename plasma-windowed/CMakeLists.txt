@@ -1,6 +1,5 @@
 add_definitions("-DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_TO_ASCII")
 add_definitions(-DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT)
-add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
 
 set(plasmawindowed-app_SRCS
     plasmawindowedcorona.cpp
@@ -12,9 +11,9 @@ add_executable(plasmawindowed ${plasmawindowed-app_SRCS})
 
 target_link_libraries(
     plasmawindowed
-    Qt5::Widgets
-    Qt5::Quick
-    Qt5::Qml
+    Qt::Widgets
+    Qt::Quick
+    Qt::Qml
     KF5::I18n
     KF5::IconThemes
     KF5::XmlGui

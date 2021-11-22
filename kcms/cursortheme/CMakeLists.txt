@@ -15,16 +15,25 @@ include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/xcursor/ )
 
 ########### next target ###############
 
-set(kcm_cursortheme_PART_SRCS kcmcursortheme.cpp cursorthemedata.cpp ${libnoinst_SRCS})
+set(kcm_cursortheme_PART_SRCS kcmcursortheme.cpp ${libnoinst_SRCS})
+
+kcmutils_generate_module_data(
+    kcm_cursortheme_PART_SRCS
+    MODULE_DATA_HEADER cursorthemedata.h
+    MODULE_DATA_CLASS_NAME CursorThemeData
+    SETTINGS_HEADERS cursorthemesettings.h
+    SETTINGS_CLASSES CursorThemeSettings
+)
+
 
 kconfig_add_kcfg_files(kcm_cursortheme_PART_SRCS cursorthemesettings.kcfgc GENERATE_MOC)
 add_library(kcm_cursortheme MODULE ${kcm_cursortheme_PART_SRCS})
 
 
 target_link_libraries(kcm_cursortheme
-    Qt5::DBus
-    Qt5::X11Extras
-    Qt5::Quick
+    Qt::DBus
+    Qt::X11Extras
+    Qt::Quick
     KF5::Archive
     KF5::KCMUtils
     KF5::I18n
@@ -35,16 +44,16 @@ target_link_libraries(kcm_cursortheme
     KF5::KDELibs4Support
     KF5::NewStuffCore
     KF5::QuickAddons
-    ${X11_LIBRARIES}
+    X11::X11
     XCB::XCB
     PW::KWorkspace
 )
 
 if (X11_Xcursor_FOUND)
-   target_link_libraries(kcm_cursortheme ${X11_Xcursor_LIB})
+   target_link_libraries(kcm_cursortheme X11::Xcursor)
 endif ()
 if (X11_Xfixes_FOUND)
-   target_link_libraries(kcm_cursortheme ${X11_Xfixes_LIB})
+   target_link_libraries(kcm_cursortheme X11::Xfixes)
 endif ()
 
 install(TARGETS kcm_cursortheme  DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms )

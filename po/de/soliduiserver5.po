@@ -1,0 +1,22 @@
+# Thomas Reitelbach <tr@erdfunkstelle.de>, 2007, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: soliduiserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2008-11-09 02:12+0100\n"
+"Last-Translator: Thomas Reitelbach <tr@erdfunkstelle.de>\n"
+"Language-Team: German <kde-i18n-de@kde.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 0.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: soliduiserver.cpp:73
+#, kde-format
+msgid "'%1' needs a password to be accessed. Please enter a password."
+msgstr ""
+"Für den Zugriff auf „%1“ wird ein Passwort benötigt. Bitte geben Sie ein "
+"Passwort ein."

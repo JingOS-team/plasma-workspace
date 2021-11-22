@@ -1,5 +1,6 @@
 /*
  * Copyright 2018 Kai Uwe Broulik <kde@privat.broulik.de>
+ * Copyright 2021 Liu Bangguo <liubangguo@jingos.com>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -24,12 +25,13 @@ import QtQuick.Controls 2.3 as QtControls
 import org.kde.kirigami 2.4 as Kirigami
 import org.kde.kcm 1.3 as KCM
 import org.kde.private.kcms.style 1.0 as Private
+import jingos.display 1.0
 
 QtControls.Popup {
     id: effectSettingsPopup
 
     modal: true
-    implicitWidth: formLayout.implicitWidth + 40 // Leave some room for SettingState buttons
+    implicitWidth: formLayout.implicitWidth + JDisplay.dp(40) // Leave some room for SettingState buttons
 
     onOpened: {
         // can we do this automatically with "focus: true" somewhere?

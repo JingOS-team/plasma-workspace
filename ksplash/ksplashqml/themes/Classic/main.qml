@@ -1,5 +1,6 @@
 /*
  *   Copyright (C) 2013 Martin Klapetek <mklapetek(at)kde.org>
+ *   Copyright (C) 2021 Liu Bangguo <liubangguo@jingos.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU General Public License version 2,
@@ -18,6 +19,7 @@
  */
 
 import QtQuick 2.0
+import jingos.display 1.0
 
 Item {
     id: main
@@ -26,7 +28,7 @@ Item {
     height: screenSize.height
 
     property int stage
-    property int iconSize: 78
+    property int iconSize: JDisplay.dp(78)
 
     onStageChanged: {
         if (stage == 1) {
@@ -58,7 +60,7 @@ Item {
     Image {
         id: iconsBackgroundRect
         anchors.centerIn: main
-        width: row.implicitWidth + 32 // 32 being margins
+        width: row.implicitWidth + JDisplay.dp(32) // 32 being margins
         source: "images/rectangle.png"
 
         opacity: 0
@@ -115,7 +117,7 @@ Item {
             Image {
                 id: icon5
                 anchors.verticalCenter: parent.verticalCenter
-                width: 125
+                width: JDisplay.dp(125)
                 source: "images/icon5.png"
 
                 opacity: 0

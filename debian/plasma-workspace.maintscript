@@ -1,0 +1,7 @@
+# KNSRC files are now in /usr/share, where they should have belonged all along.
+#rm_conffile /etc/xdg/autostart/krunner.desktop
+rm_conffile /etc/xdg/klipper.categories
+rm_conffile /etc/xdg/plasma-workspace.categories
+rm_conffile /etc/xdg/plasmoids.knsrc
+rm_conffile /etc/xdg/wallpaper.knsrc
+rm_conffile /etc/xdg/wallpaperplugin.knsrc

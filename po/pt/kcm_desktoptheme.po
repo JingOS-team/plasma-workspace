@@ -1,0 +1,129 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_desktoptheme\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2020-07-04 13:40+0100\n"
+"Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
+"Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "José Nuno Pires"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "zepires@gmail.com"
+
+#. i18n: ectx: label, entry (name), group (Theme)
+#: desktopthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current Plasma Style"
+msgstr "Nome do Estilo do Plasma actual"
+
+#: kcm.cpp:63
+#, kde-format
+msgid "Plasma Style"
+msgstr "Estilo do Plasma"
+
+#: kcm.cpp:64
+#, kde-format
+msgid "David Rosca"
+msgstr "David Rosca"
+
+#: kcm.cpp:122
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "Não foi possível criar um ficheiro temporário."
+
+#: kcm.cpp:133
+#, kde-format
+msgid "Unable to download the theme: %1"
+msgstr "Não é possível obter o tema: %1"
+
+#: kcm.cpp:158
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "O tema foi instalado com sucesso."
+
+#: kcm.cpp:161 kcm.cpp:167
+#, kde-format
+msgid "Theme installation failed."
+msgstr "A instalação do tema foi mal-sucedida."
+
+#: kcm.cpp:259
+#, kde-format
+msgid "Removing theme failed: %1"
+msgstr "Não foi possível remover o tema: %1"
+
+#: package/contents/ui/main.qml:36
+#, kde-format
+msgid "This module lets you choose the Plasma style."
+msgstr "Este módulo permite-lhe escolher o estilo do Plasma."
+
+#: package/contents/ui/main.qml:81
+#, kde-format
+msgid "All Themes"
+msgstr "Todos os Temas"
+
+#: package/contents/ui/main.qml:82
+#, kde-format
+msgid "Light Themes"
+msgstr "Temas Claros"
+
+#: package/contents/ui/main.qml:83
+#, kde-format
+msgid "Dark Themes"
+msgstr "Temas Escuros"
+
+#: package/contents/ui/main.qml:84
+#, kde-format
+msgid "Color scheme compatible"
+msgstr "Compatíveis com o esquema de cores"
+
+#: package/contents/ui/main.qml:112
+#, kde-format
+msgid "Follows color scheme"
+msgstr "Segue o esquema de cores"
+
+#: package/contents/ui/main.qml:130
+#, kde-format
+msgid "Edit Theme..."
+msgstr "Editar o Tema..."
+
+#: package/contents/ui/main.qml:137
+#, kde-format
+msgid "Remove Theme"
+msgstr "Remover o Tema"
+
+#: package/contents/ui/main.qml:144
+#, kde-format
+msgid "Restore Theme"
+msgstr "Repor o Tema"
+
+#: package/contents/ui/main.qml:182
+#, kde-format
+msgid "Install from File..."
+msgstr "Instalar de um Ficheiro..."
+
+#: package/contents/ui/main.qml:189
+#, kde-format
+msgid "Get New Plasma Styles..."
+msgstr "Obter Novos Estilos do Plasma..."
+
+#: package/contents/ui/main.qml:201
+#, kde-format
+msgid "Open Theme"
+msgstr "Abrir um Tema"
+
+#: package/contents/ui/main.qml:203
+#, kde-format
+msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
+msgstr "Ficheiros de Temas (*.zip *.tar.gz *.tar.bz2)"

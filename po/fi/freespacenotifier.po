@@ -1,0 +1,86 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Tommi Nieminen <translator@legisign.org>, 2010, 2020.
+# Lasse Liehu <lasse.liehu@gmail.com>, 2012, 2014, 2015.
+#
+# KDE Finnish translation sprint participants:
+msgid ""
+msgstr ""
+"Project-Id-Version: freespacenotifier\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2020-06-18 17:51+0300\n"
+"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 20.04.2\n"
+"X-POT-Import-Date: 2012-12-01 22:22:18+0000\n"
+
+#: freespacenotifier.cpp:102
+#, kde-format
+msgid "Configure Warning..."
+msgstr "Varoitusasetukset…"
+
+#: freespacenotifier.cpp:106
+#, kde-format
+msgid "Open in Filelight"
+msgstr "Avaa Filelightiin"
+
+#: freespacenotifier.cpp:109
+#, kde-format
+msgid "Open in File Manager"
+msgstr "Avaa tiedostonhallintaan"
+
+#. i18n: ectx: label, entry (minimumSpace), group (General)
+#: freespacenotifier.kcfg:9
+#, kde-format
+msgid "Minimum free space before user starts being notified."
+msgstr "Vähimmäislevytila, ennen kuin käyttäjää varoitetaan."
+
+#. i18n: ectx: label, entry (enableNotification), group (General)
+#: freespacenotifier.kcfg:15
+#, kde-format
+msgid "Is the free space notification enabled."
+msgstr "Käytetäänkö vapaan tilan varoitusta."
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_enableNotification)
+#: freespacenotifier_prefs_base.ui:17
+#, kde-format
+msgid "Enable low disk space warning"
+msgstr "Varoita vähäisestä levytilasta"
+
+#. i18n: ectx: property (text), widget (QLabel, label_minimumSpace)
+#: freespacenotifier_prefs_base.ui:27
+#, kde-format
+msgid "Warn when free space is below:"
+msgstr "Varoita, kun vapaata tilaa on alle:"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpace)
+#: freespacenotifier_prefs_base.ui:37
+#, kde-format
+msgid " MiB"
+msgstr " MiB"
+
+#: module.cpp:45
+#, kde-format
+msgid ""
+"Your Home folder is running out of disk space, you have %1 MiB remaining "
+"(%2%)."
+msgstr "Kotikansiosi levytila on vähissä: tilaa on jäljellä %1 MiB (%2 %)."
+
+#: module.cpp:51
+#, kde-format
+msgid ""
+"Your Root partition is running out of disk space, you have %1 MiB remaining "
+"(%2%)."
+msgstr "Juurikansion levytila on vähissä: tilaa on jäljellä %1 MiB (%2 %)."
+
+#: module.cpp:68
+#, kde-format
+msgctxt "The settings dialog main page name, as in 'general settings'"
+msgid "General"
+msgstr "Perusasetukset"

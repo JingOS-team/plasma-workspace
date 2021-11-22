@@ -3,6 +3,7 @@
  *   Copyright 2013 Sebastian Kügler <sebas@kde.org>
  *   Copyright 2013 Ivan Cukic <ivan.cukic@kde.org>
  *   Copyright 2013 Marco Martin <mart@kde.org>
+ *   Copyright 2021 Liu Bangguo <liubangguo@jingos.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -25,11 +26,11 @@
 
 #include "plasma/corona.h"
 
+#include <QDBusContext>
+#include <QDBusVariant>
 #include <QScopedPointer>
 #include <QSet>
 #include <QTimer>
-#include <QDBusVariant>
-#include <QDBusContext>
 
 #include <KPackage/Package>
 
@@ -39,32 +40,34 @@ class QMenu;
 class QScreen;
 class ScreenPool;
 class StrutManager;
+class Osd;
 
 namespace KActivities
 {
-    class Controller;
+class Controller;
 } // namespace KActivities
 
 namespace KDeclarative
 {
-    class QmlObjectSharedEngine;
+class QmlObjectSharedEngine;
 } // namespace KDeclarative
 
-namespace KScreen {
-    class Output;
+namespace KScreen
+{
+class Output;
 } // namespace KScreen
 
 namespace Plasma
 {
-    class Applet;
+class Applet;
 } // namespace Plasma
 
 namespace KWayland
 {
-    namespace Client
-    {
-        class PlasmaShell;
-    }
+namespace Client
+{
+class PlasmaShell;
+}
 }
 
 class ShellCorona : public Plasma::Corona, QDBusContext
@@ -112,7 +115,6 @@ public:
 
     KWayland::Client::PlasmaShell *waylandPlasmaShellInterface() const;
 
-
     ScreenPool *screenPool() const;
 
     QList<int> screenIds() const;
@@ -138,7 +140,7 @@ public Q_SLOTS:
      */
     QString shell() const;
 
-    ///DBUS methods
+    /// DBUS methods
     void toggleDashboard();
     void setDashboardShown(bool show);
     void loadInteractiveConsole();
@@ -147,9 +149,28 @@ public Q_SLOTS:
     void showInteractiveKWinConsole();
     void loadKWinScriptInInteractiveConsole(const QString &script);
     void toggleActivityManager();
-    void toggleWidgetExplorer();    
+    void toggleWidgetExplorer();
     void evaluateScript(const QString &string);
     void activateLauncherMenu();
+
+
+    /** [add by yjs only use in arm]
+     * brightness up
+    */
+    void increaseBrightness();
+    /**
+     * brightness down
+    */
+    void decreaseBrightness();
+    /**
+     * get system current Brightness
+    */
+    void onPropertiesChanged(QString,QVariantMap,QStringList);
+    /**  [add  end]
+     * get system current maxBrightness
+    */
+    void getSystemMaxBrightness();
+
 
     QByteArray dumpCurrentLayoutJS() const;
 
@@ -160,16 +181,25 @@ public Q_SLOTS:
      */
     void loadLookAndFeelDefaultLayout(const QString &layout);
 
-
     Plasma::Containment *addPanel(const QString &plugin);
 
     void nextActivity();
     void previousActivity();
     void stopCurrentActivity();
+    void showNotificationActivity();
+    void showControlCenterActivity();
+    void screencaptureActivity();
+    void forceRestartActivity();
 
-    void setTestModeLayout(const QString &layout) { m_testModeLayout = layout; }
+    void setTestModeLayout(const QString &layout)
+    {
+        m_testModeLayout = layout;
+    }
 
-    int panelCount() const { return m_panelViews.count(); }
+    int panelCount() const
+    {
+        return m_panelViews.count();
+    }
 
 protected Q_SLOTS:
     /**
@@ -209,22 +239,22 @@ private Q_SLOTS:
     void addPanel(QAction *action);
     void populateAddPanelsMenu();
 
-    void addOutput(QScreen* screen);
+    void addOutput(QScreen *screen);
     void primaryOutputChanged();
 
-    void panelContainmentDestroyed(QObject* cont);
+    void panelContainmentDestroyed(QObject *cont);
     void interactiveConsoleVisibilityChanged(bool visible);
-    void handleScreenRemoved(QScreen* screen);
+    void handleScreenRemoved(QScreen *screen);
 
     void activateTaskManagerEntry(int index);
 
 private:
     void updateStruts();
     void configurationChanged(const QString &path);
-    bool isOutputRedundant(QScreen* screen) const;
+    bool isOutputRedundant(QScreen *screen) const;
     void reconsiderOutputs();
     QList<PanelView *> panelsForScreen(QScreen *screen) const;
-    DesktopView* desktopForScreen(QScreen *screen) const;
+    DesktopView *desktopForScreen(QScreen *screen) const;
     void setupWaylandIntegration();
     void executeSetupPlasmoidScript(Plasma::Containment *containment, Plasma::Applet *applet);
     void checkAllDesktopsUiReady(bool ready);
@@ -241,7 +271,7 @@ private:
     ScreenPool *m_screenPool;
     QString m_shell;
     KActivities::Controller *m_activityController;
-    //map from screen number to desktop view, qmap as order is important
+    // map from screen number to desktop view, qmap as order is important
     QMap<int, DesktopView *> m_desktopViewforId;
     QHash<const Plasma::Containment *, PanelView *> m_panelViews;
     KConfigGroup m_desktopDefaultsConfig;
@@ -251,7 +281,7 @@ private:
     QAction *m_addPanelAction;
     QScopedPointer<QMenu> m_addPanelsMenu;
     KPackage::Package m_lookAndFeelPackage;
-    QSet<QScreen*> m_redundantOutputs;
+    QSet<QScreen *> m_redundantOutputs;
     KDeclarative::QmlObjectSharedEngine *m_interactiveConsole;
 
     QTimer m_waitingPanelsTimer;
@@ -263,8 +293,7 @@ private:
     QString m_testModeLayout;
 
     StrutManager *m_strutManager;
+    Osd *m_pOsd;
 };
 
 #endif // SHELLCORONA_H
-
-

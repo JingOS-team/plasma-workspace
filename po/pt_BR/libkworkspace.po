@@ -1,0 +1,55 @@
+# tradução do libkworkspace.po para Brazilian Portuguese
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Diniz Bortolotto <diniz.bortolotto@gmail.com>, 2007.
+# André Marcelo Alvarenga <andrealvarenga@gmx.net>, 2009, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: libkworkspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2010-03-22 00:23-0300\n"
+"Last-Translator: André Marcelo Alvarenga <andrealvarenga@gmx.net>\n"
+"Language-Team: Brazilian Portuguese <kde-i18n-pt_br@mail.kde.org>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: kdisplaymanager.cpp:782
+#, kde-format
+msgctxt "user: ..."
+msgid "%1: TTY login"
+msgstr "%1: sessão TTY"
+
+#: kdisplaymanager.cpp:786
+#, kde-format
+msgctxt "... location (TTY or X display)"
+msgid "Unused"
+msgstr "Não usado"
+
+#: kdisplaymanager.cpp:787
+#, kde-format
+msgid "X login on remote host"
+msgstr "Sessão do X em uma máquina remota"
+
+#: kdisplaymanager.cpp:787
+#, kde-format
+msgctxt "... host"
+msgid "X login on %1"
+msgstr "Sessão do X em %1"
+
+#: kdisplaymanager.cpp:788
+#, kde-format
+msgctxt "user: session type"
+msgid "%1: %2"
+msgstr "%1: %2"
+
+#: kdisplaymanager.cpp:798
+#, kde-format
+msgctxt "session (location)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"

@@ -1,0 +1,58 @@
+# translation of libkworkspace.po to Finnish
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Teemu Rytilahti <teemu.rytilahti@kde-fi.org>, 2008.
+# Teemu Rytilahti <teemu.rytilahti@d5k.net>, 2008.
+#
+# Teemu Rytilahti, 2007.
+# KDE Finnish translation sprint participants:
+msgid ""
+msgstr ""
+"Project-Id-Version: libkworkspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2008-12-26 01:09+0200\n"
+"Last-Translator: Teemu Rytilahti <teemu.rytilahti@kde-fi.org>\n"
+"Language-Team: Finnish <lokalisointi@lists.coss.fi>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-POT-Import-Date: 2012-12-01 22:22:30+0000\n"
+"X-Generator: MediaWiki 1.21alpha (963ddae); Translate 2012-11-08\n"
+
+#: kdisplaymanager.cpp:782
+#, kde-format
+msgctxt "user: ..."
+msgid "%1: TTY login"
+msgstr "%1: TTY-kirjautuminen"
+
+#: kdisplaymanager.cpp:786
+#, kde-format
+msgctxt "... location (TTY or X display)"
+msgid "Unused"
+msgstr "Käyttämätön"
+
+#: kdisplaymanager.cpp:787
+#, kde-format
+msgid "X login on remote host"
+msgstr "Kirjaudu etäkoneelle (X-kirjautuminen)"
+
+#: kdisplaymanager.cpp:787
+#, kde-format
+msgctxt "... host"
+msgid "X login on %1"
+msgstr "Kirjaudu koneelle %1 (X-kirjautuminen)"
+
+#: kdisplaymanager.cpp:788
+#, kde-format
+msgctxt "user: session type"
+msgid "%1: %2"
+msgstr "%1: %2"
+
+#: kdisplaymanager.cpp:798
+#, kde-format
+msgctxt "session (location)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"

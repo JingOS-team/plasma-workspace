@@ -1,0 +1,54 @@
+# Indonesian translations for libkworkspace package.
+# Copyright (C) 2010 This_file_is_part_of_KDE
+# This file is distributed under the same license as the libkworkspace package.
+# Andhika Padmawan <andhika.padmawan@gmail.com>, 2010.
+# Wantoyo <wantoyek@gmail.com>, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: libkworkspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2018-02-17 19:56+0700\n"
+"Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
+"Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: kdisplaymanager.cpp:782
+#, kde-format
+msgctxt "user: ..."
+msgid "%1: TTY login"
+msgstr "%1: login TTY"
+
+#: kdisplaymanager.cpp:786
+#, kde-format
+msgctxt "... location (TTY or X display)"
+msgid "Unused"
+msgstr "Tak Digunakan"
+
+#: kdisplaymanager.cpp:787
+#, kde-format
+msgid "X login on remote host"
+msgstr "Login X di host jarak jauh"
+
+#: kdisplaymanager.cpp:787
+#, kde-format
+msgctxt "... host"
+msgid "X login on %1"
+msgstr "Login X di %1"
+
+#: kdisplaymanager.cpp:788
+#, kde-format
+msgctxt "user: session type"
+msgid "%1: %2"
+msgstr "%1: %2"
+
+#: kdisplaymanager.cpp:798
+#, kde-format
+msgctxt "session (location)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"

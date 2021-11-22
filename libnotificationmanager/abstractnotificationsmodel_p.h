@@ -25,10 +25,12 @@
 #include "server.h"
 
 #include <QDateTime>
+#include <QTimer>
+
+class QTimer;
 
 namespace NotificationManager
 {
-
 class Q_DECL_HIDDEN AbstractNotificationsModel::Private
 {
 public:
@@ -41,16 +43,20 @@ public:
     void onNotificationInsert(const Notification &notification);
     void setupNotificationTimeout(const Notification &notification);
 
+    void removeRows(const QVector<int> &rows);
+
     AbstractNotificationsModel *q;
 
     QVector<Notification> notifications;
     // Fallback timeout to ensure all notifications expire eventually
     // otherwise when it isn't shown to the user and doesn't expire
     // an app might wait indefinitely for the notification to do so
-    QHash<uint /*notificationId*/, QTimer*> notificationTimeouts;
+    QHash<uint /*notificationId*/, QTimer *> notificationTimeouts;
+
+    QVector<uint /*notificationId*/> pendingRemovals;
+    QTimer pendingRemovalTimer;
 
     QDateTime lastRead;
-
 };
 
 }

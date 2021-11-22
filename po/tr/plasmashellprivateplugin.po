@@ -1,0 +1,179 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasmashellprivateplugin\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:48+0100\n"
+"PO-Revision-Date: 2017-10-04 13:07+0000\n"
+"Last-Translator: Kaan <kaanozdincer@gmail.com>\n"
+"Language-Team: Turkish <kde-i18n-doc@kde.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:10
+#, kde-format
+msgid "Screen lock enabled"
+msgstr "Ekran kilidi etkin"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:11
+#, kde-format
+msgid "Sets whether the screen will be locked after the specified time."
+msgstr "Belirtilen zamanda ekranı kilitleyecek olan hava durumunu ayarlar."
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:16
+#, kde-format
+msgid "Screen saver timeout"
+msgstr "Ekran koruyucu zaman aşımı"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:17
+#, kde-format
+msgid "Sets the minutes after which the screen is locked."
+msgstr "Ekranın kaç saniye sonra kilitleneceğini ayarlar."
+
+#: sessionsprivate/sessionsmodel.cpp:249 sessionsprivate/sessionsmodel.cpp:253
+#, kde-format
+msgid "New Session"
+msgstr "Yeni Oturum"
+
+#: shellprivate/interactiveconsole/interactiveconsole.cpp:71
+#, kde-format
+msgid "&Execute"
+msgstr "&Çalıştır"
+
+#: shellprivate/interactiveconsole/interactiveconsole.cpp:72
+#, kde-format
+msgctxt "Toolbar Button to switch to Plasma Scripting Mode"
+msgid "Plasma"
+msgstr "Plasma"
+
+#: shellprivate/interactiveconsole/interactiveconsole.cpp:73
+#, kde-format
+msgctxt "Toolbar Button to switch to KWin Scripting Mode"
+msgid "KWin"
+msgstr "KWin"
+
+#: shellprivate/interactiveconsole/interactiveconsole.cpp:74
+#, kde-format
+msgid "Templates"
+msgstr "Şablonlar"
+
+#: shellprivate/interactiveconsole/interactiveconsole.cpp:83
+#, kde-format
+msgid "Desktop Shell Scripting Console"
+msgstr "Masaüstü Kabu Betik Konsolu"
+
+#: shellprivate/interactiveconsole/interactiveconsole.cpp:90
+#, kde-format
+msgid "Editor"
+msgstr "Düzenleyici"
+
+#: shellprivate/interactiveconsole/interactiveconsole.cpp:101
+#, kde-format
+msgid "Load"
+msgstr "Yükle"
+
+#: shellprivate/interactiveconsole/interactiveconsole.cpp:107
+#, kde-format
+msgid "Use"
+msgstr "Kullan"
+
+#: shellprivate/interactiveconsole/interactiveconsole.cpp:163
+#, kde-format
+msgid "Output"
+msgstr "Çıktı"
+
+#: shellprivate/interactiveconsole/interactiveconsole.cpp:270
+#, kde-format
+msgid "Unable to load script file <b>%1</b>"
+msgstr "<b>%1</b> betik dosyası yüklenemedi"
+
+#: shellprivate/interactiveconsole/interactiveconsole.cpp:320
+#, kde-format
+msgid "Open Script File"
+msgstr "Betik Dosyasını Aç"
+
+#: shellprivate/interactiveconsole/interactiveconsole.cpp:435
+#, kde-format
+msgid "Save Script File"
+msgstr "Betik Dosyasını Kaydet"
+
+#: shellprivate/interactiveconsole/interactiveconsole.cpp:527
+#, kde-format
+msgid "Executing script at %1"
+msgstr "%1 konumundaki betik çalıştırılıyor"
+
+#: shellprivate/interactiveconsole/interactiveconsole.cpp:566
+#, no-c-format, kde-format
+msgid "Runtime: %1ms"
+msgstr "Çalışma zamanı: %1ms"
+
+#: shellprivate/widgetexplorer/kcategorizeditemsviewmodels.cpp:71
+#, kde-format
+msgid "Filters"
+msgstr "Süzgeçler"
+
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:59
+#, kde-format
+msgid "Select Plasmoid File"
+msgstr "Plasmoid Dosyasını Seç"
+
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:83
+#, kde-format
+msgid "Installing the package %1 failed."
+msgstr "%1 paketinin kurulumu başarısız oldu."
+
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:83
+#, kde-format
+msgid "Installation Failure"
+msgstr "Kurulum Başarısız Oldu"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:123
+#, kde-format
+msgid "All Widgets"
+msgstr "Tüm Programcıklar"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:127
+#, kde-format
+msgid "Running"
+msgstr "Çalışıyor"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:131
+#, kde-format
+msgid "Uninstallable"
+msgstr "Kaldırılamaz"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:135
+#, kde-format
+msgid "Categories:"
+msgstr "Kategoriler:"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:213
+#, kde-format
+msgid "Download New Plasma Widgets"
+msgstr "Yeni Plasma Programcıklarını İndir"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:222
+#, kde-format
+msgid "Install Widget From Local File..."
+msgstr "Yerel Dosyadan Programcık Kur..."

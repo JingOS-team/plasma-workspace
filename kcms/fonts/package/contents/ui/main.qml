@@ -23,8 +23,7 @@ import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.0 as QtControls
 import QtQuick.Dialogs 1.2 as QtDialogs
 
-// For KCMShell.open()
-import org.kde.kquickcontrolsaddons 2.0
+import org.kde.kquickcontrolsaddons 2.0 // For KCMShell
 import org.kde.kirigami 2.4 as Kirigami
 import org.kde.kcm 1.3 as KCM
 
@@ -51,7 +50,9 @@ KCM.SimpleKCM {
 
             Connections {
                 target: kcm
-                onAliasingChangeApplied: antiAliasingMessage.visible = true
+                function onAliasingChangeApplied() {
+                    antiAliasingMessage.visible = true
+                }
             }
         }
 
@@ -63,7 +64,7 @@ KCM.SimpleKCM {
 
             Connections {
                 target: kcm
-                onFontsHaveChanged: {
+                function onFontsHaveChanged() {
                     hugeFontsMessage.visible = generalFontWidget.font.pointSize > 14
                     || fixedWidthFontWidget.font.pointSize > 14
                     || smallFontWidget.font.pointSize > 14
@@ -105,6 +106,7 @@ KCM.SimpleKCM {
             FontWidget {
                 id: generalFontWidget
                 label: i18n("General:")
+                tooltipText: i18n("Select general font")
                 category: "font"
                 font: kcm.fontsSettings.font
 
@@ -116,6 +118,7 @@ KCM.SimpleKCM {
             FontWidget {
                 id: fixedWidthFontWidget
                 label: i18n("Fixed width:")
+                tooltipText: i18n("Select fixed width font")
                 category: "fixed"
                 font: kcm.fontsSettings.fixed
 
@@ -127,6 +130,7 @@ KCM.SimpleKCM {
             FontWidget {
                 id: smallFontWidget
                 label: i18n("Small:")
+                tooltipText: i18n("Select small font")
                 category: "smallestReadableFont"
                 font: kcm.fontsSettings.smallestReadableFont
 
@@ -138,6 +142,7 @@ KCM.SimpleKCM {
             FontWidget {
                 id: toolbarFontWidget
                 label: i18n("Toolbar:")
+                tooltipText: i18n("Select toolbar font")
                 category: "toolBarFont"
                 font: kcm.fontsSettings.toolBarFont
 
@@ -149,6 +154,7 @@ KCM.SimpleKCM {
             FontWidget {
                 id: menuFontWidget
                 label: i18n("Menu:")
+                tooltipText: i18n("Select menu font")
                 category: "menuFont"
                 font: kcm.fontsSettings.menuFont
 
@@ -159,6 +165,7 @@ KCM.SimpleKCM {
             }
             FontWidget {
                 label: i18n("Window title:")
+                tooltipText: i18n("Select window title font")
                 category: "activeFont"
                 font: kcm.fontsSettings.activeFont
 
@@ -251,8 +258,12 @@ KCM.SimpleKCM {
                 }
                 Connections {
                     target: kcm.fontsAASettings
-                    onExcludeFromChanged: excludeFromSpinBox.value = kcm.fontsAASettings.excludeFrom;
-                    onExcludeToChanged: excludeToSpinBox.value = kcm.fontsAASettings.excludeTo;
+                    function onExcludeFromChanged() {
+                        excludeFromSpinBox.value = kcm.fontsAASettings.excludeFrom;
+                    }
+                    function onExcludeToChanged() {
+                        excludeToSpinBox.value = kcm.fontsAASettings.excludeTo;
+                    }
                 }
             }
 
@@ -351,6 +362,9 @@ KCM.SimpleKCM {
 
             RowLayout {
                 Layout.preferredWidth: formLayout.maxImplicitWidth
+                // We don't want people messing with the font DPI on Wayland;
+                // they should always be using the global scaling system instead
+                visible: Qt.platform.pluginName === "xcb"
 
                 QtControls.CheckBox {
                     id: dpiCheckBox
@@ -361,13 +375,6 @@ KCM.SimpleKCM {
                         dpiTwiddledMessage.visible = checked
                     }
 
-                    // dpiSpinBox will set forceFontDPI or forceFontDPIWayland,
-                    // so only one SettingStateBinding will be activated at a time.
-                    KCM.SettingStateBinding {
-                        configObject: kcm.fontsAASettings
-                        settingName: "forceFontDPIWayland"
-                        extraEnabledConditions: antiAliasingCheckBox.checked && !kcm.fontsAASettings.isAaImmutable
-                    }
                     KCM.SettingStateBinding {
                         configObject: kcm.fontsAASettings
                         settingName: "forceFontDPI"
@@ -383,13 +390,6 @@ KCM.SimpleKCM {
                     to: 999
                     from: 1
 
-                    // dpiSpinBox will set forceFontDPI or forceFontDPIWayland,
-                    // so only one SettingStateBinding will be activated at a time.
-                    KCM.SettingStateBinding {
-                        configObject: kcm.fontsAASettings
-                        settingName: "forceFontDPIWayland"
-                        extraEnabledConditions: dpiCheckBox.enabled && dpiCheckBox.checked
-                    }
                     KCM.SettingStateBinding {
                         configObject: kcm.fontsAASettings
                         settingName: "forceFontDPI"

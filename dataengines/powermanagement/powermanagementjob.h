@@ -1,5 +1,6 @@
 /*
  * Copyright 2011 Sebastian Kügler <sebas@kde.org>
+ * Copyright 2021 Liu Bangguo <liubangguo@jingos.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU Library General Public License version 2 as
@@ -29,18 +30,18 @@ class PowerManagementJob : public Plasma::ServiceJob
 {
     Q_OBJECT
 
-    public:
-        PowerManagementJob(const QString &operation, QMap<QString, QVariant> &parameters,
-                           QObject *parent = nullptr);
-        ~PowerManagementJob() override;
+public:
+    PowerManagementJob(const QString &operation, QMap<QString, QVariant> &parameters, QObject *parent = nullptr);
+    ~PowerManagementJob() override;
 
-    protected:
-        void start() override;
+protected:
+    void start() override;
 
-    private:
-        QDBusPendingCall setScreenBrightness(int value, bool silent);
-        QDBusPendingCall setKeyboardBrightness(int value, bool silent);
-        SessionManagement *m_session;
+private:
+    QDBusPendingCall setScreenBrightness(int value, bool silent);
+    QDBusPendingCall setKeyboardBrightness(int value, bool silent);
+    QDBusPendingCall setAutoBrightness(bool value, bool silent);
+    SessionManagement *m_session;
 };
 
 #endif // POWERMANAGEMENTJOB_H

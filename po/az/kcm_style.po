@@ -1,0 +1,245 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# Xəyyam Qocayev <xxmn77@gmail.com>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2020-10-30 14:45+0400\n"
+"Last-Translator: Kheyyam Gojayev <xxmn77@gmail.com>\n"
+"Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
+"Language: az\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 20.08.2\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Xəyyam Qocayev"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "xxmn77@gmail.com"
+
+#: gtkpage.cpp:89
+#, kde-format
+msgid "%1 is not a valid GTK Theme archive."
+msgstr "%1 GTK Mövzu arxivi etibarlı deyil."
+
+#: kcmstyle.cpp:91
+#, kde-format
+msgid "Application Style"
+msgstr "Tətbiq Tərzi"
+
+#: kcmstyle.cpp:95
+#, kde-format
+msgid "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik"
+msgstr "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik"
+
+#: kcmstyle.cpp:97
+#, kde-format
+msgid "Karol Szwed"
+msgstr "Karol Szwed"
+
+#: kcmstyle.cpp:98
+#, kde-format
+msgid "Daniel Molkentin"
+msgstr "Daniel Molkentin"
+
+#: kcmstyle.cpp:99
+#, kde-format
+msgid "Kai Uwe Broulik"
+msgstr "Kai Uwe Broulik"
+
+#: kcmstyle.cpp:182 kcmstyle.cpp:189
+#, kde-format
+msgid "There was an error loading the configuration dialog for this style."
+msgstr ""
+"Bu tərz üçün tənzimlənmələr dialoqu pəncərəsi yüklənərkən xəta baş verdi."
+
+#: kcmstyle.cpp:280
+#, kde-format
+msgid "Failed to apply selected style '%1'."
+msgstr "Seçilmiş \"%1\" tərzini tətbiq etmək alınmadı."
+
+#: package/contents/ui/EffectSettingsPopup.qml:46
+#, kde-format
+msgid "Show icons:"
+msgstr "ikonları göstərmək:"
+
+#: package/contents/ui/EffectSettingsPopup.qml:47
+#, kde-format
+msgid "On buttons"
+msgstr "Düymədə"
+
+#: package/contents/ui/EffectSettingsPopup.qml:58
+#, kde-format
+msgid "In menus"
+msgstr "Menyuda"
+
+#: package/contents/ui/EffectSettingsPopup.qml:70
+#, kde-format
+msgid "Main toolbar label:"
+msgstr "Əsas alətlər panelində mətnin mövqeyi"
+
+#: package/contents/ui/EffectSettingsPopup.qml:72
+#, kde-format
+msgid "None"
+msgstr "Yalnız ikonlar"
+
+#: package/contents/ui/EffectSettingsPopup.qml:73
+#, kde-format
+msgid "Text only"
+msgstr "Yalnız mətn"
+
+#: package/contents/ui/EffectSettingsPopup.qml:74
+#, kde-format
+msgid "Beside icons"
+msgstr "İkonların yanında"
+
+#: package/contents/ui/EffectSettingsPopup.qml:75
+#, kde-format
+msgid "Below icon"
+msgstr "İkonların altında"
+
+#: package/contents/ui/EffectSettingsPopup.qml:90
+#, kde-format
+msgid "Secondary toolbar label:"
+msgstr "Əlavə alətlər panelində mətnin mövqeyi:"
+
+#: package/contents/ui/GtkStylePage.qml:32
+#, kde-format
+msgid "GNOME/GTK Application Style"
+msgstr "GNOME/GTK Tətbiq tərzi"
+
+#: package/contents/ui/GtkStylePage.qml:58
+#, kde-format
+msgid "GTK theme:"
+msgstr "GTK mövzu:"
+
+#: package/contents/ui/GtkStylePage.qml:90
+#, kde-format
+msgid "Preview..."
+msgstr "Baxış..."
+
+#: package/contents/ui/GtkStylePage.qml:111
+#, kde-format
+msgid "Install from File..."
+msgstr "Fayldan quraşdırmaq..."
+
+#: package/contents/ui/GtkStylePage.qml:117
+#, kde-format
+msgid "Get New GNOME/GTK Application Styles..."
+msgstr "Yeni GNOME/GTK Tətbiq Tərzləri Almaq..."
+
+#: package/contents/ui/GtkStylePage.qml:129
+#, kde-format
+msgid "Select GTK Theme Archive"
+msgstr "GTK Mövzu arxivini seçmək"
+
+#: package/contents/ui/GtkStylePage.qml:131
+#, kde-format
+msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
+msgstr "GTK Mövzu arxivi (*.tar.xz *.tar.gz *.tar.bz2)"
+
+#: package/contents/ui/main.qml:31
+#, kde-format
+msgid ""
+"This module allows you to modify the visual appearance of applications' user "
+"interface elements."
+msgstr ""
+"Bu modul tətbiqlərin istifadəçi interfeysi elementlərinin vizual görünüşünü "
+"dəyişdirməyə imkan verir."
+
+#: package/contents/ui/main.qml:110
+#, kde-format
+msgid "Configure Style..."
+msgstr "Tərzi tənzimləmək..."
+
+#: package/contents/ui/main.qml:127
+#, kde-format
+msgid "Configure Icons and Toolbars"
+msgstr "İkon və Alətlər panelini tənzimləmək"
+
+#: package/contents/ui/main.qml:140
+#, kde-format
+msgid "Configure GNOME/GTK Application Style..."
+msgstr "GNOME/GTK Tətbiqlər tərzini tənzimləmək..."
+
+#: styleconfdialog.cpp:33
+#, kde-format
+msgid "Configure %1"
+msgstr "%1 tənzimləmək"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
+#: stylepreview.ui:33
+#, kde-format
+msgid "Tab 1"
+msgstr "Vərəq 1"
+
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: stylepreview.ui:65
+#, kde-format
+msgid "Push Button"
+msgstr "Düymə"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
+#: stylepreview.ui:86
+#, kde-format
+msgid "Combo box"
+msgstr "Açılan qutu"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox)
+#: stylepreview.ui:96
+#, kde-format
+msgid "Checkbox"
+msgstr "İşarələmə qutusu"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
+#: stylepreview.ui:106 stylepreview.ui:116
+#, kde-format
+msgid "Radio button"
+msgstr "Dəyişdirici düymə"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: stylepreview.ui:133
+#, kde-format
+msgid "Tab 2"
+msgstr "Vərəq 2"
+
+#. i18n: ectx: label, entry (widgetStyle), group (KDE)
+#: stylesettings.kcfg:9
+#, kde-format
+msgid "Application style"
+msgstr "Tətbiq tərzi"
+
+#. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
+#: stylesettings.kcfg:13
+#, kde-format
+msgid "Show icons on buttons"
+msgstr "Düymələrdəki nişanları göstərmək:"
+
+#. i18n: ectx: label, entry (iconsInMenus), group (KDE)
+#: stylesettings.kcfg:17
+#, kde-format
+msgid "Show icons in menus"
+msgstr "Menyulardakı nişanları göstərmək:"
+
+#. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
+#: stylesettings.kcfg:23
+#, kde-format
+msgid "Main toolbar label"
+msgstr "Əsas alətlər paneli yarlığı"
+
+#. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
+#: stylesettings.kcfg:27
+#, kde-format
+msgid "Secondary toolbar label"
+msgstr "İkinci alətlər paneli yarlığı"

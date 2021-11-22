@@ -1,0 +1,405 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Sergiu Bivol <sergiu@cip.md>, 2010, 2012, 2013, 2020.
+# Cristian Oneț <onet.cristian@gmail.com>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-28 02:51+0100\n"
+"PO-Revision-Date: 2020-12-19 17:44+0000\n"
+"Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Lokalize 19.12.3\n"
+
+#: filemenu.cpp:127 package/contents/ui/JobItem.qml:226
+#, kde-format
+msgid "Open Containing Folder"
+msgstr "Deschide dosarul conținător"
+
+#: filemenu.cpp:140
+#, kde-format
+msgid "&Copy"
+msgstr "&Copiază"
+
+#: filemenu.cpp:192
+#, kde-format
+msgid "Properties"
+msgstr "Proprietăți"
+
+#: globalshortcuts.cpp:37
+#, kde-format
+msgid "Toggle do not disturb"
+msgstr "Comutare „nu deranja”"
+
+#: globalshortcuts.cpp:56
+#, kde-format
+msgctxt "OSD popup, keep short"
+msgid "Notifications Off"
+msgstr "Notificări oprite"
+
+#: globalshortcuts.cpp:57
+#, kde-format
+msgctxt "OSD popup, keep short"
+msgid "Notifications On"
+msgstr "Notificări pornite"
+
+#: package/contents/ui/EditContextMenu.qml:47
+#, kde-format
+msgid "Copy Link Address"
+msgstr "Copiază adresa legăturii"
+
+#: package/contents/ui/EditContextMenu.qml:58
+#, kde-format
+msgid "Copy"
+msgstr "Copiază"
+
+#: package/contents/ui/EditContextMenu.qml:75
+#, kde-format
+msgid "Select All"
+msgstr "Selectează toate"
+
+#: package/contents/ui/FullRepresentation.qml:82
+#: package/contents/ui/main.qml:86
+#, kde-format
+msgid "Do not disturb"
+msgstr "Nu deranja"
+
+#: package/contents/ui/FullRepresentation.qml:121
+#, kde-format
+msgid "For 1 hour"
+msgstr "Timp de 1 oră"
+
+#: package/contents/ui/FullRepresentation.qml:126
+#, kde-format
+msgid "For 4 hours"
+msgstr "Timp de 4 ore"
+
+#: package/contents/ui/FullRepresentation.qml:135
+#, kde-format
+msgid "Until this evening"
+msgstr "Până diseară"
+
+#: package/contents/ui/FullRepresentation.qml:145
+#, kde-format
+msgid "Until tomorrow morning"
+msgstr "Până mâine dimineață"
+
+#: package/contents/ui/FullRepresentation.qml:157
+#, kde-format
+msgid "Until Monday"
+msgstr "Până luni"
+
+#: package/contents/ui/FullRepresentation.qml:164
+#, kde-format
+msgid "Until manually disabled"
+msgstr "Până la dezactivare manuală"
+
+#: package/contents/ui/FullRepresentation.qml:209
+#, kde-format
+msgctxt "Do not disturb until date"
+msgid "Until %1"
+msgstr "Până pe %1"
+
+#: package/contents/ui/FullRepresentation.qml:222
+#, kde-format
+msgctxt "Do not disturb until app has finished (reason)"
+msgid "While %1 is active (%2)"
+msgstr "Cât %1 e activă (%2)"
+
+#: package/contents/ui/FullRepresentation.qml:224
+#, kde-format
+msgctxt "Do not disturb until app has finished"
+msgid "While %1 is active"
+msgstr "Cât %1 e activă"
+
+#: package/contents/ui/FullRepresentation.qml:230
+#, kde-format
+msgctxt "Do not disturb because external mirrored screens connected"
+msgid "Screens are mirrored"
+msgstr "Ecranele sunt oglindite"
+
+#: package/contents/ui/FullRepresentation.qml:409
+#, kde-format
+msgid "Close Group"
+msgstr "Închide grupul"
+
+#: package/contents/ui/FullRepresentation.qml:540
+#, kde-format
+msgid "Show Fewer"
+msgstr "Arată mai puține"
+
+#: package/contents/ui/FullRepresentation.qml:542
+#, kde-format
+msgctxt "Expand to show n more notifications"
+msgid "Show %1 More"
+msgstr "Arată încă %1"
+
+#: package/contents/ui/FullRepresentation.qml:567
+#: package/contents/ui/main.qml:89
+#, kde-format
+msgid "No unread notifications"
+msgstr "Nicio notificare necitită"
+
+#: package/contents/ui/FullRepresentation.qml:581
+#: package/contents/ui/main.qml:66
+#, kde-format
+msgid "Notification service not available"
+msgstr "Serviciul de notificare nu e disponibil"
+
+#: package/contents/ui/FullRepresentation.qml:593
+#, kde-format
+msgctxt "Vendor and product name"
+msgid "Notifications are currently provided by '%1 %2'"
+msgstr "Notificările sunt furnizate acum de „%1 %2”"
+
+#: package/contents/ui/JobDetails.qml:49
+#, kde-format
+msgctxt "Row description, e.g. Source"
+msgid "%1:"
+msgstr "%1:"
+
+#: package/contents/ui/JobDetails.qml:120
+#, kde-format
+msgctxt "How many bytes have been copied"
+msgid "%2 of %1"
+msgstr "%1 din %2"
+
+#: package/contents/ui/JobDetails.qml:124
+#, kde-format
+msgctxt "How many files have been copied"
+msgid "%2 of %1 file"
+msgid_plural "%2 of %1 files"
+msgstr[0] "%2 din %1 fișier"
+msgstr[1] "%2 din %1 fișiere"
+msgstr[2] "%2 din %1 de fișiere"
+
+#: package/contents/ui/JobDetails.qml:127
+#, kde-format
+msgctxt "How many dirs have been copied"
+msgid "%2 of %1 folder"
+msgid_plural "%2 of %1 folders"
+msgstr[0] "%2 din %1 dosar"
+msgstr[1] "%2 din %1 dosare"
+msgstr[2] "%2 din %1 de dosare"
+
+#: package/contents/ui/JobDetails.qml:130
+#, kde-format
+msgctxt "How many items (that includes files and dirs) have been copied"
+msgid "%2 of %1 item"
+msgid_plural "%2 of %1 items"
+msgstr[0] "%2 din %1 element"
+msgstr[1] "%2 din %1 elemente"
+msgstr[2] "%2 din %1 de elemente"
+
+#: package/contents/ui/JobDetails.qml:138
+#, kde-format
+msgid "%1 file"
+msgid_plural "%1 files"
+msgstr[0] "%1 fișier"
+msgstr[1] "%1 fișiere"
+msgstr[2] "%1 de fișiere"
+
+#: package/contents/ui/JobDetails.qml:140
+#, kde-format
+msgid "%1 folder"
+msgid_plural "%1 folders"
+msgstr[0] "%1 dosar"
+msgstr[1] "%1 dosare"
+msgstr[2] "%1 de dosare"
+
+#: package/contents/ui/JobDetails.qml:142
+#, kde-format
+msgid "%1 item"
+msgid_plural "%1 items"
+msgstr[0] "%1 element"
+msgstr[1] "%1 elemente"
+msgstr[2] "%1 de elemente"
+
+#: package/contents/ui/JobDetails.qml:159
+#, kde-format
+msgctxt "Bytes per second"
+msgid "%1/s"
+msgstr "%1/s"
+
+#: package/contents/ui/JobItem.qml:148
+#, kde-format
+msgctxt "Pause running job"
+msgid "Pause"
+msgstr "Întrerupe"
+
+#: package/contents/ui/JobItem.qml:158
+#, kde-format
+msgctxt "Cancel running job"
+msgid "Cancel"
+msgstr "Anulează"
+
+#: package/contents/ui/JobItem.qml:169
+#, kde-format
+msgctxt "A button tooltip; hides item details"
+msgid "Hide Details"
+msgstr "Ascunde detalii"
+
+#: package/contents/ui/JobItem.qml:170
+#, kde-format
+msgctxt "A button tooltip; expands the item to show details"
+msgid "Show Details"
+msgstr "Arată detalii"
+
+#: package/contents/ui/JobItem.qml:211
+#: package/contents/ui/ThumbnailStrip.qml:159
+#, kde-format
+msgid "More Options..."
+msgstr "Mai multe opțiuni..."
+
+#: package/contents/ui/JobItem.qml:227
+#, kde-format
+msgid "Open"
+msgstr "Deschide"
+
+#: package/contents/ui/JobItem.qml:237
+#, kde-format
+msgctxt "Resume paused job"
+msgid "Resume"
+msgstr "Reia"
+
+#: package/contents/ui/main.qml:62
+#, kde-format
+msgid "%1 running job"
+msgid_plural "%1 running jobs"
+msgstr[0] "%1 sarcină rulând"
+msgstr[1] "%1 sarcini rulând"
+msgstr[2] "%1 de sarcini rulând"
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgid "%1 unread notification"
+msgid_plural "%1 unread notifications"
+msgstr[0] "%1 notificare necitită"
+msgstr[1] "%1 notificări necitite"
+msgstr[2] "%1 de notificări necitite"
+
+#: package/contents/ui/main.qml:83
+#, kde-format
+msgid "Do not disturb until %1"
+msgstr "Nu deranja până la %1"
+
+#: package/contents/ui/main.qml:175
+#, kde-format
+msgid "Clear History"
+msgstr "Șterge istoricul"
+
+#: package/contents/ui/main.qml:182
+#, kde-format
+msgid "&Configure Event Notifications and Actions..."
+msgstr "&Configurare notificări și acțiuni pentru evenimente..."
+
+#: package/contents/ui/NotificationHeader.qml:131
+#, kde-format
+msgctxt "Notification was added minutes ago, keep short"
+msgid "%1 min ago"
+msgid_plural "%1 min ago"
+msgstr[0] "acum %1 minut"
+msgstr[1] "acum %1 minute"
+msgstr[2] "acum %1 de minute"
+
+#: package/contents/ui/NotificationHeader.qml:165
+#, kde-format
+msgctxt "seconds remaining, keep short"
+msgid "%1 s remaining"
+msgid_plural "%1 s remaining"
+msgstr[0] "%1 s rămasă"
+msgstr[1] "%1 s rămase"
+msgstr[2] "%1 s rămase"
+
+#: package/contents/ui/NotificationHeader.qml:169
+#, kde-format
+msgctxt "minutes remaining, keep short"
+msgid "%1 min remaining"
+msgid_plural "%1 min remaining"
+msgstr[0] "%1 min rămas"
+msgstr[1] "%1 min rămase"
+msgstr[2] "%1 min rămase"
+
+#: package/contents/ui/NotificationHeader.qml:174
+#, kde-format
+msgctxt "hours remaining, keep short"
+msgid "%1 h remaining"
+msgid_plural "%1 h remaining"
+msgstr[0] "%1 h rămasă"
+msgstr[1] "%1 h rămase"
+msgstr[2] "%1 h rămase"
+
+#: package/contents/ui/NotificationHeader.qml:199
+#, kde-format
+msgid "Configure"
+msgstr "Configurează"
+
+#: package/contents/ui/NotificationHeader.qml:211
+#, kde-format
+msgctxt "Opposite of minimize"
+msgid "Restore"
+msgstr "Restabilește"
+
+#: package/contents/ui/NotificationHeader.qml:212
+#, kde-format
+msgid "Minimize"
+msgstr "Minimizează"
+
+#: package/contents/ui/NotificationHeader.qml:224
+#, kde-format
+msgid "Close"
+msgstr "Închide"
+
+#: package/contents/ui/NotificationItem.qml:193
+#, kde-format
+msgctxt "Job name, e.g. Copying is paused"
+msgid "%1 (Paused)"
+msgstr "%1 (întreruptă)"
+
+#: package/contents/ui/NotificationItem.qml:198
+#, kde-format
+msgctxt "Job name, e.g. Copying has failed"
+msgid "%1 (Failed)"
+msgstr "%1 (eșuată)"
+
+#: package/contents/ui/NotificationItem.qml:200
+#, kde-format
+msgid "Job Failed"
+msgstr "Lucrare eșuată"
+
+#: package/contents/ui/NotificationItem.qml:204
+#, kde-format
+msgctxt "Job name, e.g. Copying has finished"
+msgid "%1 (Finished)"
+msgstr "%1 (încheiată)"
+
+#: package/contents/ui/NotificationItem.qml:206
+#, kde-format
+msgid "Job Finished"
+msgstr "Lucrare încheiată"
+
+#: package/contents/ui/NotificationItem.qml:364
+#, kde-format
+msgctxt "Reply to message"
+msgid "Reply"
+msgstr "Răspunde"
+
+#: package/contents/ui/NotificationReplyField.qml:50
+#, kde-format
+msgctxt "Text field placeholder"
+msgid "Type a reply..."
+msgstr "Tastați un răspuns..."
+
+#: package/contents/ui/NotificationReplyField.qml:70
+#, kde-format
+msgctxt "@action:button"
+msgid "Send"
+msgstr "Trimite"

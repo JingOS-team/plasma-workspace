@@ -1,0 +1,151 @@
+# translation of plasma_runner_powerdevil.po to Icelandic
+# Copyright (C) 2009 This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Sveinn í Felli <sveinki@nett.is>, 2009, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_powerdevil\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2010-04-14 08:39+0000\n"
+"Last-Translator: Sveinn í Felli <sveinki@nett.is>\n"
+"Language-Team: Icelandic <kde-isl@molar.is>\n"
+"Language: is\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
+"\n"
+"\n"
+
+#: PowerDevilRunner.cpp:45
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "suspend"
+msgstr "setja í bið"
+
+#: PowerDevilRunner.cpp:47
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "to ram"
+msgstr "í vinnsluminni"
+
+#: PowerDevilRunner.cpp:49
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "sleep"
+msgstr "svæfa"
+
+#: PowerDevilRunner.cpp:51
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "hibernate"
+msgstr "leggja í dvala"
+
+#: PowerDevilRunner.cpp:53
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "to disk"
+msgstr "á disk"
+
+#: PowerDevilRunner.cpp:55 PowerDevilRunner.cpp:57 PowerDevilRunner.cpp:80
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "dim screen"
+msgstr "dimma skjá"
+
+#: PowerDevilRunner.cpp:65
+#, kde-format
+msgid ""
+"Lists system suspend (e.g. sleep, hibernate) options and allows them to be "
+"activated"
+msgstr ""
+"Listar alla möguleika á kerfishvíld (t.d. svæfa, leggja í dvala) og gerir "
+"kleift að virkja þá"
+
+#: PowerDevilRunner.cpp:69
+#, kde-format
+msgid "Suspends the system to RAM"
+msgstr "Setur kerfið í bið í vinnsluminni"
+
+#: PowerDevilRunner.cpp:73
+#, kde-format
+msgid "Suspends the system to disk"
+msgstr "Setur kerfið í bið á diski"
+
+#: PowerDevilRunner.cpp:76
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "screen brightness"
+msgstr "birta skjás"
+
+#: PowerDevilRunner.cpp:78
+#, no-c-format, kde-format
+msgid ""
+"Lists screen brightness options or sets it to the brightness defined by :q:; "
+"e.g. screen brightness 50 would dim the screen to 50% maximum brightness"
+msgstr ""
+"Listar möguleika á birtustillingum skjás eða setur stillingar birtustigs á "
+"það sem er tilgreint í :q:; t.d. birta skjás í 50 myndi dimma skjáinn í 50% "
+"af mestu birtu"
+
+#: PowerDevilRunner.cpp:123
+#, fuzzy, kde-format
+#| msgid "Set Brightness to %1"
+msgid "Set Brightness to %1%"
+msgstr "Setja birtustigið á %1"
+
+#: PowerDevilRunner.cpp:132
+#, kde-format
+msgid "Dim screen totally"
+msgstr "Dimma skjáinn algerlega"
+
+#: PowerDevilRunner.cpp:140
+#, kde-format
+msgid "Dim screen by half"
+msgstr "Dimma skjáinn um helming"
+
+#: PowerDevilRunner.cpp:170
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "sleep"
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "svæfa"
+
+#: PowerDevilRunner.cpp:171
+#, kde-format
+msgid "Suspend to RAM"
+msgstr "Setja í bið í minni (RAM)"
+
+#: PowerDevilRunner.cpp:176
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "hibernate"
+msgctxt "Suspend to disk"
+msgid "Hibernate"
+msgstr "leggja í dvala"
+
+#: PowerDevilRunner.cpp:177
+#, fuzzy, kde-format
+#| msgid "Suspend to Disk"
+msgid "Suspend to disk"
+msgstr "Setja í bið á disk"
+
+#: PowerDevilRunner.cpp:244
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "screen brightness"
+msgctxt "Note this is a KRunner keyword, it should end with a space"
+msgid "screen brightness "
+msgstr "birta skjás"
+
+#: PowerDevilRunner.cpp:246
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "dim screen"
+msgctxt "Note this is a KRunner keyword, it should end with a space"
+msgid "dim screen "
+msgstr "dimma skjá"

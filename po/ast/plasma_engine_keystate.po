@@ -1,0 +1,109 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# enolp <enolp@softastur.org>, 2019, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-10-24 02:31+0200\n"
+"PO-Revision-Date: 2020-11-12 16:41+0100\n"
+"Last-Translator: enolp <enolp@softastur.org>\n"
+"Language-Team: Asturian <alministradores@softastur.org>\n"
+"Language: ast\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.08.3\n"
+
+#: keystate.cpp:28
+#, kde-format
+msgid "Shift"
+msgstr "Mayús"
+
+#: keystate.cpp:29
+#, kde-format
+msgid "Ctrl"
+msgstr "Ctrl"
+
+#: keystate.cpp:30
+#, kde-format
+msgid "Alt"
+msgstr "Alt"
+
+#: keystate.cpp:31
+#, kde-format
+msgid "Meta"
+msgstr ""
+
+#: keystate.cpp:32
+#, kde-format
+msgid "Super"
+msgstr "Súper"
+
+#: keystate.cpp:33
+#, kde-format
+msgid "Hyper"
+msgstr ""
+
+#: keystate.cpp:34
+#, kde-format
+msgid "AltGr"
+msgstr "Alt Gr"
+
+#: keystate.cpp:35
+#, kde-format
+msgid "Num Lock"
+msgstr "Bloq Num"
+
+#: keystate.cpp:36
+#, kde-format
+msgid "Caps Lock"
+msgstr "Bloq Mayús"
+
+#: keystate.cpp:37
+#, kde-format
+msgid "Scroll Lock"
+msgstr "Bloq Despl"
+
+#: keystate.cpp:39
+#, kde-format
+msgid "Left Button"
+msgstr "Botón esquierdu"
+
+#: keystate.cpp:40
+#, kde-format
+msgid "Right Button"
+msgstr "Botón derechu"
+
+#: keystate.cpp:41
+#, kde-format
+msgid "Middle Button"
+msgstr "Botón d'en mediu"
+
+#: keystate.cpp:42
+#, kde-format
+msgid "First X Button"
+msgstr ""
+
+#: keystate.cpp:43
+#, kde-format
+msgid "Second X Button"
+msgstr ""
+
+#: keystate.cpp:58 keystate.cpp:69 keystate.cpp:97 keystate.cpp:118
+#: keystate.cpp:126
+#, kde-format
+msgid "Pressed"
+msgstr ""
+
+#: keystate.cpp:59 keystate.cpp:104 keystate.cpp:127
+#, kde-format
+msgid "Latched"
+msgstr ""
+
+#: keystate.cpp:60 keystate.cpp:111 keystate.cpp:128
+#, kde-format
+msgid "Locked"
+msgstr ""

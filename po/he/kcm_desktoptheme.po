@@ -1,0 +1,145 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Diego Iastrubni <elcuco@kde.org>, 2008, 2009, 2012, 2013.
+# elkana bardugo <ttv200@gmail.com>, 2016.
+# Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_desktoptheme\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2017-05-16 06:52-0400\n"
+"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+"Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Zanata 3.9.6\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "צוות התרגום של KDE ישראל"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "kde-l10n-he@kde.org"
+
+#. i18n: ectx: label, entry (name), group (Theme)
+#: desktopthemesettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Get new Theme"
+msgid "Name of the current Plasma Style"
+msgstr "קבל ערכות חדשות..."
+
+#: kcm.cpp:63
+#, fuzzy, kde-format
+#| msgid "Get new Theme"
+msgid "Plasma Style"
+msgstr "קבל ערכות חדשות..."
+
+#: kcm.cpp:64
+#, kde-format
+msgid "David Rosca"
+msgstr "David Rosca"
+
+#: kcm.cpp:122
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr ""
+
+#: kcm.cpp:133
+#, kde-format
+msgid "Unable to download the theme: %1"
+msgstr ""
+
+#: kcm.cpp:158
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "ערכת הנושא הותקנה בהצלחה."
+
+#: kcm.cpp:161 kcm.cpp:167
+#, kde-format
+msgid "Theme installation failed."
+msgstr "התקנת ערכת הנושא נכשלה."
+
+#: kcm.cpp:259
+#, kde-format
+msgid "Removing theme failed: %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:36
+#, fuzzy, kde-format
+#| msgid "This module lets you configure the desktop theme."
+msgid "This module lets you choose the Plasma style."
+msgstr "מודל זה מאפשר לך להגדיר את ערכת נושא של שולחן העבודה."
+
+#: package/contents/ui/main.qml:81
+#, fuzzy, kde-format
+#| msgid "Open Theme"
+msgid "All Themes"
+msgstr "פתח ערכת נושא"
+
+#: package/contents/ui/main.qml:82
+#, fuzzy, kde-format
+#| msgid "Open Theme"
+msgid "Light Themes"
+msgstr "פתח ערכת נושא"
+
+#: package/contents/ui/main.qml:83
+#, kde-format
+msgid "Dark Themes"
+msgstr ""
+
+#: package/contents/ui/main.qml:84
+#, kde-format
+msgid "Color scheme compatible"
+msgstr ""
+
+#: package/contents/ui/main.qml:112
+#, kde-format
+msgid "Follows color scheme"
+msgstr ""
+
+#: package/contents/ui/main.qml:130
+#, fuzzy, kde-format
+#| msgid "Open Theme"
+msgid "Edit Theme..."
+msgstr "פתח ערכת נושא"
+
+#: package/contents/ui/main.qml:137
+#, kde-format
+msgid "Remove Theme"
+msgstr "הסר ערכה"
+
+#: package/contents/ui/main.qml:144
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Restore Theme"
+msgstr "הסר ערכה"
+
+#: package/contents/ui/main.qml:182
+#, fuzzy, kde-format
+#| msgid "Install from File"
+msgid "Install from File..."
+msgstr "התקן מקובץ"
+
+#: package/contents/ui/main.qml:189
+#, fuzzy, kde-format
+#| msgid "Get new Theme"
+msgid "Get New Plasma Styles..."
+msgstr "קבל ערכות חדשות..."
+
+#: package/contents/ui/main.qml:201
+#, kde-format
+msgid "Open Theme"
+msgstr "פתח ערכת נושא"
+
+#: package/contents/ui/main.qml:203
+#, kde-format
+msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
+msgstr "קובצי ערכת נושא (*.zip *.tar.gz *.tar.bz2)"

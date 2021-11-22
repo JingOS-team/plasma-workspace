@@ -1,0 +1,96 @@
+# translation of plasma_runner_kill.po to Icelandic
+# Copyright (C) 2009 This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Sveinn í Felli <sveinki@nett.is>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_kill\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2009-12-03 17:11+0000\n"
+"Last-Translator: Sveinn í Felli <sveinki@nett.is>\n"
+"Language-Team: Icelandic <kde-isl@molar.is>\n"
+"Language: is\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
+"\n"
+"\n"
+
+#: killrunner.cpp:42
+#, kde-format
+msgid "Send SIGTERM"
+msgstr "Senda SIGTERM"
+
+#: killrunner.cpp:43
+#, kde-format
+msgid "Send SIGKILL"
+msgstr "Senda SIGKILL"
+
+#: killrunner.cpp:61 killrunner_config.cpp:64 killrunner_config.cpp:90
+#, kde-format
+msgid "kill"
+msgstr "drepa"
+
+#: killrunner.cpp:67
+#, kde-format
+msgid "Terminate running applications whose names match the query."
+msgstr ""
+
+#: killrunner.cpp:130
+#, kde-format
+msgid "Terminate %1"
+msgstr "Enda %1"
+
+#: killrunner.cpp:131
+#, kde-format
+msgid "Process ID: %1"
+msgstr ""
+
+#: killrunner_config.cpp:45
+#, kde-format
+msgid "CPU usage"
+msgstr "Örgjörvanotkun"
+
+#: killrunner_config.cpp:46
+#, kde-format
+msgid "inverted CPU usage"
+msgstr "Öfug örgjörvanotkun"
+
+#: killrunner_config.cpp:47
+#, fuzzy, kde-format
+msgid "nothing"
+msgstr "ekkert"
+
+#. i18n: ectx: property (title), widget (QGroupBox, main)
+#: killrunner_config.ui:30
+#, kde-format
+msgid "Kill Applications Config"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, useTriggerWord)
+#: killrunner_config.ui:39
+#, kde-format
+msgid "&Use trigger word"
+msgstr "Krefjast mark&orðs"
+
+#. i18n: ectx: property (text), widget (QLabel, label_trigger)
+#: killrunner_config.ui:51
+#, fuzzy, kde-format
+msgid "&Trigger word:"
+msgstr "&Markorð:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_sorting)
+#: killrunner_config.ui:72
+#, kde-format
+msgid "&Sort by"
+msgstr "&Raða eftir"
+
+#. i18n: ectx: property (toolTip), widget (KComboBox, sorting)
+#: killrunner_config.ui:82
+#, kde-format
+msgid "It is not sure, that this will take effect"
+msgstr ""

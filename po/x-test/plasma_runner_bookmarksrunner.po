@@ -1,0 +1,40 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_bookmarksrunner\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2020-06-27 03:50+0000\n"
+"Last-Translator: transxx.py program <null@kde.org>\n"
+"Language-Team: KDE Test Language <kde-i18n-doc@kde.org>\n"
+"Language: x-test\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: bookmarksrunner.cpp:47
+#, kde-format
+msgid "Finds web browser bookmarks matching :q:."
+msgstr "xxFinds web browser bookmarks matching :q:.xx"
+
+#: bookmarksrunner.cpp:48
+#, kde-format
+msgctxt "list of all web browser bookmarks"
+msgid "bookmarks"
+msgstr "xxbookmarksxx"
+
+#: bookmarksrunner.cpp:48
+#, kde-format
+msgid "List all web browser bookmarks"
+msgstr "xxList all web browser bookmarksxx"
+
+#: bookmarksrunner.cpp:71
+#, kde-format
+msgctxt "list of all konqueror bookmarks"
+msgid "bookmarks"
+msgstr "xxbookmarksxx"

@@ -1,5 +1,6 @@
 /*
  *   Copyright 2016 David Edmundson <davidedmundson@kde.org>
+ *   Copyright 2021 Liu Bangguo <liubangguo@jingos.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -26,6 +27,7 @@ import QtGraphicalEffects 1.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
+import jingos.display 1.0
 
 import "components"
 
@@ -44,8 +46,8 @@ PlasmaCore.ColorScope {
     colorGroup: PlasmaCore.Theme.ComplementaryColorGroup
     readonly property bool lightBackground: Math.max(PlasmaCore.ColorScope.backgroundColor.r, PlasmaCore.ColorScope.backgroundColor.g, PlasmaCore.ColorScope.backgroundColor.b) > 0.5
 
-    width: 1600
-    height: 900
+    width: JDisplay.dp(1600)
+    height: JDisplay.dp(900)
 
     property string notificationMessage
 
@@ -258,6 +260,9 @@ PlasmaCore.ColorScope {
             onKeyboardActiveChanged: {
                 if (keyboardActive) {
                     state = "visible"
+                    // Otherwise the password field loses focus and virtual keyboard
+                    // keystrokes get eaten
+                    userListComponent.mainPasswordBox.forceActiveFocus();
                 } else {
                     state = "hidden";
                 }

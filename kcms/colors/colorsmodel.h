@@ -24,12 +24,11 @@
 #pragma once
 
 #include <QAbstractListModel>
-#include <QString>
 #include <QPalette>
+#include <QString>
 #include <QVector>
 
-struct ColorsModelData
-{
+struct ColorsModelData {
     QString display;
     QString schemeName;
     QPalette palette;
@@ -58,7 +57,7 @@ public:
         ActiveTitleBarBackgroundRole,
         ActiveTitleBarForegroundRole,
         RemovableRole,
-        PendingDeletionRole
+        PendingDeletionRole,
     };
 
     int rowCount(const QModelIndex &parent) const override;
@@ -87,5 +86,4 @@ private:
     QString m_selectedScheme;
 
     QVector<ColorsModelData> m_data;
-
 };

@@ -49,7 +49,7 @@ PlasmaComponents3.Page {
 
     Connections {
         target: plasmoid
-        onExpandedChanged: {
+        function onExpandedChanged() {
             if (plasmoid.expanded) {
                 list.positionViewAtBeginning();
                 list.currentIndex = -1;
@@ -161,7 +161,7 @@ PlasmaComponents3.Page {
                             d = dndMenu.date;
                             // Just set it to one year in the future so we don't need yet another "do not disturb enabled" property
                             d.setFullYear(d.getFullYear() + 1);
-                            model.push({date: d, text: i18n("Until turned off")});
+                            model.push({date: d, text: i18n("Until manually disabled")});
 
                             return model;
                         }
@@ -173,22 +173,15 @@ PlasmaComponents3.Page {
                 }
 
                 PlasmaComponents3.ToolButton {
-                    icon.name: "configure"
-                    visible: plasmoid.action("openKcm").enabled
-                    onClicked: plasmoid.action("openKcm").trigger()
+                    visible: !(plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentDrawsPlasmoidHeading)
 
-                    PlasmaComponents3.ToolTip {
-                        text: plasmoid.action("openKcm").text
-                    }
-                }
-
-                PlasmaComponents3.ToolButton {
+                    Accessible.name: plasmoid.action("clearHistory").text
                     icon.name: "edit-clear-history"
                     enabled: plasmoid.action("clearHistory").visible
                     onClicked: action_clearHistory()
 
                     PlasmaComponents3.ToolTip {
-                        text: i18n("Clear History")
+                        text: parent.Accessible.name
                     }
                 }
             }

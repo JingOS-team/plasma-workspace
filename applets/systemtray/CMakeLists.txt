@@ -3,6 +3,9 @@ add_definitions(-DTRANSLATION_DOMAIN=\"plasma_applet_org.kde.plasma.private.syst
 plasma_install_package(package org.kde.plasma.private.systemtray)
 
 set(systemtray_SRCS
+    dbusserviceobserver.cpp
+    plasmoidregistry.cpp
+    systemtraysettings.cpp
     systemtraymodel.cpp
     sortedsystemtraymodel.cpp
     systemtray.cpp
@@ -18,9 +21,9 @@ add_library(org.kde.plasma.private.systemtray MODULE ${systemtray_SRCS})
 kcoreaddons_desktop_to_json(org.kde.plasma.private.systemtray package/metadata.desktop)
 
 target_link_libraries(org.kde.plasma.private.systemtray
-                      Qt5::Gui
-                      Qt5::Quick
-                      Qt5::DBus
+                      Qt::Gui
+                      Qt::Quick
+                      Qt::DBus
                       KF5::Plasma
                       KF5::XmlGui
                       KF5::I18n
@@ -30,5 +33,6 @@ install(TARGETS org.kde.plasma.private.systemtray DESTINATION ${KDE_INSTALL_PLUG
 
 add_subdirectory(container)
 if(BUILD_TESTING)
+  add_subdirectory(autotests)
   add_subdirectory(tests)
 endif()

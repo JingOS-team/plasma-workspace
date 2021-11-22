@@ -1,0 +1,228 @@
+# Translation of kcmicons to Spanish
+# translation of kcmicons.po to Spanish
+# Translation to spanish.
+# Copyright (C) 2000-2002.
+#
+# Pablo de Vicente <vicente@oan.es>, 2000-2002.
+# Jaime Robles <jaime@kde.org>, 2003, 2005, 2007, 2008.
+# Miguel Revilla Rodríguez <yo@miguelrevilla.com>, 2004.
+# Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>, 2007.
+# Eloy Cuadra <ecuadra@eloihr.net>, 2008, 2012, 2014, 2016, 2017, 2018, 2020.
+# Jaime Robles <jaime@robles.es>, 2009.
+# Javier Vinal <fjvinal@gmail.com>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmicons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2020-11-26 22:20+0100\n"
+"Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
+"Language-Team: Spanish <kde-l10n-es@kde.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"First-Translator: Valux (Manuel Soriano) <manu@europa3.com>\n"
+"X-Generator: Lokalize 20.11.80\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Eloy Cuadra,Jaime Robles"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "ecuadra@eloihr.net,jaime@kde.org"
+
+#: changeicons.cpp:43
+#, kde-format
+msgid "Icon theme is already used"
+msgstr "El tema de iconos ya está en uso"
+
+#: iconsizecategorymodel.cpp:26
+#, kde-format
+msgid "Toolbar"
+msgstr "Barra de herramientas"
+
+#: iconsizecategorymodel.cpp:27
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Barra de herramientas principal"
+
+#: iconsizecategorymodel.cpp:28
+#, kde-format
+msgid "Small Icons"
+msgstr "Iconos pequeños"
+
+#: iconsizecategorymodel.cpp:29
+#, kde-format
+msgid "Panel"
+msgstr "Panel"
+
+#: iconsizecategorymodel.cpp:30
+#, kde-format
+msgid "Dialogs"
+msgstr "Cuadros de diálogo"
+
+#. i18n: ectx: label, entry (Theme), group (Icons)
+#: iconssettingsbase.kcfg:9
+#, kde-format
+msgid "Name of the current icon theme"
+msgstr "Nombre del tema de iconos actual"
+
+#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
+#: iconssettingsbase.kcfg:15
+#, kde-format
+msgid "Desktop icons size"
+msgstr "Tamaño de los iconos del escritorio"
+
+#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
+#: iconssettingsbase.kcfg:21
+#, kde-format
+msgid "Toolbar icons size"
+msgstr "Tamaño de los iconos de la barra de herramientas"
+
+#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
+#: iconssettingsbase.kcfg:27
+#, kde-format
+msgid "Main toolbar icons size"
+msgstr "Tamaño de los iconos de la barra de herramientas principal"
+
+#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
+#: iconssettingsbase.kcfg:33
+#, kde-format
+msgid "Small icons size"
+msgstr "Tamaño de los iconos pequeños"
+
+#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
+#: iconssettingsbase.kcfg:39
+#, kde-format
+msgid "Panel icons size"
+msgstr "Tamaño de los iconos del panel"
+
+#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
+#: iconssettingsbase.kcfg:45
+#, kde-format
+msgid "Dialog icons size"
+msgstr "Tamaño de los iconos de los diálogos"
+
+#: main.cpp:82
+#, kde-format
+msgid "Icons"
+msgstr "Iconos"
+
+#: main.cpp:84
+#, kde-format
+msgid "Icons Control Panel Module"
+msgstr "Módulo del panel de control de iconos"
+
+#: main.cpp:86
+#, kde-format
+msgid "(c) 2000-2003 Geert Jansen"
+msgstr "© 2000-2003 Geert Jansen"
+
+#: main.cpp:87
+#, kde-format
+msgid "Geert Jansen"
+msgstr "Geert Jansen"
+
+#: main.cpp:88
+#, kde-format
+msgid "Antonio Larrosa Jimenez"
+msgstr "Antonio Larrosa Jimenez"
+
+#: main.cpp:89
+#, kde-format
+msgid "Torsten Rahn"
+msgstr "Torsten Rahn"
+
+#: main.cpp:90
+#, kde-format
+msgid "Jonathan Riddell"
+msgstr "Jonathan Riddell"
+
+#: main.cpp:91
+#, kde-format
+msgid "Kai Uwe Broulik"
+msgstr "Kai Uwe Broulik"
+
+#: main.cpp:214
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "No se ha podido crear un archivo temporal."
+
+#: main.cpp:225
+#, kde-format
+msgid "Unable to download the icon theme archive: %1"
+msgstr "No se ha podido descargar el archivo del tema de iconos: %1"
+
+#: main.cpp:239
+#, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr "El archivo no contiene de tema de iconos válido."
+
+#: main.cpp:244
+#, kde-format
+msgid ""
+"A problem occurred during the installation process; however, most of the "
+"themes in the archive have been installed"
+msgstr ""
+"Ha ocurrido un problema durante el proceso de instalación; no obstante, se "
+"han instalado la mayor parte de los temas del archivo"
+
+#: main.cpp:248
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "Tema instalado con éxito."
+
+#: main.cpp:356
+#, kde-format
+msgid "Installing icon themes..."
+msgstr "Instalando temas de iconos..."
+
+#: main.cpp:366
+#, kde-format
+msgid "Installing %1 theme..."
+msgstr "Instalando el tema %1..."
+
+#: package/contents/ui/main.qml:35
+#, kde-format
+msgid "This module allows you to choose the icons for your desktop."
+msgstr "Este módulo le permite escoger los iconos para su escritorio."
+
+#: package/contents/ui/main.qml:161
+#, kde-format
+msgid "Remove Icon Theme"
+msgstr "Eliminar tema de iconos"
+
+#: package/contents/ui/main.qml:168
+#, kde-format
+msgid "Restore Icon Theme"
+msgstr "Restaurar tema de iconos"
+
+#: package/contents/ui/main.qml:237
+#, kde-format
+msgid "Configure Icon Sizes"
+msgstr "Configurar los tamaños de los iconos"
+
+#: package/contents/ui/main.qml:254
+#, kde-format
+msgid "Install from File..."
+msgstr "Instalar desde archivo..."
+
+#: package/contents/ui/main.qml:262
+#, kde-format
+msgid "Get New Icons..."
+msgstr "Obtener nuevos iconos..."
+
+#: package/contents/ui/main.qml:288
+#, kde-format
+msgid "Open Theme"
+msgstr "Abrir tema"
+
+#: package/contents/ui/main.qml:290
+#, kde-format
+msgid "Theme Files (*.tar.gz *.tar.bz2)"
+msgstr "Archivos de temas (*.tar.gz *.tar.bz2)"

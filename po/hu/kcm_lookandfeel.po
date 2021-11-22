@@ -1,0 +1,135 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Kristóf Kiszel <ulysses@kubuntu.org>, 2014, 2015, 2019.
+# Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-28 02:51+0100\n"
+"PO-Revision-Date: 2020-11-11 12:04+0100\n"
+"Last-Translator: Kristóf Kiszel <kiszel.kristof@gmail.com>\n"
+"Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 20.11.70\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Kiszel Kristóf"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "ulysses@kubuntu.org"
+
+#: kcm.cpp:85
+#, kde-format
+msgid "Global Theme"
+msgstr "Globális téma"
+
+#: kcm.cpp:86 lnftool.cpp:50
+#, kde-format
+msgid "Marco Martin"
+msgstr "Marco Martin"
+
+#: kcm.cpp:548
+#, kde-format
+msgid ""
+"You have to restart the Plasma session for these changes to take effect."
+msgstr "A Plasmát újra kell indítani, hogy a módosítások érvényesüljenek."
+
+#: kcm.cpp:549
+#, kde-format
+msgid "Cursor Settings Changed"
+msgstr "Az egérmutató beállításai megváltoztak"
+
+#: lnftool.cpp:45
+#, kde-format
+msgid "Global Theme Tool"
+msgstr "Globális téma segédprogram"
+
+#: lnftool.cpp:47
+#, kde-format
+msgid ""
+"Command line tool to apply global theme packages for changing the look and "
+"feel."
+msgstr ""
+"Parancssori segédprogram globális témacsomagok beállításához és a kinézet "
+"módosításához."
+
+#: lnftool.cpp:49
+#, kde-format
+msgid "Copyright 2017, Marco Martin"
+msgstr "© Marco Martin, 2017."
+
+#: lnftool.cpp:50
+#, kde-format
+msgid "Maintainer"
+msgstr "Karbantartó"
+
+#: lnftool.cpp:58
+#, kde-format
+msgid "List available global theme packages"
+msgstr "Elérhető témacsomagok listázása"
+
+#: lnftool.cpp:59
+#, kde-format
+msgid "Apply a global theme package"
+msgstr "Témacsomag alkalmazása"
+
+#: lnftool.cpp:59
+#, kde-format
+msgid "packagename"
+msgstr "csomagnév"
+
+#: lnftool.cpp:60
+#, kde-format
+msgid "Reset the Plasma Desktop layout"
+msgstr "A Plasma asztal elrendezésének visszaállítása"
+
+#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
+#: lookandfeelsettings.kcfg:9
+#, kde-format
+msgid "Global look and feel"
+msgstr "Globális megjelenés és működés"
+
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "This module lets you choose the global look and feel."
+msgstr ""
+"Ez  a modul lehetővé teszi a teljes környezet megjelenésének beállítását "
+"néhány kész összeállítással."
+
+#: package/contents/ui/main.qml:57
+#, kde-format
+msgid "Preview Theme"
+msgstr "Előnézet"
+
+#: package/contents/ui/main.qml:75
+#, fuzzy, kde-format
+#| msgid ""
+#| "Your desktop layout will be lost and reset to the default layout provided "
+#| "by the selected theme."
+msgid ""
+"Your current layout and configuration of panels, desktop widgets, and "
+"wallpapers will be lost and reset to the default layout provided by the "
+"selected theme."
+msgstr ""
+"A Plasma asztal elrendezése el fog veszni és visszaáll az alapértelmezett "
+"értékekre a kiválasztott téma miatt."
+
+#: package/contents/ui/main.qml:85
+#, kde-format
+msgid "Use desktop layout from theme"
+msgstr "A téma asztali elrendezésének használata"
+
+#: package/contents/ui/main.qml:92
+#, kde-format
+msgid "Get New Global Themes..."
+msgstr "Új globális témák letöltése…"

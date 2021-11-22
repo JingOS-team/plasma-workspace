@@ -1,0 +1,1068 @@
+plasma-workspace (4:5.20.5) focal; urgency=medium
+
+  * Format version
+
+ -- JingOS CI <jingos@jingos.com>  Mon, 22 Nov 2021 15:32:15 +0800
+
+plasma-workspace (4:5.20.4-0neon) focal; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 01 Dec 2020 15:20:56 +0000
+
+plasma-workspace (4:5.20.3-0neon) focal; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 10 Nov 2020 21:16:46 +0000
+
+plasma-workspace (4:5.20.2-0neon) focal; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 27 Oct 2020 16:30:48 +0000
+
+plasma-workspace (4:5.20.1.1-0neon) focal; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 20 Oct 2020 13:08:41 +0000
+
+plasma-workspace (4:5.20.0-0neon) focal; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Mon, 12 Oct 2020 16:43:05 +0000
+
+plasma-workspace (4:5.19.5-0neon) focal; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 01 Sep 2020 18:24:53 +0000
+
+plasma-workspace (4:5.19.4-0neon) bionic; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 28 Jul 2020 14:16:58 +0000
+
+plasma-workspace (4:5.19.3-0neon) bionic; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 07 Jul 2020 13:29:04 +0000
+
+plasma-workspace (4:5.19.2-0neon) bionic; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 23 Jun 2020 13:30:01 +0000
+
+plasma-workspace (4:5.19.1-0neon) bionic; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 16 Jun 2020 14:22:31 +0000
+
+plasma-workspace (4:5.19.0-0neon) bionic; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Mon, 08 Jun 2020 11:35:50 +0000
+
+plasma-workspace (4:5.18.90-0neon) bionic; urgency=medium
+
+  [ Jonathan Riddell ]
+  * new release
+
+  [ Neon CI ]
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 05 May 2020 16:18:58 +0000
+
+plasma-workspace (4:5.18.80-0neon) bionic; urgency=medium
+
+  [ Jonathan Riddell ]
+  * new release
+
+  [ Neon CI ]
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 05 May 2020 16:18:58 +0000
+
+plasma-workspace (4:5.18.4.1-0neon) UNRELEASED; urgency=medium
+
+  * new release
+
+ -- Jonathan Riddell <jr@jriddell.org>  Tue, 31 Mar 2020 16:07:37 +0100
+
+plasma-workspace (4:5.18.3-0neon) bionic; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 10 Mar 2020 14:51:17 +0000
+
+plasma-workspace (4:5.18.2-0neon) bionic; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 25 Feb 2020 17:21:14 +0000
+
+plasma-workspace (4:5.18.1-0neon) bionic; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Wed, 19 Feb 2020 13:09:08 +0000
+
+plasma-workspace (4:5.18.0-0neon) bionic; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Sun, 09 Feb 2020 22:39:56 +0000
+
+plasma-workspace (4:5.17.5-0neon) bionic; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Wed, 08 Jan 2020 13:40:05 +0000
+
+plasma-workspace (4:5.17.4-0neon) bionic; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 03 Dec 2019 15:17:04 +0000
+
+plasma-workspace (4:5.17.3-0neon) bionic; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 12 Nov 2019 13:51:08 +0000
+
+plasma-workspace (4:5.17.2-0neon) bionic; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 29 Oct 2019 22:36:27 +0000
+
+plasma-workspace (4:5.17.1-0neon) bionic; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 22 Oct 2019 21:31:44 +0000
+
+plasma-workspace (4:5.17.0-0neon) bionic; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Mon, 14 Oct 2019 15:45:42 +0000
+
+plasma-workspace (4:5.16.5-0neon) bionic; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 03 Sep 2019 14:46:24 +0000
+
+plasma-workspace (4:5.16.4-0neon) bionic; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 30 Jul 2019 12:26:41 +0000
+
+plasma-workspace (4:5.16.3-0neon) bionic; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 09 Jul 2019 17:14:09 +0000
+
+plasma-workspace (4:5.16.2-0neon) bionic; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 25 Jun 2019 14:13:46 +0000
+
+plasma-workspace (4:5.16.1-0neon) bionic; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 18 Jun 2019 13:29:05 +0000
+
+plasma-workspace (4:5.16.0-0neon) bionic; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Mon, 10 Jun 2019 09:22:28 +0000
+
+plasma-workspace (4:5.15.5-0neon) bionic; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 07 May 2019 12:25:14 +0000
+
+plasma-workspace (4:5.15.4-0neon) bionic; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 02 Apr 2019 13:00:13 +0000
+
+plasma-workspace (4:5.15.3-0neon) bionic; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 12 Mar 2019 12:15:39 +0000
+
+plasma-workspace (4:5.15.2-0neon) bionic; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 26 Feb 2019 16:22:22 +0000
+
+plasma-workspace (4:5.15.1-0neon) bionic; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Wed, 20 Feb 2019 14:43:55 +0000
+
+plasma-workspace (4:5.15.0-0neon) bionic; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Mon, 11 Feb 2019 14:25:29 +0000
+
+plasma-workspace (4:5.14.5-0neon) bionic; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 08 Jan 2019 13:20:02 +0000
+
+plasma-workspace (4:5.14.4-0neon) bionic; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 27 Nov 2018 17:29:59 +0000
+
+plasma-workspace (4:5.14.3-0neon) bionic; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 06 Nov 2018 16:32:10 +0000
+
+plasma-workspace (4:5.14.2-0neon) bionic; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Sat, 27 Oct 2018 09:44:40 +0000
+
+plasma-workspace (4:5.14.1-0neon) bionic; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 16 Oct 2018 13:44:48 +0000
+
+plasma-workspace (4:5.14.0-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Mon, 08 Oct 2018 14:05:10 +0000
+
+plasma-workspace (4:5.13.5-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 04 Sep 2018 12:18:07 +0000
+
+plasma-workspace (4:5.13.4-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 31 Jul 2018 14:30:42 +0000
+
+plasma-workspace (4:5.13.3-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 10 Jul 2018 12:23:13 +0000
+
+plasma-workspace (4:5.13.2-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 26 Jun 2018 13:57:14 +0000
+
+plasma-workspace (4:5.13.1-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 19 Jun 2018 12:20:38 +0000
+
+plasma-workspace (4:5.13.0-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Wed, 13 Jun 2018 10:44:00 +0000
+
+plasma-workspace (4:5.12.7-0xneon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 01 May 2018 14:42:18 +0000
+
+plasma-workspace (4:5.12.5-0ubuntu0.1neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 01 May 2018 14:42:18 +0000
+
+plasma-workspace (4:5.12.4-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 27 Mar 2018 14:25:35 +0000
+
+plasma-workspace (4:5.12.3-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Fri, 09 Mar 2018 17:17:07 +0000
+
+plasma-workspace (4:5.12.2-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 20 Feb 2018 23:56:12 +0000
+
+plasma-workspace (4:5.12.1-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 13 Feb 2018 18:19:32 +0000
+
+plasma-workspace (4:5.12.0-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Fri, 02 Feb 2018 13:38:14 +0000
+
+plasma-workspace (4:5.11.5-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 02 Jan 2018 21:43:55 +0000
+
+plasma-workspace (4:5.11.4-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 28 Nov 2017 17:01:25 +0000
+
+plasma-workspace (4:5.11.3-0neon) bionic; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 07 Nov 2017 15:03:53 +0000
+
+plasma-workspace (4:5.11.2-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 24 Oct 2017 16:33:28 +0000
+
+plasma-workspace (4:5.11.1-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 17 Oct 2017 13:48:07 +0000
+
+plasma-workspace (4:5.11.0-0neon) UNRELEASED; urgency=medium
+
+  * new release
+
+ -- Jonathan Riddell <jr@jriddell.org>  Fri, 06 Oct 2017 16:31:49 +0100
+
+plasma-workspace (4:5.10.5-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Wed, 23 Aug 2017 09:55:09 +0000
+
+plasma-workspace (4:5.10.4-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 18 Jul 2017 13:52:06 +0000
+
+plasma-workspace (4:5.10.3-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 27 Jun 2017 12:11:09 +0000
+
+plasma-workspace (4:5.10.2-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 13 Jun 2017 22:14:16 +0000
+
+plasma-workspace (4:5.10.1-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 06 Jun 2017 17:32:08 +0000
+
+plasma-workspace (4:5.10.0-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Fri, 26 May 2017 15:44:40 +0000
+
+plasma-workspace (4:5.9.5.1-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Fri, 28 Apr 2017 09:46:04 +0000
+
+plasma-workspace (4:5.9.5-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 25 Apr 2017 15:43:29 +0000
+
+plasma-workspace (4:5.9.4-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 21 Mar 2017 15:02:57 +0000
+
+plasma-workspace (4:5.9.3-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 28 Feb 2017 16:28:02 +0000
+
+plasma-workspace (4:5.9.2-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 14 Feb 2017 17:38:10 +0000
+
+plasma-workspace (4:5.9.1-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 07 Feb 2017 15:10:39 +0000
+
+plasma-workspace (4:5.9.0-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Mon, 30 Jan 2017 11:51:12 +0000
+
+plasma-workspace (4:5.8.6-0neon) UNRELEASED; urgency=medium
+
+  * New release
+  * New Plasma LTS release
+  * New LTS release
+
+ -- Jonathan Riddell <jr@jriddell.org>  Wed, 25 Oct 2017 14:56:45 +0100
+
+plasma-workspace (4:5.8.6-0neon) xenial; urgency=medium
+
+  * New Plasma LTS release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 21 Feb 2017 17:16:33 +0000
+
+plasma-workspace (4:5.8.5-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 27 Dec 2016 13:13:38 +0000
+
+plasma-workspace (4:5.8.4-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 22 Nov 2016 14:36:45 +0000
+
+plasma-workspace (4:5.8.3-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 01 Nov 2016 13:27:40 +0000
+
+plasma-workspace (4:5.8.2-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 18 Oct 2016 15:26:11 +0000
+
+plasma-workspace (4:5.8.1-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 11 Oct 2016 14:38:28 +0000
+
+plasma-workspace (4:5.8.0-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Fri, 30 Sep 2016 11:29:57 +0000
+
+plasma-workspace (4:5.7.5-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 13 Sep 2016 13:47:33 +0000
+
+plasma-workspace (4:5.7.4-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 23 Aug 2016 17:29:10 +0000
+
+plasma-workspace (4:5.7.3-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 02 Aug 2016 11:55:14 +0000
+
+plasma-workspace (4:5.7.2-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 19 Jul 2016 13:48:29 +0000
+
+plasma-workspace (4:5.7.1-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 12 Jul 2016 16:07:05 +0000
+
+plasma-workspace (4:5.7.0-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Mon, 04 Jul 2016 13:14:56 +0000
+
+plasma-workspace (4:5.6.5-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 14 Jun 2016 14:14:23 +0000
+
+plasma-workspace (4:5.6.4-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Wed, 11 May 2016 09:41:51 +0000
+
+plasma-workspace (4:5.6.3-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 19 Apr 2016 16:55:18 +0000
+
+plasma-workspace (4:5.6.2-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Fri, 08 Apr 2016 11:44:38 +0000
+
+plasma-workspace (4:5.5.4-0ubuntu1) UNRELEASED; urgency=medium
+
+  [ Scarlett Clark ]
+  * New upstream release Xenial. 
+  * Upstream version bumped by 1. 
+  * Version number is coming up None. Trying a different approach 
+    with appending a. 
+  * Silly me, lost the ubuntu in the version. Final fix I hope.
+  * Merge xenial_archive manual.
+
+  [ Clive Johnston ]
+  * new upstream release
+  * Removing a file from plasma-workspace.install which is no longer built
+  * Adding missing file usr/share/wayland-sessions/plasmawayland.desktop
+    into plasma-workspace-wayland.install
+  * New upstream release
+
+  [ Philip Muškovac ]
+  * Merge with debian git master 
+
+ -- Clive Johnston <clivejo@aol.com>  Wed, 27 Jan 2016 20:19:19 +0000
+
+plasma-workspace (4:5.5.2-0ubuntu1) UNRELEASED; urgency=medium
+
+  [ Scarlett Clark ]
+  * New upstream release Xenial. 
+  * Upstream version bumped by 1. 
+  * Version number is coming up None. Trying a different approach 
+    with appending a. 
+  * Silly me, lost the ubuntu in the version. Final fix I hope.
+
+  [ Clive Johnston ]
+  * new upstream release
+  * Removing a file from plasma-workspace.install which is no longer built
+  * Adding missing file usr/share/wayland-sessions/plasmawayland.desktop
+    into plasma-workspace-wayland.install
+
+  [ Bhushan Shah ]
+  * Add depend to libkf5sysguard-dev in plasma-workspace-dev
+
+ -- Clive Johnston <clivejo@aol.com>  Tue, 29 Dec 2015 17:54:26 +0000
+
+plasma-workspace (4:5.4.3-2) UNRELEASED; urgency=medium
+
+  [ Dmitry Shachnev ]
+  * Stop depending on qtdeclarative5-* transitional packages.
+
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Tue, 12 Jan 2016 16:57:56 +0300
+
+plasma-workspace (4:5.4.3-1) unstable; urgency=medium
+
+  * Really add the Provides: notification-daemon. (Closes: #798377)
+  * New upstream release (5.4.3).
+
+ -- Maximiliano Curia <maxy@debian.org>  Tue, 01 Dec 2015 11:46:11 +0100
+
+plasma-workspace (4:5.4.3-0ubuntu1) xenial; urgency=medium
+
+  [ Scarlett Clark ]
+  * Vivid backport
+  * New upstream bugfix release
+
+  [ Philip Muškovac ]
+  * New upstream bugfix release (LP: #1518598)
+
+ -- Philip Muškovac <yofel@kubuntu.org>  Sun, 22 Nov 2015 16:47:50 +0100
+
+plasma-workspace (4:5.4.2-1) unstable; urgency=medium
+
+  * Add missing provides notification-daemon. (Closes: #798377) Thanks
+    to Zhang Jingqiang.
+  * New upstream release (5.4.2).
+  * Drop upstream applied patch: plasmoid_creation_fix_null_check.patch
+
+ -- Maximiliano Curia <maxy@debian.org>  Tue, 06 Oct 2015 07:52:31 +0200
+
+plasma-workspace (4:5.4.2-0ubuntu2) xenial; urgency=medium
+
+  * Fix autopackagetests by adding allow-stderr to the requirements.
+
+ -- Philip Muškovac <yofel@kubuntu.org>  Tue, 03 Nov 2015 15:34:56 +0100
+
+plasma-workspace (4:5.4.2-0ubuntu1) wily; urgency=medium
+
+  * New upstream release
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Fri, 02 Oct 2015 16:02:01 +0100
+
+plasma-workspace (4:5.4.1-1) unstable; urgency=medium
+
+  * Move auto test to autopkgtests.
+  * New upstream release (5.4.1).
+
+ -- Maximiliano Curia <maxy@debian.org>  Wed, 09 Sep 2015 13:11:09 +0200
+
+plasma-workspace (4:5.4.1-0ubuntu1) wily; urgency=medium
+
+  * new upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 08 Sep 2015 10:24:50 +0100
+
+plasma-workspace (4:5.4.0-2) experimental; urgency=medium
+
+  * Force building against the experimental version of baloo.
+
+ -- Maximiliano Curia <maxy@debian.org>  Sat, 05 Sep 2015 19:33:36 +0200
+
+plasma-workspace (4:5.4.0-1) unstable; urgency=medium
+
+  * New upstream release (5.4.0).
+  * Refresh patches.
+  * Remove upstream applied patches.
+  * Add Recomends to libpam-kwallet5.
+  * Update install files.
+  * New patch: disable_incompatible_tests
+
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 04 Sep 2015 13:17:29 +0200
+
+plasma-workspace (4:5.4.0-0ubuntu1) wily; urgency=medium
+
+  * Tighten build-dep version on plasma-framework and activities
+  * new upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Mon, 31 Aug 2015 15:56:30 +0100
+
+plasma-workspace (4:5.3.95-0ubuntu1) wily; urgency=medium
+
+  * new upstream beta release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Mon, 10 Aug 2015 23:21:23 +0200
+
+plasma-workspace (4:5.3.2-4) unstable; urgency=high
+
+  * Team upload.
+
+  [ Felix Geyer ]
+  * Make plasma-workspace break kde-window-manager (<= 4:5) instead
+    of conflicting with it.
+    kde-window-manager is a transitional package now.
+
+  [ Jeremy Lainé ]
+  * Apply patch from Michael Musenbrock to avoid null pointer dereferencing in
+    PlasmoidTask constructor (Closes: #792875).
+  * Apply upstream patch to avoid crash on shutdown (Closes: #793513).
+
+ -- Jeremy Lainé <jeremy.laine@m4x.org>  Sun, 26 Jul 2015 15:22:06 +0200
+
+plasma-workspace (4:5.3.2-3) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Maximiliano Curia ]
+  * Add Breaks to kde4 version of plasma-desktop. (Closes: #792666) Thanks to
+    Reuben
+
+  [ Felix Geyer ]
+  * Fix FTBFS on mips(el).
+    - Add check_signals_defined.diff
+  * Add breaks to old kdeartwork packages.
+
+ -- Felix Geyer <fgeyer@debian.org>  Sun, 19 Jul 2015 17:26:14 +0200
+
+plasma-workspace (4:5.3.2-2) unstable; urgency=medium
+
+  * Team upload.
+  * Add kio to plasma-workspace depends (Closes: #792289)
+
+ -- Scott Kitterman <scott@kitterman.com>  Fri, 17 Jul 2015 23:18:50 -0400
+
+plasma-workspace (4:5.3.2-1) unstable; urgency=medium
+
+  * New upstream release (5.3.0).
+  * New upstream release (5.3.1).
+  * New upstream release (5.3.2).
+  * Add the missing Breaks/Replaces.
+  * Refresh patch.
+  * New upstream patch: plasma-workspace-upstream-
+    replace_reference_to_license_with_the_bsd_license
+  * Update copyright information.
+
+ -- Maximiliano Curia <maxy@debian.org>  Wed, 08 Jul 2015 10:32:46 +0200
+
+plasma-workspace (4:5.3.2-0ubuntu2) wily; urgency=medium
+
+  * Remove plasma-workspace dependency from plasma-workspace-dev, the
+    plasma-workspace package only provides runtime files and it's not needed to
+    build stuff build depending on plasma-workspace-dev.
+
+ -- José Manuel Santamaría Lema <panfaust@gmail.com>  Thu, 23 Jul 2015 12:00:15 +0200
+
+plasma-workspace (4:5.3.2-0ubuntu1) UNRELEASED; urgency=medium
+
+  * Vivid backport
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Thu, 02 Jul 2015 11:50:43 -0700
+
+plasma-workspace (4:5.3.2-0ubuntu1) wily; urgency=medium
+
+  * New upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Thu, 02 Jul 2015 12:37:44 +0000
+
+plasma-workspace (4:5.3.1-0ubuntu1) wily; urgency=medium
+
+  [ Jonathan Riddell ]
+  * Plasma 5.3 beta
+  * new upstream release
+
+  [ Scarlett Clark ]
+  * Vivid backport
+
+  [ Jonathan Riddell ]
+  * New upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Fri, 05 Jun 2015 02:51:14 +0200
+
+plasma-workspace (4:5.2.2-2) experimental; urgency=medium
+
+  * Merge with kubuntu changes.
+
+ -- Maximiliano Curia <maxy@debian.org>  Thu, 23 Apr 2015 14:54:20 +0200
+
+plasma-workspace (4:5.2.2-1) experimental; urgency=medium
+
+  * New upstream release (5.2.1).
+  * New upstream release (5.2.2).
+
+ -- Maximiliano Curia <maxy@debian.org>  Wed, 25 Mar 2015 23:18:03 +0100
+
+plasma-workspace (4:5.2.2-0ubuntu3) vivid; urgency=medium
+
+  * Add kubuntu_no-install-libkxmlrpcclient5.po.diff to remove
+    libkxmlrpcclient5.po now in xmlrpcclient from frameworks
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 14 Apr 2015 10:44:59 +0200
+
+plasma-workspace (4:5.2.2-0ubuntu2) vivid; urgency=medium
+
+  * Add upstream_Workaround-the-lockscreen-password-field-focus-issue.patch
+    fixing password field focus in lock screen
+
+ -- Harald Sitter <sitter@kde.org>  Wed, 25 Mar 2015 16:52:52 +0100
+
+plasma-workspace (4:5.2.2-0ubuntu1) vivid; urgency=medium
+
+  * New upstream release
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Tue, 24 Mar 2015 07:43:40 -0700
+
+plasma-workspace (4:5.2.1-0ubuntu3) vivid; urgency=medium
+
+  * Update kubuntu_default-systray-applets.diff to add telepathy
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Fri, 13 Mar 2015 21:04:50 +0100
+
+plasma-workspace (4:5.2.1-0ubuntu2) vivid; urgency=medium
+
+  * Add kubuntu_default-systray-applets.diff to add printer, muon and
+    kdeconnect to systray by default
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Mon, 09 Mar 2015 21:24:35 +0100
+
+plasma-workspace (4:5.2.1-0ubuntu1) vivid; urgency=medium
+
+  [ Scarlett Clark ]
+  * New upstream release
+  * Add new depend libkf5filemetadata
+
+  [ Jonathan Riddell ]
+  * Add build-dep on libkf5prison-dev and upstream_prison.diff to build
+    klipper with prison, FFe approved on IRC
+  * Add libglib2.0-dev to fix build with libqalculate-dev for krunner
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Mon, 23 Feb 2015 09:48:01 -0800
+
+plasma-workspace (4:5.2.0-1) experimental; urgency=medium
+
+  * Prepare initial Debian release.
+  * Add myself as Uploader.
+  * Add missing prerm.
+  * Bump Standards-Version to 3.9.6, no changes needed.
+  * Update build dependencies to build against experimental and to
+    follow cmake.
+  * Update copyright information.
+  * Update install files.
+  * Add basic autopkgtests support.
+  * New patch: install_missing_header.
+
+ -- Maximiliano Curia <maxy@debian.org>  Tue, 10 Feb 2015 20:32:53 +0100
+
+plasma-workspace (4:5.2.0-0ubuntu2) vivid; urgency=medium
+
+  * Merge kubuntu_stable branch to adopt kglobalacceld move for
+    frameworks 5.7
+    + Force a dependency on the kglobalaccel binary package >= 5.7
+    + Also force a build dependency on >= 5.7
+
+ -- Harald Sitter <sitter@kde.org>  Mon, 16 Feb 2015 08:10:29 +0100
+
+plasma-workspace (4:5.2.0-0ubuntu1) vivid; urgency=medium
+
+  * New upstream release
+
+ -- Harald Sitter <sitter@kde.org>  Tue, 27 Jan 2015 14:59:51 +0100
+
+plasma-workspace (4:5.1.95-0ubuntu2) vivid; urgency=medium
+
+  * update build-dep versions for plasma packages
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Fri, 16 Jan 2015 12:40:15 +0100
+
+plasma-workspace (4:5.1.95-0ubuntu1) vivid; urgency=medium
+
+  * New upstream beta release
+  * Remove dependency on libkf5globalaccel-bin
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Thu, 15 Jan 2015 01:37:19 +0100
+
+plasma-workspace (4:5.1.2-0ubuntu2) vivid; urgency=medium
+
+  * Remove kubuntu_add-qml2-path.diff causing issues for people
+    developing Qt with self compiled or downloaded Qt import path
+    compiled into Qt5Core's QLibraryInfo should be correct
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Fri, 19 Dec 2014 13:17:31 +0100
+
+plasma-workspace (4:5.1.2-0ubuntu1) vivid; urgency=medium
+
+  * New upstream release
+
+  [ Scarlett Clark ]
+  * Remove kubuntu_temp_fix_games_path.diff per shadeslayer.
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Mon, 15 Dec 2014 13:27:55 +0100
+
+plasma-workspace (4:5.1.1-0ubuntu3) wily; urgency=medium
+
+  * Remove kubuntu_temp_fix_games_path.diff per shadeslayer. 
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Mon, 01 Dec 2014 06:14:46 -0800
+
+plasma-workspace (4:5.1.1-0ubuntu2) vivid; urgency=medium
+
+  * Add kubuntu_temp_fix_path.diff to add usr/games to PATH.
+    This is a temp fix that really needs to be fixed.
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Wed, 19 Nov 2014 16:09:22 -0800
+
+plasma-workspace (4:5.1.1-0ubuntu1) vivid; urgency=medium
+
+  * New upstream release
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Mon, 10 Nov 2014 19:52:36 +0100
+
+plasma-workspace (4:5.1.0.1-0ubuntu1) vivid; urgency=medium
+
+  [ Jonathan Riddell ]
+  * New upstream beta release
+  * Add upstream_gdb-7.8-fix.diff to fix gdb 7.8 in drkonqi
+
+  [ Harald Sitter ]
+  * Add lintian overrides
+    + xmlrpcclientprivate installs no so link anymore as it is considered
+      internal and shouldn't be linked to by third parties
+
+  [ Jonathan Riddell ]
+  * New upstream release
+
+  [ Scarlett Clark ]
+  * Remove libKF5XmlRpcClientPrivate.so from -dev as it no longer exists.
+
+  [ Jonathan Riddell ]
+  * New upstream release with fixed tar
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 14 Oct 2014 13:51:05 +0200
+
+plasma-workspace (4:5.0.2-0ubuntu1) utopic; urgency=medium
+
+  * New upstream release
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Wed, 17 Sep 2014 18:21:47 -0700
+
+plasma-workspace (4:5.0.1-0ubuntu1~ubuntu14.10~ppa6) utopic; urgency=medium
+
+  [ Jonathan Riddell ]
+  * New upstream release
+  * Add kubuntu_startkde-qtpath.diff to tell it the path to,
+    ironically, qtpaths
+  * Add depends on frameworkintegration
+
+  [ Scarlett Clark ]
+  * Add missing lib to fix build
+  * Cleanup - remove -data and minor fixes.
+  * Update watch to http://download.kde.org
+  * Cleanup copyright-helper cruft.
+
+  [ José Manuel Santamaría Lema ]
+  * Build depend on libkf5filemetadata1-dev instead of
+    libkf5filemetadata5-dev.
+  * Add plasma-workspace.postinst in order to set the x-session-manager
+    alternative, this way in a system without any login manager and only
+    the plasma desktop installed users would be able to start plasma
+    just typing 'startx'.
+  * Add plasma-workspace-dbg in order to provide debugging symbols.
+
+  [ Rohan Garg ]
+  * Add sddm-theme-breeze package
+
+  [ Harald Sitter ]
+  * plasma-workspace relationship adjustments:
+     Depends:
+     + kde-cli-tools - needed to run screenlocker kcm (standalone that is)
+     + kio-extras - needed for wallpaper preview generation
+     + milou - needed for qml module used in krunner
+     + gdb-minimal | gdb - used by drkonqi
+     - libkf5declarative5 - library, should be picked up by shlibs
+     - kde-wallpapers-default - kdesc4 package, 5.x wallpaper is in workspace
+     - qtquick1-5-dev
+     Suggests:
+     - libkf5newstuff5 - only contains a lib that should be picked up by shlibs
+  * Drop kde-plasma-kf5.desktop as upstream now provides an xsession file
+  * Demote sddm dependency of sddm-theme-breeze to recommends. The theme is not
+    worthwhile having without sddm to load it, but there is no actual
+    dependency, the other way around however sddm-theme-breeze could provided
+    sddm-theme to resolve sddm's theme dependency, which then defacto makes a
+    circular dependency.
+
+  [ Jonathan Riddell ]
+  * New upstream bugfix release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Sun, 10 Aug 2014 15:45:29 +0200
+
+plasma-workspace (4:4.98.0-0ubuntu1) utopic; urgency=medium
+
+  [ Jonathan Riddell ]
+  * New upstream RC release
+
+  [ Scarlett Clark ]
+  * Add baloo build depend
+  * Fix filename in fix-perms and add new files to -data
+  * add optional depends
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Mon, 07 Jul 2014 13:28:19 +0200
+
+plasma-workspace (4:4.97.0-0ubuntu1) utopic; urgency=medium
+
+  [ Scarlett Clark ]
+  * Rename - drop kf5
+
+  [ Jonathan Riddell ]
+  * New upstream beta release
+  * New packages for new soname, libplasma-geolocation-interface5
+    and libweather-ion7
+  * Don't depend on qt5-default
+
+  [ Scarlett Clark ]
+  * Fix runtime depends
+  * Fix permissions
+  * change data package arch all
+  * add missing comma
+  * Fix runtime depend plasma-workspace
+  * Fix dh_fixperms
+  * Removing a fixperm for now so it will build.
+
+  [ José Manuel Santamaría Lema ]
+  * Build depend on libxcb-randr0-dev.
+  * Add the following alternative depencies to make plasma-workspace installable
+    with latest debian's qt 5.3:
+    - qml-module-qtquick2 as an alternative of qtdeclarative5-qtquick2-plugin
+    - qml-module-qtquick-window2 as an alternative of qtdeclarative5-window-plugin
+  * Improve kubuntu_add-qml2-path.diff so plasma-workspace doesn't need to
+    execute dpkg-architecture at runtime.
+
+  [ Scarlett Clark ]
+  * add qml-module-qtgraphicaleffects runtime depend
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Mon, 09 Jun 2014 10:26:55 +0100
+
+plasma-workspace-kf5 (4.96.0-0ubuntu4) trusty; urgency=medium
+
+  * New upstream release
+  * Removed kubuntu_startkde.diff applied upstream
+  * wrap-and-sort
+  * Split out libs
+  * Add -dev package
+  * Add watch file
+  * Fine tuning copyright
+  * Fix install path i386
+  * Fix rules conf and desktop file location.
+  * Remove unused install folder.
+    * Move d-bus file to -dev
+
+ -- Scarlett Clark <scarlett@scarlettgatelyclark.com>  Sat, 05 Apr 2014 16:50:51 +0000
+
+kde-workspace-kf5 (4.95.0-0ubuntu1~ubuntu14.04~ppa6) trusty; urgency=high
+
+  * Initial release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Wed, 02 Apr 2014 15:55:49 +0000
+ 

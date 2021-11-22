@@ -1,0 +1,81 @@
+# Malayalam translations for plasma-workspace package.
+# Copyright (C) 2019 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# Automatically generated, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:48+0100\n"
+"PO-Revision-Date: 2020-11-25 19:53+0000\n"
+"Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
+"Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
+"org.in>\n"
+"Language: ml\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Weblate 4.3.2\n"
+
+#: ksolidnotify.cpp:161
+#, kde-format
+msgid "This device can now be safely removed."
+msgstr "ഈ ഉപകരണം ഇപ്പോൾ സുരക്ഷിതമായി നീക്കംചെയ്യാം."
+
+#: ksolidnotify.cpp:168
+#, kde-format
+msgid "You are not authorized to mount this device."
+msgstr "ഈ ഉപകരണം ഘടിപ്പിക്കാൻ നിങ്ങൾക്ക് അധികാരമില്ല."
+
+#: ksolidnotify.cpp:171
+#, kde-format
+msgctxt "Remove is less technical for unmount"
+msgid "You are not authorized to remove this device."
+msgstr "ഈ ഉപകരണം നീക്കം ചെയ്യാൻ നിങ്ങൾക്ക് അധികാരമില്ല."
+
+#: ksolidnotify.cpp:174
+#, kde-format
+msgid "You are not authorized to eject this disc."
+msgstr "ഈ ഡിസ്ക് തള്ളിനീക്കാൻ നിങ്ങൾക്ക് അധികാരമില്ല."
+
+#: ksolidnotify.cpp:181
+#, kde-format
+msgid "Could not mount this device as it is busy."
+msgstr "തിരക്കായതിനാൽ ഈ ഉപകരണം ഘടിപ്പിക്കാൻ കഴിഞ്ഞില്ല."
+
+#: ksolidnotify.cpp:211
+#, kde-format
+msgid "One or more files on this device are open within an application."
+msgstr "ഈ ഉപകരണത്തിലെ ഒന്നോ അതിലധികമോ ഫയലുകൾ ഒരു പ്രയോഗത്തിൽ തുറന്നിരിക്കുന്നു."
+
+#: ksolidnotify.cpp:213
+#, kde-format
+msgid "One or more files on this device are opened in application \"%2\"."
+msgid_plural ""
+"One or more files on this device are opened in following applications: %2."
+msgstr[0] "ഈ ഉപകരണത്തിലെ ഒന്നോ അതിലധികമോ ഫയലുകൾ \"%2\" അപ്ലിക്കേഷനിൽ തുറന്നിരിക്കുന്നു."
+msgstr[1] "ഈ ഉപകരണത്തിലെ ഒന്നോ അതിലധികമോ ഫയലുകൾ \"%2\" അപ്ലിക്കേഷനുകളിൽ തുറന്നിരിക്കുന്നു."
+
+#: ksolidnotify.cpp:216
+#, kde-format
+msgctxt "separator in list of apps blocking device unmount"
+msgid ", "
+msgstr ", "
+
+#: ksolidnotify.cpp:233
+#, kde-format
+msgid "Could not mount this device."
+msgstr "ഈ ഉപകരണം ഘടിപ്പിക്കാനായില്ല."
+
+#: ksolidnotify.cpp:236
+#, kde-format
+msgctxt "Remove is less technical for unmount"
+msgid "Could not remove this device."
+msgstr "ഈ ഉപകരണം നീക്കം ചെയ്യാനായില്ല."
+
+#: ksolidnotify.cpp:239
+#, kde-format
+msgid "Could not eject this disc."
+msgstr "ഈ ഡിസ്ക് തള്ളിനീക്കാൻ കഴിഞ്ഞില്ല."

@@ -1,0 +1,739 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# Phu Hung Nguyen <phuhnguyen@disroot.org>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2020-12-08 13:49+0100\n"
+"Last-Translator: Phu Hung Nguyen <phuhnguyen@disroot.org>\n"
+"Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 20.08.1\n"
+
+#: soliddeviceengine.cpp:124
+#, kde-format
+msgid "Parent UDI"
+msgstr "UDI cha"
+
+#: soliddeviceengine.cpp:125
+#, kde-format
+msgid "Vendor"
+msgstr "Nhà cung cấp"
+
+#: soliddeviceengine.cpp:126
+#, kde-format
+msgid "Product"
+msgstr "Sản phẩm"
+
+#: soliddeviceengine.cpp:127
+#, kde-format
+msgid "Description"
+msgstr "Mô tả"
+
+#: soliddeviceengine.cpp:128
+#, kde-format
+msgid "Icon"
+msgstr "Biểu tượng"
+
+#: soliddeviceengine.cpp:129 soliddeviceengine.cpp:592
+#, kde-format
+msgid "Emblems"
+msgstr "Huy hiệu"
+
+#: soliddeviceengine.cpp:130 soliddeviceengine.cpp:476
+#: soliddeviceengine.cpp:482 soliddeviceengine.cpp:495
+#, kde-format
+msgid "State"
+msgstr "Tình trạng"
+
+#: soliddeviceengine.cpp:131 soliddeviceengine.cpp:477
+#: soliddeviceengine.cpp:483 soliddeviceengine.cpp:491
+#: soliddeviceengine.cpp:493
+#, kde-format
+msgid "Operation result"
+msgstr "Kết quả thao tác"
+
+#: soliddeviceengine.cpp:132
+#, kde-format
+msgid "Timestamp"
+msgstr "Mốc thời gian"
+
+#: soliddeviceengine.cpp:140
+#, kde-format
+msgid "Processor"
+msgstr "Bộ xử lí"
+
+#: soliddeviceengine.cpp:141
+#, kde-format
+msgid "Number"
+msgstr "Số"
+
+#: soliddeviceengine.cpp:142
+#, kde-format
+msgid "Max Speed"
+msgstr "Tốc độ tối đa"
+
+#: soliddeviceengine.cpp:143
+#, kde-format
+msgid "Can Change Frequency"
+msgstr "Có thể thay đổi tần số"
+
+#: soliddeviceengine.cpp:151
+#, kde-format
+msgid "Block"
+msgstr "Khối"
+
+#: soliddeviceengine.cpp:152
+#, kde-format
+msgid "Major"
+msgstr "Lớn"
+
+#: soliddeviceengine.cpp:153
+#, kde-format
+msgid "Minor"
+msgstr "Nhỏ"
+
+#: soliddeviceengine.cpp:154
+#, kde-format
+msgid "Device"
+msgstr "Thiết bị"
+
+#: soliddeviceengine.cpp:162
+#, kde-format
+msgid "Storage Access"
+msgstr "Truy cập bộ lưu trữ"
+
+#: soliddeviceengine.cpp:163 soliddeviceengine.cpp:507
+#: soliddeviceengine.cpp:606
+#, kde-format
+msgid "Accessible"
+msgstr "Truy cập được"
+
+#: soliddeviceengine.cpp:164 soliddeviceengine.cpp:508
+#, kde-format
+msgid "File Path"
+msgstr "Đường dẫn tệp"
+
+#: soliddeviceengine.cpp:179
+#, kde-format
+msgid "Storage Drive"
+msgstr "Ổ lưu trữ"
+
+#: soliddeviceengine.cpp:182
+#, kde-format
+msgid "Ide"
+msgstr "IDE"
+
+#: soliddeviceengine.cpp:182
+#, kde-format
+msgid "Usb"
+msgstr "USB"
+
+#: soliddeviceengine.cpp:182
+#, kde-format
+msgid "Ieee1394"
+msgstr "IEEE 1394"
+
+#: soliddeviceengine.cpp:182
+#, kde-format
+msgid "Scsi"
+msgstr "SCSI"
+
+#: soliddeviceengine.cpp:182
+#, kde-format
+msgid "Sata"
+msgstr "SATA"
+
+#: soliddeviceengine.cpp:182
+#, kde-format
+msgid "Platform"
+msgstr "Nền tảng"
+
+#: soliddeviceengine.cpp:184
+#, kde-format
+msgid "Hard Disk"
+msgstr "Đĩa cứng"
+
+#: soliddeviceengine.cpp:184
+#, kde-format
+msgid "Cdrom Drive"
+msgstr "Ổ CD-ROM"
+
+#: soliddeviceengine.cpp:184
+#, kde-format
+msgid "Floppy"
+msgstr "Đĩa mềm"
+
+#: soliddeviceengine.cpp:184
+#, kde-format
+msgid "Tape"
+msgstr "Băng"
+
+#: soliddeviceengine.cpp:184
+#, kde-format
+msgid "Compact Flash"
+msgstr "Compact Flash"
+
+#: soliddeviceengine.cpp:185
+#, kde-format
+msgid "Memory Stick"
+msgstr "Memory Stick"
+
+#: soliddeviceengine.cpp:185
+#, kde-format
+msgid "Smart Media"
+msgstr "Smart Media"
+
+#: soliddeviceengine.cpp:185
+#, kde-format
+msgid "SdMmc"
+msgstr "SDMMC"
+
+#: soliddeviceengine.cpp:185
+#, kde-format
+msgid "Xd"
+msgstr "xD"
+
+#: soliddeviceengine.cpp:187
+#, kde-format
+msgid "Bus"
+msgstr "Buýt"
+
+#: soliddeviceengine.cpp:188
+#, kde-format
+msgid "Drive Type"
+msgstr "Kiểu ổ"
+
+#: soliddeviceengine.cpp:189 soliddeviceengine.cpp:202
+#: soliddeviceengine.cpp:367 soliddeviceengine.cpp:381
+#, kde-format
+msgid "Removable"
+msgstr "Rút được"
+
+#: soliddeviceengine.cpp:190 soliddeviceengine.cpp:203
+#: soliddeviceengine.cpp:368 soliddeviceengine.cpp:382
+#, kde-format
+msgid "Hotpluggable"
+msgstr "Cắm nóng được"
+
+#: soliddeviceengine.cpp:212
+#, kde-format
+msgid "Optical Drive"
+msgstr "Ổ quang"
+
+#: soliddeviceengine.cpp:217
+#, kde-format
+msgid "CD-R"
+msgstr "CD-R"
+
+#: soliddeviceengine.cpp:220
+#, kde-format
+msgid "CD-RW"
+msgstr "CD-RW"
+
+#: soliddeviceengine.cpp:223
+#, kde-format
+msgid "DVD"
+msgstr "DVD"
+
+#: soliddeviceengine.cpp:226
+#, kde-format
+msgid "DVD-R"
+msgstr "DVD-R"
+
+#: soliddeviceengine.cpp:229
+#, kde-format
+msgid "DVD-RW"
+msgstr "DVD-RW"
+
+#: soliddeviceengine.cpp:232
+#, kde-format
+msgid "DVD-RAM"
+msgstr "DVD-RAM"
+
+#: soliddeviceengine.cpp:235
+#, kde-format
+msgid "DVD+R"
+msgstr "DVD+R"
+
+#: soliddeviceengine.cpp:238
+#, kde-format
+msgid "DVD+RW"
+msgstr "DVD+RW"
+
+#: soliddeviceengine.cpp:241
+#, kde-format
+msgid "DVD+DL"
+msgstr "DVD+DL"
+
+#: soliddeviceengine.cpp:244
+#, kde-format
+msgid "DVD+DLRW"
+msgstr "DVD+DLRW"
+
+#: soliddeviceengine.cpp:247
+#, kde-format
+msgid "BD"
+msgstr "BD"
+
+#: soliddeviceengine.cpp:250
+#, kde-format
+msgid "BD-R"
+msgstr "BD-R"
+
+#: soliddeviceengine.cpp:253
+#, kde-format
+msgid "BD-RE"
+msgstr "BD-RE"
+
+#: soliddeviceengine.cpp:256
+#, kde-format
+msgid "HDDVD"
+msgstr "HD DVD"
+
+#: soliddeviceengine.cpp:259
+#, kde-format
+msgid "HDDVD-R"
+msgstr "HD DVD-R"
+
+#: soliddeviceengine.cpp:262
+#, kde-format
+msgid "HDDVD-RW"
+msgstr "HD DVD-RW"
+
+#: soliddeviceengine.cpp:264
+#, kde-format
+msgid "Supported Media"
+msgstr "Phương tiện được hỗ trợ"
+
+#: soliddeviceengine.cpp:266
+#, kde-format
+msgid "Read Speed"
+msgstr "Tốc độ đọc"
+
+#: soliddeviceengine.cpp:267
+#, kde-format
+msgid "Write Speed"
+msgstr "Tốc độ ghi"
+
+#: soliddeviceengine.cpp:275
+#, kde-format
+msgid "Write Speeds"
+msgstr "Các tốc độ ghi"
+
+#: soliddeviceengine.cpp:283
+#, kde-format
+msgid "Storage Volume"
+msgstr "Ổ lưu trữ luận lí"
+
+#: soliddeviceengine.cpp:286
+#, kde-format
+msgid "Other"
+msgstr "Khác"
+
+#: soliddeviceengine.cpp:286
+#, kde-format
+msgid "Unused"
+msgstr "Không dùng đến"
+
+#: soliddeviceengine.cpp:286
+#, kde-format
+msgid "File System"
+msgstr "Hệ thống tệp"
+
+#: soliddeviceengine.cpp:286
+#, kde-format
+msgid "Partition Table"
+msgstr "Bảng phân vùng"
+
+#: soliddeviceengine.cpp:286
+#, kde-format
+msgid "Raid"
+msgstr "RAID"
+
+#: soliddeviceengine.cpp:286
+#, kde-format
+msgid "Encrypted"
+msgstr "Mật mã hoá"
+
+#: soliddeviceengine.cpp:289 soliddeviceengine.cpp:291
+#, kde-format
+msgid "Usage"
+msgstr "Sử dụng"
+
+#: soliddeviceengine.cpp:291
+#, kde-format
+msgid "Unknown"
+msgstr "Không rõ"
+
+#: soliddeviceengine.cpp:294
+#, kde-format
+msgid "Ignored"
+msgstr "Bỏ qua"
+
+#: soliddeviceengine.cpp:295
+#, kde-format
+msgid "File System Type"
+msgstr "Kiểu hệ thống tệp"
+
+#: soliddeviceengine.cpp:296
+#, kde-format
+msgid "Label"
+msgstr "Nhãn"
+
+#: soliddeviceengine.cpp:297
+#, kde-format
+msgid "UUID"
+msgstr "UUID"
+
+#: soliddeviceengine.cpp:306
+#, kde-format
+msgid "Encrypted Container"
+msgstr "Vật chứa mật mã hoá"
+
+#: soliddeviceengine.cpp:318
+#, kde-format
+msgid "OpticalDisc"
+msgstr "Đĩa quang"
+
+#: soliddeviceengine.cpp:324
+#, kde-format
+msgid "Audio"
+msgstr "Âm thanh"
+
+#: soliddeviceengine.cpp:327
+#, kde-format
+msgid "Data"
+msgstr "Dữ liệu"
+
+#: soliddeviceengine.cpp:330
+#, kde-format
+msgid "Video CD"
+msgstr "CD phim"
+
+#: soliddeviceengine.cpp:333
+#, kde-format
+msgid "Super Video CD"
+msgstr "Siêu CD phim"
+
+#: soliddeviceengine.cpp:336
+#, kde-format
+msgid "Video DVD"
+msgstr "DVD phim"
+
+#: soliddeviceengine.cpp:339
+#, kde-format
+msgid "Video Blu Ray"
+msgstr "Blu-ray phim"
+
+#: soliddeviceengine.cpp:341
+#, kde-format
+msgid "Available Content"
+msgstr "Nội dung hiện có"
+
+#: soliddeviceengine.cpp:344
+#, kde-format
+msgid "Unknown Disc Type"
+msgstr "Kiểu đĩa không rõ"
+
+#: soliddeviceengine.cpp:344
+#, kde-format
+msgid "CD Rom"
+msgstr "CD-ROM"
+
+#: soliddeviceengine.cpp:344
+#, kde-format
+msgid "CD Recordable"
+msgstr "CD ghi được"
+
+#: soliddeviceengine.cpp:344
+#, kde-format
+msgid "CD Rewritable"
+msgstr "CD ghi lại được"
+
+#: soliddeviceengine.cpp:344
+#, kde-format
+msgid "DVD Rom"
+msgstr "DVD-ROM"
+
+#: soliddeviceengine.cpp:345
+#, kde-format
+msgid "DVD Ram"
+msgstr "DVD-RAM"
+
+#: soliddeviceengine.cpp:345
+#, kde-format
+msgid "DVD Recordable"
+msgstr "DVD ghi được"
+
+#: soliddeviceengine.cpp:345
+#, kde-format
+msgid "DVD Rewritable"
+msgstr "DVD ghi lại được"
+
+#: soliddeviceengine.cpp:345
+#, kde-format
+msgid "DVD Plus Recordable"
+msgstr "DVD cộng ghi được"
+
+#: soliddeviceengine.cpp:346
+#, kde-format
+msgid "DVD Plus Rewritable"
+msgstr "DVD cộng ghi lại được"
+
+#: soliddeviceengine.cpp:346
+#, kde-format
+msgid "DVD Plus Recordable Duallayer"
+msgstr "DVD cộng ghi được lớp kép"
+
+#: soliddeviceengine.cpp:346
+#, kde-format
+msgid "DVD Plus Rewritable Duallayer"
+msgstr "DVD cộng ghi lại được lớp kép"
+
+#: soliddeviceengine.cpp:347
+#, kde-format
+msgid "Blu Ray Rom"
+msgstr "BD-ROM"
+
+#: soliddeviceengine.cpp:347
+#, kde-format
+msgid "Blu Ray Recordable"
+msgstr "Blu-ray ghi được"
+
+#: soliddeviceengine.cpp:347
+#, kde-format
+msgid "Blu Ray Rewritable"
+msgstr "Blu-ray ghi lại được"
+
+#: soliddeviceengine.cpp:347
+#, kde-format
+msgid "HD DVD Rom"
+msgstr "HD DVD-ROM"
+
+#: soliddeviceengine.cpp:348
+#, kde-format
+msgid "HD DVD Recordable"
+msgstr "HD DVD ghi được"
+
+#: soliddeviceengine.cpp:348
+#, kde-format
+msgid "HD DVD Rewritable"
+msgstr "HD DVD ghi lại được"
+
+#: soliddeviceengine.cpp:350
+#, kde-format
+msgid "Disc Type"
+msgstr "Kiểu đĩa"
+
+#: soliddeviceengine.cpp:351
+#, kde-format
+msgid "Appendable"
+msgstr "Ghi thêm được"
+
+#: soliddeviceengine.cpp:352
+#, kde-format
+msgid "Blank"
+msgstr "Trống"
+
+#: soliddeviceengine.cpp:353
+#, kde-format
+msgid "Rewritable"
+msgstr "Ghi lại được"
+
+#: soliddeviceengine.cpp:354
+#, kde-format
+msgid "Capacity"
+msgstr "Dung lượng"
+
+#: soliddeviceengine.cpp:362
+#, kde-format
+msgid "Camera"
+msgstr "Máy ảnh"
+
+#: soliddeviceengine.cpp:364 soliddeviceengine.cpp:378
+#, kde-format
+msgid "Supported Protocols"
+msgstr "Giao thức được hỗ trợ"
+
+#: soliddeviceengine.cpp:365 soliddeviceengine.cpp:379
+#, kde-format
+msgid "Supported Drivers"
+msgstr "Trình điều khiển được hỗ trợ"
+
+#: soliddeviceengine.cpp:376
+#, kde-format
+msgid "Portable Media Player"
+msgstr "Máy phát phương tiện di động"
+
+#: soliddeviceengine.cpp:390
+#, kde-format
+msgid "Battery"
+msgstr "Pin"
+
+#: soliddeviceengine.cpp:393
+#, kde-format
+msgid "Unknown Battery"
+msgstr "Pin không rõ"
+
+#: soliddeviceengine.cpp:393
+#, kde-format
+msgid "PDA Battery"
+msgstr "Pin PDA"
+
+#: soliddeviceengine.cpp:393
+#, kde-format
+msgid "UPS Battery"
+msgstr "Pin UPS"
+
+#: soliddeviceengine.cpp:393
+#, kde-format
+msgid "Primary Battery"
+msgstr "Pin chính"
+
+#: soliddeviceengine.cpp:394
+#, kde-format
+msgid "Mouse Battery"
+msgstr "Pin chuột"
+
+#: soliddeviceengine.cpp:394
+#, kde-format
+msgid "Keyboard Battery"
+msgstr "Pin bàn phím"
+
+#: soliddeviceengine.cpp:394
+#, kde-format
+msgid "Keyboard Mouse Battery"
+msgstr "Pin chuột bàn phím"
+
+#: soliddeviceengine.cpp:394
+#, kde-format
+msgid "Camera Battery"
+msgstr "Pin máy ảnh"
+
+#: soliddeviceengine.cpp:395
+#, kde-format
+msgid "Phone Battery"
+msgstr "Pin điện thoại"
+
+#: soliddeviceengine.cpp:395
+#, kde-format
+msgid "Monitor Battery"
+msgstr "Pin màn hình"
+
+#: soliddeviceengine.cpp:395
+#, kde-format
+msgid "Gaming Input Battery"
+msgstr "Pin đầu vào trò chơi"
+
+#: soliddeviceengine.cpp:395
+#, kde-format
+msgid "Bluetooth Battery"
+msgstr "Pin Bluetooth"
+
+#: soliddeviceengine.cpp:398
+#, kde-format
+msgid "Not Charging"
+msgstr "Đang không sạc"
+
+#: soliddeviceengine.cpp:398
+#, kde-format
+msgid "Charging"
+msgstr "Đang sạc"
+
+#: soliddeviceengine.cpp:398
+#, kde-format
+msgid "Discharging"
+msgstr "Đang xả"
+
+#: soliddeviceengine.cpp:398
+#, kde-format
+msgid "Fully Charged"
+msgstr "Đã sạc đầy"
+
+#: soliddeviceengine.cpp:400
+#, kde-format
+msgid "Plugged In"
+msgstr "Đang cắm"
+
+#: soliddeviceengine.cpp:401
+#, kde-format
+msgid "Type"
+msgstr "Kiểu"
+
+#: soliddeviceengine.cpp:402
+#, kde-format
+msgid "Charge Percent"
+msgstr "Phần trăm sạc"
+
+#: soliddeviceengine.cpp:403
+#, kde-format
+msgid "Rechargeable"
+msgstr "Sạc lại được"
+
+#: soliddeviceengine.cpp:404
+#, kde-format
+msgid "Charge State"
+msgstr "Trạng thái sạc"
+
+#: soliddeviceengine.cpp:427
+#, kde-format
+msgid "Type Description"
+msgstr "Mô tả kiểu"
+
+#: soliddeviceengine.cpp:432
+#, kde-format
+msgid "Device Types"
+msgstr "Kiểu thiết bị"
+
+#: soliddeviceengine.cpp:456 soliddeviceengine.cpp:553
+#, kde-format
+msgid "Size"
+msgstr "Kích thước"
+
+#: soliddeviceengine.cpp:535
+#, kde-format
+msgid "Filesystem is not responding"
+msgstr "Hệ thống tệp đang không hồi đáp"
+
+#: soliddeviceengine.cpp:535
+#, kde-format
+msgid "Filesystem mounted at '%1' is not responding"
+msgstr "Hệ thống tệp gắn kết ở '%1' đang không hồi đáp"
+
+#: soliddeviceengine.cpp:551
+#, kde-format
+msgid "Free Space"
+msgstr "Không gian trống"
+
+#: soliddeviceengine.cpp:552
+#, kde-format
+msgid "Free Space Text"
+msgstr "Chữ không gian trống"
+
+#: soliddeviceengine.cpp:554
+#, kde-format
+msgid "Size Text"
+msgstr "Chữ kích thước"
+
+#: soliddeviceengine.cpp:580
+#, kde-format
+msgid "Temperature"
+msgstr "Nhiệt độ"
+
+#: soliddeviceengine.cpp:581
+#, kde-format
+msgid "Temperature Unit"
+msgstr "Đơn vị nhiệt độ"
+
+#: soliddeviceengine.cpp:625 soliddeviceengine.cpp:629
+#, kde-format
+msgid "In Use"
+msgstr "Đang dùng"

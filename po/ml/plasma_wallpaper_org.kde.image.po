@@ -1,0 +1,210 @@
+# Copyright (C) 2008 This_file_is_part_of_KDE
+# This file is distributed under the same license as the kdebase package.
+# HARI VISHNU <harivishnu@gmail.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdebase\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-02-02 02:56+0100\n"
+"PO-Revision-Date: 2020-11-25 19:54+0000\n"
+"Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
+"Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc-"
+"discuss@googlegroups.com>\n"
+"Language: ml\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Weblate 4.3.2\n"
+
+#: image.cpp:245
+#, kde-format
+msgid "Recommended wallpaper file"
+msgstr "ശുപാർശ ചെയ്യുന്ന പശ്ചാത്തലചിത്ര ഫയൽ"
+
+#: image.cpp:406
+#, kde-format
+msgid "Directory with the wallpaper to show slides from"
+msgstr ""
+
+#: image.cpp:708
+#, fuzzy, kde-format
+msgid "Open Image"
+msgstr "പശ്ചാത്തലചിത്രത്തിനുള്ള ഫയല്‍ തെരഞ്ഞെടുക്കുക"
+
+#: image.cpp:708
+#, fuzzy, kde-format
+msgid "Image Files"
+msgstr "ചിത്രങ്ങള്‍"
+
+#: imagepackage/contents/ui/config.qml:103
+#, fuzzy, kde-format
+msgid "Positioning:"
+msgstr "&സ്ഥാപനം:"
+
+#: imagepackage/contents/ui/config.qml:106
+#, fuzzy, kde-format
+msgid "Scaled and Cropped"
+msgstr "വലിപ്പം മാറ്റിയതും അറ്റം വെട്ടിചുരുക്കിയതും"
+
+#: imagepackage/contents/ui/config.qml:110
+#, kde-format
+msgid "Scaled"
+msgstr "വലിപ്പം മാറ്റിയത്"
+
+#: imagepackage/contents/ui/config.qml:114
+#, fuzzy, kde-format
+msgid "Scaled, Keep Proportions"
+msgstr "ചിത്രത്തിന്റെ അനുപാതം മാറ്റാതെ വലിപ്പം മാറ്റിയത്"
+
+#: imagepackage/contents/ui/config.qml:118
+#, kde-format
+msgid "Centered"
+msgstr "നടുവിലായിട്ട്"
+
+#: imagepackage/contents/ui/config.qml:122
+#, kde-format
+msgid "Tiled"
+msgstr "അടുത്തടുത്തു് വച്ചു്"
+
+#: imagepackage/contents/ui/config.qml:149
+#, kde-format
+msgid "Order:"
+msgstr "ക്രമം:"
+
+#: imagepackage/contents/ui/config.qml:152
+#, kde-format
+msgid "Random"
+msgstr "ക്രമരഹിതം"
+
+#: imagepackage/contents/ui/config.qml:156
+#, kde-format
+msgid "A to Z"
+msgstr "ആരോഹണക്രമം"
+
+#: imagepackage/contents/ui/config.qml:160
+#, kde-format
+msgid "Z to A"
+msgstr "അവരോഹണക്രമം"
+
+#: imagepackage/contents/ui/config.qml:164
+#, kde-format
+msgid "Date modified (newest first)"
+msgstr "പരിഷ്ക്കരിച്ച തീയതി (പുതിയത് ആദ്യം)"
+
+#: imagepackage/contents/ui/config.qml:168
+#, kde-format
+msgid "Date modified (oldest first)"
+msgstr "പരിഷ്ക്കരിച്ച തീയതി (പഴയത് ആദ്യം)"
+
+#: imagepackage/contents/ui/config.qml:195
+#, kde-format
+msgid "Background:"
+msgstr "പശ്ചാത്തലം:"
+
+#: imagepackage/contents/ui/config.qml:196
+#, kde-format
+msgid "Blur"
+msgstr "അവ്യക്തം"
+
+#: imagepackage/contents/ui/config.qml:205
+#, kde-format
+msgid "Solid color"
+msgstr "കടും നിറം"
+
+#: imagepackage/contents/ui/config.qml:215
+#, kde-format
+msgid "Select Background Color"
+msgstr "പശ്ചാത്തല നിറം തെരഞ്ഞെടുക്കുക"
+
+#: imagepackage/contents/ui/config.qml:237
+#, fuzzy, kde-format
+msgid "Change every:"
+msgstr "&ചിത്രങ്ങള്‍ മാറ്റേണ്ടതെത്ര സമയത്തിനുള്ളില്‍:"
+
+#: imagepackage/contents/ui/config.qml:247
+#, kde-format
+msgid "%1 hour"
+msgid_plural "%1 hours"
+msgstr[0] "%1 മണിക്കൂർ"
+msgstr[1] "%1 മണിക്കൂറുകൾ"
+
+#: imagepackage/contents/ui/config.qml:266
+#, kde-format
+msgid "%1 minute"
+msgid_plural "%1 minutes"
+msgstr[0] "%1 മിനുട്ട്"
+msgstr[1] "%1 മിനുട്ടുകൾ"
+
+#: imagepackage/contents/ui/config.qml:285
+#, kde-format
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] "%1 സെക്കൻ്റ്"
+msgstr[1] "%1 സെക്കൻ്റുകൾ"
+
+#: imagepackage/contents/ui/config.qml:298
+#, kde-format
+msgid "Folders"
+msgstr "അറകള്‍"
+
+#: imagepackage/contents/ui/config.qml:346
+#, fuzzy, kde-format
+msgid "Remove Folder"
+msgstr "അറകള്‍ &നീക്കം ചെയ്യുക"
+
+#: imagepackage/contents/ui/config.qml:351
+#, fuzzy, kde-format
+msgid "Open Folder"
+msgstr "അറകള്‍ &നീക്കം ചെയ്യുക"
+
+#: imagepackage/contents/ui/config.qml:361
+#, kde-format
+msgid "There are no wallpaper locations configured"
+msgstr "പശ്ചാത്തലചിത്ര സ്ഥാനങ്ങളൊന്നും സജ്ജമാക്കിയിട്ടില്ല"
+
+#: imagepackage/contents/ui/config.qml:374
+#, fuzzy, kde-format
+msgid "Add Folder..."
+msgstr "അറകള്‍ &ചേര്‍ക്കുക..."
+
+#: imagepackage/contents/ui/config.qml:380
+#: imagepackage/contents/ui/config.qml:472
+#, kde-format
+msgid "Get New Wallpapers..."
+msgstr "പുതിയ പശ്ചാത്തലചിത്രങ്ങള്‍ ലഭിക്കുക..."
+
+#: imagepackage/contents/ui/config.qml:420
+#, kde-format
+msgid "There are no wallpapers in this slideshow"
+msgstr "ഈ സ്ലൈഡ്ഷോയിൽ പശ്ചാത്തലചിത്രങ്ങൾ ഇല്ല"
+
+#: imagepackage/contents/ui/config.qml:466
+#, kde-format
+msgid "Add Image..."
+msgstr "ചിത്രം ചേർക്കുക..."
+
+#: imagepackage/contents/ui/main.qml:67
+#, fuzzy, kde-format
+msgid "Open Wallpaper Image"
+msgstr "പശ്ചാത്തലചിത്രത്തിനുള്ള ഫയല്‍ തെരഞ്ഞെടുക്കുക"
+
+#: imagepackage/contents/ui/main.qml:68
+#, fuzzy, kde-format
+msgid "Next Wallpaper Image"
+msgstr "പശ്ചാത്തലചിത്രത്തിനുള്ള ഫയല്‍ തെരഞ്ഞെടുക്കുക"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:46
+#, kde-format
+msgid "Open Containing Folder"
+msgstr "അടങ്ങിയിരിക്കുന്ന അറ തുറക്കുക"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:52
+#, fuzzy, kde-format
+msgid "Restore wallpaper"
+msgstr "പുതിയ പശ്ചാത്തലചിത്രങ്ങള്‍ ലഭിക്കുക..."
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:57
+#, kde-format
+msgid "Remove Wallpaper"
+msgstr "പശ്ചാത്തലചിത്രം കളയുക"

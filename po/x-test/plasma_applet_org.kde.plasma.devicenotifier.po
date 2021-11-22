@@ -1,0 +1,121 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_org.kde.plasma.devicenotifier\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-12-21 02:42+0100\n"
+"PO-Revision-Date: 2020-12-21 05:53+0000\n"
+"Last-Translator: transxx.py program <null@kde.org>\n"
+"Language-Team: KDE Test Language <kde-i18n-doc@kde.org>\n"
+"Language: x-test\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: package/contents/ui/DeviceItem.qml:171
+#, kde-format
+msgctxt "@info:status Free disk space"
+msgid "%1 free of %2"
+msgstr "xx%1 free of %2xx"
+
+#: package/contents/ui/DeviceItem.qml:175
+#, kde-format
+msgctxt ""
+"Accessing is a less technical word for Mounting; translation should be short "
+"and mean 'Currently mounting this device'"
+msgid "Accessing..."
+msgstr "xxAccessing...xx"
+
+#: package/contents/ui/DeviceItem.qml:177
+#, kde-format
+msgctxt ""
+"Removing is a less technical word for Unmounting; translation should be "
+"short and mean 'Currently unmounting this device'"
+msgid "Removing..."
+msgstr "xxRemoving...xx"
+
+#: package/contents/ui/DeviceItem.qml:203
+#, kde-format
+msgid "Open in File Manager"
+msgstr "xxOpen in File Managerxx"
+
+#: package/contents/ui/DeviceItem.qml:207
+#, kde-format
+msgid "Mount and Open"
+msgstr "xxMount and Openxx"
+
+#: package/contents/ui/DeviceItem.qml:209
+#, kde-format
+msgid "Eject"
+msgstr "xxEjectxx"
+
+#: package/contents/ui/DeviceItem.qml:211
+#, kde-format
+msgid "Safely remove"
+msgstr "xxSafely removexx"
+
+#: package/contents/ui/DeviceItem.qml:251
+#, kde-format
+msgid "Mount"
+msgstr "xxMountxx"
+
+#: package/contents/ui/devicenotifier.qml:60
+#, kde-format
+msgid "Most Recent Device"
+msgstr "xxMost Recent Devicexx"
+
+#: package/contents/ui/devicenotifier.qml:60
+#, kde-format
+msgid "No Devices Available"
+msgstr "xxNo Devices Availablexx"
+
+#: package/contents/ui/devicenotifier.qml:238
+#, kde-format
+msgid "Removable Devices"
+msgstr "xxRemovable Devicesxx"
+
+#: package/contents/ui/devicenotifier.qml:244
+#, kde-format
+msgid "Non Removable Devices"
+msgstr "xxNon Removable Devicesxx"
+
+#: package/contents/ui/devicenotifier.qml:250
+#, kde-format
+msgid "All Devices"
+msgstr "xxAll Devicesxx"
+
+#: package/contents/ui/devicenotifier.qml:258
+#, kde-format
+msgid "Show popup when new device is plugged in"
+msgstr "xxShow popup when new device is plugged inxx"
+
+#: package/contents/ui/devicenotifier.qml:266
+#, kde-format
+msgctxt "Open auto mounter kcm"
+msgid "Configure Removable Devices..."
+msgstr "xxConfigure Removable Devices...xx"
+
+#: package/contents/ui/FullRepresentation.qml:48
+#, kde-format
+msgid "Remove All"
+msgstr "xxRemove Allxx"
+
+#: package/contents/ui/FullRepresentation.qml:51
+#, kde-format
+msgid "Click to safely remove all devices"
+msgstr "xxClick to safely remove all devicesxx"
+
+#: package/contents/ui/FullRepresentation.qml:163
+#, kde-format
+msgid "No removable devices attached"
+msgstr "xxNo removable devices attachedxx"
+
+#: package/contents/ui/FullRepresentation.qml:163
+#, kde-format
+msgid "No disks available"
+msgstr "xxNo disks availablexx"

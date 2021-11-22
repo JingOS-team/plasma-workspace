@@ -1,0 +1,130 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# Phu Hung Nguyen <phuhnguyen@disroot.org>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-06 03:03+0100\n"
+"PO-Revision-Date: 2020-09-18 02:03+0200\n"
+"Last-Translator: Phu Hung Nguyen <phuhnguyen@disroot.org>\n"
+"Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 19.12.2\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Nguyễn Hùng Phú"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "phuhnguyen@disroot.org"
+
+#: package/contents/ui/main.qml:31
+#, kde-format
+msgid "Language"
+msgstr "Ngôn ngữ"
+
+#: package/contents/ui/main.qml:89
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Languages"
+msgstr "Thêm ngôn ngữ"
+
+#: package/contents/ui/main.qml:115
+#, kde-format
+msgctxt "@action:button"
+msgid "Add"
+msgstr "Thêm"
+
+#: package/contents/ui/main.qml:143
+#, kde-format
+msgctxt "@info"
+msgid "There are no additional languages available on this system."
+msgstr "Không còn ngôn ngữ nào khả dụng cho hệ thống này."
+
+#: package/contents/ui/main.qml:153
+#, kde-format
+msgctxt "@info"
+msgid "Your changes will take effect the next time you log in."
+msgstr "Các thay đổi sẽ có hiệu lực vào lần tiếp theo bạn đăng nhập."
+
+#: package/contents/ui/main.qml:154
+#, kde-format
+msgctxt "@info"
+msgid "There are currently no preferred languages configured."
+msgstr "Hiện không có ngôn ngữ nào được cấu hình là ưu tiên."
+
+#: package/contents/ui/main.qml:165
+#, kde-format
+msgctxt "@info %2 is the language code"
+msgid ""
+"The translation files for the language with the code '%2' could not be "
+"found. The language will be removed from your configuration. If you want to "
+"add it back, please install the localization files for it and add the "
+"language again."
+msgid_plural ""
+"The translation files for the languages with the codes '%2' could not be "
+"found. These languages will be removed from your configuration. If you want "
+"to add them back, please install the localization files for it and the "
+"languages again."
+msgstr[0] ""
+"Không tìm thấy các tệp biên dịch cho các ngôn ngữ với mã '%2'. Các ngôn ngữ "
+"này sẽ bị xoá khỏi cấu hình của bạn. Nếu bạn muốn thêm lại, vui lòng cài đặt "
+"lại các tệp địa phương hoá cho cấu hình và các ngôn ngữ đó."
+
+#: package/contents/ui/main.qml:168
+#, kde-format
+msgctxt "@info separator in list of language codes"
+msgid "', '"
+msgstr "', '"
+
+#: package/contents/ui/main.qml:178
+#, kde-format
+msgid ""
+"The language at the top of this list is the one you want to see and use most "
+"often."
+msgstr ""
+"Ngôn ngữ ở đầu danh sách này là ngôn ngữ bạn muốn thấy và dùng nhiều nhất."
+
+#: package/contents/ui/main.qml:217
+#, kde-format
+msgctxt "@item:inlistbox 1 = Language name"
+msgid "%1 (Default)"
+msgstr "%1 (Mặc định)"
+
+#: package/contents/ui/main.qml:230
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Promote to default"
+msgstr "Đưa lên làm mặc định"
+
+#: package/contents/ui/main.qml:237
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Remove"
+msgstr "Bỏ"
+
+#: package/contents/ui/main.qml:262
+#, kde-format
+msgctxt "@action:button"
+msgid "Add languages..."
+msgstr "Thêm ngôn ngữ..."
+
+#: translations.cpp:43
+#, kde-format
+msgid "Configure Plasma translations"
+msgstr "Cấu hình các phần dịch Plasma"
+
+#: translationsmodel.cpp:95 translationsmodel.cpp:106
+#, kde-format
+msgctxt "%1 is language name, %2 is language code name"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"

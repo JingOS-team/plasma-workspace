@@ -1,0 +1,229 @@
+# translation of plasma_wallpaper_image.po to Belarusian Latin
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Ihar Hrachyshka <ihar.hrachyshka@gmail.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_wallpaper_image\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-02-02 02:56+0100\n"
+"PO-Revision-Date: 2008-10-05 11:04+0300\n"
+"Last-Translator: Ihar Hrachyshka <ihar.hrachyshka@gmail.com>\n"
+"Language-Team: Belarusian Latin <i18n@mova.org>\n"
+"Language: be@latin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: image.cpp:245
+#, kde-format
+msgid "Recommended wallpaper file"
+msgstr ""
+
+#: image.cpp:406
+#, kde-format
+msgid "Directory with the wallpaper to show slides from"
+msgstr ""
+
+#: image.cpp:708
+#, fuzzy, kde-format
+#| msgid "Select Wallpaper Image File"
+msgid "Open Image"
+msgstr "Vybiery fajł z špalerami"
+
+#: image.cpp:708
+#, fuzzy, kde-format
+#| msgid "Images"
+msgid "Image Files"
+msgstr "Vyjavy"
+
+#: imagepackage/contents/ui/config.qml:103
+#, fuzzy, kde-format
+#| msgid "P&ositioning:"
+msgid "Positioning:"
+msgstr "&Miesca:"
+
+#: imagepackage/contents/ui/config.qml:106
+#, fuzzy, kde-format
+#| msgid "Scaled & Cropped"
+msgid "Scaled and Cropped"
+msgstr "Zmaštabavany j abatnuty"
+
+#: imagepackage/contents/ui/config.qml:110
+#, kde-format
+msgid "Scaled"
+msgstr "Zmaštabavany"
+
+#: imagepackage/contents/ui/config.qml:114
+#, fuzzy, kde-format
+#| msgid "Scaled, keep proportions"
+msgid "Scaled, Keep Proportions"
+msgstr "Zmaštabavany praparcyjna"
+
+#: imagepackage/contents/ui/config.qml:118
+#, kde-format
+msgid "Centered"
+msgstr "Pasiarod"
+
+#: imagepackage/contents/ui/config.qml:122
+#, kde-format
+msgid "Tiled"
+msgstr "Kafla"
+
+#: imagepackage/contents/ui/config.qml:149
+#, kde-format
+msgid "Order:"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:152
+#, kde-format
+msgid "Random"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:156
+#, kde-format
+msgid "A to Z"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:160
+#, kde-format
+msgid "Z to A"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:164
+#, kde-format
+msgid "Date modified (newest first)"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:168
+#, kde-format
+msgid "Date modified (oldest first)"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:195
+#, kde-format
+msgid "Background:"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:196
+#, kde-format
+msgid "Blur"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:205
+#, kde-format
+msgid "Solid color"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:215
+#, kde-format
+msgid "Select Background Color"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:237
+#, fuzzy, kde-format
+#| msgid "&Change images every:"
+msgid "Change every:"
+msgstr "&Źmianiaj vyjavu praz:"
+
+#: imagepackage/contents/ui/config.qml:247
+#, kde-format
+msgid "%1 hour"
+msgid_plural "%1 hours"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: imagepackage/contents/ui/config.qml:266
+#, kde-format
+msgid "%1 minute"
+msgid_plural "%1 minutes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: imagepackage/contents/ui/config.qml:285
+#, kde-format
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: imagepackage/contents/ui/config.qml:298
+#, fuzzy, kde-format
+#| msgid "&Remove Folder"
+msgid "Folders"
+msgstr "&Vydali kataloh"
+
+#: imagepackage/contents/ui/config.qml:346
+#, fuzzy, kde-format
+#| msgid "&Remove Folder"
+msgid "Remove Folder"
+msgstr "&Vydali kataloh"
+
+#: imagepackage/contents/ui/config.qml:351
+#, fuzzy, kde-format
+#| msgid "&Remove Folder"
+msgid "Open Folder"
+msgstr "&Vydali kataloh"
+
+#: imagepackage/contents/ui/config.qml:361
+#, kde-format
+msgid "There are no wallpaper locations configured"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:374
+#, fuzzy, kde-format
+#| msgid "&Add Folder..."
+msgid "Add Folder..."
+msgstr "&Dadaj kataloh..."
+
+#: imagepackage/contents/ui/config.qml:380
+#: imagepackage/contents/ui/config.qml:472
+#, kde-format
+msgid "Get New Wallpapers..."
+msgstr "Vaźmi novyja špalery..."
+
+#: imagepackage/contents/ui/config.qml:420
+#, kde-format
+msgid "There are no wallpapers in this slideshow"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:466
+#, kde-format
+msgid "Add Image..."
+msgstr ""
+
+#: imagepackage/contents/ui/main.qml:67
+#, fuzzy, kde-format
+#| msgid "Select Wallpaper Image File"
+msgid "Open Wallpaper Image"
+msgstr "Vybiery fajł z špalerami"
+
+#: imagepackage/contents/ui/main.qml:68
+#, fuzzy, kde-format
+#| msgid "Select Wallpaper Image File"
+msgid "Next Wallpaper Image"
+msgstr "Vybiery fajł z špalerami"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:46
+#, kde-format
+msgid "Open Containing Folder"
+msgstr ""
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:52
+#, fuzzy, kde-format
+#| msgid "Get New Wallpapers..."
+msgid "Restore wallpaper"
+msgstr "Vaźmi novyja špalery..."
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:57
+#, fuzzy, kde-format
+#| msgid "Get New Wallpapers..."
+msgid "Remove Wallpaper"
+msgstr "Vaźmi novyja špalery..."

@@ -1,5 +1,6 @@
 /***************************************************************************
- *   Copyright (C) 2014 by David Edmundson <davidedmundson@kde.org>  *
+ *   Copyright (C) 2014 by David Edmundson <davidedmundson@kde.org>        *
+ *   Copyright (C) 2021 by Liu Bangguo <liubangguo@jingos.com>             *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -18,7 +19,8 @@
  ***************************************************************************/
 
 import QtQuick 2.0
+import jingos.display 1.0
 
 QtObject {
-    property int width: 1024
+    property int width: JDisplay.dp(1024)
 }

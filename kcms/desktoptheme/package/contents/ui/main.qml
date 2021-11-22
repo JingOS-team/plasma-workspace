@@ -23,6 +23,8 @@ import QtQuick 2.1
 import QtQuick.Layouts 1.1
 import QtQuick.Dialogs 1.0
 import QtQuick.Controls 2.3 as QtControls
+import QtQml 2.15
+
 import org.kde.kirigami 2.8 as Kirigami
 import org.kde.newstuff 1.62 as NewStuff
 import org.kde.kcm 1.3 as KCM
@@ -36,16 +38,18 @@ KCM.GridViewKCM {
     view.model: kcm.filteredModel
     view.currentIndex: kcm.filteredModel.selectedThemeIndex
 
-      Binding {
+    Binding {
         target: kcm.filteredModel
         property: "query"
         value: searchField.text
+        restoreMode: Binding.RestoreBinding
     }
 
     Binding {
         target: kcm.filteredModel
         property: "filter"
         value:  filterCombo.model[filterCombo.currentIndex].filter
+        restoreMode: Binding.RestoreBinding
     }
 
     KCM.SettingStateBinding {
@@ -158,12 +162,12 @@ KCM.GridViewKCM {
 
             Connections {
                 target: kcm
-                onShowSuccessMessage: {
+                function onShowSuccessMessage(message) {
                     infoLabel.type = Kirigami.MessageType.Positive;
                     infoLabel.text = message;
                     infoLabel.visible = true;
                 }
-                onShowErrorMessage: {
+                function onShowErrorMessage(message) {
                     infoLabel.type = Kirigami.MessageType.Error;
                     infoLabel.text = message;
                     infoLabel.visible = true;

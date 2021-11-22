@@ -1,0 +1,219 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm5_icons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2020-12-12 05:41+0000\n"
+"Last-Translator: transxx.py program <null@kde.org>\n"
+"Language-Team: KDE Test Language <kde-i18n-doc@kde.org>\n"
+"Language: x-test\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "xxYour namesxx"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "xxYour emailsxx"
+
+#: changeicons.cpp:43
+#, kde-format
+msgid "Icon theme is already used"
+msgstr "xxIcon theme is already usedxx"
+
+#: iconsizecategorymodel.cpp:26
+#, kde-format
+msgid "Toolbar"
+msgstr "xxToolbarxx"
+
+#: iconsizecategorymodel.cpp:27
+#, kde-format
+msgid "Main Toolbar"
+msgstr "xxMain Toolbarxx"
+
+#: iconsizecategorymodel.cpp:28
+#, kde-format
+msgid "Small Icons"
+msgstr "xxSmall Iconsxx"
+
+#: iconsizecategorymodel.cpp:29
+#, kde-format
+msgid "Panel"
+msgstr "xxPanelxx"
+
+#: iconsizecategorymodel.cpp:30
+#, kde-format
+msgid "Dialogs"
+msgstr "xxDialogsxx"
+
+#. i18n: ectx: label, entry (Theme), group (Icons)
+#: iconssettingsbase.kcfg:9
+#, kde-format
+msgid "Name of the current icon theme"
+msgstr "xxName of the current icon themexx"
+
+#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
+#: iconssettingsbase.kcfg:15
+#, kde-format
+msgid "Desktop icons size"
+msgstr "xxDesktop icons sizexx"
+
+#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
+#: iconssettingsbase.kcfg:21
+#, kde-format
+msgid "Toolbar icons size"
+msgstr "xxToolbar icons sizexx"
+
+#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
+#: iconssettingsbase.kcfg:27
+#, kde-format
+msgid "Main toolbar icons size"
+msgstr "xxMain toolbar icons sizexx"
+
+#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
+#: iconssettingsbase.kcfg:33
+#, kde-format
+msgid "Small icons size"
+msgstr "xxSmall icons sizexx"
+
+#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
+#: iconssettingsbase.kcfg:39
+#, kde-format
+msgid "Panel icons size"
+msgstr "xxPanel icons sizexx"
+
+#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
+#: iconssettingsbase.kcfg:45
+#, kde-format
+msgid "Dialog icons size"
+msgstr "xxDialog icons sizexx"
+
+#: main.cpp:82
+#, kde-format
+msgid "Icons"
+msgstr "xxIconsxx"
+
+#: main.cpp:84
+#, kde-format
+msgid "Icons Control Panel Module"
+msgstr "xxIcons Control Panel Modulexx"
+
+#: main.cpp:86
+#, kde-format
+msgid "(c) 2000-2003 Geert Jansen"
+msgstr "xx(c) 2000-2003 Geert Jansenxx"
+
+#: main.cpp:87
+#, kde-format
+msgid "Geert Jansen"
+msgstr "xxGeert Jansenxx"
+
+#: main.cpp:88
+#, kde-format
+msgid "Antonio Larrosa Jimenez"
+msgstr "xxAntonio Larrosa Jimenezxx"
+
+#: main.cpp:89
+#, kde-format
+msgid "Torsten Rahn"
+msgstr "xxTorsten Rahnxx"
+
+#: main.cpp:90
+#, kde-format
+msgid "Jonathan Riddell"
+msgstr "xxJonathan Riddellxx"
+
+#: main.cpp:91
+#, kde-format
+msgid "Kai Uwe Broulik"
+msgstr "xxKai Uwe Broulikxx"
+
+#: main.cpp:214
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "xxUnable to create a temporary file.xx"
+
+#: main.cpp:225
+#, kde-format
+msgid "Unable to download the icon theme archive: %1"
+msgstr "xxUnable to download the icon theme archive: %1xx"
+
+#: main.cpp:239
+#, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr "xxThe file is not a valid icon theme archive.xx"
+
+#: main.cpp:244
+#, kde-format
+msgid ""
+"A problem occurred during the installation process; however, most of the "
+"themes in the archive have been installed"
+msgstr ""
+"xxA problem occurred during the installation process; however, most of the "
+"themes in the archive have been installedxx"
+
+#: main.cpp:248
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "xxTheme installed successfully.xx"
+
+#: main.cpp:356
+#, kde-format
+msgid "Installing icon themes..."
+msgstr "xxInstalling icon themes...xx"
+
+#: main.cpp:366
+#, kde-format
+msgid "Installing %1 theme..."
+msgstr "xxInstalling %1 theme...xx"
+
+#: package/contents/ui/main.qml:35
+#, kde-format
+msgid "This module allows you to choose the icons for your desktop."
+msgstr "xxThis module allows you to choose the icons for your desktop.xx"
+
+#: package/contents/ui/main.qml:161
+#, kde-format
+msgid "Remove Icon Theme"
+msgstr "xxRemove Icon Themexx"
+
+#: package/contents/ui/main.qml:168
+#, kde-format
+msgid "Restore Icon Theme"
+msgstr "xxRestore Icon Themexx"
+
+#: package/contents/ui/main.qml:237
+#, kde-format
+msgid "Configure Icon Sizes"
+msgstr "xxConfigure Icon Sizesxx"
+
+#: package/contents/ui/main.qml:254
+#, kde-format
+msgid "Install from File..."
+msgstr "xxInstall from File...xx"
+
+#: package/contents/ui/main.qml:262
+#, kde-format
+msgid "Get New Icons..."
+msgstr "xxGet New Icons...xx"
+
+#: package/contents/ui/main.qml:288
+#, kde-format
+msgid "Open Theme"
+msgstr "xxOpen Themexx"
+
+#: package/contents/ui/main.qml:290
+#, kde-format
+msgid "Theme Files (*.tar.gz *.tar.bz2)"
+msgstr "xxTheme Files (*.tar.gz *.tar.bz2)xx"

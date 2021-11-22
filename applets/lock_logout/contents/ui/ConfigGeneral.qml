@@ -21,41 +21,49 @@ import QtQuick 2.0
 import QtQuick.Controls 2.5 as QtControls
 import org.kde.kirigami 2.5 as Kirigami
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.private.sessions 2.0
 
 Kirigami.FormLayout {
     id: iconsPage
     anchors.left: parent.left
     anchors.right: parent.right
 
-    readonly property int checkedOptions: leave.checked + lock.checked + switchUser.checked + hibernate.checked + sleep.checked
+    readonly property int checkedOptions: logout.checked + shutdown.checked + reboot.checked + lock.checked + switchUser.checked + hibernate.checked + sleep.checked
 
-    property alias cfg_show_requestShutDown: leave.checked
+    property alias cfg_show_requestLogout: logout.checked
+    property alias cfg_show_requestShutDown: shutdown.checked
+    property alias cfg_show_requestReboot: reboot.checked
+
     property alias cfg_show_lockScreen: lock.checked
     property alias cfg_show_switchUser: switchUser.checked
     property alias cfg_show_suspendToDisk: hibernate.checked
     property alias cfg_show_suspendToRam: sleep.checked
 
-    readonly property bool canLockScreen: dataEngine.data["Sleep States"].LockScreen
-    readonly property bool canSuspend: dataEngine.data["Sleep States"].Suspend
-    readonly property bool canHibernate: dataEngine.data["Sleep States"].Hibernate
-
-    PlasmaCore.DataSource {
-        id: dataEngine
-        engine: "powermanagement"
-        connectedSources: ["Sleep States"]
+    SessionManagement {
+        id: session
     }
 
     QtControls.CheckBox {
-        id: leave
+        id: logout
         Kirigami.FormData.label: i18nc("Heading for a list of actions (leave, lock, switch user, hibernate, suspend)", "Show actions:")
-        text: i18n("Leave")
+        text: i18n("Logout")
         // ensure user cannot have all options unchecked
-        enabled: checkedOptions > 1 || !checked
+        enabled: session.canLogout && (checkedOptions > 1 || !checked)
+    }
+    QtControls.CheckBox {
+        id: shutdown
+        text: i18n("Shutdown")
+        enabled: session.canShutdown && (checkedOptions > 1 || !checked)
+    }
+    QtControls.CheckBox {
+        id: reboot
+        text: i18n("Reboot")
+        enabled: session.canReboot && (checkedOptions > 1 || !checked)
     }
     QtControls.CheckBox {
         id: lock
         text: i18n("Lock")
-        enabled: iconsPage.canLockScreen && (checkedOptions > 1 || !checked)
+        enabled: session.canLock && (checkedOptions > 1 || !checked)
     }
     QtControls.CheckBox {
         id: switchUser
@@ -65,11 +73,11 @@ Kirigami.FormLayout {
     QtControls.CheckBox {
         id: hibernate
         text: i18n("Hibernate")
-        enabled: iconsPage.canHibernate && (checkedOptions > 1 || !checked)
+        enabled: session.canHibernate && (checkedOptions > 1 || !checked)
     }
     QtControls.CheckBox {
         id: sleep
         text: i18nc("Suspend to RAM", "Sleep")
-        enabled: iconsPage.canSuspend && (checkedOptions > 1 || !checked)
+        enabled: session.canSuspend && (checkedOptions > 1 || !checked)
     }
 }

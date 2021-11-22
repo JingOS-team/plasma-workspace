@@ -1,0 +1,121 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_org.kde.plasma.lock_logout\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-06 03:03+0100\n"
+"PO-Revision-Date: 2021-01-06 06:35+0000\n"
+"Last-Translator: transxx.py program <null@kde.org>\n"
+"Language-Team: KDE Test Language <kde-i18n-doc@kde.org>\n"
+"Language: x-test\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: contents/config/config.qml:26
+#, kde-format
+msgid "General"
+msgstr "xxGeneralxx"
+
+#: contents/ui/ConfigGeneral.qml:48
+#, kde-format
+msgctxt ""
+"Heading for a list of actions (leave, lock, switch user, hibernate, suspend)"
+msgid "Show actions:"
+msgstr "xxShow actions:xx"
+
+#: contents/ui/ConfigGeneral.qml:49
+#, kde-format
+msgid "Logout"
+msgstr "xxLogoutxx"
+
+#: contents/ui/ConfigGeneral.qml:55
+#, kde-format
+msgid "Shutdown"
+msgstr "xxShutdownxx"
+
+#: contents/ui/ConfigGeneral.qml:60
+#, kde-format
+msgid "Reboot"
+msgstr "xxRebootxx"
+
+#: contents/ui/ConfigGeneral.qml:65 contents/ui/data.js:5
+#, kde-format
+msgid "Lock"
+msgstr "xxLockxx"
+
+#: contents/ui/ConfigGeneral.qml:70
+#, kde-format
+msgid "Switch User"
+msgstr "xxSwitch Userxx"
+
+#: contents/ui/ConfigGeneral.qml:75 contents/ui/data.js:46
+#, kde-format
+msgid "Hibernate"
+msgstr "xxHibernatexx"
+
+#: contents/ui/ConfigGeneral.qml:80 contents/ui/data.js:39
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "xxSleepxx"
+
+#: contents/ui/data.js:6
+#, kde-format
+msgid "Lock the screen"
+msgstr "xxLock the screenxx"
+
+#: contents/ui/data.js:12
+#, kde-format
+msgid "Switch user"
+msgstr "xxSwitch userxx"
+
+#: contents/ui/data.js:13
+#, kde-format
+msgid "Start a parallel session as a different user"
+msgstr "xxStart a parallel session as a different userxx"
+
+#: contents/ui/data.js:18
+#, kde-format
+msgid "Shutdown..."
+msgstr "xxShutdown...xx"
+
+#: contents/ui/data.js:19
+#, kde-format
+msgid "Turn off the computer"
+msgstr "xxTurn off the computerxx"
+
+#: contents/ui/data.js:25
+#, kde-format
+msgid "Restart..."
+msgstr "xxRestart...xx"
+
+#: contents/ui/data.js:26
+#, kde-format
+msgid "Reboot the computer"
+msgstr "xxReboot the computerxx"
+
+#: contents/ui/data.js:32
+#, kde-format
+msgid "Logout..."
+msgstr "xxLogout...xx"
+
+#: contents/ui/data.js:33
+#, kde-format
+msgid "End the session"
+msgstr "xxEnd the sessionxx"
+
+#: contents/ui/data.js:40
+#, kde-format
+msgid "Sleep (suspend to RAM)"
+msgstr "xxSleep (suspend to RAM)xx"
+
+#: contents/ui/data.js:47
+#, kde-format
+msgid "Hibernate (suspend to disk)"
+msgstr "xxHibernate (suspend to disk)xx"

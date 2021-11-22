@@ -6,9 +6,10 @@
 #ifndef __UNICODE_SCRIPTS_H__
 #define __UNICODE_SCRIPTS_H__
 
-#include <QtGlobal>
 #include <KLocalizedString>
+#include <QtGlobal>
 
+// clang-format off
 static const char * const constUnicodeScriptList[] =
 {
     I18N_NOOP("Arabic"),
@@ -1281,6 +1282,5 @@ static const TUnicodeScript constUnicodeScripts[] =
     { 0xE0100, 0xE01EF, 29 },
     { 0x0, 0x0, -1 }
 };
-
+// clang-format on
 #endif
-

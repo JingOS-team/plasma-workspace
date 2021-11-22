@@ -1,0 +1,144 @@
+# Indonesian translations for plasma_runner_powerdevil package.
+# Copyright (C) 2010 This_file_is_part_of_KDE
+# This file is distributed under the same license as the plasma_runner_powerdevil package.
+# Andhika Padmawan <andhika.padmawan@gmail.com>, 2010.
+# Wantoyo <wantoyek@gmail.com>, 2018, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_powerdevil\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2019-06-29 23:20+0700\n"
+"Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
+"Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: PowerDevilRunner.cpp:45
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "suspend"
+msgstr "suspensi"
+
+#: PowerDevilRunner.cpp:47
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "to ram"
+msgstr "ke ram"
+
+#: PowerDevilRunner.cpp:49
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "sleep"
+msgstr "tidur"
+
+#: PowerDevilRunner.cpp:51
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "hibernate"
+msgstr "hibernasi"
+
+#: PowerDevilRunner.cpp:53
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "to disk"
+msgstr "ke disk"
+
+#: PowerDevilRunner.cpp:55 PowerDevilRunner.cpp:57 PowerDevilRunner.cpp:80
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "dim screen"
+msgstr "redupkan layar"
+
+#: PowerDevilRunner.cpp:65
+#, kde-format
+msgid ""
+"Lists system suspend (e.g. sleep, hibernate) options and allows them to be "
+"activated"
+msgstr ""
+"Tampilkan opsi suspensi sistem (misalnya tidur, hibernasi) dan izinkan "
+"mereka untuk diaktifkan"
+
+#: PowerDevilRunner.cpp:69
+#, kde-format
+msgid "Suspends the system to RAM"
+msgstr "Mensuspensikan sistem ke RAM"
+
+#: PowerDevilRunner.cpp:73
+#, kde-format
+msgid "Suspends the system to disk"
+msgstr "Mensuspensikan sistem ke disk"
+
+#: PowerDevilRunner.cpp:76
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "screen brightness"
+msgstr "kecerahan layar"
+
+#: PowerDevilRunner.cpp:78
+#, no-c-format, kde-format
+msgid ""
+"Lists screen brightness options or sets it to the brightness defined by :q:; "
+"e.g. screen brightness 50 would dim the screen to 50% maximum brightness"
+msgstr ""
+"Tampilkan opsi kecerahan layar atau atur ke kecerahan yang ditentukan oleh :"
+"q:; misalnya kecerahan layar 50 akan meredupkan layar ke kecerahan maksimum "
+"50%"
+
+#: PowerDevilRunner.cpp:123
+#, fuzzy, kde-format
+#| msgid "Set Brightness to %1"
+msgid "Set Brightness to %1%"
+msgstr "Set Kecerahan ke %1"
+
+#: PowerDevilRunner.cpp:132
+#, kde-format
+msgid "Dim screen totally"
+msgstr "Redupkan layar secara keseluruhan"
+
+#: PowerDevilRunner.cpp:140
+#, kde-format
+msgid "Dim screen by half"
+msgstr "Redupkan layar setengah"
+
+#: PowerDevilRunner.cpp:170
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Tidur"
+
+#: PowerDevilRunner.cpp:171
+#, kde-format
+msgid "Suspend to RAM"
+msgstr "Suspensikan ke RAM"
+
+#: PowerDevilRunner.cpp:176
+#, kde-format
+msgctxt "Suspend to disk"
+msgid "Hibernate"
+msgstr "Hibernasi"
+
+#: PowerDevilRunner.cpp:177
+#, kde-format
+msgid "Suspend to disk"
+msgstr "Suspensikan ke disk"
+
+#: PowerDevilRunner.cpp:244
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "screen brightness"
+msgctxt "Note this is a KRunner keyword, it should end with a space"
+msgid "screen brightness "
+msgstr "kecerahan layar"
+
+#: PowerDevilRunner.cpp:246
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "dim screen"
+msgctxt "Note this is a KRunner keyword, it should end with a space"
+msgid "dim screen "
+msgstr "redupkan layar"

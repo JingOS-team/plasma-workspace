@@ -1,0 +1,133 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Vasudev Kamath <kamathvasudev@gmail.com>, 2009.
+# Shankar Prasad <svenkate@redhat.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-12-21 02:42+0100\n"
+"PO-Revision-Date: 2010-01-05 11:10+0530\n"
+"Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
+"Language-Team: Kannada <kde-l10n-kn@kde.org>\n"
+"Language: kn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 1.0\n"
+
+#: package/contents/ui/DeviceItem.qml:171
+#, fuzzy, kde-format
+#| msgctxt "@info:status Free disk space"
+#| msgid "%1 free"
+msgctxt "@info:status Free disk space"
+msgid "%1 free of %2"
+msgstr "%1 ಖಾಲಿ ಇದೆ"
+
+#: package/contents/ui/DeviceItem.qml:175
+#, kde-format
+msgctxt ""
+"Accessing is a less technical word for Mounting; translation should be short "
+"and mean 'Currently mounting this device'"
+msgid "Accessing..."
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:177
+#, kde-format
+msgctxt ""
+"Removing is a less technical word for Unmounting; translation should be "
+"short and mean 'Currently unmounting this device'"
+msgid "Removing..."
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:203
+#, kde-format
+msgid "Open in File Manager"
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:207
+#, kde-format
+msgid "Mount and Open"
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:209
+#, kde-format
+msgid "Eject"
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:211
+#, kde-format
+msgid "Safely remove"
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:251
+#, kde-format
+msgid "Mount"
+msgstr ""
+
+#: package/contents/ui/devicenotifier.qml:60
+#, fuzzy, kde-format
+#| msgid "Last plugged in device: %1"
+msgid "Most Recent Device"
+msgstr "ಕೊನೆಯ ಬಾರಿಗೆ ಜೋಡಿಸಲಾದ ಸಾಧನ: %1"
+
+#: package/contents/ui/devicenotifier.qml:60
+#, kde-format
+msgid "No Devices Available"
+msgstr ""
+
+#: package/contents/ui/devicenotifier.qml:238
+#, fuzzy, kde-format
+#| msgid "Removable devices only"
+msgid "Removable Devices"
+msgstr "ಬೇರ್ಪಡಿಸಬಹುದಾದ ಸಾಧನಗಳು ಮಾತ್ರ"
+
+#: package/contents/ui/devicenotifier.qml:244
+#, fuzzy, kde-format
+#| msgid "Non-removable devices only"
+msgid "Non Removable Devices"
+msgstr "ಬೇರ್ಪಡಿಸಲಾಗದ ಸಾಧನಗಳು ಮಾತ್ರ"
+
+#: package/contents/ui/devicenotifier.qml:250
+#, fuzzy, kde-format
+#| msgid "All devices"
+msgid "All Devices"
+msgstr "ಎಲ್ಲಾ ಸಾಧನಗಳು"
+
+#: package/contents/ui/devicenotifier.qml:258
+#, fuzzy, kde-format
+#| msgid "No devices plugged in"
+msgid "Show popup when new device is plugged in"
+msgstr "ಯಾವುದೇ ಸಾಧನಗಳನ್ನು ಜೋಡಿಸಲಾಗಿಲ್ಲ"
+
+#: package/contents/ui/devicenotifier.qml:266
+#, fuzzy, kde-format
+#| msgid "Non-removable devices only"
+msgctxt "Open auto mounter kcm"
+msgid "Configure Removable Devices..."
+msgstr "ಬೇರ್ಪಡಿಸಲಾಗದ ಸಾಧನಗಳು ಮಾತ್ರ"
+
+#: package/contents/ui/FullRepresentation.qml:48
+#, kde-format
+msgid "Remove All"
+msgstr ""
+
+#: package/contents/ui/FullRepresentation.qml:51
+#, fuzzy, kde-format
+#| msgid "Click to safely remove this device from the computer."
+msgid "Click to safely remove all devices"
+msgstr "ಸಾಧನವನ್ನು ಸುರಕ್ಷಿತವಾಗಿ ಗಣಕಯಂತ್ರದಿಂದ ಬೇರ್ಪಡಿಸಲು ಕ್ಲಿಕ್ಕಿಸಿ"
+
+#: package/contents/ui/FullRepresentation.qml:163
+#, fuzzy, kde-format
+#| msgid "Non-removable devices only"
+msgid "No removable devices attached"
+msgstr "ಬೇರ್ಪಡಿಸಲಾಗದ ಸಾಧನಗಳು ಮಾತ್ರ"
+
+#: package/contents/ui/FullRepresentation.qml:163
+#, fuzzy, kde-format
+#| msgid "No devices plugged in."
+msgid "No disks available"
+msgstr "ಯಾವುದೇ ಸಾಧನಗಳನ್ನು ಜೋಡಿಸಲಾಗಿಲ್ಲ."

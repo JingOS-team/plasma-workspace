@@ -1,0 +1,148 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Safa Alfulaij <safa1996alfulaij@gmail.com>, 2015, 2018.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-06 03:03+0100\n"
+"PO-Revision-Date: 2018-08-02 18:04+0300\n"
+"Last-Translator: Safa Alfulaij <safa1996alfulaij@gmail.com>\n"
+"Language-Team: Arabic <doc@arabeyes.org>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 2.0\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "صفا الفليج"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "safa1996alfulaij@gmail.com"
+
+#: package/contents/ui/main.qml:31
+#, kde-format
+msgid "Language"
+msgstr "اللغات"
+
+#: package/contents/ui/main.qml:89
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Languages"
+msgstr "أضِف لغات"
+
+#: package/contents/ui/main.qml:115
+#, kde-format
+msgctxt "@action:button"
+msgid "Add"
+msgstr "أضِف"
+
+#: package/contents/ui/main.qml:143
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "There are no languages available on this system."
+msgctxt "@info"
+msgid "There are no additional languages available on this system."
+msgstr "لا تتوفّر في النظام أية لغات."
+
+#: package/contents/ui/main.qml:153
+#, kde-format
+msgctxt "@info"
+msgid "Your changes will take effect the next time you log in."
+msgstr "ستأخذ التغييرات مفعولها في المرة القادمة التي تلج فيها."
+
+#: package/contents/ui/main.qml:154
+#, kde-format
+msgctxt "@info"
+msgid "There are currently no preferred languages configured."
+msgstr "لم تُضبط أية لغات محبّذة بعد."
+
+#: package/contents/ui/main.qml:165
+#, kde-format
+msgctxt "@info %2 is the language code"
+msgid ""
+"The translation files for the language with the code '%2' could not be "
+"found. The language will be removed from your configuration. If you want to "
+"add it back, please install the localization files for it and add the "
+"language again."
+msgid_plural ""
+"The translation files for the languages with the codes '%2' could not be "
+"found. These languages will be removed from your configuration. If you want "
+"to add them back, please install the localization files for it and the "
+"languages again."
+msgstr[0] ""
+"تعذّر العثور على ملفات الترجمة للغتك ذات الرمز ”%2“. أُزيلت هذه اللغة من ضبطك. "
+"إن أردت إعادتها، رجاءً ثبّت ملفات التوطين الخاصة بها وأضِفها ثانيةً."
+msgstr[1] ""
+"تعذّر العثور على ملفات الترجمة للغتك ذات الرمز ”%2“. أُزيلت هذه اللغة من ضبطك. "
+"إن أردت إعادتها، رجاءً ثبّت ملفات التوطين الخاصة بها وأضِفها ثانيةً."
+msgstr[2] ""
+"تعذّر العثور على ملفات الترجمة للغتيك ذاتي الرمزين ”%2“. أُزيلت هتين اللغتين "
+"من ضبطك. إن أردت إعادتهما، رجاءً ثبّت ملفات التوطين الخاصة بهما وأضِفهما ثانيةً."
+msgstr[3] ""
+"تعذّر العثور على ملفات الترجمة للغاتك ذات الرموز ”%2“. أُزيلت هذه اللغات من "
+"ضبطك. إن أردت إعادتها، رجاءً ثبّت ملفات التوطين الخاصة بها وأضِفها ثانيةً."
+msgstr[4] ""
+"تعذّر العثور على ملفات الترجمة للغاتك ذات الرموز ”%2“. أُزيلت هذه اللغات من "
+"ضبطك. إن أردت إعادتها، رجاءً ثبّت ملفات التوطين الخاصة بها وأضِفها ثانيةً."
+msgstr[5] ""
+"تعذّر العثور على ملفات الترجمة للغاتك ذات الرموز ”%2“. أُزيلت هذه اللغات من "
+"ضبطك. إن أردت إعادتها، رجاءً ثبّت ملفات التوطين الخاصة بها وأضِفها ثانيةً."
+
+#: package/contents/ui/main.qml:168
+#, kde-format
+msgctxt "@info separator in list of language codes"
+msgid "', '"
+msgstr ""
+
+#: package/contents/ui/main.qml:178
+#, kde-format
+msgid ""
+"The language at the top of this list is the one you want to see and use most "
+"often."
+msgstr ""
+"اللغة الموجودة أعلى القائمة هي التي تريد رؤيتها في البرمجيات واستخدامها في "
+"أغلب الأوقات."
+
+#: package/contents/ui/main.qml:217
+#, kde-format
+msgctxt "@item:inlistbox 1 = Language name"
+msgid "%1 (Default)"
+msgstr "‏%1 (المبدئية)"
+
+#: package/contents/ui/main.qml:230
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Promote to default"
+msgstr "اجعلها المبدئية"
+
+#: package/contents/ui/main.qml:237
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Remove"
+msgstr "أزِل"
+
+#: package/contents/ui/main.qml:262
+#, kde-format
+msgctxt "@action:button"
+msgid "Add languages..."
+msgstr "أضِف لغات…"
+
+#: translations.cpp:43
+#, kde-format
+msgid "Configure Plasma translations"
+msgstr "اضبط ترجمات بلازما"
+
+#: translationsmodel.cpp:95 translationsmodel.cpp:106
+#, kde-format
+msgctxt "%1 is language name, %2 is language code name"
+msgid "%1 (%2)"
+msgstr "‏%1 ‏(%2)"

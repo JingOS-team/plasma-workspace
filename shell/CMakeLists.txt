@@ -41,6 +41,7 @@ set (plasma_shell_SRCS
     debug.cpp
     screenpool.cpp
     softwarerendernotifier.cpp
+    messagebox.cpp
     ${scripting_SRC}
 )
 
@@ -60,8 +61,8 @@ add_executable(plasmashell
 )
 
 target_link_libraries(plasmashell
- Qt5::Quick
- Qt5::DBus
+ Qt::Quick
+ Qt::DBus
  KF5::KIOCore
  KF5::WindowSystem
  KF5::Crash
@@ -90,8 +91,8 @@ target_include_directories(plasmashell PRIVATE "${CMAKE_BINARY_DIR}")
 target_compile_definitions(plasmashell PRIVATE -DPROJECT_VERSION="${PROJECT_VERSION}")
 
 if(HAVE_X11)
-  target_link_libraries(plasmashell ${X11_LIBRARIES} ${XCB_LIBRARIES} )
-  target_link_libraries(plasmashell Qt5::X11Extras)
+  target_link_libraries(plasmashell XCB::XCB XCB::RANDR)
+  target_link_libraries(plasmashell Qt::X11Extras)
 endif()
 
 configure_file(org.kde.plasmashell.desktop.cmake ${CMAKE_CURRENT_BINARY_DIR}/org.kde.plasmashell.desktop @ONLY)
@@ -100,6 +101,8 @@ install(TARGETS plasmashell ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.kde.plasmashell.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.kde.plasmashell.desktop DESTINATION ${KDE_INSTALL_AUTOSTARTDIR})
 install( FILES dbus/org.kde.PlasmaShell.xml DESTINATION ${KDE_INSTALL_DBUSINTERFACEDIR} )
+
+ecm_install_configured_files(INPUT plasma-plasmashell.service.in @ONLY DESTINATION  ${SYSTEMD_USER_UNIT_INSTALL_DIR})
 
 install(FILES
    scripting/plasma-layouttemplate.desktop

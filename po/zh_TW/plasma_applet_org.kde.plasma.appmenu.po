@@ -1,0 +1,34 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Franklin Weng <franklin@goodhorse.idv.tw>, 2017.
+# Jeff Huang <s8321414@gmail.com>, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-08-04 02:28+0200\n"
+"PO-Revision-Date: 2017-01-30 21:59+0800\n"
+"Last-Translator: Jeff Huang <s8321414@gmail.com>\n"
+"Language-Team: Chinese <kde-i18n-doc@kde.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 2.0\n"
+
+#: package/contents/config/config.qml:28
+#, kde-format
+msgid "Appearance"
+msgstr "外觀"
+
+#: package/contents/ui/configGeneral.qml:36
+#, kde-format
+msgid "Use single button for application menu"
+msgstr "應用程式選單使用單一按鈕"
+
+#: package/contents/ui/configGeneral.qml:42
+#, kde-format
+msgid "Show full application menu"
+msgstr "顯示完整應用程式選單"

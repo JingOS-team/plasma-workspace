@@ -1,0 +1,148 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# Phu Hung Nguyen <phuhnguyen@disroot.org>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-02-03 03:31+0100\n"
+"PO-Revision-Date: 2020-11-07 16:01+0100\n"
+"Last-Translator: Phu Hung Nguyen <phuhnguyen@disroot.org>\n"
+"Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 20.08.1\n"
+
+#: package/contents/config/config.qml:26
+#, kde-format
+msgid "General"
+msgstr "Chung"
+
+#: package/contents/config/config.qml:31
+#, kde-format
+msgid "Entries"
+msgstr "Các mục"
+
+#: package/contents/ui/ConfigEntries.qml:40
+#, kde-format
+msgid "Always show all entries"
+msgstr "Luôn hiện tất cả các mục"
+
+#: package/contents/ui/ConfigEntries.qml:46
+#, kde-format
+msgid "Application Status"
+msgstr "Trạng thái ứng dụng"
+
+#: package/contents/ui/ConfigEntries.qml:48
+#, kde-format
+msgid "Communications"
+msgstr "Giao tiếp"
+
+#: package/contents/ui/ConfigEntries.qml:50
+#, kde-format
+msgid "System Services"
+msgstr "Dịch vụ hệ thống"
+
+#: package/contents/ui/ConfigEntries.qml:52
+#, kde-format
+msgid "Hardware Control"
+msgstr "Điều khiển phần cứng"
+
+#: package/contents/ui/ConfigEntries.qml:55
+#, kde-format
+msgid "Miscellaneous"
+msgstr "Hỗn hợp"
+
+#: package/contents/ui/ConfigEntries.qml:87
+#, kde-format
+msgctxt "Name of the system tray entry"
+msgid "Entry"
+msgstr "Mục"
+
+#: package/contents/ui/ConfigEntries.qml:92
+#, kde-format
+msgid "Visibility"
+msgstr "Khả kiến"
+
+#: package/contents/ui/ConfigEntries.qml:98
+#, kde-format
+msgid "Keyboard Shortcut"
+msgstr "Phím tắt"
+
+#: package/contents/ui/ConfigEntries.qml:232
+#, kde-format
+msgid "Shown when relevant"
+msgstr "Hiện lúc thích hợp"
+
+#: package/contents/ui/ConfigEntries.qml:233
+#, kde-format
+msgid "Always shown"
+msgstr "Luôn hiện"
+
+#: package/contents/ui/ConfigEntries.qml:234
+#, kde-format
+msgid "Always hidden"
+msgstr "Luôn ẩn"
+
+#: package/contents/ui/ConfigEntries.qml:235
+#, kde-format
+msgid "Disabled"
+msgstr "Tắt"
+
+#: package/contents/ui/ConfigGeneral.qml:36
+#, kde-format
+msgctxt "The arrangement of system tray icons in the Panel"
+msgid "Panel icon size:"
+msgstr "Cỡ biểu tượng trong bảng:"
+
+#: package/contents/ui/ConfigGeneral.qml:37
+#, kde-format
+msgid "Small"
+msgstr "Nhỏ"
+
+#: package/contents/ui/ConfigGeneral.qml:43
+#, kde-format
+msgid "Scale with Panel height"
+msgstr "Đổi cỡ theo độ cao Bảng"
+
+#: package/contents/ui/ConfigGeneral.qml:44
+#, kde-format
+msgid "Scale with Panel width"
+msgstr "Đổi cỡ theo độ rộng Bảng"
+
+#: package/contents/ui/ExpandedRepresentation.qml:87
+#, kde-format
+msgid "Status and Notifications"
+msgstr "Trạng thái và thông báo"
+
+#: package/contents/ui/ExpandedRepresentation.qml:153
+#, kde-format
+msgid "More actions"
+msgstr "Các hành động khác"
+
+#: package/contents/ui/ExpandedRepresentation.qml:190
+#, kde-format
+msgid "Keep Open"
+msgstr "Giữ cho mở"
+
+#: package/contents/ui/ExpanderArrow.qml:32
+#, kde-format
+msgid "Close popup"
+msgstr "Đóng cửa sổ bật lên"
+
+#: package/contents/ui/ExpanderArrow.qml:32
+#, kde-format
+msgid "Show hidden icons"
+msgstr "Hiện các biểu tượng ẩn"
+
+#: systemtraymodel.cpp:137
+#, kde-format
+msgctxt ""
+"Suffix added to the applet name if the applet is autoloaded via DBus "
+"activation"
+msgid "%1 (Automatic load)"
+msgstr "%1 (Tự động tải)"

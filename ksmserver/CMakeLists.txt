@@ -5,7 +5,6 @@ configure_file(config-ksmserver.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-ksmse
 
 add_definitions("-DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_TO_ASCII")
 add_definitions(-DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT)
-add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
 
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
@@ -49,17 +48,19 @@ target_link_libraries(ksmserver
     KF5::I18n
     KF5::KIOCore
     KF5::KIOGui
-    ${X11_LIBRARIES}
-    ${X11_Xrender_LIB}
-    Qt5::X11Extras
+    Qt::X11Extras
     KF5::Solid
-    Qt5::Quick
+    Qt::Quick
     KF5::Declarative
     KF5::DBusAddons
     KF5::Notifications
     KF5::Package
     KF5::WindowSystem
-    Qt5::Concurrent
+    Qt::Concurrent
+    X11::X11
+    X11::SM
+    X11::ICE
+    X11::Xrender
 )
 
 install(TARGETS ksmserver ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
@@ -71,3 +72,6 @@ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/KSMServerDBusInterfaceConfig.cmake
 ########### install files ###############
 
 install( FILES org.kde.KSMServerInterface.xml DESTINATION ${KDE_INSTALL_DBUSINTERFACEDIR})
+
+ecm_install_configured_files(INPUT plasma-ksmserver.service.in DESTINATION ${SYSTEMD_USER_UNIT_INSTALL_DIR})
+ecm_install_configured_files(INPUT plasma-restoresession.service.in DESTINATION ${SYSTEMD_USER_UNIT_INSTALL_DIR})

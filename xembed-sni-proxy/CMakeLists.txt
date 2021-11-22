@@ -1,6 +1,5 @@
 add_definitions(-DQT_NO_CAST_TO_ASCII
 -DQT_NO_CAST_FROM_ASCII
--DQT_NO_URL_CAST_FROM_STRING
 -DQT_NO_CAST_FROM_BYTEARRAY)
 
 find_package(XCB
@@ -53,14 +52,15 @@ set_package_properties(XCB PROPERTIES TYPE REQUIRED)
 
 
 target_link_libraries(xembedsniproxy
-    Qt5::Core
-    Qt5::X11Extras
-    Qt5::DBus
+    Qt::Core
+    Qt::X11Extras
+    Qt::DBus
     KF5::WindowSystem
     ${XCB_LIBS}
-    ${X11_XTest_LIB}
+    X11::Xtst
 )
 
 install(TARGETS xembedsniproxy ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 install(FILES xembedsniproxy.desktop DESTINATION ${KDE_INSTALL_AUTOSTARTDIR})
 
+ecm_install_configured_files(INPUT plasma-xembedsniproxy.service.in @ONLY DESTINATION  ${SYSTEMD_USER_UNIT_INSTALL_DIR})

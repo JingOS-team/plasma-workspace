@@ -20,9 +20,9 @@
 #ifndef PLASMA_PLASMAAPPLETITEMMODEL_P_H
 #define PLASMA_PLASMAAPPLETITEMMODEL_P_H
 
-#include <kplugininfo.h>
-#include <Plasma/Applet>
 #include "kcategorizeditemsviewmodels_p.h"
+#include <KConfigGroup>
+#include <KPluginMetaData>
 
 class PlasmaAppletItemModel;
 
@@ -32,7 +32,7 @@ class PlasmaAppletItemModel;
 class PlasmaAppletItem : public KCategorizedItemsViewModels::AbstractItem
 {
 public:
-    explicit PlasmaAppletItem(const KPluginInfo& info);
+    explicit PlasmaAppletItem(const KPluginMetaData &info);
 
     QString pluginName() const;
     QString name() const override;
@@ -49,14 +49,14 @@ public:
     bool isLocal() const;
     bool matches(const QString &pattern) const override;
 
-    //set how many instances of this applet are running
+    // set how many instances of this applet are running
     void setRunning(int count) override;
-    bool passesFiltering(const KCategorizedItemsViewModels::Filter & filter) const override;
+    bool passesFiltering(const KCategorizedItemsViewModels::Filter &filter) const override;
     QMimeData *mimeData() const;
     QStringList mimeTypes() const;
 
 private:
-    KPluginInfo m_info;
+    KPluginMetaData m_info;
     QString m_screenshot;
     QString m_icon;
     int m_runningCount;
@@ -69,21 +69,21 @@ class PlasmaAppletItemModel : public QStandardItemModel
 
 public:
     enum Roles {
-        NameRole = Qt::UserRole+1,
-        PluginNameRole = Qt::UserRole+2,
-        DescriptionRole = Qt::UserRole+3,
-        CategoryRole = Qt::UserRole+4,
-        LicenseRole = Qt::UserRole+5,
-        WebsiteRole = Qt::UserRole+6,
-        VersionRole = Qt::UserRole+7,
-        AuthorRole = Qt::UserRole+8,
-        EmailRole = Qt::UserRole+9,
-        RunningRole = Qt::UserRole+10,
-        LocalRole = Qt::UserRole+11,
-        ScreenshotRole = Qt::UserRole+12
+        NameRole = Qt::UserRole + 1,
+        PluginNameRole = Qt::UserRole + 2,
+        DescriptionRole = Qt::UserRole + 3,
+        CategoryRole = Qt::UserRole + 4,
+        LicenseRole = Qt::UserRole + 5,
+        WebsiteRole = Qt::UserRole + 6,
+        VersionRole = Qt::UserRole + 7,
+        AuthorRole = Qt::UserRole + 8,
+        EmailRole = Qt::UserRole + 9,
+        RunningRole = Qt::UserRole + 10,
+        LocalRole = Qt::UserRole + 11,
+        ScreenshotRole = Qt::UserRole + 12,
     };
 
-    explicit PlasmaAppletItemModel(QObject * parent = nullptr);
+    explicit PlasmaAppletItemModel(QObject *parent = nullptr);
 
     QStringList mimeTypes() const override;
     QSet<QString> categories() const;

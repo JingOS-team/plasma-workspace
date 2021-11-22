@@ -1,6 +1,7 @@
 /*
  * Copyright 2014 Martin Klapetek <mklapetek@kde.org>
  * Copyright 2019 Kai Uwe Broulik <kde@broulik.de>
+ * Copyright 2021 Liu Bangguo <liubangguo@jingos.com>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -23,6 +24,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 //import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtra
 import QtQuick.Window 2.2
+import jingos.display 1.0
 
 Rectangle{
     id:name
@@ -35,7 +37,7 @@ Rectangle{
     anchors.top: parent.top
     anchors.horizontalCenter: parent.horizontalCenter
     RowLayout{
-        spacing: 30
+        spacing: JDisplay.dp(30)
         anchors.centerIn: parent
         implicitWidth: content.implicitWidth
         Item {
@@ -49,6 +51,7 @@ Rectangle{
                 color: "#ffffff"
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
+                font.pixelSize: JDisplay.sp(14)
 
                 Component.onCompleted: {
                     name.width = width * 1.1

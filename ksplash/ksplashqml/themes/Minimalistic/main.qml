@@ -1,6 +1,7 @@
 /*   vim:set foldenable foldmethod=marker:
  *
  *   Copyright (C) 2011 Ivan Cukic <ivan.cukic(at)kde.org>
+ *   Copyright (C) 2021 Liu Bangguo <liubangguo@jingos.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU General Public License version 2,
@@ -19,6 +20,7 @@
  */
 
 import QtQuick 2.0
+import jingos.display 1.0
 
 Item {
     id: main
@@ -30,7 +32,7 @@ Item {
 
     /* property declarations --------------------------{{{ */
     property int stage
-    property int iconSize: (screenSize.width <= 1024) ? 64 : 128
+    property int iconSize: (screenSize.width <= JDisplay.dp(1024)) ? JDisplay.dp(64) : JDisplay.dp(128)
     /* }}} */
 
     /* signal declarations ----------------------------{{{ */
@@ -85,7 +87,7 @@ Item {
             right: parent.right
         }
 
-        height: gear.y - 32
+        height: gear.y - JDisplay.dp(32)
 
         opacity: 0
         Behavior on opacity { NumberAnimation { duration: 1000; easing { type: Easing.InOutQuad } } }

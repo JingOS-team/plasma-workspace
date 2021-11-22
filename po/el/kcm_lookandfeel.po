@@ -1,0 +1,143 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Dimitris Kardarakos <dimkard@gmail.com>, 2014, 2015, 2016, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-28 02:51+0100\n"
+"PO-Revision-Date: 2017-01-19 19:37+0200\n"
+"Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 2.0\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Δημήτρης Καρδαράκος"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "dimkard@gmail.com"
+
+#: kcm.cpp:85
+#, kde-format
+msgid "Global Theme"
+msgstr ""
+
+#: kcm.cpp:86 lnftool.cpp:50
+#, kde-format
+msgid "Marco Martin"
+msgstr "Marco Martin"
+
+#: kcm.cpp:548
+#, fuzzy, kde-format
+#| msgid "You have to restart KDE for cursor changes to take effect."
+msgid ""
+"You have to restart the Plasma session for these changes to take effect."
+msgstr ""
+"Πρέπει να επανεκκινήσετε το KDE για να εφαρμοστούν οι αλλαγές του δρομέα."
+
+#: kcm.cpp:549
+#, kde-format
+msgid "Cursor Settings Changed"
+msgstr "Οι ρυθμίσεις του δρομέα άλλαξαν"
+
+#: lnftool.cpp:45
+#, kde-format
+msgid "Global Theme Tool"
+msgstr ""
+
+#: lnftool.cpp:47
+#, kde-format
+msgid ""
+"Command line tool to apply global theme packages for changing the look and "
+"feel."
+msgstr ""
+
+#: lnftool.cpp:49
+#, fuzzy, kde-format
+#| msgid "Marco Martin"
+msgid "Copyright 2017, Marco Martin"
+msgstr "Marco Martin"
+
+#: lnftool.cpp:50
+#, kde-format
+msgid "Maintainer"
+msgstr ""
+
+#: lnftool.cpp:58
+#, fuzzy, kde-format
+#| msgid "Download New Look And Feel Packages"
+msgid "List available global theme packages"
+msgstr "Λήψη νέων πακέτων εμφάνισης και αίσθησης"
+
+#: lnftool.cpp:59
+#, fuzzy, kde-format
+#| msgid "Download New Look And Feel Packages"
+msgid "Apply a global theme package"
+msgstr "Λήψη νέων πακέτων εμφάνισης και αίσθησης"
+
+#: lnftool.cpp:59
+#, kde-format
+msgid "packagename"
+msgstr ""
+
+#: lnftool.cpp:60
+#, kde-format
+msgid "Reset the Plasma Desktop layout"
+msgstr ""
+
+#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
+#: lookandfeelsettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Configure Look and Feel details"
+msgid "Global look and feel"
+msgstr "Διαμόρφωση λεπτομερειών εμφάνισης και αίσθησης"
+
+#: package/contents/ui/main.qml:30
+#, fuzzy, kde-format
+#| msgid ""
+#| "This module lets you configure the look of the whole workspace with some "
+#| "ready to go presets."
+msgid "This module lets you choose the global look and feel."
+msgstr ""
+"Το άρθρωμα αυτό σας επιτρέπει να διαμορφώσετε την εμφάνιση και την αίσθηση "
+"όλου του χώρου εργασίας με κάποια έτοιμα πακέτα ρυθμίσεων."
+
+#: package/contents/ui/main.qml:57
+#, kde-format
+msgid "Preview Theme"
+msgstr ""
+
+#: package/contents/ui/main.qml:75
+#, fuzzy, kde-format
+#| msgid ""
+#| "Warning: your Plasma Desktop layout will be lost and reset to the default "
+#| "layout provided by the selected theme."
+msgid ""
+"Your current layout and configuration of panels, desktop widgets, and "
+"wallpapers will be lost and reset to the default layout provided by the "
+"selected theme."
+msgstr ""
+"Προειδοποίηση: η διάταξη επιφάνειας εργασίας Plasma θα χαθεί και θα γίνει "
+"επαναφορά της προκαθορισμένης διάταξης που παρέχει το επιλεγμένο θέμα."
+
+#: package/contents/ui/main.qml:85
+#, fuzzy, kde-format
+#| msgid "Use Desktop Layout from theme"
+msgid "Use desktop layout from theme"
+msgstr "Χρήση διάταξης επιφάνειας εργασίας από το θέμα"
+
+#: package/contents/ui/main.qml:92
+#, fuzzy, kde-format
+#| msgid "Download New Look And Feel Packages"
+msgid "Get New Global Themes..."
+msgstr "Λήψη νέων πακέτων εμφάνισης και αίσθησης"

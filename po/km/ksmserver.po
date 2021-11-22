@@ -1,0 +1,156 @@
+# translation of ksmserver.po to Khmer
+# Khoem Sokhem <khoemsokhem@khmeros.info>, 2007, 2008, 2009, 2010, 2012.
+# Eng Vannak <evannak@khmeros.info>, 2007.
+# Auk Piseth <piseth_dv@khmeros.info>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: ksmserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2012-06-14 13:44+0700\n"
+"Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
+"Language-Team: Khmer\n"
+"Language: km\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"\n"
+
+#: logout.cpp:354
+#, kde-format
+msgid "Logout canceled by '%1'"
+msgstr "ការ​ចេញ​ត្រូវ​បាន​បោះបង់​ដោយ '%1'"
+
+#: main.cpp:52
+#, fuzzy, kde-format
+#| msgid ""
+#| "The reliable KDE session manager that talks the standard X11R6 \n"
+#| "session management protocol (XSMP)."
+msgid ""
+"The reliable Plasma session manager that talks the standard X11R6 \n"
+"session management protocol (XSMP)."
+msgstr ""
+"កម្មវិធី​គ្រប់គ្រង​សម័យ KDE គួរ​ឲ្យ​ទុកចិត្ត ដែលប្រើ X11R6 \n"
+"ពិធីការ​គ្រប់គ្រង​សម័យ (XSMP) ខ្នាត​គំរូ ។"
+
+#: main.cpp:128
+#, kde-format
+msgid "$HOME not set!"
+msgstr ""
+
+#: main.cpp:132 main.cpp:138
+#, kde-format
+msgid "$HOME directory (%1) does not exist."
+msgstr ""
+
+#: main.cpp:134
+#, kde-format
+msgid "No write access to $HOME directory (%1)."
+msgstr ""
+
+#: main.cpp:140
+#, kde-format
+msgid "No read access to $HOME directory (%1)."
+msgstr ""
+
+#: main.cpp:144
+#, kde-format
+msgid "$HOME directory (%1) is out of disk space."
+msgstr ""
+
+#: main.cpp:147
+#, kde-format
+msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
+msgstr ""
+
+#: main.cpp:160 main.cpp:195
+#, kde-format
+msgid "No write access to '%1'."
+msgstr ""
+
+#: main.cpp:162 main.cpp:197
+#, kde-format
+msgid "No read access to '%1'."
+msgstr ""
+
+#: main.cpp:170 main.cpp:183
+#, kde-format
+msgid "Temp directory (%1) is out of disk space."
+msgstr ""
+
+#: main.cpp:173 main.cpp:186
+#, kde-format
+msgid ""
+"Writing to the temp directory (%2) failed with\n"
+"    the error '%1'"
+msgstr ""
+
+#: main.cpp:201
+#, kde-format
+msgid ""
+"The following installation problem was detected\n"
+"while trying to start Plasma:"
+msgstr ""
+
+#: main.cpp:204
+#, kde-format
+msgid ""
+"\n"
+"\n"
+"Plasma is unable to start.\n"
+msgstr ""
+
+#: main.cpp:211
+#, kde-format
+msgid "Plasma Workspace installation problem!"
+msgstr ""
+
+#: main.cpp:251
+#, kde-format
+msgid "Restores the saved user session if available"
+msgstr "ស្ដារ​សម័យ​របស់​អ្នក​ប្រើ​ដែល​បាន​រក្សា​ទុក ប្រសិន​បើ​មាន"
+
+#: main.cpp:254
+#, kde-format
+msgid "Also allow remote connections"
+msgstr "អនុញ្ញាត​ឲ្យ​មាន​ការ​តភ្ជាប់​ពី​ចម្ងាយ​ផង​ដែរ"
+
+#: main.cpp:257
+#, kde-format
+msgid "Starts the session in locked mode"
+msgstr ""
+
+#: main.cpp:261
+#, kde-format
+msgid ""
+"Starts without lock screen support. Only needed if other component provides "
+"the lock screen."
+msgstr ""
+
+#: server.cpp:867
+#, fuzzy, kde-format
+#| msgid "The KDE Session Manager"
+msgid "Session Management"
+msgstr "កម្មវិធី​គ្រប់គ្រង​សម័យ KDE"
+
+#: server.cpp:870
+#, kde-format
+msgid "Log Out"
+msgstr "ចេញ​"
+
+#: server.cpp:875
+#, kde-format
+msgid "Log Out Without Confirmation"
+msgstr "ចេញ​ដោយ​មិន​មានការ​បញ្ជាក់"
+
+#: server.cpp:880
+#, kde-format
+msgid "Halt Without Confirmation"
+msgstr "ផ្អាក​ដោយ​គ្មានការ​បញ្ជាក់"
+
+#: server.cpp:885
+#, kde-format
+msgid "Reboot Without Confirmation"
+msgstr "ចាប់ផ្ដើម​ឡើង​វិញ​ដោយ​គ្មាន​ការ​បញ្ជាក់"

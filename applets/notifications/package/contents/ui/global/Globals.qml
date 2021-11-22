@@ -1,5 +1,6 @@
 /*
  * Copyright 2019 Kai Uwe Broulik <kde@privat.broulik.de>
+ * Copyright 2021 Liu Bangguo <liubangguo@jingos.com>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -22,6 +23,7 @@ pragma Singleton
 import QtQuick 2.8
 import QtQuick.Window 2.12
 import QtQuick.Layouts 1.1
+import QtQml 2.15
 
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -30,6 +32,7 @@ import org.kde.kirigami 2.11 as Kirigami
 import org.kde.notificationmanager 1.0 as NotificationManager
 import org.kde.taskmanager 0.1 as TaskManager
 import org.kde.plasma.private.notifications 2.0 as Notifications
+import jingos.display 1.0
 
 import ".."
 
@@ -38,6 +41,8 @@ import ".."
 // - Do not disturb mode
 QtObject {
     id: globals
+
+    property string checkKernelLogFlag : "First"
 
     // Listened to by "ago" label in NotificationHeader to update all of them in unison
     signal timeChanged
@@ -145,21 +150,26 @@ QtObject {
             return Qt.rect(0, 0, -1, -1);
         }
 
+
         let rect = Qt.rect(plasmoid.screenGeometry.x + plasmoid.availableScreenRect.x,
             plasmoid.screenGeometry.y + plasmoid.availableScreenRect.y,
             plasmoid.availableScreenRect.width,
             plasmoid.availableScreenRect.height);
         // When no explicit screen corner is configured,
         // restrict notification popup position by horizontal panel width
-        if (notificationSettings.popupPosition === NotificationManager.Settings.CloseToWidget
-            && plasmoid.formFactor === PlasmaCore.Types.Horizontal) {
+
+        if (notificationSettings.popupPosition === NotificationManager.Settings.CloseToWidget && plasmoid.formFactor === PlasmaCore.Types.Horizontal) {
             const visualParentWindow = visualParent.Window.window;
+
             if (visualParentWindow) {
                 const left = Math.max(rect.left, visualParentWindow.x);
                 const right = Math.min(rect.right, visualParentWindow.x + visualParentWindow.width);
                 rect = Qt.rect(left, rect.y, right - left, rect.height);
+
             }
         }
+
+
         return rect;
     }
 
@@ -175,15 +185,16 @@ QtObject {
     }
 
     onVisualParentChanged: positionPopups()
-    onFocusDialogChanged: positionPopups()
+
 
     readonly property QtObject focusDialog: plasmoid.nativeInterface.focussedPlasmaDialog
+    onFocusDialogChanged: positionPopups()
 
     // The raw width of the popup's content item, the Dialog itself adds some margins
     // Make it wider when on the top or the bottom center, since there's more horizontal
     // space available without looking weird
     // On mobile however we don't really want to have larger notifications
-    property int popupWidth: (popupLocation & Qt.AlignHCenter) && !Kirigami.Settings.isMobile ? 520: 520//units.gridUnit * 22 : units.gridUnit * 18
+    property int popupWidth: (popupLocation & Qt.AlignHCenter) && !Kirigami.Settings.isMobile ? JDisplay.dp(520): JDisplay.dp(520)//units.gridUnit * 22 : units.gridUnit * 18
     property int popupEdgeDistance: 0//units.largeSpacing * 2
     // Reduce spacing between popups when centered so the stack doesn't intrude into the
     // view as much
@@ -291,107 +302,34 @@ QtObject {
     }
 
     function positionPopups() {
+
         if (!plasmoid) {
             return;
         }
 
-        const screenRect = globals.screenRect;
-        if (screenRect.width <= 0 || screenRect.height <= 0) {
-            return;
-        }
+        let popupY = JDisplay.dp(18)
+        let popupX = JDisplay.dp(2)
 
-        let effectivePopupLocation = popupLocation;
-
-        const visualParent = globals.visualParent;
-        const visualParentWindow = visualParent.Window.window;
-
-        // When no horizontal alignment is specified, place it depending on which half of the *panel*
-        // the notification plasmoid is in
-        if (visualParentWindow) {
-            if (!(effectivePopupLocation & (Qt.AlignLeft | Qt.AlignHCenter | Qt.AlignRight))) {
-                const iconHCenter = visualParent.mapToItem(null /*mapToScene*/, 0, 0).x + visualParent.width / 2;
-                if (iconHCenter < visualParentWindow.width / 2) {
-                    effectivePopupLocation |= Qt.AlignLeft;
-                } else {
-                    effectivePopupLocation |= Qt.AlignRight;
-                }
-            }
-        }
-
-        // When no vertical alignment is specified, place it depending on which half of the *screen*
-        // the notification plasmoid is in
-        if (!(effectivePopupLocation & (Qt.AlignTop | Qt.AlignBottom))) {
-            const screenVCenter = screenRect.y + screenRect.height / 2;
-            const iconVCenter = visualParent.mapToGlobal(0, visualParent.height / 2).y;
-
-            if (iconVCenter < screenVCenter) {
-                effectivePopupLocation |= Qt.AlignTop;
-            } else {
-                effectivePopupLocation |= Qt.AlignBottom;
-            }
-        }
-        let y = screenRect.y;
-
-        if (effectivePopupLocation & Qt.AlignBottom) {
-            y += screenRect.height - popupEdgeDistance;
-        } else {
-            y += popupEdgeDistance;
-        }
+        let actionPopupY = JDisplay.dp(5)
+        let actionPopupX = JDisplay.dp((888 - 364  - 16 * 2) / 2)
 
         for (var i = 0; i < popupInstantiator.count; ++i) {
+
             let popup = popupInstantiator.objectAt(i);
 
-            // Popup width is fixed, so don't rely on the actual window size
-            var popupEffectiveWidth = popupWidth + popup.margins.left + popup.margins.right;
-
-            const leftMostX = screenRect.x + popupEdgeDistance;
-            const rightMostX = screenRect.x + screenRect.width - popupEdgeDistance - popupEffectiveWidth;
-
-            // If available screen rect is narrower than the popup, center it in the available rect
-            if (screenRect.width < popupEffectiveWidth || effectivePopupLocation & Qt.AlignHCenter) {
-                popup.x = screenRect.x + (screenRect.width - popupEffectiveWidth) / 2
-            } else if (effectivePopupLocation & Qt.AlignLeft) {
-                popup.x = leftMostX;
-            } else if (effectivePopupLocation & Qt.AlignRight) {
-                popup.x = rightMostX;
-            }
-
-            if (effectivePopupLocation & Qt.AlignTop) {
-                // We want to calculate the new position based on its original target position to avoid positioning it and then
-                // positioning it again, hence the temporary Qt.rect with explicit "y" and not just the popup as a whole
-                if (focusDialog && focusDialog.visible && !(focusDialog instanceof NotificationPopup) && rectIntersect(focusDialog, Qt.rect(popup.x, y, popup.width, popup.height))) {
-                    y = focusDialog.y + focusDialog.height + popupEdgeDistance;
-                }
-                popup.y = y;
-                // If the popup isn't ready yet, ignore its occupied space for now.
-                // We'll reposition everything in onHeightChanged eventually.
-                // y += popup.height + (popup.height > 0 ? popupSpacing : 0);
-                if(i > 0) popup.y -= 10
-            } else {
-                // y -= popup.height;
-                if (focusDialog && focusDialog.visible && !(focusDialog instanceof NotificationPopup)
-                        && rectIntersect(focusDialog, Qt.rect(popup.x, y, popup.width, popup.height))) {
-                    y = focusDialog.y - popup.height - popupEdgeDistance;
-                }
-                popup.y = y;
-                if (popup.height > 0) {
-                    // y -= popupSpacing;
-                }
-            }
-            // don't let notifications take more than popupMaximumScreenFill of the screen
-            var visible = true;
-            if (i > 0) { // however always show at least one popup
-                if (effectivePopupLocation & Qt.AlignTop) {
-                    visible = (popup.y + popup.height < screenRect.y + (screenRect.height * popupMaximumScreenFill));
-                } else {
-                    visible = (popup.y > screenRect.y + (screenRect.height * (1 - popupMaximumScreenFill)));
-                }
-            }
-
-            popup.visible = visible;
-
             if (popup.actionNames.length !== 0) {
-                popup.x = (Screen.width - Screen.width / 888 * 364  - 32 * 2) / 2
+                if (popup.x === parseInt(actionPopupX)) {
+                    actionPopupY = JDisplay.dp(0)
+                    continue;
+                } else {
+                    popup.x = actionPopupX
+                    popup.y = actionPopupY
+                    actionPopupY = JDisplay.dp(0)
+                }
+            } else {
+                popup.y = popupY;
+                popup.x = popupX;
+                popupY = JDisplay.dp(8)
             }
         }
     }
@@ -428,6 +366,7 @@ QtObject {
 
             return urgencies;
         }
+
     }
 
     property QtObject notificationSettings: NotificationManager.Settings {
@@ -452,6 +391,12 @@ QtObject {
     }
 
     property Instantiator popupInstantiator: Instantiator {
+        id: instantiator
+
+        signal deleteAll()
+        signal hoverAll(bool status)
+        signal notificationAdd();
+
         model: popupNotificationsModel
 
         delegate: NotificationPopup {
@@ -507,6 +452,7 @@ QtObject {
             onCloseClicked: popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
             onDismissClicked: model.dismissed = true
             onConfigureClicked: popupNotificationsModel.configure(popupNotificationsModel.index(index, 0))
+
             onDefaultActionInvoked: {
                 if (defaultActionFallbackWindowIdx) {
                     if (!defaultActionFallbackWindowIdx.valid) {
@@ -588,6 +534,7 @@ QtObject {
         }
 
         onObjectAdded: {
+            instantiator.notificationAdd()
             positionPopups();
             object.visible = true;
         }
@@ -609,7 +556,9 @@ QtObject {
     // Normally popups are repositioned through Qt.callLater but in case of e.g. screen geometry changes we want to compress that
     property Timer repositionTimer: Timer {
         interval: 250
-        onTriggered: positionPopups()
+        onTriggered: {
+            positionPopups()
+        }
     }
 
     // Tracks the visual parent's window since mapToItem cannot signal
@@ -635,6 +584,7 @@ QtObject {
         target: NotificationManager.Server
         property: "inhibited"
         value: globals.inhibited
+        restoreMode: Binding.RestoreBinding
     }
 
     function toggleDoNotDisturbMode() {

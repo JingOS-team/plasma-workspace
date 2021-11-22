@@ -19,12 +19,11 @@
 
 #include "containmentlayoutmanagerplugin.h"
 
-#include <QQmlEngine>
 #include <QQmlContext>
 #include <QQuickItem>
 
-#include "appletslayout.h"
 #include "appletcontainer.h"
+#include "appletslayout.h"
 #include "configoverlay.h"
 #include "itemcontainer.h"
 #include "resizehandle.h"
@@ -39,8 +38,7 @@ void ContainmentLayoutManagerPlugin::registerTypes(const char *uri)
     qmlRegisterType<ItemContainer>(uri, 1, 0, "ItemContainer");
     qmlRegisterType<ResizeHandle>(uri, 1, 0, "ResizeHandle");
 
-  //  qmlProtectModule(uri, 1);
+    //  qmlProtectModule(uri, 1);
 }
 
 #include "moc_containmentlayoutmanagerplugin.cpp"
-

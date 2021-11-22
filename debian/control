@@ -1,0 +1,347 @@
+Source: plasma-workspace
+Section: kde
+Priority: optional
+Maintainer: Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Uploaders: Maximiliano Curia <maxy@debian.org>
+Build-Depends: cmake (>= 2.8.12),
+               debhelper (>= 9),
+               extra-cmake-modules (>= 5.18.0~),
+               kded5-dev,
+               kdoctools-dev (>= 5.18.0~),
+               kinit-dev (>= 5.18.0~),
+               kio-dev (>= 5.18.0~),
+               kscreenlocker-dev (>= 5.5.1~),
+               kuserfeedback-dev,
+               kwayland-dev (>= 4:5.5.1~),
+               kwin-dev (>= 4:5.5.1~),
+               libappstreamqt-dev (>= 0.10.4~),
+               libboost-dev,
+               libdbusmenu-qt5-dev,
+               libdrm-dev,
+               libgps-dev,
+               libkf5activities-dev (>= 5.18.0~),
+               libkf5activitiesstats-dev,
+               libkf5config-dev (>= 5.18.0~),
+               libkf5coreaddons-dev (>= 5.18.0~),
+               libkf5crash-dev (>= 5.18.0~),
+               libkf5dbusaddons-dev (>= 5.18.0~),
+               libkf5declarative-dev (>= 5.18.0~),
+               libkf5globalaccel-dev (>= 5.18.0~),
+               libkf5holidays-dev,
+               libkf5i18n-dev (>= 5.18.0~),
+               libkf5idletime-dev (>= 5.18.0~),
+               libkf5kcmutils-dev (>= 5.18.0~),
+               libkf5kdelibs4support-dev (>= 5.18.0~),
+               libkf5networkmanagerqt-dev (>= 5.18.0~),
+               libkf5newstuff-dev (>= 5.18.0~),
+               libkf5notifyconfig-dev (>= 5.18.0~),
+               libkf5package-dev (>= 5.18.0~),
+               libkf5people-dev,
+               libkf5plasma-dev (>= 5.18.0~),
+               libkf5prison-dev,
+               libkf5runner-dev (>= 5.18.0~),
+               libkf5screen-dev (>= 4:5.5.1~),
+               libkf5solid-dev (>= 5.18.0~),
+               libkf5su-dev (>= 5.18.0~),
+               libkf5syntaxhighlighting-dev (>= 5.78.0~),
+               libkf5sysguard-dev (>= 4:5.5.1~),
+               libkf5texteditor-dev (>= 5.18.0~),
+               libkf5textwidgets-dev (>= 5.18.0~),
+               libkf5wallet-dev (>= 5.18.0~),
+               libkf5webkit-dev (>= 5.18.0~),
+               libkf5xmlrpcclient-dev (>= 5.18.0~),
+               libmpfr-dev,
+               libnm-dev | libnm-glib-dev,
+               libpam0g-dev,
+               libphonon4qt5-dev (>= 4:4.8.0-5),
+               libphonon4qt5experimental-dev,
+               libpipewire-0.3-dev,
+               libqalculate-dev,
+               libqt5sensors5-dev,
+               libqt5svg5-dev,
+               libqt5webkit5-dev (>= 5.4.0~),
+               libqt5x11extras5-dev (>= 5.4.0~),
+               libraw1394-dev,
+               libsm-dev,
+               libudev-dev,
+               libusb-dev,
+               libwayland-dev (>= 1.3),
+               libx11-dev,
+               libx11-xcb-dev,
+               libxapian-dev,
+               libxcb-composite0-dev,
+               libxcb-damage0-dev,
+               libxcb-image0-dev,
+               libxcb-keysyms1-dev,
+               libxcb-randr0-dev,
+               libxcb-shm0-dev,
+               libxcb-util-dev | libxcb-util0-dev,
+               libxcb1-dev,
+               libxcursor-dev,
+               libxft-dev,
+               libxi-dev,
+               libxkbcommon-dev,
+               libxkbfile-dev,
+               libxrandr-dev,
+               libxrender-dev,
+               libxtst-dev,
+               lm-sensors,
+               pkg-config,
+               pkg-kde-tools (>= 0.15.18~),
+               plasma-wayland-protocols,
+               qtbase5-dev (>= 5.4.0~),
+               qtbase5-private-dev,
+               qtdeclarative5-dev (>= 5.4.0~),
+               qtscript5-dev (>= 5.4.0~),
+               qttools5-dev (>= 5.4),
+               qtwayland5-dev-tools,
+               qtwayland5-private-dev,
+               xcb-proto
+Standards-Version: 3.9.6
+Homepage: https://projects.kde.org/projects/kde/workspace/plasma-workspace
+Vcs-Browser: http://anonscm.debian.org/cgit/pkg-kde/plasma/plasma-workspace.git
+Vcs-Git: git://anonscm.debian.org/pkg-kde/plasma/plasma-workspace.git
+
+Package: libkfontinst5
+Architecture: any
+Section: libs
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Tools and widgets for the desktop library
+ Plasma Desktop offers a beautiful looking desktop
+ that takes complete advantage of modern computing technology.
+ Through the use of visual effects and scalable graphics,
+ the desktop experience is not only smooth but also pleasant
+ to the eye. The looks of Plasma Desktop not only provide beauty,
+ they are also used to support and improve your computer
+ activities effectively, without being distracting.
+ .
+ This package is part of the KDE Plasma.
+
+Package: libkfontinstui5
+Architecture: any
+Section: libs
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Tools and widgets for the desktop library
+ Plasma Desktop offers a beautiful looking desktop
+ that takes complete advantage of modern computing technology.
+ Through the use of visual effects and scalable graphics,
+ the desktop experience is not only smooth but also pleasant
+ to the eye. The looks of Plasma Desktop not only provide beauty,
+ they are also used to support and improve your computer
+ activities effectively, without being distracting.
+ .
+ This package is part of the KDE Plasma.
+
+Package: libkworkspace5-5
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Plasma Workspace for KF5 library
+ Plasma Workspace for KF5. Workspaces provide
+ support for KDE Plasma Widgets, integrated search,
+ hardware management and a high degree of customizability.
+ Kworkspace library.
+ .
+ This package contains library files.
+
+Package: libplasma-geolocation-interface5
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Plasma Workspace for KF5 library
+ Plasma Workspace for KF5. Workspaces provide
+ support for KDE Plasma Widgets, integrated search,
+ hardware management and a high degree of customizability.
+ Interface library for geolocation.
+ .
+ This package contains library files.
+
+Package: libtaskmanager6
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Breaks: libtaskmanager5 (<< 4:5.7.0)
+Replaces: libtaskmanager5 (<< 4:5.7.0)
+Description: Plasma Workspace for KF5 library
+ Plasma Workspace for KF5. Workspaces provide
+ support for KDE Plasma Widgets, integrated search,
+ hardware management and a high degree of customizability.
+ Taskmanager library.
+ .
+ This package contains library files.
+
+Package: libnotificationmanager1
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Plasma Workspace for KF5 library
+ Plasma Workspace for KF5. Workspaces provide
+ support for KDE Plasma Widgets, integrated search,
+ hardware management and a high degree of customizability.
+ Taskmanager library.
+ .
+ This package contains library files for notifications.
+
+Package: libweather-ion7
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Plasma Workspace for KF5 library
+ Plasma Workspace for KF5. Workspaces provide
+ support for KDE Plasma Widgets, integrated search,
+ hardware management and a high degree of customizability.
+ Weather_ion library.
+ .
+ This package contains library files.
+
+Package: plasma-workspace
+Architecture: any
+Depends: appmenu-gtk2-module,
+         appmenu-gtk3-module,
+         dbus-x11,
+         drkonqi,
+         frameworkintegration,
+         gdb-minimal | gdb,
+         iso-codes,
+         kactivitymanagerd,
+         kded5,
+         kinit,
+         kio,
+         kwin-common,
+         libkf5globalaccel-bin (>= 5.7.0),
+         libkf5service-bin,
+         milou,
+         plasma-framework,
+         plasma-integration,
+         qdbus-qt5,
+         qml-module-org-kde-activities,
+         qml-module-org-kde-draganddrop,
+         qml-module-org-kde-kcm,
+         qml-module-org-kde-kcoreaddons,
+         qml-module-org-kde-kholidays,
+         qml-module-org-kde-kirigami2 (>= 5.54.0~),
+         qml-module-org-kde-kquickcontrols,
+         qml-module-org-kde-kquickcontrolsaddons,
+         qml-module-org-kde-ksysguard,
+         qml-module-org-kde-kwindowsystem,
+         qml-module-org-kde-newstuff,
+         qml-module-org-kde-qqc2desktopstyle,
+         qml-module-org-kde-quickcharts,
+         qml-module-org-kde-solid,
+         qml-module-org-kde-userfeedback,
+         qml-module-qt-labs-folderlistmodel,
+         qml-module-qtgraphicaleffects,
+         qml-module-qtqml-models2,
+         qml-module-qtquick-controls,
+         qml-module-qtquick-dialogs,
+         qml-module-qtquick-layouts,
+         qml-module-qtquick-window2,
+         qml-module-qtquick2,
+         qtvirtualkeyboard-plugin,
+         udisks2,
+         x11-utils,
+         x11-xserver-utils,
+         xdg-desktop-portal-kde,
+         ${misc:Depends},
+         ${shlibs:Depends}
+Breaks: kde-window-manager (<= 4:5),
+        kdeartwork-style (<= 4:5),
+        kdeartwork-theme-window (<= 4:5),
+        kio-extras (<< 4:5.3.2+git20150710.0210),
+        kio-extras-data (<< 4:5.3.2+git20150710.0210),
+        kscreensaver (<= 4:5),
+        kscreensaver-xsavers (<= 4:5),
+        kscreensaver-xsavers-webcollage (<= 4:5),
+        plasma-desktop (<< 4:5.20.0~),
+        plasma-desktop-data (<< 4:5.20.0~),
+        plasma-desktopthemes-artwork (<= 4:5),
+        ${kde-l10n:all}
+Conflicts: kde-workspace, kde-workspace-data, klipper
+Replaces: kio-extras (<< 4:5.3.2+git20150710.0210),
+          kio-extras-data (<< 4:5.3.2+git20150710.0210),
+          klipper,
+          plasma-desktop (<< 4:5.20.0~),
+          plasma-desktop-data (<< 4:5.20.0~),
+          plasma-workspace-data,
+          ${kde-l10n:all}
+Provides: notification-daemon
+Recommends: kde-cli-tools,
+            kio-extras,
+            libpam-kwallet5,
+            plasma-workspace-wallpapers
+Description: Plasma Workspace for KF5
+ Plasma Workspace for KF5. Workspaces provide
+ support for KDE Plasma Widgets, integrated search,
+ hardware management and a high degree of customizability.
+ .
+ THIS WILL REMOVE YOUR KDE Plasma 4.
+
+Package: plasma-workspace-dev
+Architecture: any
+Depends: kwin-common,
+         libkf5itemmodels-dev,
+         libkf5plasma-dev (>= 5.13.0~),
+         libkf5sysguard-dev,
+         libkf5windowsystem-dev (>= 5.4.0),
+         libkfontinst5 (= ${binary:Version}),
+         libkfontinstui5 (= ${binary:Version}),
+         plasma-workspace (= ${binary:Version}),
+         qtbase5-dev (>= 5.4.0~),
+         qtdeclarative5-dev,
+         ${allLibraries},
+         ${misc:Depends}
+Conflicts: kde-workspace-dev
+Description: Plasma Workspace for KF5 devel files
+ Plasma Workspace for KF5. Workspaces provide
+ support for KDE Plasma Widgets, integrated search,
+ hardware management and a high degree of customizability.
+ .
+ This package contains the development files.
+
+Package: plasma-workspace-wayland
+Architecture: any
+Depends: kwayland-integration,
+         kwin-wayland,
+         plasma-workspace (= ${binary:Version}),
+         qtwayland5,
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: Plasma Workspace for KF5 - Wayland integration
+ Plasma Workspace for KF5. Workspaces provide
+ support for KDE Plasma Widgets, integrated search,
+ hardware management and a high degree of customizability.
+
+Package: sddm-theme-breeze
+Architecture: any
+Depends: plasma-framework, plasma-workspace, ${misc:Depends}, ${shlibs:Depends}
+Recommends: sddm
+Provides: sddm-theme
+Breaks: plasma-workspace (<< 4:5.0.2-0ubuntu1~ubuntu14.10~ppa5)
+Replaces: plasma-workspace (<< 4:5.0.2-0ubuntu1~ubuntu14.10~ppa5)
+Description: Breeze SDDM theme
+ Plasma Workspace for KF5. Workspaces provide
+ support for KDE Plasma Widgets, integrated search,
+ hardware management and a high degree of customizability.
+ Taskmanager library.
+ .
+ This package contains the files for the breeze SDDM theme.
+
+Package: libcolorcorrect5
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Plasma Workspace for KF5 library
+ Plasma Workspace for KF5. Workspaces provide
+ support for KDE Plasma Widgets, integrated search,
+ hardware management and a high degree of customizability.
+ ColorCorrect library.
+ .
+ This package contains library files.
+
+Package: plasma-workspace-dbg
+Section: debug
+Priority: optional
+Architecture: any
+Depends: plasma-workspace (= ${binary:Version}) | libweather-ion7 (= ${binary:Version}) | libplasma-geolocation-interface5 (= ${binary:Version}) | libkworkspace5-5 (= ${binary:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: Plasma Workspace for KF5
+ Plasma Workspace for KF5. Workspaces provide
+ support for KDE Plasma Widgets, integrated search,
+ hardware management and a high degree of customizability.
+ .
+ This package contains the debugging symbols.

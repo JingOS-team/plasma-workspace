@@ -1,0 +1,152 @@
+# Translation for plasma_applet_org.kde.plasma.private.systemtray.po to Euskara/Basque (eu).
+# Copyright (C) 2017, The Free Software Foundation, Inc.
+# Copyright (C) 2018-2020, This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# KDE euskaratzeko proiektuko arduraduna <xalba@euskalnet.net>.
+#
+# Translators:
+# Iñigo Salvador Azurmendi <xalba@euskalnet.net>, 2017, 2019, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-02-03 03:31+0100\n"
+"PO-Revision-Date: 2020-12-13 11:17+0100\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
+"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 20.08.3\n"
+
+#: package/contents/config/config.qml:26
+#, kde-format
+msgid "General"
+msgstr "Orokorra"
+
+#: package/contents/config/config.qml:31
+#, kde-format
+msgid "Entries"
+msgstr "Sarrerak"
+
+#: package/contents/ui/ConfigEntries.qml:40
+#, kde-format
+msgid "Always show all entries"
+msgstr "Erakutsi beti sarrera guztiak"
+
+#: package/contents/ui/ConfigEntries.qml:46
+#, kde-format
+msgid "Application Status"
+msgstr "Aplikazioaren egoera"
+
+#: package/contents/ui/ConfigEntries.qml:48
+#, kde-format
+msgid "Communications"
+msgstr "Komunikazioak"
+
+#: package/contents/ui/ConfigEntries.qml:50
+#, kde-format
+msgid "System Services"
+msgstr "Sistemaren zerbitzuak"
+
+#: package/contents/ui/ConfigEntries.qml:52
+#, kde-format
+msgid "Hardware Control"
+msgstr "Hardwarearen kontrola"
+
+#: package/contents/ui/ConfigEntries.qml:55
+#, kde-format
+msgid "Miscellaneous"
+msgstr "Beste zenbait"
+
+#: package/contents/ui/ConfigEntries.qml:87
+#, kde-format
+msgctxt "Name of the system tray entry"
+msgid "Entry"
+msgstr "Sarrera"
+
+#: package/contents/ui/ConfigEntries.qml:92
+#, kde-format
+msgid "Visibility"
+msgstr "Ikusgaitasuna"
+
+#: package/contents/ui/ConfigEntries.qml:98
+#, kde-format
+msgid "Keyboard Shortcut"
+msgstr "Teklatuko lasterbidea"
+
+#: package/contents/ui/ConfigEntries.qml:232
+#, kde-format
+msgid "Shown when relevant"
+msgstr "Erakutsi aproposa denean"
+
+#: package/contents/ui/ConfigEntries.qml:233
+#, kde-format
+msgid "Always shown"
+msgstr "Beti agerian"
+
+#: package/contents/ui/ConfigEntries.qml:234
+#, kde-format
+msgid "Always hidden"
+msgstr "Beti ezkutuan"
+
+#: package/contents/ui/ConfigEntries.qml:235
+#, kde-format
+msgid "Disabled"
+msgstr "Ezgaituta"
+
+#: package/contents/ui/ConfigGeneral.qml:36
+#, kde-format
+msgctxt "The arrangement of system tray icons in the Panel"
+msgid "Panel icon size:"
+msgstr "Paneleko ikonoen neurria:"
+
+#: package/contents/ui/ConfigGeneral.qml:37
+#, kde-format
+msgid "Small"
+msgstr "Txikia"
+
+#: package/contents/ui/ConfigGeneral.qml:43
+#, kde-format
+msgid "Scale with Panel height"
+msgstr "Eskalatu panelaren altuerarekin"
+
+#: package/contents/ui/ConfigGeneral.qml:44
+#, kde-format
+msgid "Scale with Panel width"
+msgstr "Eskalatu panelaren zabalerarekin"
+
+#: package/contents/ui/ExpandedRepresentation.qml:87
+#, kde-format
+msgid "Status and Notifications"
+msgstr "Egoera eta jakinarazpenak"
+
+#: package/contents/ui/ExpandedRepresentation.qml:153
+#, kde-format
+msgid "More actions"
+msgstr "Ekintza gehiago"
+
+#: package/contents/ui/ExpandedRepresentation.qml:190
+#, kde-format
+msgid "Keep Open"
+msgstr "Eduki irekita"
+
+#: package/contents/ui/ExpanderArrow.qml:32
+#, kde-format
+msgid "Close popup"
+msgstr "Itxi gainerakorra"
+
+#: package/contents/ui/ExpanderArrow.qml:32
+#, kde-format
+msgid "Show hidden icons"
+msgstr "Erakutsi ezkutuko ikonoak"
+
+#: systemtraymodel.cpp:137
+#, kde-format
+msgctxt ""
+"Suffix added to the applet name if the applet is autoloaded via DBus "
+"activation"
+msgid "%1 (Automatic load)"
+msgstr "%1 (zama automatikoa)"

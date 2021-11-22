@@ -19,62 +19,58 @@
 
 #include "plasmaappletitemmodel_p.h"
 
-#include <QStandardPaths>
 #include <QFileInfo>
 #include <QMimeData>
+#include <QStandardPaths>
 
-#include <klocalizedstring.h>
-#include <kservicetypetrader.h>
-#include <ksycoca.h>
-#include <kconfig.h>
 #include "config-workspace.h"
-#include <KPluginTrader>
-#include <KPackage/PackageLoader>
+#include <KAboutData>
+#include <KConfig>
 #include <KDeclarative/KDeclarative>
+#include <KLocalizedString>
+#include <KPackage/PackageLoader>
+#include <KSycoca>
 
-PlasmaAppletItem::PlasmaAppletItem(const KPluginInfo& info):
-      AbstractItem(),
-      m_info(info),
-      m_runningCount(0),
-      m_local(false)
+PlasmaAppletItem::PlasmaAppletItem(const KPluginMetaData &info)
+    : AbstractItem()
+    , m_info(info)
+    , m_runningCount(0)
+    , m_local(false)
 {
-    const QString api(m_info.property(QStringLiteral("X-Plasma-API")).toString());
+    const QString api(m_info.value(QStringLiteral("X-Plasma-API")));
     if (!api.isEmpty()) {
-        const QString _f = PLASMA_RELATIVE_DATA_INSTALL_DIR "/plasmoids/" + info.pluginName() + '/';
-        QFileInfo dir(QStandardPaths::locate(QStandardPaths::QStandardPaths::GenericDataLocation,
-                                                  _f,
-                                                  QStandardPaths::LocateDirectory));
+        const QString _f = PLASMA_RELATIVE_DATA_INSTALL_DIR "/plasmoids/" + info.pluginId() + '/';
+        QFileInfo dir(QStandardPaths::locate(QStandardPaths::QStandardPaths::GenericDataLocation, _f, QStandardPaths::LocateDirectory));
         m_local = dir.exists() && dir.isWritable();
     }
 
-    //attrs.insert("recommended", flags & Recommended ? true : false);
-    setText(m_info.name() + " - "+ m_info.category().toLower());
+    setText(m_info.name() + " - " + m_info.category().toLower());
 
-    if (QIcon::hasThemeIcon(info.pluginName())) {
-        setIcon(QIcon::fromTheme(info.pluginName()));
-    } else if (!m_info.icon().isEmpty()) {
-        setIcon(QIcon::fromTheme(info.icon()));
+    if (QIcon::hasThemeIcon(info.pluginId())) {
+        setIcon(QIcon::fromTheme(info.pluginId()));
+    } else if (!m_info.iconName().isEmpty()) {
+        setIcon(QIcon::fromTheme(info.iconName()));
     } else {
         setIcon(QIcon::fromTheme(QStringLiteral("application-x-plasma")));
     }
 
-    //set plugininfo parts as roles in the model, only way qml can understand it
-    setData(info.name(), PlasmaAppletItemModel::NameRole);
-    setData(info.pluginName(), PlasmaAppletItemModel::PluginNameRole);
-    setData(info.comment(), PlasmaAppletItemModel::DescriptionRole);
-    setData(info.category().toLower(), PlasmaAppletItemModel::CategoryRole);
-    setData(info.license(), PlasmaAppletItemModel::LicenseRole);
-    setData(info.website(), PlasmaAppletItemModel::WebsiteRole);
-    setData(info.version(), PlasmaAppletItemModel::VersionRole);
-    setData(info.author(), PlasmaAppletItemModel::AuthorRole);
-    setData(info.email(), PlasmaAppletItemModel::EmailRole);
+    // set plugininfo parts as roles in the model, only way qml can understand it
+    setData(name(), PlasmaAppletItemModel::NameRole);
+    setData(pluginName(), PlasmaAppletItemModel::PluginNameRole);
+    setData(description(), PlasmaAppletItemModel::DescriptionRole);
+    setData(category().toLower(), PlasmaAppletItemModel::CategoryRole);
+    setData(license(), PlasmaAppletItemModel::LicenseRole);
+    setData(website(), PlasmaAppletItemModel::WebsiteRole);
+    setData(version(), PlasmaAppletItemModel::VersionRole);
+    setData(author(), PlasmaAppletItemModel::AuthorRole);
+    setData(email(), PlasmaAppletItemModel::EmailRole);
     setData(0, PlasmaAppletItemModel::RunningRole);
     setData(m_local, PlasmaAppletItemModel::LocalRole);
 }
 
 QString PlasmaAppletItem::pluginName() const
 {
-    return m_info.pluginName();
+    return m_info.pluginId();
 }
 
 QString PlasmaAppletItem::name() const
@@ -84,7 +80,7 @@ QString PlasmaAppletItem::name() const
 
 QString PlasmaAppletItem::description() const
 {
-    return m_info.comment();
+    return m_info.description();
 }
 
 QString PlasmaAppletItem::license() const
@@ -109,12 +105,20 @@ QString PlasmaAppletItem::version() const
 
 QString PlasmaAppletItem::author() const
 {
-    return m_info.author();
+    if (m_info.authors().isEmpty()) {
+        return QString();
+    }
+
+    return m_info.authors().constFirst().name();
 }
 
 QString PlasmaAppletItem::email() const
 {
-    return m_info.email();
+    if (m_info.authors().isEmpty()) {
+        return QString();
+    }
+
+    return m_info.authors().constFirst().emailAddress();
 }
 
 int PlasmaAppletItem::running() const
@@ -131,18 +135,17 @@ void PlasmaAppletItem::setRunning(int count)
 
 bool PlasmaAppletItem::matches(const QString &pattern) const
 {
-    if (m_info.service()) {
-        const QStringList keywords = m_info.property(QStringLiteral("Keywords")).toStringList();
-        foreach (const QString &keyword, keywords) {
-            if (keyword.startsWith(pattern, Qt::CaseInsensitive)) {
-                return true;
-            }
+    const QString keywordsList = KPluginMetaData::readTranslatedString(m_info.rawData(), QStringLiteral("Keywords"));
+    const auto keywords = keywordsList.splitRef(QLatin1Char(';'), Qt::SkipEmptyParts);
+
+    for (const auto &keyword : keywords) {
+        if (keyword.startsWith(pattern, Qt::CaseInsensitive)) {
+            return true;
         }
     }
 
     return AbstractItem::matches(pattern);
 }
-
 
 bool PlasmaAppletItem::isLocal() const
 {
@@ -182,11 +185,11 @@ QVariant PlasmaAppletItem::data(int role) const
 {
     switch (role) {
     case PlasmaAppletItemModel::ScreenshotRole:
-        //null = not yet done, empty = tried and failed
+        // null = not yet done, empty = tried and failed
         if (m_screenshot.isNull()) {
             KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/Applet"));
             pkg.setDefaultPackageRoot(QStringLiteral("plasma/plasmoids"));
-            pkg.setPath(m_info.pluginName());
+            pkg.setPath(m_info.pluginId());
             if (pkg.isValid()) {
                 const_cast<PlasmaAppletItem *>(this)->m_screenshot = pkg.filePath("screenshot");
             } else {
@@ -198,11 +201,11 @@ QVariant PlasmaAppletItem::data(int role) const
         return m_screenshot;
 
     case Qt::DecorationRole: {
-        //null = not yet done, empty = tried and failed
+        // null = not yet done, empty = tried and failed
         if (m_icon.isNull()) {
             KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/Applet"));
             pkg.setDefaultPackageRoot(QStringLiteral("plasma/plasmoids"));
-            pkg.setPath(m_info.pluginName());
+            pkg.setPath(m_info.pluginId());
             if (pkg.isValid() && pkg.metadata().iconName().startsWith(QLatin1String("/"))) {
                 const_cast<PlasmaAppletItem *>(this)->m_icon = pkg.filePath("", pkg.metadata().iconName().toUtf8());
             } else {
@@ -221,11 +224,11 @@ QVariant PlasmaAppletItem::data(int role) const
     }
 }
 
-//PlasmaAppletItemModel
+// PlasmaAppletItemModel
 
-PlasmaAppletItemModel::PlasmaAppletItemModel(QObject * parent)
-    : QStandardItemModel(parent),
-      m_startupCompleted(false)
+PlasmaAppletItemModel::PlasmaAppletItemModel(QObject *parent)
+    : QStandardItemModel(parent)
+    , m_startupCompleted(false)
 {
     connect(KSycoca::self(), SIGNAL(databaseChanged(QStringList)), this, SLOT(populateModel(QStringList)));
 
@@ -257,49 +260,46 @@ void PlasmaAppletItemModel::populateModel(const QStringList &whatChanged)
     }
 
     clear();
-    //qDebug() << "populating model, our application is" << m_application;
 
-    //qDebug() << "number of applets is"
-    //         <<  Plasma::Applet::listAppletInfo(QString(), m_application).count();
+    auto filter = [this](const KPluginMetaData &plugin) -> bool {
+        const QStringList provides = KPluginMetaData::readStringList(plugin.rawData(), QStringLiteral("X-Plasma-Provides"));
 
-    QString constraint;
-    bool first = true;
-    foreach (const QString prov, m_provides) {
-        if (!first) {
-            constraint += QLatin1String(" or ");
+        if (!m_provides.isEmpty()) {
+            const bool providesFulfilled = std::any_of(m_provides.cbegin(), m_provides.cend(), [&provides](const QString &p) {
+                return provides.contains(p);
+            });
+
+            if (!providesFulfilled) {
+                return false;
+            }
         }
 
-        first = false;
-        constraint += "'" + prov + "' in [X-Plasma-Provides]";
-    }
-
-    KPluginInfo::List list = KPluginInfo::fromMetaData(KPackage::PackageLoader::self()->listPackages(QStringLiteral("Plasma/Applet"), QStringLiteral("plasma/plasmoids")).toVector());
-
-    KPluginTrader::applyConstraints(list, constraint);
-
-    for (auto info : list) {
-        //qDebug() << info.pluginName() << "NoDisplay" << info.property("NoDisplay").toBool();
-        if (!info.isValid() || info.property(QStringLiteral("NoDisplay")).toBool() || info.category() == QLatin1String("Containments")) {
+        if (!plugin.isValid() || plugin.rawData().value(QStringLiteral("NoDisplay")).toBool() || plugin.category() == QLatin1String("Containments")) {
             // we don't want to show the hidden category
-            continue;
+            return false;
         }
 
         bool inFormFactor = true;
 
-        foreach (const QString &formFactor, KDeclarative::KDeclarative::runtimePlatform()) {
-            if (!info.formFactors().isEmpty() &&
-                !info.formFactors().contains(formFactor)) {
+        static const auto formFactors = KDeclarative::KDeclarative::runtimePlatform();
+        for (const QString &formFactor : formFactors) {
+            if (!plugin.formFactors().isEmpty() && !plugin.formFactors().contains(formFactor)) {
                 inFormFactor = false;
             }
         }
+
         if (!inFormFactor) {
-            continue;
+            return false;
         }
 
-        //qDebug() << info.pluginName() << " is the name of the plugin at" << info.entryPath();
-        //qDebug() << info.name() << info.property("X-Plasma-Thumbnail");
+        return true;
+    };
 
-        appendRow(new PlasmaAppletItem(info));
+    const QList<KPluginMetaData> packages =
+        KPackage::PackageLoader::self()->findPackages(QStringLiteral("Plasma/Applet"), QStringLiteral("plasma/plasmoids"), filter);
+
+    for (const KPluginMetaData &plugin : packages) {
+        appendRow(new PlasmaAppletItem(plugin));
     }
 
     emit modelPopulated();
@@ -307,7 +307,7 @@ void PlasmaAppletItemModel::populateModel(const QStringList &whatChanged)
 
 void PlasmaAppletItemModel::setRunningApplets(const QHash<QString, int> &apps)
 {
-    //foreach item, find that string and set the count
+    // for each item, find that string and set the count
     for (int r = 0; r < rowCount(); ++r) {
         QStandardItem *i = item(r);
         PlasmaAppletItem *p = dynamic_cast<PlasmaAppletItem *>(i);
@@ -321,7 +321,7 @@ void PlasmaAppletItemModel::setRunningApplets(const QHash<QString, int> &apps)
 
 void PlasmaAppletItemModel::setRunningApplets(const QString &name, int count)
 {
-    for (int r=0; r<rowCount(); ++r) {
+    for (int r = 0; r < rowCount(); ++r) {
         QStandardItem *i = item(r);
         PlasmaAppletItem *p = dynamic_cast<PlasmaAppletItem *>(i);
         if (p && p->pluginName() == name) {
@@ -353,7 +353,6 @@ QSet<QString> PlasmaAppletItemModel::categories() const
 
 QMimeData *PlasmaAppletItemModel::mimeData(const QModelIndexList &indexes) const
 {
-    //qDebug() << "GETTING MIME DATA\n";
     if (indexes.count() <= 0) {
         return nullptr;
     }
@@ -370,15 +369,15 @@ QMimeData *PlasmaAppletItemModel::mimeData(const QModelIndexList &indexes) const
 
     QByteArray appletNames;
     int lastRow = -1;
-    foreach (const QModelIndex &index, indexes) {
+    for (const QModelIndex &index : indexes) {
         if (index.row() == lastRow) {
             continue;
         }
 
         lastRow = index.row();
-        PlasmaAppletItem *selectedItem = (PlasmaAppletItem *) itemFromIndex(index);
+        PlasmaAppletItem *selectedItem = (PlasmaAppletItem *)itemFromIndex(index);
         appletNames += '\n' + selectedItem->pluginName().toUtf8();
-        //qDebug() << selectedItem->pluginName() << index.column() << index.row();
+        // qDebug() << selectedItem->pluginName() << index.column() << index.row();
     }
 
     data->setData(format, appletNames);
@@ -426,4 +425,3 @@ QString &PlasmaAppletItemModel::Application()
 }
 
 //#include <plasmaappletitemmodel_p.moc>
-

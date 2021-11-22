@@ -1,0 +1,46 @@
+# translation of plasma_runner_bookmarksrunner.po to 简体中文
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Ni Hui <shuizhuyuanluo@126.com>, 2009, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdeorg\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2021-01-28 05:06\n"
+"Last-Translator: \n"
+"Language-Team: Chinese Simplified\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: kdeorg\n"
+"X-Crowdin-Project-ID: 269464\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /kf5-trunk/messages/plasma-workspace/"
+"plasma_runner_bookmarksrunner.pot\n"
+"X-Crowdin-File-ID: 4627\n"
+
+#: bookmarksrunner.cpp:47
+#, kde-format
+msgid "Finds web browser bookmarks matching :q:."
+msgstr "查找匹配 :q: 的网络浏览器书签。"
+
+#: bookmarksrunner.cpp:48
+#, kde-format
+msgctxt "list of all web browser bookmarks"
+msgid "bookmarks"
+msgstr "书签"
+
+#: bookmarksrunner.cpp:48
+#, kde-format
+msgid "List all web browser bookmarks"
+msgstr "列出所有网络浏览器书签"
+
+#: bookmarksrunner.cpp:71
+#, kde-format
+msgctxt "list of all konqueror bookmarks"
+msgid "bookmarks"
+msgstr "书签"

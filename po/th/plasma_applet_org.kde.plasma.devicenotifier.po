@@ -1,0 +1,140 @@
+# translation of plasma_applet_devicenotifier.po to Thai
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Sahachart Anukulkitch <drrider@gmail.com>, 2007.
+# Thanomsub Noppaburana <donga.nb@gmail.com>, 2008, 2010.
+# Phuwanat Sakornsakolpat <narachai@gmail.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_devicenotifier\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-12-21 02:42+0100\n"
+"PO-Revision-Date: 2010-12-17 16:09+0700\n"
+"Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
+"Language-Team: Thai <thai-l10n@googlegroups.com>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 1.1\n"
+
+#: package/contents/ui/DeviceItem.qml:171
+#, fuzzy, kde-format
+#| msgctxt "@info:status Free disk space"
+#| msgid "%1 free"
+msgctxt "@info:status Free disk space"
+msgid "%1 free of %2"
+msgstr "เนื้อที่ว่าง %1"
+
+#: package/contents/ui/DeviceItem.qml:175
+#, kde-format
+msgctxt ""
+"Accessing is a less technical word for Mounting; translation should be short "
+"and mean 'Currently mounting this device'"
+msgid "Accessing..."
+msgstr "กำลังเข้าใช้งาน..."
+
+#: package/contents/ui/DeviceItem.qml:177
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Removing is a less technical word for Unmounting; translation shoud be "
+#| "short and mean 'Currently unmounting this device'"
+#| msgid "Removing..."
+msgctxt ""
+"Removing is a less technical word for Unmounting; translation should be "
+"short and mean 'Currently unmounting this device'"
+msgid "Removing..."
+msgstr "กำลังถอดออก..."
+
+#: package/contents/ui/DeviceItem.qml:203
+#, kde-format
+msgid "Open in File Manager"
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:207
+#, kde-format
+msgid "Mount and Open"
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:209
+#, kde-format
+msgid "Eject"
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:211
+#, kde-format
+msgid "Safely remove"
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:251
+#, fuzzy, kde-format
+#| msgid "Mounting..."
+msgid "Mount"
+msgstr "ทำการเมานท์..."
+
+#: package/contents/ui/devicenotifier.qml:60
+#, fuzzy, kde-format
+#| msgid "Most recent device"
+msgid "Most Recent Device"
+msgstr "อุปกรณ์ที่เสียบเข้ามาล่าสุด"
+
+#: package/contents/ui/devicenotifier.qml:60
+#, kde-format
+msgid "No Devices Available"
+msgstr "ยังไม่มีอุปกรณ์ใด ๆ ให้เลือกใช้"
+
+#: package/contents/ui/devicenotifier.qml:238
+#, fuzzy, kde-format
+#| msgid "Removable devices only"
+msgid "Removable Devices"
+msgstr "อุปกรณ์ที่สามารถถอด/เสียบได้เท่านั้น"
+
+#: package/contents/ui/devicenotifier.qml:244
+#, fuzzy, kde-format
+#| msgid "Non-removable devices only"
+msgid "Non Removable Devices"
+msgstr "อุปกรณ์ที่ไม่สามารถถอด/เสียบได้เท่านั้น"
+
+#: package/contents/ui/devicenotifier.qml:250
+#, fuzzy, kde-format
+#| msgid "All devices"
+msgid "All Devices"
+msgstr "อุปกรณ์ทั้งหมด"
+
+#: package/contents/ui/devicenotifier.qml:258
+#, fuzzy, kde-format
+#| msgid "No devices plugged in"
+msgid "Show popup when new device is plugged in"
+msgstr "ยังไม่มีการเสียบอุปกรณ์ใด ๆ"
+
+#: package/contents/ui/devicenotifier.qml:266
+#, fuzzy, kde-format
+#| msgid "Non-removable devices only"
+msgctxt "Open auto mounter kcm"
+msgid "Configure Removable Devices..."
+msgstr "อุปกรณ์ที่ไม่สามารถถอด/เสียบได้เท่านั้น"
+
+#: package/contents/ui/FullRepresentation.qml:48
+#, kde-format
+msgid "Remove All"
+msgstr ""
+
+#: package/contents/ui/FullRepresentation.qml:51
+#, fuzzy, kde-format
+#| msgid "Click to safely remove this device."
+msgid "Click to safely remove all devices"
+msgstr "คลิกเพื่อถอดอุปกรณ์นี้ออกอย่างปลอดภัย"
+
+#: package/contents/ui/FullRepresentation.qml:163
+#, fuzzy, kde-format
+#| msgid "Non-removable devices only"
+msgid "No removable devices attached"
+msgstr "อุปกรณ์ที่ไม่สามารถถอด/เสียบได้เท่านั้น"
+
+#: package/contents/ui/FullRepresentation.qml:163
+#, fuzzy, kde-format
+#| msgid "No devices available."
+msgid "No disks available"
+msgstr "ยังไม่มีอุปกรณ์ใด ๆ ให้เลือกใช้"

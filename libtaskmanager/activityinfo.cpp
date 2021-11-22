@@ -22,14 +22,9 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <KActivities/ActivitiesModel>
 #include <KActivities/Consumer>
-#include <QDebug>
-#include <QDBusConnection>
-#include <QDBusError>
-#include <QDBusServer>
 
 namespace TaskManager
 {
-
 class Q_DECL_HIDDEN ActivityInfo::Private
 {
 public:
@@ -37,14 +32,13 @@ public:
     ~Private();
 
     static int instanceCount;
-    static KActivities::Consumer* activityConsumer;
-    static KActivities::ActivitiesModel* activitiesModel;
+    static KActivities::Consumer *activityConsumer;
+    static KActivities::ActivitiesModel *activitiesModel;
 };
 
 int ActivityInfo::Private::instanceCount = 0;
-KActivities::Consumer* ActivityInfo::Private::activityConsumer = nullptr;
-KActivities::ActivitiesModel* ActivityInfo::Private::activitiesModel = nullptr;
-
+KActivities::Consumer *ActivityInfo::Private::activityConsumer = nullptr;
+KActivities::ActivitiesModel *ActivityInfo::Private::activitiesModel = nullptr;
 
 ActivityInfo::Private::Private(ActivityInfo *)
 {
@@ -63,53 +57,36 @@ ActivityInfo::Private::~Private()
     }
 }
 
-ActivityInfo::ActivityInfo(QObject *parent) : QObject(parent)
+ActivityInfo::ActivityInfo(QObject *parent)
+    : QObject(parent)
     , d(new Private(this))
 {
     if (!d->activityConsumer) {
         d->activityConsumer = new KActivities::Consumer();
     }
 
-    connect(d->activityConsumer, &KActivities::Consumer::currentActivityChanged,
-        this, &ActivityInfo::currentActivityChanged);
-    connect(d->activityConsumer, &KActivities::Consumer::runningActivitiesChanged,
-        this, &ActivityInfo::numberOfRunningActivitiesChanged);
-    connect(d->activityConsumer, &KActivities::Consumer::runningActivitiesChanged,
-        this, &ActivityInfo::namesOfRunningActivitiesChanged);
+    connect(d->activityConsumer, &KActivities::Consumer::currentActivityChanged, this, &ActivityInfo::currentActivityChanged);
+    connect(d->activityConsumer, &KActivities::Consumer::runningActivitiesChanged, this, &ActivityInfo::numberOfRunningActivitiesChanged);
+    connect(d->activityConsumer, &KActivities::Consumer::runningActivitiesChanged, this, &ActivityInfo::namesOfRunningActivitiesChanged);
 
     if (!d->activitiesModel) {
         d->activitiesModel = new KActivities::ActivitiesModel();
         d->activitiesModel->setShownStates(QVector<KActivities::Info::State>{KActivities::Info::Running});
     }
 
-    connect(d->activitiesModel, &KActivities::ActivitiesModel::modelReset,
-        this, &ActivityInfo::namesOfRunningActivitiesChanged);
+    connect(d->activitiesModel, &KActivities::ActivitiesModel::modelReset, this, &ActivityInfo::namesOfRunningActivitiesChanged);
 
-    connect(d->activitiesModel, &KActivities::ActivitiesModel::dataChanged, this,
-        [this](const QModelIndex &topLeft, const QModelIndex &bottomRight, const QVector<int> &roles) {
-            Q_UNUSED(topLeft)
-            Q_UNUSED(bottomRight)
+    connect(d->activitiesModel,
+            &KActivities::ActivitiesModel::dataChanged,
+            this,
+            [this](const QModelIndex &topLeft, const QModelIndex &bottomRight, const QVector<int> &roles) {
+                Q_UNUSED(topLeft)
+                Q_UNUSED(bottomRight)
 
-            if (roles.isEmpty() || roles.contains(Qt::DisplayRole)) {
-                emit namesOfRunningActivitiesChanged();
-            }
-        }
-    );
-
-    if(!QDBusConnection::sessionBus().registerService("org.kde.plasma.taskmanager"))
-    {
-        qDebug() << "error:" << QDBusConnection::sessionBus().lastError().message();
-    } else {
-        qDebug() << "========================= org.kde.plasma.taskmanager service ok =======================";
-
-    }
-    if (!QDBusConnection::sessionBus().registerObject("/taskmanager", this, QDBusConnection::ExportAllSlots|QDBusConnection::ExportAllSignals))
-    {
-        qDebug() << "error:" << QDBusConnection::sessionBus().lastError().message();
-    } else {
-        qDebug() << "========================= org.kde.plasma.taskmanager object path ok =======================";
-
-    }
+                if (roles.isEmpty() || roles.contains(Qt::DisplayRole)) {
+                    emit namesOfRunningActivitiesChanged();
+                }
+            });
 }
 
 ActivityInfo::~ActivityInfo()
@@ -140,19 +117,6 @@ QString ActivityInfo::activityName(const QString &id)
     }
 
     return QString();
-}
-
-bool ActivityInfo::activity()
-{
-    return m_activity;
-}
-
-void ActivityInfo::setActivity(bool activity)
-{
-    qDebug() << "========================= setActivity =======================  activity : " << activity;
-
-    m_activity = activity;
-    emit activityChanged();
 }
 
 }

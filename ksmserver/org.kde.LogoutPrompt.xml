@@ -4,5 +4,6 @@
     <method name="promptLogout"/>
     <method name="promptShutDown"/>
     <method name="promptReboot"/>
+    <signal name="toBeShow"/>
 </interface>
 </node>

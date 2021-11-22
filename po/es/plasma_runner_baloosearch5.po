@@ -1,0 +1,65 @@
+# Spanish translations for plasma_runner_baloosearchrunner.po package.
+# Copyright (C) 2014 This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Automatically generated, 2014.
+# Eloy Cuadra <ecuadra@eloihr.net>, 2014, 2016, 2018.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_baloosearchrunner\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2018-03-03 21:14+0100\n"
+"Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
+"Language-Team: Spanish <kde-l10n-es@kde.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 2.0\n"
+
+#: baloosearchrunner.cpp:81
+#, kde-format
+msgid "Open Containing Folder"
+msgstr "Abrir la carpeta contenedora"
+
+#: baloosearchrunner.cpp:131
+#, kde-format
+msgid "Audio"
+msgstr "Audio"
+
+#: baloosearchrunner.cpp:132
+#, kde-format
+msgid "Image"
+msgstr "Imagen"
+
+#: baloosearchrunner.cpp:133
+#, kde-format
+msgid "Video"
+msgstr "Vídeo"
+
+#: baloosearchrunner.cpp:134
+#, kde-format
+msgid "Spreadsheet"
+msgstr "Hoja de cálculo"
+
+#: baloosearchrunner.cpp:135
+#, kde-format
+msgid "Presentation"
+msgstr "Presentación"
+
+#: baloosearchrunner.cpp:136
+#, kde-format
+msgid "Folder"
+msgstr "Carpeta"
+
+#: baloosearchrunner.cpp:137
+#, kde-format
+msgid "Document"
+msgstr "Documento"
+
+#: baloosearchrunner.cpp:138
+#, kde-format
+msgid "Archive"
+msgstr "Archivo comprimido"

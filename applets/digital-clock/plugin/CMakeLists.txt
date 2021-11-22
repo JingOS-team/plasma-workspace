@@ -30,13 +30,13 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
 
 
 add_library(digitalclockplugin SHARED ${digitalclockplugin_SRCS})
-target_link_libraries(digitalclockplugin Qt5::Core
-                                          Qt5::Qml
-                                            Qt5::DBus
-                                          Qt5::Widgets # for QAction...
+target_link_libraries(digitalclockplugin Qt::Core
+                                          Qt::Qml
+					Qt::DBus
+                                          Qt::Widgets # for QAction...
                                           KF5::CoreAddons
                                           KF5::I18n
-                                            KF5::ConfigCore)
+					  KF5::ConfigCore)
 
 install(TARGETS digitalclockplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/digitalclock)
 

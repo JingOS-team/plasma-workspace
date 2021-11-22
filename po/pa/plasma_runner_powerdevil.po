@@ -1,0 +1,137 @@
+# translation of krunner_powerdevil.po to Punjabi
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Amanpreet Singh <aalam@users.sf.net>, 2008.
+# A S Alam <aalam@users.sf.net>, 2008, 2009, 2010, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: krunner_powerdevil\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2021-01-01 11:00-0800\n"
+"Last-Translator: A S Alam <aalam.yellow@gmail.com>\n"
+"Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
+"Language: pa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.08.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: PowerDevilRunner.cpp:45
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "suspend"
+msgstr "ਸਸਪੈਂਡ"
+
+#: PowerDevilRunner.cpp:47
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "to ram"
+msgstr "ਰੈਮ ਉੱਤੇ"
+
+#: PowerDevilRunner.cpp:49
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "sleep"
+msgstr "ਸਲੀਪ"
+
+#: PowerDevilRunner.cpp:51
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "hibernate"
+msgstr "ਹਾਈਬਰਨੇਟ"
+
+#: PowerDevilRunner.cpp:53
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "to disk"
+msgstr "ਡਿਸਕ ਉੱਤੇ"
+
+#: PowerDevilRunner.cpp:55 PowerDevilRunner.cpp:57 PowerDevilRunner.cpp:80
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "dim screen"
+msgstr "ਸਕਰੀਨ ਡਿਮ ਕਰੋ"
+
+#: PowerDevilRunner.cpp:65
+#, kde-format
+msgid ""
+"Lists system suspend (e.g. sleep, hibernate) options and allows them to be "
+"activated"
+msgstr "ਸਿਸਟਮ ਸਸਪੈਂਡ (ਜਿਵੇਂ ਸਲੀਪ, ਹਾਈਬਰਨੇਟ) ਚੋਣਾਂ ਵੇਖੋ ਅਤੇ ਉਹਨਾਂ ਨੂੰ ਸਰਗਰਮ ਹੋਣ ਦਿਉ।"
+
+#: PowerDevilRunner.cpp:69
+#, kde-format
+msgid "Suspends the system to RAM"
+msgstr "ਸਿਸਟਮ ਰੈਮ (RAM) ਉੱਤੇ ਸਸਪੈਂਡ ਕਰੋ"
+
+#: PowerDevilRunner.cpp:73
+#, kde-format
+msgid "Suspends the system to disk"
+msgstr "ਸਿਸਟਮ ਡਿਸਕ ਉੱਤੇ ਸਸਪੈਂਡ ਕਰੋ"
+
+#: PowerDevilRunner.cpp:76
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "screen brightness"
+msgstr "ਸਕਰੀਨ ਚਮਕ"
+
+#: PowerDevilRunner.cpp:78
+#, no-c-format, kde-format
+msgid ""
+"Lists screen brightness options or sets it to the brightness defined by :q:; "
+"e.g. screen brightness 50 would dim the screen to 50% maximum brightness"
+msgstr ""
+"ਸਕਰੀਨ ਚਮਕ ਚੋਣਾਂ ਦੀ ਲਿਸਟ ਜਾਂ ਇਸ ਨੂੰ ਚਮਕ ਸੈੱਟ ਕਰੋ, ਜੋ ਤਹਿ ਕੀਤੀ ਜਾਂਦੀ ਹੈ:q:; ਜਿਵੇਂ ਸਕਰੀਨ ਚਮਕ "
+"੫੦ ਵੱਧੋ-ਵੱਧ ਚਮਕ ਨੂੰ ਸਕਰੀਨ ਲਈ ੫੦% ਤੱਕ ਡਿਮ ਕਰੇਗਾ।"
+
+#: PowerDevilRunner.cpp:123
+#, kde-format
+msgid "Set Brightness to %1%"
+msgstr "ਚਮਕ %1 ਲਈ ਸੈੱਟ ਕਰੋ"
+
+#: PowerDevilRunner.cpp:132
+#, kde-format
+msgid "Dim screen totally"
+msgstr "ਸਕਰੀਨ ਪੂਰੀ ਤਰ੍ਹਾਂ ਡਿਮ ਕਰੋ"
+
+#: PowerDevilRunner.cpp:140
+#, kde-format
+msgid "Dim screen by half"
+msgstr "ਸਕਰੀਨ ਅੱਧੀ ਡਿਮ ਕਰੋ"
+
+#: PowerDevilRunner.cpp:170
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "ਸਲੀਪ"
+
+#: PowerDevilRunner.cpp:171
+#, kde-format
+msgid "Suspend to RAM"
+msgstr "ਰੈਮ ਉੱਤੇ ਸਸਪੈਂਡ ਕਰੋ"
+
+#: PowerDevilRunner.cpp:176
+#, kde-format
+msgctxt "Suspend to disk"
+msgid "Hibernate"
+msgstr "ਹਾਈਬਰਨੇਟ"
+
+#: PowerDevilRunner.cpp:177
+#, kde-format
+msgid "Suspend to disk"
+msgstr "ਡਿਸਕ ਉੱਤੇ ਸਸਪੈਂਡ ਕਰੋ"
+
+#: PowerDevilRunner.cpp:244
+#, kde-format
+msgctxt "Note this is a KRunner keyword, it should end with a space"
+msgid "screen brightness "
+msgstr "ਸਕਰੀਨ ਦੀ ਚਮਕ"
+
+#: PowerDevilRunner.cpp:246
+#, kde-format
+msgctxt "Note this is a KRunner keyword, it should end with a space"
+msgid "dim screen "
+msgstr "ਸਕਰੀਨ ਡਿਮ ਕਰੋ"

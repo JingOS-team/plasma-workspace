@@ -45,6 +45,9 @@ ColumnLayout {
                     if (uuid) {
                         clipboardSource.service(uuid, "select")
                         clipboardMenu.view.currentIndex = 0
+                        if (plasmoid.hideOnWindowDeactivate) {
+                            plasmoid.expanded = false;
+                        }
                     }
                 }
                 break;
@@ -86,8 +89,17 @@ ColumnLayout {
                 placeholderText: i18n("Search...")
                 clearButtonShown: true
                 Layout.fillWidth: true
+
+                Connections {
+                    target: main
+                    function onClearSearchField() {
+                        filter.clear()
+                    }
+                }
             }
             PlasmaComponents3.ToolButton {
+                visible: !(plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentDrawsPlasmoidHeading)
+
                 icon.name: "edit-clear-history"
                 onClicked: {
                     clipboardSource.service("", "clearHistory")
@@ -113,6 +125,7 @@ ColumnLayout {
                 let prisonTest = Qt.createQmlObject("import QtQml 2.0; import org.kde.prison 1.0; QtObject {}", this);
                 prisonTest.destroy();
             } catch (e) {
+                console.log("Barcodes not supported:", e);
                 return false;
             }
             return true;

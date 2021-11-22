@@ -21,6 +21,7 @@ Item
         console.log("SDDM - HYBRID SLEEP");
     }
 
+
     function login(user, password, sessionIndex) {
         console.log("SDDM - logging in as ", user, password, sessionIndex)
 
@@ -32,6 +33,7 @@ Item
         } else {
             tryLogin.start();
         }
+
     }
 
     Timer {

@@ -1,0 +1,154 @@
+# Bosnian translation for bosnianuniversetranslation
+# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
+# This file is distributed under the same license as the bosnianuniversetranslation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bosnianuniversetranslation\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-06 03:03+0100\n"
+"PO-Revision-Date: 2015-01-09 11:50+0100\n"
+"Last-Translator: Samir Ribic <samir.ribic@etf.unsa.ba>\n"
+"Language-Team: Bosnian <bs@li.org>\n"
+"Language: bs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Launchpad (build 17341)\n"
+"X-Launchpad-Export-Date: 2015-02-16 06:46+0000\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Samir Ribić"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "samir.ribic@etf.unsa.ba"
+
+#: package/contents/ui/main.qml:31
+#, kde-format
+msgid "Language"
+msgstr ""
+
+#: package/contents/ui/main.qml:89
+#, fuzzy, kde-format
+#| msgid "Preferred Languages:"
+msgctxt "@title:window"
+msgid "Add Languages"
+msgstr "Poželjni jezici:"
+
+#: package/contents/ui/main.qml:115
+#, kde-format
+msgctxt "@action:button"
+msgid "Add"
+msgstr ""
+
+#: package/contents/ui/main.qml:143
+#, kde-format
+msgctxt "@info"
+msgid "There are no additional languages available on this system."
+msgstr ""
+
+#: package/contents/ui/main.qml:153
+#, fuzzy, kde-format
+#| msgid "Your changes will take effect the next time you log in."
+msgctxt "@info"
+msgid "Your changes will take effect the next time you log in."
+msgstr "Vaše promjene će stupiti na snagu sljedeći put kada se priključite."
+
+#: package/contents/ui/main.qml:154
+#, kde-format
+msgctxt "@info"
+msgid "There are currently no preferred languages configured."
+msgstr ""
+
+#         translations.
+#: package/contents/ui/main.qml:165
+#, fuzzy, kde-format
+#| msgctxt "%1 is the language code"
+#| msgid ""
+#| "The translation files for the language with the code '%2' could not be "
+#| "found. The language has been removed from your configuration. If you want "
+#| "to add it back, please install the localization files for it and add the "
+#| "language again."
+#| msgid_plural ""
+#| "The translation files for the languages with the codes '%2' could not be "
+#| "found. These languages have been removed from your configuration. If you "
+#| "want to add them back, please install the localization files for it and "
+#| "the languages again."
+msgctxt "@info %2 is the language code"
+msgid ""
+"The translation files for the language with the code '%2' could not be "
+"found. The language will be removed from your configuration. If you want to "
+"add it back, please install the localization files for it and add the "
+"language again."
+msgid_plural ""
+"The translation files for the languages with the codes '%2' could not be "
+"found. These languages will be removed from your configuration. If you want "
+"to add them back, please install the localization files for it and the "
+"languages again."
+msgstr[0] ""
+"Lokalizacijske datoteke za jezik s kodom '%2' ne mogu se nači. Jezik je "
+"uklonjen iz vaše konfiguracije. Ako želite da ga vratite, instalirajte "
+"lokalizacijske datoteke i dodajte jezik."
+msgstr[1] ""
+"Lokalizacijske datoteke za jezike s kodom '%2' ne mogu se nači. Jezik je "
+"uklonjen iz vaše konfiguracije. Ako želite da ga vratite, instalirajte "
+"lokalizacijske datoteke i dodajte jezike ponovo."
+msgstr[2] ""
+"Lokalizacijske datoteke za jezike s kodom '%2' ne mogu se nači. Jezik je "
+"uklonjen iz vaše konfiguracije. Ako želite da ga vratite, instalirajte "
+"lokalizacijske datoteke i dodajte jezike ponovo."
+
+#: package/contents/ui/main.qml:168
+#, kde-format
+msgctxt "@info separator in list of language codes"
+msgid "', '"
+msgstr ""
+
+#: package/contents/ui/main.qml:178
+#, kde-format
+msgid ""
+"The language at the top of this list is the one you want to see and use most "
+"often."
+msgstr ""
+
+#: package/contents/ui/main.qml:217
+#, kde-format
+msgctxt "@item:inlistbox 1 = Language name"
+msgid "%1 (Default)"
+msgstr ""
+
+#: package/contents/ui/main.qml:230
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Promote to default"
+msgstr ""
+
+#: package/contents/ui/main.qml:237
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Remove"
+msgstr ""
+
+#: package/contents/ui/main.qml:262
+#, kde-format
+msgctxt "@action:button"
+msgid "Add languages..."
+msgstr ""
+
+#: translations.cpp:43
+#, kde-format
+msgid "Configure Plasma translations"
+msgstr "Konfiguriši Plasma prevode"
+
+#: translationsmodel.cpp:95 translationsmodel.cpp:106
+#, kde-format
+msgctxt "%1 is language name, %2 is language code name"
+msgid "%1 (%2)"
+msgstr ""

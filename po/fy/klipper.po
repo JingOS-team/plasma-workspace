@@ -1,0 +1,780 @@
+# translation of klipper.po to Frysk
+# translation of klipper.po to
+#
+# Rinse de Vries <rinsedevries@kde.nl>, 2005, 2007, 2009.
+# berend ytsma <berendy@bigfoot.com>, 2005.
+# Rinse de Vries <RinseDeVries@home.nl>, 2006.
+msgid ""
+msgstr ""
+"Project-Id-Version: klipper\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2010-07-16 13:01+0100\n"
+"Last-Translator: Berend Ytsma <berendy@gmail.com>\n"
+"Language-Team: Frysk <kde-i18n-fry@kde.org>\n"
+"Language: fy\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ReplayActionInHistory)
+#: actionsconfig.ui:17
+#, kde-format
+msgid "Replay actions on an item selected from history"
+msgstr "Aksjes opnij útfiere op in item selektearre út de skiednis"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_StripWhiteSpace)
+#: actionsconfig.ui:24
+#, kde-format
+msgid "Remove whitespace when executing actions"
+msgstr "Wytromte fuortsmite by it útfoeren fan aksjes"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnableMagicMimeActions)
+#. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
+#: actionsconfig.ui:31 klipper.kcfg:84
+#, kde-format
+msgid "Enable MIME-based actions"
+msgstr "MIME-basearre aksjes ynskeakelje"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: actionsconfig.ui:38
+#, kde-format
+msgid "Action list:"
+msgstr "Aksje list:"
+
+#. i18n: ectx: property (text), widget (ActionsTreeWidget, kcfg_ActionList)
+#: actionsconfig.ui:49
+#, kde-format
+msgid "Regular Expression"
+msgstr "Reguliere ekspresje"
+
+#. i18n: ectx: property (text), widget (ActionsTreeWidget, kcfg_ActionList)
+#: actionsconfig.ui:54 editactiondialog.cpp:225
+#, kde-format
+msgid "Description"
+msgstr "Omskriuwing"
+
+#. i18n: ectx: property (text), widget (QPushButton, pbAddAction)
+#: actionsconfig.ui:64
+#, kde-format
+msgid "Add Action..."
+msgstr "Aksje taheakje..."
+
+#. i18n: ectx: property (text), widget (QPushButton, pbEditAction)
+#: actionsconfig.ui:71
+#, kde-format
+msgid "Edit Action..."
+msgstr "Aksje bewurkje..."
+
+#. i18n: ectx: property (text), widget (QPushButton, pbDelAction)
+#: actionsconfig.ui:78
+#, kde-format
+msgid "Delete Action"
+msgstr "Aksje wiskje"
+
+#. i18n: ectx: property (text), widget (QPushButton, pbAdvanced)
+#: actionsconfig.ui:85
+#, fuzzy, kde-format
+#| msgid "Advanced"
+msgid "Advanced..."
+msgstr "Avansearre"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: actionsconfig.ui:94
+#, fuzzy, no-c-format, kde-format
+#| msgid ""
+#| "Click on a highlighted item's column to change it. \"%s\" in a command "
+#| "will be replaced with the clipboard contents.<br>For more information "
+#| "about regular expressions, you could have a look at the <a href=\"http://"
+#| "en.wikipedia.org/wiki/Regular_expression\">Wikipedia entry about this "
+#| "topic</a>."
+msgid ""
+"Click on a highlighted item's column to change it. \"%s\" in a command will "
+"be replaced with the clipboard contents.<br>For more information about "
+"regular expressions, you could have a look at the <a href=\"https://en."
+"wikipedia.org/wiki/Regular_expression\">Wikipedia entry about this topic</a>."
+msgstr ""
+"Klik op in markearre kolom fan de item om it te feroarjen. \"%s\" yn in "
+"kommando sil ferfongen wurde mei de ynhâld fan it klamboerd. <br> Foar mear "
+"ynformaasje oer reguliere ekspresjes, lês de folgjende dokuminten: <a href="
+"\"http://nl.wikipedia.org/wiki/Reguliere_expressie\">Reguliere expressies in "
+"wikipedia</a> en <a href=\"http://www.linuxfocus.org/Nederlands/July1998/"
+"article53.html\">Reguliere expressies in LinuxFocus</a>."
+
+#: configdialog.cpp:37
+#, kde-format
+msgid " second"
+msgid_plural " seconds"
+msgstr[0] " sekonde"
+msgstr[1] " sekonden"
+
+#: configdialog.cpp:38
+#, kde-format
+msgid " entry"
+msgid_plural " entries"
+msgstr[0] " ynfier"
+msgstr[1] " ynfieren"
+
+#: configdialog.cpp:248
+#, kde-format
+msgid "Advanced Settings"
+msgstr "Avansearre ynstellings"
+
+#: configdialog.cpp:272
+#, kde-format
+msgctxt "General Config"
+msgid "General"
+msgstr "Algemien"
+
+#: configdialog.cpp:272
+#, fuzzy, kde-format
+#| msgid "General Config"
+msgid "General Configuration"
+msgstr "Algemiene konfiguraasje"
+
+#: configdialog.cpp:273
+#, kde-format
+msgctxt "Actions Config"
+msgid "Actions"
+msgstr "Aksjes"
+
+#: configdialog.cpp:273
+#, fuzzy, kde-format
+#| msgid "Actions Config"
+msgid "Actions Configuration"
+msgstr "Aksjes-konfiguraasje"
+
+#: configdialog.cpp:277
+#, kde-format
+msgctxt "Shortcuts Config"
+msgid "Shortcuts"
+msgstr "Fluchtoetsen"
+
+#: configdialog.cpp:277
+#, fuzzy, kde-format
+#| msgid "Shortcuts Config"
+msgid "Shortcuts Configuration"
+msgstr "Fluchtoetsen-konfiguraasje"
+
+#: configdialog.cpp:335
+#, kde-format
+msgid "D&isable Actions for Windows of Type WM_CLASS"
+msgstr "Aksjes útsette foar de finsters fan &it type WM_CLASS"
+
+#: configdialog.cpp:344
+#, kde-format
+msgid ""
+"<qt>This lets you specify windows in which Klipper should not invoke "
+"\"actions\". Use<br /><br /><center><b>xprop | grep WM_CLASS</b></"
+"center><br />in a terminal to find out the WM_CLASS of a window. Next, click "
+"on the window you want to examine. The first string it outputs after the "
+"equal sign is the one you need to enter here.</qt>"
+msgstr ""
+"<qt>Hjir kinne jo de finsters opjaan wêryn klipper gjin<br />\"aksjes\" yn "
+"útfiere mei. Brûk<br /> <br /><center><b>xprop | grep WM_CLASS</b></center> "
+"<br />yn in terminal om de WM_CLASS fan in finster op te sykjen.<br /"
+">Fierdergean klikke jo op it finster dat jo ûndersykje wolle. De <br /"
+">earste tekenrige dy it útfiert nei it '='-teken is dyjinge<br />dy jo hjir "
+"ynfiere moatte.</qt>"
+
+#: editactiondialog.cpp:41
+#, kde-format
+msgid "Ignore"
+msgstr "Negearje"
+
+#: editactiondialog.cpp:43
+#, kde-format
+msgid "Replace Clipboard"
+msgstr "Klamboerd ferfange"
+
+#: editactiondialog.cpp:45
+#, kde-format
+msgid "Add to Clipboard"
+msgstr "Oan klamboerd taheakje"
+
+#: editactiondialog.cpp:221
+#, kde-format
+msgid "Command"
+msgstr "Kommando"
+
+#: editactiondialog.cpp:223
+#, kde-format
+msgid "Output Handling"
+msgstr "Utfier hanneling"
+
+#: editactiondialog.cpp:265
+#, kde-format
+msgid "Action Properties"
+msgstr "Aksje eigenskippen"
+
+#: editactiondialog.cpp:370
+#, kde-format
+msgid "new command"
+msgstr "nij kommando"
+
+#: editactiondialog.cpp:370
+#, kde-format
+msgid "Command Description"
+msgstr "Kommando beskriuwing"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: editactiondialog.ui:20
+#, kde-format
+msgid "Action properties:"
+msgstr "Aksje eigenskippen:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: editactiondialog.ui:42
+#, kde-format
+msgid "Regular expression:"
+msgstr "Reguliere ekspresje:"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: editactiondialog.ui:52
+#, kde-format
+msgid "Description:"
+msgstr "Beskriuwing:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: editactiondialog.ui:62
+#, kde-format
+msgid "Automatic:"
+msgstr "Automatysk:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: editactiondialog.ui:87
+#, kde-format
+msgid "List of commands for this action:"
+msgstr "Opsomming fan kommando's foar dizze aksje:"
+
+#. i18n: ectx: property (text), widget (QPushButton, pbAddCommand)
+#: editactiondialog.ui:144
+#, kde-format
+msgid "Add Command"
+msgstr "Kommando taheakje"
+
+#. i18n: ectx: property (text), widget (QPushButton, pbRemoveCommand)
+#: editactiondialog.ui:151
+#, kde-format
+msgid "Remove Command"
+msgstr "Kommando fuortsmite"
+
+#. i18n: ectx: property (toolTip), widget (QTableView, twCommandList)
+#: editactiondialog.ui:176
+#, kde-format
+msgid "Double-click an item to edit"
+msgstr "Dûbel klikke op in item om it te bewurkjen"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_KeepClipboardContents)
+#: generalconfig.ui:17
+#, kde-format
+msgid "Save clipboard contents on exit"
+msgstr "Klamboerdynhâld bewarje by it utgean"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_PreventEmptyClipboard)
+#. i18n: ectx: label, entry (PreventEmptyClipboard), group (General)
+#: generalconfig.ui:24 klipper.kcfg:16
+#, kde-format
+msgid "Prevent empty clipboard"
+msgstr "Foarkom in leech klamboerd"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_IgnoreImages)
+#. i18n: ectx: label, entry (IgnoreImages), group (General)
+#: generalconfig.ui:31 klipper.kcfg:21
+#, kde-format
+msgid "Ignore images"
+msgstr "Ofbyldings negearje"
+
+#. i18n: ectx: property (title), widget (QGroupBox, selection_group)
+#: generalconfig.ui:38
+#, kde-format
+msgid "Selection and Clipboard"
+msgstr "Seleksje en klamboerd"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_IgnoreSelection)
+#: generalconfig.ui:44
+#, kde-format
+msgid "Ignore selection"
+msgstr "Seleksje negearje"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_SelectionTextOnly)
+#: generalconfig.ui:51
+#, kde-format
+msgid "Text selection only"
+msgstr "Tekst seleksje allinne"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_SyncClipboards)
+#: generalconfig.ui:58
+#, kde-format
+msgid "Synchronize contents of the clipboard and the selection"
+msgstr "Ynhâld fan it klamboerd en de seleksje syngronisearje"
+
+#. i18n: ectx: property (text), widget (QLabel, timeout_label)
+#: generalconfig.ui:68
+#, kde-format
+msgid "Timeout for action popups:"
+msgstr "Tiidslimyt foar alsje popups:"
+
+#. i18n: ectx: property (text), widget (QLabel, history_size_label)
+#: generalconfig.ui:82
+#, kde-format
+msgid "Clipboard history size:"
+msgstr "Klamboerdskiednis grutte:"
+
+#: historyimageitem.cpp:51
+#, kde-format
+msgid "%1x%2 %3bpp"
+msgstr ""
+
+#: klipper.cpp:129
+#, kde-format
+msgid "Enable Clipboard Actions"
+msgstr "Klamboer aksjes ynskeakelje"
+
+#: klipper.cpp:152
+#, kde-format
+msgid "C&lear Clipboard History"
+msgstr "Klamboerdskiednis &leechje"
+
+#: klipper.cpp:159
+#, kde-format
+msgid "&Configure Klipper..."
+msgstr "&Klipper ynstelle..."
+
+#: klipper.cpp:164
+#, fuzzy, kde-format
+#| msgid "&Quit"
+msgctxt "@item:inmenu Quit Klipper"
+msgid "&Quit"
+msgstr "&Ofslúte"
+
+#: klipper.cpp:168
+#, kde-format
+msgid "Manually Invoke Action on Current Clipboard"
+msgstr "Mei de hân in aksje op it hjoeddeiske klamboerd útfiere"
+
+#: klipper.cpp:175
+#, kde-format
+msgid "&Edit Contents..."
+msgstr "B&ewurkje ynhâld"
+
+#: klipper.cpp:183
+#, kde-format
+msgid "&Show Barcode..."
+msgstr ""
+
+#: klipper.cpp:191
+#, kde-format
+msgid "Next History Item"
+msgstr "Folgend skiednis item"
+
+#: klipper.cpp:195
+#, kde-format
+msgid "Previous History Item"
+msgstr "Foarich skiednis item"
+
+#: klipper.cpp:201
+#, fuzzy, kde-format
+#| msgid "Popup at mouse position"
+msgid "Open Klipper at Mouse Position"
+msgstr "Popup by mûsposysje"
+
+#: klipper.cpp:483
+#, fuzzy, kde-format
+#| msgid ""
+#| "You can enable URL actions later by right-clicking on the Klipper icon "
+#| "and selecting 'Enable Actions'"
+msgid ""
+"You can enable URL actions later by left-clicking on the Klipper icon and "
+"selecting 'Enable Clipboard Actions'"
+msgstr ""
+"Jo kinne letter de URL-adres-aksjes oansette troch mei de rjochtermûsknop op "
+"it byldkaike fan klipper te klikken en de opsje 'Aksjes oansete' te "
+"selektearjen."
+
+#: klipper.cpp:517
+#, kde-format
+msgid "Should Klipper start automatically when you login?"
+msgstr "Moat klipper automatysk úteinsette as jo ynlogge?"
+
+#: klipper.cpp:518
+#, kde-format
+msgid "Automatically Start Klipper?"
+msgstr "Automatysk Klipper útfiere?"
+
+#: klipper.cpp:519
+#, kde-format
+msgid "Start"
+msgstr "Begjinne"
+
+#: klipper.cpp:520
+#, kde-format
+msgid "Do Not Start"
+msgstr "Net begjinne"
+
+#: klipper.cpp:867
+#, kde-format
+msgid "Edit Contents"
+msgstr "Bewurkje ynhâld"
+
+#: klipper.cpp:934
+#, kde-format
+msgid "Mobile Barcode"
+msgstr ""
+
+#: klipper.cpp:981
+#, kde-format
+msgid "Really delete entire clipboard history?"
+msgstr "Totale klamboerdskiednis wiskje?"
+
+#: klipper.cpp:982
+#, kde-format
+msgid "Delete clipboard history?"
+msgstr "Klamboerdskiednis wiskje?"
+
+#: klipper.cpp:998 klipper.cpp:1007
+#, kde-format
+msgid "Clipboard history"
+msgstr "Klamboerdskiednis"
+
+#: klipper.cpp:1024
+#, kde-format
+msgid "up"
+msgstr "omheech"
+
+#: klipper.cpp:1031
+#, kde-format
+msgid "current"
+msgstr "aktive"
+
+#: klipper.cpp:1038
+#, kde-format
+msgid "down"
+msgstr "omleech"
+
+#. i18n: ectx: label, entry (Version), group (General)
+#: klipper.kcfg:9
+#, kde-format
+msgid "Klipper version"
+msgstr "Klipper ferzje"
+
+#. i18n: ectx: label, entry (KeepClipboardContents), group (General)
+#: klipper.kcfg:12
+#, kde-format
+msgid "Keep clipboard contents"
+msgstr "Klamboerd ynhâld behâlde"
+
+#. i18n: ectx: whatsthis, entry (PreventEmptyClipboard), group (General)
+#: klipper.kcfg:18
+#, kde-format
+msgid ""
+"Selecting this option has the effect, that the clipboard can never be "
+"emptied. E.g. when an application exits, the clipboard would usually be "
+"emptied."
+msgstr ""
+"As jo dizze opsje selektearje, dan kin it klamboerd nea lege wurden. "
+"Gewoanwei sprutsen wurdt, as in tapassing sluten wurd, it klamboerd lege."
+
+#. i18n: ectx: label, entry (IgnoreSelection), group (General)
+#: klipper.kcfg:25
+#, kde-format
+msgid "Ignore Selection"
+msgstr "Seleksje negearje"
+
+#. i18n: ectx: whatsthis, entry (IgnoreSelection), group (General)
+#: klipper.kcfg:27
+#, fuzzy, kde-format
+#| msgid ""
+#| "<qt>When an area of the screen is selected with mouse or keyboard, this "
+#| "is called \"the selection\". If this option is set, the selection is not "
+#| "entered into the clipboard history, though it is still available for "
+#| "pasting using the middle mouse button.</qt>"
+msgid ""
+"When an area of the screen is selected with mouse or keyboard, this is "
+"called \"the selection\".<br/>If this option is set, the selection is not "
+"entered into the clipboard history, though it is still available for pasting "
+"using the middle mouse button."
+msgstr ""
+"<qt>As in gebiet fan it skerm is selektearre mei de mûs of toetseboerd, "
+"wurdt dit \"de seleksje\" neamd. At dizze opsje ynskeakele is sil de "
+"seleksje net ynfierd wurde yn de klamboerdskiednis, mar is it wol beskikber "
+"foar plakken mei de middelste mûsknop</qt>"
+
+#. i18n: ectx: label, entry (SyncClipboards), group (General)
+#: klipper.kcfg:34
+#, kde-format
+msgid "Synchronize clipboard and selection"
+msgstr "Klamboerd en seleksje syngronisearje"
+
+#. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
+#: klipper.kcfg:36
+#, fuzzy, kde-format
+#| msgid ""
+#| "<qt>When an area of the screen is selected with mouse or keyboard, this "
+#| "is called \"the selection\". If this option is selected, the selection "
+#| "and the clipboard is kept the same, so that anything in the selection is "
+#| "immediately available for pasting elsewhere using any method, including "
+#| "the traditional middle mouse button. Otherwise, the selection is recorded "
+#| "in the clipboard history, but the selection can only be pasted using the "
+#| "middle mouse button. Also see the 'Ignore Selection' option.</qt>"
+msgid ""
+"When an area of the screen is selected with mouse or keyboard, this is "
+"called \"the selection\".<br/>If this option is selected, the selection and "
+"the clipboard is kept the same, so that anything in the selection is "
+"immediately available for pasting elsewhere using any method, including the "
+"traditional middle mouse button. Otherwise, the selection is recorded in the "
+"clipboard history, but the selection can only be pasted using the middle "
+"mouse button. Also see the 'Ignore Selection' option."
+msgstr ""
+"<qt>As in gebiet fan it skerm is selektearre mei de mûs of toetseboerd, "
+"wurdt dit \"de seleksje\" neamd. At dizze opsje selektearre is, sil de "
+"seleksje en it klamboerd itselde bliuwe, sadat alles yn de seleksje daliks "
+"beskikber is om te plakken, mei hokfoar metoade dan ek, ek mei de middelste "
+"mûsknop. Oars, is de seleksje opnaam yn de klamboerdskiednis, mar kin de "
+"seleksje allinne plakt wurde brûkende de middelste mûsknop. Sjoh ek by de "
+"opsje 'Seleksje negearje'</qt>"
+
+#. i18n: ectx: label, entry (SelectionTextOnly), group (General)
+#: klipper.kcfg:39
+#, kde-format
+msgid "Selection text only"
+msgstr "Seleksje tekst allinne"
+
+#. i18n: ectx: whatsthis, entry (SelectionTextOnly), group (General)
+#: klipper.kcfg:41
+#, fuzzy, kde-format
+#| msgid ""
+#| "<qt>When an area of the screen is selected with mouse or keyboard, this "
+#| "is called \"the selection\". If this option is selected, only text "
+#| "selections are stored in the history, while images and other selections "
+#| "are not.</qt>"
+msgid ""
+"When an area of the screen is selected with mouse or keyboard, this is "
+"called \"the selection\".<br/>If this option is selected, only text "
+"selections are stored in the history, while images and other selections are "
+"not."
+msgstr ""
+"<qt>As in gebiet fan it skerm is selektearre mei de mûs of toetseboerd, "
+"wurdt dit \"de seleksje\" neamd. At dizze opsje selektearre is, sil allinne "
+"tekst seleksjes bewarre wurde yn de skiednis, wylst ôfbyldings en oare "
+"seleksjes net.</qt>"
+
+#. i18n: ectx: label, entry (UseGUIRegExpEditor), group (General)
+#: klipper.kcfg:44
+#, kde-format
+msgid "Use graphical regexp editor"
+msgstr "Brûk grafyske regexp bewurker"
+
+#. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
+#: klipper.kcfg:48
+#, kde-format
+msgid "URL grabber enabled"
+msgstr "URL-adres gryper ynskeakele"
+
+#. i18n: ectx: label, entry (NoActionsForWM_CLASS), group (General)
+#: klipper.kcfg:53
+#, kde-format
+msgid "No actions for WM_CLASS"
+msgstr "Gjin aksjes foar WM_CLASS"
+
+#. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
+#: klipper.kcfg:56
+#, kde-format
+msgid "Timeout for action popups (seconds)"
+msgstr "Tiidslimyt foar aksje popups (sekonden)"
+
+#. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
+#: klipper.kcfg:60
+#, kde-format
+msgid "A value of 0 disables the timeout"
+msgstr "0 as wearde set it tiidlimyt út"
+
+#. i18n: ectx: label, entry (MaxClipItems), group (General)
+#: klipper.kcfg:63
+#, kde-format
+msgid "Clipboard history size"
+msgstr "Klamboerdskiednis grutte"
+
+#. i18n: ectx: label, entry (ActionList), group (General)
+#: klipper.kcfg:69
+#, kde-format
+msgid "Dummy entry for indicating changes in an action's tree widget"
+msgstr ""
+"Loaze ynfier om feroarings oan te jaan yn in aksje beamstruktuur widget"
+
+#. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
+#: klipper.kcfg:75
+#, kde-format
+msgid "Strip whitespace when executing an action"
+msgstr "Wytromte fuortsmite by it útfoeren fan aksjes"
+
+#. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
+#: klipper.kcfg:77
+#, kde-format
+msgid ""
+"Sometimes, the selected text has some whitespace at the end, which, if "
+"loaded as URL in a browser would cause an error. Enabling this option "
+"removes any whitespace at the beginning or end of the selected string (the "
+"original clipboard contents will not be modified)."
+msgstr ""
+"Soms befettet de selektearre tekst wytromten (spaasjes) oan de úteinen, "
+"hokker, as jo it as URL-adres yn in blêder wurdt laden, liede kin ta "
+"flatermeldingen. Dizze opsje sourget derfoar dat eventuele wytromten oan it "
+"begjin of ein fan de tekenrige fuortsmiten wurde (de orizjinele "
+"klamboerdynhâld bliuwt ûnferoare). "
+
+#. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
+#: klipper.kcfg:80
+#, kde-format
+msgid "Replay action in history"
+msgstr "Aksje yn skiednis nochris útfiere"
+
+#: klipperpopup.cpp:72
+#, kde-format
+msgid "<empty clipboard>"
+msgstr "<leech klamboerd>"
+
+#: klipperpopup.cpp:73
+#, kde-format
+msgid "<no matches>"
+msgstr "<gjin oerienkomsten>"
+
+#: klipperpopup.cpp:121
+#, kde-format
+msgid "Klipper - Clipboard Tool"
+msgstr "Klipper - klamboerdskiednis"
+
+#: klipperpopup.cpp:125
+#, kde-format
+msgid "Search..."
+msgstr ""
+
+#: klipperpopup.cpp:134 main.cpp:43
+#, kde-format
+msgid "KDE cut & paste history utility"
+msgstr "KDE Klamboerdskiednis"
+
+#: main.cpp:41 tray.cpp:35
+#, kde-format
+msgid "Klipper"
+msgstr "Klipper"
+
+#: main.cpp:45
+#, fuzzy, kde-format
+#| msgid ""
+#| "(c) 1998, Andrew Stanley-Jones\n"
+#| "1998-2002, Carsten Pfeiffer\n"
+#| "2001, Patrick Dubroy"
+msgid ""
+"(c) 1998, Andrew Stanley-Jones\n"
+"1998-2002, Carsten Pfeiffer\n"
+"2001, Patrick Dubroy"
+msgstr ""
+"(c) 1998, Andrew Stanley-Jones\n"
+"1998-2002, Carsten Pfeiffer\n"
+"2001, Patrick Dubroy"
+
+#: main.cpp:48
+#, kde-format
+msgid "Carsten Pfeiffer"
+msgstr "Carsten Pfeiffer"
+
+#: main.cpp:48
+#, kde-format
+msgid "Author"
+msgstr "Skriuwer"
+
+#: main.cpp:50
+#, kde-format
+msgid "Andrew Stanley-Jones"
+msgstr "Andrew Stanley-Jones"
+
+#: main.cpp:50
+#, kde-format
+msgid "Original Author"
+msgstr "Oarspronklike skriuwer"
+
+#: main.cpp:52
+#, kde-format
+msgid "Patrick Dubroy"
+msgstr "Patrick Dubroy"
+
+#: main.cpp:52
+#, kde-format
+msgid "Contributor"
+msgstr "Stiper"
+
+#: main.cpp:54
+#, kde-format
+msgid "Luboš Luňák"
+msgstr "Luboš Luňák"
+
+#: main.cpp:54
+#, kde-format
+msgid "Bugfixes and optimizations"
+msgstr "Bugreparaasjes en optimalisaasjes"
+
+#: main.cpp:56
+#, kde-format
+msgid "Esben Mose Hansen"
+msgstr "Esben Mose Hansen"
+
+#: main.cpp:56
+#, fuzzy, kde-format
+#| msgid "Maintainer"
+msgid "Previous Maintainer"
+msgstr "Underhâlder"
+
+#: main.cpp:58
+#, kde-format
+msgid "Martin Gräßlin"
+msgstr ""
+
+#: main.cpp:58
+#, kde-format
+msgid "Maintainer"
+msgstr "Underhâlder"
+
+#: main.cpp:60
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Berend Ytsma"
+
+#: main.cpp:60
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "berendy@bigfoot.com"
+
+#: popupproxy.cpp:157
+#, kde-format
+msgid "&More"
+msgstr "&Mear"
+
+#: tray.cpp:38
+#, kde-format
+msgid "Clipboard Contents"
+msgstr "Klamboerd ynhâld"
+
+#: tray.cpp:38 tray.cpp:54
+#, kde-format
+msgid "Clipboard is empty"
+msgstr "Klamboerd is leech"
+
+#: urlgrabber.cpp:185
+#, kde-format
+msgid "%1 - Actions For: %2"
+msgstr "%1 - Aksjes foar: %2"
+
+#: urlgrabber.cpp:212
+#, kde-format
+msgid "Disable This Popup"
+msgstr "Dizze popup útsette"
+
+#: urlgrabber.cpp:218
+#, kde-format
+msgid "&Cancel"
+msgstr "Ofbre&kke"

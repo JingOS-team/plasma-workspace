@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2019 Konrad Materka <materka@gmail.com>                 *
+ *   Copyright (C) 2020 Konrad Materka <materka@gmail.com>                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -20,17 +20,28 @@
 #ifndef SYSTEMTRAYMODEL_H
 #define SYSTEMTRAYMODEL_H
 
-#include <QStandardItemModel>
+#include <QAbstractListModel>
+#include <QList>
 
+#include <KCoreAddons/KPluginMetaData>
 #include <KItemModels/KConcatenateRowsProxyModel>
-#include <Plasma/DataEngineConsumer>
 #include <Plasma/DataEngine>
+#include <Plasma/DataEngineConsumer>
 
-namespace Plasma {
-    class Applet;
+namespace Plasma
+{
+class Applet;
+class PluginLoader;
 }
 
-class BaseModel: public QStandardItemModel
+class PlasmoidRegistry;
+class SystemTraySettings;
+
+/**
+ * @brief Base class for models used in System Tray.
+ *
+ */
+class BaseModel : public QAbstractListModel
 {
     Q_OBJECT
 public:
@@ -41,53 +52,76 @@ public:
         Category,
         Status,
         EffectiveStatus,
-        LastBaseRole
+        LastBaseRole,
     };
 
-    explicit BaseModel(QObject *parent = nullptr);
+    explicit BaseModel(QPointer<SystemTraySettings> settings, QObject *parent = nullptr);
 
     QHash<int, QByteArray> roleNames() const override;
 
-public slots:
-    void onConfigurationChanged(const KConfigGroup &config);
+private Q_SLOTS:
+    void onConfigurationChanged();
 
-private slots:
-    void onRowsInserted(const QModelIndex &parent, int first, int last);
-    void onDataChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight, const QVector<int> &roles);
+protected:
+    Plasma::Types::ItemStatus calculateEffectiveStatus(bool canRender, Plasma::Types::ItemStatus status, QString itemId) const;
 
 private:
-    void updateEffectiveStatus(QStandardItem *dataItem);
-    Plasma::Types::ItemStatus calculateEffectiveStatus(QStandardItem *dataItem);
-    Plasma::Types::ItemStatus readStatus(QStandardItem *dataItem) const;
+    QPointer<SystemTraySettings> m_settings;
 
     bool m_showAllItems;
     QStringList m_shownItems;
     QStringList m_hiddenItems;
 };
 
-class PlasmoidModel: public BaseModel
+/**
+ * @brief Data model for plasmoids/applets.
+ */
+class PlasmoidModel : public BaseModel
 {
     Q_OBJECT
 public:
     enum class Role {
         Applet = static_cast<int>(BaseModel::BaseRole::LastBaseRole) + 1,
-        HasApplet
+        HasApplet,
     };
 
-    explicit PlasmoidModel(QObject *parent = nullptr);
+    explicit PlasmoidModel(QPointer<SystemTraySettings> settings, QPointer<PlasmoidRegistry> plasmoidRegistry, QObject *parent = nullptr);
 
+    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
+    int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     QHash<int, QByteArray> roleNames() const override;
 
-public slots:
+public Q_SLOTS:
     void addApplet(Plasma::Applet *applet);
     void removeApplet(Plasma::Applet *applet);
+
+private Q_SLOTS:
+    void appendRow(const KPluginMetaData &pluginMetaData);
+    void removeRow(const QString &pluginId);
+
+private:
+    struct Item {
+        KPluginMetaData pluginMetaData;
+        Plasma::Applet *applet = nullptr;
+    };
+
+    int indexOfPluginId(const QString &pluginId) const;
+
+    QPointer<PlasmoidRegistry> m_plasmoidRegistry;
+
+    QVector<Item> m_items;
 };
 
-class StatusNotifierModel : public BaseModel, public Plasma::DataEngineConsumer {
+/**
+ * @brief Data model for Status Notifier Items (SNI).
+ */
+class StatusNotifierModel : public BaseModel, public Plasma::DataEngineConsumer
+{
     Q_OBJECT
 public:
     enum class Role {
         DataEngineSource = static_cast<int>(BaseModel::BaseRole::LastBaseRole) + 100,
+        Service,
         AttentionIcon,
         AttentionIconName,
         AttentionMovieName,
@@ -102,28 +136,35 @@ public:
         Title,
         ToolTipSubTitle,
         ToolTipTitle,
-        WindowId
+        WindowId,
     };
 
-    StatusNotifierModel(QObject* parent);
+    StatusNotifierModel(QPointer<SystemTraySettings> settings, QObject *parent = nullptr);
 
+    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
+    int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     QHash<int, QByteArray> roleNames() const override;
 
-    Plasma::Service *serviceForSource(const QString &source);
-
-public slots:
+public Q_SLOTS:
     void addSource(const QString &source);
     void removeSource(const QString &source);
     void dataUpdated(const QString &sourceName, const Plasma::DataEngine::Data &data);
 
 private:
-    void updateItemData(QStandardItem *dataItem, const Plasma::DataEngine::Data &data, const Role role);
+    struct Item {
+        QString source;
+        Plasma::Service *service = nullptr;
+    };
+
+    int indexOfSource(const QString &source) const;
 
     Plasma::DataEngine *m_dataEngine = nullptr;
-    QStringList m_sources;
-    QHash<QString, Plasma::Service *> m_services;
+    QVector<Item> m_items;
 };
 
+/**
+ * @brief Cantenating model for system tray, that can expose multiple data models as one.
+ */
 class SystemTrayModel : public KConcatenateRowsProxyModel
 {
     Q_OBJECT

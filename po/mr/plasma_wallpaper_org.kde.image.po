@@ -1,0 +1,225 @@
+# translation of plasma_wallpaper_image.po to marathi
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Sandeep Shedmake <sandeep.shedmake@gmail.com>, 2009.
+# Chetan Khona <chetan@kompkin.com>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_wallpaper_image\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-02-02 02:56+0100\n"
+"PO-Revision-Date: 2013-02-05 12:51+0530\n"
+"Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
+"Language-Team: American English <kde-i18n-doc@kde.org>\n"
+"Language: mr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: image.cpp:245
+#, kde-format
+msgid "Recommended wallpaper file"
+msgstr ""
+
+#: image.cpp:406
+#, kde-format
+msgid "Directory with the wallpaper to show slides from"
+msgstr ""
+
+#: image.cpp:708
+#, fuzzy, kde-format
+#| msgid "Open Wallpaper Image"
+msgid "Open Image"
+msgstr "वॉलपेपर प्रतिमा उघडा"
+
+#: image.cpp:708
+#, fuzzy, kde-format
+#| msgid "Images"
+msgid "Image Files"
+msgstr "प्रतिमा"
+
+#: imagepackage/contents/ui/config.qml:103
+#, fuzzy, kde-format
+#| msgid "&Positioning:"
+msgid "Positioning:"
+msgstr "स्थान (&P):"
+
+#: imagepackage/contents/ui/config.qml:106
+#, fuzzy, kde-format
+#| msgid "Scaled & Cropped"
+msgid "Scaled and Cropped"
+msgstr "मापात केलेले व कापलेले"
+
+#: imagepackage/contents/ui/config.qml:110
+#, kde-format
+msgid "Scaled"
+msgstr "मापात केलेले"
+
+#: imagepackage/contents/ui/config.qml:114
+#, fuzzy, kde-format
+#| msgid "Scaled, keep proportions"
+msgid "Scaled, Keep Proportions"
+msgstr "मापात केलेले, सप्रमाण ठेवा"
+
+#: imagepackage/contents/ui/config.qml:118
+#, kde-format
+msgid "Centered"
+msgstr "केंद्रीत"
+
+#: imagepackage/contents/ui/config.qml:122
+#, kde-format
+msgid "Tiled"
+msgstr "फरसबंदी केलेले"
+
+#: imagepackage/contents/ui/config.qml:149
+#, kde-format
+msgid "Order:"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:152
+#, kde-format
+msgid "Random"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:156
+#, kde-format
+msgid "A to Z"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:160
+#, kde-format
+msgid "Z to A"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:164
+#, kde-format
+msgid "Date modified (newest first)"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:168
+#, kde-format
+msgid "Date modified (oldest first)"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:195
+#, kde-format
+msgid "Background:"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:196
+#, kde-format
+msgid "Blur"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:205
+#, kde-format
+msgid "Solid color"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:215
+#, kde-format
+msgid "Select Background Color"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:237
+#, fuzzy, kde-format
+#| msgid "C&hange images every:"
+msgid "Change every:"
+msgstr "प्रतिमा बदला (&H):"
+
+#: imagepackage/contents/ui/config.qml:247
+#, kde-format
+msgid "%1 hour"
+msgid_plural "%1 hours"
+msgstr[0] ""
+msgstr[1] ""
+
+#: imagepackage/contents/ui/config.qml:266
+#, kde-format
+msgid "%1 minute"
+msgid_plural "%1 minutes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: imagepackage/contents/ui/config.qml:285
+#, kde-format
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] ""
+msgstr[1] ""
+
+#: imagepackage/contents/ui/config.qml:298
+#, fuzzy, kde-format
+#| msgid "&Remove Folder"
+msgid "Folders"
+msgstr "संचयीका काढून टाका (&R)"
+
+#: imagepackage/contents/ui/config.qml:346
+#, fuzzy, kde-format
+#| msgid "&Remove Folder"
+msgid "Remove Folder"
+msgstr "संचयीका काढून टाका (&R)"
+
+#: imagepackage/contents/ui/config.qml:351
+#, fuzzy, kde-format
+#| msgid "&Remove Folder"
+msgid "Open Folder"
+msgstr "संचयीका काढून टाका (&R)"
+
+#: imagepackage/contents/ui/config.qml:361
+#, kde-format
+msgid "There are no wallpaper locations configured"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:374
+#, fuzzy, kde-format
+#| msgid "&Add Folder..."
+msgid "Add Folder..."
+msgstr "संचयीका जोडा (&A)..."
+
+#: imagepackage/contents/ui/config.qml:380
+#: imagepackage/contents/ui/config.qml:472
+#, kde-format
+msgid "Get New Wallpapers..."
+msgstr "नवीन वॉलपेपर प्राप्त करा..."
+
+#: imagepackage/contents/ui/config.qml:420
+#, fuzzy, kde-format
+#| msgid "Use system-installed wallpapers in slideshow"
+msgid "There are no wallpapers in this slideshow"
+msgstr "स्लाइडशो मध्ये प्रणालीत प्रतिष्ठापीत केलेले वॉलपेपर्स वापरा"
+
+#: imagepackage/contents/ui/config.qml:466
+#, kde-format
+msgid "Add Image..."
+msgstr ""
+
+#: imagepackage/contents/ui/main.qml:67
+#, kde-format
+msgid "Open Wallpaper Image"
+msgstr "वॉलपेपर प्रतिमा उघडा"
+
+#: imagepackage/contents/ui/main.qml:68
+#, kde-format
+msgid "Next Wallpaper Image"
+msgstr "पुढील वॉलपेपर प्रतिमा"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:46
+#, kde-format
+msgid "Open Containing Folder"
+msgstr ""
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:52
+#, fuzzy, kde-format
+#| msgid "&System wallpapers:"
+msgid "Restore wallpaper"
+msgstr "प्रणाली वॉलपेपर्स (&S):"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:57
+#, fuzzy, kde-format
+#| msgid "&System wallpapers:"
+msgid "Remove Wallpaper"
+msgstr "प्रणाली वॉलपेपर्स (&S):"

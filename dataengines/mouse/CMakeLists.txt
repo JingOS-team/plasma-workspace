@@ -10,15 +10,15 @@ endif ()
 
 add_library(plasma_engine_mouse MODULE ${mouse_engine_SRCS})
 target_link_libraries(plasma_engine_mouse
-    Qt5::Widgets
-    Qt5::X11Extras
+    Qt::Widgets
+    Qt::X11Extras
     KF5::Plasma
     KF5::WindowSystem
-    ${X11_LIBRARIES}
+    X11::X11
 )
 
 if (X11_Xfixes_FOUND)
-	target_link_libraries(plasma_engine_mouse ${X11_Xfixes_LIB})
+	target_link_libraries(plasma_engine_mouse X11::Xfixes)
 endif ()
 
 kcoreaddons_desktop_to_json(plasma_engine_mouse plasma-dataengine-mouse.desktop)

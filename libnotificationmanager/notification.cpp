@@ -23,12 +23,8 @@
 #include "notification.h"
 #include "notification_p.h"
 
-#include "notifications.h"
-
 #include <QDBusArgument>
-#include <QDateTime>
 #include <QDebug>
-#include <QImage>
 #include <QImageReader>
 #include <QRegularExpression>
 #include <QXmlStreamReader>
@@ -44,7 +40,6 @@ using namespace NotificationManager;
 
 Notification::Private::Private()
 {
-
 }
 
 Notification::Private::~Private() = default;
@@ -95,7 +90,7 @@ QString Notification::Private::sanitize(const QString &text)
                 if (url.isLocalFile()) {
                     out.writeAttribute(QStringLiteral("src"), src);
                 } else {
-                    //image denied for security reasons! Do not copy the image src here!
+                    // image denied for security reasons! Do not copy the image src here!
                 }
 
                 out.writeAttribute(QStringLiteral("alt"), alt);
@@ -115,15 +110,14 @@ QString Notification::Private::sanitize(const QString &text)
 
         if (r.tokenType() == QXmlStreamReader::Characters) {
             const auto text = r.text().toString();
-            out.writeCharacters(text); //this auto escapes chars -> HTML entities
+            out.writeCharacters(text); // this auto escapes chars -> HTML entities
         }
     }
     out.writeEndDocument();
 
     if (r.hasError()) {
-        qCWarning(NOTIFICATIONMANAGER) << "Notification to send to backend contains invalid XML: "
-                                       << r.errorString() << "line" << r.lineNumber()
-                                       << "col" << r.columnNumber();
+        qCWarning(NOTIFICATIONMANAGER) << "Notification to send to backend contains invalid XML: " << r.errorString() << "line" << r.lineNumber() << "col"
+                                       << r.columnNumber();
     }
 
     // The Text.StyledText format handles only html3.2 stuff and &apos; is html4 stuff
@@ -137,17 +131,17 @@ QImage Notification::Private::decodeNotificationSpecImageHint(const QDBusArgumen
 {
     int width, height, rowStride, hasAlpha, bitsPerSample, channels;
     QByteArray pixels;
-    char* ptr;
-    char* end;
+    char *ptr;
+    char *end;
 
     arg.beginStructure();
     arg >> width >> height >> rowStride >> hasAlpha >> bitsPerSample >> channels >> pixels;
     arg.endStructure();
 
-    #define SANITY_CHECK(condition) \
-    if (!(condition)) { \
-        qCWarning(NOTIFICATIONMANAGER) << "Image decoding sanity check failed on" << #condition; \
-        return QImage(); \
+#define SANITY_CHECK(condition)                                                                                                                                \
+    if (!(condition)) {                                                                                                                                        \
+        qCWarning(NOTIFICATIONMANAGER) << "Image decoding sanity check failed on" << #condition;                                                               \
+        return QImage();                                                                                                                                       \
     }
 
     SANITY_CHECK(width > 0);
@@ -156,26 +150,24 @@ QImage Notification::Private::decodeNotificationSpecImageHint(const QDBusArgumen
     SANITY_CHECK(height < 2048);
     SANITY_CHECK(rowStride > 0);
 
-    #undef SANITY_CHECK
+#undef SANITY_CHECK
 
-    auto copyLineRGB32 = [](QRgb* dst, const char* src, int width)
-    {
-        const char* end = src + width * 3;
-        for (; src != end; ++dst, src+=3) {
+    auto copyLineRGB32 = [](QRgb *dst, const char *src, int width) {
+        const char *end = src + width * 3;
+        for (; src != end; ++dst, src += 3) {
             *dst = qRgb(src[0], src[1], src[2]);
         }
     };
 
-    auto copyLineARGB32 = [](QRgb* dst, const char* src, int width)
-    {
-        const char* end = src + width * 4;
-        for (; src != end; ++dst, src+=4) {
+    auto copyLineARGB32 = [](QRgb *dst, const char *src, int width) {
+        const char *end = src + width * 4;
+        for (; src != end; ++dst, src += 4) {
             *dst = qRgba(src[0], src[1], src[2], src[3]);
         }
     };
 
     QImage::Format format = QImage::Format_Invalid;
-    void (*fcn)(QRgb*, const char*, int) = nullptr;
+    void (*fcn)(QRgb *, const char *, int) = nullptr;
     if (bitsPerSample == 8) {
         if (channels == 4) {
             format = QImage::Format_ARGB32;
@@ -186,19 +178,20 @@ QImage Notification::Private::decodeNotificationSpecImageHint(const QDBusArgumen
         }
     }
     if (format == QImage::Format_Invalid) {
-        qCWarning(NOTIFICATIONMANAGER) << "Unsupported image format (hasAlpha:" << hasAlpha << "bitsPerSample:" << bitsPerSample << "channels:" << channels << ")";
+        qCWarning(NOTIFICATIONMANAGER) << "Unsupported image format (hasAlpha:" << hasAlpha << "bitsPerSample:" << bitsPerSample << "channels:" << channels
+                                       << ")";
         return QImage();
     }
 
     QImage image(width, height, format);
     ptr = pixels.data();
     end = ptr + pixels.length();
-    for (int y=0; y<height; ++y, ptr += rowStride) {
+    for (int y = 0; y < height; ++y, ptr += rowStride) {
         if (ptr + channels * width > end) {
-            qCWarning(NOTIFICATIONMANAGER)  << "Image data is incomplete. y:" << y << "height:" << height;
+            qCWarning(NOTIFICATIONMANAGER) << "Image data is incomplete. y:" << y << "height:" << height;
             break;
         }
-        fcn((QRgb*)image.scanLine(y), ptr, width);
+        fcn((QRgb *)image.scanLine(y), ptr, width);
     }
 
     return image;
@@ -211,8 +204,7 @@ void Notification::Private::sanitizeImage(QImage &image)
     }
 
     const QSize max = maximumImageSize();
-    if (image.size().width() > max.width()
-            || image.size().height() > max.height()) {
+    if (image.size().width() > max.width() || image.size().height() > max.height()) {
         image = image.scaled(max, Qt::KeepAspectRatio, Qt::SmoothTransformation);
     }
 }
@@ -285,8 +277,7 @@ KService::Ptr Notification::Private::serviceForDesktopEntry(const QString &deskt
     if (!service) {
         const QString desktopId = desktopEntry + QLatin1String(".desktop");
         // HACK Querying for XDG lists in KServiceTypeTrader does not work, do it manually
-        const auto services = KServiceTypeTrader::self()->query(QStringLiteral("Application"),
-                                                                QStringLiteral("exist Exec and exist [X-Flatpak-RenamedFrom]"));
+        const auto services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and exist [X-Flatpak-RenamedFrom]"));
         for (auto it = services.constBegin(); it != services.constEnd() && !service; ++it) {
             const QVariant renamedFrom = (*it)->property(QStringLiteral("X-Flatpak-RenamedFrom"), QVariant::String);
             const auto names = renamedFrom.toString().split(QChar(';'));
@@ -321,8 +312,8 @@ void Notification::Private::setDesktopEntry(const QString &desktopEntry)
     if (!notifyRcName.isEmpty()) {
         // Check whether the application actually has notifications we can configure
         KConfig config(notifyRcName + QStringLiteral(".notifyrc"), KConfig::NoGlobals);
-        config.addConfigSources(QStandardPaths::locateAll(QStandardPaths::GenericDataLocation,
-                                QStringLiteral("knotifications5/") + notifyRcName + QStringLiteral(".notifyrc")));
+        config.addConfigSources(
+            QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("knotifications5/") + notifyRcName + QStringLiteral(".notifyrc")));
 
         KConfigGroup globalGroup(&config, "Global");
 
@@ -393,6 +384,8 @@ void Notification::Private::processHints(const QVariantMap &hints)
     replySubmitButtonText = hints.value(QStringLiteral("x-kde-reply-submit-button-text")).toString();
     replySubmitButtonIconName = hints.value(QStringLiteral("x-kde-reply-submit-button-icon-name")).toString();
 
+    category = hints.value(QStringLiteral("category")).toString();
+
     // Underscored hints was in use in version 1.1 of the spec but has been
     // replaced by dashed hints in version 1.2. We need to support it for
     // users of the 1.2 version of the spec.
@@ -448,10 +441,9 @@ Notification::Notification(uint id)
 Notification::Notification(const Notification &other)
     : d(new Private(*other.d))
 {
-
 }
 
-Notification::Notification(Notification &&other)
+Notification::Notification(Notification &&other) noexcept
     : d(other.d)
 {
     other.d = nullptr;
@@ -463,7 +455,7 @@ Notification &Notification::operator=(const Notification &other)
     return *this;
 }
 
-Notification &Notification::operator=(Notification &&other)
+Notification &Notification::operator=(Notification &&other) noexcept
 {
     d = other.d;
     other.d = nullptr;
@@ -734,6 +726,11 @@ QString Notification::replySubmitButtonText() const
 QString Notification::replySubmitButtonIconName() const
 {
     return d->replySubmitButtonIconName;
+}
+
+QString Notification::category() const
+{
+    return d->category;
 }
 
 bool Notification::expired() const

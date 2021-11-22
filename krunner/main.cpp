@@ -16,23 +16,24 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#include <QApplication>
 #include <KLocalizedString>
+#include <QApplication>
 
-#include <QCommandLineParser>
 #include <QAction>
-#include <QUrl>
+#include <QCommandLineParser>
+#include <QDBusConnection>
+#include <QDBusMessage>
 #include <QDebug>
 #include <QQuickWindow>
-#include <QDBusMessage>
-#include <QDBusConnection>
+#include <QSessionManager>
+#include <QUrl>
 
-#include <KAuthorized>
 #include <KAboutData>
+#include <KAuthorized>
 #include <KDBusService>
 
-#include <kdeclarative/qmlobject.h>
 #include <KQuickAddons/QtQuickSettings>
+#include <kdeclarative/qmlobject.h>
 
 #include <kworkspace.h>
 
@@ -41,7 +42,6 @@
 int main(int argc, char **argv)
 {
     QCommandLineParser parser;
-    QCoreApplication::setAttribute(Qt::AA_DisableSessionManager);
     if (!qEnvironmentVariableIsSet("PLASMA_USE_QT_SCALING")) {
         qunsetenv("QT_DEVICE_PIXEL_RATIO");
         QCoreApplication::setAttribute(Qt::AA_DisableHighDpiScaling);
@@ -59,22 +59,16 @@ int main(int argc, char **argv)
 
     KQuickAddons::QtQuickSettings::init();
 
-//     TODO: Make it a QGuiApplication once we don't depend on KDELibs4Support
-//     QGuiApplication app(argc, argv);
+    //     TODO: Make it a QGuiApplication once we don't depend on KDELibs4Support
+    //     QGuiApplication app(argc, argv);
 
-    KAboutData aboutData(QStringLiteral("krunner"),
-        i18n("krunner"),
-        QStringLiteral(PROJECT_VERSION),
-        i18n("Run Command interface"),
-        KAboutLicense::GPL);
+    KAboutData aboutData(QStringLiteral("krunner"), i18n("krunner"), QStringLiteral(PROJECT_VERSION), i18n("Run Command interface"), KAboutLicense::GPL);
 
     KAboutData::setApplicationData(aboutData);
     app.setQuitOnLastWindowClosed(false);
 
-    QCommandLineOption clipboardOption({QStringLiteral("c"), QStringLiteral("clipboard")},
-                                        i18n("Use the clipboard contents as query for KRunner"));
-    QCommandLineOption daemonOption({QStringLiteral("d"), QStringLiteral("daemon")},
-                                        i18n("Start KRunner in the background, don't show it."));
+    QCommandLineOption clipboardOption({QStringLiteral("c"), QStringLiteral("clipboard")}, i18n("Use the clipboard contents as query for KRunner"));
+    QCommandLineOption daemonOption({QStringLiteral("d"), QStringLiteral("daemon")}, i18n("Start KRunner in the background, don't show it."));
     QCommandLineOption replaceOption({QStringLiteral("replace")}, i18n("Replace an existing instance"));
 
     parser.addOption(clipboardOption);
@@ -92,6 +86,14 @@ int main(int argc, char **argv)
     }
 
     KDBusService service(KDBusService::Unique | KDBusService::StartupOption(parser.isSet(replaceOption) ? KDBusService::Replace : 0));
+
+    QGuiApplication::setFallbackSessionManagementEnabled(false);
+
+    auto disableSessionManagement = [](QSessionManager &sm) {
+        sm.setRestartHint(QSessionManager::RestartNever);
+    };
+    QObject::connect(&app, &QGuiApplication::commitDataRequest, disableSessionManagement);
+    QObject::connect(&app, &QGuiApplication::saveStateRequest, disableSessionManagement);
 
     View view;
 

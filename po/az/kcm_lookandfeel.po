@@ -1,0 +1,133 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# Xəyyam Qocayev <xxmn77@gmail.com>, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-28 02:51+0100\n"
+"PO-Revision-Date: 2021-01-29 09:44+0400\n"
+"Last-Translator: Kheyyam Gojayev <xxmn77@gmail.com>\n"
+"Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
+"Language: az\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 20.12.1\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Xəyyam Qocayev"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "xxmn77@gmail.com"
+
+#: kcm.cpp:85
+#, kde-format
+msgid "Global Theme"
+msgstr "Qlobal Mövzu"
+
+#: kcm.cpp:86 lnftool.cpp:50
+#, kde-format
+msgid "Marco Martin"
+msgstr "Marco Martin"
+
+#: kcm.cpp:548
+#, kde-format
+msgid ""
+"You have to restart the Plasma session for these changes to take effect."
+msgstr ""
+"Bu dəyişikliklərin qüvvəyə minməsi üçün Plazma seansını yenidən "
+"başlatmalısınız."
+
+#: kcm.cpp:549
+#, kde-format
+msgid "Cursor Settings Changed"
+msgstr "Kursor Ayarları Dəyişdirildi"
+
+#: lnftool.cpp:45
+#, kde-format
+msgid "Global Theme Tool"
+msgstr "Qlobal Mövzu Aləti"
+
+#: lnftool.cpp:47
+#, kde-format
+msgid ""
+"Command line tool to apply global theme packages for changing the look and "
+"feel."
+msgstr ""
+"Xarici görünüşü dəyişdirmək məqsədi ilə, Qlobal Mövzu paketlərini tətbiq "
+"etmək üçün əmrlər sətiri vasitəsi."
+
+#: lnftool.cpp:49
+#, kde-format
+msgid "Copyright 2017, Marco Martin"
+msgstr "Copyright 2017, Marco Martin"
+
+#: lnftool.cpp:50
+#, kde-format
+msgid "Maintainer"
+msgstr "Müşayətçi"
+
+#: lnftool.cpp:58
+#, kde-format
+msgid "List available global theme packages"
+msgstr "Sonuncu mövcud Qlobal Mövzu paketləri"
+
+#: lnftool.cpp:59
+#, kde-format
+msgid "Apply a global theme package"
+msgstr "Qlobal Mövzu paketlərini tətbiq etmək"
+
+#: lnftool.cpp:59
+#, kde-format
+msgid "packagename"
+msgstr "packagename"
+
+#: lnftool.cpp:60
+#, kde-format
+msgid "Reset the Plasma Desktop layout"
+msgstr "Plasma İş Masası nizamını sıfırlamaq"
+
+#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
+#: lookandfeelsettings.kcfg:9
+#, kde-format
+msgid "Global look and feel"
+msgstr "Qlobal Xarici Görünüş"
+
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "This module lets you choose the global look and feel."
+msgstr ""
+"Bu modul sizə xarici görünüşü dəyişmək üçün mövzunu seçməyə imkan verəcək."
+
+#: package/contents/ui/main.qml:57
+#, kde-format
+msgid "Preview Theme"
+msgstr "Mövzuya öncədən baxış"
+
+#: package/contents/ui/main.qml:75
+#, kde-format
+msgid ""
+"Your current layout and configuration of panels, desktop widgets, and "
+"wallpapers will be lost and reset to the default layout provided by the "
+"selected theme."
+msgstr ""
+"Sizin cari maketiniz və panellərin konfiqurasiyaları, iş masası vidjetləri "
+"və divar kağızları itiriləcək və seçilmiş mövzunun təqdim etdiyi standart "
+"maketlər bərpa oluncaq."
+
+#: package/contents/ui/main.qml:85
+#, kde-format
+msgid "Use desktop layout from theme"
+msgstr "Mövzunun İş Masası nizamını istifadə etmək"
+
+#: package/contents/ui/main.qml:92
+#, kde-format
+msgid "Get New Global Themes..."
+msgstr "Yeni Qlobal Mövzu Almaq..."

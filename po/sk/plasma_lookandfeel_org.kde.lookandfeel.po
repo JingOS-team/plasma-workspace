@@ -1,0 +1,283 @@
+# translation of plasma_lookandfeel_org.kde.lookandfeel.po to Slovak
+# Roman Paholik <wizzardsk@gmail.com>, 2014, 2015, 2016, 2017, 2019.
+# Mthw <jari_45@hotmail.com>, 2018, 2019.
+# Matej Mrenica <matejm98mthw@gmail.com>, 2019, 2020, 2021.
+# Dusan Kazik <prescott66@gmail.com>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-16 02:49+0100\n"
+"PO-Revision-Date: 2021-01-30 17:11+0100\n"
+"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.12.1\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#: ../sddm-theme/KeyboardButton.qml:13
+msgid "Keyboard Layout: %1"
+msgstr "Rozloženie klávesnice: %1"
+
+#: ../sddm-theme/Login.qml:59
+msgid "Username"
+msgstr "Používateľské meno"
+
+#: ../sddm-theme/Login.qml:75 contents/lockscreen/MainBlock.qml:62
+msgid "Password"
+msgstr "Heslo"
+
+#: ../sddm-theme/Login.qml:114
+msgid "Log In"
+msgstr "Prihlásiť sa"
+
+#: ../sddm-theme/Main.qml:198 contents/lockscreen/LockScreenUi.qml:251
+msgid "Caps Lock is on"
+msgstr "Funkcia Caps Lock je zapnutá"
+
+#: ../sddm-theme/Main.qml:210 ../sddm-theme/Main.qml:398
+#: contents/logout/Logout.qml:176
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Uspať"
+
+#: ../sddm-theme/Main.qml:218 ../sddm-theme/Main.qml:406
+#: contents/logout/Logout.qml:194
+msgid "Restart"
+msgstr "Reštartovať"
+
+#: ../sddm-theme/Main.qml:226 ../sddm-theme/Main.qml:414
+#: contents/logout/Logout.qml:204
+msgid "Shut Down"
+msgstr "Vypnúť"
+
+#: ../sddm-theme/Main.qml:234
+msgctxt "For switching to a username and password prompt"
+msgid "Other..."
+msgstr "Iný..."
+
+#: ../sddm-theme/Main.qml:386
+msgid "Type in Username and Password"
+msgstr "Zadajte používateľské meno a heslo"
+
+#: ../sddm-theme/Main.qml:422
+msgid "List Users"
+msgstr "Zoznam používateľov"
+
+#: ../sddm-theme/Main.qml:490 contents/lockscreen/LockScreenUi.qml:513
+msgctxt "Button to show/hide virtual keyboard"
+msgid "Virtual Keyboard"
+msgstr "Virtuálna klávesnica"
+
+#: ../sddm-theme/Main.qml:519
+msgid "Login Failed"
+msgstr "Prihlásenie zlyhalo"
+
+#: ../sddm-theme/SessionButton.qml:35
+msgid "Desktop Session: %1"
+msgstr "Sedenie plochy: %1"
+
+#: contents/components/Battery.qml:53
+msgid "%1%"
+msgstr "%1%"
+
+#: contents/components/Battery.qml:54
+msgid "Battery at %1%"
+msgstr "Batéria na %1%"
+
+#: contents/components/UserList.qml:62
+msgctxt "Nobody logged in on that session"
+msgid "Unused"
+msgstr "Nepoužívané"
+
+#: contents/components/UserList.qml:68
+msgctxt "User logged in on console number"
+msgid "TTY %1"
+msgstr "TTY %1"
+
+#: contents/components/UserList.qml:70
+msgctxt "User logged in on console (X display number)"
+msgid "on TTY %1 (Display %2)"
+msgstr "na TTY %1 (Obrazovka %2)"
+
+#: contents/components/UserList.qml:74
+msgctxt "Username (location)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: contents/lockscreen/config.qml:17
+msgctxt "verb, to show something"
+msgid "Show:"
+msgstr "Zobraziť:"
+
+#: contents/lockscreen/config.qml:18
+msgid "Clock"
+msgstr "Hodiny"
+
+#: contents/lockscreen/config.qml:26
+msgid "Media Controls"
+msgstr "Ovládanie médií"
+
+#: contents/lockscreen/LockScreenUi.qml:45
+msgid "Unlocking failed"
+msgstr "Odomknutie zlyhalo"
+
+#: contents/lockscreen/LockScreenUi.qml:267
+msgid "Switch User"
+msgstr "Prepnúť používateľov"
+
+#: contents/lockscreen/LockScreenUi.qml:461
+msgid "Switch to This Session"
+msgstr "Prepnúť na toto sedenie"
+
+#: contents/lockscreen/LockScreenUi.qml:469
+msgid "Start New Session"
+msgstr "Spustiť nové sedenie"
+
+#: contents/lockscreen/LockScreenUi.qml:482
+msgid "Back"
+msgstr "Späť"
+
+#: contents/lockscreen/MainBlock.qml:105
+msgid "Unlock"
+msgstr "Odomknúť"
+
+#: contents/lockscreen/MediaControls.qml:118
+msgid "No media playing"
+msgstr "Neprehrávajú sa žiadne médiá"
+
+#: contents/lockscreen/MediaControls.qml:146
+msgid "Previous track"
+msgstr "Predchádzajúca skladba"
+
+#: contents/lockscreen/MediaControls.qml:157
+msgid "Play or Pause media"
+msgstr "Prehrať alebo pozastaviť médium"
+
+#: contents/lockscreen/MediaControls.qml:170
+msgid "Next track"
+msgstr "Nasledujúca skladba"
+
+#: contents/logout/Logout.qml:152
+msgid ""
+"One other user is currently logged in. If the computer is shut down or "
+"restarted, that user may lose work."
+msgid_plural ""
+"%1 other users are currently logged in. If the computer is shut down or "
+"restarted, those users may lose work."
+msgstr[0] ""
+"Jeden iný používateľ je aktuálne prihlásený. Ak bude počítač vypnutý alebo "
+"reštartovaný, tento používateľ môže stratiť prácu."
+msgstr[1] ""
+"%1 iní používatelia sú aktuálne prihlásený. Ak bude počítač vypnutý alebo "
+"reštartovaný, títo používatelia môžu stratiť prácu."
+msgstr[2] ""
+"%1 iných používateľov je aktuálne prihlásených. Ak bude počítač vypnutý "
+"alebo reštartovaný, títo používatelia môžu stratiť prácu."
+
+#: contents/logout/Logout.qml:166
+msgid "When restarted, the computer will enter the firmware setup screen."
+msgstr "Po reštarte počítač zobrazí obrazovku s nastaveniami firmvéru."
+
+#: contents/logout/Logout.qml:185
+msgid "Hibernate"
+msgstr "Hibernovať"
+
+#: contents/logout/Logout.qml:214
+msgid "Log Out"
+msgstr "Odhlásiť sa"
+
+#: contents/logout/Logout.qml:237
+msgid "Restarting in 1 second"
+msgid_plural "Restarting in %1 seconds"
+msgstr[0] "Reštart o 1 sekundu"
+msgstr[1] "Reštart o %1 sekundy"
+msgstr[2] "Reštart o %1 sekúnd"
+
+#: contents/logout/Logout.qml:239
+msgid "Shutting down in 1 second"
+msgid_plural "Shutting down in %1 seconds"
+msgstr[0] "Vypnutie o 1 sekundu"
+msgstr[1] "Vypnutie o %1 sekundy"
+msgstr[2] "Vypnutie o %1 sekúnd"
+
+#: contents/logout/Logout.qml:241
+msgid "Logging out in 1 second"
+msgid_plural "Logging out in %1 seconds"
+msgstr[0] "Odhlásenie o 1 sekundu."
+msgstr[1] "Odhlásenie o %1 sekundy."
+msgstr[2] "Odhlásenie o %1 sekúnd."
+
+#: contents/logout/Logout.qml:252
+msgid "OK"
+msgstr "OK"
+
+#: contents/logout/Logout.qml:258
+msgid "Cancel"
+msgstr "Zrušiť"
+
+#: contents/osd/OsdItem.qml:71
+msgid "100%"
+msgstr "100%"
+
+#: contents/osd/OsdItem.qml:85
+msgctxt "Percentage value"
+msgid "%1%"
+msgstr "%1%"
+
+#: contents/runcommand/RunCommand.qml:85
+msgid "Configure"
+msgstr "Nastaviť"
+
+#: contents/runcommand/RunCommand.qml:86
+msgid "Configure Search Plugins"
+msgstr "Nastaviť zásuvné moduly vyhľadávania"
+
+#: contents/runcommand/RunCommand.qml:89
+msgid "Configure KRunner..."
+msgstr "Nastaviť KRunner..."
+
+#: contents/runcommand/RunCommand.qml:103
+msgctxt "Textfield placeholder text, query specific KRunner"
+msgid "Search '%1'..."
+msgstr "Hľadať \"%1\"..."
+
+#: contents/runcommand/RunCommand.qml:105
+msgctxt "Textfield placeholder text"
+msgid "Search..."
+msgstr "Hľadať..."
+
+#: contents/runcommand/RunCommand.qml:227
+msgid "Pin"
+msgstr "Pripnúť"
+
+#: contents/runcommand/RunCommand.qml:228
+msgid "Pin Search"
+msgstr "Pripnúť hľadanie"
+
+#: contents/runcommand/RunCommand.qml:230
+msgid "Keep Open"
+msgstr "Ponechať otvorené"
+
+#: contents/runcommand/RunCommand.qml:291
+msgid "Recent Queries"
+msgstr "Nedávne požiadavky"
+
+#: contents/runcommand/RunCommand.qml:294
+msgid "Remove"
+msgstr "Odstrániť"
+
+#: contents/runcommand/RunCommand.qml:296
+msgid "in category recent queries"
+msgstr "v kategórii nedávnych požiadaviek"
+
+#: contents/splash/Splash.qml:95
+msgctxt ""
+"This is the first text the user sees while starting in the splash screen, "
+"should be translated as something short, is a form that can be seen on a "
+"product. Plasma is the project name so shouldn't be translated."
+msgid "Plasma made by KDE"
+msgstr "Plasma vytvorená komunitou KDE"

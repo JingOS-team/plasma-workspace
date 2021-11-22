@@ -1,0 +1,110 @@
+# tradução do plasma_engine_keystate.po para Brazilian Portuguese
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# André Marcelo Alvarenga <andrealvarenga@gmx.net>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_engine_keystate\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-10-24 02:31+0200\n"
+"PO-Revision-Date: 2009-07-07 22:21-0300\n"
+"Last-Translator: André Marcelo Alvarenga <andrealvarenga@gmx.net>\n"
+"Language-Team: Brazilian Portuguese <kde-i18n-pt_br@mail.kde.org>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: keystate.cpp:28
+#, kde-format
+msgid "Shift"
+msgstr "Shift"
+
+#: keystate.cpp:29
+#, kde-format
+msgid "Ctrl"
+msgstr "Ctrl"
+
+#: keystate.cpp:30
+#, kde-format
+msgid "Alt"
+msgstr "Alt"
+
+#: keystate.cpp:31
+#, kde-format
+msgid "Meta"
+msgstr "Meta"
+
+#: keystate.cpp:32
+#, kde-format
+msgid "Super"
+msgstr "Super"
+
+#: keystate.cpp:33
+#, kde-format
+msgid "Hyper"
+msgstr "Hiper"
+
+#: keystate.cpp:34
+#, kde-format
+msgid "AltGr"
+msgstr "AltGr"
+
+#: keystate.cpp:35
+#, kde-format
+msgid "Num Lock"
+msgstr "Num Lock"
+
+#: keystate.cpp:36
+#, kde-format
+msgid "Caps Lock"
+msgstr "Caps Lock"
+
+#: keystate.cpp:37
+#, kde-format
+msgid "Scroll Lock"
+msgstr "Scroll Lock"
+
+#: keystate.cpp:39
+#, kde-format
+msgid "Left Button"
+msgstr "Botão esquerdo"
+
+#: keystate.cpp:40
+#, kde-format
+msgid "Right Button"
+msgstr "Botão direito"
+
+#: keystate.cpp:41
+#, kde-format
+msgid "Middle Button"
+msgstr "Botão do meio"
+
+#: keystate.cpp:42
+#, kde-format
+msgid "First X Button"
+msgstr "Primeiro botão X"
+
+#: keystate.cpp:43
+#, kde-format
+msgid "Second X Button"
+msgstr "Segundo botão X"
+
+#: keystate.cpp:58 keystate.cpp:69 keystate.cpp:97 keystate.cpp:118
+#: keystate.cpp:126
+#, kde-format
+msgid "Pressed"
+msgstr "Pressionado"
+
+#: keystate.cpp:59 keystate.cpp:104 keystate.cpp:127
+#, kde-format
+msgid "Latched"
+msgstr "Travado"
+
+#: keystate.cpp:60 keystate.cpp:111 keystate.cpp:128
+#, kde-format
+msgid "Locked"
+msgstr "Bloqueado"

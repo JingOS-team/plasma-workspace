@@ -17,26 +17,33 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#include <QApplication>
 #include "iconssettings.h"
+#include <KLocalizedString>
+#include <QApplication>
 
-int main(int argc, char** argv)
+int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
 
-    if (app.arguments().count() != 2) {
+    if (argc != 2) {
         return 1;
     }
 
-    //KNS will give us a path
-    QString themeName = app.arguments().last();
+    // KNS will give us a path
+    const QStringList args = app.arguments();
+    QString themeName = args.last();
     int idx = themeName.lastIndexOf('/');
-    if (idx>=0) {
+    if (idx >= 0) {
         themeName = themeName.mid(idx + 1);
     }
 
     IconsSettings settings;
-    settings.setTheme(themeName);
-    settings.save();
+    if (settings.theme() == themeName) {
+        // In KNS this will be displayed as a warning in the UI
+        qWarning().noquote() << i18n("Icon theme is already used");
+    } else {
+        settings.setTheme(themeName);
+        settings.save();
+    }
     return 0;
 }

@@ -1,0 +1,318 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: libkicker\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:48+0100\n"
+"PO-Revision-Date: 2020-11-08 05:33+0000\n"
+"Last-Translator: transxx.py program <null@kde.org>\n"
+"Language-Team: KDE Test Language <kde-i18n-doc@kde.org>\n"
+"Language: x-test\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: plugin/actionlist.cpp:96
+#, kde-format
+msgid "Open with:"
+msgstr "xxOpen with:xx"
+
+#: plugin/actionlist.cpp:109
+#, kde-format
+msgid "Properties"
+msgstr "xxPropertiesxx"
+
+#: plugin/actionlist.cpp:156
+#, kde-format
+msgid "Add to Desktop"
+msgstr "xxAdd to Desktopxx"
+
+#: plugin/actionlist.cpp:161
+#, kde-format
+msgid "Add to Panel (Widget)"
+msgstr "xxAdd to Panel (Widget)xx"
+
+#: plugin/actionlist.cpp:166
+#, kde-format
+msgid "Pin to Task Manager"
+msgstr "xxPin to Task Managerxx"
+
+#: plugin/actionlist.cpp:316 plugin/rootmodel.cpp:444
+#, kde-format
+msgid "Recent Files"
+msgstr "xxRecent Filesxx"
+
+#: plugin/actionlist.cpp:326
+#, kde-format
+msgid "Forget Recent Files"
+msgstr "xxForget Recent Filesxx"
+
+#: plugin/actionlist.cpp:389
+#, kde-format
+msgid "Edit Application..."
+msgstr "xxEdit Application...xx"
+
+#: plugin/actionlist.cpp:433
+#, kde-format
+msgctxt "@action opens a software center with the application"
+msgid "Uninstall or Manage Add-Ons..."
+msgstr "xxUninstall or Manage Add-Ons...xx"
+
+#: plugin/appentry.cpp:198
+#, kde-format
+msgid "Hide Application"
+msgstr "xxHide Applicationxx"
+
+#: plugin/appentry.cpp:262
+#, kde-format
+msgctxt "App name (Generic name)"
+msgid "%1 (%2)"
+msgstr "xx%1 (%2)xx"
+
+#: plugin/appentry.cpp:264
+#, kde-format
+msgctxt "Generic name (App name)"
+msgid "%1 (%2)"
+msgstr "xx%1 (%2)xx"
+
+#: plugin/appsmodel.cpp:44 plugin/appsmodel.cpp:68 plugin/computermodel.cpp:111
+#: plugin/computermodel.cpp:239 plugin/recentusagemodel.cpp:167
+#: plugin/recentusagemodel.cpp:224
+#, kde-format
+msgid "Applications"
+msgstr "xxApplicationsxx"
+
+#: plugin/appsmodel.cpp:163
+#, kde-format
+msgid "Unhide Applications in this Submenu"
+msgstr "xxUnhide Applications in this Submenuxx"
+
+#: plugin/appsmodel.cpp:172
+#, kde-format
+msgid "Unhide Applications in '%1'"
+msgstr "xxUnhide Applications in '%1'xx"
+
+#: plugin/computermodel.cpp:105
+#, kde-format
+msgid "Show KRunner"
+msgstr "xxShow KRunnerxx"
+
+#: plugin/computermodel.cpp:109
+#, kde-format
+msgid "Search, calculate, or run a command"
+msgstr "xxSearch, calculate, or run a commandxx"
+
+#: plugin/computermodel.cpp:162
+#, kde-format
+msgid "Computer"
+msgstr "xxComputerxx"
+
+#: plugin/contactentry.cpp:120 plugin/recentcontactsmodel.cpp:95
+#, kde-format
+msgid "Show Contact Information..."
+msgstr "xxShow Contact Information...xx"
+
+#. i18n.
+#: plugin/kastatsfavoritesmodel.cpp:480 plugin/rootmodel.cpp:431
+#: plugin/simplefavoritesmodel.cpp:44
+#, kde-format
+msgid "Favorites"
+msgstr "xxFavoritesxx"
+
+#: plugin/recentcontactsmodel.cpp:53
+#, kde-format
+msgid "Contacts"
+msgstr "xxContactsxx"
+
+#: plugin/recentcontactsmodel.cpp:86
+#, kde-format
+msgid "Forget Contact"
+msgstr "xxForget Contactxx"
+
+#: plugin/recentcontactsmodel.cpp:90 plugin/recentcontactsmodel.cpp:166
+#, kde-format
+msgid "Forget All Contacts"
+msgstr "xxForget All Contactsxx"
+
+#: plugin/recentusagemodel.cpp:165
+#, kde-format
+msgid "Recently Used"
+msgstr "xxRecently Usedxx"
+
+#: plugin/recentusagemodel.cpp:170 plugin/recentusagemodel.cpp:298
+#, kde-format
+msgid "Files"
+msgstr "xxFilesxx"
+
+#: plugin/recentusagemodel.cpp:242
+#, kde-format
+msgid "Forget Application"
+msgstr "xxForget Applicationxx"
+
+#: plugin/recentusagemodel.cpp:332
+#, kde-format
+msgid "Open Containing Folder"
+msgstr "xxOpen Containing Folderxx"
+
+#: plugin/recentusagemodel.cpp:335
+#, kde-format
+msgid "Forget File"
+msgstr "xxForget Filexx"
+
+#: plugin/recentusagemodel.cpp:464
+#, kde-format
+msgid "Forget All"
+msgstr "xxForget Allxx"
+
+#: plugin/recentusagemodel.cpp:466
+#, kde-format
+msgid "Forget All Applications"
+msgstr "xxForget All Applicationsxx"
+
+#: plugin/recentusagemodel.cpp:469
+#, kde-format
+msgid "Forget All Files"
+msgstr "xxForget All Filesxx"
+
+#: plugin/rootmodel.cpp:108
+#, kde-format
+msgid "Hide %1"
+msgstr "xxHide %1xx"
+
+#: plugin/rootmodel.cpp:413
+#, kde-format
+msgid "All Applications"
+msgstr "xxAll Applicationsxx"
+
+#: plugin/rootmodel.cpp:425
+#, kde-format
+msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
+msgstr "xxThis shouldn't be visible! Use KICKER_FAVORITES_MODELxx"
+
+#: plugin/rootmodel.cpp:437
+#, kde-format
+msgid "Recent Contacts"
+msgstr "xxRecent Contactsxx"
+
+#: plugin/rootmodel.cpp:444
+#, kde-format
+msgid "Often Used Files"
+msgstr "xxOften Used Filesxx"
+
+#: plugin/rootmodel.cpp:453
+#, kde-format
+msgid "Recent Applications"
+msgstr "xxRecent Applicationsxx"
+
+#: plugin/rootmodel.cpp:453
+#, kde-format
+msgid "Often Used Applications"
+msgstr "xxOften Used Applicationsxx"
+
+#: plugin/rootmodel.cpp:467
+#, kde-format
+msgid "Power / Session"
+msgstr "xxPower / Sessionxx"
+
+#: plugin/runnermodel.cpp:239
+#, kde-format
+msgid "Search results"
+msgstr "xxSearch resultsxx"
+
+#: plugin/systementry.cpp:207
+#, kde-format
+msgid "Lock"
+msgstr "xxLockxx"
+
+#: plugin/systementry.cpp:210
+#, kde-format
+msgid "Log Out"
+msgstr "xxLog Outxx"
+
+#: plugin/systementry.cpp:213 plugin/systementry.cpp:281
+#, kde-format
+msgid "Save Session"
+msgstr "xxSave Sessionxx"
+
+#: plugin/systementry.cpp:216
+#, kde-format
+msgid "Switch User"
+msgstr "xxSwitch Userxx"
+
+#: plugin/systementry.cpp:219
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "xxSleepxx"
+
+#: plugin/systementry.cpp:222
+#, kde-format
+msgid "Hibernate"
+msgstr "xxHibernatexx"
+
+#: plugin/systementry.cpp:225
+#, kde-format
+msgid "Restart"
+msgstr "xxRestartxx"
+
+#: plugin/systementry.cpp:228
+#, kde-format
+msgid "Shut Down"
+msgstr "xxShut Downxx"
+
+#: plugin/systementry.cpp:241 plugin/systementry.cpp:244
+#: plugin/systementry.cpp:247 plugin/systementry.cpp:250
+#, kde-format
+msgid "Session"
+msgstr "xxSessionxx"
+
+#: plugin/systementry.cpp:253 plugin/systementry.cpp:256
+#: plugin/systementry.cpp:259 plugin/systementry.cpp:262
+#, kde-format
+msgid "System"
+msgstr "xxSystemxx"
+
+#: plugin/systementry.cpp:275
+#, kde-format
+msgid "Lock screen"
+msgstr "xxLock screenxx"
+
+#: plugin/systementry.cpp:278
+#, kde-format
+msgid "End session"
+msgstr "xxEnd sessionxx"
+
+#: plugin/systementry.cpp:284
+#, kde-format
+msgid "Start a parallel session as a different user"
+msgstr "xxStart a parallel session as a different userxx"
+
+#: plugin/systementry.cpp:287
+#, kde-format
+msgid "Suspend to RAM"
+msgstr "xxSuspend to RAMxx"
+
+#: plugin/systementry.cpp:290
+#, kde-format
+msgid "Suspend to disk"
+msgstr "xxSuspend to diskxx"
+
+#: plugin/systementry.cpp:293
+#, kde-format
+msgid "Restart computer"
+msgstr "xxRestart computerxx"
+
+#: plugin/systementry.cpp:296
+#, kde-format
+msgid "Turn off computer"
+msgstr "xxTurn off computerxx"
+
+#: plugin/systemmodel.cpp:44
+#, kde-format
+msgid "System actions"
+msgstr "xxSystem actionsxx"

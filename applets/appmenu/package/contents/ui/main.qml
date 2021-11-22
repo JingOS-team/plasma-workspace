@@ -21,7 +21,7 @@ import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.8
 
 import org.kde.plasma.plasmoid 2.0
-import org.kde.kquickcontrolsaddons 2.0
+import org.kde.kquickcontrolsaddons 2.0 // For KCMShell
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.private.appmenu 1.0 as AppMenuPrivate
@@ -39,6 +39,7 @@ Item {
         plasmoid.nativeInterface.view = view
     }
 
+    Plasmoid.constraintHints: PlasmaCore.Types.CanFillArea
     Plasmoid.preferredRepresentation: (plasmoid.configuration.compactView) ? Plasmoid.compactRepresentation : Plasmoid.fullRepresentation
 
     Plasmoid.compactRepresentation: PlasmaComponents3.ToolButton {

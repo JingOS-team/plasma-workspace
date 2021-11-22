@@ -1,0 +1,280 @@
+# translation of kcmstyle.po to Khmer
+# Khoem Sokhem <khoemsokhem@khmeros.info>, 2005, 2007, 2008, 2009, 2010.
+# Auk Piseth <piseth_dv@khmeros.info>, 2007, 2008.
+# Eng Vannak <evannak@khmeros.info>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmstyle\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2010-11-12 09:11+0700\n"
+"Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
+"Language-Team: Khmer <support@khmeros.info>\n"
+"Language: km\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "ខឹម សុខែម, អេង វណ្ណៈ, អោក ពិសិដ្ឋ​​"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "khoemsokhem@khmeros.info,​​evannak@khmeros.info,piseth_dv@khmeros.info"
+
+#: gtkpage.cpp:89
+#, kde-format
+msgid "%1 is not a valid GTK Theme archive."
+msgstr ""
+
+#: kcmstyle.cpp:91
+#, fuzzy, kde-format
+#| msgctxt "@title:tab"
+#| msgid "&Applications"
+msgid "Application Style"
+msgstr "កម្មវិធី "
+
+#: kcmstyle.cpp:95
+#, fuzzy, kde-format
+#| msgid "(c) 2002 Karol Szwed, Daniel Molkentin"
+msgid "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik"
+msgstr "រក្សា​សិទ្ធិ​ឆ្នាំ ២០០២ ដោយ Karol Szwed និង​ Daniel Molkentin"
+
+#: kcmstyle.cpp:97
+#, kde-format
+msgid "Karol Szwed"
+msgstr "Karol Szwed"
+
+#: kcmstyle.cpp:98
+#, kde-format
+msgid "Daniel Molkentin"
+msgstr "Daniel Molkentin"
+
+#: kcmstyle.cpp:99
+#, kde-format
+msgid "Kai Uwe Broulik"
+msgstr ""
+
+#: kcmstyle.cpp:182 kcmstyle.cpp:189
+#, kde-format
+msgid "There was an error loading the configuration dialog for this style."
+msgstr "មាន​កំហុស​ក្នុង​ការ​ផ្ទុក​ប្រអប់​ការ​កំណត់​រចនា​សម្ព័ន្ធ​សម្រាប់​រចនាប័ទ្ម​នេះ ។"
+
+#: kcmstyle.cpp:280
+#, kde-format
+msgid "Failed to apply selected style '%1'."
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:46
+#, fuzzy, kde-format
+#| msgid "Show icons in menus:"
+msgid "Show icons:"
+msgstr "បង្ហាញ​រូបតំណាង​នៅ​ក្នុង​ម៉ឺនុយ ៖"
+
+#  i18n: file stylepreview.ui line 81
+#: package/contents/ui/EffectSettingsPopup.qml:47
+#, fuzzy, kde-format
+#| msgid "Radio button"
+msgid "On buttons"
+msgstr "ប៊ូតុង​មូល"
+
+#: package/contents/ui/EffectSettingsPopup.qml:58
+#, kde-format
+msgid "In menus"
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:70
+#, fuzzy, kde-format
+#| msgid "Main toolbar text:"
+msgid "Main toolbar label:"
+msgstr "អត្ថបទ​របារ​ឧបករណ៍​មេ ៖"
+
+#: package/contents/ui/EffectSettingsPopup.qml:72
+#, kde-format
+msgid "None"
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:73
+#, fuzzy, kde-format
+#| msgid "Text Only"
+msgid "Text only"
+msgstr "បាន​តែ​អត្ថបទ​"
+
+#: package/contents/ui/EffectSettingsPopup.qml:74
+#, fuzzy, kde-format
+#| msgid "Text Beside Icons"
+msgid "Beside icons"
+msgstr "អត្ថបទអែប​ជិត​រូប​តំណាង"
+
+#: package/contents/ui/EffectSettingsPopup.qml:75
+#, fuzzy, kde-format
+#| msgid "Text Below Icons"
+msgid "Below icon"
+msgstr "អត្ថបទ​ក្រោម​រូប​តំណាង"
+
+#: package/contents/ui/EffectSettingsPopup.qml:90
+#, fuzzy, kde-format
+#| msgid "Secondary toolbar text:"
+msgid "Secondary toolbar label:"
+msgstr "អត្ថបទ​របារ​ឧបករណ៍​រងSecondary toolbar text:"
+
+#: package/contents/ui/GtkStylePage.qml:32
+#, fuzzy, kde-format
+#| msgctxt "@title:tab"
+#| msgid "&Applications"
+msgid "GNOME/GTK Application Style"
+msgstr "កម្មវិធី "
+
+#: package/contents/ui/GtkStylePage.qml:58
+#, kde-format
+msgid "GTK theme:"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:90
+#, fuzzy, kde-format
+#| msgid "Preview"
+msgid "Preview..."
+msgstr "មើល​ជាមុន"
+
+#: package/contents/ui/GtkStylePage.qml:111
+#, kde-format
+msgid "Install from File..."
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:117
+#, fuzzy, kde-format
+#| msgctxt "@title:tab"
+#| msgid "&Applications"
+msgid "Get New GNOME/GTK Application Styles..."
+msgstr "កម្មវិធី "
+
+#: package/contents/ui/GtkStylePage.qml:129
+#, kde-format
+msgid "Select GTK Theme Archive"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:131
+#, kde-format
+msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
+msgstr ""
+
+#: package/contents/ui/main.qml:31
+#, fuzzy, kde-format
+#| msgid ""
+#| "<h1>Style</h1>This module allows you to modify the visual appearance of "
+#| "user interface elements, such as the widget style and effects."
+msgid ""
+"This module allows you to modify the visual appearance of applications' user "
+"interface elements."
+msgstr ""
+"<h1>រចនាប័ទ្ម</h1>ម៉ូឌុល​នេះ​អនុញ្ញាត​ឲ្យ​អ្នក​កែប្រែ​រូបរាង​ដែល​មើល​ឃើញ​នៃ​ធាតុ​ចំណុច​ប្រទាក់​អ្នកប្រើ​ដូច​ជា "
+"រចនាប័ទ្ម​វត្ថុ​មើល​ឃើញ និង​បែប​ផែន ។"
+
+#: package/contents/ui/main.qml:110
+#, fuzzy, kde-format
+#| msgid "Con&figure..."
+msgid "Configure Style..."
+msgstr "កំណត់​រចនាសម្ព័ន្ធ..."
+
+#: package/contents/ui/main.qml:127
+#, kde-format
+msgid "Configure Icons and Toolbars"
+msgstr ""
+
+#: package/contents/ui/main.qml:140
+#, fuzzy, kde-format
+#| msgid "Con&figure..."
+msgid "Configure GNOME/GTK Application Style..."
+msgstr "កំណត់​រចនាសម្ព័ន្ធ..."
+
+#: styleconfdialog.cpp:33
+#, kde-format
+msgid "Configure %1"
+msgstr "កំណត់​រចនាសម្ព័ន្ធ %1"
+
+#  i18n: file stylepreview.ui line 59
+#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
+#: stylepreview.ui:33
+#, kde-format
+msgid "Tab 1"
+msgstr "ផ្ទាំង ១"
+
+#  i18n: file stylepreview.ui line 240
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: stylepreview.ui:65
+#, fuzzy, kde-format
+#| msgid "Button"
+msgid "Push Button"
+msgstr "ប៊ូតុង"
+
+#  i18n: file stylepreview.ui line 139
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
+#: stylepreview.ui:86
+#, fuzzy, kde-format
+#| msgid "Combobox"
+msgid "Combo box"
+msgstr "ប្រអប់​បន្សំ"
+
+#  i18n: file stylepreview.ui line 114
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox)
+#: stylepreview.ui:96
+#, kde-format
+msgid "Checkbox"
+msgstr "ប្រអប់​ធីក"
+
+#  i18n: file stylepreview.ui line 81
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
+#: stylepreview.ui:106 stylepreview.ui:116
+#, kde-format
+msgid "Radio button"
+msgstr "ប៊ូតុង​មូល"
+
+#  i18n: file stylepreview.ui line 269
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: stylepreview.ui:133
+#, kde-format
+msgid "Tab 2"
+msgstr "ផ្ទាំង ២"
+
+#. i18n: ectx: label, entry (widgetStyle), group (KDE)
+#: stylesettings.kcfg:9
+#, fuzzy, kde-format
+#| msgctxt "@title:tab"
+#| msgid "&Applications"
+msgid "Application style"
+msgstr "កម្មវិធី "
+
+#. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
+#: stylesettings.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Show icons on buttons:"
+msgid "Show icons on buttons"
+msgstr "បង្ហាញ​រូបតំណាង​នៅ​លើប៊ូតុង"
+
+#. i18n: ectx: label, entry (iconsInMenus), group (KDE)
+#: stylesettings.kcfg:17
+#, fuzzy, kde-format
+#| msgid "Show icons on buttons:"
+msgid "Show icons in menus"
+msgstr "បង្ហាញ​រូបតំណាង​នៅ​លើប៊ូតុង"
+
+#. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
+#: stylesettings.kcfg:23
+#, fuzzy, kde-format
+#| msgid "Main toolbar text:"
+msgid "Main toolbar label"
+msgstr "អត្ថបទ​របារ​ឧបករណ៍​មេ ៖"
+
+#. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
+#: stylesettings.kcfg:27
+#, fuzzy, kde-format
+#| msgid "Secondary toolbar text:"
+msgid "Secondary toolbar label"
+msgstr "អត្ថបទ​របារ​ឧបករណ៍​រងSecondary toolbar text:"

@@ -30,11 +30,10 @@
 
 namespace NotificationManager
 {
-
-    class NOTIFICATIONMANAGER_EXPORT WatchedNotificationsModel : public AbstractNotificationsModel
-    {
-        Q_OBJECT
-        Q_PROPERTY(bool valid READ valid NOTIFY validChanged)
+class NOTIFICATIONMANAGER_EXPORT WatchedNotificationsModel : public AbstractNotificationsModel
+{
+    Q_OBJECT
+    Q_PROPERTY(bool valid READ valid NOTIFY validChanged)
 
     public:
         explicit WatchedNotificationsModel();
@@ -50,15 +49,14 @@ namespace NotificationManager
         Q_INVOKABLE void reply(uint notificationId, const QString &text) override;
         Q_INVOKABLE bool valid();
 
-    signals:
-        void validChanged(bool valid);
+signals:
+    void validChanged(bool valid);
 
-    private:
-        class Private;
-        Private * const d;
-        Q_DISABLE_COPY(WatchedNotificationsModel)
-
-    };
+private:
+    class Private;
+    Private *const d;
+    Q_DISABLE_COPY(WatchedNotificationsModel)
+};
 
 }
 

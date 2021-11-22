@@ -1,5 +1,6 @@
 /*
  * Copyright 2011 Sebastian Kügler <sebas@kde.org>
+ * Copyright 2021 Liu Bangguo <liubangguo@jingos.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU Library General Public License version 2 as
@@ -30,8 +31,6 @@
 
 #include "powermanagementjob.h"
 
-#include <Solid/PowerManagement>
-
 PowerManagementJob::PowerManagementJob(const QString &operation, QMap<QString, QVariant> &parameters, QObject *parent)
     : ServiceJob(parent->objectName(), operation, parameters, parent)
     , m_session(new SessionManagement(this))
@@ -42,20 +41,19 @@ PowerManagementJob::~PowerManagementJob()
 {
 }
 
-static void callWhenFinished(const QDBusPendingCall& pending, std::function<void()> func, QObject* parent)
+static void callWhenFinished(const QDBusPendingCall &pending, std::function<void()> func, QObject *parent)
 {
-    QDBusPendingCallWatcher* watcher = new QDBusPendingCallWatcher(pending, parent);
-    QObject::connect(watcher, &QDBusPendingCallWatcher::finished,
-                    parent, [func](QDBusPendingCallWatcher* watcher) {
-                        watcher->deleteLater();
-                        func();
-                    });
+    QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(pending, parent);
+    QObject::connect(watcher, &QDBusPendingCallWatcher::finished, parent, [func](QDBusPendingCallWatcher *watcher) {
+        watcher->deleteLater();
+        func();
+    });
 }
 
 void PowerManagementJob::start()
 {
     const QString operation = operationName();
-    //qDebug() << "starting operation  ... " << operation;
+    // qDebug() << "starting operation  ... " << operation;
 
     if (operation == QLatin1String("lockScreen")) {
         if (m_session->canLock()) {
@@ -106,24 +104,67 @@ void PowerManagementJob::start()
         setResult(false);
         return;
     } else if (operation == QLatin1String("beginSuppressingSleep")) {
-        setResult(Solid::PowerManagement::beginSuppressingSleep(parameters().value(QStringLiteral("reason")).toString()));
+        QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.PowerManagement.Inhibit"),
+                                                          QStringLiteral("/org/freedesktop/PowerManagement/Inhibit"),
+                                                          QStringLiteral("org.freedesktop.PowerManagement.Inhibit"),
+                                                          QStringLiteral("Inhibit"));
+        msg << QCoreApplication::applicationName() << parameters().value(QStringLiteral("reason")).toString();
+        QDBusReply<uint> reply = QDBusConnection::sessionBus().call(msg);
+        setResult(reply.isValid() ? reply.value() : -1);
         return;
     } else if (operation == QLatin1String("stopSuppressingSleep")) {
-        setResult(Solid::PowerManagement::stopSuppressingSleep(parameters().value(QStringLiteral("cookie")).toInt()));
+        QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.PowerManagement.Inhibit"),
+                                                          QStringLiteral("/org/freedesktop/PowerManagement/Inhibit"),
+                                                          QStringLiteral("org.freedesktop.PowerManagement.Inhibit"),
+                                                          QStringLiteral("UnInhibit"));
+        msg << parameters().value(QStringLiteral("cookie")).toInt();
+        QDBusReply<void> reply = QDBusConnection::sessionBus().call(msg);
+        setResult(reply.isValid());
         return;
     } else if (operation == QLatin1String("beginSuppressingScreenPowerManagement")) {
-        setResult(Solid::PowerManagement::beginSuppressingScreenPowerManagement(parameters().value(QStringLiteral("reason")).toString()));
+        QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.ScreenSaver"),
+                                                          QStringLiteral("/ScreenSaver"),
+                                                          QStringLiteral("org.freedesktop.ScreenSaver"),
+                                                          QStringLiteral("Inhibit"));
+        msg << QCoreApplication::applicationName() << parameters().value(QStringLiteral("reason")).toString();
+        QDBusReply<uint> reply = QDBusConnection::sessionBus().call(msg);
+        setResult(reply.isValid() ? reply.value() : -1);
         return;
     } else if (operation == QLatin1String("stopSuppressingScreenPowerManagement")) {
-        setResult(Solid::PowerManagement::stopSuppressingScreenPowerManagement(parameters().value(QStringLiteral("cookie")).toInt()));
+        QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.ScreenSaver"),
+                                                          QStringLiteral("/ScreenSaver"),
+                                                          QStringLiteral("org.freedesktop.ScreenSaver"),
+                                                          QStringLiteral("UnInhibit"));
+        msg << parameters().value(QStringLiteral("cookie")).toInt();
+        QDBusReply<uint> reply = QDBusConnection::sessionBus().call(msg);
+        setResult(reply.isValid());
         return;
     } else if (operation == QLatin1String("setBrightness")) {
         auto pending = setScreenBrightness(parameters().value(QStringLiteral("brightness")).toInt(), parameters().value(QStringLiteral("silent")).toBool());
-        callWhenFinished(pending, [this] { setResult(true); }, this);
+        callWhenFinished(
+            pending,
+            [this] {
+                setResult(true);
+            },
+            this);
         return;
     } else if (operation == QLatin1String("setKeyboardBrightness")) {
         auto pending = setKeyboardBrightness(parameters().value(QStringLiteral("brightness")).toInt(), parameters().value(QStringLiteral("silent")).toBool());
-        callWhenFinished(pending, [this] { setResult(true); }, this);
+        callWhenFinished(
+            pending,
+            [this] {
+                setResult(true);
+            },
+            this);
+        return;
+    } else if (operation == QLatin1String("setAutoBrightness")) {
+        auto pending = setAutoBrightness(parameters().value(QStringLiteral("autoBrightness")).toBool(), parameters().value(QStringLiteral("silent")).toBool());
+        callWhenFinished(
+            pending,
+            [this] {
+                setResult(true);
+            },
+            this);
         return;
     }
 
@@ -133,12 +174,22 @@ void PowerManagementJob::start()
 
 QDBusPendingCall PowerManagementJob::setScreenBrightness(int value, bool silent)
 {
+#if defined (__arm64__) || defined (__aarch64__)
+    QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("com.jingos.repowerd.Screen"),
+                                                      QStringLiteral("/com/jingos/repowerd/Screen"),
+                                                      QStringLiteral("com.jingos.repowerd.Screen"),
+                                                      silent ? "setUserBrightness" : "setUserBrightness");
+    msg << value;
+    return QDBusConnection::systemBus().asyncCall(msg);
+#else
     QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.Solid.PowerManagement"),
                                                       QStringLiteral("/org/kde/Solid/PowerManagement/Actions/BrightnessControl"),
                                                       QStringLiteral("org.kde.Solid.PowerManagement.Actions.BrightnessControl"),
                                                       silent ? "setBrightnessSilent" : "setBrightness");
     msg << value;
     return QDBusConnection::sessionBus().asyncCall(msg);
+#endif
+
 }
 
 QDBusPendingCall PowerManagementJob::setKeyboardBrightness(int value, bool silent)
@@ -149,4 +200,15 @@ QDBusPendingCall PowerManagementJob::setKeyboardBrightness(int value, bool silen
                                                       silent ? "setKeyboardBrightnessSilent" : "setKeyboardBrightness");
     msg << value;
     return QDBusConnection::sessionBus().asyncCall(msg);
+}
+
+QDBusPendingCall PowerManagementJob::setAutoBrightness(bool value, bool silent)
+{
+    QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("com.jingos.repowerd.Screen"),
+                                                      QStringLiteral("/com/jingos/repowerd/Screen"),
+                                                      QStringLiteral("com.jingos.repowerd.Screen"),
+                                                      silent ? "userAutobrightnessEnable" : "userAutobrightnessEnable");
+    msg << value;
+    return QDBusConnection::systemBus().asyncCall(msg);
+
 }

@@ -1,0 +1,744 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Sairan Kikkarin <sairan@computer.org>, 2010, 2011, 2012, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2013-02-11 03:01+0600\n"
+"Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
+"Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
+"Language: kk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: soliddeviceengine.cpp:124
+#, kde-format
+msgid "Parent UDI"
+msgstr "Аталық UDI"
+
+#: soliddeviceengine.cpp:125
+#, kde-format
+msgid "Vendor"
+msgstr "Жабдықтаушысы"
+
+#: soliddeviceengine.cpp:126
+#, kde-format
+msgid "Product"
+msgstr "Өнімі"
+
+#: soliddeviceengine.cpp:127
+#, kde-format
+msgid "Description"
+msgstr "Сипаттамасы"
+
+#: soliddeviceengine.cpp:128
+#, kde-format
+msgid "Icon"
+msgstr "Таңбашасы"
+
+#: soliddeviceengine.cpp:129 soliddeviceengine.cpp:592
+#, kde-format
+msgid "Emblems"
+msgstr "Эмблемалары"
+
+#: soliddeviceengine.cpp:130 soliddeviceengine.cpp:476
+#: soliddeviceengine.cpp:482 soliddeviceengine.cpp:495
+#, kde-format
+msgid "State"
+msgstr "Күй-жайы"
+
+#: soliddeviceengine.cpp:131 soliddeviceengine.cpp:477
+#: soliddeviceengine.cpp:483 soliddeviceengine.cpp:491
+#: soliddeviceengine.cpp:493
+#, kde-format
+msgid "Operation result"
+msgstr "Операцияның нәтижесі"
+
+#: soliddeviceengine.cpp:132
+#, kde-format
+msgid "Timestamp"
+msgstr "Уақыт белгісі"
+
+#: soliddeviceengine.cpp:140
+#, kde-format
+msgid "Processor"
+msgstr "Процессоры"
+
+#: soliddeviceengine.cpp:141
+#, kde-format
+msgid "Number"
+msgstr "Саны"
+
+#: soliddeviceengine.cpp:142
+#, kde-format
+msgid "Max Speed"
+msgstr "Макс. жылдамдығы"
+
+#: soliddeviceengine.cpp:143
+#, kde-format
+msgid "Can Change Frequency"
+msgstr "Жиілігін ауыстыруға болады"
+
+#: soliddeviceengine.cpp:151
+#, kde-format
+msgid "Block"
+msgstr "Блок"
+
+#: soliddeviceengine.cpp:152
+#, kde-format
+msgid "Major"
+msgstr "Негізгі"
+
+#: soliddeviceengine.cpp:153
+#, kde-format
+msgid "Minor"
+msgstr "Қосымша"
+
+#: soliddeviceengine.cpp:154
+#, kde-format
+msgid "Device"
+msgstr "Құрылғы"
+
+#: soliddeviceengine.cpp:162
+#, kde-format
+msgid "Storage Access"
+msgstr "Деректерге қатынау"
+
+#: soliddeviceengine.cpp:163 soliddeviceengine.cpp:507
+#: soliddeviceengine.cpp:606
+#, kde-format
+msgid "Accessible"
+msgstr "Қатынауға болады"
+
+#: soliddeviceengine.cpp:164 soliddeviceengine.cpp:508
+#, kde-format
+msgid "File Path"
+msgstr "Файл жолы"
+
+#: soliddeviceengine.cpp:179
+#, kde-format
+msgid "Storage Drive"
+msgstr "Жинақтаушы жетегі"
+
+#: soliddeviceengine.cpp:182
+#, kde-format
+msgid "Ide"
+msgstr "IDE"
+
+#: soliddeviceengine.cpp:182
+#, kde-format
+msgid "Usb"
+msgstr "USB"
+
+#: soliddeviceengine.cpp:182
+#, kde-format
+msgid "Ieee1394"
+msgstr "IEEE1394"
+
+#: soliddeviceengine.cpp:182
+#, kde-format
+msgid "Scsi"
+msgstr "SCSI"
+
+#: soliddeviceengine.cpp:182
+#, kde-format
+msgid "Sata"
+msgstr "SATA"
+
+#: soliddeviceengine.cpp:182
+#, kde-format
+msgid "Platform"
+msgstr "Платформасы"
+
+#: soliddeviceengine.cpp:184
+#, kde-format
+msgid "Hard Disk"
+msgstr "Қатқыл дискі"
+
+#: soliddeviceengine.cpp:184
+#, kde-format
+msgid "Cdrom Drive"
+msgstr "CDROM"
+
+#: soliddeviceengine.cpp:184
+#, kde-format
+msgid "Floppy"
+msgstr "Иілгіш дискі"
+
+#: soliddeviceengine.cpp:184
+#, kde-format
+msgid "Tape"
+msgstr "Таспа"
+
+#: soliddeviceengine.cpp:184
+#, kde-format
+msgid "Compact Flash"
+msgstr "Компакт флеш жады"
+
+#: soliddeviceengine.cpp:185
+#, kde-format
+msgid "Memory Stick"
+msgstr "Жад картасы"
+
+#: soliddeviceengine.cpp:185
+#, kde-format
+msgid "Smart Media"
+msgstr "Смарт медиа"
+
+#: soliddeviceengine.cpp:185
+#, kde-format
+msgid "SdMmc"
+msgstr "SDMMC"
+
+#: soliddeviceengine.cpp:185
+#, kde-format
+msgid "Xd"
+msgstr "XD"
+
+#: soliddeviceengine.cpp:187
+#, kde-format
+msgid "Bus"
+msgstr "Шинасы"
+
+#: soliddeviceengine.cpp:188
+#, kde-format
+msgid "Drive Type"
+msgstr "Жетек түрі"
+
+#: soliddeviceengine.cpp:189 soliddeviceengine.cpp:202
+#: soliddeviceengine.cpp:367 soliddeviceengine.cpp:381
+#, kde-format
+msgid "Removable"
+msgstr "Ауыстырмалы"
+
+#: soliddeviceengine.cpp:190 soliddeviceengine.cpp:203
+#: soliddeviceengine.cpp:368 soliddeviceengine.cpp:382
+#, kde-format
+msgid "Hotpluggable"
+msgstr "'Ыстық' қосылмалы"
+
+#: soliddeviceengine.cpp:212
+#, kde-format
+msgid "Optical Drive"
+msgstr "Оптикалық жетек"
+
+#: soliddeviceengine.cpp:217
+#, kde-format
+msgid "CD-R"
+msgstr "CD-R"
+
+#: soliddeviceengine.cpp:220
+#, kde-format
+msgid "CD-RW"
+msgstr "CD-RW"
+
+#: soliddeviceengine.cpp:223
+#, kde-format
+msgid "DVD"
+msgstr "DVD"
+
+#: soliddeviceengine.cpp:226
+#, kde-format
+msgid "DVD-R"
+msgstr "DVD-R"
+
+#: soliddeviceengine.cpp:229
+#, kde-format
+msgid "DVD-RW"
+msgstr "DVD-RW"
+
+#: soliddeviceengine.cpp:232
+#, kde-format
+msgid "DVD-RAM"
+msgstr "DVD-RAM"
+
+#: soliddeviceengine.cpp:235
+#, kde-format
+msgid "DVD+R"
+msgstr "DVD+R"
+
+#: soliddeviceengine.cpp:238
+#, kde-format
+msgid "DVD+RW"
+msgstr "DVD+RW"
+
+#: soliddeviceengine.cpp:241
+#, kde-format
+msgid "DVD+DL"
+msgstr "DVD+DL"
+
+#: soliddeviceengine.cpp:244
+#, kde-format
+msgid "DVD+DLRW"
+msgstr "DVD+DLRW"
+
+#: soliddeviceengine.cpp:247
+#, kde-format
+msgid "BD"
+msgstr "BD"
+
+#: soliddeviceengine.cpp:250
+#, kde-format
+msgid "BD-R"
+msgstr "BD-R"
+
+#: soliddeviceengine.cpp:253
+#, kde-format
+msgid "BD-RE"
+msgstr "BD-RE"
+
+#: soliddeviceengine.cpp:256
+#, kde-format
+msgid "HDDVD"
+msgstr "HDDVD"
+
+#: soliddeviceengine.cpp:259
+#, kde-format
+msgid "HDDVD-R"
+msgstr "HDDVD-R"
+
+#: soliddeviceengine.cpp:262
+#, kde-format
+msgid "HDDVD-RW"
+msgstr "HDDVD-RW"
+
+#: soliddeviceengine.cpp:264
+#, kde-format
+msgid "Supported Media"
+msgstr "Танитын тасушысы"
+
+#: soliddeviceengine.cpp:266
+#, kde-format
+msgid "Read Speed"
+msgstr "Оқу жылдамдығы"
+
+#: soliddeviceengine.cpp:267
+#, kde-format
+msgid "Write Speed"
+msgstr "Жазу жылдамдығы"
+
+#: soliddeviceengine.cpp:275
+#, kde-format
+msgid "Write Speeds"
+msgstr "Жазу жылдамдылықтары"
+
+#: soliddeviceengine.cpp:283
+#, kde-format
+msgid "Storage Volume"
+msgstr "Жинақтауыш томы"
+
+#: soliddeviceengine.cpp:286
+#, kde-format
+msgid "Other"
+msgstr "Басқа"
+
+#: soliddeviceengine.cpp:286
+#, kde-format
+msgid "Unused"
+msgstr "Пайдалудан тыс"
+
+#: soliddeviceengine.cpp:286
+#, kde-format
+msgid "File System"
+msgstr "Файлдық жүйесі"
+
+#: soliddeviceengine.cpp:286
+#, kde-format
+msgid "Partition Table"
+msgstr "Бөлімдер кестесі"
+
+#: soliddeviceengine.cpp:286
+#, kde-format
+msgid "Raid"
+msgstr "RAID"
+
+#: soliddeviceengine.cpp:286
+#, kde-format
+msgid "Encrypted"
+msgstr "Шифрланған"
+
+#: soliddeviceengine.cpp:289 soliddeviceengine.cpp:291
+#, kde-format
+msgid "Usage"
+msgstr "Пайдалануы"
+
+#: soliddeviceengine.cpp:291
+#, kde-format
+msgid "Unknown"
+msgstr "Беймәлім"
+
+#: soliddeviceengine.cpp:294
+#, kde-format
+msgid "Ignored"
+msgstr "Елемей қалдырылған"
+
+#: soliddeviceengine.cpp:295
+#, kde-format
+msgid "File System Type"
+msgstr "Файлдық жүйе түрі"
+
+#: soliddeviceengine.cpp:296
+#, kde-format
+msgid "Label"
+msgstr "Жарлығы"
+
+#: soliddeviceengine.cpp:297
+#, kde-format
+msgid "UUID"
+msgstr "UUID"
+
+#: soliddeviceengine.cpp:306
+#, kde-format
+msgid "Encrypted Container"
+msgstr "Шифрлы контейнер"
+
+#: soliddeviceengine.cpp:318
+#, kde-format
+msgid "OpticalDisc"
+msgstr "Оптикалық дискі"
+
+#: soliddeviceengine.cpp:324
+#, kde-format
+msgid "Audio"
+msgstr "Аудио"
+
+#: soliddeviceengine.cpp:327
+#, kde-format
+msgid "Data"
+msgstr "Дерек"
+
+#: soliddeviceengine.cpp:330
+#, kde-format
+msgid "Video CD"
+msgstr "Видео CD"
+
+#: soliddeviceengine.cpp:333
+#, kde-format
+msgid "Super Video CD"
+msgstr "Super Видео CD"
+
+#: soliddeviceengine.cpp:336
+#, kde-format
+msgid "Video DVD"
+msgstr "Видео DVD"
+
+#: soliddeviceengine.cpp:339
+#, kde-format
+msgid "Video Blu Ray"
+msgstr ""
+
+#: soliddeviceengine.cpp:341
+#, kde-format
+msgid "Available Content"
+msgstr "Қолжетерлік мазмұны"
+
+#: soliddeviceengine.cpp:344
+#, kde-format
+msgid "Unknown Disc Type"
+msgstr "Беймәлім диск түрі"
+
+#: soliddeviceengine.cpp:344
+#, kde-format
+msgid "CD Rom"
+msgstr "CD-ROM"
+
+#: soliddeviceengine.cpp:344
+#, kde-format
+msgid "CD Recordable"
+msgstr "Жазылмалы CD"
+
+#: soliddeviceengine.cpp:344
+#, kde-format
+msgid "CD Rewritable"
+msgstr "Қайта жазылмалы CD"
+
+#: soliddeviceengine.cpp:344
+#, kde-format
+msgid "DVD Rom"
+msgstr "DVD ROM"
+
+#: soliddeviceengine.cpp:345
+#, kde-format
+msgid "DVD Ram"
+msgstr "DVD RAM"
+
+#: soliddeviceengine.cpp:345
+#, kde-format
+msgid "DVD Recordable"
+msgstr "Жазылмалы DVD"
+
+#: soliddeviceengine.cpp:345
+#, kde-format
+msgid "DVD Rewritable"
+msgstr "Қайта жазылмалы DVD"
+
+#: soliddeviceengine.cpp:345
+#, kde-format
+msgid "DVD Plus Recordable"
+msgstr "Жазылмалы DVD Plus"
+
+#: soliddeviceengine.cpp:346
+#, kde-format
+msgid "DVD Plus Rewritable"
+msgstr "Қайта жзылмалы DVD Plus"
+
+#: soliddeviceengine.cpp:346
+#, kde-format
+msgid "DVD Plus Recordable Duallayer"
+msgstr "Жазылмалы қосқабатты DVD Plus"
+
+#: soliddeviceengine.cpp:346
+#, kde-format
+msgid "DVD Plus Rewritable Duallayer"
+msgstr "Қайта жазылмалы қосқабатты DVD Plus"
+
+#: soliddeviceengine.cpp:347
+#, kde-format
+msgid "Blu Ray Rom"
+msgstr "Blu Ray ROM"
+
+#: soliddeviceengine.cpp:347
+#, kde-format
+msgid "Blu Ray Recordable"
+msgstr "Жазылмалы Blu Ray"
+
+#: soliddeviceengine.cpp:347
+#, kde-format
+msgid "Blu Ray Rewritable"
+msgstr "Қайта жазылмалы Blu Ray"
+
+#: soliddeviceengine.cpp:347
+#, kde-format
+msgid "HD DVD Rom"
+msgstr "HD DVD ROM"
+
+#: soliddeviceengine.cpp:348
+#, kde-format
+msgid "HD DVD Recordable"
+msgstr "Жазылмалы HD DVD"
+
+#: soliddeviceengine.cpp:348
+#, kde-format
+msgid "HD DVD Rewritable"
+msgstr "Қайта жазылмалы HD DVD"
+
+#: soliddeviceengine.cpp:350
+#, kde-format
+msgid "Disc Type"
+msgstr "Диск түрі"
+
+#: soliddeviceengine.cpp:351
+#, kde-format
+msgid "Appendable"
+msgstr "Үстемелі"
+
+#: soliddeviceengine.cpp:352
+#, kde-format
+msgid "Blank"
+msgstr "Бос"
+
+#: soliddeviceengine.cpp:353
+#, kde-format
+msgid "Rewritable"
+msgstr "Қайта жазылмалы"
+
+#: soliddeviceengine.cpp:354
+#, kde-format
+msgid "Capacity"
+msgstr "Сыйымдылғы"
+
+#: soliddeviceengine.cpp:362
+#, kde-format
+msgid "Camera"
+msgstr "Фотокамера"
+
+#: soliddeviceengine.cpp:364 soliddeviceengine.cpp:378
+#, kde-format
+msgid "Supported Protocols"
+msgstr "Танитын протоколдары"
+
+#: soliddeviceengine.cpp:365 soliddeviceengine.cpp:379
+#, kde-format
+msgid "Supported Drivers"
+msgstr "Танитын драйверлері"
+
+#: soliddeviceengine.cpp:376
+#, kde-format
+msgid "Portable Media Player"
+msgstr "Тасымалы ойнатқышы"
+
+#: soliddeviceengine.cpp:390
+#, kde-format
+msgid "Battery"
+msgstr "Батарея"
+
+#: soliddeviceengine.cpp:393
+#, kde-format
+msgid "Unknown Battery"
+msgstr "Беймәлім батарея"
+
+#: soliddeviceengine.cpp:393
+#, kde-format
+msgid "PDA Battery"
+msgstr "PDA батареясы"
+
+#: soliddeviceengine.cpp:393
+#, kde-format
+msgid "UPS Battery"
+msgstr "UPS батареясы"
+
+#: soliddeviceengine.cpp:393
+#, kde-format
+msgid "Primary Battery"
+msgstr "Негізгі батареясы"
+
+#: soliddeviceengine.cpp:394
+#, kde-format
+msgid "Mouse Battery"
+msgstr "Тышқанның батареясы"
+
+#: soliddeviceengine.cpp:394
+#, kde-format
+msgid "Keyboard Battery"
+msgstr "Пернетақтаның батареясы"
+
+#: soliddeviceengine.cpp:394
+#, kde-format
+msgid "Keyboard Mouse Battery"
+msgstr "Пернетақта тышқанның батареясы"
+
+#: soliddeviceengine.cpp:394
+#, kde-format
+msgid "Camera Battery"
+msgstr "Фотокамераның батареясы"
+
+#: soliddeviceengine.cpp:395
+#, fuzzy, kde-format
+#| msgid "Mouse Battery"
+msgid "Phone Battery"
+msgstr "Тышқанның батареясы"
+
+#: soliddeviceengine.cpp:395
+#, fuzzy, kde-format
+#| msgid "Mouse Battery"
+msgid "Monitor Battery"
+msgstr "Тышқанның батареясы"
+
+#: soliddeviceengine.cpp:395
+#, kde-format
+msgid "Gaming Input Battery"
+msgstr ""
+
+#: soliddeviceengine.cpp:395
+#, fuzzy, kde-format
+#| msgid "Mouse Battery"
+msgid "Bluetooth Battery"
+msgstr "Тышқанның батареясы"
+
+#: soliddeviceengine.cpp:398
+#, fuzzy, kde-format
+#| msgid "Charging"
+msgid "Not Charging"
+msgstr "Толығып жатыр"
+
+#: soliddeviceengine.cpp:398
+#, kde-format
+msgid "Charging"
+msgstr "Толығып жатыр"
+
+#: soliddeviceengine.cpp:398
+#, kde-format
+msgid "Discharging"
+msgstr "Толуын жоғалтқан"
+
+#: soliddeviceengine.cpp:398
+#, kde-format
+msgid "Fully Charged"
+msgstr "Толық"
+
+#: soliddeviceengine.cpp:400
+#, kde-format
+msgid "Plugged In"
+msgstr "Қосылған"
+
+#: soliddeviceengine.cpp:401
+#, kde-format
+msgid "Type"
+msgstr "Түрі"
+
+#: soliddeviceengine.cpp:402
+#, kde-format
+msgid "Charge Percent"
+msgstr "Толу пайызы"
+
+#: soliddeviceengine.cpp:403
+#, kde-format
+msgid "Rechargeable"
+msgstr "Қайта толтырмалы"
+
+#: soliddeviceengine.cpp:404
+#, kde-format
+msgid "Charge State"
+msgstr "Толу күйі"
+
+#: soliddeviceengine.cpp:427
+#, kde-format
+msgid "Type Description"
+msgstr "Түрінің сипаттамасы"
+
+#: soliddeviceengine.cpp:432
+#, kde-format
+msgid "Device Types"
+msgstr "Құрылғы түрлері"
+
+#: soliddeviceengine.cpp:456 soliddeviceengine.cpp:553
+#, kde-format
+msgid "Size"
+msgstr "Көлемі"
+
+#: soliddeviceengine.cpp:535
+#, kde-format
+msgid "Filesystem is not responding"
+msgstr ""
+
+#: soliddeviceengine.cpp:535
+#, kde-format
+msgid "Filesystem mounted at '%1' is not responding"
+msgstr ""
+
+#: soliddeviceengine.cpp:551
+#, kde-format
+msgid "Free Space"
+msgstr "Бос орын"
+
+#: soliddeviceengine.cpp:552
+#, kde-format
+msgid "Free Space Text"
+msgstr "Бос орын мәтіні"
+
+#: soliddeviceengine.cpp:554
+#, fuzzy, kde-format
+#| msgid "Size"
+msgid "Size Text"
+msgstr "Көлемі"
+
+#: soliddeviceengine.cpp:580
+#, kde-format
+msgid "Temperature"
+msgstr "Температура"
+
+#: soliddeviceengine.cpp:581
+#, kde-format
+msgid "Temperature Unit"
+msgstr "Температураның бірлігі"
+
+#: soliddeviceengine.cpp:625 soliddeviceengine.cpp:629
+#, kde-format
+msgid "In Use"
+msgstr "Қолданыста"

@@ -21,24 +21,31 @@
 #include <QApplication>
 #include <QClipboard>
 #include <QIcon>
-#include <QMimeData>
 #include <QMenu>
+#include <QMimeData>
 #include <QQuickItem>
-#include <QTimer>
 #include <QQuickWindow>
+#include <QTimer>
 
+#include <KConfigGroup>
 #include <KFileItemActions>
 #include <KFileItemListProperties>
 #include <KLocalizedString>
-#include <KProtocolManager>
 #include <KPropertiesDialog>
+#include <KProtocolManager>
+#include <KSharedConfig>
+#include <KStandardAction>
 #include <KUrlMimeData>
 
+#include <KIO/CopyJob> // for KIO::trash
+#include <KIO/DeleteJob>
+#include <KIO/FileUndoManager>
+#include <KIO/JobUiDelegate>
 #include <KIO/OpenFileManagerWindowJob>
 
-FileMenu::FileMenu(QObject *parent) : QObject(parent)
+FileMenu::FileMenu(QObject *parent)
+    : QObject(parent)
 {
-
 }
 
 FileMenu::~FileMenu() = default;
@@ -138,8 +145,49 @@ void FileMenu::open(int x, int y)
         QApplication::clipboard()->setMimeData(data);
     });
 
+    menu->addSeparator();
+
+    const bool canTrash = itemProperties.isLocal() && itemProperties.supportsMoving();
+    if (canTrash) {
+        auto moveToTrashLambda = [this] {
+            const QList<QUrl> urls{m_url};
+
+            KIO::JobUiDelegate uiDelegate;
+            if (uiDelegate.askDeleteConfirmation(urls, KIO::JobUiDelegate::Trash, KIO::JobUiDelegate::DefaultConfirmation)) {
+                auto *job = KIO::trash(urls);
+                job->uiDelegate()->setAutoErrorHandlingEnabled(true);
+                KIO::FileUndoManager::self()->recordJob(KIO::FileUndoManager::Trash, urls, QUrl(QStringLiteral("trash:/")), job);
+            }
+        };
+        QAction *moveToTrashAction = KStandardAction::moveToTrash(this, moveToTrashLambda, menu);
+        moveToTrashAction->setShortcut({}); // Can't focus notification to press Delete
+        menu->addAction(moveToTrashAction);
+    }
+
+    KConfigGroup cg(KSharedConfig::openConfig(), "KDE");
+    const bool showDeleteCommand = cg.readEntry("ShowDeleteCommand", false);
+
+    if (itemProperties.supportsDeleting() && (!canTrash || showDeleteCommand)) {
+        auto deleteLambda = [this] {
+            const QList<QUrl> urls{m_url};
+
+            KIO::JobUiDelegate uiDelegate;
+            if (uiDelegate.askDeleteConfirmation(urls, KIO::JobUiDelegate::Delete, KIO::JobUiDelegate::DefaultConfirmation)) {
+                auto *job = KIO::del(urls);
+                job->uiDelegate()->setAutoErrorHandlingEnabled(true);
+            }
+        };
+        QAction *deleteAction = KStandardAction::deleteFile(this, deleteLambda, menu);
+        deleteAction->setShortcut({});
+        menu->addAction(deleteAction);
+    }
+
+    menu->addSeparator();
+
     actions->addServiceActionsTo(menu);
     actions->addPluginActionsTo(menu);
+
+    menu->addSeparator();
 
     QAction *propertiesAction = menu->addAction(QIcon::fromTheme(QStringLiteral("document-properties")), i18n("Properties"));
     connect(propertiesAction, &QAction::triggered, [fileItem] {
@@ -148,13 +196,13 @@ void FileMenu::open(int x, int y)
         dialog->show();
     });
 
-    //this is a workaround where Qt will fail to realize a mouse has been released
+    // this is a workaround where Qt will fail to realize a mouse has been released
     // this happens if a window which does not accept focus spawns a new window that takes focus and X grab
     // whilst the mouse is depressed
     // https://bugreports.qt.io/browse/QTBUG-59044
     // this causes the next click to go missing
 
-    //by releasing manually we avoid that situation
+    // by releasing manually we avoid that situation
     auto ungrabMouseHack = [this]() {
         if (m_visualParent && m_visualParent->window() && m_visualParent->window()->mouseGrabberItem()) {
             m_visualParent->window()->mouseGrabberItem()->ungrabMouse();
@@ -162,7 +210,7 @@ void FileMenu::open(int x, int y)
     };
 
     QTimer::singleShot(0, m_visualParent, ungrabMouseHack);
-    //end workaround
+    // end workaround
 
     QPoint pos;
     if (x == -1 && y == -1) { // align "bottom left of visualParent"

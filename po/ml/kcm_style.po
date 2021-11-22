@@ -1,0 +1,249 @@
+# translation of kcmstyle.po to
+# Copyright (C) 2008 This_file_is_part_of_KDE
+# This file is distributed under the same license as the kcmstyle package.
+# ANI PETER|അനി പീറ്റര്‍ <peter.ani@gmail.com>, 2008
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmstyle\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2008-07-10 01:54+0530\n"
+"Last-Translator: ANI PETER|അനി പീറ്റര്‍ <peter.ani@gmail.com>\n"
+"Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc-"
+"discuss@googlegroups.com>\n"
+"Language: ml\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "അനി പീറ്റര്‍"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "peter.ani@gmail.com"
+
+#: gtkpage.cpp:89
+#, kde-format
+msgid "%1 is not a valid GTK Theme archive."
+msgstr ""
+
+#: kcmstyle.cpp:91
+#, kde-format
+msgid "Application Style"
+msgstr ""
+
+#: kcmstyle.cpp:95
+#, fuzzy, kde-format
+#| msgid "(c) 2002 Karol Szwed, Daniel Molkentin"
+msgid "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik"
+msgstr "(c) 2002 കാരള്‍ സ്വെഡ്, ഡാനിയല്‍ മോല്‍ക്കെന്‍ടിന്‍"
+
+#: kcmstyle.cpp:97
+#, kde-format
+msgid "Karol Szwed"
+msgstr "കാരള്‍ സ്വെഡ്"
+
+#: kcmstyle.cpp:98
+#, kde-format
+msgid "Daniel Molkentin"
+msgstr "ഡാനിയല്‍ മോല്‍ക്കെന്‍ടിന്‍"
+
+#: kcmstyle.cpp:99
+#, kde-format
+msgid "Kai Uwe Broulik"
+msgstr ""
+
+#: kcmstyle.cpp:182 kcmstyle.cpp:189
+#, kde-format
+msgid "There was an error loading the configuration dialog for this style."
+msgstr "ഈ രിതിയ്ക്കുള്ള ക്രമീകരണ ഡയലോഗ് ലഭ്യമാക്കുന്നതില്‍ പിശകു്."
+
+#: kcmstyle.cpp:280
+#, kde-format
+msgid "Failed to apply selected style '%1'."
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:46
+#, fuzzy, kde-format
+msgid "Show icons:"
+msgstr "ബട്ടണുകളില്‍ ചിത്രം കാ&ണിക്കുക"
+
+#: package/contents/ui/EffectSettingsPopup.qml:47
+#, fuzzy, kde-format
+msgid "On buttons"
+msgstr "റേഡിയോ ബട്ടണ്‍"
+
+#: package/contents/ui/EffectSettingsPopup.qml:58
+#, kde-format
+msgid "In menus"
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:70
+#, kde-format
+msgid "Main toolbar label:"
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:72
+#, kde-format
+msgid "None"
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:73
+#, fuzzy, kde-format
+msgid "Text only"
+msgstr "വാചകം മാത്രം"
+
+#: package/contents/ui/EffectSettingsPopup.qml:74
+#, fuzzy, kde-format
+msgid "Beside icons"
+msgstr "വാചകത്തിനൊപ്പമുള്ള ചിത്രങ്ങള്‍"
+
+#: package/contents/ui/EffectSettingsPopup.qml:75
+#, fuzzy, kde-format
+msgid "Below icon"
+msgstr "ചിത്രങ്ങളുടെ കീഴിലുള്ള വാചകം"
+
+#: package/contents/ui/EffectSettingsPopup.qml:90
+#, kde-format
+msgid "Secondary toolbar label:"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:32
+#, kde-format
+msgid "GNOME/GTK Application Style"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:58
+#, kde-format
+msgid "GTK theme:"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:90
+#, fuzzy, kde-format
+#| msgid "Preview"
+msgid "Preview..."
+msgstr "കണ്ടുനോക്കുക"
+
+#: package/contents/ui/GtkStylePage.qml:111
+#, kde-format
+msgid "Install from File..."
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:117
+#, fuzzy, kde-format
+#| msgid "Con&figure..."
+msgid "Get New GNOME/GTK Application Styles..."
+msgstr "ക്രമീ&കരിക്കുക..."
+
+#: package/contents/ui/GtkStylePage.qml:129
+#, kde-format
+msgid "Select GTK Theme Archive"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:131
+#, kde-format
+msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
+msgstr ""
+
+#: package/contents/ui/main.qml:31
+#, kde-format
+msgid ""
+"This module allows you to modify the visual appearance of applications' user "
+"interface elements."
+msgstr ""
+
+#: package/contents/ui/main.qml:110
+#, fuzzy, kde-format
+#| msgid "Con&figure..."
+msgid "Configure Style..."
+msgstr "ക്രമീ&കരിക്കുക..."
+
+#: package/contents/ui/main.qml:127
+#, kde-format
+msgid "Configure Icons and Toolbars"
+msgstr ""
+
+#: package/contents/ui/main.qml:140
+#, fuzzy, kde-format
+#| msgid "Con&figure..."
+msgid "Configure GNOME/GTK Application Style..."
+msgstr "ക്രമീ&കരിക്കുക..."
+
+#: styleconfdialog.cpp:33
+#, kde-format
+msgid "Configure %1"
+msgstr "%1 ക്രമീകരിക്കുക"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
+#: stylepreview.ui:33
+#, kde-format
+msgid "Tab 1"
+msgstr "ടാബ് 1"
+
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: stylepreview.ui:65
+#, fuzzy, kde-format
+msgid "Push Button"
+msgstr "ബട്ടണ്‍"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
+#: stylepreview.ui:86
+#, fuzzy, kde-format
+msgid "Combo box"
+msgstr "കോമ്പോബോക്സ്"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox)
+#: stylepreview.ui:96
+#, kde-format
+msgid "Checkbox"
+msgstr "ചെക്ബോക്സ്"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
+#: stylepreview.ui:106 stylepreview.ui:116
+#, kde-format
+msgid "Radio button"
+msgstr "റേഡിയോ ബട്ടണ്‍"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: stylepreview.ui:133
+#, kde-format
+msgid "Tab 2"
+msgstr "ടാബ് 2"
+
+#. i18n: ectx: label, entry (widgetStyle), group (KDE)
+#: stylesettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Con&figure..."
+msgid "Application style"
+msgstr "ക്രമീ&കരിക്കുക..."
+
+#. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
+#: stylesettings.kcfg:13
+#, fuzzy, kde-format
+msgid "Show icons on buttons"
+msgstr "ബട്ടണുകളില്‍ ചിത്രം കാ&ണിക്കുക"
+
+#. i18n: ectx: label, entry (iconsInMenus), group (KDE)
+#: stylesettings.kcfg:17
+#, fuzzy, kde-format
+msgid "Show icons in menus"
+msgstr "ബട്ടണുകളില്‍ ചിത്രം കാ&ണിക്കുക"
+
+#. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
+#: stylesettings.kcfg:23
+#, kde-format
+msgid "Main toolbar label"
+msgstr ""
+
+#. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
+#: stylesettings.kcfg:27
+#, kde-format
+msgid "Secondary toolbar label"
+msgstr ""

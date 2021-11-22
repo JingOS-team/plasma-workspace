@@ -1,0 +1,391 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Alexander Potashev <aspotashev@gmail.com>, 2014, 2015, 2016, 2017, 2018, 2019.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2018, 2019, 2020, 2021.
+# Sidlovsky Yaroslav <zawertun@gmail.com>, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-16 02:49+0100\n"
+"PO-Revision-Date: 2021-01-13 14:58+0300\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Lokalize 20.12.1\n"
+
+#: ../sddm-theme/KeyboardButton.qml:13
+msgid "Keyboard Layout: %1"
+msgstr "Раскладка клавиатуры: %1"
+
+#: ../sddm-theme/Login.qml:59
+msgid "Username"
+msgstr "Имя пользователя"
+
+#: ../sddm-theme/Login.qml:75 contents/lockscreen/MainBlock.qml:62
+msgid "Password"
+msgstr "Пароль"
+
+#: ../sddm-theme/Login.qml:114
+msgid "Log In"
+msgstr "Войти"
+
+#: ../sddm-theme/Main.qml:198 contents/lockscreen/LockScreenUi.qml:251
+msgid "Caps Lock is on"
+msgstr "Включён режим Caps Lock"
+
+#: ../sddm-theme/Main.qml:210 ../sddm-theme/Main.qml:398
+#: contents/logout/Logout.qml:176
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Ждущий режим"
+
+#: ../sddm-theme/Main.qml:218 ../sddm-theme/Main.qml:406
+#: contents/logout/Logout.qml:194
+msgid "Restart"
+msgstr "Перезагрузить"
+
+#: ../sddm-theme/Main.qml:226 ../sddm-theme/Main.qml:414
+#: contents/logout/Logout.qml:204
+msgid "Shut Down"
+msgstr "Выключить"
+
+#: ../sddm-theme/Main.qml:234
+msgctxt "For switching to a username and password prompt"
+msgid "Other..."
+msgstr "Другое..."
+
+#: ../sddm-theme/Main.qml:386
+msgid "Type in Username and Password"
+msgstr "Введите имя пользователя и пароль"
+
+#: ../sddm-theme/Main.qml:422
+msgid "List Users"
+msgstr "Список пользователей"
+
+#: ../sddm-theme/Main.qml:490 contents/lockscreen/LockScreenUi.qml:513
+msgctxt "Button to show/hide virtual keyboard"
+msgid "Virtual Keyboard"
+msgstr "Виртуальная клавиатура"
+
+#: ../sddm-theme/Main.qml:519
+msgid "Login Failed"
+msgstr "Не удалось войти в систему"
+
+#: ../sddm-theme/SessionButton.qml:35
+msgid "Desktop Session: %1"
+msgstr "Графический сеанс: %1"
+
+#: contents/components/Battery.qml:53
+msgid "%1%"
+msgstr "%1%"
+
+#: contents/components/Battery.qml:54
+msgid "Battery at %1%"
+msgstr "Заряд батареи %1%"
+
+#: contents/components/UserList.qml:62
+msgctxt "Nobody logged in on that session"
+msgid "Unused"
+msgstr "Не используется"
+
+#: contents/components/UserList.qml:68
+msgctxt "User logged in on console number"
+msgid "TTY %1"
+msgstr "Терминал %1"
+
+#: contents/components/UserList.qml:70
+msgctxt "User logged in on console (X display number)"
+msgid "on TTY %1 (Display %2)"
+msgstr "на терминале %1 (экран %2)"
+
+# BUGME: this is bad syntax: "myusername (on TTY 7 (Display 0))" --aspotashev
+#: contents/components/UserList.qml:74
+msgctxt "Username (location)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: contents/lockscreen/config.qml:17
+msgctxt "verb, to show something"
+msgid "Show:"
+msgstr "Показывать:"
+
+#: contents/lockscreen/config.qml:18
+msgid "Clock"
+msgstr "Часы"
+
+#: contents/lockscreen/config.qml:26
+msgid "Media Controls"
+msgstr "Элементы управления проигрывателем"
+
+#: contents/lockscreen/LockScreenUi.qml:45
+msgid "Unlocking failed"
+msgstr "Не удалось разблокировать"
+
+#: contents/lockscreen/LockScreenUi.qml:267
+msgid "Switch User"
+msgstr "Переключить пользователя"
+
+#: contents/lockscreen/LockScreenUi.qml:461
+msgid "Switch to This Session"
+msgstr "Переключить в этот сеанс"
+
+#: contents/lockscreen/LockScreenUi.qml:469
+msgid "Start New Session"
+msgstr "Начать новый сеанс"
+
+#: contents/lockscreen/LockScreenUi.qml:482
+msgid "Back"
+msgstr "Назад"
+
+#: contents/lockscreen/MainBlock.qml:105
+msgid "Unlock"
+msgstr "Разблокировать"
+
+#: contents/lockscreen/MediaControls.qml:118
+msgid "No media playing"
+msgstr "Ничего не воспроизводится"
+
+#: contents/lockscreen/MediaControls.qml:146
+msgid "Previous track"
+msgstr "Предыдущая дорожка"
+
+#: contents/lockscreen/MediaControls.qml:157
+msgid "Play or Pause media"
+msgstr "Начать или приостановить воспроизведение"
+
+#: contents/lockscreen/MediaControls.qml:170
+msgid "Next track"
+msgstr "Следующая дорожка"
+
+#: contents/logout/Logout.qml:152
+msgid ""
+"One other user is currently logged in. If the computer is shut down or "
+"restarted, that user may lose work."
+msgid_plural ""
+"%1 other users are currently logged in. If the computer is shut down or "
+"restarted, those users may lose work."
+msgstr[0] ""
+"В системе активны сеансы работы %1 другого пользователя. При выключении или "
+"перезагрузке компьютера они могут потерять результаты своей работы."
+msgstr[1] ""
+"В системе активны сеансы работы %1 других пользователей. При выключении или "
+"перезагрузке компьютера они могут потерять результаты своей работы."
+msgstr[2] ""
+"В системе активны сеансы работы %1 других пользователей. При выключении или "
+"перезагрузке компьютера они могут потерять результаты своей работы."
+msgstr[3] ""
+"В системе активен сеанс работы другого пользователя. При выключении или "
+"перезагрузке компьютера он может потерять результаты своей работы."
+
+#: contents/logout/Logout.qml:166
+msgid "When restarted, the computer will enter the firmware setup screen."
+msgstr "При перезагрузке компьютера будет показан экран настройки прошивки."
+
+#: contents/logout/Logout.qml:185
+msgid "Hibernate"
+msgstr "Спящий режим"
+
+#: contents/logout/Logout.qml:214
+msgid "Log Out"
+msgstr "Завершить сеанс"
+
+#: contents/logout/Logout.qml:237
+msgid "Restarting in 1 second"
+msgid_plural "Restarting in %1 seconds"
+msgstr[0] "Перезагрузка через %1 секунду"
+msgstr[1] "Перезагрузка через %1 секунды"
+msgstr[2] "Перезагрузка через %1 секунд"
+msgstr[3] "Перезагрузка через %1 секунду"
+
+#: contents/logout/Logout.qml:239
+msgid "Shutting down in 1 second"
+msgid_plural "Shutting down in %1 seconds"
+msgstr[0] "Выключение компьютера через %1 секунду"
+msgstr[1] "Выключение компьютера через %1 секунды"
+msgstr[2] "Выключение компьютера через %1 секунд"
+msgstr[3] "Выключение компьютера через %1 секунду"
+
+#: contents/logout/Logout.qml:241
+msgid "Logging out in 1 second"
+msgid_plural "Logging out in %1 seconds"
+msgstr[0] "Завершение сеанса через %1 секунду"
+msgstr[1] "Завершение сеанса через %1 секунды"
+msgstr[2] "Завершение сеанса через %1 секунд"
+msgstr[3] "Завершение сеанса через %1 секунду"
+
+#: contents/logout/Logout.qml:252
+msgid "OK"
+msgstr "ОК"
+
+#: contents/logout/Logout.qml:258
+msgid "Cancel"
+msgstr "Отмена"
+
+#: contents/osd/OsdItem.qml:71
+msgid "100%"
+msgstr "100 %"
+
+#: contents/osd/OsdItem.qml:85
+msgctxt "Percentage value"
+msgid "%1%"
+msgstr "%1 %"
+
+#: contents/runcommand/RunCommand.qml:85
+msgid "Configure"
+msgstr "Настроить"
+
+#: contents/runcommand/RunCommand.qml:86
+msgid "Configure Search Plugins"
+msgstr "Настроить строку поиска и запуска"
+
+#: contents/runcommand/RunCommand.qml:89
+msgid "Configure KRunner..."
+msgstr "Настроить строку поиска и запуска..."
+
+#: contents/runcommand/RunCommand.qml:103
+msgctxt "Textfield placeholder text, query specific KRunner"
+msgid "Search '%1'..."
+msgstr "Поиск... (%1)"
+
+#: contents/runcommand/RunCommand.qml:105
+msgctxt "Textfield placeholder text"
+msgid "Search..."
+msgstr "Поиск..."
+
+#: contents/runcommand/RunCommand.qml:227
+msgid "Pin"
+msgstr "PIN"
+
+#: contents/runcommand/RunCommand.qml:228
+msgid "Pin Search"
+msgstr "Поиск PIN"
+
+#: contents/runcommand/RunCommand.qml:230
+msgid "Keep Open"
+msgstr "Держать открытым"
+
+#: contents/runcommand/RunCommand.qml:291
+msgid "Recent Queries"
+msgstr "Последние запросы"
+
+# BUGME: please clarify context --aspotashev
+#: contents/runcommand/RunCommand.qml:294
+msgid "Remove"
+msgstr "Удалить"
+
+#: contents/runcommand/RunCommand.qml:296
+msgid "in category recent queries"
+msgstr "в категории «Последние запросы»"
+
+#: contents/splash/Splash.qml:95
+msgctxt ""
+"This is the first text the user sees while starting in the splash screen, "
+"should be translated as something short, is a form that can be seen on a "
+"product. Plasma is the project name so shouldn't be translated."
+msgid "Plasma made by KDE"
+msgstr "KDE Plasma"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# BUGME: I can't translate this without context --aspotashev
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# BUGME: I can't translate this without context --aspotashev
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# BUGME: "myusername (0)" is not user-friendly --aspotashev

@@ -1,0 +1,110 @@
+# translation of plasma_applet_org.kde.plasma.mediacontroller.po to Slovak
+# Roman Paholik <wizzardsk@gmail.com>, 2014, 2016, 2017.
+# Mthw <jari_45@hotmail.com>, 2018.
+# Matej Mrenica <matejm98mthw@gmail.com>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_org.kde.plasma.mediacontroller\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-12-04 02:36+0100\n"
+"PO-Revision-Date: 2020-11-27 13:48+0100\n"
+"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.11.80\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#: contents/ui/ExpandedRepresentation.qml:241 contents/ui/main.qml:90
+#, kde-format
+msgid "No media playing"
+msgstr "Neprehráva sa žiadne médium"
+
+#: contents/ui/ExpandedRepresentation.qml:335
+#: contents/ui/ExpandedRepresentation.qml:406
+#, kde-format
+msgctxt "Remaining time for song e.g -5:42"
+msgid "-%1"
+msgstr "-%1"
+
+#: contents/ui/ExpandedRepresentation.qml:432
+#, kde-format
+msgid "Shuffle"
+msgstr "Zamiešať"
+
+#: contents/ui/ExpandedRepresentation.qml:486
+#, kde-format
+msgid "Repeat Track"
+msgstr "Opakovať skladbu"
+
+#: contents/ui/ExpandedRepresentation.qml:486
+#, kde-format
+msgid "Repeat"
+msgstr "Opakovať"
+
+#: contents/ui/main.qml:104
+#, kde-format
+msgctxt "Open player window or bring it to the front if already open"
+msgid "Open"
+msgstr "Otvoriť"
+
+#: contents/ui/main.qml:108
+#, kde-format
+msgctxt "Play previous track"
+msgid "Previous Track"
+msgstr "Predchádzajúca skladba"
+
+#: contents/ui/main.qml:116
+#, kde-format
+msgctxt "Pause playback"
+msgid "Pause"
+msgstr "Pozastaviť"
+
+#: contents/ui/main.qml:121
+#, kde-format
+msgctxt "Start playback"
+msgid "Play"
+msgstr "Prehrať"
+
+#: contents/ui/main.qml:127
+#, kde-format
+msgctxt "Play next track"
+msgid "Next Track"
+msgstr "Nasledujúca skladba"
+
+#: contents/ui/main.qml:133
+#, kde-format
+msgctxt "Stop playback"
+msgid "Stop"
+msgstr "Zastaviť"
+
+#: contents/ui/main.qml:141
+#, kde-format
+msgctxt "Quit player"
+msgid "Quit"
+msgstr "Ukončiť"
+
+#: contents/ui/main.qml:288
+#, kde-format
+msgid "Choose player automatically"
+msgstr "Vybrať prehrávač automaticky"
+
+#: contents/ui/main.qml:319
+#, kde-format
+msgctxt "by Artist (player name)"
+msgid "by %1 (%2)"
+msgstr "od %1 (%2)"
+
+#: contents/ui/main.qml:330
+#, kde-format
+msgctxt "by Artist (paused, player name)"
+msgid "by %1 (paused, %2)"
+msgstr "od %1 (pozastavené, %2)"
+
+#: contents/ui/main.qml:330
+#, kde-format
+msgctxt "Paused (player name)"
+msgid "Paused (%1)"
+msgstr "Pozastavené (%1)"

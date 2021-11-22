@@ -2,6 +2,7 @@
  This file is part of the KDE project.
 
 Copyright (C) 2014 Aleix Pol Gonzalez <aleixpol@blue-systems.com>
+Copyright (C) 2021 Liu Bangguo <liubangguo@jingos.com>
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -22,6 +23,7 @@ import QtQuick.Controls 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.private.sessions 2.0
 import "../components"
+import jingos.display 1.0
 
 Item {
     id: root
@@ -34,8 +36,8 @@ Item {
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
     
-    implicitWidth: 800
-    implicitHeight: 600
+    implicitWidth: JDisplay.dp(800)
+    implicitHeight: JDisplay.dp(600)
 
     Loader {
         id: mainLoader

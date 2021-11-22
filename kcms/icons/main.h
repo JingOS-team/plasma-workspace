@@ -28,8 +28,8 @@
 
 #include <KQuickAddons/ManagedConfigModule>
 
-#include <QScopedPointer>
 #include <QCache>
+#include <QScopedPointer>
 
 class KIconTheme;
 class IconsSettings;
@@ -62,7 +62,7 @@ public:
         ThemeNameRole = Qt::UserRole + 1,
         DescriptionRole,
         RemovableRole,
-        PendingDeletionRole
+        PendingDeletionRole,
     };
 
     IconsSettings *iconsSettings() const;
@@ -74,7 +74,7 @@ public:
     void load() override;
     void save() override;
 
-    Q_INVOKABLE void ghnsEntriesChanged(const QQmlListReference &changedEntries);
+    Q_INVOKABLE void ghnsEntriesChanged();
     Q_INVOKABLE void installThemeFromFile(const QUrl &url);
 
     Q_INVOKABLE QList<int> availableIconSizes(int group) const;
@@ -114,5 +114,4 @@ private:
 
     QScopedPointer<QTemporaryFile> m_tempInstallFile;
     QPointer<KIO::FileCopyJob> m_tempCopyJob;
-
 };

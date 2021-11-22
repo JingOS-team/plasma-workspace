@@ -19,17 +19,16 @@
 #ifndef DESKTOPVIEW_H
 #define DESKTOPVIEW_H
 
-
-#include <PlasmaQuick/ContainmentView>
 #include <PlasmaQuick/ConfigView>
+#include <PlasmaQuick/ContainmentView>
 #include <QPointer>
 
 namespace KWayland
 {
-    namespace Client
-    {
-        class PlasmaShellSurface;
-    }
+namespace Client
+{
+class PlasmaShellSurface;
+}
 }
 
 class DesktopView : public PlasmaQuick::ContainmentView
@@ -38,7 +37,7 @@ class DesktopView : public PlasmaQuick::ContainmentView
 
     Q_PROPERTY(WindowType windowType READ windowType WRITE setWindowType NOTIFY windowTypeChanged)
 
-    //What kind of plasma session we're in: are we in a full workspace, an application?...
+    // What kind of plasma session we're in: are we in a full workspace, an application?...
     Q_PROPERTY(SessionType sessionType READ sessionType CONSTANT)
 
     Q_PROPERTY(QVariantMap candidateContainments READ candidateContainmentsGraphicItems NOTIFY candidateContainmentsChanged)
@@ -48,13 +47,13 @@ public:
         Window, /** The window is a normal resizable window with titlebar and appears in the taskbar */
         FullScreen, /** The window is fullscreen and goes over all the other windows */
         Desktop, /** The window is the desktop layer, under everything else, doesn't appear in the taskbar */
-        WindowedDesktop /** full screen and borderless as Desktop, but can be brought in front and appears in the taskbar */
+        WindowedDesktop, /** full screen and borderless as Desktop, but can be brought in front and appears in the taskbar */
     };
     Q_ENUM(WindowType)
 
     enum SessionType {
         ApplicationSession, /** our session is a normal application */
-        ShellSession /** We are running as the primary user interface of this machine */
+        ShellSession, /** We are running as the primary user interface of this machine */
     };
     Q_ENUM(SessionType)
 
@@ -68,7 +67,7 @@ public:
     QScreen *screenToFollow() const;
 
     void adaptToScreen();
-    void showEvent(QShowEvent*) override;
+    void showEvent(QShowEvent *) override;
 
     WindowType windowType() const;
     void setWindowType(WindowType type);

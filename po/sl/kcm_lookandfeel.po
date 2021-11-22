@@ -1,0 +1,130 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Andrej Mernik <andrejm@ubuntu.si>, 2014, 2015, 2016, 2017, 2018.
+# Matjaž Jeran <matjaz.jeran@amis.net>, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-28 02:51+0100\n"
+"PO-Revision-Date: 2021-01-29 15:03+0100\n"
+"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
+"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
+"X-Generator: Lokalize 20.08.1\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Andrej Mernik,Matjaž Jeran"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "andrejm@ubuntu.si,matjaz.jeran@amis.net"
+
+#: kcm.cpp:85
+#, kde-format
+msgid "Global Theme"
+msgstr "Globalna tema"
+
+#: kcm.cpp:86 lnftool.cpp:50
+#, kde-format
+msgid "Marco Martin"
+msgstr "Marco Martin"
+
+#: kcm.cpp:548
+#, kde-format
+msgid ""
+"You have to restart the Plasma session for these changes to take effect."
+msgstr "Za uveljavitev sprememb seje morate znova zagnati Plasmo."
+
+#: kcm.cpp:549
+#, kde-format
+msgid "Cursor Settings Changed"
+msgstr "Spremenjene nastavitve kazalke"
+
+#: lnftool.cpp:45
+#, kde-format
+msgid "Global Theme Tool"
+msgstr "Orodje za globalne teme"
+
+#: lnftool.cpp:47
+#, kde-format
+msgid ""
+"Command line tool to apply global theme packages for changing the look and "
+"feel."
+msgstr "Orodje ukazne vrstice za uveljavitev paketov Izgleda in občutka."
+
+#: lnftool.cpp:49
+#, kde-format
+msgid "Copyright 2017, Marco Martin"
+msgstr "Avtorske pravice 2017, Marco Martin"
+
+#: lnftool.cpp:50
+#, kde-format
+msgid "Maintainer"
+msgstr "Vzdrževalec"
+
+#: lnftool.cpp:58
+#, kde-format
+msgid "List available global theme packages"
+msgstr "Seznam paketov globalnih tem"
+
+#: lnftool.cpp:59
+#, kde-format
+msgid "Apply a global theme package"
+msgstr "Uveljavi globalni paket teme"
+
+#: lnftool.cpp:59
+#, kde-format
+msgid "packagename"
+msgstr "imepaketa"
+
+#: lnftool.cpp:60
+#, kde-format
+msgid "Reset the Plasma Desktop layout"
+msgstr "Ponastavi razpored namizja Plasma"
+
+#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
+#: lookandfeelsettings.kcfg:9
+#, kde-format
+msgid "Global look and feel"
+msgstr "Globalni izgled in občutek"
+
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "This module lets you choose the global look and feel."
+msgstr "Ta modul omogoča nastavitev globalnega Izgleda in občutka."
+
+#: package/contents/ui/main.qml:57
+#, kde-format
+msgid "Preview Theme"
+msgstr "Predogled teme"
+
+#: package/contents/ui/main.qml:75
+#, kde-format
+msgid ""
+"Your current layout and configuration of panels, desktop widgets, and "
+"wallpapers will be lost and reset to the default layout provided by the "
+"selected theme."
+msgstr ""
+"Vaša trenutni razpored in nastavitev plošč, pripomočkov za namizje inozadij "
+"bo izgubljen in ponastavljen na privzeto nastavitev, ki jo nudiizbrana tema."
+
+#: package/contents/ui/main.qml:85
+#, kde-format
+msgid "Use desktop layout from theme"
+msgstr "Uporabi razpored namizja teme"
+
+#: package/contents/ui/main.qml:92
+#, kde-format
+msgid "Get New Global Themes..."
+msgstr "Prejmi nove globalne teme..."

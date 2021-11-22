@@ -19,7 +19,7 @@
  */
 
 import QtQuick 2.5
-import QtQuick.Controls 2.3 as QtControls2
+import QtQuick.Controls 2.5 as QtControls2
 import QtQuick.Layouts 1.0
 import QtQuick.Window 2.0 // for Screen
 import org.kde.plasma.wallpapers.image 2.0 as Wallpaper
@@ -27,19 +27,27 @@ import org.kde.kquickcontrols 2.0 as KQuickControls
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.newstuff 1.62 as NewStuff
 import org.kde.draganddrop 2.0 as DragDrop
-import org.kde.kcm 1.1 as KCM
+import org.kde.kcm 1.5 as KCM
 import org.kde.kirigami 2.12 as Kirigami
 
 ColumnLayout {
     id: root
     property alias cfg_Color: colorButton.color
+    property color cfg_ColorDefault
     property string cfg_Image
+    property string cfg_ImageDefault
     property int cfg_FillMode
+    property int cfg_FillModeDefault
     property int cfg_SlideshowMode
+    property int cfg_SlideshowModeDefault
     property alias cfg_Blur: blurRadioButton.checked
-    property var cfg_SlidePaths: ""
+    property bool cfg_BlurDefault
+    property string cfg_SlidePaths: ""
+    property string cfg_SlidePathsDefault: ""
     property int cfg_SlideInterval: 0
+    property int cfg_SlideIntervalDefault: 0
     property var cfg_UncheckedSlides: []
+    property var cfg_UncheckedSlidesDefault: []
 
     function saveConfig() {
         imageWallpaper.commitDeletion();
@@ -82,6 +90,10 @@ ColumnLayout {
     property int minutesIntervalValue: Math.floor(cfg_SlideInterval % 3600) / 60
     property int secondsIntervalValue: cfg_SlideInterval % 3600 % 60
 
+    property int hoursIntervalValueDefault: Math.floor(cfg_SlideIntervalDefault / 3600)
+    property int minutesIntervalValueDefault: Math.floor(cfg_SlideIntervalDefault % 3600) / 60
+    property int secondsIntervalValueDefault: cfg_SlideIntervalDefault % 3600 % 60
+
     //Rectangle { color: "orange"; x: formAlignment; width: formAlignment; height: 20 }
 
     Kirigami.FormLayout {
@@ -115,6 +127,10 @@ ColumnLayout {
             textRole: "label"
             onCurrentIndexChanged: cfg_FillMode = model[currentIndex]["fillMode"]
             Component.onCompleted: setMethod();
+
+            KCM.SettingHighlighter {
+                highlight: cfg_FillModeDefault != cfg_FillMode
+            }
 
             function setMethod() {
                 for (var i = 0; i < model.length; i++) {
@@ -165,6 +181,10 @@ ColumnLayout {
                     }
                 }
             }
+
+            KCM.SettingHighlighter {
+                highlight: cfg_SlideshowMode != cfg_SlideshowModeDefault
+            }
         }
 
         QtControls2.ButtonGroup { id: backgroundGroup }
@@ -185,10 +205,18 @@ ColumnLayout {
                 text: i18nd("plasma_wallpaper_org.kde.image", "Solid color")
                 checked: !cfg_Blur
                 QtControls2.ButtonGroup.group: backgroundGroup
+
+                KCM.SettingHighlighter {
+                    highlight: cfg_Blur != cfg_BlurDefault
+                }
             }
             KQuickControls.ColorButton {
                 id: colorButton
                 dialogTitle: i18nd("plasma_wallpaper_org.kde.image", "Select Background Color")
+
+                KCM.SettingHighlighter {
+                    highlight: cfg_Color != cfg_ColorDefault
+                }
             }
         }
     }
@@ -198,9 +226,9 @@ ColumnLayout {
         ColumnLayout {
             Connections {
                 target: root
-                onHoursIntervalValueChanged: hoursInterval.value = root.hoursIntervalValue
-                onMinutesIntervalValueChanged: minutesInterval.value = root.minutesIntervalValue
-                onSecondsIntervalValueChanged: secondsInterval.value = root.secondsIntervalValue
+                function onHoursIntervalValueChanged() {hoursInterval.value = root.hoursIntervalValue}
+                function onMinutesIntervalValueChanged() {minutesInterval.value = root.minutesIntervalValue}
+                function onSecondsIntervalValueChanged() {secondsInterval.value = root.secondsIntervalValue}
             }
             //FIXME: there should be only one spinbox: QtControls spinboxes are still too limited for it tough
             Kirigami.FormLayout {
@@ -221,6 +249,10 @@ ColumnLayout {
                         valueFromText: function(text, locale) {
                             return parseInt(text);
                         }
+
+                        KCM.SettingHighlighter {
+                            highlight: root.hoursIntervalValue != root.hoursIntervalValueDefault
+                        }
                     }
                     QtControls2.SpinBox {
                         id: minutesInterval
@@ -235,6 +267,10 @@ ColumnLayout {
                         }
                         valueFromText: function(text, locale) {
                             return parseInt(text);
+                        }
+
+                        KCM.SettingHighlighter {
+                            highlight: root.minutesIntervalValue != root.minutesIntervalValueDefault
                         }
                     }
                     QtControls2.SpinBox {
@@ -251,6 +287,10 @@ ColumnLayout {
                         valueFromText: function(text, locale) {
                             return parseInt(text);
                         }
+
+                        KCM.SettingHighlighter {
+                            highlight: root.secondsIntervalValue != root.secondsIntervalValueDefault
+                        }
                     }
                 }
             }
@@ -266,23 +306,22 @@ ColumnLayout {
                 QtControls2.ScrollView {
                     id: foldersScroll
                     Layout.fillHeight: true
-                    Layout.preferredWidth: 0.25 * parent.width
+                    Layout.preferredWidth: 0.35 * parent.width
+                    Layout.maximumWidth: Kirigami.Units.gridUnit * 16
                     Component.onCompleted: foldersScroll.background.visible = true;
                     ListView {
                         id: slidePathsView
-                        anchors.margins: 4
                         model: imageWallpaper.slidePaths
                         delegate: Kirigami.SwipeListItem {
-                            id: folderDelegate
                             width: slidePathsView.width
+                            // content item includes its own padding
+                            padding: 0
+                            // Don't need a highlight or hover effects
+                            hoverEnabled: false
                             contentItem: Kirigami.BasicListItem {
-                                // The parent item already has a highlight
-                                activeBackgroundColor: "transparent"
-                                // Otherwise there are unnecessary margins
-                                anchors.top: parent.top
-                                anchors.bottom: parent.bottom
-                                anchors.left: parent.left
-                                // No right anchor so text can be elided by actions
+                                // Don't need a highlight or hover effects
+                                hoverEnabled: false
+                                separatorVisible: false
 
                                 // Header: the folder
                                 label: {
@@ -300,6 +339,7 @@ ColumnLayout {
                                 QtControls2.ToolTip.delay: 1000
                                 QtControls2.ToolTip.timeout: 5000
                             }
+
                             actions: [
                                 Kirigami.Action {
                                     iconName: "list-remove"
@@ -314,16 +354,11 @@ ColumnLayout {
                             ]
                         }
 
-                        Kirigami.Heading {
-                            anchors.fill: parent
-                            anchors.margins: Kirigami.Units.largeSpacing
-                            horizontalAlignment: Text.AlignHCenter
-                            verticalAlignment: Text.AlignVCenter
-                            wrapMode: Text.WordWrap
+                        Kirigami.PlaceholderMessage {
+                            anchors.centerIn: parent
+                            width: parent.width - (Kirigami.Units.largeSpacing * 4)
                             visible: slidePathsView.count === 0
-                            level: 2
                             text: i18nd("plasma_wallpaper_org.kde.image", "There are no wallpaper locations configured")
-                            opacity: 0.3
                         }
                     }
                 }
@@ -352,39 +387,43 @@ ColumnLayout {
 
     Component {
         id: thumbnailsComponent
-        KCM.GridView {
-            id: wallpapersGrid
-            anchors.fill: parent
-            property var imageModel: (configDialog.currentWallpaper == "org.kde.image")? imageWallpaper.wallpaperModel : imageWallpaper.slideFilterModel
 
-            function resetCurrentIndex() {
-                //that min is needed as the module will be populated in an async way
-                //and only on demand so we can't ensure it already exists
-                view.currentIndex = Qt.binding(function() { return Math.min(imageModel.indexOf(cfg_Image), imageModel.count - 1) });
-            }
+        Item {
+            property var imageModel: (configDialog.currentWallpaper === "org.kde.image") ? imageWallpaper.wallpaperModel : imageWallpaper.slideFilterModel
 
-            //kill the space for label under thumbnails
-            view.model: imageModel
-            Component.onCompleted: {
-                imageModel.usedInConfig = true;
-                resetCurrentIndex()
-            }
-            view.delegate: WallpaperDelegate {
-                color: cfg_Color
-            }
-
-            Kirigami.Heading {
+            KCM.GridView {
+                id: wallpapersGrid
                 anchors.fill: parent
-                anchors.margins: Kirigami.Units.largeSpacing
-                // FIXME: this is needed to vertically center it in the grid for some reason
-                anchors.topMargin: wallpapersGrid.height
-                horizontalAlignment: Text.AlignHCenter
-                verticalAlignment: Text.AlignVCenter
-                wrapMode: Text.WordWrap
-                visible: wallpapersGrid.view.count === 0
-                level: 2
-                text: i18nd("plasma_wallpaper_org.kde.image", "There are no wallpapers in this slideshow")
-                opacity: 0.3
+
+                function resetCurrentIndex() {
+                    //that min is needed as the module will be populated in an async way
+                    //and only on demand so we can't ensure it already exists
+                    view.currentIndex = Qt.binding(function() { return Math.min(imageModel.indexOf(cfg_Image), imageModel.count - 1) });
+                }
+
+                //kill the space for label under thumbnails
+                view.model: imageModel
+                Component.onCompleted: {
+                    imageModel.usedInConfig = true;
+                    resetCurrentIndex()
+                }
+                view.delegate: WallpaperDelegate {
+                    color: cfg_Color
+                }
+
+                Kirigami.PlaceholderMessage {
+                    anchors.fill: parent
+                    anchors.margins: Kirigami.Units.largeSpacing * 2
+                    // FIXME: this is needed to vertically center it in the grid for some reason
+                    anchors.topMargin: wallpapersGrid.height / 2
+                    visible: wallpapersGrid.view.count === 0
+                    text: i18nd("plasma_wallpaper_org.kde.image", "There are no wallpapers in this slideshow")
+                }
+            }
+
+            KCM.SettingHighlighter {
+                target: wallpapersGrid
+                highlight: configDialog.currentWallpaper === "org.kde.image" && cfg_Image != cfg_ImageDefault
             }
         }
     }

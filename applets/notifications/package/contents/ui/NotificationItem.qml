@@ -1,5 +1,6 @@
 /*
  * Copyright 2018-2019 Kai Uwe Broulik <kde@privat.broulik.de>
+ * Copyright 2021 Liu Bangguo <liubangguo@jingos.com>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -66,7 +67,6 @@ ColumnLayout {
     property bool killable
 
     property QtObject jobDetails
-    property bool showDetails
 
     property alias configureActionLabel: notificationHeading.configureActionLabel
     property var actionNames: []
@@ -97,7 +97,7 @@ ColumnLayout {
                                         || (jobLoader.item && jobLoader.item.dragging)
     property bool replying: false
 
-    signal bodyClicked(var mouse)
+    signal bodyClicked
     signal closeClicked
     signal configureClicked
     signal dismissClicked
@@ -119,6 +119,9 @@ ColumnLayout {
         Layout.preferredWidth: notificationHeading.implicitWidth
         Layout.bottomMargin: -parent.spacing
 
+        PlasmaCore.ColorScope.colorGroup: PlasmaCore.Theme.HeaderColorGroup
+        PlasmaCore.ColorScope.inherit: false
+
         PlasmaCore.FrameSvgItem {
             imagePath: "widgets/plasmoidheading"
             prefix: "header"
@@ -127,8 +130,9 @@ ColumnLayout {
                 leftMargin: -margins.left
                 rightMargin: -margins.right
             }
-            // visible: !notificationItem.inHistory && fromCurrentTheme
-            visible: false
+            visible: !notificationItem.inHistory && fromCurrentTheme
+            colorGroup: parent.PlasmaCore.ColorScope.colorGroup
+            PlasmaCore.ColorScope.inherit: false
         }
 
         NotificationHeader {
@@ -138,6 +142,9 @@ ColumnLayout {
                 leftMargin: notificationItem.headingLeftPadding
                 rightMargin: notificationItem.headingRightPadding
             }
+
+            PlasmaCore.ColorScope.colorGroup: parent.PlasmaCore.ColorScope.colorGroup
+            PlasmaCore.ColorScope.inherit: false
 
             inGroup: notificationItem.inGroup
 
@@ -210,9 +217,6 @@ ColumnLayout {
                         return "";
                     }
                     visible: text !== ""
-                    font.pointSize: 22
-                    color: "#000000"            
-                    font.bold: true
                 }
 
                 // inGroup headerItem is reparented here
@@ -237,7 +241,6 @@ ColumnLayout {
                     visible: notificationItem.body !== ""
                     onClicked: notificationItem.bodyClicked(mouse)
                     onLinkActivated: Qt.openUrlExternally(link)
-                    font.pointSize: 21
                 }
 
                 // inGroup iconContainer is reparented here
@@ -252,8 +255,7 @@ ColumnLayout {
             Layout.topMargin: units.smallSpacing
             Layout.bottomMargin: units.smallSpacing
 
-            // visible: iconItem.active || imageItem.active
-            visible: false
+            visible: iconItem.active || imageItem.active
 
             PlasmaCore.IconItem {
                 id: iconItem
@@ -297,6 +299,7 @@ ColumnLayout {
         id: jobLoader
         Layout.fillWidth: true
         active: notificationItem.notificationType === NotificationManager.Notifications.JobType
+        height: item ? item.implicitHeight : 0
         visible: active
         sourceComponent: JobItem {
             iconContainerItem: iconContainer
@@ -308,7 +311,6 @@ ColumnLayout {
             killable: notificationItem.killable
 
             jobDetails: notificationItem.jobDetails
-            showDetails: notificationItem.showDetails
 
             onSuspendJobClicked: notificationItem.suspendJobClicked()
             onResumeJobClicked: notificationItem.resumeJobClicked()

@@ -18,7 +18,6 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-
 #include "notificationsortproxymodel_p.h"
 
 #include <QDateTime>
@@ -71,15 +70,8 @@ int sortScore(const QModelIndex &idx)
         return 3;
     }
 
-    const int type = idx.data(Notifications::TypeRole).toInt();
-    if (type == Notifications::JobType) {
-        const int jobState = idx.data(Notifications::JobStateRole).toInt();
-        // Treat finished jobs as normal notifications but running jobs more important
-        if (jobState == Notifications::JobStateStopped) {
-            return 1;
-        } else {
-            return 2;
-        }
+    if (idx.data(Notifications::TypeRole).toInt() == Notifications::JobType) {
+        return 2;
     }
 
     if (urgency == Notifications::NormalUrgency) {

@@ -33,9 +33,7 @@ class PlayerActionJob : public Plasma::ServiceJob
     Q_OBJECT
 
 public:
-    PlayerActionJob(const QString& operation,
-                    QMap<QString,QVariant>& parameters,
-                    PlayerControl* parent);
+    PlayerActionJob(const QString &operation, QMap<QString, QVariant> &parameters, PlayerControl *parent);
 
     enum {
         /**
@@ -55,7 +53,7 @@ public:
         /**
          * The operation name is unknown
          */
-        UnknownOperation
+        UnknownOperation,
     };
 
     void start() override;
@@ -63,11 +61,11 @@ public:
     QString errorString() const override;
 
 private Q_SLOTS:
-    void callFinished(QDBusPendingCallWatcher*);
-    void setDBusProperty(const QString& iface, const QString& propName, const QDBusVariant& value);
+    void callFinished(QDBusPendingCallWatcher *);
+    void setDBusProperty(const QString &iface, const QString &propName, const QDBusVariant &value);
 
 private:
-    void listenToCall(const QDBusPendingCall& call);
+    void listenToCall(const QDBusPendingCall &call);
 
     QPointer<PlayerControl> m_controller;
 };

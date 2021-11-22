@@ -3,7 +3,6 @@ add_definitions(
   -DQT_NO_CAST_TO_ASCII
 # -DQT_NO_CAST_FROM_ASCII
   -DQT_STRICT_ITERATORS
-  -DQT_NO_URL_CAST_FROM_STRING
   -DQT_NO_CAST_FROM_BYTEARRAY
   -DQT_NO_SIGNALS_SLOTS_KEYWORDS
   -DQT_USE_FAST_OPERATOR_PLUS
@@ -57,10 +56,10 @@ install(FILES plugin/qmldir DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/pri
 add_library(kickerplugin SHARED ${kickerplugin_SRCS})
 
 target_link_libraries(kickerplugin
-                      Qt5::Core
-                      Qt5::Qml
-                      Qt5::Quick
-                      Qt5::X11Extras
+                      Qt::Core
+                      Qt::Qml
+                      Qt::Quick
+                      Qt::X11Extras
                       KF5::Activities
                       KF5::ActivitiesStats
                       KF5::ConfigCore

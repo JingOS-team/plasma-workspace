@@ -1,5 +1,6 @@
 /*
    Copyright (C) 2019 David Edmundson <davidedmundson@kde.org>
+   Copyright (C) 2021 Liu Bangguo <liubangguo@jingos.com>
 
    This program is free software; you can redistribute it and/or
    modify it under the terms of the Lesser GNU General Public
@@ -21,9 +22,10 @@
 
 #include "sessionmanagementbackend.h"
 
+#include <QDebug>
 #include <KAuthorized>
-#include <KSharedConfig>
 #include <KConfigGroup>
+#include <KSharedConfig>
 
 #include "kscreenlocker_interface.h"
 #include "ksmserver_interface.h"
@@ -121,6 +123,7 @@ SessionManagement::State SessionManagement::state() const
 
 void SessionManagement::requestShutdown(ConfirmationMode confirmationMode)
 {
+    qDebug()<<"Reboot-debug:"<<Q_FUNC_INFO<<__LINE__;
     if (!canShutdown()) {
         return;
     }
@@ -135,10 +138,12 @@ void SessionManagement::requestShutdown(ConfirmationMode confirmationMode)
         ShutdownIface iface;
         iface.logoutAndShutdown();
     }
+    qDebug()<<"Reboot-debug:"<<Q_FUNC_INFO<<__LINE__;
 }
 
 void SessionManagement::requestReboot(ConfirmationMode confirmationMode)
 {
+    qDebug()<<"Reboot-debug:"<<Q_FUNC_INFO<<__LINE__;
     if (!canReboot()) {
         return;
     }
@@ -153,10 +158,12 @@ void SessionManagement::requestReboot(ConfirmationMode confirmationMode)
         ShutdownIface iface;
         iface.logoutAndReboot();
     }
+    qDebug()<<"Reboot-debug:"<<Q_FUNC_INFO<<__LINE__<<confirm;
 }
 
 void SessionManagement::requestLogout(ConfirmationMode confirmationMode)
 {
+    qDebug()<<"Reboot-debug:"<<Q_FUNC_INFO<<__LINE__;
     if (!canLogout()) {
         return;
     }
@@ -171,6 +178,7 @@ void SessionManagement::requestLogout(ConfirmationMode confirmationMode)
         ShutdownIface iface;
         iface.logout();
     }
+    qDebug()<<"Reboot-debug:"<<Q_FUNC_INFO<<__LINE__<<confirm;
 }
 
 void SessionManagement::suspend()
@@ -220,8 +228,7 @@ void SessionManagement::saveSession()
     if (!canSaveSession()) {
         return;
     }
-    OrgKdeKSMServerInterfaceInterface ksmserver(QStringLiteral("org.kde.ksmserver"),
-            QStringLiteral("/KSMServer"), QDBusConnection::sessionBus());
+    OrgKdeKSMServerInterfaceInterface ksmserver(QStringLiteral("org.kde.ksmserver"), QStringLiteral("/KSMServer"), QDBusConnection::sessionBus());
     ksmserver.saveCurrentSession();
 }
 

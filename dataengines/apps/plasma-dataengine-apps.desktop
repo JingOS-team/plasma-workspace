@@ -38,7 +38,7 @@ Name[ko]=프로그램 정보
 Name[lt]=Programos informacija
 Name[lv]=Programmas informācija
 Name[mk]=Информации за апликации
-Name[ml]=അപ്ലിക്കേഷന്‍ വിവരം
+Name[ml]=പ്രയോഗ വിവരം
 Name[mr]=अनुप्रयोग माहिती
 Name[nb]=Informasjon om program
 Name[nds]=Programm-Informatschoon
@@ -57,6 +57,7 @@ Name[sr]=подаци о програмима
 Name[sr@ijekavian]=подаци о програмима
 Name[sr@ijekavianlatin]=podaci o programima
 Name[sr@latin]=podaci o programima
+Name[sv]=Information om program
 Name[tg]=Иттилооти барнома
 Name[th]=ข้อมูลของโปรแกรม
 Name[tr]=Uygulama Bilgileri
@@ -99,7 +100,7 @@ Comment[ko]=프로그램 메뉴의 정보를 보고 실행할 수 있도록 합�
 Comment[lt]=Visų programų informacija ir paleidimas programų meniu.
 Comment[lv]=Visu programmu informācija un palaišana programmu izvēlnē.
 Comment[mk]=Информации и стартување на сите апликации од менито за апликации
-Comment[ml]=ആപ്പ് മെനുവിലെ അപ്ലിക്കേഷനുകളെകുറിച്ചുള്ള വിവരവും ലോഞ്ചിങ്ങും.
+Comment[ml]=ആപ്പ് മെനുവിലെ പ്രയോഗങ്ങളുടെ വിവരവും തുടക്കവും.
 Comment[mr]=अनुप्रयोग मेन्यू मधील अनुप्रयोगांची माहिती व प्रक्षेपण
 Comment[nb]=Informasjon og oppstart av alle programmer i programmenyen.
 Comment[nds]=Infos över un opropen vun all Programmen binnen dat Programmmenü
@@ -118,6 +119,7 @@ Comment[sr]=Подаци о програмима из програмског м�
 Comment[sr@ijekavian]=Подаци о програмима из програмског менија и њихово покретање.
 Comment[sr@ijekavianlatin]=Podaci o programima iz programskog menija i njihovo pokretanje.
 Comment[sr@latin]=Podaci o programima iz programskog menija i njihovo pokretanje.
+Comment[sv]=Information om och start av alla program i programmenyn.
 Comment[th]=ข้อมูลและการเรียกใช้โปรแกรมทั้งหมดที่อยู่ในเมนูโปรแกรม
 Comment[tr]=Uygulama menüsündeki tüm uygulamalar hakkında bilgiler ve uygulamaları çalıştırma.
 Comment[ug]=ئۇچۇر كۆرسىتىدۇ ياكى تىزىملىكتىكى ھەممە پروگراممىلارنى ئىجرا قىلىدۇ

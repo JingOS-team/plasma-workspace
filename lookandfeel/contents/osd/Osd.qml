@@ -1,5 +1,6 @@
 /*
  * Copyright 2014 Martin Klapetek <mklapetek@kde.org>
+ * Copyright 2021 Liu Bangguo <liubangguo@jingos.com>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -20,6 +21,7 @@ import QtQuick.Window 2.2
 import QtQml 2.12
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtra
+import jingos.display 1.0
 
 PlasmaCore.Dialog {
     id: root
@@ -43,8 +45,8 @@ PlasmaCore.Dialog {
 
     mainItem: OsdItem {
         rootItem: root
-        implicitWidth:169
-        implicitHeight: 48
+        implicitWidth:JDisplay.dp(169)
+        implicitHeight: JDisplay.dp(48)
     }
 
 }

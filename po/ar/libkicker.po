@@ -1,0 +1,323 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Safa Alfulaij <safa1996alfulaij@gmail.com>, 2014, ٢٠١٥, ٢٠١٦, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:48+0100\n"
+"PO-Revision-Date: 2017-02-14 20:16+0300\n"
+"Last-Translator: Safa Alfulaij <safa1996alfulaij@gmail.com>\n"
+"Language-Team: Arabic <doc@arabeyes.org>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 2.0\n"
+
+#: plugin/actionlist.cpp:96
+#, kde-format
+msgid "Open with:"
+msgstr "افتح ب‍:"
+
+#: plugin/actionlist.cpp:109
+#, kde-format
+msgid "Properties"
+msgstr "خصائص"
+
+#: plugin/actionlist.cpp:156
+#, kde-format
+msgid "Add to Desktop"
+msgstr "أضف إلى سطح المكتب"
+
+#: plugin/actionlist.cpp:161
+#, kde-format
+msgid "Add to Panel (Widget)"
+msgstr "أضف إلى اللوحة (ودجة)"
+
+#: plugin/actionlist.cpp:166
+#, kde-format
+msgid "Pin to Task Manager"
+msgstr "ثبّت في مدير المهامّ"
+
+#: plugin/actionlist.cpp:316 plugin/rootmodel.cpp:444
+#, fuzzy, kde-format
+#| msgid "Recent Documents"
+msgid "Recent Files"
+msgstr "آخر المستندات"
+
+#: plugin/actionlist.cpp:326
+#, fuzzy, kde-format
+#| msgid "Forget Recent Documents"
+msgid "Forget Recent Files"
+msgstr "انسَ آخر المستندات"
+
+#: plugin/actionlist.cpp:389
+#, kde-format
+msgid "Edit Application..."
+msgstr "حرّر التّطبيق..."
+
+#: plugin/actionlist.cpp:433
+#, kde-format
+msgctxt "@action opens a software center with the application"
+msgid "Uninstall or Manage Add-Ons..."
+msgstr ""
+
+#: plugin/appentry.cpp:198
+#, kde-format
+msgid "Hide Application"
+msgstr "أخفِ التّطبيق"
+
+#: plugin/appentry.cpp:262
+#, kde-format
+msgctxt "App name (Generic name)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: plugin/appentry.cpp:264
+#, kde-format
+msgctxt "Generic name (App name)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: plugin/appsmodel.cpp:44 plugin/appsmodel.cpp:68 plugin/computermodel.cpp:111
+#: plugin/computermodel.cpp:239 plugin/recentusagemodel.cpp:167
+#: plugin/recentusagemodel.cpp:224
+#, kde-format
+msgid "Applications"
+msgstr "التّطبيقات"
+
+#: plugin/appsmodel.cpp:163
+#, kde-format
+msgid "Unhide Applications in this Submenu"
+msgstr "أظهر التّطبيقات في هذه القائمة الفرعيّة"
+
+#: plugin/appsmodel.cpp:172
+#, kde-format
+msgid "Unhide Applications in '%1'"
+msgstr "أظهر التّطبيقات في '%1'"
+
+#: plugin/computermodel.cpp:105
+#, kde-format
+msgid "Show KRunner"
+msgstr ""
+
+#: plugin/computermodel.cpp:109
+#, kde-format
+msgid "Search, calculate, or run a command"
+msgstr ""
+
+#: plugin/computermodel.cpp:162
+#, kde-format
+msgid "Computer"
+msgstr "الحاسوب"
+
+#: plugin/contactentry.cpp:120 plugin/recentcontactsmodel.cpp:95
+#, kde-format
+msgid "Show Contact Information..."
+msgstr "أظهر معلومات المتراسل..."
+
+#. i18n.
+#: plugin/kastatsfavoritesmodel.cpp:480 plugin/rootmodel.cpp:431
+#: plugin/simplefavoritesmodel.cpp:44
+#, kde-format
+msgid "Favorites"
+msgstr "المفضّلة"
+
+#: plugin/recentcontactsmodel.cpp:53
+#, kde-format
+msgid "Contacts"
+msgstr "المتراسلون"
+
+#: plugin/recentcontactsmodel.cpp:86
+#, kde-format
+msgid "Forget Contact"
+msgstr "انسَ المتراسل"
+
+#: plugin/recentcontactsmodel.cpp:90 plugin/recentcontactsmodel.cpp:166
+#, kde-format
+msgid "Forget All Contacts"
+msgstr "انسَ كلّ المتراسلين"
+
+#: plugin/recentusagemodel.cpp:165
+#, kde-format
+msgid "Recently Used"
+msgstr "المستخدمة حديثًا"
+
+#: plugin/recentusagemodel.cpp:170 plugin/recentusagemodel.cpp:298
+#, kde-format
+msgid "Files"
+msgstr ""
+
+#: plugin/recentusagemodel.cpp:242
+#, kde-format
+msgid "Forget Application"
+msgstr "انسَ التّطبيق"
+
+#: plugin/recentusagemodel.cpp:332
+#, kde-format
+msgid "Open Containing Folder"
+msgstr ""
+
+#: plugin/recentusagemodel.cpp:335
+#, fuzzy, kde-format
+#| msgid "Forget All"
+msgid "Forget File"
+msgstr "انسَ الكلّ"
+
+#: plugin/recentusagemodel.cpp:464
+#, kde-format
+msgid "Forget All"
+msgstr "انسَ الكلّ"
+
+#: plugin/recentusagemodel.cpp:466
+#, kde-format
+msgid "Forget All Applications"
+msgstr "انسَ كلّ التّطبيقات"
+
+#: plugin/recentusagemodel.cpp:469
+#, fuzzy, kde-format
+#| msgid "Forget All"
+msgid "Forget All Files"
+msgstr "انسَ الكلّ"
+
+#: plugin/rootmodel.cpp:108
+#, kde-format
+msgid "Hide %1"
+msgstr "أخفِ %1"
+
+#: plugin/rootmodel.cpp:413
+#, kde-format
+msgid "All Applications"
+msgstr "كلّ التّطبيقات"
+
+#: plugin/rootmodel.cpp:425
+#, kde-format
+msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
+msgstr ""
+
+#: plugin/rootmodel.cpp:437
+#, kde-format
+msgid "Recent Contacts"
+msgstr "آخر المتراسلون"
+
+#: plugin/rootmodel.cpp:444
+#, fuzzy, kde-format
+msgid "Often Used Files"
+msgstr "آخر المستندات"
+
+#: plugin/rootmodel.cpp:453
+#, kde-format
+msgid "Recent Applications"
+msgstr "آخر التّطبيقات"
+
+#: plugin/rootmodel.cpp:453
+#, fuzzy, kde-format
+msgid "Often Used Applications"
+msgstr "آخر التّطبيقات"
+
+#: plugin/rootmodel.cpp:467
+#, kde-format
+msgid "Power / Session"
+msgstr "الطّاقة/الجلسة"
+
+#: plugin/runnermodel.cpp:239
+#, kde-format
+msgid "Search results"
+msgstr "نتائج البحث"
+
+#: plugin/systementry.cpp:207
+#, kde-format
+msgid "Lock"
+msgstr "اقفل"
+
+#: plugin/systementry.cpp:210
+#, kde-format
+msgid "Log Out"
+msgstr ""
+
+#: plugin/systementry.cpp:213 plugin/systementry.cpp:281
+#, kde-format
+msgid "Save Session"
+msgstr "احفظ الجلسة"
+
+#: plugin/systementry.cpp:216
+#, kde-format
+msgid "Switch User"
+msgstr "بدّل المستخدم"
+
+#: plugin/systementry.cpp:219
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr ""
+
+#: plugin/systementry.cpp:222
+#, kde-format
+msgid "Hibernate"
+msgstr "أسبت"
+
+#: plugin/systementry.cpp:225
+#, kde-format
+msgid "Restart"
+msgstr "أعد التّشغيل"
+
+#: plugin/systementry.cpp:228
+#, kde-format
+msgid "Shut Down"
+msgstr "أطفئ"
+
+#: plugin/systementry.cpp:241 plugin/systementry.cpp:244
+#: plugin/systementry.cpp:247 plugin/systementry.cpp:250
+#, kde-format
+msgid "Session"
+msgstr "الجلسة"
+
+#: plugin/systementry.cpp:253 plugin/systementry.cpp:256
+#: plugin/systementry.cpp:259 plugin/systementry.cpp:262
+#, kde-format
+msgid "System"
+msgstr "النّظام"
+
+#: plugin/systementry.cpp:275
+#, kde-format
+msgid "Lock screen"
+msgstr "اقفل الشّاشة"
+
+#: plugin/systementry.cpp:278
+#, kde-format
+msgid "End session"
+msgstr "أنهِ الجلسة"
+
+#: plugin/systementry.cpp:284
+#, kde-format
+msgid "Start a parallel session as a different user"
+msgstr "ابدأ جلسة موازية كمستخدم مختلف"
+
+#: plugin/systementry.cpp:287
+#, kde-format
+msgid "Suspend to RAM"
+msgstr "علّق إلى الذّاكرة العشوائيّة"
+
+#: plugin/systementry.cpp:290
+#, kde-format
+msgid "Suspend to disk"
+msgstr "علّق إلى القرص"
+
+#: plugin/systementry.cpp:293
+#, kde-format
+msgid "Restart computer"
+msgstr "أعد تشغيل الحاسوب"
+
+#: plugin/systementry.cpp:296
+#, kde-format
+msgid "Turn off computer"
+msgstr "أطفئ الحاسوب"
+
+#: plugin/systemmodel.cpp:44
+#, kde-format
+msgid "System actions"
+msgstr "إجراءات النّظام"

@@ -1,0 +1,39 @@
+# Malayalam translation of plasma_applet_clock.
+# Copyright (C) 2008 This_file_is_part_of_KDE
+# This file is distributed under the same license as the plasma_applet_clock package.
+# Reviewed by HARI VISHNU<harivishnu@gmail.com>, 2008.
+# Praveen Arimbrathodiyil <pravi.a@gmail.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdebase\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2019-05-20 03:26+0200\n"
+"PO-Revision-Date: 2020-11-30 16:14+0000\n"
+"Last-Translator: Adithya K <adithyak04@gmail.com>\n"
+"Language-Team: SMC <smc.org.in>\n"
+"Language: ml\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Weblate 4.3.2\n"
+
+#: contents/config/config.qml:25
+#, kde-format
+msgid "Appearance"
+msgstr "ബാഹ്യരൂപം"
+
+#: contents/ui/configGeneral.qml:35
+#, kde-format
+msgid "Show seconds hand"
+msgstr "സെക്കന്റ് സൂചി കാണിയ്ക്കുക"
+
+#: contents/ui/configGeneral.qml:36
+#, kde-format
+msgid "General:"
+msgstr "പൊതുവായ:"
+
+#: contents/ui/configGeneral.qml:40
+#, kde-format
+msgid "Show time zone"
+msgstr "സമയമേഖല കാണിയ്ക്കുക"

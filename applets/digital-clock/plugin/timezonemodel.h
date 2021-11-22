@@ -1,6 +1,7 @@
 /***************************************************************************
  *   Copyright (C) 2014 Kai Uwe Broulik <kde@privat.broulik.de>            *
  *   Copyright (C) 2014  Martin Klapetek <mklapetek@kde.org>               *
+ *   Copyright (C) 2021  Liu Bangguo <liubangguo@jingos.com>               *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -33,8 +34,9 @@ class TimezonesI18n;
 class TimeZoneFilterProxy : public QSortFilterProxyModel
 {
     Q_OBJECT
-    Q_PROPERTY(QString filterString WRITE setFilterString MEMBER m_filterString NOTIFY filterStringChanged);
-    Q_PROPERTY(bool isSystem24HourFormat READ isSystem24HourFormat NOTIFY isSystem24HourFormatChanged);
+    Q_PROPERTY(QString filterString WRITE setFilterString MEMBER m_filterString NOTIFY filterStringChanged)
+    Q_PROPERTY(bool onlyShowChecked WRITE setOnlyShowChecked MEMBER m_onlyShowChecked NOTIFY onlyShowCheckedChanged)
+	Q_PROPERTY(bool isSystem24HourFormat READ isSystem24HourFormat NOTIFY isSystem24HourFormatChanged);
     Q_PROPERTY(QString getDateByTimezone READ getDateByTimezone NOTIFY timezoneChanged);
 
 public:
@@ -42,19 +44,22 @@ public:
     bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const override;
 
     void setFilterString(const QString &filterString);
-
+    void setOnlyShowChecked(const bool show);
 public Q_SLOTS:
     bool isSystem24HourFormat();
     void kcmClockUpdated();
     QString getDateByTimezone();
+    QString getRegionTimeFormat();
 
 Q_SIGNALS:
     void filterStringChanged();
-    void isSystem24HourFormatChanged();
-    void timezoneChanged();
+	void isSystem24HourFormatChanged();
+	void timezoneChanged();
+    void onlyShowCheckedChanged();
 
 private:
     QString m_filterString;
+    bool m_onlyShowChecked;
     QStringMatcher m_stringMatcher;
 
     KConfigWatcher::Ptr m_localeConfigWatcher;
@@ -79,7 +84,8 @@ public:
         RegionRole,
         CityRole,
         CommentRole,
-        CheckedRole
+        CheckedRole,
+        IsLocalTimeZoneRole,
     };
 
     int rowCount(const QModelIndex &parent) const override;

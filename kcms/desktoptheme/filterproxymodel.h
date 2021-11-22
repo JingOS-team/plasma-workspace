@@ -30,12 +30,11 @@ class FilterProxyModel : public QSortFilterProxyModel
     Q_OBJECT
 
 public:
-
     enum ThemeFilter {
         AllThemes,
         LightThemes,
         DarkThemes,
-        ThemesFollowingColors
+        ThemesFollowingColors,
     };
     Q_ENUM(ThemeFilter)
 

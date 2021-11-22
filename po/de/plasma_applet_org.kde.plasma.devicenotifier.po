@@ -1,0 +1,130 @@
+# Thomas Reitelbach <tr@erdfunkstelle.de>, 2007, 2008, 2009.
+# Burkhard Lück <lueck@hube-lueck.de>, 2009, 2012, 2014, 2016, 2018, 2019.
+# Johannes Obermayr <johannesobermayr@gmx.de>, 2009, 2010.
+# Frederik Schwarzer <schwarzer@kde.org>, 2010, 2011, 2016, 2020.
+# Panagiotis Papadopoulos <pano_90@gmx.net>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_notifier\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-12-21 02:42+0100\n"
+"PO-Revision-Date: 2020-09-01 17:30+0200\n"
+"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
+"Language-Team: German <kde-i18n-de@kde.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.08.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: package/contents/ui/DeviceItem.qml:171
+#, kde-format
+msgctxt "@info:status Free disk space"
+msgid "%1 free of %2"
+msgstr "%1 von %2 frei"
+
+#: package/contents/ui/DeviceItem.qml:175
+#, kde-format
+msgctxt ""
+"Accessing is a less technical word for Mounting; translation should be short "
+"and mean 'Currently mounting this device'"
+msgid "Accessing..."
+msgstr "Wird eingebunden ..."
+
+#: package/contents/ui/DeviceItem.qml:177
+#, kde-format
+msgctxt ""
+"Removing is a less technical word for Unmounting; translation should be "
+"short and mean 'Currently unmounting this device'"
+msgid "Removing..."
+msgstr "Einbindung wird gelöst ..."
+
+#: package/contents/ui/DeviceItem.qml:203
+#, kde-format
+msgid "Open in File Manager"
+msgstr "In Dateiverwaltung öffnen"
+
+#: package/contents/ui/DeviceItem.qml:207
+#, kde-format
+msgid "Mount and Open"
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:209
+#, kde-format
+msgid "Eject"
+msgstr "Auswerfen"
+
+#: package/contents/ui/DeviceItem.qml:211
+#, kde-format
+msgid "Safely remove"
+msgstr "Sicher entfernen"
+
+#: package/contents/ui/DeviceItem.qml:251
+#, kde-format
+msgid "Mount"
+msgstr "Einhängen"
+
+#: package/contents/ui/devicenotifier.qml:60
+#, kde-format
+msgid "Most Recent Device"
+msgstr "Zuletzt angeschlossenes Gerät"
+
+#: package/contents/ui/devicenotifier.qml:60
+#, kde-format
+msgid "No Devices Available"
+msgstr "Es sind keine Geräte verfügbar"
+
+#: package/contents/ui/devicenotifier.qml:238
+#, fuzzy, kde-format
+#| msgid "Removable devices"
+msgid "Removable Devices"
+msgstr "Entfernbare Geräte"
+
+#: package/contents/ui/devicenotifier.qml:244
+#, fuzzy, kde-format
+#| msgid "Non-removable devices"
+msgid "Non Removable Devices"
+msgstr "Nicht entfernbare Geräte"
+
+#: package/contents/ui/devicenotifier.qml:250
+#, fuzzy, kde-format
+#| msgid "All devices"
+msgid "All Devices"
+msgstr "Alle Geräte"
+
+#: package/contents/ui/devicenotifier.qml:258
+#, fuzzy, kde-format
+#| msgid "Open popup when new device is plugged in"
+msgid "Show popup when new device is plugged in"
+msgstr "Aufklappfenster öffnen, wenn ein neues Gerät angeschlossen wird"
+
+#: package/contents/ui/devicenotifier.qml:266
+#, fuzzy, kde-format
+#| msgctxt "Open auto mounter kcm"
+#| msgid "Configure Removable Devices"
+msgctxt "Open auto mounter kcm"
+msgid "Configure Removable Devices..."
+msgstr "Wechselmedien einrichten"
+
+#: package/contents/ui/FullRepresentation.qml:48
+#, kde-format
+msgid "Remove All"
+msgstr "Alle entfernen"
+
+#: package/contents/ui/FullRepresentation.qml:51
+#, kde-format
+msgid "Click to safely remove all devices"
+msgstr "Klicken Sie, um alle Gerät sicher zu trennen."
+
+#: package/contents/ui/FullRepresentation.qml:163
+#, fuzzy, kde-format
+#| msgid "Non-removable devices"
+msgid "No removable devices attached"
+msgstr "Nicht entfernbare Geräte"
+
+#: package/contents/ui/FullRepresentation.qml:163
+#, fuzzy, kde-format
+#| msgid "No devices available"
+msgid "No disks available"
+msgstr "Es sind keine Geräte verfügbar"

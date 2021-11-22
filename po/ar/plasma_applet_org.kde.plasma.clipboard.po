@@ -1,0 +1,130 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Safa Alfulaij <safa1996alfulaij@gmail.com>, ٢٠١٥.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-05 02:38+0100\n"
+"PO-Revision-Date: ٢٠١٥-٠٨-١٨ ١٤:٤٠+0300\n"
+"Last-Translator: Safa Alfulaij <safa1996alfulaij@gmail.com>\n"
+"Language-Team: Arabic <doc@arabeyes.org>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 2.0\n"
+
+#: contents/ui/BarcodePage.qml:40
+#, kde-format
+msgid "Return to Clipboard"
+msgstr "ارجع إلى الحافظة"
+
+#: contents/ui/BarcodePage.qml:61
+#, kde-format
+msgid "QR Code"
+msgstr "رمز QR"
+
+#: contents/ui/BarcodePage.qml:62
+#, kde-format
+msgid "Data Matrix"
+msgstr "مصفوفة بيانات"
+
+#: contents/ui/BarcodePage.qml:63
+#, kde-format
+msgctxt "Aztec barcode"
+msgid "Aztec"
+msgstr ""
+
+#: contents/ui/BarcodePage.qml:64
+#, kde-format
+msgid "Code 39"
+msgstr "رمز 39"
+
+#: contents/ui/BarcodePage.qml:65
+#, kde-format
+msgid "Code 93"
+msgstr "رمز 93"
+
+#: contents/ui/BarcodePage.qml:66
+#, fuzzy, kde-format
+#| msgid "Code 39"
+msgid "Code 128"
+msgstr "رمز 39"
+
+#: contents/ui/BarcodePage.qml:89
+#, kde-format
+msgid "Change the barcode type"
+msgstr "غيّر نوع \"باركود\""
+
+#: contents/ui/BarcodePage.qml:113
+#, kde-format
+msgid "Creating barcode failed"
+msgstr "فشل إنشاء باركود"
+
+#: contents/ui/BarcodePage.qml:122
+#, kde-format
+msgid "The barcode is too large to be displayed"
+msgstr ""
+
+#: contents/ui/clipboard.qml:38
+#, kde-format
+msgid "Clipboard Contents"
+msgstr "محتويات الحافظة"
+
+#: contents/ui/clipboard.qml:39 contents/ui/Menu.qml:66
+#, kde-format
+msgid "Clipboard is empty"
+msgstr "الحافظة فارغة"
+
+#: contents/ui/clipboard.qml:67
+#, kde-format
+msgid "Configure Clipboard..."
+msgstr "اضبط الحافظة..."
+
+#: contents/ui/clipboard.qml:69
+#, fuzzy, kde-format
+#| msgid "Clear history"
+msgid "Clear History"
+msgstr "امحُ التّأريخ"
+
+#: contents/ui/ClipboardPage.qml:89
+#, fuzzy, kde-format
+#| msgid "Search"
+msgid "Search..."
+msgstr "ابحث"
+
+#: contents/ui/ClipboardPage.qml:110
+#, kde-format
+msgid "Clear history"
+msgstr "امحُ التّأريخ"
+
+#: contents/ui/DelegateToolButtons.qml:35
+#, kde-format
+msgid "Invoke action"
+msgstr ""
+
+#: contents/ui/DelegateToolButtons.qml:45
+#, kde-format
+msgid "Show barcode"
+msgstr "أظهر باركود"
+
+#: contents/ui/DelegateToolButtons.qml:55
+#, kde-format
+msgid "Edit contents"
+msgstr "حرّر المحتويات"
+
+#: contents/ui/DelegateToolButtons.qml:63
+#, kde-format
+msgid "Remove from history"
+msgstr "أزل من التّأريخ"
+
+#: contents/ui/UrlItemDelegate.qml:112
+#, kde-format
+msgctxt ""
+"Indicator that there are more urls in the clipboard than previews shown"
+msgid "+%1"
+msgstr "+%1"

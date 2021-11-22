@@ -1,0 +1,162 @@
+# Thomas Diehl <thd@kde.org>, 2002, 2003, 2004.
+# Stephan Johach <hunsum@gmx.de>, 2005.
+# Thomas Reitelbach <tr@erdfunkstelle.de>, 2006, 2007, 2008, 2009, 2010.
+# Frederik Schwarzer <schwarzer@kde.org>, 2010, 2012, 2013, 2014, 2016, 2020.
+# Burkhard Lück <lueck@hube-lueck.de>, 2012, 2013, 2014, 2017, 2018, 2019, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: ksmserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2020-09-06 12:20+0200\n"
+"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
+"Language-Team: German <kde-i18n-de@kde.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.08.1\n"
+
+#: logout.cpp:354
+#, kde-format
+msgid "Logout canceled by '%1'"
+msgstr "Abmeldung abgebrochen durch „%1“"
+
+#: main.cpp:52
+#, kde-format
+msgid ""
+"The reliable Plasma session manager that talks the standard X11R6 \n"
+"session management protocol (XSMP)."
+msgstr ""
+"Die zuverlässige Plasma-Sitzungsverwaltung, die auch das standardisierte "
+"X11R6-Protokoll (XSMP) beherrscht."
+
+#: main.cpp:128
+#, kde-format
+msgid "$HOME not set!"
+msgstr "$HOME ist nicht angegeben"
+
+#: main.cpp:132 main.cpp:138
+#, kde-format
+msgid "$HOME directory (%1) does not exist."
+msgstr "Der Ordner &HOME (%1) ist nicht vorhanden."
+
+#: main.cpp:134
+#, kde-format
+msgid "No write access to $HOME directory (%1)."
+msgstr "Kein Schreibzugriff auf den Ordner $HOME (%1)."
+
+#: main.cpp:140
+#, kde-format
+msgid "No read access to $HOME directory (%1)."
+msgstr "Kein Lesezugriff auf den Ordner $HOME (%1)."
+
+#: main.cpp:144
+#, kde-format
+msgid "$HOME directory (%1) is out of disk space."
+msgstr "Im Ordner $HOME (%1) nicht mehr genug Speicherplatz verfügbar."
+
+#: main.cpp:147
+#, kde-format
+msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
+msgstr ""
+"Das Schreiben in den Ordner $HOME (%2) ist mit dem Fehler „%1“ fehlgeschlagen"
+
+#: main.cpp:160 main.cpp:195
+#, kde-format
+msgid "No write access to '%1'."
+msgstr "Kein Schreibzugriff auf „%1“."
+
+#: main.cpp:162 main.cpp:197
+#, kde-format
+msgid "No read access to '%1'."
+msgstr "Kein Lesezugriff auf „%1“."
+
+#: main.cpp:170 main.cpp:183
+#, kde-format
+msgid "Temp directory (%1) is out of disk space."
+msgstr "Im temporären Ordner (%1) nicht mehr genug Speicherplatz verfügbar."
+
+#: main.cpp:173 main.cpp:186
+#, kde-format
+msgid ""
+"Writing to the temp directory (%2) failed with\n"
+"    the error '%1'"
+msgstr ""
+"Das Schreiben in den temporären Ordner  (%2) ist mit\n"
+"dem Fehler „%1“ fehlgeschlagen"
+
+#: main.cpp:201
+#, kde-format
+msgid ""
+"The following installation problem was detected\n"
+"while trying to start Plasma:"
+msgstr ""
+"Das folgende Installationsproblem wurde beim\n"
+"Start von Plasma entdeckt:"
+
+#: main.cpp:204
+#, kde-format
+msgid ""
+"\n"
+"\n"
+"Plasma is unable to start.\n"
+msgstr ""
+"\n"
+"\n"
+"Plasma kann nicht gestartet werden.\n"
+
+#: main.cpp:211
+#, kde-format
+msgid "Plasma Workspace installation problem!"
+msgstr "Installationsproblem des Plasma-Arbeitsbereichs."
+
+#: main.cpp:251
+#, kde-format
+msgid "Restores the saved user session if available"
+msgstr "Stellt die vorherige Sitzung wieder her, falls verfügbar."
+
+#: main.cpp:254
+#, kde-format
+msgid "Also allow remote connections"
+msgstr "Verbindungen mit fremden Rechnern zulassen"
+
+#: main.cpp:257
+#, kde-format
+msgid "Starts the session in locked mode"
+msgstr "Startet die Sitzung im gesperrten Modus"
+
+#: main.cpp:261
+#, kde-format
+msgid ""
+"Starts without lock screen support. Only needed if other component provides "
+"the lock screen."
+msgstr ""
+"Startet ohne Unterstützung für die Bildschirmsperre. Dies wird nur benötigt, "
+"wenn eine andere Komponente das SPerren des Bildschirms bereitstellt."
+
+#: server.cpp:867
+#, kde-format
+msgid "Session Management"
+msgstr "Sitzungsverwaltung"
+
+#: server.cpp:870
+#, kde-format
+msgid "Log Out"
+msgstr "Abmelden"
+
+#: server.cpp:875
+#, kde-format
+msgid "Log Out Without Confirmation"
+msgstr "Ohne Rückfrage abmelden"
+
+#: server.cpp:880
+#, kde-format
+msgid "Halt Without Confirmation"
+msgstr "Ohne Rückfrage herunterfahren"
+
+#: server.cpp:885
+#, kde-format
+msgid "Reboot Without Confirmation"
+msgstr "Ohne Rückfrage neu starten"

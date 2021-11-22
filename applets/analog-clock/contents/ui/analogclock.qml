@@ -2,6 +2,7 @@
  *   Copyright 2012 Viranch Mehta <viranch.mehta@gmail.com>
  *   Copyright 2012 Marco Martin <mart@kde.org>
  *   Copyright 2013 David Edmundson <davidedmundson@kde.org>
+ *   Copyright 2021 Liu Bangguo <liubangguo@jingos.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -26,6 +27,7 @@ import QtQuick.Layouts 1.1
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents
+import jingos.display 1.0
 
 Item {
     id: analogclock
@@ -43,7 +45,8 @@ Item {
     Plasmoid.preferredRepresentation: Plasmoid.compactRepresentation
 
     Plasmoid.toolTipMainText: Qt.formatDate(dataSource.data["Local"]["DateTime"],"dddd")
-    Plasmoid.toolTipSubText: Qt.formatDate(dataSource.data["Local"]["DateTime"], Qt.locale().dateFormat(Locale.LongFormat).replace(/(^dddd.?\s)|(,?\sdddd$)/, ""))
+    Plasmoid.toolTipSubText: Qt.formatTime(dataSource.data["Local"]["DateTime"],  Qt.locale().timeFormat(Locale.LongFormat)) + "\n" +
+        Qt.formatDate(dataSource.data["Local"]["DateTime"], Qt.locale().dateFormat(Locale.LongFormat).replace(/(^dddd.?\s)|(,?\sdddd$)/, ""))
 
     PlasmaCore.DataSource {
         id: dataSource
@@ -63,15 +66,19 @@ Item {
 
     function dateTimeChanged()
     {
+        //console.log("Date/time changed!");
+
         var currentTZOffset = dataSource.data["Local"]["Offset"] / 60;
         if (currentTZOffset !== tzOffset) {
             tzOffset = currentTZOffset;
+            //console.log("TZ offset changed: " + tzOffset);
             Date.timeZoneUpdated(); // inform the QML JS engine about TZ change
         }
     }
 
     Component.onCompleted: {
         tzOffset = new Date().getTimezoneOffset();
+        //console.log("Initial TZ offset: " + tzOffset);
         dataSource.onDataChanged.connect(dateTimeChanged);
     }
 
@@ -213,7 +220,7 @@ Item {
             anchors {
                 horizontalCenter: parent.horizontalCenter
                 bottom: parent.bottom
-                bottomMargin: 10
+                bottomMargin: JDisplay.dp(10)
             }
             imagePath: "widgets/background"
             width: childrenRect.width + margins.right + margins.left

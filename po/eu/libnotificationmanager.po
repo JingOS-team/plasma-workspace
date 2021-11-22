@@ -1,0 +1,70 @@
+# Translation of libnotificationmanager.po to Euskara/Basque (eu).
+# Copyright (C) 2019, This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# KDE euskaratzeko proiektuaren arduraduna <xalba@euskalnet.net>.
+#
+# Translators:
+# Iñigo Salvador Azurmendi <xalba@euskalnet.net>, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-02-03 03:31+0100\n"
+"PO-Revision-Date: 2019-05-17 22:09+0100\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@euskalnet.net>\n"
+"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 2.0\n"
+
+#: job_p.cpp:179 job_p.cpp:191 job_p.cpp:204
+#, kde-format
+msgctxt "Copying n files to location"
+msgid "%1 file to %2"
+msgid_plural "%1 files to %2"
+msgstr[0] "fitxategi %1 %2-ra"
+msgstr[1] "%1 fitxategi %2-ra"
+
+#: job_p.cpp:181
+#, kde-format
+msgctxt "Copying unknown amount of files to location"
+msgid "to %1"
+msgstr "%1-era"
+
+#: job_p.cpp:183 job_p.cpp:196 job_p.cpp:214
+#, kde-format
+msgctxt "Copying n files"
+msgid "%1 file"
+msgid_plural "%1 files"
+msgstr[0] "fitxategi %1"
+msgstr[1] "%1 fitxategi"
+
+#: job_p.cpp:189
+#, kde-format
+msgctxt "Copying file to location"
+msgid "%1 to %2"
+msgstr "%1 %2-ra"
+
+#: job_p.cpp:201
+#, kde-format
+msgctxt "Copying n of m files to locaton"
+msgid "%2 of %1 file to %3"
+msgid_plural "%2 of %1 files to %3"
+msgstr[0] "%2/%1 fitxategi %3-ra"
+msgstr[1] "%2/%1 fitxategi %3-ra"
+
+#: job_p.cpp:211
+#, kde-format
+msgctxt "Copying n of m files"
+msgid "%2 of %1 file"
+msgid_plural "%2 of %1 files"
+msgstr[0] "%2/%1 fitxategi"
+msgstr[1] "%2/%1 fitxategi"
+
+#: jobsmodel_p.cpp:486
+#, kde-format
+msgid "Application closed unexpectedly."
+msgstr "Aplikazio bat itxi da ustekabean."

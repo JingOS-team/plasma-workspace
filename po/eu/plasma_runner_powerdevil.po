@@ -1,0 +1,144 @@
+# Translation of plasma_runner_powerdevil.po to Euskara/Basque (eu).
+# Copyright (C) 2008-2014, Free Software Foundation.
+# Copyright (C) 2015-2019, This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# Translators:
+# Asier Urio Larrea <asieriko@gmail.com>, 2008.
+# marcos <marcos@euskalgnu.org>, 2008.
+# Iñigo Salvador Azurmendi <xalba@euskalnet.net>, 2010, 2014, 2019, 2021.
+# Hizkuntza Politikarako Sailburuordetza <hizpol@ej-gv.es>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2021-01-06 23:28+0100\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
+"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.12.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: PowerDevilRunner.cpp:45
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "suspend"
+msgstr "eseki"
+
+#: PowerDevilRunner.cpp:47
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "to ram"
+msgstr "RAMera"
+
+#: PowerDevilRunner.cpp:49
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "sleep"
+msgstr "egin lo"
+
+#: PowerDevilRunner.cpp:51
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "hibernate"
+msgstr "hibernatu"
+
+#: PowerDevilRunner.cpp:53
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "to disk"
+msgstr "diskora"
+
+#: PowerDevilRunner.cpp:55 PowerDevilRunner.cpp:57 PowerDevilRunner.cpp:80
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "dim screen"
+msgstr "ilundu pantaila"
+
+#: PowerDevilRunner.cpp:65
+#, kde-format
+msgid ""
+"Lists system suspend (e.g. sleep, hibernate) options and allows them to be "
+"activated"
+msgstr ""
+"Sistema egonean uzteko aukerak (adibidez, egin lo, hibernatu) zerrendatzen "
+"ditu, eta haiek aktibatzeko aukera ematen du"
+
+#: PowerDevilRunner.cpp:69
+#, kde-format
+msgid "Suspends the system to RAM"
+msgstr "Sistema RAMen egonean uzten du"
+
+#: PowerDevilRunner.cpp:73
+#, kde-format
+msgid "Suspends the system to disk"
+msgstr "Sistema diskoan egonean uzten du"
+
+#: PowerDevilRunner.cpp:76
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "screen brightness"
+msgstr "pantailaren distira"
+
+#: PowerDevilRunner.cpp:78
+#, no-c-format, kde-format
+msgid ""
+"Lists screen brightness options or sets it to the brightness defined by :q:; "
+"e.g. screen brightness 50 would dim the screen to 50% maximum brightness"
+msgstr ""
+"Pantailaren distira-aukerak zerrendatzen ditu edo :q:(e)k definitutako "
+"distira ezartzen du; adibidez, pantailaren distira 50 jarrita, pantailaren "
+"distira maximoaren % 50 izango litzateke"
+
+#: PowerDevilRunner.cpp:123
+#, kde-format
+msgid "Set Brightness to %1%"
+msgstr "Ezarri %%1(e)ko distira"
+
+#: PowerDevilRunner.cpp:132
+#, kde-format
+msgid "Dim screen totally"
+msgstr "Ilundu erabat pantaila"
+
+#: PowerDevilRunner.cpp:140
+#, kde-format
+msgid "Dim screen by half"
+msgstr "Ilundu pantaila erdira"
+
+#: PowerDevilRunner.cpp:170
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Egin lo"
+
+#: PowerDevilRunner.cpp:171
+#, kde-format
+msgid "Suspend to RAM"
+msgstr "Egonean utzi RAMen"
+
+#: PowerDevilRunner.cpp:176
+#, kde-format
+msgctxt "Suspend to disk"
+msgid "Hibernate"
+msgstr "Hibernatu"
+
+#: PowerDevilRunner.cpp:177
+#, kde-format
+msgid "Suspend to disk"
+msgstr "Eseki diskora"
+
+#: PowerDevilRunner.cpp:244
+#, kde-format
+msgctxt "Note this is a KRunner keyword, it should end with a space"
+msgid "screen brightness "
+msgstr "pantailaren distira "
+
+#: PowerDevilRunner.cpp:246
+#, kde-format
+msgctxt "Note this is a KRunner keyword, it should end with a space"
+msgid "dim screen "
+msgstr "ahuldu pantaila "

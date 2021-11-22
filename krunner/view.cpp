@@ -19,22 +19,22 @@
 #include "view.h"
 
 #include <QAction>
-#include <QGuiApplication>
-#include <QDebug>
-#include <QQuickItem>
-#include <QQmlContext>
-#include <QScreen>
-#include <QQmlEngine>
 #include <QClipboard>
+#include <QDebug>
+#include <QGuiApplication>
 #include <QPlatformSurfaceEvent>
+#include <QQmlContext>
+#include <QQmlEngine>
+#include <QQuickItem>
+#include <QScreen>
 
 #include <KAuthorized>
-#include <KWindowSystem>
-#include <KWindowEffects>
-#include <KLocalizedString>
 #include <KCrash>
-#include <KService>
 #include <KIO/CommandLauncherJob>
+#include <KLocalizedString>
+#include <KService>
+#include <KWindowEffects>
+#include <KWindowSystem>
 
 #include <kdeclarative/qmlobject.h>
 
@@ -49,9 +49,9 @@
 #include "appadaptor.h"
 
 View::View(QWindow *)
-    : PlasmaQuick::Dialog(),
-      m_offset(.5),
-      m_floating(false),
+    : PlasmaQuick::Dialog()
+    , m_offset(.5)
+    , m_floating(false),
       m_retainPriorSearch(false)
 {
     setClearBeforeRendering(true);
@@ -60,7 +60,7 @@ View::View(QWindow *)
 
     KCrash::initialize();
 
-    //used only by screen readers
+    // used only by screen readers
     setTitle(i18n("KRunner"));
 
     m_config = KConfigGroup(KSharedConfig::openConfig(), "General");
@@ -92,20 +92,20 @@ View::View(QWindow *)
     m_qmlObj->setSource(package.fileUrl("runcommandmainscript"));
     m_qmlObj->completeInitialization();
 
-    auto screenRemoved = [this](QScreen* screen) {
+    auto screenRemoved = [this](QScreen *screen) {
         if (screen == this->screen()) {
             setScreen(qGuiApp->primaryScreen());
             hide();
         }
     };
 
-    auto screenAdded = [this](const QScreen* screen) {
+    auto screenAdded = [this](const QScreen *screen) {
         connect(screen, &QScreen::geometryChanged, this, &View::screenGeometryChanged);
         screenGeometryChanged();
     };
 
     const auto screens = QGuiApplication::screens();
-    for(QScreen* s : screens) {
+    for (QScreen *s : screens) {
         screenAdded(s);
     }
     connect(qGuiApp, &QGuiApplication::screenAdded, this, screenAdded);
@@ -129,7 +129,7 @@ void View::objectIncubated()
 
 void View::slotFocusWindowChanged()
 {
-    if (!QGuiApplication::focusWindow()) {
+    if (!QGuiApplication::focusWindow() && !m_pinned) {
         setVisible(false);
     }
 }
@@ -158,8 +158,9 @@ void View::setFreeFloating(bool floating)
 void View::loadConfig()
 {
     setFreeFloating(m_config.readEntry("FreeFloating", false));
-
-    m_historyEnabled = m_config.readEntry("HistoryEnabled", true);
+    setPinned(m_config.readEntry("Pinned", false));
+	
+	m_historyEnabled = m_config.readEntry("HistoryEnabled", true);
     QStringList history;
     if (m_historyEnabled) {
         history = m_config.readEntry("history", QStringList());
@@ -180,7 +181,7 @@ void View::loadConfig()
 
 bool View::event(QEvent *event)
 {
-    if (KWindowSystem::isPlatformWayland() && event->type() == QEvent::Expose && !dynamic_cast<QExposeEvent*>(event)->region().isNull()) {
+    if (KWindowSystem::isPlatformWayland() && event->type() == QEvent::Expose && !dynamic_cast<QExposeEvent *>(event)->region().isNull()) {
         auto surface = KWayland::Client::Surface::fromWindow(this);
         auto shellSurface = KWayland::Client::PlasmaShellSurface::get(surface);
         if (shellSurface && isVisible()) {
@@ -195,7 +196,7 @@ bool View::event(QEvent *event)
     // each time.
     bool setState = event->type() == QEvent::Show;
     if (event->type() == QEvent::PlatformSurface) {
-        setState = (static_cast<QPlatformSurfaceEvent*>(event)->surfaceEventType() == QPlatformSurfaceEvent::SurfaceCreated);
+        setState = (static_cast<QPlatformSurfaceEvent *>(event)->surfaceEventType() == QPlatformSurfaceEvent::SurfaceCreated);
     }
     if (setState) {
         KWindowSystem::setState(winId(), NET::SkipTaskbar | NET::SkipPager);
@@ -242,7 +243,7 @@ void View::positionOnScreen()
     QScreen *shownOnScreen = QGuiApplication::primaryScreen();
 
     const auto screens = QGuiApplication::screens();
-    for (QScreen* screen : screens) {
+    for (QScreen *screen : screens) {
         if (screen->geometry().contains(QCursor::pos(screen))) {
             shownOnScreen = screen;
             break;
@@ -252,7 +253,7 @@ void View::positionOnScreen()
     // in wayland, QScreen::availableGeometry() returns QScreen::geometry()
     // we could get a better value from plasmashell
     // BUG: 386114
-    auto message = QDBusMessage::createMethodCall("org.kde.plasmashell", "/StrutManager",  "org.kde.PlasmaShell.StrutManager", "availableScreenRect");
+    auto message = QDBusMessage::createMethodCall("org.kde.plasmashell", "/StrutManager", "org.kde.PlasmaShell.StrutManager", "availableScreenRect");
     message.setArguments({shownOnScreen->name()});
     QDBusPendingCall call = QDBusConnection::sessionBus().asyncCall(message);
     QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(call, this);
@@ -288,7 +289,7 @@ void View::positionOnScreen()
         if (m_floating) {
             KWindowSystem::setOnDesktop(winId(), KWindowSystem::currentDesktop());
             KWindowSystem::setType(winId(), NET::Normal);
-            //Turn the sliding effect off
+            // Turn the sliding effect off
             setLocation(Plasma::Types::Floating);
         } else {
             KWindowSystem::setOnAllDesktops(winId(), true);
@@ -296,13 +297,12 @@ void View::positionOnScreen()
         }
 
         KWindowSystem::forceActiveWindow(winId());
-
     });
 }
 
-void View::displayOrHide()
+void View::toggleDisplay()
 {
-    if (isVisible() && !QGuiApplication::focusWindow())  {
+    if (isVisible() && !QGuiApplication::focusWindow()) {
         KWindowSystem::forceActiveWindow(winId());
         return;
     }
@@ -348,12 +348,10 @@ void View::querySingleRunner(const QString &runnerName, const QString &term)
 
 void View::switchUser()
 {
-    QDBusConnection::sessionBus().asyncCall(
-        QDBusMessage::createMethodCall(QStringLiteral("org.kde.ksmserver"),
-                                       QStringLiteral("/KSMServer"),
-                                       QStringLiteral("org.kde.KSMServerInterface"),
-                                       QStringLiteral("openSwitchUserDialog"))
-    );
+    QDBusConnection::sessionBus().asyncCall(QDBusMessage::createMethodCall(QStringLiteral("org.kde.ksmserver"),
+                                                                           QStringLiteral("/KSMServer"),
+                                                                           QStringLiteral("org.kde.KSMServerInterface"),
+                                                                           QStringLiteral("openSwitchUserDialog")));
 }
 
 void View::displayConfiguration()
@@ -454,4 +452,18 @@ void View::setVisible(bool visible)
 
 bool View::retainPriorSearch() const {
     return m_retainPriorSearch;
+}
+
+bool View::pinned() const
+{
+    return m_pinned;
+}
+
+void View::setPinned(bool pinned)
+{
+    if (m_pinned != pinned) {
+        m_pinned = pinned;
+        m_config.writeEntry("Pinned", pinned);
+        Q_EMIT pinnedChanged();
+    }
 }

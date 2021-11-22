@@ -23,6 +23,8 @@ import QtQuick.Layouts 1.1
 import QtQuick.Window 2.2
 import QtQuick.Dialogs 1.0 as QtDialogs
 import QtQuick.Controls 2.3 as QtControls
+import QtQml 2.15
+
 import org.kde.kirigami 2.8 as Kirigami
 import org.kde.newstuff 1.62 as NewStuff
 import org.kde.kcm 1.3 as KCM
@@ -39,12 +41,14 @@ KCM.GridViewKCM {
         target: kcm.filteredModel
         property: "query"
         value: searchField.text
+        restoreMode: Binding.RestoreBinding
     }
 
     Binding {
         target: kcm.filteredModel
         property: "filter"
         value:  filterCombo.model[filterCombo.currentIndex].filter
+        restoreMode: Binding.RestoreBinding
     }
 
     KCM.SettingStateBinding {
@@ -84,7 +88,7 @@ KCM.GridViewKCM {
 
             Connections {
                 target: kcm
-                onShowSchemeNotInstalledWarning: {
+                function onShowSchemeNotInstalledWarning(schemeName) {
                     notInstalledWarning.text = i18n("The color scheme '%1' is not installed. Selecting the default theme instead.", schemeName)
                     notInstalledWarning.visible = true;
                 }
@@ -154,11 +158,6 @@ KCM.GridViewKCM {
                 id: windowTitleBar
                 width: parent.width
                 height: Math.round(Kirigami.Units.gridUnit * 1.5)
-                gradient: Gradient {
-                    // from Breeze Decoration::paintTitleBar
-                    GradientStop { position: 0.0; color: Qt.lighter(model.activeTitleBarBackground, 1.2) }
-                    GradientStop { position: 0.8; color: model.activeTitleBarBackground }
-                }
 
                 color: model.activeTitleBarBackground
 
@@ -295,14 +294,14 @@ KCM.GridViewKCM {
 
             Connections {
                 target: kcm
-                onShowSuccessMessage: {
+                function onShowSuccessMessage(message) {
                     infoLabel.type = Kirigami.MessageType.Positive;
                     infoLabel.text = message;
                     infoLabel.visible = true;
                     // Avoid dual message widgets
                     notInstalledWarning.visible = false;
                 }
-                onShowErrorMessage: {
+                function onShowErrorMessage(message) {
                     infoLabel.type = Kirigami.MessageType.Error;
                     infoLabel.text = message;
                     infoLabel.visible = true;

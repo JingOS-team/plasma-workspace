@@ -22,26 +22,27 @@
 
 #include <AppStreamQt/icon.h>
 
+#include <QDebug>
+#include <QDesktopServices>
 #include <QDir>
 #include <QIcon>
-#include <QDesktopServices>
-#include <QDebug>
 
-#include <KLocalizedString>
 #include <KApplicationTrader>
+#include <KLocalizedString>
 #include <KSycoca>
 
 #include "debug.h"
 
 K_EXPORT_PLASMA_RUNNER_WITH_JSON(InstallerRunner, "plasma-runner-appstream.json")
 
-InstallerRunner::InstallerRunner(QObject *parent, const QVariantList &args)
-    : Plasma::AbstractRunner(parent, args)
+InstallerRunner::InstallerRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
+    : Plasma::AbstractRunner(parent, metaData, args)
 {
     setObjectName(QStringLiteral("Installation Suggestions"));
     setPriority(AbstractRunner::HighestPriority);
 
     addSyntax(Plasma::RunnerSyntax(":q:", i18n("Looks for non-installed components according to :q:")));
+    setMinLetterCount(3);
 }
 
 InstallerRunner::~InstallerRunner()
@@ -54,9 +55,10 @@ static QIcon componentIcon(const AppStream::Component &comp)
     const auto icons = comp.icons();
     if (icons.isEmpty()) {
         ret = QIcon::fromTheme(QStringLiteral("package-x-generic"));
-    } else for(const AppStream::Icon &icon : icons) {
-        QStringList stock;
-        switch(icon.kind()) {
+    } else
+        for (const AppStream::Icon &icon : icons) {
+            QStringList stock;
+            switch (icon.kind()) {
             case AppStream::Icon::KindLocal:
                 ret.addFile(icon.url().toLocalFile(), icon.size());
                 break;
@@ -68,19 +70,16 @@ static QIcon componentIcon(const AppStream::Component &comp)
                 break;
             default:
                 break;
+            }
+            if (ret.isNull() && !stock.isEmpty()) {
+                ret = QIcon::fromTheme(stock.first());
+            }
         }
-        if (ret.isNull() && !stock.isEmpty()) {
-            ret = QIcon::fromTheme(stock.first());
-        }
-    }
     return ret;
 }
 
 void InstallerRunner::match(Plasma::RunnerContext &context)
 {
-    if(context.query().size() <= 2)
-        return;
-
     const auto components = findComponentsByString(context.query()).mid(0, 3);
 
     for (const AppStream::Component &component : components) {
@@ -92,7 +91,7 @@ void InstallerRunner::match(Plasma::RunnerContext &context)
         // our runner threads - let's not needlessly allocate inotify instances.
         KSycoca::disableAutoRebuild();
         const QString componentId = component.id();
-        const auto servicesFound = KApplicationTrader::query([&componentId] (const KService::Ptr &service) {
+        const auto servicesFound = KApplicationTrader::query([&componentId](const KService::Ptr &service) {
             if (service->exec().isEmpty())
                 return false;
 
@@ -120,11 +119,12 @@ void InstallerRunner::match(Plasma::RunnerContext &context)
         match.setText(i18n("Get %1...", component.name()));
         match.setSubtext(component.summary());
         match.setData(QUrl("appstream://" + componentId));
+        match.setRelevance(component.name().compare(context.query(), Qt::CaseInsensitive) == 0 ? 1. : 0.7);
         context.addMatch(match);
     }
 }
 
-void InstallerRunner::run(const Plasma::RunnerContext &/*context*/, const Plasma::QueryMatch &match)
+void InstallerRunner::run(const Plasma::RunnerContext & /*context*/, const Plasma::QueryMatch &match)
 {
     const QUrl appstreamUrl = match.data().toUrl();
     if (!QDesktopServices::openUrl(appstreamUrl))
@@ -137,7 +137,7 @@ QList<AppStream::Component> InstallerRunner::findComponentsByString(const QStrin
     QString error;
     static bool warnedOnce = false;
     static bool opened = m_db.load(&error);
-    if(!opened) {
+    if (!opened) {
         if (warnedOnce) {
             qCDebug(RUNNER_APPSTREAM) << "Had errors when loading AppStream metadata pool" << error;
         } else {

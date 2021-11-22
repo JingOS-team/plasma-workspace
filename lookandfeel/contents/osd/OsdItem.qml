@@ -1,6 +1,7 @@
 /*
  * Copyright 2014 Martin Klapetek <mklapetek@kde.org>
  * Copyright 2019 Kai Uwe Broulik <kde@broulik.de>
+ * Copyright 2021 Liu Bangguo <liubangguo@jingos.com>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -23,6 +24,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 //import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtra
 import QtQuick.Window 2.2
+import jingos.display 1.0
 
 Rectangle{
     id:name
@@ -36,13 +38,13 @@ Rectangle{
     anchors.top: parent.top
     anchors.horizontalCenter: parent.horizontalCenter
     RowLayout{
-        spacing: 8
+        spacing: JDisplay.dp(8)
         anchors.centerIn: parent
         implicitWidth: iconArea.implicitWidth+progressBar.implicitWidth+name.width*0.0078
         Item {
             id:iconArea
-            implicitWidth: 22
-            implicitHeight: 22
+            implicitWidth: JDisplay.dp(22)
+            implicitHeight: JDisplay.dp(22)
             Image {
                 id: barIcon
                 anchors.fill:iconArea

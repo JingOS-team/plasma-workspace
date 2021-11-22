@@ -24,23 +24,28 @@
 #include <QIcon>
 #include <QMimeData>
 
-#include <QDebug>
 #include <KLocalizedString>
-#include <KService>
+#include <QDebug>
 
 #include <Plasma/Applet>
 #include <Plasma/PluginLoader>
+#include <QMutexLocker>
 
 K_EXPORT_PLASMA_RUNNER_WITH_JSON(WindowedWidgetsRunner, "plasma-runner-windowedwidgets.json")
 
-WindowedWidgetsRunner::WindowedWidgetsRunner(QObject *parent, const QVariantList &args)
-    : Plasma::AbstractRunner(parent, args)
+WindowedWidgetsRunner::WindowedWidgetsRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
+    : Plasma::AbstractRunner(parent, metaData, args)
 {
     setObjectName(QStringLiteral("WindowedWidgets"));
     setPriority(AbstractRunner::HighestPriority);
 
     addSyntax(Plasma::RunnerSyntax(QStringLiteral(":q:"), i18n("Finds Plasma widgets whose name or description match :q:")));
-    setDefaultSyntax(Plasma::RunnerSyntax(i18nc("Note this is a KRunner keyword", "mobile applications"), i18n("list all Plasma widgets that can run as standalone applications")));
+    addSyntax(Plasma::RunnerSyntax(i18nc("Note this is a KRunner keyword", "mobile applications"),
+                                   i18n("list all Plasma widgets that can run as standalone applications")));
+    setMinLetterCount(3);
+    connect(this, &AbstractRunner::teardown, this, [this]() {
+        m_applets.clear();
+    });
 }
 
 WindowedWidgetsRunner::~WindowedWidgetsRunner()
@@ -49,33 +54,19 @@ WindowedWidgetsRunner::~WindowedWidgetsRunner()
 
 void WindowedWidgetsRunner::match(Plasma::RunnerContext &context)
 {
+    loadMetadataList();
     const QString term = context.query();
-
-    if (!context.singleRunnerQueryMode() && term.length() <  3) {
-        return;
-    }
-
     QList<Plasma::QueryMatch> matches;
 
-    const auto &listMetadata =  Plasma::PluginLoader::self()->listAppletMetaData(QString());
-    for (const KPluginMetaData &md : listMetadata) {
-        if (!md.isValid()) {
-            continue;
-        }
-
-        if (((md.name().contains(term, Qt::CaseInsensitive) ||
-             md.value(QLatin1String("GenericName")).contains(term, Qt::CaseInsensitive) ||
-             md.description().contains(term, Qt::CaseInsensitive)) ||
-             md.category().contains(term, Qt::CaseInsensitive) ||
-             term.startsWith(i18nc("Note this is a KRunner keyword", "mobile applications"))) &&
-             !md.rawData().value(QStringLiteral("NoDisplay")).toBool()) {
-
-            if (!md.rawData().value(QStringLiteral("X-Plasma-StandAloneApp")).toBool()) {
-                continue;
-            }
-
+    for (const KPluginMetaData &md : qAsConst(m_applets)) {
+        if (((md.name().contains(term, Qt::CaseInsensitive) || md.value(QLatin1String("GenericName")).contains(term, Qt::CaseInsensitive)
+              || md.description().contains(term, Qt::CaseInsensitive))
+             || md.category().contains(term, Qt::CaseInsensitive) || term.startsWith(i18nc("Note this is a KRunner keyword", "mobile applications")))) {
             Plasma::QueryMatch match(this);
-            setupMatch(md, match);
+            match.setText(md.name());
+            match.setSubtext(md.description());
+            match.setIconName(md.iconName());
+            match.setData(md.pluginId());
             if (md.name().compare(term, Qt::CaseInsensitive) == 0) {
                 match.setType(Plasma::QueryMatch::ExactMatch);
                 match.setRelevance(1);
@@ -100,21 +91,28 @@ void WindowedWidgetsRunner::run(const Plasma::RunnerContext &context, const Plas
     QProcess::startDetached(QStringLiteral("plasmawindowed"), {match.data().toString()});
 }
 
-void WindowedWidgetsRunner::setupMatch(const KPluginMetaData &md, Plasma::QueryMatch &match)
-{
-    match.setText(md.name());
-    match.setSubtext(md.description());
-    match.setIconName(md.iconName());
-    match.setData(md.pluginId());
-}
-
-QMimeData * WindowedWidgetsRunner::mimeDataForMatch(const Plasma::QueryMatch &match)
+QMimeData *WindowedWidgetsRunner::mimeDataForMatch(const Plasma::QueryMatch &match)
 {
     QMimeData *data = new QMimeData();
     data->setData(QStringLiteral("text/x-plasmoidservicename"), match.data().toString().toUtf8());
     return data;
 }
 
+void WindowedWidgetsRunner::loadMetadataList()
+{
+    // We call this method in the match thread
+    QMutexLocker locker(&m_mutex);
+    // If the entries have already been loaded we reuse them for the same session
+    if (!m_applets.isEmpty()) {
+        return;
+    }
+    const auto &listMetadata = Plasma::PluginLoader::self()->listAppletMetaData(QString());
+    for (const KPluginMetaData &md : listMetadata) {
+        if (md.isValid() && !md.rawData().value(QStringLiteral("NoDisplay")).toBool()
+            && md.rawData().value(QStringLiteral("X-Plasma-StandAloneApp")).toBool()) {
+            m_applets << md;
+        }
+    }
+}
 
 #include "windowedwidgetsrunner.moc"
-

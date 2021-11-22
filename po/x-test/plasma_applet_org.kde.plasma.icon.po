@@ -1,0 +1,43 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_org.kde.plasma.icon\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:48+0100\n"
+"PO-Revision-Date: 2020-06-27 03:50+0000\n"
+"Last-Translator: transxx.py program <null@kde.org>\n"
+"Language-Team: KDE Test Language <kde-i18n-doc@kde.org>\n"
+"Language: x-test\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: iconapplet.cpp:107
+#, kde-format
+msgid "Failed to create icon widgets folder '%1'"
+msgstr "xxFailed to create icon widgets folder '%1'xx"
+
+#: iconapplet.cpp:153
+#, kde-format
+msgid "Failed to copy icon widget desktop file from '%1' to '%2'"
+msgstr "xxFailed to copy icon widget desktop file from '%1' to '%2'xx"
+
+#: iconapplet.cpp:395
+#, kde-format
+msgid "Open Containing Folder"
+msgstr "xxOpen Containing Folderxx"
+
+#: iconapplet.cpp:576
+#, kde-format
+msgid "Properties for %1"
+msgstr "xxProperties for %1xx"
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgid "Properties"
+msgstr "xxPropertiesxx"

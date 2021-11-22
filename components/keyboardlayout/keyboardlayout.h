@@ -1,80 +1,54 @@
 /*
- * Copyright (C) 2014  Daniel Vratil <dvratil@redhat.com>
- *
- * This library is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation; either
- * version 2.1 of the License, or (at your option) any later version.
- *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
- *
+ * SPDX-FileCopyrightText: 2014 Daniel Vrátil <dvratil@redhat.com>
+ * SPDX-FileCopyrightText: 2020 Andrey Butirsky <butirsky@gmail.com>
+ * SPDX-License-Identifier: LGPL-2.1-or-later
  */
 
 #ifndef KEYBOARDLAYOUT_H
 #define KEYBOARDLAYOUT_H
 
-#include <QObject>
-#include <QStringList>
+#include <QDBusReply>
+
+#include "debug.h"
 
 class OrgKdeKeyboardLayoutsInterface;
-class QDBusPendingCallWatcher;
+class LayoutNames;
 
 class KeyboardLayout : public QObject
 {
     Q_OBJECT
 
-    Q_PROPERTY(QString currentLayout
-               READ currentLayout
-               WRITE setCurrentLayout
-               NOTIFY currentLayoutChanged)
+    Q_PROPERTY(uint layout MEMBER mLayout WRITE setLayout NOTIFY layoutChanged)
 
-    Q_PROPERTY(QString currentLayoutDisplayName
-               READ currentLayoutDisplayName
-               NOTIFY currentLayoutDisplayNameChanged)
-
-    Q_PROPERTY(QStringList layouts
-               READ layouts
-               NOTIFY layoutsChanged)
+    Q_PROPERTY(const QVector<LayoutNames> &layoutsList READ getLayoutsList NOTIFY layoutsListChanged)
 
 public:
     explicit KeyboardLayout(QObject *parent = nullptr);
     ~KeyboardLayout() override;
 
-    QString currentLayout() const;
-    QString currentLayoutDisplayName() const;
-    QStringList layouts() const;
-
-public Q_SLOTS:
-    void setCurrentLayout(const QString &layout);
-
 Q_SIGNALS:
-    void currentLayoutChanged(const QString &newLayout);
-    void currentLayoutDisplayNameChanged(const QString &newLayout);
-    void layoutsChanged();
+    void layoutChanged();
+    void layoutsListChanged();
 
-private Q_SLOTS:
-    void requestCurrentLayout();
-    void requestCurrentLayoutDisplayName();
-    void requestLayoutsList();
-
-    void onCurrentLayoutReceived(QDBusPendingCallWatcher *watcher);
-    void onCurrentLayoutDisplayNameReceived(QDBusPendingCallWatcher *watcher);
-    void onLayoutsListReceived(QDBusPendingCallWatcher *watcher);
+protected:
+    Q_INVOKABLE void switchToNextLayout();
+    Q_INVOKABLE void switchToPreviousLayout();
 
 private:
-    QStringList mLayouts;
-    QString mCurrentLayout;
-    QString mCurrentLayoutDisplayName;
+    void setLayout(uint index);
+    const QVector<LayoutNames> &getLayoutsList() const
+    {
+        return mLayoutsList;
+    }
+
+    enum DBusData { Layout, LayoutsList };
+
+    template<class T> void requestDBusData(QDBusPendingReply<T> pendingReply, T &out, void (KeyboardLayout::*notify)());
+    template<DBusData> void requestDBusData();
+
+    uint mLayout;
+    QVector<LayoutNames> mLayoutsList;
     OrgKdeKeyboardLayoutsInterface *mIface;
-
 };
-
 
 #endif // KEYBOARDLAYOUT_H

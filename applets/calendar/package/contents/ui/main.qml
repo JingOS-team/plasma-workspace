@@ -16,8 +16,8 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-import QtQuick 2.0
-import QtQuick.Layouts 1.1
+import QtQuick 2.12
+import QtQuick.Layouts 1.12
 
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -57,17 +57,45 @@ Item {
 
         PlasmaCore.IconItem {
             anchors.fill: parent
+
             source: Qt.resolvedUrl("../images/mini-calendar.svgz")
 
             PlasmaComponents3.Label {
-                anchors {
-                    fill: parent
-                    margins: Math.round(parent.width * 0.1)
-                }
+                id: monthLabel
+                y: parent.y + parent.height * 0.05;
+                x: 0
+                width: parent.width
+                height: parent.height * 0.2
+
                 horizontalAlignment: Text.AlignHCenter
-                verticalAlignment: Text.AlignVCenter
+                verticalAlignment: Text.AlignBottom
+                fontSizeMode: Text.Fit
+                minimumPointSize: 1
+
+                /* color must be black because it's set on top of a white icon */
+                color: "black"
+
+                text: {
+                    var d = new Date(dataSource.data.Local.DateTime);
+                    return Qt.formatDate(d, "MMM");
+                }
+                visible: parent.width > PlasmaCore.Units.gridUnit * 3
+            }
+
+            PlasmaComponents3.Label {
+                anchors.top: monthLabel.bottom
+                x: 0
+                width: parent.width
+                height: parent.height * 0.6
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignTop
+                minimumPointSize: 1
                 font.pixelSize: 1000
-                minimumPointSize: theme.smallestFont.pointSize
+
+                fontSizeMode: Text.Fit
+
+                /* color must be black because it's set on top of a white icon */
+                color: "black"
                 text: {
                     var d = new Date(dataSource.data.Local.DateTime)
                     var format = plasmoid.configuration.compactDisplay
@@ -78,7 +106,6 @@ Item {
 
                     return Qt.formatDate(d, format)
                 }
-                fontSizeMode: Text.Fit
             }
         }
     }

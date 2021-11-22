@@ -1,0 +1,249 @@
+# translation of kcmstyle.po to Italian
+#
+# Andrea Rizzi <rizzi@kde.org>, 2003, 2005, 2007.
+# Andrea RIZZI <arizzi@pi.infn.it>, 2004.
+# Luciano Montanaro <mikelima@cirulla.net>, 2008.
+# Federico Zenith <federico.zenith@member.fsf.org>, 2009, 2010, 2012.
+# Paolo Zamponi <zapaolo@email.it>, 2017, 2018, 2019, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmstyle\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2020-07-23 15:47+0200\n"
+"Last-Translator: Paolo Zamponi <zapaolo@email.it>\n"
+"Language-Team: Italian <kde-i18n-it@kde.org>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 20.04.2\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Paolo Zamponi,Federico Zenith,Andrea Rizzi"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "zapaolo@email.it,,"
+
+#: gtkpage.cpp:89
+#, kde-format
+msgid "%1 is not a valid GTK Theme archive."
+msgstr "%1 non è un valido archivio di temi GTK."
+
+#: kcmstyle.cpp:91
+#, kde-format
+msgid "Application Style"
+msgstr "Stile delle applicazioni"
+
+#: kcmstyle.cpp:95
+#, kde-format
+msgid "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik"
+msgstr "© 2002 Karol Szwed, Daniel Molkentin, © 2019 Kai Uwe Broulik"
+
+#: kcmstyle.cpp:97
+#, kde-format
+msgid "Karol Szwed"
+msgstr "Karol Szwed"
+
+#: kcmstyle.cpp:98
+#, kde-format
+msgid "Daniel Molkentin"
+msgstr "Daniel Molkentin"
+
+#: kcmstyle.cpp:99
+#, kde-format
+msgid "Kai Uwe Broulik"
+msgstr "Kai Uwe Broulik"
+
+#: kcmstyle.cpp:182 kcmstyle.cpp:189
+#, kde-format
+msgid "There was an error loading the configuration dialog for this style."
+msgstr ""
+"Si è verificato un errore nel caricamento della finestra di configurazione "
+"di questo stile."
+
+#: kcmstyle.cpp:280
+#, kde-format
+msgid "Failed to apply selected style '%1'."
+msgstr "Impossibile applicare lo stile selezionato «%1»."
+
+#: package/contents/ui/EffectSettingsPopup.qml:46
+#, kde-format
+msgid "Show icons:"
+msgstr "Mostra le icone:"
+
+#: package/contents/ui/EffectSettingsPopup.qml:47
+#, kde-format
+msgid "On buttons"
+msgstr "Sui pulsanti"
+
+#: package/contents/ui/EffectSettingsPopup.qml:58
+#, kde-format
+msgid "In menus"
+msgstr "Nei menu"
+
+#: package/contents/ui/EffectSettingsPopup.qml:70
+#, kde-format
+msgid "Main toolbar label:"
+msgstr "Etichetta della barra degli strumenti principale:"
+
+#: package/contents/ui/EffectSettingsPopup.qml:72
+#, kde-format
+msgid "None"
+msgstr "Nessuna"
+
+#: package/contents/ui/EffectSettingsPopup.qml:73
+#, kde-format
+msgid "Text only"
+msgstr "Solo testo"
+
+#: package/contents/ui/EffectSettingsPopup.qml:74
+#, kde-format
+msgid "Beside icons"
+msgstr "Accanto alle icone"
+
+#: package/contents/ui/EffectSettingsPopup.qml:75
+#, kde-format
+msgid "Below icon"
+msgstr "Sotto l'icona"
+
+#: package/contents/ui/EffectSettingsPopup.qml:90
+#, kde-format
+msgid "Secondary toolbar label:"
+msgstr "Etichetta della barra degli strumenti secondaria:"
+
+#: package/contents/ui/GtkStylePage.qml:32
+#, kde-format
+msgid "GNOME/GTK Application Style"
+msgstr "Stile delle applicazioni GNOME/GTK"
+
+#: package/contents/ui/GtkStylePage.qml:58
+#, kde-format
+msgid "GTK theme:"
+msgstr "Tema GTK:"
+
+#: package/contents/ui/GtkStylePage.qml:90
+#, kde-format
+msgid "Preview..."
+msgstr "Anteprima..."
+
+#: package/contents/ui/GtkStylePage.qml:111
+#, kde-format
+msgid "Install from File..."
+msgstr "Installa da file..."
+
+#: package/contents/ui/GtkStylePage.qml:117
+#, kde-format
+msgid "Get New GNOME/GTK Application Styles..."
+msgstr "Scarica nuovi stili delle applicazioni GNOME/GTK..."
+
+#: package/contents/ui/GtkStylePage.qml:129
+#, kde-format
+msgid "Select GTK Theme Archive"
+msgstr "Seleziona un archivio di temi GTK"
+
+#: package/contents/ui/GtkStylePage.qml:131
+#, kde-format
+msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
+msgstr "Archivio di temi GTK (*.tar.xz *.tar.gz *.tar.bz2)"
+
+#: package/contents/ui/main.qml:31
+#, kde-format
+msgid ""
+"This module allows you to modify the visual appearance of applications' user "
+"interface elements."
+msgstr ""
+"Questo modulo ti permette di modificare l'aspetto visivo degli elementi "
+"dell'interfaccia."
+
+#: package/contents/ui/main.qml:110
+#, kde-format
+msgid "Configure Style..."
+msgstr "Configura stile..."
+
+#: package/contents/ui/main.qml:127
+#, kde-format
+msgid "Configure Icons and Toolbars"
+msgstr "Configura icone e barre degli strumenti"
+
+#: package/contents/ui/main.qml:140
+#, kde-format
+msgid "Configure GNOME/GTK Application Style..."
+msgstr "Configura lo stile delle applicazioni GNOME/GTK..."
+
+#: styleconfdialog.cpp:33
+#, kde-format
+msgid "Configure %1"
+msgstr "Configura %1"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
+#: stylepreview.ui:33
+#, kde-format
+msgid "Tab 1"
+msgstr "Linguetta 1"
+
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: stylepreview.ui:65
+#, kde-format
+msgid "Push Button"
+msgstr "Pulsante"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
+#: stylepreview.ui:86
+#, kde-format
+msgid "Combo box"
+msgstr "Casella combinata"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox)
+#: stylepreview.ui:96
+#, kde-format
+msgid "Checkbox"
+msgstr "Casella di spunta"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
+#: stylepreview.ui:106 stylepreview.ui:116
+#, kde-format
+msgid "Radio button"
+msgstr "Pulsante a scelta singola"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: stylepreview.ui:133
+#, kde-format
+msgid "Tab 2"
+msgstr "Linguetta 2"
+
+#. i18n: ectx: label, entry (widgetStyle), group (KDE)
+#: stylesettings.kcfg:9
+#, kde-format
+msgid "Application style"
+msgstr "Stile delle applicazioni"
+
+#. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
+#: stylesettings.kcfg:13
+#, kde-format
+msgid "Show icons on buttons"
+msgstr "Mostra le icone sui pulsanti"
+
+#. i18n: ectx: label, entry (iconsInMenus), group (KDE)
+#: stylesettings.kcfg:17
+#, kde-format
+msgid "Show icons in menus"
+msgstr "Mostra le icone nei menu"
+
+#. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
+#: stylesettings.kcfg:23
+#, kde-format
+msgid "Main toolbar label"
+msgstr "Etichetta della barra degli strumenti principale"
+
+#. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
+#: stylesettings.kcfg:27
+#, kde-format
+msgid "Secondary toolbar label"
+msgstr "Etichetta della barra degli strumenti secondaria"

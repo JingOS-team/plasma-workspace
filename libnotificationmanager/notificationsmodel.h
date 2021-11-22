@@ -23,9 +23,9 @@
 
 #include "abstractnotificationsmodel.h"
 
-namespace NotificationManager {
-
-class NotificationsModel : public AbstractNotificationsModel
+namespace NotificationManager
+{
+class Q_DECL_EXPORT NotificationsModel : public AbstractNotificationsModel
 {
 public:
     using Ptr = QSharedPointer<NotificationsModel>;

@@ -1,0 +1,712 @@
+# translation of klipper.po to Punjabi
+# Amanpreet Singh Alam <aalam@redhat.com>, 2004, 2005.
+# Amanpreet Singh Brar <amanpreetalam@yahoo.com>, 2005.
+# Amanpreet Singh Brar <aalam@redhat.com>, 2005.
+# Amanpreet Singh Alam <amanpreetalam@yahoo.com>, 2005.
+# A S Alam <aalam@users.sf.net>, 2007, 2009, 2010, 2011, 2012, 2014, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: klipper\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2020-10-10 22:44-0700\n"
+"Last-Translator: A S Alam <aalam.yellow@gmail.com>\n"
+"Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
+"Language: pa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 19.12.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"\n"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ReplayActionInHistory)
+#: actionsconfig.ui:17
+#, kde-format
+msgid "Replay actions on an item selected from history"
+msgstr "ਅਤੀਤ ਤੋਂ ਚੁਣੀ ਆਈਟਮ ਉੱਤੇ ਕਾਰਵਾਈ ਮੁੜ ਚਲਾਓ"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_StripWhiteSpace)
+#: actionsconfig.ui:24
+#, kde-format
+msgid "Remove whitespace when executing actions"
+msgstr "ਕਾਰਵਾਈਆਂ ਚਲਾਉਣ ਤੇ ਖਾਲੀ ਥਾਂ ਹਟਾਓ"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnableMagicMimeActions)
+#. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
+#: actionsconfig.ui:31 klipper.kcfg:84
+#, kde-format
+msgid "Enable MIME-based actions"
+msgstr "MIME-ਅਧਾਰਿਤ ਕਾਰਵਾਈਆਂ ਯੋਗ"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: actionsconfig.ui:38
+#, kde-format
+msgid "Action list:"
+msgstr "ਕਾਰਵਾਈ ਲਿਸਟ:"
+
+#. i18n: ectx: property (text), widget (ActionsTreeWidget, kcfg_ActionList)
+#: actionsconfig.ui:49
+#, kde-format
+msgid "Regular Expression"
+msgstr "ਰੈਗੂਲਰ ਸਮੀਕਰਨ"
+
+#. i18n: ectx: property (text), widget (ActionsTreeWidget, kcfg_ActionList)
+#: actionsconfig.ui:54 editactiondialog.cpp:225
+#, kde-format
+msgid "Description"
+msgstr "ਵੇਰਵਾ"
+
+#. i18n: ectx: property (text), widget (QPushButton, pbAddAction)
+#: actionsconfig.ui:64
+#, kde-format
+msgid "Add Action..."
+msgstr "ਕਾਰਵਾਈ ਸ਼ਾਮਲ..."
+
+#. i18n: ectx: property (text), widget (QPushButton, pbEditAction)
+#: actionsconfig.ui:71
+#, kde-format
+msgid "Edit Action..."
+msgstr "ਕਾਰਵਾਈ ਸੋਧ..."
+
+#. i18n: ectx: property (text), widget (QPushButton, pbDelAction)
+#: actionsconfig.ui:78
+#, kde-format
+msgid "Delete Action"
+msgstr "ਕਾਰਵਾਈ ਹਟਾਓ"
+
+#. i18n: ectx: property (text), widget (QPushButton, pbAdvanced)
+#: actionsconfig.ui:85
+#, kde-format
+msgid "Advanced..."
+msgstr "ਤਕਨੀਕੀ..."
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: actionsconfig.ui:94
+#, no-c-format, kde-format
+msgid ""
+"Click on a highlighted item's column to change it. \"%s\" in a command will "
+"be replaced with the clipboard contents.<br>For more information about "
+"regular expressions, you could have a look at the <a href=\"https://en."
+"wikipedia.org/wiki/Regular_expression\">Wikipedia entry about this topic</a>."
+msgstr ""
+
+#: configdialog.cpp:37
+#, kde-format
+msgid " second"
+msgid_plural " seconds"
+msgstr[0] " ਸਕਿੰਟ"
+msgstr[1] " ਸਕਿੰਟ"
+
+#: configdialog.cpp:38
+#, kde-format
+msgid " entry"
+msgid_plural " entries"
+msgstr[0] " ਐਂਟਰੀ"
+msgstr[1] " ਐਂਟਰੀਆਂ"
+
+#: configdialog.cpp:248
+#, kde-format
+msgid "Advanced Settings"
+msgstr "ਤਕਨੀਕੀ ਸੈਟਿੰਗ"
+
+#: configdialog.cpp:272
+#, kde-format
+msgctxt "General Config"
+msgid "General"
+msgstr "ਸਧਾਰਨ"
+
+#: configdialog.cpp:272
+#, kde-format
+msgid "General Configuration"
+msgstr "ਸਧਾਰਨ ਸੰਰਚਨਾ"
+
+#: configdialog.cpp:273
+#, kde-format
+msgctxt "Actions Config"
+msgid "Actions"
+msgstr "ਐਕਸ਼ਨ"
+
+#: configdialog.cpp:273
+#, kde-format
+msgid "Actions Configuration"
+msgstr "ਐਕਸ਼ਨ ਸੰਰਚਨਾ"
+
+#: configdialog.cpp:277
+#, kde-format
+msgctxt "Shortcuts Config"
+msgid "Shortcuts"
+msgstr "ਸ਼ਾਰਟਕੱਟ"
+
+#: configdialog.cpp:277
+#, kde-format
+msgid "Shortcuts Configuration"
+msgstr "ਸ਼ਾਰਟਕੱਟ ਸੰਰਚਨਾ"
+
+#: configdialog.cpp:335
+#, kde-format
+msgid "D&isable Actions for Windows of Type WM_CLASS"
+msgstr "WM_CLASS ਕਿਸਮ ਦੇ ਵਿੰਡੋਜ਼ ਲਈ ਕਾਰਵਾਈਆਂ ਅਯੋਗ(&i)"
+
+#: configdialog.cpp:344
+#, kde-format
+msgid ""
+"<qt>This lets you specify windows in which Klipper should not invoke "
+"\"actions\". Use<br /><br /><center><b>xprop | grep WM_CLASS</b></"
+"center><br />in a terminal to find out the WM_CLASS of a window. Next, click "
+"on the window you want to examine. The first string it outputs after the "
+"equal sign is the one you need to enter here.</qt>"
+msgstr ""
+
+#: editactiondialog.cpp:41
+#, kde-format
+msgid "Ignore"
+msgstr "ਅਣਡਿੱਠੇ"
+
+#: editactiondialog.cpp:43
+#, kde-format
+msgid "Replace Clipboard"
+msgstr "ਕਲਿੱਪਬੋਰਡ ਬਦਲੋ"
+
+#: editactiondialog.cpp:45
+#, kde-format
+msgid "Add to Clipboard"
+msgstr "ਕਲਿੱਪਬੋਰਡ ਵਿੱਚ ਸ਼ਾਮਲ"
+
+#: editactiondialog.cpp:221
+#, kde-format
+msgid "Command"
+msgstr "ਕਮਾਂਡ"
+
+#: editactiondialog.cpp:223
+#, kde-format
+msgid "Output Handling"
+msgstr "ਆਉਟਪੁੱਟ ਹੈਡਲਿੰਗ"
+
+#: editactiondialog.cpp:265
+#, kde-format
+msgid "Action Properties"
+msgstr "ਐਕਸ਼ਨ ਵਿਸ਼ੇਸ਼ਤਾ"
+
+#: editactiondialog.cpp:370
+#, kde-format
+msgid "new command"
+msgstr "ਨਵੀਂ ਕਮਾਂਡ"
+
+#: editactiondialog.cpp:370
+#, kde-format
+msgid "Command Description"
+msgstr "ਕਮਾਂਡ ਵੇਰਵਾ"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: editactiondialog.ui:20
+#, kde-format
+msgid "Action properties:"
+msgstr "ਕਾਰਵਾਈ ਵਿਸ਼ੇਸ਼ਤਾ:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: editactiondialog.ui:42
+#, kde-format
+msgid "Regular expression:"
+msgstr "ਰੈਗੂਲਰ ਸਮੀਕਰਨ:"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: editactiondialog.ui:52
+#, kde-format
+msgid "Description:"
+msgstr "ਵੇਰਵਾ:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: editactiondialog.ui:62
+#, kde-format
+msgid "Automatic:"
+msgstr "ਆਟੋਮੈਟਿਕ:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: editactiondialog.ui:87
+#, kde-format
+msgid "List of commands for this action:"
+msgstr "ਇਹ ਕਾਰਵਾਈ ਲਈ ਕਮਾਂਡਾਂ ਦੀ ਲਿਸਟ:"
+
+#. i18n: ectx: property (text), widget (QPushButton, pbAddCommand)
+#: editactiondialog.ui:144
+#, kde-format
+msgid "Add Command"
+msgstr "ਕਮਾਂਡ ਸ਼ਾਮਿਲ"
+
+#. i18n: ectx: property (text), widget (QPushButton, pbRemoveCommand)
+#: editactiondialog.ui:151
+#, kde-format
+msgid "Remove Command"
+msgstr "ਕਮਾਂਡ ਹਟਾਓ"
+
+#. i18n: ectx: property (toolTip), widget (QTableView, twCommandList)
+#: editactiondialog.ui:176
+#, kde-format
+msgid "Double-click an item to edit"
+msgstr "ਆਈਟਮ ਸੋਧਣ ਲਈ ਡਬਲ-ਕਲਿੱਕ ਕਰੋ"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_KeepClipboardContents)
+#: generalconfig.ui:17
+#, kde-format
+msgid "Save clipboard contents on exit"
+msgstr "ਬੰਦ ਕਰਨ ਉੱਤੇ ਕਲਿੱਪਬੋਰਡ ਸਮੱਗਰੀ ਸੰਭਾਲੋ"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_PreventEmptyClipboard)
+#. i18n: ectx: label, entry (PreventEmptyClipboard), group (General)
+#: generalconfig.ui:24 klipper.kcfg:16
+#, kde-format
+msgid "Prevent empty clipboard"
+msgstr "ਖਾਲੀ ਕਲਿੱਪਬੋਰਡ ਮਨਾਹੀ"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_IgnoreImages)
+#. i18n: ectx: label, entry (IgnoreImages), group (General)
+#: generalconfig.ui:31 klipper.kcfg:21
+#, kde-format
+msgid "Ignore images"
+msgstr "ਚਿੱਤਰ ਅਣਡਿੱਠੇ"
+
+#. i18n: ectx: property (title), widget (QGroupBox, selection_group)
+#: generalconfig.ui:38
+#, kde-format
+msgid "Selection and Clipboard"
+msgstr "ਚੋਣ ਅਤੇ ਕਲਿੱਪਬੋਰਡ"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_IgnoreSelection)
+#: generalconfig.ui:44
+#, kde-format
+msgid "Ignore selection"
+msgstr "ਚੋਣ ਅਣਡਿੱਠੀ"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_SelectionTextOnly)
+#: generalconfig.ui:51
+#, kde-format
+msgid "Text selection only"
+msgstr "ਟੈਕਸਟ ਚੋਣ ਹੀ"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_SyncClipboards)
+#: generalconfig.ui:58
+#, kde-format
+msgid "Synchronize contents of the clipboard and the selection"
+msgstr "ਕਲਿੱਪਬੋਰਡ ਅਤੇ ਚੋਣ ਦੀ ਸਮੱਗਰੀ ਨੂੰ ਸਮਕਾਲੀ ਕਰੋ"
+
+#. i18n: ectx: property (text), widget (QLabel, timeout_label)
+#: generalconfig.ui:68
+#, kde-format
+msgid "Timeout for action popups:"
+msgstr "ਕਾਰਵਾਈ ਪੋਪਅੱਪ ਲਈ ਆਈਮ-ਆਉਟ:"
+
+#. i18n: ectx: property (text), widget (QLabel, history_size_label)
+#: generalconfig.ui:82
+#, kde-format
+msgid "Clipboard history size:"
+msgstr "ਕਲਿੱਪਬੋਰਡ ਅਤੀਤ ਆਕਾਰ:"
+
+#: historyimageitem.cpp:51
+#, kde-format
+msgid "%1x%2 %3bpp"
+msgstr "%1x%2 %3bpp"
+
+#: klipper.cpp:129
+#, kde-format
+msgid "Enable Clipboard Actions"
+msgstr "ਕਲਿੱਪਬੋਰਡ ਕਾਰਵਾਈਆਂ ਯੋਗ"
+
+#: klipper.cpp:152
+#, kde-format
+msgid "C&lear Clipboard History"
+msgstr "ਕਲਿੱਪਬੋਰਡ ਅਤੀਤ ਸਾਫ਼ ਕਰੋ(&l)"
+
+#: klipper.cpp:159
+#, kde-format
+msgid "&Configure Klipper..."
+msgstr "ਕਲਿੱਪਰ ਸੰਰਚਨਾ(&C)..."
+
+#: klipper.cpp:164
+#, kde-format
+msgctxt "@item:inmenu Quit Klipper"
+msgid "&Quit"
+msgstr "ਬੰਦ ਕਰੋ(&Q)"
+
+#: klipper.cpp:168
+#, kde-format
+msgid "Manually Invoke Action on Current Clipboard"
+msgstr "ਮੌਜੂਦਾ ਕਲਿੱਪਬੋਰਡ ਉੱਤੇ ਕਾਰਵਾਈ ਦਸਤੀ ਸ਼ਾਮਿਲ ਕਰੋ"
+
+#: klipper.cpp:175
+#, kde-format
+msgid "&Edit Contents..."
+msgstr "ਸਮੱਗਰੀ ਸੋਧੋ(&E)...."
+
+#: klipper.cpp:183
+#, kde-format
+msgid "&Show Barcode..."
+msgstr "...ਬਾਰਕੋਡ ਵੇਖੋ(&S)"
+
+#: klipper.cpp:191
+#, kde-format
+msgid "Next History Item"
+msgstr "ਅੱਗੇ ਅਤੀਤ ਆਈਟਮ"
+
+#: klipper.cpp:195
+#, kde-format
+msgid "Previous History Item"
+msgstr "ਪਿਛਲੀ ਅਤੀਤ ਆਈਟਮ"
+
+#: klipper.cpp:201
+#, kde-format
+msgid "Open Klipper at Mouse Position"
+msgstr "ਮਾਊਸ ਕਰਸਰ ਉੱਤੇ ਕਲਿੱਪਰ ਖੋਲ੍ਹੋ"
+
+#: klipper.cpp:483
+#, kde-format
+msgid ""
+"You can enable URL actions later by left-clicking on the Klipper icon and "
+"selecting 'Enable Clipboard Actions'"
+msgstr ""
+"ਤੁਸੀਂ URL ਕਾਰਵਾਈਆਂ ਨੂੰ ਬਾਅਦ ਵਿੱਚ ਕੇਲਿੱਪਰ ਆਈਕਾਨ ਤੇ ਸੱਜਾ ਕਲਿੱਕ ਕਰਕੇ ਅਤੇ 'ਕਾਰਵਾਈਆਂ ਯੋਗ' ਚੁਣ ਸਕਦੇ "
+"ਹੋ।"
+
+#: klipper.cpp:517
+#, kde-format
+msgid "Should Klipper start automatically when you login?"
+msgstr "ਕੀ ਤੁਹਾਡੇ ਲਾਗਇਨ ਕਰਨ ਤੇ ਕੇਲਿੱਪਰ ਖੁਦ ਹੀ ਸ਼ੁਰੂ ਹੋ ਜਾਵੇ?"
+
+#: klipper.cpp:518
+#, kde-format
+msgid "Automatically Start Klipper?"
+msgstr "ਕੇਲਿੱਪਰ ਆਟੋਮੈਟਿਕ ਸ਼ੁਰੂ?"
+
+#: klipper.cpp:519
+#, kde-format
+msgid "Start"
+msgstr "ਸ਼ੁਰੂ"
+
+#: klipper.cpp:520
+#, kde-format
+msgid "Do Not Start"
+msgstr "ਸ਼ੁਰੂ ਨਾ ਕਰੋ"
+
+#: klipper.cpp:867
+#, kde-format
+msgid "Edit Contents"
+msgstr "ਸਮੱਗਰੀ ਸੋਧ"
+
+#: klipper.cpp:934
+#, kde-format
+msgid "Mobile Barcode"
+msgstr "ਮੋਬਾਇਲ ਬਾਰਕੋਡ"
+
+#: klipper.cpp:981
+#, kde-format
+msgid "Really delete entire clipboard history?"
+msgstr "ਪੂਰਾ ਕਲਿੱਪਬੋਰਡ ਅਤੀਤ ਹਟਾਉਣਾ ਹੈ?"
+
+#: klipper.cpp:982
+#, kde-format
+msgid "Delete clipboard history?"
+msgstr "ਕਲਿੱਪਬੋਰਡ ਅਤੀਤ ਹਟਾਉਣਾ ਹੈ?"
+
+#: klipper.cpp:998 klipper.cpp:1007
+#, kde-format
+msgid "Clipboard history"
+msgstr "ਕਲਿੱਪਬੋਰਡ ਅਤੀਤ"
+
+#: klipper.cpp:1024
+#, kde-format
+msgid "up"
+msgstr "ਉੱਤੇ"
+
+#: klipper.cpp:1031
+#, kde-format
+msgid "current"
+msgstr "ਮੌਜੂਦਾ"
+
+#: klipper.cpp:1038
+#, kde-format
+msgid "down"
+msgstr "ਹੇਠਾਂ"
+
+#. i18n: ectx: label, entry (Version), group (General)
+#: klipper.kcfg:9
+#, kde-format
+msgid "Klipper version"
+msgstr "ਕੇਲਿੱਪਰ ਵਰਜਨ"
+
+#. i18n: ectx: label, entry (KeepClipboardContents), group (General)
+#: klipper.kcfg:12
+#, kde-format
+msgid "Keep clipboard contents"
+msgstr "ਕਲਿੱਪਬੋਰਡ ਸਮੱਗਰੀ ਰੱਖੋ"
+
+#. i18n: ectx: whatsthis, entry (PreventEmptyClipboard), group (General)
+#: klipper.kcfg:18
+#, kde-format
+msgid ""
+"Selecting this option has the effect, that the clipboard can never be "
+"emptied. E.g. when an application exits, the clipboard would usually be "
+"emptied."
+msgstr ""
+"ਇਹ ਚੋਣ ਪ੍ਰਭਾਵੀ ਕਰਨ ਨਾਲ, ਕਲਿੱਪਬੋਰਡ ਨੂੰ ਕਦੇ ਖਾਲੀ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ। ਜਿਵੇਂ ਕਿ ਇੱਕ ਕਾਰਜ "
+"ਸਮਾਪਤ ਹੁੰਦਾ ਹੈ, ਆਮ ਕਰਕੇ ਕਲਿੱਪਬੋਰਡ ਖਾਲੀ ਕਰ ਦਿੱਤਾ ਜਾਦਾ ਹੈ।"
+
+#. i18n: ectx: label, entry (IgnoreSelection), group (General)
+#: klipper.kcfg:25
+#, kde-format
+msgid "Ignore Selection"
+msgstr "ਚੋਣ ਅਣਡਿੱਠੀ"
+
+#. i18n: ectx: whatsthis, entry (IgnoreSelection), group (General)
+#: klipper.kcfg:27
+#, kde-format
+msgid ""
+"When an area of the screen is selected with mouse or keyboard, this is "
+"called \"the selection\".<br/>If this option is set, the selection is not "
+"entered into the clipboard history, though it is still available for pasting "
+"using the middle mouse button."
+msgstr ""
+
+#. i18n: ectx: label, entry (SyncClipboards), group (General)
+#: klipper.kcfg:34
+#, kde-format
+msgid "Synchronize clipboard and selection"
+msgstr "ਕਲਿੱਪਬੋਰਡ ਅਤੇ ਚੋਣ ਸਮਕਾਲੀ ਕਰੋ"
+
+#. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
+#: klipper.kcfg:36
+#, kde-format
+msgid ""
+"When an area of the screen is selected with mouse or keyboard, this is "
+"called \"the selection\".<br/>If this option is selected, the selection and "
+"the clipboard is kept the same, so that anything in the selection is "
+"immediately available for pasting elsewhere using any method, including the "
+"traditional middle mouse button. Otherwise, the selection is recorded in the "
+"clipboard history, but the selection can only be pasted using the middle "
+"mouse button. Also see the 'Ignore Selection' option."
+msgstr ""
+
+#. i18n: ectx: label, entry (SelectionTextOnly), group (General)
+#: klipper.kcfg:39
+#, kde-format
+msgid "Selection text only"
+msgstr "ਕੇਵਲ ਚੋਣ ਟੈਕਸਟ ਹੀ"
+
+#. i18n: ectx: whatsthis, entry (SelectionTextOnly), group (General)
+#: klipper.kcfg:41
+#, kde-format
+msgid ""
+"When an area of the screen is selected with mouse or keyboard, this is "
+"called \"the selection\".<br/>If this option is selected, only text "
+"selections are stored in the history, while images and other selections are "
+"not."
+msgstr ""
+
+#. i18n: ectx: label, entry (UseGUIRegExpEditor), group (General)
+#: klipper.kcfg:44
+#, kde-format
+msgid "Use graphical regexp editor"
+msgstr "ਗਰਾਫਿਕਲ regexp ਐਡੀਟਰ ਵਰਤੋਂ"
+
+#. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
+#: klipper.kcfg:48
+#, kde-format
+msgid "URL grabber enabled"
+msgstr "URL ਲੈਣ ਵਾਲਾ ਚਾਲੂ"
+
+#. i18n: ectx: label, entry (NoActionsForWM_CLASS), group (General)
+#: klipper.kcfg:53
+#, kde-format
+msgid "No actions for WM_CLASS"
+msgstr "WM_CLASS ਲਈ ਕੋਈ ਐਕਸ਼ਨ ਨਹੀਂ"
+
+#. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
+#: klipper.kcfg:56
+#, kde-format
+msgid "Timeout for action popups (seconds)"
+msgstr "ਕਾਰਵਾਈ ਪੋਪਅੱਪ ਲਈ ਆਈਮ-ਆਉਟ (ਸਕਿੰਟ):"
+
+#. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
+#: klipper.kcfg:60
+#, kde-format
+msgid "A value of 0 disables the timeout"
+msgstr "ਮੁੱਲ 0 ਸਮਾਂ-ਸੀਮਾ ਅਯੋਗ ਕਰ ਦੇਵੇਗਾ।"
+
+#. i18n: ectx: label, entry (MaxClipItems), group (General)
+#: klipper.kcfg:63
+#, kde-format
+msgid "Clipboard history size"
+msgstr "ਕਲਿੱਪਬੋਰਡ ਅਤੀਤ ਸਾਈਜ਼"
+
+#. i18n: ectx: label, entry (ActionList), group (General)
+#: klipper.kcfg:69
+#, kde-format
+msgid "Dummy entry for indicating changes in an action's tree widget"
+msgstr ""
+
+#. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
+#: klipper.kcfg:75
+#, kde-format
+msgid "Strip whitespace when executing an action"
+msgstr "ਕਾਰਵਾਈਆਂ ਚਲਾਉਣ ਤੇ ਖਾਲੀ ਥਾਂ ਹਟਾਓ"
+
+#. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
+#: klipper.kcfg:77
+#, kde-format
+msgid ""
+"Sometimes, the selected text has some whitespace at the end, which, if "
+"loaded as URL in a browser would cause an error. Enabling this option "
+"removes any whitespace at the beginning or end of the selected string (the "
+"original clipboard contents will not be modified)."
+msgstr ""
+"ਕਈ ਵਾਰ ਚੁਣੇ ਪਾਠ ਦੇ ਅੰਤ ਵਿੱਚ ਕੁਝ ਖਾਲੀ ਥਾਂ ਹੁੰਦੀ ਹੈ, ਜੋ ਕਿ ਜੇਕਰ ਝਲਕਾਰੇ ਵਿੱਚ URL ਦੇ ਤੌਰ ਤੇ ਲੋਡ "
+"ਕੀਤੀ ਜਾਵੇ ਤਾਂ ਇਹ ਗਲਤੀ ਦਿੰਦੀ ਹੈ। ਇਹ ਚੋਣ ਯੋਗ ਕਰਨ ਨਾਲ ਚੁਣੀ ਸਤਰ ਦੇ ਸ਼ੁਰੂ ਜਾਂ ਅੰਤ ਵਿੱਚ ਖਾਲੀ ਥਾਂ "
+"ਨੂੰ ਹਟਾ ਦਿੱਤਾ ਜਾਦਾ ਹੈ (ਕਲਿੱਪਬੋਰਡ ਦੇ ਭਾਗਾਂ ਨੂੰ ਸੋਧਿਆ ਨਹੀਂ ਜਾਦਾ ਹੈ)।"
+
+#. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
+#: klipper.kcfg:80
+#, kde-format
+msgid "Replay action in history"
+msgstr "ਅਤੀਤ ਵਿੱਚ ਕਾਰਵਾਈ ਮੁੜ-ਦੁਹਰਾਉ"
+
+#: klipperpopup.cpp:72
+#, kde-format
+msgid "<empty clipboard>"
+msgstr "<ਖਾਲੀ ਕਲਿੱਪਬੋਰਡ>"
+
+#: klipperpopup.cpp:73
+#, kde-format
+msgid "<no matches>"
+msgstr "<ਕੋਈ ਮੇਲ ਨਹੀਂ>"
+
+#: klipperpopup.cpp:121
+#, kde-format
+msgid "Klipper - Clipboard Tool"
+msgstr "ਕੇਲਿੱਪਰ - ਕਲਿੱਪਬੋਰਡ ਟੂਲ"
+
+#: klipperpopup.cpp:125
+#, kde-format
+msgid "Search..."
+msgstr "ਖੋਜੋ..."
+
+#: klipperpopup.cpp:134 main.cpp:43
+#, kde-format
+msgid "KDE cut & paste history utility"
+msgstr "KDE ਕੱਟ ਅਤੇ ਚਿਪਕਾਉਣ ਅਤੀਤ ਸਹੂਲਤ"
+
+#: main.cpp:41 tray.cpp:35
+#, kde-format
+msgid "Klipper"
+msgstr "ਕੇਲਿੱਪਰ"
+
+#: main.cpp:45
+#, kde-format
+msgid ""
+"(c) 1998, Andrew Stanley-Jones\n"
+"1998-2002, Carsten Pfeiffer\n"
+"2001, Patrick Dubroy"
+msgstr ""
+"(c) 1998, ਐਂਡਰਿਊ ਸਟਾਲੀ-ਜੋਨਸ\n"
+"1998-2002, ਕਰੀਸਟਨ ਪਫੀਇੱਟਰ\n"
+"2001, ਲੁਬੋਸ ਲੂਨਿਕ"
+
+#: main.cpp:48
+#, kde-format
+msgid "Carsten Pfeiffer"
+msgstr "ਕਰੀਸਟਨ ਪਫੀਇੱਟਰ"
+
+#: main.cpp:48
+#, kde-format
+msgid "Author"
+msgstr "ਲੇਖਕ"
+
+#: main.cpp:50
+#, kde-format
+msgid "Andrew Stanley-Jones"
+msgstr "ਐਂਡਰਿਊ ਸਟਾਲੀ-ਜੋਨਸ"
+
+#: main.cpp:50
+#, kde-format
+msgid "Original Author"
+msgstr "ਅਸਲੀ ਲੇਖਕ"
+
+#: main.cpp:52
+#, kde-format
+msgid "Patrick Dubroy"
+msgstr "ਪਾਰਟਰਿਕ ਡੁਬਰਏ"
+
+#: main.cpp:52
+#, kde-format
+msgid "Contributor"
+msgstr "ਸਹਿਯੋਗੀ"
+
+#: main.cpp:54
+#, kde-format
+msgid "Luboš Luňák"
+msgstr "ਲੁਬੋਸ ਲੂਨਿਕ"
+
+#: main.cpp:54
+#, kde-format
+msgid "Bugfixes and optimizations"
+msgstr "ਬੱਗ ਫਿਕਸ ਅਤੇ ਅਨੁਕੂਲਤਾ"
+
+#: main.cpp:56
+#, kde-format
+msgid "Esben Mose Hansen"
+msgstr "ਈਸਬੀਬ ਮੋਸ ਹੁਸੈਨ"
+
+#: main.cpp:56
+#, kde-format
+msgid "Previous Maintainer"
+msgstr "ਪੁਰਾਣਾ ਪਰਬੰਧਕ"
+
+#: main.cpp:58
+#, kde-format
+msgid "Martin Gräßlin"
+msgstr ""
+
+#: main.cpp:58
+#, kde-format
+msgid "Maintainer"
+msgstr "ਪਰਬੰਧਕ"
+
+#: main.cpp:60
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "ਅਮਨਪਰੀਤ ਸਿੰਘ ਆਲਮ"
+
+#: main.cpp:60
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "aalam@users.sf.net"
+
+#: popupproxy.cpp:157
+#, kde-format
+msgid "&More"
+msgstr "ਹੋਰ(&M)"
+
+#: tray.cpp:38
+#, kde-format
+msgid "Clipboard Contents"
+msgstr "ਕਲਿੱਪਬੋਰਡ ਸਮੱਗਰੀ"
+
+#: tray.cpp:38 tray.cpp:54
+#, kde-format
+msgid "Clipboard is empty"
+msgstr "ਕਲਿੱਪਬੋਰਡ ਖਾਲੀ ਹੈ"
+
+#: urlgrabber.cpp:185
+#, kde-format
+msgid "%1 - Actions For: %2"
+msgstr "%1 - ਕਾਰਵਾਈ: %2"
+
+#: urlgrabber.cpp:212
+#, kde-format
+msgid "Disable This Popup"
+msgstr "ਇਹ ਪੋਪਅੱਪ ਅਯੋਗ"
+
+#: urlgrabber.cpp:218
+#, kde-format
+msgid "&Cancel"
+msgstr "ਰੱਦ ਕਰੋ(&C)"

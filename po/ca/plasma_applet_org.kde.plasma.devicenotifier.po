@@ -1,0 +1,127 @@
+# Translation of plasma_applet_org.kde.plasma.devicenotifier.po to Catalan
+# Copyright (C) 2007-2020 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Josep Ma. Ferrer <txemaq@gmail.com>, 2007, 2008, 2009, 2010, 2011, 2012, 2016, 2018, 2019, 2020.
+# Orestes Mas Casals <orestes@tsc.upc.edu>, 2008.
+# Antoni Bella Pérez <antonibella5@yahoo.com>, 2014, 2018, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-12-21 02:42+0100\n"
+"PO-Revision-Date: 2020-12-21 11:39+0100\n"
+"Last-Translator: Josep Ma. Ferrer <txemaq@gmail.com>\n"
+"Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 2.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Accelerator-Marker: &\n"
+
+#: package/contents/ui/DeviceItem.qml:171
+#, kde-format
+msgctxt "@info:status Free disk space"
+msgid "%1 free of %2"
+msgstr "%1 lliure de %2"
+
+#: package/contents/ui/DeviceItem.qml:175
+#, kde-format
+msgctxt ""
+"Accessing is a less technical word for Mounting; translation should be short "
+"and mean 'Currently mounting this device'"
+msgid "Accessing..."
+msgstr "S'està accedint..."
+
+# skip-rule: kct-remove
+#: package/contents/ui/DeviceItem.qml:177
+#, kde-format
+msgctxt ""
+"Removing is a less technical word for Unmounting; translation should be "
+"short and mean 'Currently unmounting this device'"
+msgid "Removing..."
+msgstr "S'està extraient..."
+
+#: package/contents/ui/DeviceItem.qml:203
+#, kde-format
+msgid "Open in File Manager"
+msgstr "Obre al gestor de fitxers"
+
+#: package/contents/ui/DeviceItem.qml:207
+#, kde-format
+msgid "Mount and Open"
+msgstr "Munta i obre"
+
+#: package/contents/ui/DeviceItem.qml:209
+#, kde-format
+msgid "Eject"
+msgstr "Expulsa"
+
+#: package/contents/ui/DeviceItem.qml:211
+#, kde-format
+msgid "Safely remove"
+msgstr "Extreu amb seguretat"
+
+#: package/contents/ui/DeviceItem.qml:251
+#, kde-format
+msgid "Mount"
+msgstr "Munta"
+
+#: package/contents/ui/devicenotifier.qml:60
+#, kde-format
+msgid "Most Recent Device"
+msgstr "Dispositiu més recent"
+
+#: package/contents/ui/devicenotifier.qml:60
+#, kde-format
+msgid "No Devices Available"
+msgstr "No hi ha disponible cap dispositiu"
+
+#: package/contents/ui/devicenotifier.qml:238
+#, kde-format
+msgid "Removable Devices"
+msgstr "Dispositius extraïbles"
+
+#: package/contents/ui/devicenotifier.qml:244
+#, kde-format
+msgid "Non Removable Devices"
+msgstr "Dispositius no extraïbles"
+
+#: package/contents/ui/devicenotifier.qml:250
+#, kde-format
+msgid "All Devices"
+msgstr "Tots els dispositius"
+
+#: package/contents/ui/devicenotifier.qml:258
+#, kde-format
+msgid "Show popup when new device is plugged in"
+msgstr "Mostra un missatge emergent quan s'endolli un dispositiu nou"
+
+#: package/contents/ui/devicenotifier.qml:266
+#, kde-format
+msgctxt "Open auto mounter kcm"
+msgid "Configure Removable Devices..."
+msgstr "Configura els dispositius extraïbles..."
+
+#: package/contents/ui/FullRepresentation.qml:48
+#, kde-format
+msgid "Remove All"
+msgstr "Extreu-los tots"
+
+#: package/contents/ui/FullRepresentation.qml:51
+#, kde-format
+msgid "Click to safely remove all devices"
+msgstr "Cliqueu per a extreure amb seguretat tots els dispositius"
+
+#: package/contents/ui/FullRepresentation.qml:163
+#, kde-format
+msgid "No removable devices attached"
+msgstr "No hi ha cap dispositiu extraïble connectat"
+
+#: package/contents/ui/FullRepresentation.qml:163
+#, kde-format
+msgid "No disks available"
+msgstr "No hi ha cap disc disponible"

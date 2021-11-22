@@ -1,0 +1,178 @@
+# Burkhard Lück <lueck@hube-lueck.de>, 2014, 2016, 2018.
+# Frederik Schwarzer <schwarzer@kde.org>, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:48+0100\n"
+"PO-Revision-Date: 2018-10-16 06:38+0100\n"
+"Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
+"Language-Team: German <kde-i18n-de@kde.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 2.0\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:10
+#, kde-format
+msgid "Screen lock enabled"
+msgstr "Bildschirmsperre aktiviert"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:11
+#, kde-format
+msgid "Sets whether the screen will be locked after the specified time."
+msgstr ""
+"Legt fest, ob der Bildschirm nach einer angegebenen Zeit gesperrt wird."
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:16
+#, kde-format
+msgid "Screen saver timeout"
+msgstr "Bildschirmschoner-Startzeit"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:17
+#, kde-format
+msgid "Sets the minutes after which the screen is locked."
+msgstr "Legt die Zeit fest, nach der der Bildschirm gesperrt wird."
+
+#: sessionsprivate/sessionsmodel.cpp:249 sessionsprivate/sessionsmodel.cpp:253
+#, kde-format
+msgid "New Session"
+msgstr "Neue Sitzung"
+
+#: shellprivate/interactiveconsole/interactiveconsole.cpp:71
+#, kde-format
+msgid "&Execute"
+msgstr "&Ausführen"
+
+#: shellprivate/interactiveconsole/interactiveconsole.cpp:72
+#, kde-format
+msgctxt "Toolbar Button to switch to Plasma Scripting Mode"
+msgid "Plasma"
+msgstr "Plasma"
+
+#: shellprivate/interactiveconsole/interactiveconsole.cpp:73
+#, kde-format
+msgctxt "Toolbar Button to switch to KWin Scripting Mode"
+msgid "KWin"
+msgstr "KWin"
+
+#: shellprivate/interactiveconsole/interactiveconsole.cpp:74
+#, kde-format
+msgid "Templates"
+msgstr "Vorlagen"
+
+#: shellprivate/interactiveconsole/interactiveconsole.cpp:83
+#, kde-format
+msgid "Desktop Shell Scripting Console"
+msgstr "Arbeitsumgebungs-Skriptkonsole"
+
+#: shellprivate/interactiveconsole/interactiveconsole.cpp:90
+#, kde-format
+msgid "Editor"
+msgstr "Editor"
+
+#: shellprivate/interactiveconsole/interactiveconsole.cpp:101
+#, kde-format
+msgid "Load"
+msgstr "Laden"
+
+#: shellprivate/interactiveconsole/interactiveconsole.cpp:107
+#, kde-format
+msgid "Use"
+msgstr "Verwenden"
+
+#: shellprivate/interactiveconsole/interactiveconsole.cpp:163
+#, kde-format
+msgid "Output"
+msgstr "Ausgabe"
+
+#: shellprivate/interactiveconsole/interactiveconsole.cpp:270
+#, kde-format
+msgid "Unable to load script file <b>%1</b>"
+msgstr "Die Skriptdatei <b>%1</b> kann nicht geladen werden"
+
+#: shellprivate/interactiveconsole/interactiveconsole.cpp:320
+#, kde-format
+msgid "Open Script File"
+msgstr "Skriptdatei öffnen"
+
+#: shellprivate/interactiveconsole/interactiveconsole.cpp:435
+#, kde-format
+msgid "Save Script File"
+msgstr "Skriptdatei speichern"
+
+#: shellprivate/interactiveconsole/interactiveconsole.cpp:527
+#, kde-format
+msgid "Executing script at %1"
+msgstr "Skript wird ausgeführt an %1"
+
+#: shellprivate/interactiveconsole/interactiveconsole.cpp:566
+#, no-c-format, kde-format
+msgid "Runtime: %1ms"
+msgstr "Laufzeit: %1 ms"
+
+#: shellprivate/widgetexplorer/kcategorizeditemsviewmodels.cpp:71
+#, kde-format
+msgid "Filters"
+msgstr "Filter"
+
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:59
+#, kde-format
+msgid "Select Plasmoid File"
+msgstr "Plasmoid-Datei auswählen"
+
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:83
+#, kde-format
+msgid "Installing the package %1 failed."
+msgstr "Die Installation des Pakets %1 ist fehlgeschlagen."
+
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:83
+#, kde-format
+msgid "Installation Failure"
+msgstr "Installationsfehler"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:123
+#, kde-format
+msgid "All Widgets"
+msgstr "Alle Miniprogramme"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:127
+#, kde-format
+msgid "Running"
+msgstr "Laufende Miniprogramme"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:131
+#, kde-format
+msgid "Uninstallable"
+msgstr "Deinstallierbar"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:135
+#, kde-format
+msgid "Categories:"
+msgstr "Kategorien:"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:213
+#, kde-format
+msgid "Download New Plasma Widgets"
+msgstr "Neue Miniprogramme herunterladen"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:222
+#, kde-format
+msgid "Install Widget From Local File..."
+msgstr "Miniprogramm aus lokaler Datei installieren ..."

@@ -1,0 +1,128 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-sdk\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-28 02:51+0100\n"
+"PO-Revision-Date: 2021-01-05 19:56+0000\n"
+"Last-Translator: Subin Siby <subins2000@gmail.com>\n"
+"Language-Team: SMC <smc.org.in>\n"
+"Language: ml\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Weblate 4.4\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Amrithanath M"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "amrithanadhm@gmail.com"
+
+#: kcm.cpp:85
+#, kde-format
+msgid "Global Theme"
+msgstr "ആഗോള തീം"
+
+#: kcm.cpp:86 lnftool.cpp:50
+#, kde-format
+msgid "Marco Martin"
+msgstr "മാർക്കോ മാർട്ടിൻ"
+
+#: kcm.cpp:548
+#, kde-format
+msgid ""
+"You have to restart the Plasma session for these changes to take effect."
+msgstr "ഈ മാറ്റങ്ങൾ പ്രാബല്യത്തിൽ വരാൻ നിങ്ങൾ പ്ലാസ്മ സെഷൻ പുനരാരംഭിക്കണം."
+
+#: kcm.cpp:549
+#, kde-format
+msgid "Cursor Settings Changed"
+msgstr "കഴ്‌സർ ക്രമീകരണങ്ങൾ മാറ്റി"
+
+#: lnftool.cpp:45
+#, kde-format
+msgid "Global Theme Tool"
+msgstr "ആഗോള തീം ഉപകരണം"
+
+#: lnftool.cpp:47
+#, kde-format
+msgid ""
+"Command line tool to apply global theme packages for changing the look and "
+"feel."
+msgstr ""
+"കെട്ടും മട്ടും മാറ്റാനുള്ള പൊതു പ്രമേയത്തിന്റെ പാക്കേജുകൾ പ്രയോഗിക്കാനുള്ള കമാൻഡ് ലൈൻ ഉപകരണം."
+
+#: lnftool.cpp:49
+#, kde-format
+msgid "Copyright 2017, Marco Martin"
+msgstr "പകർപ്പവകാശം 2017, മാർക്കോ മാർട്ടിൻ"
+
+#: lnftool.cpp:50
+#, kde-format
+msgid "Maintainer"
+msgstr "പരിപാലകൻ"
+
+#: lnftool.cpp:58
+#, kde-format
+msgid "List available global theme packages"
+msgstr "ലഭ്യമായ പൊതു പ്രമേയങ്ങളുടെ പാക്കേജുകൾ കാണുക"
+
+#: lnftool.cpp:59
+#, kde-format
+msgid "Apply a global theme package"
+msgstr "ഒരു പൊതു പ്രമേയത്തിന്റെ പാക്കേജ് പ്രയോഗിക്കുക"
+
+#: lnftool.cpp:59
+#, kde-format
+msgid "packagename"
+msgstr "പാക്കേജിന്റെ പേര്"
+
+#: lnftool.cpp:60
+#, kde-format
+msgid "Reset the Plasma Desktop layout"
+msgstr "പ്ലാസ്മ ഡെസ്ക്ടോപ്പ് ലേ ഔട്ട്  പുനർ സജ്ജമാക്കുക"
+
+#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
+#: lookandfeelsettings.kcfg:9
+#, kde-format
+msgid "Global look and feel"
+msgstr "പൊതുവായുള്ള കെട്ടും മട്ടും"
+
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "This module lets you choose the global look and feel."
+msgstr "പൊതുവായുള്ള കെട്ടും മട്ടും പ്രമേയം തിരഞ്ഞെടുക്കാൻ ഈ മൊഡ്യൂൾ നിങ്ങളെ സഹായിക്കുന്നു."
+
+#: package/contents/ui/main.qml:57
+#, kde-format
+msgid "Preview Theme"
+msgstr "തീം പ്രിവ്യു"
+
+#: package/contents/ui/main.qml:75
+#, fuzzy, kde-format
+#| msgid ""
+#| "Your desktop layout will be lost and reset to the default layout provided "
+#| "by the selected theme."
+msgid ""
+"Your current layout and configuration of panels, desktop widgets, and "
+"wallpapers will be lost and reset to the default layout provided by the "
+"selected theme."
+msgstr ""
+"നിങ്ങളുടെ ഡെസ്ക്ടോപ്പ് ലേഔട്ട് നഷ്ടപ്പെടുകയും തിരഞ്ഞെടുത്ത തീം നൽകിയ സ്ഥിരസ്ഥിതി ലേഔട്ടിലേക്ക് "
+"പുനഃസജ്ജമാക്കുകയും ചെയ്യും."
+
+#: package/contents/ui/main.qml:85
+#, kde-format
+msgid "Use desktop layout from theme"
+msgstr "തീമിൽ നിന്ന് ഡെസ്ക്ടോപ്പ് ലേ ഔട്ട് ഉപയോഗിക്കുക"
+
+#: package/contents/ui/main.qml:92
+#, kde-format
+msgid "Get New Global Themes..."
+msgstr "പുതു പൊതു പ്രമേയങ്ങള്‍ ലഭ്യമാക്കുക..."

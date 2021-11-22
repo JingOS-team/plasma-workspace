@@ -24,15 +24,14 @@
 
 class TimeZoneData
 {
-
 public:
     QString id;
     QString region;
     QString city;
     QString comment;
     bool checked;
+    bool isLocalTimeZone;
     int offsetFromUtc;
-
 };
 
 #endif // TIMEZONEDATA_H

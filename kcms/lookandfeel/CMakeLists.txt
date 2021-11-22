@@ -4,12 +4,22 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcm_lookandfeel\")
 if(X11_Xcursor_FOUND)
     set(HAVE_XCURSOR TRUE)
 endif()
+
+if(${Breeze_FOUND})
+    if(${BREEZE_WITH_KDECORATION})
+        set(HAVE_BREEZE_DECO true)
+    else()
+        set(HAVE_BREEZE_DECO FALSE)
+    endif()
+else()
+    set(HAVE_BREEZE_DECO FALSE)
+endif()
+
 configure_file (config-kcm.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kcm.h )
 
 set(kcm_lookandfeel_SRCS
     kcmmain.cpp
     kcm.cpp
-    lookandfeeldata.cpp
     ../krdb/krdb.cpp
 )
 
@@ -20,6 +30,14 @@ if (X11_Xcursor_FOUND)
         ../cursortheme/xcursor/xcursortheme.cpp
     )
 endif ()
+
+kcmutils_generate_module_data(
+    kcm_lookandfeel_SRCS
+    MODULE_DATA_HEADER lookandfeeldata.h
+    MODULE_DATA_CLASS_NAME LookAndFeelData
+    SETTINGS_HEADERS lookandfeelsettings.h
+    SETTINGS_CLASSES LookAndFeelSettings
+)
 
 kconfig_add_kcfg_files(kcm_lookandfeel_SRCS lookandfeelsettings.kcfgc GENERATE_MOC)
 
@@ -38,20 +56,20 @@ target_link_libraries(kcm_lookandfeel
   KF5::QuickAddons
   PW::KWorkspace
 
-  Qt5::DBus
-  Qt5::Widgets
-  Qt5::QuickWidgets
-  ${X11_LIBRARIES}
+  Qt::DBus
+  Qt::Widgets
+  Qt::QuickWidgets
+  X11::X11
 )
 
 if(X11_FOUND)
-    target_link_libraries(kcm_lookandfeel Qt5::X11Extras)
+    target_link_libraries(kcm_lookandfeel Qt::X11Extras)
 endif()
 if (X11_Xcursor_FOUND)
-   target_link_libraries(kcm_lookandfeel ${X11_Xcursor_LIB})
+   target_link_libraries(kcm_lookandfeel X11::Xcursor)
 endif ()
 if (X11_Xfixes_FOUND)
-   target_link_libraries(kcm_lookandfeel ${X11_Xfixes_LIB})
+   target_link_libraries(kcm_lookandfeel X11::Xfixes)
 endif ()
 
 kcoreaddons_desktop_to_json(kcm_lookandfeel "kcm_lookandfeel.desktop" SERVICE_TYPES kcmodule.desktop)
@@ -105,20 +123,19 @@ target_link_libraries(lookandfeeltool
   KF5::NewStuff
   PW::KWorkspace
 
-  Qt5::DBus
-  Qt5::Widgets
-  Qt5::QuickWidgets
-  ${X11_LIBRARIES}
+  Qt::DBus
+  Qt::Widgets
+  Qt::QuickWidgets
 )
 
 if(X11_FOUND)
-    target_link_libraries(lookandfeeltool Qt5::X11Extras)
+    target_link_libraries(lookandfeeltool X11::X11 Qt::X11Extras)
 endif()
 if (X11_Xcursor_FOUND)
-   target_link_libraries(lookandfeeltool ${X11_Xcursor_LIB})
+   target_link_libraries(lookandfeeltool X11::Xcursor)
 endif ()
 if (X11_Xfixes_FOUND)
-   target_link_libraries(lookandfeeltool ${X11_Xfixes_LIB})
+   target_link_libraries(lookandfeeltool X11::Xfixes)
 endif ()
 
 install( TARGETS lookandfeeltool ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )

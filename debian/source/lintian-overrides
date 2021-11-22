@@ -1,0 +1,2 @@
+plasma-workspace source: no-human-maintainers
+plasma-workspace source: version-substvar-for-external-package libtaskmanager6 -> libtaskmanager5

@@ -1,0 +1,78 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_engine_time\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2019-05-20 03:26+0200\n"
+"PO-Revision-Date: 2020-06-27 03:50+0000\n"
+"Last-Translator: transxx.py program <null@kde.org>\n"
+"Language-Team: KDE Test Language <kde-i18n-doc@kde.org>\n"
+"Language: x-test\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: timesource.cpp:58
+#, kde-format
+msgid "Local"
+msgstr "xxLocalxx"
+
+#: timesource.cpp:73
+#, kde-format
+msgid "Timezone"
+msgstr "xxTimezonexx"
+
+#: timesource.cpp:78 timesource.cpp:81 timesource.cpp:85
+#, kde-format
+msgid "Timezone City"
+msgstr "xxTimezone Cityxx"
+
+#: timesource.cpp:80 timesource.cpp:83
+#, kde-format
+msgid "Timezone Continent"
+msgstr "xxTimezone Continentxx"
+
+#: timesource.cpp:84
+#, kde-format
+msgid "Timezone Country"
+msgstr "xxTimezone Countryxx"
+
+#: timesource.cpp:109
+#, kde-format
+msgid "Offset"
+msgstr "xxOffsetxx"
+
+#: timesource.cpp:112
+#, kde-format
+msgid "Timezone Abbreviation"
+msgstr "xxTimezone Abbreviationxx"
+
+#: timesource.cpp:143 timesource.cpp:162 timesource.cpp:183
+#, kde-format
+msgid "DateTime"
+msgstr "xxDateTimexx"
+
+#: timesource.cpp:158
+#, kde-format
+msgid "Latitude"
+msgstr "xxLatitudexx"
+
+#: timesource.cpp:159
+#, kde-format
+msgid "Longitude"
+msgstr "xxLongitudexx"
+
+#: timesource.cpp:160
+#, kde-format
+msgid "Solar"
+msgstr "xxSolarxx"
+
+#: timesource.cpp:161
+#, kde-format
+msgid "Moon"
+msgstr "xxMoonxx"

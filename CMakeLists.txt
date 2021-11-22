@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.6)
 
 project(plasma-workspace)
-set(PROJECT_VERSION "5.20.4")
+set(PROJECT_VERSION "5.20.5")
 set(PROJECT_VERSION_MAJOR 5)
 
 set(QT_MIN_VERSION "5.15.0")
@@ -33,12 +33,14 @@ include(ECMQueryQmake)
 include(ECMInstallIcons)
 include(KDEPackageAppTemplates)
 include(KDEClangFormat)
+include(ECMConfiguredInstall)
+include(ECMGenerateDBusServiceFile)
 include(ECMQMLModules)
 
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
                     Plasma DocTools Runner Notifications NotifyConfig Su NewStuff Wallet
                     IdleTime Declarative I18n KCMUtils TextWidgets KDELibs4Support Crash GlobalAccel
-                    DBusAddons Wayland CoreAddons People ActivitiesStats Activities KIO Prison)
+                    DBusAddons Wayland CoreAddons People ActivitiesStats Activities KIO Prison PlasmaQuick Package)
 find_package(KDED CONFIG REQUIRED)
 
 find_package(KF5NetworkManagerQt ${KF5_MIN_VERSION})
@@ -65,11 +67,11 @@ find_package(KF5 REQUIRED COMPONENTS PlasmaQuick)
 find_package(KSysGuard CONFIG REQUIRED)
 find_package(KF5 REQUIRED COMPONENTS Package)
 
-find_package(KF5Baloo)
-set_package_properties(KF5Baloo PROPERTIES DESCRIPTION "File Searching"
-                       TYPE RECOMMENDED
-                       PURPOSE "Needed for the File Search runner."
-                      )
+# find_package(KF5Baloo)
+# set_package_properties(KF5Baloo PROPERTIES DESCRIPTION "File Searching"
+#                        TYPE RECOMMENDED
+#                        PURPOSE "Needed for the File Search runner."
+#                       )
 
 find_package(KF5TextEditor)
 find_package(KWinDBusInterface CONFIG REQUIRED)
@@ -88,6 +90,11 @@ set_package_properties(Phonon4Qt5 PROPERTIES
    DESCRIPTION "Qt-based audio library"
    TYPE REQUIRED)
 
+find_package(Breeze ${PROJECT_VERSION} CONFIG)
+set_package_properties(Breeze PROPERTIES
+                       TYPE OPTIONAL
+                       PURPOSE "For setting the default window decoration plugin")
+
 find_package(ZLIB)
 set_package_properties(ZLIB PROPERTIES DESCRIPTION "Support for gzip compressed files and data streams"
                        URL "https://www.zlib.net"
@@ -100,7 +107,6 @@ set_package_properties(Fontconfig PROPERTIES DESCRIPTION "Font access configurat
                        TYPE OPTIONAL
                        PURPOSE "Needed to build font configuration and installation tools"
                       )
-
 
 find_package(X11)
 set_package_properties(X11 PROPERTIES DESCRIPTION "X11 libraries"
@@ -185,6 +191,8 @@ add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
 # locate qdbus in the Qt path because not every distro makes a symlink at /usr/bin/qdbus
 query_qmake(QtBinariesDir QT_INSTALL_BINS)
 
+option(PLASMA_WAYLAND_DEFAULT_SESSION "Use Wayland session by default for Plasma" FALSE)
+
 add_subdirectory(doc)
 add_subdirectory(libkworkspace)
 add_subdirectory(libdbusmenuqt)
@@ -199,7 +207,7 @@ add_subdirectory(plasma-windowed)
 add_subdirectory(shell)
 add_subdirectory(freespacenotifier)
 add_subdirectory(klipper)
-add_subdirectory(krunner)
+#add_subdirectory(krunner)
 add_subdirectory(ksmserver)
 add_subdirectory(logout-greeter)
 add_subdirectory(ksplash)
@@ -246,3 +254,6 @@ feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAG
 # add clang-format target for all our real source files
 file(GLOB_RECURSE ALL_CLANG_FORMAT_SOURCE_FILES *.cpp *.h)
 kde_clang_format(${ALL_CLANG_FORMAT_SOURCE_FILES})
+
+find_package(KF5I18n CONFIG REQUIRED)
+ki18n_install(po)

@@ -1,0 +1,73 @@
+# Translation of krunner into Japanese.
+# This file is distributed under the same license as the kdebase package.
+# Noboru Sinohara <shinobo@leo.bekkoame.ne.jp>, 2002.
+# Kenshi Muto <kmuto@debian.org>, 2004.
+# Toyohiro Asukai <toyohiro@ksmplus.com>, 2004.
+# Fumiaki Okushi <fumiaki@okushi.com>, 2005.
+# Shinichi Tsunoda <tsuno@ngy.1st.ne.jp>, 2005.
+# Yukiko Bando <ybando@k6.dion.ne.jp>, 2006, 2007, 2008, 2009, 2010.
+# Jumpei Ogawa <phanective@gmail.com>, 2010.
+# Tomohiro Hyakutake <tomhioo@outlook.jp>, 2019.
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: krunner\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2010-09-25 16:44-0700\n"
+"Last-Translator: Fumiaki Okushi <okushi@kde.gr.jp>\n"
+"Language-Team: Japanese <kde-jp@kde.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Generator: Lokalize 19.04.1\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Noboru Sinohara,Toyohiro Asukai,Shinichi Tsunoda"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "shinobo@leo.bekkoame.ne.jp,toyohiro@ksmplus.com,tsuno@ngy.1st.ne.jp"
+
+#: main.cpp:65
+#, kde-format
+msgid "krunner"
+msgstr ""
+
+#: main.cpp:65
+#, kde-format
+msgid "Run Command interface"
+msgstr ""
+
+#: main.cpp:70
+#, kde-format
+msgid "Use the clipboard contents as query for KRunner"
+msgstr ""
+
+#: main.cpp:71
+#, kde-format
+msgid "Start KRunner in the background, don't show it."
+msgstr ""
+
+#: main.cpp:72
+#, kde-format
+msgid "Replace an existing instance"
+msgstr ""
+
+#: main.cpp:77
+#, kde-format
+msgid "The query to run, only used if -c is not provided"
+msgstr ""
+
+#: view.cpp:62
+#, kde-format
+msgid "KRunner"
+msgstr ""

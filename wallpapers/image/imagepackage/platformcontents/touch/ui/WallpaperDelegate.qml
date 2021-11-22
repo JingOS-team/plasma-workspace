@@ -20,6 +20,7 @@
 import QtQuick 2.0
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
+import jingos.display 1.0
 
 MouseArea {
     id: wallpaperDelegate
@@ -35,12 +36,12 @@ MouseArea {
         id: frameSvg
         imagePath: "widgets/media-delegate"
         prefix: (wallpapersGrid.currentIndex - (wallpapersGrid.currentPage*wallpapersGrid.pageSize)) == index ? "picture-selected" : "picture"
-        width: (wallpapersGrid.currentIndex - (wallpapersGrid.currentPage*wallpapersGrid.pageSize)) == index ? parent.width+5 : parent.width-16
-        height: (wallpapersGrid.currentIndex - (wallpapersGrid.currentPage*wallpapersGrid.pageSize)) == index ? parent.height+5 : parent.height-16
+        width: (wallpapersGrid.currentIndex - (wallpapersGrid.currentPage*wallpapersGrid.pageSize)) == index ? parent.width+JDisplay.dp(5) : parent.width-JDisplay.dp(16)
+        height: (wallpapersGrid.currentIndex - (wallpapersGrid.currentPage*wallpapersGrid.pageSize)) == index ? parent.height+JDisplay.dp(5) : parent.height-JDisplay.dp(16)
         anchors {
             left: parent.left
             right: parent.right
-            bottomMargin: 8
+            bottomMargin: JDisplay.dp(8)
         }
 
         Behavior on width {

@@ -1,0 +1,78 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Steve Allewell <steve.allewell@gmail.com>, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2019-05-20 03:26+0200\n"
+"PO-Revision-Date: 2014-10-25 11:59+0100\n"
+"Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
+"Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 1.5\n"
+
+#: timesource.cpp:58
+#, kde-format
+msgid "Local"
+msgstr "Local"
+
+#: timesource.cpp:73
+#, kde-format
+msgid "Timezone"
+msgstr "Timezone"
+
+#: timesource.cpp:78 timesource.cpp:81 timesource.cpp:85
+#, kde-format
+msgid "Timezone City"
+msgstr "Timezone City"
+
+#: timesource.cpp:80 timesource.cpp:83
+#, kde-format
+msgid "Timezone Continent"
+msgstr "Timezone Continent"
+
+#: timesource.cpp:84
+#, kde-format
+msgid "Timezone Country"
+msgstr "Timezone Country"
+
+#: timesource.cpp:109
+#, kde-format
+msgid "Offset"
+msgstr "Offset"
+
+#: timesource.cpp:112
+#, kde-format
+msgid "Timezone Abbreviation"
+msgstr "Timezone Abbreviation"
+
+#: timesource.cpp:143 timesource.cpp:162 timesource.cpp:183
+#, kde-format
+msgid "DateTime"
+msgstr "DateTime"
+
+#: timesource.cpp:158
+#, kde-format
+msgid "Latitude"
+msgstr "Latitude"
+
+#: timesource.cpp:159
+#, kde-format
+msgid "Longitude"
+msgstr "Longitude"
+
+#: timesource.cpp:160
+#, kde-format
+msgid "Solar"
+msgstr "Solar"
+
+#: timesource.cpp:161
+#, kde-format
+msgid "Moon"
+msgstr "Moon"

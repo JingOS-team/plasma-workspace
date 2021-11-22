@@ -1,0 +1,34 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_windowedwidgets\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2020-06-27 03:50+0000\n"
+"Last-Translator: transxx.py program <null@kde.org>\n"
+"Language-Team: KDE Test Language <kde-i18n-doc@kde.org>\n"
+"Language: x-test\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: windowedwidgetsrunner.cpp:42
+#, kde-format
+msgid "Finds Plasma widgets whose name or description match :q:"
+msgstr "xxFinds Plasma widgets whose name or description match :q:xx"
+
+#: windowedwidgetsrunner.cpp:43 windowedwidgetsrunner.cpp:64
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "mobile applications"
+msgstr "xxmobile applicationsxx"
+
+#: windowedwidgetsrunner.cpp:44
+#, kde-format
+msgid "list all Plasma widgets that can run as standalone applications"
+msgstr "xxlist all Plasma widgets that can run as standalone applicationsxx"

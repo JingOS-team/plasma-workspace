@@ -1,0 +1,96 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_package_plasmashell\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2020-06-27 03:50+0000\n"
+"Last-Translator: transxx.py program <null@kde.org>\n"
+"Language-Team: KDE Test Language <kde-i18n-doc@kde.org>\n"
+"Language: x-test\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: shellpackage.cpp:39 shellpackage.cpp:40
+#, kde-format
+msgid "Applets furniture"
+msgstr "xxApplets furniturexx"
+
+#: shellpackage.cpp:41
+#, kde-format
+msgid "Explorer UI for adding widgets"
+msgstr "xxExplorer UI for adding widgetsxx"
+
+#: shellpackage.cpp:42
+#, kde-format
+msgid "User interface for the views that will show containments"
+msgstr "xxUser interface for the views that will show containmentsxx"
+
+#: shellpackage.cpp:50
+#, kde-format
+msgid "Default layout file"
+msgstr "xxDefault layout filexx"
+
+#: shellpackage.cpp:51
+#, kde-format
+msgid "Default plugins for containments, containmentActions, etc."
+msgstr "xxDefault plugins for containments, containmentActions, etc.xx"
+
+#: shellpackage.cpp:56
+#, kde-format
+msgid "Error message shown when an applet fails to load"
+msgstr "xxError message shown when an applet fails to loadxx"
+
+#: shellpackage.cpp:57
+#, kde-format
+msgid "QML component that shows an applet in a popup"
+msgstr "xxQML component that shows an applet in a popupxx"
+
+#: shellpackage.cpp:61
+#, kde-format
+msgid ""
+"Compact representation of an applet when collapsed in a popup, for instance "
+"as an icon. Applets can override this component."
+msgstr ""
+"xxCompact representation of an applet when collapsed in a popup, for "
+"instance as an icon. Applets can override this component.xx"
+
+#: shellpackage.cpp:66
+#, kde-format
+msgid "QML component for the configuration dialog for applets"
+msgstr "xxQML component for the configuration dialog for appletsxx"
+
+#: shellpackage.cpp:69
+#, kde-format
+msgid "QML component for the configuration dialog for containments"
+msgstr "xxQML component for the configuration dialog for containmentsxx"
+
+#: shellpackage.cpp:70
+#, kde-format
+msgid "Panel configuration UI"
+msgstr "xxPanel configuration UIxx"
+
+#: shellpackage.cpp:73
+#, kde-format
+msgid "QML component for choosing an alternate applet"
+msgstr "xxQML component for choosing an alternate appletxx"
+
+#: shellpackage.cpp:76
+#, kde-format
+msgid "Widgets explorer UI"
+msgstr "xxWidgets explorer UIxx"
+
+#: shellpackage.cpp:80
+#, kde-format
+msgid ""
+"A UI for writing, loading and running desktop scripts in the current live "
+"session"
+msgstr ""
+"xxA UI for writing, loading and running desktop scripts in the current live "
+"sessionxx"

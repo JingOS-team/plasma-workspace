@@ -1,0 +1,253 @@
+# Indonesian translations for kcmstyle package.
+# Copyright (C) 2010 This_file_is_part_of_KDE
+# This file is distributed under the same license as the kcmstyle package.
+# Andhika Padmawan <andhika.padmawan@gmail.com>, 2010-2014.
+# Wantoyo <wantoyek@gmail.com>, 2017, 2018, 2019, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmstyle\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2020-02-23 13:44+0700\n"
+"Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
+"Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 19.12.1\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Andhika Padmawan,Wantoyo"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "andhika.padmawan@gmail.com,wantoyek@gmail.com"
+
+#: gtkpage.cpp:89
+#, kde-format
+msgid "%1 is not a valid GTK Theme archive."
+msgstr "%1 bukanlah arsip Tema GTK yang absah."
+
+#: kcmstyle.cpp:91
+#, kde-format
+msgid "Application Style"
+msgstr "Gaya Aplikasi"
+
+#: kcmstyle.cpp:95
+#, kde-format
+msgid "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik"
+msgstr "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik"
+
+#: kcmstyle.cpp:97
+#, kde-format
+msgid "Karol Szwed"
+msgstr "Karol Szwed"
+
+#: kcmstyle.cpp:98
+#, kde-format
+msgid "Daniel Molkentin"
+msgstr "Daniel Molkentin"
+
+#: kcmstyle.cpp:99
+#, kde-format
+msgid "Kai Uwe Broulik"
+msgstr "Kai Uwe Broulik"
+
+#: kcmstyle.cpp:182 kcmstyle.cpp:189
+#, kde-format
+msgid "There was an error loading the configuration dialog for this style."
+msgstr "Terjadi error ketika memuat dialog konfigurasi untuk gaya ini."
+
+#: kcmstyle.cpp:280
+#, kde-format
+msgid "Failed to apply selected style '%1'."
+msgstr "Gagal menerapkan gaya '%1' yang dipilih."
+
+#: package/contents/ui/EffectSettingsPopup.qml:46
+#, kde-format
+msgid "Show icons:"
+msgstr "Tampilkan ikon:"
+
+#: package/contents/ui/EffectSettingsPopup.qml:47
+#, kde-format
+msgid "On buttons"
+msgstr "Pada tombol"
+
+#: package/contents/ui/EffectSettingsPopup.qml:58
+#, kde-format
+msgid "In menus"
+msgstr "Di menu"
+
+#: package/contents/ui/EffectSettingsPopup.qml:70
+#, kde-format
+msgid "Main toolbar label:"
+msgstr "Label bilah-alat utama:"
+
+#: package/contents/ui/EffectSettingsPopup.qml:72
+#, kde-format
+msgid "None"
+msgstr "Nihil"
+
+#: package/contents/ui/EffectSettingsPopup.qml:73
+#, kde-format
+msgid "Text only"
+msgstr "Hanya teks"
+
+#: package/contents/ui/EffectSettingsPopup.qml:74
+#, kde-format
+msgid "Beside icons"
+msgstr "Ikon di samping"
+
+#: package/contents/ui/EffectSettingsPopup.qml:75
+#, kde-format
+msgid "Below icon"
+msgstr "Bawah ikon"
+
+#: package/contents/ui/EffectSettingsPopup.qml:90
+#, kde-format
+msgid "Secondary toolbar label:"
+msgstr "Label bilah-alat sekunder:"
+
+#: package/contents/ui/GtkStylePage.qml:32
+#, kde-format
+msgid "GNOME/GTK Application Style"
+msgstr "Gaya Aplikasi GNOME/GTK"
+
+#: package/contents/ui/GtkStylePage.qml:58
+#, fuzzy, kde-format
+#| msgid "GTK2 theme:"
+msgid "GTK theme:"
+msgstr "Tema GTK2:"
+
+#: package/contents/ui/GtkStylePage.qml:90
+#, kde-format
+msgid "Preview..."
+msgstr "Pratinjau..."
+
+#: package/contents/ui/GtkStylePage.qml:111
+#, kde-format
+msgid "Install from File..."
+msgstr "Instal dari File..."
+
+#: package/contents/ui/GtkStylePage.qml:117
+#, fuzzy, kde-format
+#| msgid "Download New GNOME/GTK Application Styles..."
+msgid "Get New GNOME/GTK Application Styles..."
+msgstr "Unduh Gaya Aplikasi GNOME/GTK yg Baru..."
+
+#: package/contents/ui/GtkStylePage.qml:129
+#, kde-format
+msgid "Select GTK Theme Archive"
+msgstr "Pilih Arsip Tema GTK"
+
+#: package/contents/ui/GtkStylePage.qml:131
+#, kde-format
+msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
+msgstr "Arsip Tema GTK (*.tar.xz *.tar.gz *.tar.bz2)"
+
+#: package/contents/ui/main.qml:31
+#, kde-format
+msgid ""
+"This module allows you to modify the visual appearance of applications' user "
+"interface elements."
+msgstr ""
+"Modul ini memungkinkanmu untuk memodifikasi penampilan visual dari elemen "
+"antarmuka-pengguna aplikasi."
+
+#: package/contents/ui/main.qml:110
+#, kde-format
+msgid "Configure Style..."
+msgstr "Konfigurasikan Gaya...."
+
+#: package/contents/ui/main.qml:127
+#, kde-format
+msgid "Configure Icons and Toolbars"
+msgstr "Konfigurasikan Ikon dan BilahAlat"
+
+#: package/contents/ui/main.qml:140
+#, kde-format
+msgid "Configure GNOME/GTK Application Style..."
+msgstr "Konfigurasikan Gaya aplikasi GNOME/GTK..."
+
+#: styleconfdialog.cpp:33
+#, kde-format
+msgid "Configure %1"
+msgstr "Konfigurasikan %1"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
+#: stylepreview.ui:33
+#, kde-format
+msgid "Tab 1"
+msgstr "Tab 1"
+
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: stylepreview.ui:65
+#, kde-format
+msgid "Push Button"
+msgstr "Tombol Dorong"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
+#: stylepreview.ui:86
+#, kde-format
+msgid "Combo box"
+msgstr "Kotak kombo"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox)
+#: stylepreview.ui:96
+#, kde-format
+msgid "Checkbox"
+msgstr "Kotak centang"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
+#: stylepreview.ui:106 stylepreview.ui:116
+#, kde-format
+msgid "Radio button"
+msgstr "Tombol radio"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: stylepreview.ui:133
+#, kde-format
+msgid "Tab 2"
+msgstr "Tab 2"
+
+#. i18n: ectx: label, entry (widgetStyle), group (KDE)
+#: stylesettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Application style:"
+msgid "Application style"
+msgstr "Gaya aplikasi:"
+
+#. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
+#: stylesettings.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Show icons in b&uttons:"
+msgid "Show icons on buttons"
+msgstr "Tampilkan ikon di &tombol:"
+
+#. i18n: ectx: label, entry (iconsInMenus), group (KDE)
+#: stylesettings.kcfg:17
+#, fuzzy, kde-format
+#| msgid "Show icons in b&uttons:"
+msgid "Show icons in menus"
+msgstr "Tampilkan ikon di &tombol:"
+
+#. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
+#: stylesettings.kcfg:23
+#, fuzzy, kde-format
+#| msgid "Main toolbar label:"
+msgid "Main toolbar label"
+msgstr "Label bilah-alat utama:"
+
+#. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
+#: stylesettings.kcfg:27
+#, fuzzy, kde-format
+#| msgid "Secondary toolbar label:"
+msgid "Secondary toolbar label"
+msgstr "Label bilah-alat sekunder:"

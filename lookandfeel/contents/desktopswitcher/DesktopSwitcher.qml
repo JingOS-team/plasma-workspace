@@ -3,6 +3,7 @@
  This file is part of the KDE project.
 
 Copyright (C) 2012 Martin Gräßlin <mgraesslin@kde.org>
+Copyright (C) 2021 Liu Bangguo <liubangguo@jingos.com>
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -21,12 +22,13 @@ import QtQuick 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.kwin 2.0 as KWin
+import jingos.display 1.0
 
 KWin.Switcher {
     id: tabBox
     currentIndex: listView.currentIndex
     property bool allDesktops: true
-    property int textMargin: 2
+    property int textMargin: JDisplay.dp(2)
 
     PlasmaCore.Dialog {
         id: dialog
@@ -63,10 +65,10 @@ KWin.Switcher {
                     QIconItem {
                         id: iconElement
                         icon: "user-desktop"
-                        width: 32
-                        height: 32
+                        width: JDisplay.dp(32)
+                        height: JDisplay.dp(32)
                         anchors {
-                            topMargin: (listView.rowHeight - 32) / 2
+                            topMargin: (listView.rowHeight - JDisplay.dp(32)) / 2
                             left: parent.left
                             top: parent.top
                             leftMargin: hoverItem.margins.left
@@ -153,15 +155,15 @@ KWin.Switcher {
                 boundsBehavior: Flickable.StopAtBounds
                 Connections {
                     target: tabBox
-                    onCurrentIndexChanged: {listView.currentIndex = tabBox.currentIndex;}
+                    function onCurrentIndexChanged() {listView.currentIndex = tabBox.currentIndex;}
                 }
             }
             Component {
                 id: clientIconDelegate
                 QIconItem {
                     icon: model.icon
-                    width: 16
-                    height: 16
+                    width: JDisplay.dp(16)
+                    height: JDisplay.dp(16)
                 }
             }
             Item {
@@ -181,18 +183,18 @@ KWin.Switcher {
                     model: desktopClientModel
                     clip: true
                     orientation: ListView.Horizontal
-                    spacing: 4
+                    spacing: JDisplay.dp(4)
                     anchors {
                         fill: parent
-                        leftMargin: 34
+                        leftMargin: JDisplay.dp(34)
                     }
                 }
-                height: 18
+                height: JDisplay.dp(18)
                 anchors {
                     left: parent.left
                     right: parent.right
                     bottom: parent.bottom
-                    topMargin: 2
+                    topMargin: JDisplay.dp(2)
                 }
             }
         }

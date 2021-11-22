@@ -21,45 +21,45 @@
 
 #include "baloosearchrunner.h"
 
-#include <QAction>
-#include <QIcon>
-#include <QDir>
-#include <KRun>
-#include <KRunner/QueryMatch>
 #include <KLocalizedString>
-#include <QMimeDatabase>
-#include <QTimer>
-#include <QMimeData>
+#include <QAction>
 #include <QApplication>
 #include <QDBusConnection>
+#include <QDir>
+#include <QIcon>
+#include <QMimeData>
+#include <QMimeDatabase>
+#include <QTimer>
 
-#include <Baloo/Query>
 #include <Baloo/IndexerConfig>
+#include <Baloo/Query>
 
 #include <KIO/OpenFileManagerWindowJob>
+#include <KIO/OpenUrlJob>
+#include <KNotificationJobUiDelegate>
+#include <KShell>
 
-#include "dbusutils_p.h"
 #include "krunner1adaptor.h"
 
 static const QString s_openParentDirId = QStringLiteral("openParentDir");
 
-int main (int argc, char **argv)
+int main(int argc, char **argv)
 {
     Baloo::IndexerConfig config;
     if (!config.fileIndexingEnabled()) {
         return -1;
     }
+    QCoreApplication::setAttribute(Qt::AA_DisableSessionManager);
     QApplication::setQuitOnLastWindowClosed(false);
-    QApplication app(argc, argv); //KRun needs widgets for error message boxes
+    QApplication app(argc, argv); // KRun needs widgets for error message boxes
     SearchRunner r;
     return app.exec();
 }
 
-SearchRunner::SearchRunner(QObject* parent)
-    : QObject(parent),
-    m_timer(new QTimer(this))
+SearchRunner::SearchRunner(QObject *parent)
+    : QObject(parent)
+    , m_timer(new QTimer(this))
 {
-
     m_timer->setSingleShot(true);
     connect(m_timer, &QTimer::timeout, this, &SearchRunner::performMatch);
 
@@ -78,14 +78,10 @@ SearchRunner::~SearchRunner()
 
 RemoteActions SearchRunner::Actions()
 {
-    return RemoteActions({RemoteAction{
-        s_openParentDirId,
-        i18n("Open Containing Folder"),
-        QStringLiteral("document-open-folder")
-    }});
+    return RemoteActions({RemoteAction{s_openParentDirId, i18n("Open Containing Folder"), QStringLiteral("document-open-folder")}});
 }
 
-RemoteMatches SearchRunner::Match(const QString& searchTerm)
+RemoteMatches SearchRunner::Match(const QString &searchTerm)
 {
     // Do not try to show results for queries starting with =
     // this should trigger the calculator, but the AdvancedQueryParser::parse method
@@ -96,7 +92,7 @@ RemoteMatches SearchRunner::Match(const QString& searchTerm)
     setDelayedReply(true);
 
     if (m_lastRequest.type() != QDBusMessage::InvalidMessage) {
-         QDBusConnection::sessionBus().send(m_lastRequest.createReply(QVariantList()));
+        QDBusConnection::sessionBus().send(m_lastRequest.createReply(QVariantList()));
     }
 
     m_lastRequest = message();
@@ -114,7 +110,8 @@ RemoteMatches SearchRunner::Match(const QString& searchTerm)
     if (searchTerm.length() <= 3) {
         waitTimeMs = 100;
     }
-    //we're still using the event delayed call even when the length is < 3 so that if we have multiple Match() calls in our DBus queue, we only process the last one
+    // we're still using the event delayed call even when the length is < 3 so that if we have multiple Match() calls in our DBus queue, we only process the
+    // last one
     m_timer->start(waitTimeMs);
 
     return RemoteMatches();
@@ -124,6 +121,11 @@ void SearchRunner::performMatch()
 {
     // Filter out duplicates
     QSet<QUrl> foundUrls;
+    // The location runner handles file paths, otherwise we would end up with duplicate entries
+    QFileInfo fileInfo(KShell::tildeExpand(m_searchTerm));
+    if (fileInfo.exists()) {
+        foundUrls << QUrl::fromLocalFile(fileInfo.absoluteFilePath());
+    }
 
     RemoteMatches matches;
     matches << matchInternal(m_searchTerm, QStringLiteral("Audio"), i18n("Audio"), foundUrls);
@@ -139,7 +141,7 @@ void SearchRunner::performMatch()
     m_lastRequest = QDBusMessage();
 }
 
-RemoteMatches SearchRunner::matchInternal(const QString& searchTerm, const QString &type, const QString &category, QSet<QUrl> &foundUrls)
+RemoteMatches SearchRunner::matchInternal(const QString &searchTerm, const QString &type, const QString &category, QSet<QUrl> &foundUrls)
 {
     Baloo::Query query;
     query.setSearchString(searchTerm);
@@ -178,9 +180,7 @@ RemoteMatches SearchRunner::matchInternal(const QString& searchTerm, const QStri
         QVariantMap properties;
 
         QString folderPath = url.adjusted(QUrl::RemoveFilename | QUrl::StripTrailingSlash).toLocalFile();
-        if (folderPath.startsWith(QDir::homePath())) {
-            folderPath.replace(0, QDir::homePath().length(), QStringLiteral("~"));
-        }
+        folderPath = KShell::tildeCollapse(folderPath);
 
         properties[QStringLiteral("urls")] = QStringList({QString::fromLocal8Bit(url.toEncoded())});
         properties[QStringLiteral("subtext")] = folderPath;
@@ -189,13 +189,13 @@ RemoteMatches SearchRunner::matchInternal(const QString& searchTerm, const QStri
         match.properties = properties;
         relevance -= 0.05;
 
-         matches << match;
+        matches << match;
     }
 
     return matches;
 }
 
-void SearchRunner::Run(const QString& id, const QString& actionId)
+void SearchRunner::Run(const QString &id, const QString &actionId)
 {
     const QUrl url = QUrl::fromLocalFile(id);
     if (actionId == s_openParentDirId) {
@@ -203,5 +203,8 @@ void SearchRunner::Run(const QString& id, const QString& actionId)
         return;
     }
 
-    new KRun(url, nullptr);
+    auto *job = new KIO::OpenUrlJob(url);
+    job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoErrorHandlingEnabled));
+    job->setRunExecutables(false);
+    job->start();
 }

@@ -19,25 +19,28 @@
 #ifndef VIEW_H
 #define VIEW_H
 
-#include <QPointer>
-#include <QQuickView>
 #include <KConfigGroup>
 #include <KConfigWatcher>
 #include <KSharedConfig>
+#include <QPointer>
+#include <QQuickView>
 
 #include <KWayland/Client/plasmashell.h>
 
 #include <PlasmaQuick/Dialog>
 
-namespace KDeclarative {
-    class QmlObject;
+namespace KDeclarative
+{
+class QmlObject;
 }
 
-namespace KWayland {
-    namespace Client {
-        class PlasmaShell;
-        class PlasmaShellSurface;
-    }
+namespace KWayland
+{
+namespace Client
+{
+class PlasmaShell;
+class PlasmaShellSurface;
+}
 }
 
 class ViewPrivate;
@@ -45,11 +48,12 @@ class ViewPrivate;
 class View : public PlasmaQuick::Dialog
 {
     Q_OBJECT
-    // Q_CLASSINFO("D-Bus Interface", "org.kde.krunner.App") //tmp remove the dbus avoid to affect input
+    Q_CLASSINFO("D-Bus Interface", "org.kde.krunner.App")
 
     Q_PROPERTY(bool canConfigure READ canConfigure CONSTANT)
-    Q_PROPERTY(QStringList history READ history NOTIFY historyChanged)
+	Q_PROPERTY(QStringList history READ history NOTIFY historyChanged)
     Q_PROPERTY(bool retainPriorSearch READ retainPriorSearch NOTIFY retainPriorSearchChanged)
+    Q_PROPERTY(bool pinned READ pinned WRITE setPinned NOTIFY pinnedChanged)
 
 public:
     explicit View(QWindow *parent = nullptr);
@@ -63,23 +67,27 @@ public:
     bool canConfigure() const;
     QStringList history() const;
 
-    Q_INVOKABLE void addToHistory(const QString &item);
+	Q_INVOKABLE void addToHistory(const QString &item);
     Q_INVOKABLE void removeFromHistory(int index);
 
     bool retainPriorSearch() const;
+    bool pinned() const;
+    void setPinned(bool pinned);
 
 Q_SIGNALS:
-    void historyChanged();
+    void pinnedChanged();
+	void historyChanged();
     void retainPriorSearchChanged();
 
 protected:
-    bool event(QEvent* event) override;
+    bool event(QEvent *event) override;
     void resizeEvent(QResizeEvent *event) override;
     void showEvent(QShowEvent *event) override;
 
 public Q_SLOTS:
     void setVisible(bool visible);
     void display();
+    void toggleDisplay();
     void displaySingleRunner(const QString &runnerName);
     void displayWithClipboardContents();
     void query(const QString &term);
@@ -90,7 +98,6 @@ public Q_SLOTS:
 protected Q_SLOTS:
     void screenGeometryChanged();
     void resetScreenPos();
-    void displayOrHide();
     void loadConfig();
     void objectIncubated();
     void slotFocusWindowChanged();
@@ -104,10 +111,10 @@ private:
     qreal m_offset;
     bool m_floating : 1;
     bool m_requestedVisible = false;
-    QStringList m_history;
+	QStringList m_history;
     bool m_retainPriorSearch;
     bool m_historyEnabled;
+    bool m_pinned = false;
 };
-
 
 #endif // View_H

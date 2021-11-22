@@ -1,0 +1,235 @@
+# translation of kcmicons.po to Finnish.
+# Copyright © 2010 This_file_is_part_of_KDE
+# This file is distributed under the same license as the kdebase package.
+# Teemu Rytilahti <teemu.rytilahti@d5k.net>, 2003.
+# Kim Enkovaara <kim.enkovaara@iki.fi>, 2003.
+# Teemu Rytilahti <teemu.rytilahti@kde-fi.org>, 2003, 2008.
+# Tapio Kautto <eleknader@phnet.fi>, 2004.
+# Ilpo Kantonen <ilpo@iki.fi>, 2005.
+# Mikko Piippo <piippo@cc.helsinki.fi>, 2007.
+# Jorma Karvonen <karvonen.jorma@gmail.com>, 2010.
+# Lasse Liehu <lasse.liehu@gmail.com>, 2010, 2011, 2012, 2013, 2014, 2016, 2017.
+# Tommi Nieminen <translator@legisign.org>, 2018, 2020.
+#
+# KDE Finnish translation sprint participants:
+# Author: Lliehu
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmicons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2020-12-13 18:13+0200\n"
+"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-POT-Import-Date: 2012-12-01 22:22:11+0000\n"
+"X-Generator: Lokalize 20.08.3\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+"Teemu Rytilahti,Kim Enkovaara,Tapio Kautto,Ilpo Kantonen,Mikko Piippo,Jorma "
+"Karvonen,Tommi Nieminen"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+"teemu.rytilahti@kde-fi.org,kim.enkovaara@iki.fi,eleknader@phnet.fi,ilpo@iki."
+"fi,piippo@cc.helsinki.fi,karvonen.jorma@gmail.com,translator@legisign.org"
+
+#: changeicons.cpp:43
+#, kde-format
+msgid "Icon theme is already used"
+msgstr "Kuvaketeema on jo käytössä"
+
+#: iconsizecategorymodel.cpp:26
+#, kde-format
+msgid "Toolbar"
+msgstr "Työkalurivi"
+
+#: iconsizecategorymodel.cpp:27
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Päätyökalurivi"
+
+#: iconsizecategorymodel.cpp:28
+#, kde-format
+msgid "Small Icons"
+msgstr "Pienet kuvakkeet"
+
+#: iconsizecategorymodel.cpp:29
+#, kde-format
+msgid "Panel"
+msgstr "Paneeli"
+
+#: iconsizecategorymodel.cpp:30
+#, kde-format
+msgid "Dialogs"
+msgstr "Valintaikkunat"
+
+#. i18n: ectx: label, entry (Theme), group (Icons)
+#: iconssettingsbase.kcfg:9
+#, kde-format
+msgid "Name of the current icon theme"
+msgstr "Nykyisen kuvaketeeman nimi"
+
+#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
+#: iconssettingsbase.kcfg:15
+#, kde-format
+msgid "Desktop icons size"
+msgstr "Työpöytäkuvakkeiden koko"
+
+#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
+#: iconssettingsbase.kcfg:21
+#, kde-format
+msgid "Toolbar icons size"
+msgstr "Työkalurivikuvakkeiden koko"
+
+#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
+#: iconssettingsbase.kcfg:27
+#, kde-format
+msgid "Main toolbar icons size"
+msgstr "Päätyökalurivikuvakkeiden koko"
+
+#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
+#: iconssettingsbase.kcfg:33
+#, kde-format
+msgid "Small icons size"
+msgstr "Pienten kuvakkeiden koko"
+
+#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
+#: iconssettingsbase.kcfg:39
+#, kde-format
+msgid "Panel icons size"
+msgstr "Paneelikuvakkeiden koko"
+
+#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
+#: iconssettingsbase.kcfg:45
+#, kde-format
+msgid "Dialog icons size"
+msgstr "Kyselyikkunakuvakkeiden koko"
+
+#: main.cpp:82
+#, kde-format
+msgid "Icons"
+msgstr "Kuvakkeet"
+
+#: main.cpp:84
+#, kde-format
+msgid "Icons Control Panel Module"
+msgstr "Ohjauskeskuksen Kuvakkeet-osio"
+
+#: main.cpp:86
+#, kde-format
+msgid "(c) 2000-2003 Geert Jansen"
+msgstr "© 2000–2003 Geert Jansen"
+
+#: main.cpp:87
+#, kde-format
+msgid "Geert Jansen"
+msgstr "Geert Jansen"
+
+#: main.cpp:88
+#, kde-format
+msgid "Antonio Larrosa Jimenez"
+msgstr "Antonio Larrosa Jimenez"
+
+#: main.cpp:89
+#, kde-format
+msgid "Torsten Rahn"
+msgstr "Torsten Rahn"
+
+#: main.cpp:90
+#, kde-format
+msgid "Jonathan Riddell"
+msgstr "Jonathan Riddell"
+
+#: main.cpp:91
+#, kde-format
+msgid "Kai Uwe Broulik"
+msgstr "Kai Uwe Broulik"
+
+#: main.cpp:214
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "Väliaikaistiedoston luonti epäonnistui."
+
+#: main.cpp:225
+#, kde-format
+msgid "Unable to download the icon theme archive: %1"
+msgstr "Kuvaketeema-arkiston %1 lataus epäonnistui"
+
+#: main.cpp:239
+#, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr "Tiedosto ei ole kelvollinen kuvaketeema-arkisto."
+
+#: main.cpp:244
+#, kde-format
+msgid ""
+"A problem occurred during the installation process; however, most of the "
+"themes in the archive have been installed"
+msgstr ""
+"Asennuksessa tapahtui virhe. Siitä huolimatta suurin osa paketin teemoista "
+"on asennettu"
+
+#: main.cpp:248
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "Teeman asennus onnistui."
+
+#: main.cpp:356
+#, kde-format
+msgid "Installing icon themes..."
+msgstr "Asennetaan kuvakkeen teemat…"
+
+#: main.cpp:366
+#, kde-format
+msgid "Installing %1 theme..."
+msgstr "Asennetaan teemaa %1…"
+
+#: package/contents/ui/main.qml:35
+#, kde-format
+msgid "This module allows you to choose the icons for your desktop."
+msgstr "Tällä moduulilla voit valita työpöytäsi kuvakkeet."
+
+#: package/contents/ui/main.qml:161
+#, kde-format
+msgid "Remove Icon Theme"
+msgstr "Poista kuvaketeema"
+
+#: package/contents/ui/main.qml:168
+#, kde-format
+msgid "Restore Icon Theme"
+msgstr "Palauta kuvaketeema"
+
+#: package/contents/ui/main.qml:237
+#, kde-format
+msgid "Configure Icon Sizes"
+msgstr "Aseta kuvakekoot"
+
+#: package/contents/ui/main.qml:254
+#, kde-format
+msgid "Install from File..."
+msgstr "Asenna tiedostosta…"
+
+#: package/contents/ui/main.qml:262
+#, kde-format
+msgid "Get New Icons..."
+msgstr "Hae uusia kuvakkeita…"
+
+#: package/contents/ui/main.qml:288
+#, kde-format
+msgid "Open Theme"
+msgstr "Avaa teema"
+
+#: package/contents/ui/main.qml:290
+#, kde-format
+msgid "Theme Files (*.tar.gz *.tar.bz2)"
+msgstr "Teematiedostot (*.tar.gz *.tar.bz2)"

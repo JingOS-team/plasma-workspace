@@ -27,22 +27,26 @@
 #ifndef APPMENUMODULE_H
 #define APPMENUMODULE_H
 
+#include <config-X11.h>
+#ifdef HAVE_X11
+#include <xcb/xcb.h>
+#endif
+
 #include <kdedmodule.h>
 
-#include <QPointer>
 #include "menuimporter.h"
+#include <QPointer>
 
 class QDBusServiceWatcher;
 class KDBusMenuImporter;
 class AppmenuDBus;
 class VerticalMenu;
 
-class AppMenuModule : public KDEDModule,
-                      protected QDBusContext
+class AppMenuModule : public KDEDModule, protected QDBusContext
 {
     Q_OBJECT
 public:
-    AppMenuModule(QObject* parent, const QList<QVariant>& list);
+    AppMenuModule(QObject *parent, const QList<QVariant> &list);
     ~AppMenuModule() override;
 
 Q_SIGNALS:
@@ -92,6 +96,10 @@ private:
     AppmenuDBus *m_appmenuDBus;
     QDBusServiceWatcher *m_menuViewWatcher;
     QPointer<VerticalMenu> m_menu;
+
+#ifdef HAVE_X11
+    xcb_connection_t *m_xcbConn = nullptr;
+#endif
 };
 
 #endif

@@ -1,0 +1,35 @@
+# Translation of krdb.po to Slovenian
+# SLOVENIAN TRANSLATION OF KDEBASE.
+# Copyright (C) 2002, 2003 Free Software Foundation, Inc.
+# $Id: krdb.po 1591122 2021-01-22 05:12:12Z scripty $
+# $Source$
+#
+# Gregor Rakar <gregor.rakar@kiss.uni-lj.si>, 2002.
+# Gregor Rakar <gregor.rakar@kiss.si>, 2003.
+# Jure Repinc <jlp@holodeck1.com>, 2009.
+# Andrej Mernik <andrejm@ubuntu.si>, 2013, 2017.
+# Matjaž Jeran <matjaz.jeran@amis.net>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: krdb\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2020-06-16 08:51+0200\n"
+"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
+"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 19.12.2\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
+
+#: krdb.cpp:255
+#, kde-format
+msgid ""
+"# created by KDE Plasma, %1\n"
+"#\n"
+msgstr ""
+"# ustvarjeno s KDE Plasmo, %1\n"
+"#\n"

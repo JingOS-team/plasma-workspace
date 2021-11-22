@@ -1,0 +1,113 @@
+# Translation of plasma_engine_keystate.po to Catalan
+# Copyright (C) 2009-2016 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Josep Ma. Ferrer <txemaq@gmail.com>, 2009, 2013, 2015.
+# Antoni Bella Pérez <antonibella5@yahoo.com>, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-10-24 02:31+0200\n"
+"PO-Revision-Date: 2016-09-26 22:37+0100\n"
+"Last-Translator: Antoni Bella Pérez <antonibella5@yahoo.com>\n"
+"Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 2.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Accelerator-Marker: &\n"
+
+#: keystate.cpp:28
+#, kde-format
+msgid "Shift"
+msgstr "Maj"
+
+#: keystate.cpp:29
+#, kde-format
+msgid "Ctrl"
+msgstr "Ctrl"
+
+#: keystate.cpp:30
+#, kde-format
+msgid "Alt"
+msgstr "Alt"
+
+#: keystate.cpp:31
+#, kde-format
+msgid "Meta"
+msgstr "Meta"
+
+#: keystate.cpp:32
+#, kde-format
+msgid "Super"
+msgstr "Súper"
+
+#: keystate.cpp:33
+#, kde-format
+msgid "Hyper"
+msgstr "Hyper"
+
+#: keystate.cpp:34
+#, kde-format
+msgid "AltGr"
+msgstr "Alt Gr"
+
+#: keystate.cpp:35
+#, kde-format
+msgid "Num Lock"
+msgstr "Bloq Núm"
+
+#: keystate.cpp:36
+#, kde-format
+msgid "Caps Lock"
+msgstr "Bloq Maj"
+
+#: keystate.cpp:37
+#, kde-format
+msgid "Scroll Lock"
+msgstr "Bloq Despl"
+
+#: keystate.cpp:39
+#, kde-format
+msgid "Left Button"
+msgstr "Botó esquerre"
+
+#: keystate.cpp:40
+#, kde-format
+msgid "Right Button"
+msgstr "Botó dret"
+
+#: keystate.cpp:41
+#, kde-format
+msgid "Middle Button"
+msgstr "Botó del mig"
+
+#: keystate.cpp:42
+#, kde-format
+msgid "First X Button"
+msgstr "Primer botó X"
+
+#: keystate.cpp:43
+#, kde-format
+msgid "Second X Button"
+msgstr "Segon botó X"
+
+#: keystate.cpp:58 keystate.cpp:69 keystate.cpp:97 keystate.cpp:118
+#: keystate.cpp:126
+#, kde-format
+msgid "Pressed"
+msgstr "Premut"
+
+#: keystate.cpp:59 keystate.cpp:104 keystate.cpp:127
+#, kde-format
+msgid "Latched"
+msgstr "Tancat"
+
+#: keystate.cpp:60 keystate.cpp:111 keystate.cpp:128
+#, kde-format
+msgid "Locked"
+msgstr "Blocat"

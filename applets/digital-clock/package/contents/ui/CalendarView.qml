@@ -17,6 +17,9 @@
  */
 import QtQuick 2.4
 import QtQuick.Layouts 1.1
+import QtQml 2.15
+
+import org.kde.kquickcontrolsaddons 2.0 // For kcmshell
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.calendar 2.0 as PlasmaCalendar
 import org.kde.plasma.components 3.0 as PlasmaComponents3
@@ -117,6 +120,9 @@ PlasmaComponents3.Page {
                 id: monthView
                 borderOpacity: 0.25
                 today: root.tzDate
+                firstDayOfWeek: plasmoid.configuration.firstDayOfWeek > -1
+                    ? plasmoid.configuration.firstDayOfWeek
+                    : Qt.locale().firstDayOfWeek
                 showWeekNumbers: plasmoid.configuration.showWeekNumbers
             }
         }
@@ -145,7 +151,7 @@ PlasmaComponents3.Page {
         ColumnLayout {
             id: rightColumn
 
-            visible: agenda.visible || worldClocks.visible
+            visible: calendar.showAgenda || calendar.showClocks
 
             Layout.minimumWidth: units.gridUnit * 14
 
@@ -206,7 +212,7 @@ PlasmaComponents3.Page {
                 Connections {
                     target: monthView
 
-                    onCurrentDateChanged: {
+                    function onCurrentDateChanged() {
                         // Apparently this is needed because this is a simple QList being
                         // returned and if the list for the current day has 1 event and the
                         // user clicks some other date which also has 1 event, QML sees the
@@ -221,7 +227,7 @@ PlasmaComponents3.Page {
                 Connections {
                     target: monthView.daysModel
 
-                    onAgendaUpdated: {
+                    function onAgendaUpdated(updatedDate) {
                         if (agenda.dateEquals(updatedDate, monthView.currentDate)) {
                             holidaysList.model = null;
                             holidaysList.model = monthView.daysModel.eventsForDate(monthView.currentDate);
@@ -241,6 +247,7 @@ PlasmaComponents3.Page {
                     target: plasmoid
                     property: "hideOnWindowDeactivate"
                     value: !plasmoid.configuration.pin
+                    restoreMode: Binding.RestoreBinding
                 }
 
                 TextMetrics {
@@ -426,17 +433,31 @@ PlasmaComponents3.Page {
 
             // Clocks stuff
             // ------------
-            // Header text
-            PlasmaExtras.Heading {
+            // Header text + button to change time & timezone
+            RowLayout {
+                Layout.fillWidth: true
                 visible: worldClocks.visible
 
-                Layout.fillWidth: true
+                PlasmaExtras.Heading {
+                    Layout.fillWidth: true
 
-                level: 2
+                    level: 2
 
-                text: i18n("Time Zones")
-                maximumLineCount: 1
-                elide: Text.ElideRight
+                    text: i18n("Time Zones")
+                    maximumLineCount: 1
+                    elide: Text.ElideRight
+                }
+
+                PlasmaComponents3.ToolButton {
+                    visible: KCMShell.authorize("clock.desktop").length > 0
+                    text: i18n("Switch...")
+                    icon.name: "preferences-system-time"
+                    onClicked: KCMShell.openSystemSettings("clock")
+
+                    PlasmaComponents3.ToolTip {
+                        text: i18n("Switch to another timezone")
+                    }
+                }
             }
 
             // Clocks view itself
@@ -452,6 +473,10 @@ PlasmaComponents3.Page {
                     id: clocksList
 
                     width: parent.width
+
+                    // We don't want any highlight effect at all as there is no
+                    // concept of items being selected here
+                    highlight: Item {}
 
                     model: {
                         var timezones = [];
@@ -469,12 +494,6 @@ PlasmaComponents3.Page {
 
                         width: clocksList.width
                         height: units.gridUnit + units.smallSpacing
-
-                        MouseArea {
-                            anchors.fill: parent
-                            cursorShape: Qt.PointingHandCursor
-                            onClicked: plasmoid.configuration.lastSelectedTimezone = modelData
-                        }
 
                         RowLayout {
                             anchors.fill: parent

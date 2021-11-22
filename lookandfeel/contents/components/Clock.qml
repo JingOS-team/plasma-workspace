@@ -1,5 +1,6 @@
 /*
  *   Copyright 2016 David Edmundson <davidedmundson@kde.org>
+ *   Copyright 2021 Liu Bangguo <liubangguo@jingos.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -21,6 +22,7 @@ import QtQuick 2.8
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.5
 import org.kde.plasma.core 2.0
+import jingos.display 1.0
 
 ColumnLayout {
     readonly property bool softwareRendering: GraphicsInfo.api === GraphicsInfo.Software
@@ -30,7 +32,7 @@ ColumnLayout {
         color: ColorScope.textColor
         style: softwareRendering ? Text.Outline : Text.Normal
         styleColor: softwareRendering ? ColorScope.backgroundColor : "transparent" //no outline, doesn't matter
-        font.pointSize: 48
+        font.pointSize: JDisplay.sp(48)
         Layout.alignment: Qt.AlignHCenter
     }
     Label {
@@ -38,7 +40,7 @@ ColumnLayout {
         color: ColorScope.textColor
         style: softwareRendering ? Text.Outline : Text.Normal
         styleColor: softwareRendering ? ColorScope.backgroundColor : "transparent" //no outline, doesn't matter
-        font.pointSize: 24
+        font.pointSize: JDisplay.sp(24)
         Layout.alignment: Qt.AlignHCenter
     }
     DataSource {

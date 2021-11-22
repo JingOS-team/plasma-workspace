@@ -1,0 +1,43 @@
+# translation of plasma_applet_clock.po to Nepali
+# Nabin Gautam <nabin@mpp.org.np>, 2007.
+# Shyam Krishna Bal <shyamkrishna_bal@yahoo.com>, 2007.
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_clock\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2019-05-20 03:26+0200\n"
+"PO-Revision-Date: 2007-10-31 20:01+0545\n"
+"Last-Translator: Shyam Krishna Bal <shyamkrishna_bal@yahoo.com>\n"
+"Language-Team: Nepali <info@mpp.org.np>\n"
+"Language: ne\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n !=1\n"
+"\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#: contents/config/config.qml:25
+#, kde-format
+msgid "Appearance"
+msgstr ""
+
+#: contents/ui/configGeneral.qml:35
+#, fuzzy, kde-format
+#| msgid "Display the second hand"
+msgid "Show seconds hand"
+msgstr "दोस्रो हात प्रदर्शन गर्नुहोस्"
+
+#: contents/ui/configGeneral.qml:36
+#, fuzzy, kde-format
+#| msgid "Comment"
+msgid "General:"
+msgstr "टिप्पणी"
+
+#: contents/ui/configGeneral.qml:40
+#, fuzzy, kde-format
+#| msgid "Also display the time in text"
+msgid "Show time zone"
+msgstr "समयलाई पाठमा पनि देखाउनुहोस्"

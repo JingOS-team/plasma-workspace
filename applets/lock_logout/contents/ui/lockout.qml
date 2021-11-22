@@ -21,9 +21,9 @@ import QtQuick 2.0
 import QtQuick.Layouts 1.0
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents // For QueryDialog
 import org.kde.kquickcontrolsaddons 2.0
 import "data.js" as Data
+import org.kde.plasma.private.sessions 2.0
 
 Flow {
     id: lockout
@@ -72,10 +72,8 @@ Flow {
         }
     }
 
-    PlasmaCore.DataSource {
-        id: dataEngine
-        engine: "powermanagement"
-        connectedSources: ["PowerDevil", "Sleep States"]
+    SessionManagement {
+        id: session
     }
 
     Repeater {
@@ -88,7 +86,7 @@ Flow {
 
         delegate: Item {
             id: iconDelegate
-            visible: plasmoid.configuration["show_" + modelData.operation] && (!modelData.hasOwnProperty("requires") || dataEngine.data["Sleep States"][modelData.requires])
+            visible: plasmoid.configuration["show_" + modelData.configKey] && (!modelData.hasOwnProperty("requires") || session["can" + modelData.requires])
             width: items.itemWidth
             height: items.itemHeight
 
@@ -117,62 +115,12 @@ Flow {
         }
     }
 
-    Component {
-        id: hibernateDialogComponent
-        PlasmaComponents.QueryDialog {
-            titleIcon: "system-suspend-hibernate"
-            titleText: i18n("Hibernate")
-            message: i18n("Do you want to suspend to disk (hibernate)?")
-            location: plasmoid.location
-
-            acceptButtonText: i18n("Yes")
-            rejectButtonText: i18n("No")
-
-            onAccepted: performOperation("suspendToDisk")
-        }
-    }
-    property PlasmaComponents.QueryDialog hibernateDialog
-
-    Component {
-        id: sleepDialogComponent
-        PlasmaComponents.QueryDialog {
-            titleIcon: "system-suspend"
-            titleText: i18nc("Suspend to RAM", "Sleep")
-            message: i18n("Do you want to suspend to RAM (sleep)?")
-            location: plasmoid.location
-
-            acceptButtonText: i18n("Yes")
-            rejectButtonText: i18n("No")
-
-            onAccepted: performOperation("suspendToRam")
-        }
-    }
-    property PlasmaComponents.QueryDialog sleepDialog
-
     function clickHandler(what, button) {
-        if (what === "suspendToDisk") {
-            if (!hibernateDialog) {
-                hibernateDialog = hibernateDialogComponent.createObject(lockout);
-            }
-            hibernateDialog.visualParent = button
-            hibernateDialog.open();
-
-        } else if (what === "suspendToRam") {
-            if (!sleepDialog) {
-                sleepDialog = sleepDialogComponent.createObject(lockout);
-            }
-            sleepDialog.visualParent = button
-            sleepDialog.open();
-
-        } else {
-            performOperation(what);
-        }
+        performOperation(what);
     }
 
-    function performOperation(what) {
-        var service = dataEngine.serviceForSource("PowerDevil");
-        var operation = service.operationDescription(what);
-        service.startOperationCall(operation);
+    function performOperation(operation) {
+        session[operation]()
     }
 }
 

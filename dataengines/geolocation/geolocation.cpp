@@ -1,5 +1,6 @@
 /*
  *   Copyright (C) 2009 Petri Damsten <damu@iki.fi>
+ *   Copyright (C) 2021 Liu Bangguo <liubangguo@jingos.com>
  *
  *   This program is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU General Public License as
@@ -20,13 +21,18 @@
 #include <limits.h>
 
 #include <QDebug>
+#include <QDBusReply>
+#include <QDBusConnection>
+#include <QDBusPendingReply>
 #include <QNetworkConfigurationManager>
 #include <KServiceTypeTrader>
 #include <NetworkManagerQt/Manager>
+#include <QDebug>
+#include <QNetworkConfigurationManager>
 
 static const char SOURCE[] = "location";
 
-Geolocation::Geolocation(QObject* parent, const QVariantList& args)
+Geolocation::Geolocation(QObject *parent, const QVariantList &args)
     : Plasma::DataEngine(parent, args)
 {
     Q_UNUSED(args)
@@ -38,29 +44,38 @@ Geolocation::Geolocation(QObject* parent, const QVariantList& args)
     connect(&m_updateTimer, &QTimer::timeout, this, &Geolocation::actuallySetData);
     m_networkChangedTimer.setInterval(100);
     m_networkChangedTimer.setSingleShot(true);
+
+
+    //[liubangguo]listen location in-use property
+    QDBusConnection::systemBus().connect("",
+                                              QStringLiteral("/org/freedesktop/GeoClue2/Manager"),
+                                              QStringLiteral("org.freedesktop.DBus.Properties"),
+                                              QStringLiteral("PropertiesChanged"), this, SLOT(updateLocation()));
+    updateLocation();//update for init
+
     connect(&m_networkChangedTimer, &QTimer::timeout, this,
         [this] {
             updatePlugins(GeolocationProvider::NetworkConnected);
         }
     );
     init();
+
 }
 
 void Geolocation::init()
 {
-    //TODO: should this be delayed even further, e.g. when the source is requested?
+    // TODO: should this be delayed even further, e.g. when the source is requested?
     const KService::List offers = KServiceTypeTrader::self()->query(QStringLiteral("Plasma/GeolocationProvider"));
     QVariantList args;
 
-    Q_FOREACH (const KService::Ptr &service, offers) {
+    for (const KService::Ptr &service : offers) {
         QString error;
         GeolocationProvider *plugin = service->createInstance<GeolocationProvider>(nullptr, args, &error);
         if (plugin) {
             m_plugins << plugin;
             plugin->init(&m_data, &m_accuracy);
             connect(plugin, &GeolocationProvider::updated, this, &Geolocation::pluginUpdated);
-            connect(plugin, &GeolocationProvider::availabilityChanged,
-                    this, &Geolocation::pluginAvailabilityChanged);
+            connect(plugin, &GeolocationProvider::availabilityChanged, this, &Geolocation::pluginAvailabilityChanged);
         } else {
             qDebug() << "Failed to load GeolocationProvider:" << error;
         }
@@ -79,7 +94,7 @@ QStringList Geolocation::sources() const
 
 bool Geolocation::updateSourceEvent(const QString &name)
 {
-    //qDebug() << name;
+    // qDebug() << name;
     if (name == SOURCE) {
         return updatePlugins(GeolocationProvider::SourceEvent);
     }
@@ -91,7 +106,7 @@ bool Geolocation::updatePlugins(GeolocationProvider::UpdateTriggers triggers)
 {
     bool changed = false;
 
-    Q_FOREACH (GeolocationProvider *plugin, m_plugins) {
+    for (GeolocationProvider *plugin : qAsConst(m_plugins)) {
         changed = plugin->requestUpdate(triggers) || changed;
     }
 
@@ -130,7 +145,7 @@ void Geolocation::pluginAvailabilityChanged(GeolocationProvider *provider)
     provider->requestUpdate(GeolocationProvider::ForcedUpdate);
 
     bool changed = false;
-    Q_FOREACH (GeolocationProvider *plugin, m_plugins) {
+    for (GeolocationProvider *plugin : qAsConst(m_plugins)) {
         changed = plugin->populateSharedData() || changed;
     }
 
@@ -148,6 +163,19 @@ void Geolocation::actuallySetData()
 {
     setData(SOURCE, m_data);
 }
+
+void Geolocation::updateLocation()
+{
+    QDBusMessage message = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.GeoClue2"), QStringLiteral("/org/freedesktop/GeoClue2/Manager"), QStringLiteral("org.freedesktop.DBus.Properties"),
+                                                          QStringLiteral("Get"));
+    message.setArguments({QStringLiteral("org.freedesktop.GeoClue2.Manager"), QStringLiteral("InUse")});
+    QDBusReply<QDBusVariant> reply = QDBusConnection::systemBus().call(message);
+    if (reply.isValid()) {
+        bool locInUse = reply.value().variant().toBool();
+        setData("location","InUse", locInUse);
+    }
+}
+
 
 K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(geolocation, Geolocation, "plasma-dataengine-geolocation.json")
 

@@ -27,6 +27,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include <kquickaddons/quickviewsharedengine.h>
 #include <kworkspace.h>
+#include <sessionmanagement.h>
 
 namespace KWayland
 {
@@ -43,14 +44,10 @@ class KSMShutdownDlg : public KQuickAddons::QuickViewSharedEngine
     Q_OBJECT
 
 public:
-    KSMShutdownDlg( QWindow* parent, bool maysd, KWorkSpace::ShutdownType sdtype, KWayland::Client::PlasmaShell *plasmaShell = nullptr );
+    KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype, KWayland::Client::PlasmaShell *plasmaShell = nullptr);
 
     void init();
     bool result() const;
-
-    KWorkSpace::ShutdownType shutdownType() const {
-        return m_shutdownType;
-    }
 
 public Q_SLOTS:
     void accept();
@@ -72,10 +69,10 @@ protected:
 
 private:
     void setupWaylandIntegration();
-    KWorkSpace::ShutdownType m_shutdownType;
     QString m_bootOption;
     QStringList rebootOptions;
     bool m_result : 1;
+    SessionManagement m_session;
     KWayland::Client::PlasmaShell *m_waylandPlasmaShell;
     KWayland::Client::PlasmaShellSurface *m_shellSurface = nullptr;
 };

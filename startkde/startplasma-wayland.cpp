@@ -1,5 +1,6 @@
 /* This file is part of the KDE project
    Copyright (C) 2019 Aleix Pol Gonzalez <aleixpol@kde.org>
+   Copyright (C) 2021 Liu Bangguo <liubangguo@jingos.com>
 
    This library is free software; you can redistribute it and/or
    modify it under the terms of the GNU Library General Public
@@ -23,29 +24,19 @@
 #include <QDBusConnection>
 #include <QDBusInterface>
 
-int main(int argc, char** argv)
+int main(int argc, char **argv)
 {
     QCoreApplication app(argc, argv);
     createConfigDirectory();
     setupCursor(true);
-
-    {
-        KConfig fonts(QStringLiteral("kcmfonts"));
-        KConfigGroup group = fonts.group("General");
-        auto dpiSetting = group.readEntry("forceFontDPIWayland", 96);
-        auto dpi = dpiSetting == 0 ? 96 : dpiSetting;
-        qputenv("QT_WAYLAND_FORCE_DPI", QByteArray::number(dpi));
-    }
 
     // Query whether org.freedesktop.locale1 is available. If it is, try to
     // set XKB_DEFAULT_{MODEL,LAYOUT,VARIANT,OPTIONS} accordingly.
     {
         const QString locale1Service = QStringLiteral("org.freedesktop.locale1");
         const QString locale1Path = QStringLiteral("/org/freedesktop/locale1");
-        QDBusMessage message = QDBusMessage::createMethodCall(locale1Service,
-                                                        locale1Path,
-                                                        QStringLiteral("org.freedesktop.DBus.Properties"),
-                                                        QLatin1String("GetAll"));
+        QDBusMessage message =
+            QDBusMessage::createMethodCall(locale1Service, locale1Path, QStringLiteral("org.freedesktop.DBus.Properties"), QLatin1String("GetAll"));
         message << locale1Service;
         QDBusMessage resultMessage = QDBusConnection::systemBus().call(message);
         if (resultMessage.type() == QDBusMessage::ReplyMessage) {
@@ -55,16 +46,16 @@ int main(int argc, char** argv)
                 dbusArgument >> result;
             }
 
-            auto queryAndSet = [&](const QByteArray &var, const QString & value) {
+            auto queryAndSet = [&](const QByteArray &var, const QString &value) {
                 const auto r = result.value(value).toString();
                 if (!r.isEmpty())
                     qputenv(var, r.toUtf8());
             };
 
-            queryAndSet("X11MODEL", QStringLiteral("X11Model"));
-            queryAndSet("X11LAYOUT", QStringLiteral("X11Layout"));
-            queryAndSet("X11VARIANT", QStringLiteral("X11Variant"));
-            queryAndSet("X11OPTIONS", QStringLiteral("X11Options"));
+            queryAndSet("XKB_DEFAULT_MODEL", QStringLiteral("X11Model"));
+            queryAndSet("XKB_DEFAULT_LAYOUT", QStringLiteral("X11Layout"));
+            queryAndSet("XKB_DEFAULT_VARIANT", QStringLiteral("X11Variant"));
+            queryAndSet("XKB_DEFAULT_OPTIONS", QStringLiteral("X11Options"));
         } else {
             qWarning() << "not a reply org.freedesktop.locale1" << resultMessage;
         }
@@ -93,7 +84,7 @@ int main(int argc, char** argv)
             args << QString::fromLocal8Bit(argv[i]);
         }
     } else {
-        args = QStringList { QStringLiteral("--xwayland"), QStringLiteral("--exit-with-session=" CMAKE_INSTALL_FULL_LIBEXECDIR "/startplasma-waylandsession") };
+        args = QStringList{QStringLiteral("--xwayland"), QStringLiteral("--exit-with-session=" CMAKE_INSTALL_FULL_LIBEXECDIR "/startplasma-waylandsession")};
     }
     runSync(QStringLiteral(KWIN_WAYLAND_BIN_PATH), args);
 

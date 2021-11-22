@@ -1,0 +1,91 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_engine_mpris2\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:48+0100\n"
+"PO-Revision-Date: 2020-09-21 04:14+0000\n"
+"Last-Translator: transxx.py program <null@kde.org>\n"
+"Language-Team: KDE Test Language <kde-i18n-doc@kde.org>\n"
+"Language: x-test\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: multiplexedservice.cpp:81
+#, kde-format
+msgctxt "Name for global shortcuts category"
+msgid "Media Controller"
+msgstr "xxMedia Controllerxx"
+
+#: multiplexedservice.cpp:83
+#, kde-format
+msgid "Play/Pause media playback"
+msgstr "xxPlay/Pause media playbackxx"
+
+#: multiplexedservice.cpp:101
+#, kde-format
+msgid "Media playback next"
+msgstr "xxMedia playback nextxx"
+
+#: multiplexedservice.cpp:110
+#, kde-format
+msgid "Media playback previous"
+msgstr "xxMedia playback previousxx"
+
+#: multiplexedservice.cpp:119
+#, kde-format
+msgid "Stop media playback"
+msgstr "xxStop media playbackxx"
+
+#: multiplexedservice.cpp:128
+#, kde-format
+msgid "Pause media playback"
+msgstr "xxPause media playbackxx"
+
+#: multiplexedservice.cpp:137
+#, kde-format
+msgid "Play media playback"
+msgstr "xxPlay media playbackxx"
+
+#: multiplexedservice.cpp:146
+#, kde-format
+msgid "Media volume up"
+msgstr "xxMedia volume upxx"
+
+#: multiplexedservice.cpp:155
+#, kde-format
+msgid "Media volume down"
+msgstr "xxMedia volume downxx"
+
+#: playeractionjob.cpp:182
+#, kde-format
+msgid "The media player '%1' cannot perform the action '%2'."
+msgstr "xxThe media player '%1' cannot perform the action '%2'.xx"
+
+#: playeractionjob.cpp:184
+#, kde-format
+msgid "Attempting to perform the action '%1' failed with the message '%2'."
+msgstr ""
+"xxAttempting to perform the action '%1' failed with the message '%2'.xx"
+
+#: playeractionjob.cpp:186
+#, kde-format
+msgid "The argument '%1' for the action '%2' is missing or of the wrong type."
+msgstr ""
+"xxThe argument '%1' for the action '%2' is missing or of the wrong type.xx"
+
+#: playeractionjob.cpp:188
+#, kde-format
+msgid "The operation '%1' is unknown."
+msgstr "xxThe operation '%1' is unknown.xx"
+
+#: playeractionjob.cpp:190
+#, kde-format
+msgid "Unknown error."
+msgstr "xxUnknown error.xx"

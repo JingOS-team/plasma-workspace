@@ -52,7 +52,7 @@ ResizeHandle::ResizeHandle(QQuickItem *parent)
         }
     });
 
-    auto syncCursor = [this] () {
+    auto syncCursor = [this]() {
         switch (m_resizeCorner) {
         case Left:
         case Right:
@@ -86,6 +86,21 @@ bool ResizeHandle::resizeBlocked() const
     return m_resizeWidthBlocked || m_resizeHeightBlocked;
 }
 
+void ResizeHandle::setPressed(bool pressed)
+{
+    if (pressed == m_pressed) {
+        return;
+    }
+
+    m_pressed = pressed;
+    emit pressedChanged();
+}
+
+bool ResizeHandle::isPressed() const
+{
+    return m_pressed;
+}
+
 bool ResizeHandle::resizeLeft() const
 {
     return m_resizeCorner == Left || m_resizeCorner == TopLeft || m_resizeCorner == BottomLeft;
@@ -98,7 +113,7 @@ bool ResizeHandle::resizeTop() const
 
 bool ResizeHandle::resizeRight() const
 {
-    return m_resizeCorner == Right || m_resizeCorner == TopRight ||m_resizeCorner == BottomRight;
+    return m_resizeCorner == Right || m_resizeCorner == TopRight || m_resizeCorner == BottomRight;
 }
 
 bool ResizeHandle::resizeBottom() const
@@ -118,7 +133,6 @@ void ResizeHandle::setResizeBlocked(bool width, bool height)
     emit resizeBlockedChanged();
 }
 
-
 void ResizeHandle::mousePressEvent(QMouseEvent *event)
 {
     ItemContainer *itemContainer = m_configOverlay->itemContainer();
@@ -128,6 +142,7 @@ void ResizeHandle::mousePressEvent(QMouseEvent *event)
     m_mouseDownPosition = event->windowPos();
     m_mouseDownGeometry = QRectF(itemContainer->x(), itemContainer->y(), itemContainer->width(), itemContainer->height());
     setResizeBlocked(false, false);
+    setPressed(true);
     event->accept();
 }
 
@@ -146,14 +161,14 @@ void ResizeHandle::mouseMoveEvent(QMouseEvent *event)
 
     layout->releaseSpace(itemContainer);
     const QPointF difference = m_mouseDownPosition - event->windowPos();
-    
+
     QSizeF minimumSize = QSize(layout->minimumItemWidth(), layout->minimumItemHeight());
     if (itemContainer->layoutAttached()) {
         minimumSize.setWidth(qMax(minimumSize.width(), itemContainer->layoutAttached()->property("minimumWidth").toReal()));
         minimumSize.setHeight(qMax(minimumSize.height(), itemContainer->layoutAttached()->property("minimumHeight").toReal()));
     }
 
-    //Now make minimumSize an integer number of cells
+    // Now make minimumSize an integer number of cells
     minimumSize.setWidth(ceil(minimumSize.width() / layout->cellWidth()) * layout->cellWidth());
     minimumSize.setHeight(ceil(minimumSize.height() / layout->cellWidth()) * layout->cellHeight());
 
@@ -190,8 +205,7 @@ void ResizeHandle::mouseMoveEvent(QMouseEvent *event)
         if (layout->isRectAvailable(m_mouseDownGeometry.x(), y - 1, m_mouseDownGeometry.width(), m_mouseDownGeometry.height())) {
             itemContainer->setY(y);
             itemContainer->setHeight(height);
-            setResizeBlocked(m_resizeWidthBlocked,
-                             m_mouseDownGeometry.height() + difference.y() < minimumSize.height());
+            setResizeBlocked(m_resizeWidthBlocked, m_mouseDownGeometry.height() + difference.y() < minimumSize.height());
         } else {
             setResizeBlocked(m_resizeWidthBlocked, true);
         }
@@ -200,8 +214,7 @@ void ResizeHandle::mouseMoveEvent(QMouseEvent *event)
 
         if (layout->isRectAvailable(m_mouseDownGeometry.x(), m_mouseDownGeometry.y(), m_mouseDownGeometry.width(), height)) {
             itemContainer->setHeight(qMax(height, minimumSize.height()));
-            setResizeBlocked(m_resizeWidthBlocked,
-                             m_mouseDownGeometry.height() - difference.y() < minimumSize.height());
+            setResizeBlocked(m_resizeWidthBlocked, m_mouseDownGeometry.height() - difference.y() < minimumSize.height());
         } else {
             setResizeBlocked(m_resizeWidthBlocked, true);
         }
@@ -212,6 +225,7 @@ void ResizeHandle::mouseMoveEvent(QMouseEvent *event)
 
 void ResizeHandle::mouseReleaseEvent(QMouseEvent *event)
 {
+    setPressed(false);
     if (!m_configOverlay || !m_configOverlay->itemContainer()) {
         return;
     }
@@ -231,13 +245,18 @@ void ResizeHandle::mouseReleaseEvent(QMouseEvent *event)
     emit resizeBlockedChanged();
 }
 
+void ResizeHandle::mouseUngrabEvent()
+{
+    setPressed(false);
+}
+
 void ResizeHandle::setConfigOverlay(ConfigOverlay *handle)
 {
     if (handle == m_configOverlay) {
         return;
     }
 
-    m_configOverlay = handle;    
+    m_configOverlay = handle;
 }
 
 #include "moc_resizehandle.cpp"

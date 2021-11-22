@@ -28,7 +28,6 @@
 
 namespace NotificationManager
 {
-
 /**
  * @short Information about the notification server
  *
@@ -57,7 +56,7 @@ public:
     enum class Status {
         Unknown = -1,
         NotRunning,
-        Running
+        Running,
     };
     Q_ENUM(Status)
 
@@ -77,7 +76,6 @@ Q_SIGNALS:
 private:
     class Private;
     QScopedPointer<Private> d;
-
 };
 
 } // namespace NotificationManager

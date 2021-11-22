@@ -24,6 +24,7 @@ import QtGraphicalEffects 1.0
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
+import org.kde.plasma.workspace.components 2.0 as PW
 
 import org.kde.plasma.private.sessions 2.0
 import "../components"
@@ -49,10 +50,10 @@ PlasmaCore.ColorScope {
                 root.clearPassword();
             }
         }
-        function onMessage() {
+        function onMessage(msg) {
             root.notification = msg;
         }
-        function onError() {
+        function onError(err) {
             root.notification = err;
         }
     }
@@ -176,14 +177,6 @@ PlasmaCore.ColorScope {
             mainStack: mainStack
             footer: footer
             clock: clock
-
-            Rectangle {
-                anchors.fill: parent
-                color: "red"
-                opacity: 0.5
-                z:255
-
-            }
         }
 
         DropShadow {
@@ -234,6 +227,9 @@ PlasmaCore.ColorScope {
             }
             height: lockScreenRoot.height + units.gridUnit * 3
             focus: true //StackView is an implicit focus scope, so we need to give this focus so the item inside will have it
+
+            // this isn't implicit, otherwise items still get processed for the scenegraph
+            visible: opacity > 0
 
             initialItem: MainBlock {
                 id: mainBlock
@@ -332,6 +328,9 @@ PlasmaCore.ColorScope {
             onKeyboardActiveChanged: {
                 if (keyboardActive) {
                     state = "visible";
+                    // Otherwise the password field loses focus and virtual keyboard
+                    // keystrokes get eaten
+                    mainBlock.mainPasswordBox.forceActiveFocus();
                 } else {
                     state = "hidden";
                 }
@@ -347,7 +346,6 @@ PlasmaCore.ColorScope {
                     PropertyChanges {
                         target: inputPanel
                         y: lockScreenRoot.height - inputPanel.height
-                        opacity: 1
                     }
                 },
                 State {
@@ -359,7 +357,6 @@ PlasmaCore.ColorScope {
                     PropertyChanges {
                         target: inputPanel
                         y: lockScreenRoot.height - lockScreenRoot.height/4
-                        opacity: 0
                     }
                 }
             ]
@@ -384,11 +381,6 @@ PlasmaCore.ColorScope {
                             NumberAnimation {
                                 target: inputPanel
                                 property: "y"
-                                duration: units.longDuration
-                                easing.type: Easing.OutQuad
-                            }
-                            OpacityAnimator {
-                                target: inputPanel
                                 duration: units.longDuration
                                 easing.type: Easing.OutQuad
                             }
@@ -525,7 +517,7 @@ PlasmaCore.ColorScope {
                 visible: inputPanel.status == Loader.Ready
             }
 
-            KeyboardLayoutButton {
+            PW.KeyboardLayoutButton {
             }
 
             Item {

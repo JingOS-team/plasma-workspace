@@ -1,3 +1,10 @@
+/*
+ * Copyright (C) 2021 Beijing Jingling Information System Technology Co., Ltd. All rights reserved.
+ *
+ * Authors:
+ * Liu Bangguo <liubangguo@jingos.com>
+ *
+ */
 import QtQuick 2.12
 import QtGraphicalEffects 1.12
 import QtQuick.Layouts 1.12
@@ -6,7 +13,7 @@ import QtQuick.Controls 2.5
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.core 2.0
 import org.kde.plasma.private.digitalclock 1.0 as DC
-
+import jingos.display 1.0
 Item {
     id: root
 
@@ -21,7 +28,18 @@ Item {
         exitAnim.start()
     }
 
-    onCloseClicked: startExit()
+    function formatTimeString(formatTime) {
+        var timeStr = Qt.formatTime(formatTime, timezoneProxy.isSystem24HourFormat ? "h:mm" : "h:mm AP");
+        if (timeStr.search("上午") != -1 || timeStr.search("下午") != -1) {
+            var arr = timeStr.split(" ")
+            timeStr = arr[1] + " " + arr[0]
+        }
+        return timeStr;
+    }
+
+    onCloseClicked: {
+        instantiator.deleteAll()
+    }
 
     property alias hoverEnabled: control.hoverEnabled
     property alias hovered: control.hovered
@@ -34,6 +52,7 @@ Item {
 
     Control {
         id: control
+
         implicitWidth: qStyle.width
         implicitHeight: qStyle.minHeight
         width: implicitWidth
@@ -41,37 +60,53 @@ Item {
         hoverEnabled: true
         x: 0
 
+        onHoveredChanged: {
+            if (hovered) {
+                instantiator.hoverAll(true)
+            } else {
+                instantiator.hoverAll(false)
+            }
+        }
+
         NumberAnimation {
             id: enterAnim
+
             target: control
             running: true
             property: "x"
             from: -control.width - 16
             to: 0
             duration: qStyle.animationTime
-            easing.type: Easing.InQuad
+            easing.type: Easing.OutSine
+
+            onFinished: {
+                background.layer.enabled = true
+            }
         }
 
         NumberAnimation {
             id: exitAnim
+
             target: control
             running: false
             property: "x"
-            from: 0
+            from: control.x
             to: -control.width - 16
             duration: qStyle.animationTime
-            easing.type: Easing.InQuad
+            easing.type: Easing.OutSine
             onFinished: root.exitFinished()
         }
 
         background: Rectangle {
+            id: background
+
             radius: qStyle.backgroundRadius
-            color: qStyle.backgroundColor
+            color: schemeSource.data["weather"]["isDarkScheme"] ? qStyle.backgroundColorBlack : qStyle.backgroundColor
             layer.enabled: qStyle.backgroundShadowEnabled
             layer.effect: DropShadow {
                 radius: qStyle.backgroundShadowRadius
                 samples: qStyle.backgroundShadowSamples
-                color: qStyle.backgroundShadowColor
+                color: schemeSource.data["weather"]["isDarkScheme"] ? "#000000" : qStyle.backgroundShadowColor
                 transparentBorder: qStyle.backgroundShadowBorder
                 horizontalOffset: qStyle.backgroundShadowHOffset
                 verticalOffset: qStyle.backgroundShadowVOffset
@@ -81,7 +116,8 @@ Item {
         padding: qStyle.padding
         contentItem: GridLayout {
             id: contentLayout
-            columnSpacing: 0
+
+            columnSpacing: qStyle.headerLeftMargin
             rowSpacing: qStyle.space
             width: control.availableWidth
             onImplicitHeightChanged: {
@@ -90,16 +126,18 @@ Item {
             }
             columns: 3
 
-            Item {
-                width: qStyle.iconSize
-                height: qStyle.iconSize
-                PlasmaCore.IconItem {
-                    id: notifyHeadIcon
-                    width: qStyle.iconSize
-                    height: qStyle.iconSize
-                    source: "start-here-kde-plasma"
-                    usesPlasmaTheme: false
-                }
+            PlasmaCore.IconItem {
+                id: notifyHeadIcon
+
+                Layout.maximumWidth: qStyle.iconSize
+                Layout.minimumWidth: qStyle.iconSize
+                Layout.maximumHeight: qStyle.iconSize
+                Layout.minimumHeight: qStyle.iconSize
+                Layout.fillWidth: true
+
+                source: "start-here-kde-plasma"
+                visible: source !== ""
+                usesPlasmaTheme: false
             }
 
             Label {
@@ -107,27 +145,53 @@ Item {
 
                 text: "Mail"
                 Layout.fillWidth: true
-                font: qStyle.headerFont
-                color: qStyle.headerColor
-                Layout.leftMargin: qStyle.headerLeftMargin
+                Layout.minimumWidth: contentWidth
+                Layout.minimumHeight: contentHeight
+                font.pixelSize: JDisplay.sp(11)
+                color: schemeSource.data["weather"]["isDarkScheme"] ? qStyle.headerColorBlack : qStyle.headerColor
 
                 elide: Text.ElideRight
+
+                Layout.columnSpan: {
+                    if (notifyHeadIcon.visible) {
+                        return 1
+                    } else {
+                        return 2
+                    }
+                }
             }
 
             Text {
                 id: notifyTime
 
+                Layout.preferredWidth: contentWidth
                 Layout.preferredHeight: qStyle.actionIconSize
+                Layout.fillWidth: false
+
                 visible: !control.hovered
+                Layout.alignment: Qt.AlignRight
                 verticalAlignment: Text.AlignVCenter
                 text: ""
-                font: qStyle.timeFont
-                color: qStyle.timeColor
+                font.pixelSize: JDisplay.sp(10)
+                color: schemeSource.data["weather"]["isDarkScheme"] ? qStyle.timeColorBlack : qStyle.timeColor
+            }
+
+            PlasmaCore.DataSource {
+                id: schemeSource
+
+                engine: "weather"
+                connectedSources: ["weather"]
+                onSourceAdded: {
+                    if (source === "weather") {
+                        disconnectSource(source);
+                        connectSource(source);
+                    }
+                }
             }
 
             Image {
                 id: closeAction
-                
+
                 Layout.preferredWidth: qStyle.actionIconSize
                 Layout.preferredHeight: qStyle.actionIconSize
 
@@ -135,7 +199,9 @@ Item {
                 source: "./ic_close.svg"
 
                 MouseArea {
-                    anchors.fill: parent
+                    width: parent.width * 2
+                    height: parent.height * 2
+                    anchors.centerIn: parent
                     onClicked: root.closeClicked()
                 }
             }
@@ -148,56 +214,61 @@ Item {
                 Layout.columnSpan: 3
 
                 text: ""
-                visible: text && text !== ""
-                wrapMode: Text.Wrap
-                font: qStyle.summaryFont
-                color: qStyle.summaryColor
+                wrapMode: Text.WrapAnywhere
+                font.pixelSize: JDisplay.sp(11)
+                font.bold: true
+                color: schemeSource.data["weather"]["isDarkScheme"] ? qStyle.summaryColorBlack: qStyle.summaryColor
             }
 
             Label {
                 id: notifyText
 
                 Layout.preferredWidth: parent.width
-                Layout.preferredHeight: contentHeight
+                Layout.preferredHeight: implicitHeight
                 Layout.columnSpan: 3
+                height: implicitHeight
+                width: parent.width
+                maximumLineCount: 4
 
                 text: ""
-                wrapMode: Text.Wrap
-                visible: text && text !== ""
-                font: qStyle.contentFont
-                color: qStyle.contentColor
+                font.pixelSize:  JDisplay.sp(11)
+                color: schemeSource.data["weather"]["isDarkScheme"] ? qStyle.contentColorBlack : qStyle.contentColor
+                wrapMode: Text.WrapAnywhere
+                elide: Text.ElideRight
+            }
+        }
+        MouseArea {
+            id: dragMouseArea
+
+            anchors.fill: parent
+            drag.target: parent
+            drag.axis: Drag.XAxis
+            drag.minimumX: -parent.width
+            drag.maximumX: 0
+            propagateComposedEvents: true
+            hoverEnabled: true
+
+            onReleased: {
+                instantiator.hoverAll(false)
+                if (control.x < 0) {
+                    root.closeClicked()
+                }
+            }
+            onPressed: {
+                instantiator.hoverAll(true)
             }
         }
     }
 
     DataSource {
         id: timeSource
+
         engine: "time"
         connectedSources: ["Local"]
         interval: 1000
     }
 
-    DC.TimeZoneFilterProxy{
+    DC.TimeZoneFilterProxy {
         id: timezoneProxy
-    }
-
-    function getLocalTimeString(formatTime){
-        var timeStr = String(formatTime);
-        
-        var isChinaLocal = (String(new Date()).indexOf("GMT+0800") != -1)
-        timeStr = Qt.formatTime(formatTime, timezoneProxy.isSystem24HourFormat ? "h:mm:ss" : "h:mm:ss AP");
-        if(isChinaLocal) {
-            if(timeStr.search("AM") != -1)
-                timeStr = timeStr.replace("AM","上午");
-            if(timeStr.search("PM") != -1)
-                timeStr = timeStr.replace("PM","下午");
-        }
-        else {
-            if(timeStr.search("上午") != -1)
-                timeStr = timeStr.replace("上午","AM");
-            if(timeStr.search("下午") != -1)
-                timeStr = timeStr.replace("下午","PM");
-        }
-        return timeStr;
     }
 }

@@ -1,0 +1,97 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Xuetian Weng <xweng@cs.stonybrook.edu>, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdeorg\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2021-01-28 05:06\n"
+"Last-Translator: \n"
+"Language-Team: Chinese Simplified\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: kdeorg\n"
+"X-Crowdin-Project-ID: 269464\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /kf5-trunk/messages/plasma-workspace/"
+"plasma_package_plasmashell.pot\n"
+"X-Crowdin-File-ID: 4618\n"
+
+#: shellpackage.cpp:39 shellpackage.cpp:40
+#, kde-format
+msgid "Applets furniture"
+msgstr "部件家具"
+
+#: shellpackage.cpp:41
+#, kde-format
+msgid "Explorer UI for adding widgets"
+msgstr "添加部件的浏览器界面"
+
+#: shellpackage.cpp:42
+#, kde-format
+msgid "User interface for the views that will show containments"
+msgstr "显示容器视图的界面"
+
+#: shellpackage.cpp:50
+#, kde-format
+msgid "Default layout file"
+msgstr "默认布局文件"
+
+#: shellpackage.cpp:51
+#, kde-format
+msgid "Default plugins for containments, containmentActions, etc."
+msgstr "容器，容器动作等的默认插件"
+
+#: shellpackage.cpp:56
+#, kde-format
+msgid "Error message shown when an applet fails to load"
+msgstr "部件加载错误是的错误信息"
+
+#: shellpackage.cpp:57
+#, kde-format
+msgid "QML component that shows an applet in a popup"
+msgstr "部件显示在一个弹出窗口中的 QML 组件"
+
+#: shellpackage.cpp:61
+#, kde-format
+msgid ""
+"Compact representation of an applet when collapsed in a popup, for instance "
+"as an icon. Applets can override this component."
+msgstr "部件折叠为于弹出窗口的紧凑模式，例如一个图标。部件可以覆盖这个组件。"
+
+#: shellpackage.cpp:66
+#, kde-format
+msgid "QML component for the configuration dialog for applets"
+msgstr "部件配置对话框的 QML 组件"
+
+#: shellpackage.cpp:69
+#, kde-format
+msgid "QML component for the configuration dialog for containments"
+msgstr "容器配置对话框的 QML 组件"
+
+#: shellpackage.cpp:70
+#, kde-format
+msgid "Panel configuration UI"
+msgstr "面板配置界面"
+
+#: shellpackage.cpp:73
+#, kde-format
+msgid "QML component for choosing an alternate applet"
+msgstr "选择替代部件的 QMl 组件"
+
+#: shellpackage.cpp:76
+#, kde-format
+msgid "Widgets explorer UI"
+msgstr "部件浏览器界面"
+
+#: shellpackage.cpp:80
+#, kde-format
+msgid ""
+"A UI for writing, loading and running desktop scripts in the current live "
+"session"
+msgstr "在当前活动会话中编写，加载，运行桌面脚本的界面"

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<descriptor>
+
+<version>
+    5.2.0
+</version>
+
+<headers>
+    /usr/include/kworkspace5/
+    /usr/include/plasma/geolocation/
+    /usr/include/plasma/weather/
+    /usr/include/taskmanager/
+</headers>
+
+<libs>
+    /usr/lib/@@DEB_HOST_MULTIARCH@@/libkworkspace5.so
+    /usr/lib/@@DEB_HOST_MULTIARCH@@/libplasma-geolocation-interface.so
+    /usr/lib/@@DEB_HOST_MULTIARCH@@/libtaskmanager.so
+    /usr/lib/@@DEB_HOST_MULTIARCH@@/libweather_ion.so
+</libs>
+
+<gcc_options>
+    -fPIC
+    -std=c++11
+</gcc_options>
+
+</descriptor>

@@ -7,6 +7,7 @@ if(KUserFeedback_FOUND)
 endif()
 
 add_subdirectory(style)
+add_subdirectory(fonts)
 add_subdirectory(krdb)
 add_subdirectory(lookandfeel)
 add_subdirectory(colors)

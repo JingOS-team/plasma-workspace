@@ -26,7 +26,8 @@
 #include <KDirWatch>
 #include <KLocalizedString>
 
-SystemModel::SystemModel(QObject *parent) : AbstractModel(parent)
+SystemModel::SystemModel(QObject *parent)
+    : AbstractModel(parent)
 {
     m_favoritesModel = new SimpleFavoritesModel(this);
 
@@ -107,9 +108,8 @@ void SystemModel::populate()
 
         if (entry->isValid()) {
             m_entries << entry;
-            QObject::connect(entry, &SystemEntry::isValidChanged, this,
-                &AbstractModel::refresh, Qt::UniqueConnection);
         }
+        QObject::connect(entry, &SystemEntry::isValidChanged, this, &AbstractModel::refresh, Qt::UniqueConnection);
     };
 
     addIfValid(SystemEntry::LockSession);

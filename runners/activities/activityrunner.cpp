@@ -24,22 +24,21 @@
 
 K_EXPORT_PLASMA_RUNNER_WITH_JSON(ActivityRunner, "plasma-runner-activityrunner.json")
 
-ActivityRunner::ActivityRunner(QObject *parent, const QVariantList &args)
-    : Plasma::AbstractRunner(parent, args),
-      m_activities(new KActivities::Controller(this)),
-      m_consumer(new KActivities::Consumer(this)),
-      m_keywordi18n(i18nc("KRunner keyword", "activity")),
-      m_keyword(QStringLiteral("activity"))
+ActivityRunner::ActivityRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
+    : Plasma::AbstractRunner(parent, metaData, args)
+    , m_activities(new KActivities::Controller(this))
+    , m_consumer(new KActivities::Consumer(this))
+    , m_keywordi18n(i18nc("KRunner keyword", "activity"))
+    , m_keyword(QStringLiteral("activity"))
 {
     setObjectName(QStringLiteral("Activities"));
-    setIgnoredTypes(Plasma::RunnerContext::Directory | Plasma::RunnerContext::File |
-                    Plasma::RunnerContext::NetworkLocation | Plasma::RunnerContext::Help);
-    setDefaultSyntax(Plasma::RunnerSyntax(m_keywordi18n, i18n("Lists all activities currently available to be run.")));
+    addSyntax(Plasma::RunnerSyntax(m_keywordi18n, i18n("Lists all activities currently available to be run.")));
     addSyntax(Plasma::RunnerSyntax(i18nc("KRunner keyword", "activity :q:"), i18n("Switches to activity :q:.")));
 
     qRegisterMetaType<KActivities::Consumer::ServiceStatus>();
     connect(m_consumer, &KActivities::Consumer::serviceStatusChanged, this, &ActivityRunner::serviceStatusChanged);
     serviceStatusChanged(m_activities->serviceStatus());
+    setTriggerWords({m_keyword, m_keywordi18n});
 }
 
 void ActivityRunner::serviceStatusChanged(KActivities::Consumer::ServiceStatus status)
@@ -127,8 +126,7 @@ void ActivityRunner::addMatch(const KActivities::Info &activity, QList<Plasma::Q
     match.setType(Plasma::QueryMatch::ExactMatch);
     match.setIconName(activity.icon().isEmpty() ? QStringLiteral("activities") : activity.icon());
     match.setText(i18n("Switch to \"%1\"", activity.name()));
-    match.setRelevance(0.7 + ((activity.state() == KActivities::Info::Running ||
-                               activity.state() == KActivities::Info::Starting) ? 0.1 : 0));
+    match.setRelevance(0.7 + ((activity.state() == KActivities::Info::Running || activity.state() == KActivities::Info::Starting) ? 0.1 : 0));
     matches << match;
 }
 

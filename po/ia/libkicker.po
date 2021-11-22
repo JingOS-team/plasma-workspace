@@ -1,0 +1,318 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# G.Sora <g.sora@tiscali.it>, 2014, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:48+0100\n"
+"PO-Revision-Date: 2020-11-09 22:31+0100\n"
+"Last-Translator: Giovanni Sora <g.sora@tiscali.it>\n"
+"Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
+"Language: ia\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 2.0\n"
+
+#: plugin/actionlist.cpp:96
+#, kde-format
+msgid "Open with:"
+msgstr "Aperi con:"
+
+#: plugin/actionlist.cpp:109
+#, kde-format
+msgid "Properties"
+msgstr "Proprietates"
+
+#: plugin/actionlist.cpp:156
+#, kde-format
+msgid "Add to Desktop"
+msgstr "Adde a Scriptorio"
+
+#: plugin/actionlist.cpp:161
+#, kde-format
+msgid "Add to Panel (Widget)"
+msgstr "Adde a Pannello (widget)"
+
+#: plugin/actionlist.cpp:166
+#, kde-format
+msgid "Pin to Task Manager"
+msgstr "Attacha a Gerente de carga"
+
+#: plugin/actionlist.cpp:316 plugin/rootmodel.cpp:444
+#, kde-format
+msgid "Recent Files"
+msgstr "Files recente"
+
+#: plugin/actionlist.cpp:326
+#, kde-format
+msgid "Forget Recent Files"
+msgstr "Oblida files recente"
+
+#: plugin/actionlist.cpp:389
+#, kde-format
+msgid "Edit Application..."
+msgstr "Modifica application..."
+
+#: plugin/actionlist.cpp:433
+#, kde-format
+msgctxt "@action opens a software center with the application"
+msgid "Uninstall or Manage Add-Ons..."
+msgstr "De-installa o gere Add_Ons.."
+
+#: plugin/appentry.cpp:198
+#, kde-format
+msgid "Hide Application"
+msgstr "Cela application"
+
+#: plugin/appentry.cpp:262
+#, kde-format
+msgctxt "App name (Generic name)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: plugin/appentry.cpp:264
+#, kde-format
+msgctxt "Generic name (App name)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: plugin/appsmodel.cpp:44 plugin/appsmodel.cpp:68 plugin/computermodel.cpp:111
+#: plugin/computermodel.cpp:239 plugin/recentusagemodel.cpp:167
+#: plugin/recentusagemodel.cpp:224
+#, kde-format
+msgid "Applications"
+msgstr "Applicationes"
+
+#: plugin/appsmodel.cpp:163
+#, kde-format
+msgid "Unhide Applications in this Submenu"
+msgstr "Discoperi Applicationes in iste Submenu"
+
+#: plugin/appsmodel.cpp:172
+#, kde-format
+msgid "Unhide Applications in '%1'"
+msgstr "Discoperi Applicationes in '%1'"
+
+#: plugin/computermodel.cpp:105
+#, kde-format
+msgid "Show KRunner"
+msgstr "Monstra KRunner"
+
+#: plugin/computermodel.cpp:109
+#, kde-format
+msgid "Search, calculate, or run a command"
+msgstr "cerca, calcula, o executa un commando"
+
+#: plugin/computermodel.cpp:162
+#, kde-format
+msgid "Computer"
+msgstr "Computator"
+
+#: plugin/contactentry.cpp:120 plugin/recentcontactsmodel.cpp:95
+#, kde-format
+msgid "Show Contact Information..."
+msgstr "Monstra Information de contacto..."
+
+#. i18n.
+#: plugin/kastatsfavoritesmodel.cpp:480 plugin/rootmodel.cpp:431
+#: plugin/simplefavoritesmodel.cpp:44
+#, kde-format
+msgid "Favorites"
+msgstr "Favoritos"
+
+#: plugin/recentcontactsmodel.cpp:53
+#, kde-format
+msgid "Contacts"
+msgstr "Contactos"
+
+#: plugin/recentcontactsmodel.cpp:86
+#, kde-format
+msgid "Forget Contact"
+msgstr "Oblida contacto"
+
+#: plugin/recentcontactsmodel.cpp:90 plugin/recentcontactsmodel.cpp:166
+#, kde-format
+msgid "Forget All Contacts"
+msgstr "Oblida omne contactos"
+
+#: plugin/recentusagemodel.cpp:165
+#, kde-format
+msgid "Recently Used"
+msgstr "Recentemente usate"
+
+#: plugin/recentusagemodel.cpp:170 plugin/recentusagemodel.cpp:298
+#, kde-format
+msgid "Files"
+msgstr "Files"
+
+#: plugin/recentusagemodel.cpp:242
+#, kde-format
+msgid "Forget Application"
+msgstr "Oblida application"
+
+#: plugin/recentusagemodel.cpp:332
+#, kde-format
+msgid "Open Containing Folder"
+msgstr "Aperi dossier continente"
+
+#: plugin/recentusagemodel.cpp:335
+#, kde-format
+msgid "Forget File"
+msgstr "Oblida file"
+
+#: plugin/recentusagemodel.cpp:464
+#, kde-format
+msgid "Forget All"
+msgstr "Oblida omnes"
+
+#: plugin/recentusagemodel.cpp:466
+#, kde-format
+msgid "Forget All Applications"
+msgstr "Oblida omne applicationes"
+
+#: plugin/recentusagemodel.cpp:469
+#, kde-format
+msgid "Forget All Files"
+msgstr "Oblida omne files"
+
+#: plugin/rootmodel.cpp:108
+#, kde-format
+msgid "Hide %1"
+msgstr "Cela %1"
+
+#: plugin/rootmodel.cpp:413
+#, kde-format
+msgid "All Applications"
+msgstr "Omne Applicationes"
+
+#: plugin/rootmodel.cpp:425
+#, kde-format
+msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
+msgstr "Isto non debere esser visibile! Usa KICKER_FAVORITES_MODEL"
+
+#: plugin/rootmodel.cpp:437
+#, kde-format
+msgid "Recent Contacts"
+msgstr "Contactos recente"
+
+#: plugin/rootmodel.cpp:444
+#, kde-format
+msgid "Often Used Files"
+msgstr "Files frequentemente usate"
+
+#: plugin/rootmodel.cpp:453
+#, kde-format
+msgid "Recent Applications"
+msgstr "Netta Applicationes recente"
+
+#: plugin/rootmodel.cpp:453
+#, kde-format
+msgid "Often Used Applications"
+msgstr "Applicationes frequentemente usate"
+
+#: plugin/rootmodel.cpp:467
+#, kde-format
+msgid "Power / Session"
+msgstr "Potentia/Session"
+
+#: plugin/runnermodel.cpp:239
+#, kde-format
+msgid "Search results"
+msgstr "Resultatos de cerca"
+
+#: plugin/systementry.cpp:207
+#, kde-format
+msgid "Lock"
+msgstr "Bloca"
+
+#: plugin/systementry.cpp:210
+#, kde-format
+msgid "Log Out"
+msgstr "Claude session"
+
+#: plugin/systementry.cpp:213 plugin/systementry.cpp:281
+#, kde-format
+msgid "Save Session"
+msgstr "Salveguarda session"
+
+#: plugin/systementry.cpp:216
+#, kde-format
+msgid "Switch User"
+msgstr "Commuta Usator"
+
+#: plugin/systementry.cpp:219
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Dormi"
+
+#: plugin/systementry.cpp:222
+#, kde-format
+msgid "Hibernate"
+msgstr "Hiberna"
+
+#: plugin/systementry.cpp:225
+#, kde-format
+msgid "Restart"
+msgstr "Re-Initia"
+
+#: plugin/systementry.cpp:228
+#, kde-format
+msgid "Shut Down"
+msgstr "Stoppa (shut down)"
+
+#: plugin/systementry.cpp:241 plugin/systementry.cpp:244
+#: plugin/systementry.cpp:247 plugin/systementry.cpp:250
+#, kde-format
+msgid "Session"
+msgstr "Session"
+
+#: plugin/systementry.cpp:253 plugin/systementry.cpp:256
+#: plugin/systementry.cpp:259 plugin/systementry.cpp:262
+#, kde-format
+msgid "System"
+msgstr "Systema"
+
+#: plugin/systementry.cpp:275
+#, kde-format
+msgid "Lock screen"
+msgstr "Bloca schermo"
+
+#: plugin/systementry.cpp:278
+#, kde-format
+msgid "End session"
+msgstr "Fini session"
+
+#: plugin/systementry.cpp:284
+#, kde-format
+msgid "Start a parallel session as a different user"
+msgstr "Initia un session parallel como differente usator"
+
+#: plugin/systementry.cpp:287
+#, kde-format
+msgid "Suspend to RAM"
+msgstr "Suspende a RAM"
+
+#: plugin/systementry.cpp:290
+#, kde-format
+msgid "Suspend to disk"
+msgstr "Suspende a Disco"
+
+#: plugin/systementry.cpp:293
+#, kde-format
+msgid "Restart computer"
+msgstr "Re-Initia computator"
+
+#: plugin/systementry.cpp:296
+#, kde-format
+msgid "Turn off computer"
+msgstr "Stoppa Computator "
+
+#: plugin/systemmodel.cpp:44
+#, kde-format
+msgid "System actions"
+msgstr "Actiones de systema"

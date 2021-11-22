@@ -21,12 +21,11 @@
 
 #pragma once
 
-#include <QScopedPointer>
 #include <QPointer>
 #include <QQmlListReference>
+#include <QScopedPointer>
 
 #include <KSharedConfig>
-
 
 #include <KQuickAddons/ManagedConfigModule>
 
@@ -59,7 +58,7 @@ public:
     enum SchemeFilter {
         AllSchemes,
         LightSchemes,
-        DarkSchemes
+        DarkSchemes,
     };
     Q_ENUM(SchemeFilter)
 
@@ -108,5 +107,4 @@ private:
 
     QScopedPointer<QTemporaryFile> m_tempInstallFile;
     QPointer<KIO::FileCopyJob> m_tempCopyJob;
-
 };

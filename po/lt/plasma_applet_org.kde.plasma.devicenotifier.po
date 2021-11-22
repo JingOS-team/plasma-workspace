@@ -1,0 +1,126 @@
+# translation of plasma_applet_devicenotifier.po to Lithuanian
+# This file is distributed under the same license as the plasma_applet_devicenotifier package.
+# Gintautas Miselis <gintautas@miselis.lt>, 2008.
+# Donatas G. <dgvirtual@akl.lt>, 2010.
+# Tomas Straupis <tomasstraupis@gmail.com>, 2011.
+# Liudas Ališauskas <liudas.alisauskas@gmail.com>, 2012.
+# liudas@aksioma.lt <liudas@aksioma.lt>, 2014.
+# Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_devicenotifier\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-12-21 02:42+0100\n"
+"PO-Revision-Date: 2020-12-16 20:38+0200\n"
+"Last-Translator: Moo\n"
+"Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
+"%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
+"X-Generator: Poedit 2.4.1\n"
+
+#: package/contents/ui/DeviceItem.qml:171
+#, kde-format
+msgctxt "@info:status Free disk space"
+msgid "%1 free of %2"
+msgstr "%1 laisva iš %2"
+
+#: package/contents/ui/DeviceItem.qml:175
+#, kde-format
+msgctxt ""
+"Accessing is a less technical word for Mounting; translation should be short "
+"and mean 'Currently mounting this device'"
+msgid "Accessing..."
+msgstr "Prijungiama..."
+
+#: package/contents/ui/DeviceItem.qml:177
+#, kde-format
+msgctxt ""
+"Removing is a less technical word for Unmounting; translation should be "
+"short and mean 'Currently unmounting this device'"
+msgid "Removing..."
+msgstr "Atjungiama..."
+
+#: package/contents/ui/DeviceItem.qml:203
+#, kde-format
+msgid "Open in File Manager"
+msgstr "Atverti failų tvarkytuvėje"
+
+#: package/contents/ui/DeviceItem.qml:207
+#, kde-format
+msgid "Mount and Open"
+msgstr "Prijungti ir atverti"
+
+#: package/contents/ui/DeviceItem.qml:209
+#, kde-format
+msgid "Eject"
+msgstr "Išstumti"
+
+#: package/contents/ui/DeviceItem.qml:211
+#, kde-format
+msgid "Safely remove"
+msgstr "Saugiai pašalinti"
+
+#: package/contents/ui/DeviceItem.qml:251
+#, kde-format
+msgid "Mount"
+msgstr "Prijungti"
+
+#: package/contents/ui/devicenotifier.qml:60
+#, kde-format
+msgid "Most Recent Device"
+msgstr "Paskiausiai prijungtas įrenginys"
+
+#: package/contents/ui/devicenotifier.qml:60
+#, kde-format
+msgid "No Devices Available"
+msgstr "Nėra prieinamų įrenginių"
+
+#: package/contents/ui/devicenotifier.qml:238
+#, kde-format
+msgid "Removable Devices"
+msgstr "Keičiamieji įrenginiai"
+
+#: package/contents/ui/devicenotifier.qml:244
+#, kde-format
+msgid "Non Removable Devices"
+msgstr "Nekeičiamieji įrenginiai"
+
+#: package/contents/ui/devicenotifier.qml:250
+#, kde-format
+msgid "All Devices"
+msgstr "Visi įrenginiai"
+
+#: package/contents/ui/devicenotifier.qml:258
+#, kde-format
+msgid "Show popup when new device is plugged in"
+msgstr "Įkišus naują įrenginį, rodyti iškylantįjį langą"
+
+#: package/contents/ui/devicenotifier.qml:266
+#, kde-format
+msgctxt "Open auto mounter kcm"
+msgid "Configure Removable Devices..."
+msgstr "Konfigūruoti keičiamuosius įrenginius..."
+
+#: package/contents/ui/FullRepresentation.qml:48
+#, kde-format
+msgid "Remove All"
+msgstr "Pašalinti visus"
+
+#: package/contents/ui/FullRepresentation.qml:51
+#, kde-format
+msgid "Click to safely remove all devices"
+msgstr "Spustelėkite, norėdami saugiai pašalinti visus įrenginius"
+
+#: package/contents/ui/FullRepresentation.qml:163
+#, kde-format
+msgid "No removable devices attached"
+msgstr "Nėra prijungta jokių keičiamųjų įrenginių"
+
+#: package/contents/ui/FullRepresentation.qml:163
+#, kde-format
+msgid "No disks available"
+msgstr "Nėra prieinamų diskų"

@@ -1,0 +1,86 @@
+# Chinese translations for plasma-workspace package
+# plasma-workspace 套件的正體中文翻譯.
+# Copyright (C) 2019 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# Automatically generated, 2019.
+# pan93412 <pan93412@gmail.com>, 2019, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-23 02:49+0100\n"
+"PO-Revision-Date: 2020-01-18 19:13+0800\n"
+"Last-Translator: pan93412 <pan93412@gmail.com>\n"
+"Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 19.12.1\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "pan93412"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "pan93412@gmail.com"
+
+#: feedback.cpp:57
+#, kde-format
+msgid "User Feedback"
+msgstr "使用者意見回應"
+
+#: feedback.cpp:59
+#, kde-format
+msgid "Configure user feedback settings"
+msgstr "設定使用者意見回應"
+
+#: package/contents/ui/main.qml:46
+#, kde-format
+msgid ""
+"User Feedback has been disabled centrally. Please contact your distributor."
+msgstr "《使用者意見回應》已集中停用。請聯絡分發者。"
+
+#: package/contents/ui/main.qml:50 package/contents/ui/main.qml:73
+#, kde-format
+msgid "Plasma:"
+msgstr "Plasma："
+
+#: package/contents/ui/main.qml:54
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid ""
+#| "You can help KDE improve Plasma by contributing information on how you "
+#| "use it, so we can focus on things that matter to you.<nl/><nl/"
+#| ">Contributing this information is optional and entirely anonymous. We "
+#| "never collect your personal data, files you use, websites you visit, or "
+#| "information that could identify you.<nl/><nl/>You can read about our "
+#| "policy in the following link:"
+msgctxt "@info"
+msgid ""
+"You can help KDE improve Plasma by contributing information on how you use "
+"it, so we can focus on things that matter to you.<nl/><nl/>Contributing this "
+"information is optional and entirely anonymous. We never collect your "
+"personal data, files you use, websites you visit, or information that could "
+"identify you.<nl/><nl/>You can read about our privacy policy in the "
+"following link:"
+msgstr ""
+"你可以藉由貢獻使用方式資訊來協助 KDE 改善 Plasma，以讓我們能聚焦在影響你的東"
+"西。<nl/><nl/>貢獻此資訊是可選且完全匿名的。我們永遠不會收集您的個人資料、使"
+"用的檔案、瀏覽的網站或我們能識別你的資訊。<nl/><nl/>您能在下述連結閱讀我們的"
+"政策："
+
+#: package/contents/ui/main.qml:109
+#, kde-format
+msgid "Plasma"
+msgstr "Plasma"
+
+#: package/contents/ui/main.qml:127
+#, kde-format
+msgid "The following information will be sent:"
+msgstr "將會傳送下列資訊："

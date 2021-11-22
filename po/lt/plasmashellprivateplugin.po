@@ -1,0 +1,183 @@
+# Lithuanian translations for trunk-kf package.
+# Copyright (C) 2014 This_file_is_part_of_KDE
+# This file is distributed under the same license as the trunk-kf package.
+#
+# Automatically generated, 2014.
+# liudas@aksioma.lt <liudas@aksioma.lt>, 2014.
+# Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: trunk-kf 5\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:48+0100\n"
+"PO-Revision-Date: 2020-10-31 21:22+0200\n"
+"Last-Translator: Moo\n"
+"Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
+"%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
+"X-Generator: Poedit 2.4.1\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Moo"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "<>"
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:10
+#, kde-format
+msgid "Screen lock enabled"
+msgstr "Ekrano užraktas įjungtas"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:11
+#, kde-format
+msgid "Sets whether the screen will be locked after the specified time."
+msgstr "Nustato ar ekranas užsirakins po tam tikro nurodyto laiko."
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:16
+#, kde-format
+msgid "Screen saver timeout"
+msgstr "Ekrano užsklandos laiko limitas"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:17
+#, kde-format
+msgid "Sets the minutes after which the screen is locked."
+msgstr "Nustato, po kiek minučių ekranas užrakinamas."
+
+#: sessionsprivate/sessionsmodel.cpp:249 sessionsprivate/sessionsmodel.cpp:253
+#, kde-format
+msgid "New Session"
+msgstr "Naujas seansas"
+
+#: shellprivate/interactiveconsole/interactiveconsole.cpp:71
+#, kde-format
+msgid "&Execute"
+msgstr "&Vykdyti"
+
+#: shellprivate/interactiveconsole/interactiveconsole.cpp:72
+#, kde-format
+msgctxt "Toolbar Button to switch to Plasma Scripting Mode"
+msgid "Plasma"
+msgstr "Plasma"
+
+#: shellprivate/interactiveconsole/interactiveconsole.cpp:73
+#, kde-format
+msgctxt "Toolbar Button to switch to KWin Scripting Mode"
+msgid "KWin"
+msgstr "KWin"
+
+#: shellprivate/interactiveconsole/interactiveconsole.cpp:74
+#, kde-format
+msgid "Templates"
+msgstr "Šablonai"
+
+#: shellprivate/interactiveconsole/interactiveconsole.cpp:83
+#, kde-format
+msgid "Desktop Shell Scripting Console"
+msgstr "Darbalaukio apvalkalo scenarijų pultas"
+
+#: shellprivate/interactiveconsole/interactiveconsole.cpp:90
+#, kde-format
+msgid "Editor"
+msgstr "Redaktorius"
+
+#: shellprivate/interactiveconsole/interactiveconsole.cpp:101
+#, kde-format
+msgid "Load"
+msgstr "Įkelti"
+
+#: shellprivate/interactiveconsole/interactiveconsole.cpp:107
+#, kde-format
+msgid "Use"
+msgstr "Naudoti"
+
+#: shellprivate/interactiveconsole/interactiveconsole.cpp:163
+#, kde-format
+msgid "Output"
+msgstr "Išvestis"
+
+#: shellprivate/interactiveconsole/interactiveconsole.cpp:270
+#, kde-format
+msgid "Unable to load script file <b>%1</b>"
+msgstr "Nepavyko įkelti scenarijaus failo <b>%1</b>"
+
+#: shellprivate/interactiveconsole/interactiveconsole.cpp:320
+#, kde-format
+msgid "Open Script File"
+msgstr "Atverti scenarijaus failą"
+
+#: shellprivate/interactiveconsole/interactiveconsole.cpp:435
+#, kde-format
+msgid "Save Script File"
+msgstr "Įrašyti scenarijaus failą"
+
+#: shellprivate/interactiveconsole/interactiveconsole.cpp:527
+#, kde-format
+msgid "Executing script at %1"
+msgstr "Vykdomas scenarijus ties: %1"
+
+#: shellprivate/interactiveconsole/interactiveconsole.cpp:566
+#, no-c-format, kde-format
+msgid "Runtime: %1ms"
+msgstr "Vykdymo laikas: %1ms"
+
+#: shellprivate/widgetexplorer/kcategorizeditemsviewmodels.cpp:71
+#, kde-format
+msgid "Filters"
+msgstr "Filtrai"
+
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:59
+#, kde-format
+msgid "Select Plasmoid File"
+msgstr "Pasirinkti Plasmoid failą"
+
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:83
+#, kde-format
+msgid "Installing the package %1 failed."
+msgstr "Nepavyko įdiegti paketo %1."
+
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:83
+#, kde-format
+msgid "Installation Failure"
+msgstr "Įdiegimo nesėkmė"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:123
+#, kde-format
+msgid "All Widgets"
+msgstr "Visi valdikliai"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:127
+#, kde-format
+msgid "Running"
+msgstr "Veikia"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:131
+#, kde-format
+msgid "Uninstallable"
+msgstr "Nepašalinamas"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:135
+#, kde-format
+msgid "Categories:"
+msgstr "Kategorijos:"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:213
+#, kde-format
+msgid "Download New Plasma Widgets"
+msgstr "Atsisiųsti naujus Plasma valdiklius"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:222
+#, kde-format
+msgid "Install Widget From Local File..."
+msgstr "Įdiegti valdiklį iš vietinio failo..."

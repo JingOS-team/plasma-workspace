@@ -3,6 +3,7 @@ ksmserver - the KDE session management server
 
 Copyright 2016 Martin Graesslin <mgraesslin@kde.org>
 Copyright 2018 David Edmundson <davidedmundson@kde.org>
+Copyright 2021 Liu Bangguo <liubangguo@jingos.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -25,25 +26,24 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include "greeter.h"
 
+#include <QApplication>
 #include <QDebug>
 #include <QScreen>
-#include <QApplication>
 
 #include "shutdowndlg.h"
 
-#include "logoutpromptadaptor.h"
 #include "ksmserveriface.h"
+#include "logoutpromptadaptor.h"
 
 #include <KQuickAddons/QtQuickSettings>
 #include <KWindowSystem>
 
 #include <KWayland/Client/connection_thread.h>
-#include <KWayland/Client/registry.h>
 #include <KWayland/Client/plasmashell.h>
+#include <KWayland/Client/registry.h>
 
-Greeter::Greeter(bool shutdownAllowed)
+Greeter::Greeter()
     : QObject()
-    , m_shutdownAllowed(shutdownAllowed)
     , m_waylandPlasmaShell(nullptr)
 {
     new LogoutPromptAdaptor(this);
@@ -68,30 +68,29 @@ void Greeter::setupWaylandIntegration()
     }
     Registry *registry = new Registry(this);
     registry->create(connection);
-    connect(registry, &Registry::plasmaShellAnnounced, this,
-        [this, registry] (quint32 name, quint32 version) {
-            m_waylandPlasmaShell = registry->createPlasmaShell(name, version, this);
-        }
-    );
+    connect(registry, &Registry::plasmaShellAnnounced, this, [this, registry](quint32 name, quint32 version) {
+        m_waylandPlasmaShell = registry->createPlasmaShell(name, version, this);
+    });
     registry->setup();
     connection->roundtrip();
 }
 
 void Greeter::init()
 {
+    emit toBeShow();
     setupWaylandIntegration();
     const auto screens = qApp->screens();
-    for (QScreen *screen: screens) {
+    for (QScreen *screen : screens) {
         adoptScreen(screen);
     }
     connect(qApp, &QGuiApplication::screenAdded, this, &Greeter::adoptScreen);
     m_running = true;
 }
 
-void Greeter::adoptScreen(QScreen* screen)
+void Greeter::adoptScreen(QScreen *screen)
 {
     // TODO: last argument is the theme, maybe add command line option for it?
-    KSMShutdownDlg *w = new KSMShutdownDlg(nullptr, m_shutdownAllowed, m_shutdownType, m_waylandPlasmaShell);
+    KSMShutdownDlg *w = new KSMShutdownDlg(nullptr, m_shutdownType, m_waylandPlasmaShell);
     w->installEventFilter(this);
     m_dialogs << w;
 
@@ -100,9 +99,7 @@ void Greeter::adoptScreen(QScreen* screen)
         w->deleteLater();
     });
     connect(w, &KSMShutdownDlg::rejected, this, &Greeter::rejected);
-    connect(w, &KSMShutdownDlg::accepted, this, [w]() {
-        OrgKdeKSMServerInterfaceInterface ksmserver(QStringLiteral("org.kde.ksmserver"), QStringLiteral("/KSMServer"), QDBusConnection::sessionBus());
-        ksmserver.logout(KWorkSpace::ShutdownConfirmNo, w->shutdownType(), KWorkSpace::ShutdownModeDefault);
+    connect(w, &KSMShutdownDlg::accepted, this, []() {
         QApplication::exit(1);
     });
     w->setScreen(screen);
@@ -117,10 +114,10 @@ void Greeter::rejected()
 
 bool Greeter::eventFilter(QObject *watched, QEvent *event)
 {
-    if (qobject_cast<KSMShutdownDlg*>(watched)) {
+    if (qobject_cast<KSMShutdownDlg *>(watched)) {
         if (event->type() == QEvent::MouseButtonPress) {
             // check that the position is on no window
-            QMouseEvent *me = static_cast<QMouseEvent*>(event);
+            QMouseEvent *me = static_cast<QMouseEvent *>(event);
             for (auto it = m_dialogs.constBegin(); it != m_dialogs.constEnd(); ++it) {
                 if ((*it)->geometry().contains(me->globalPos())) {
                     return false;
@@ -159,5 +156,3 @@ void Greeter::promptReboot()
     m_shutdownType = KWorkSpace::ShutdownTypeReboot;
     init();
 }
-
-

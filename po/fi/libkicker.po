@@ -1,0 +1,319 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Lasse Liehu <lasse.liehu@gmail.com>, 2014, 2015, 2016, 2017.
+# Tommi Nieminen <translator@legisign.org>, 2016, 2017, 2019, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:48+0100\n"
+"PO-Revision-Date: 2020-12-13 18:29+0200\n"
+"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 20.08.3\n"
+
+#: plugin/actionlist.cpp:96
+#, kde-format
+msgid "Open with:"
+msgstr "Avaa ohjelmalla:"
+
+#: plugin/actionlist.cpp:109
+#, kde-format
+msgid "Properties"
+msgstr "Ominaisuudet"
+
+#: plugin/actionlist.cpp:156
+#, kde-format
+msgid "Add to Desktop"
+msgstr "Lisää työpöydälle"
+
+#: plugin/actionlist.cpp:161
+#, kde-format
+msgid "Add to Panel (Widget)"
+msgstr "Lisää paneeliin (sovelma)"
+
+#: plugin/actionlist.cpp:166
+#, kde-format
+msgid "Pin to Task Manager"
+msgstr "Kiinnitä tehtävienhallintaan"
+
+#: plugin/actionlist.cpp:316 plugin/rootmodel.cpp:444
+#, kde-format
+msgid "Recent Files"
+msgstr "Viimeisimmät tiedostot"
+
+#: plugin/actionlist.cpp:326
+#, kde-format
+msgid "Forget Recent Files"
+msgstr "Unohda viimeisimmät tiedostot"
+
+#: plugin/actionlist.cpp:389
+#, kde-format
+msgid "Edit Application..."
+msgstr "Muokkaa sovellusta…"
+
+#: plugin/actionlist.cpp:433
+#, kde-format
+msgctxt "@action opens a software center with the application"
+msgid "Uninstall or Manage Add-Ons..."
+msgstr "Lisäosien hallinta ja asennuksen poisto…"
+
+#: plugin/appentry.cpp:198
+#, kde-format
+msgid "Hide Application"
+msgstr "Piilota sovellus"
+
+#: plugin/appentry.cpp:262
+#, kde-format
+msgctxt "App name (Generic name)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: plugin/appentry.cpp:264
+#, kde-format
+msgctxt "Generic name (App name)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: plugin/appsmodel.cpp:44 plugin/appsmodel.cpp:68 plugin/computermodel.cpp:111
+#: plugin/computermodel.cpp:239 plugin/recentusagemodel.cpp:167
+#: plugin/recentusagemodel.cpp:224
+#, kde-format
+msgid "Applications"
+msgstr "Sovellukset"
+
+#: plugin/appsmodel.cpp:163
+#, kde-format
+msgid "Unhide Applications in this Submenu"
+msgstr "Kumoa sovellusten piilottaminen tässä alivalikossa"
+
+#: plugin/appsmodel.cpp:172
+#, kde-format
+msgid "Unhide Applications in '%1'"
+msgstr "Kumoa sovellusten piilottaminen valikossa ”%1”"
+
+#: plugin/computermodel.cpp:105
+#, kde-format
+msgid "Show KRunner"
+msgstr "Näytä KRunner"
+
+#: plugin/computermodel.cpp:109
+#, kde-format
+msgid "Search, calculate, or run a command"
+msgstr "Etsi, laske tai suorita komento"
+
+#: plugin/computermodel.cpp:162
+#, kde-format
+msgid "Computer"
+msgstr "Tietokone"
+
+#: plugin/contactentry.cpp:120 plugin/recentcontactsmodel.cpp:95
+#, kde-format
+msgid "Show Contact Information..."
+msgstr "Näytä yhteystiedon tiedot…"
+
+#. i18n.
+#: plugin/kastatsfavoritesmodel.cpp:480 plugin/rootmodel.cpp:431
+#: plugin/simplefavoritesmodel.cpp:44
+#, kde-format
+msgid "Favorites"
+msgstr "Suosikit"
+
+#: plugin/recentcontactsmodel.cpp:53
+#, kde-format
+msgid "Contacts"
+msgstr "Yhteystiedot"
+
+#: plugin/recentcontactsmodel.cpp:86
+#, kde-format
+msgid "Forget Contact"
+msgstr "Unohda yhteystieto"
+
+#: plugin/recentcontactsmodel.cpp:90 plugin/recentcontactsmodel.cpp:166
+#, kde-format
+msgid "Forget All Contacts"
+msgstr "Unohda kaikki yhteystiedot"
+
+#: plugin/recentusagemodel.cpp:165
+#, kde-format
+msgid "Recently Used"
+msgstr "Viimeisimmät"
+
+#: plugin/recentusagemodel.cpp:170 plugin/recentusagemodel.cpp:298
+#, kde-format
+msgid "Files"
+msgstr "Tiedostot"
+
+#: plugin/recentusagemodel.cpp:242
+#, kde-format
+msgid "Forget Application"
+msgstr "Unohda sovellus"
+
+#: plugin/recentusagemodel.cpp:332
+#, kde-format
+msgid "Open Containing Folder"
+msgstr "Avaa yläkansio"
+
+#: plugin/recentusagemodel.cpp:335
+#, kde-format
+msgid "Forget File"
+msgstr "Unohda tiedosto"
+
+#: plugin/recentusagemodel.cpp:464
+#, kde-format
+msgid "Forget All"
+msgstr "Unohda kaikki"
+
+#: plugin/recentusagemodel.cpp:466
+#, kde-format
+msgid "Forget All Applications"
+msgstr "Unohda kaikki sovellukset"
+
+#: plugin/recentusagemodel.cpp:469
+#, kde-format
+msgid "Forget All Files"
+msgstr "Unohda kaikki tiedostot"
+
+#: plugin/rootmodel.cpp:108
+#, kde-format
+msgid "Hide %1"
+msgstr "Piilota %1"
+
+#: plugin/rootmodel.cpp:413
+#, kde-format
+msgid "All Applications"
+msgstr "Kaikki sovellukset"
+
+#: plugin/rootmodel.cpp:425
+#, kde-format
+msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
+msgstr "Tämän ei tulisi näkyä! Käytä: KICKER_FAVORITES_MODEL"
+
+#: plugin/rootmodel.cpp:437
+#, kde-format
+msgid "Recent Contacts"
+msgstr "Viimeisimmät yhteystiedot"
+
+#: plugin/rootmodel.cpp:444
+#, kde-format
+msgid "Often Used Files"
+msgstr "Usein käytetyt tiedostot"
+
+#: plugin/rootmodel.cpp:453
+#, kde-format
+msgid "Recent Applications"
+msgstr "Viimeisimmät sovellukset"
+
+#: plugin/rootmodel.cpp:453
+#, kde-format
+msgid "Often Used Applications"
+msgstr "Usein käytetyt sovellukset"
+
+#: plugin/rootmodel.cpp:467
+#, kde-format
+msgid "Power / Session"
+msgstr "Virta / istunto"
+
+#: plugin/runnermodel.cpp:239
+#, kde-format
+msgid "Search results"
+msgstr "Hakutulokset"
+
+#: plugin/systementry.cpp:207
+#, kde-format
+msgid "Lock"
+msgstr "Lukitse"
+
+#: plugin/systementry.cpp:210
+#, kde-format
+msgid "Log Out"
+msgstr "Kirjaudu ulos"
+
+#: plugin/systementry.cpp:213 plugin/systementry.cpp:281
+#, kde-format
+msgid "Save Session"
+msgstr "Tallenna istunto"
+
+#: plugin/systementry.cpp:216
+#, kde-format
+msgid "Switch User"
+msgstr "Vaihda käyttäjää"
+
+#: plugin/systementry.cpp:219
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Siirry valmiustilaan"
+
+#: plugin/systementry.cpp:222
+#, kde-format
+msgid "Hibernate"
+msgstr "Siirry lepotilaan"
+
+#: plugin/systementry.cpp:225
+#, kde-format
+msgid "Restart"
+msgstr "Käynnistä uudelleen"
+
+#: plugin/systementry.cpp:228
+#, kde-format
+msgid "Shut Down"
+msgstr "Sammuta"
+
+#: plugin/systementry.cpp:241 plugin/systementry.cpp:244
+#: plugin/systementry.cpp:247 plugin/systementry.cpp:250
+#, kde-format
+msgid "Session"
+msgstr "Istunto"
+
+#: plugin/systementry.cpp:253 plugin/systementry.cpp:256
+#: plugin/systementry.cpp:259 plugin/systementry.cpp:262
+#, kde-format
+msgid "System"
+msgstr "Järjestelmä"
+
+#: plugin/systementry.cpp:275
+#, kde-format
+msgid "Lock screen"
+msgstr "Lukitse näyttö"
+
+#: plugin/systementry.cpp:278
+#, kde-format
+msgid "End session"
+msgstr "Lopeta istunto"
+
+#: plugin/systementry.cpp:284
+#, kde-format
+msgid "Start a parallel session as a different user"
+msgstr "Aloita rinnakkaisistunto toisena käyttäjänä"
+
+#: plugin/systementry.cpp:287
+#, kde-format
+msgid "Suspend to RAM"
+msgstr "Keskeytä muistiin"
+
+#: plugin/systementry.cpp:290
+#, kde-format
+msgid "Suspend to disk"
+msgstr "Keskeytä levylle"
+
+#: plugin/systementry.cpp:293
+#, kde-format
+msgid "Restart computer"
+msgstr "Käynnistä tietokone uudelleen"
+
+#: plugin/systementry.cpp:296
+#, kde-format
+msgid "Turn off computer"
+msgstr "Sammuta tietokone"
+
+#: plugin/systemmodel.cpp:44
+#, kde-format
+msgid "System actions"
+msgstr "Järjestelmän toiminnot"

@@ -1,0 +1,64 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# rawkoder <rawkoder@fastmail.in>, 2020.
+# Raghavendra Kamath <raghu@raghukamath.com>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-22 02:49+0100\n"
+"PO-Revision-Date: 2020-08-14 10:05+0530\n"
+"Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
+"Language-Team: Kde-hindi\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Generator: Lokalize 20.04.3\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "राॅकोडर"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "rawkoder@fastmail.com"
+
+#: main.cpp:65
+#, kde-format
+msgid "krunner"
+msgstr "केरनर"
+
+#: main.cpp:65
+#, kde-format
+msgid "Run Command interface"
+msgstr "कमांड लाइन अंतराफलक चालू करें"
+
+#: main.cpp:70
+#, kde-format
+msgid "Use the clipboard contents as query for KRunner"
+msgstr "क्लिपबोर्ड की विषय सूची केरनर में पृच्छा की भाँति उपयोग करें"
+
+#: main.cpp:71
+#, kde-format
+msgid "Start KRunner in the background, don't show it."
+msgstr "केरनर पृष्ठभूमि में प्रारंभ करें, दिखाएँ नहीं।"
+
+#: main.cpp:72
+#, kde-format
+msgid "Replace an existing instance"
+msgstr "अभूत इंस्टैंस को स्थानान्तरित करें"
+
+#: main.cpp:77
+#, kde-format
+msgid "The query to run, only used if -c is not provided"
+msgstr "पृच्छा, -c न प्रदान करने पर ही उपयोग होगी"
+
+#: view.cpp:62
+#, kde-format
+msgid "KRunner"
+msgstr "केरनर"
